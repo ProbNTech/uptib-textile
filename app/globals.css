@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/* Brand tokens — official UPTIB palette                               */
+/* 1st primary  #012169 navy · 2nd  #C8102E red · 3rd  #017A3C green   */
+/* 4th  #0056A7 blue (the interactive/link blue).                      */
+/*                                                                      */
+/* Stored as space-separated RGB channels so Tailwind can apply opacity */
+/* modifiers (bg-primary/10, etc.); canonical hex is noted alongside.   */
+/* ------------------------------------------------------------------ */
+:root {
+  /* PRIMARY — Blue family (links, buttons, key accents) */
+  --color-primary: 0 86 167; /* #0056A7 interactive blue (4th brand colour) */
+  --color-primary-dark: 1 33 105; /* #012169 deep navy (1st brand colour) — dark bg, headings */
+  --color-primary-light: 46 120 199; /* #2E78C7 lighter blue accent (gradients/flourishes) */
+
+  /* SECONDARY — Red (energy, featured tags, 2nd CTAs) */
+  --color-secondary: 200 16 46; /* #C8102E (2nd brand colour) */
+  --color-secondary-dark: 158 12 36; /* #9E0C24 */
+
+  /* TERTIARY — Green (sustainability, certifications, success, fresh accent) */
+  --color-tertiary: 1 122 60; /* #017A3C (3rd brand colour) */
+  --color-tertiary-dark: 1 92 45; /* #015C2D */
+  --color-tertiary-light: 45 184 92; /* #2DB85C brighter green for on-navy text */
+
+  /* Bright red for on-navy emphasis */
+  --color-secondary-light: 233 56 70; /* #E93846 */
+
+  /* Accent token retained for API stability → maps to brand green. */
+  --color-accent: 1 122 60; /* #017A3C */
+  --color-accent-dark: 1 92 45; /* #015C2D */
+
+  /* NEUTRALS */
+  --color-ink: 15 23 42; /* #0F172A */
+  --color-body: 51 65 85; /* #334155 */
+  --color-muted: 100 116 139; /* #64748B */
+  --color-line: 226 232 240; /* #E2E8F0 */
+  --color-surface: 247 249 252; /* #F7F9FC */
+  --color-white: 255 255 255; /* #FFFFFF */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-body antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold tracking-tight text-primary-dark;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Consistent, visible focus ring for keyboard users. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-white;
+  }
+
+  ::selection {
+    @apply bg-primary/15 text-primary-dark;
+  }
+}
+
+@layer components {
+  .prose-measure {
+    @apply max-w-prose leading-relaxed;
+  }
+
+  /* Subtle brand underline flourish (teal heritage accent). */
+  .accent-underline {
+    @apply relative inline-block;
+  }
+  .accent-underline::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-1 w-12 rounded-full;
+    background: linear-gradient(
+      90deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-light))
+    );
+  }
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
