@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
 import { mainNav } from "@/data/nav";
 import { site } from "@/data/site";
 import { Container } from "@/components/ui/Container";
@@ -60,7 +60,7 @@ export function Header() {
             <span className="block text-sm font-bold tracking-wide text-white">
               UPTIB TEXTILE
             </span>
-            <span className="block text-[10px] font-semibold tracking-[0.2em] text-primary-light">
+            <span className="block text-[10px] font-semibold tracking-[0.2em] text-white">
               TRADE · TRUST · GROWTH
             </span>
           </span>
@@ -78,8 +78,8 @@ export function Header() {
                     className={cn(
                       "rounded-full px-3 py-2 text-sm font-medium transition-colors",
                       pathname === item.href
-                        ? "text-primary-light"
-                        : "text-white/85 hover:text-white",
+                        ? "text-secondary-light"
+                        : "text-white hover:text-white/80",
                     )}
                   >
                     {item.label}
@@ -94,18 +94,10 @@ export function Header() {
           <Button
             href="/contact?topic=quote"
             variant="secondary"
-            className="hidden sm:inline-flex"
+            className="hidden !rounded !px-7 !py-3 sm:inline-flex"
           >
             Get in Touch
           </Button>
-          <button
-            type="button"
-            className="hidden items-center gap-1 text-sm font-medium text-white/75 hover:text-white lg:inline-flex"
-            aria-label="Language: English"
-          >
-            EN
-            <ChevronDown className="size-4" aria-hidden />
-          </button>
           <button
             type="button"
             onClick={() => setMobileOpen(true)}

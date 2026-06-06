@@ -22,11 +22,27 @@ export const images = {
     "worldmap.jpg",
     "Earth at night from space, city lights glowing across the globe",
   ),
+  ctaBg: img(
+    "cta-bg.png",
+    "Global textile trade backdrop for the closing call to action",
+  ),
   bigBen: img("bigben.jpg", "Big Ben and the Houses of Parliament, London"),
   lahore: img("lahore.jpg", "Badshahi Mosque, Lahore, Pakistan"),
+  londonSkyline: img(
+    "london-skyline-bg.png",
+    "Houses of Parliament and Big Ben — London skyline",
+  ),
+  minarePakistan: img(
+    "minarepakistan.png",
+    "Minar-e-Pakistan monument, Lahore",
+  ),
   london: img(
     "london.jpg",
     "Aerial view of London and the River Thames at dusk",
+  ),
+  contactHeroBg: img(
+    "contact-hero-bg.png",
+    "Glowing world map with trade connections arcing across the globe",
   ),
   lounge: img(
     "fabric-texture.jpg",

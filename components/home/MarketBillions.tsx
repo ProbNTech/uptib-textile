@@ -18,7 +18,7 @@ const stats: Stat[] = [
   },
   {
     value: "Over 77%",
-    label: "Growth in demand (YoY)",
+    label: "Growth in textile demand (YoY)",
     color: "rgb(var(--color-tertiary-light))",
     points: "0,36 18,32 36,26 54,28 72,18 90,14 108,6",
   },
@@ -36,33 +36,94 @@ const stats: Stat[] = [
   },
 ];
 
-function Sparkline({ color, points }: { color: string; points: string }) {
+function AreaChart({
+  id,
+  color,
+  points,
+}: {
+  id: string;
+  color: string;
+  points: string;
+}) {
+  const coords = points.split(" ").map((p) => {
+    const [x = 0, y = 0] = p.split(",").map(Number);
+    return { x, y };
+  });
   return (
-    <svg
-      viewBox="0 0 108 40"
-      className="mt-4 h-12 w-full"
-      preserveAspectRatio="none"
-      aria-hidden
-    >
-      <polyline
-        points={points}
-        fill="none"
-        stroke={color}
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <div className="relative -mx-4 -mb-4 mt-3 h-28 w-[calc(100%+2rem)] overflow-hidden rounded-b-2xl">
+      <svg
+        viewBox="0 0 108 40"
+        className="h-full w-full"
+        preserveAspectRatio="none"
+        aria-hidden
+      >
+        <defs>
+          <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={color} stopOpacity="0.5" />
+            <stop offset="50%" stopColor={color} stopOpacity="0.3" />
+            <stop offset="100%" stopColor={color} stopOpacity="0.12" />
+          </linearGradient>
+        </defs>
+        {/* gradient fill below the line */}
+        <polygon points={`${points} 108,40 0,40`} fill={`url(#${id})`} />
+        {/* the line itself */}
+        <polyline
+          points={points}
+          fill="none"
+          stroke={color}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+      {/* round dots on each data point */}
+      {coords.map((c, idx) => (
+        <span
+          key={idx}
+          className="absolute size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full ring-2 ring-primary-dark/40"
+          style={{
+            left: `${(c.x / 108) * 100}%`,
+            top: `${(c.y / 40) * 100}%`,
+            backgroundColor: color,
+          }}
+        />
+      ))}
+    </div>
   );
 }
 
 export function MarketBillions() {
   return (
-    <section className="bg-primary-dark">
-      <Container className="py-20 lg:py-24">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_2.2fr] lg:gap-12">
+    <section className="relative isolate overflow-hidden bg-primary-dark">
+      {/* ambient glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-70"
+        style={{
+          background:
+            "radial-gradient(60% 80% at 12% 30%, rgba(0,86,167,0.45), transparent 60%)",
+        }}
+      />
+      {/* dotted pattern, top-left corner */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-0 top-0 h-60 w-80"
+        style={{
+          backgroundImage:
+            "radial-gradient(rgba(46,120,199,0.6) 1.8px, transparent 2px)",
+          backgroundSize: "24px 24px",
+          maskImage:
+            "radial-gradient(120% 120% at 0% 0%, #000 30%, transparent 72%)",
+          WebkitMaskImage:
+            "radial-gradient(120% 120% at 0% 0%, #000 30%, transparent 72%)",
+        }}
+      />
+
+      <Container className="relative py-14 lg:py-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_2.2fr] lg:gap-12">
           <div className="flex flex-col justify-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary-light">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
               A market worth billions
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
@@ -82,16 +143,20 @@ export function MarketBillions() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {stats.map((stat) => (
+            {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5"
+                className="flex flex-col rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-4 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
               >
-                <p className="text-2xl font-bold" style={{ color: stat.color }}>
+                <p className="text-xl font-bold" style={{ color: stat.color }}>
                   {stat.value}
                 </p>
                 <p className="mt-1 text-sm text-white/65">{stat.label}</p>
-                <Sparkline color={stat.color} points={stat.points} />
+                <AreaChart
+                  id={`market-spark-${i}`}
+                  color={stat.color}
+                  points={stat.points}
+                />
               </div>
             ))}
           </div>

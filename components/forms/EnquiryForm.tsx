@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { CheckCircle2, Loader2, ShieldCheck } from "lucide-react";
 import {
   contactSchema,
   enquiryNeeds,
@@ -150,7 +150,7 @@ export function EnquiryForm() {
           htmlFor="need"
           className="block text-sm font-semibold text-primary-dark"
         >
-          What do you need? <span className="text-secondary">*</span>
+          What do you need? <span className="text-danger">*</span>
         </label>
         <select
           id="need"
@@ -160,7 +160,7 @@ export function EnquiryForm() {
           aria-invalid={Boolean(errors.need)}
           className={cn(
             "mt-1.5 w-full rounded-xl border bg-white px-4 py-2.5 text-body transition-colors focus:border-primary",
-            errors.need ? "border-secondary" : "border-line",
+            errors.need ? "border-danger" : "border-line",
           )}
         >
           <option value="" disabled>
@@ -180,7 +180,7 @@ export function EnquiryForm() {
           htmlFor="message"
           className="block text-sm font-semibold text-primary-dark"
         >
-          Message <span className="text-secondary">*</span>
+          Message <span className="text-danger">*</span>
         </label>
         <textarea
           id="message"
@@ -191,7 +191,7 @@ export function EnquiryForm() {
           aria-invalid={Boolean(errors.message)}
           className={cn(
             "mt-1.5 w-full rounded-xl border bg-white px-4 py-2.5 text-body transition-colors focus:border-primary",
-            errors.message ? "border-secondary" : "border-line",
+            errors.message ? "border-danger" : "border-line",
           )}
         />
         <FieldError error={errors.message} />
@@ -213,7 +213,7 @@ export function EnquiryForm() {
       </div>
 
       {formError ? (
-        <p className="mt-5 rounded-lg bg-secondary/5 px-4 py-3 text-sm text-secondary-dark">
+        <p className="mt-5 rounded-lg bg-danger/5 px-4 py-3 text-sm text-danger-dark">
           {formError}
         </p>
       ) : null}
@@ -230,6 +230,11 @@ export function EnquiryForm() {
           )}
         </Button>
       </div>
+
+      <p className="mt-5 flex items-center gap-2 text-sm text-muted">
+        <ShieldCheck className="size-4 shrink-0 text-secondary" aria-hidden />
+        Your information is safe with us. We respect your privacy.
+      </p>
     </form>
   );
 }
@@ -258,7 +263,7 @@ function Field({
         className="block text-sm font-semibold text-primary-dark"
       >
         {label}
-        {required ? <span className="text-secondary"> *</span> : null}
+        {required ? <span className="text-danger"> *</span> : null}
       </label>
       <input
         id={name}
@@ -270,7 +275,7 @@ function Field({
         aria-invalid={Boolean(error)}
         className={cn(
           "mt-1.5 w-full rounded-xl border bg-white px-4 py-2.5 text-body transition-colors focus:border-primary",
-          error ? "border-secondary" : "border-line",
+          error ? "border-danger" : "border-line",
         )}
       />
       <FieldError error={error} />
@@ -280,5 +285,5 @@ function Field({
 
 function FieldError({ error }: { error?: string[] }) {
   if (!error?.length) return null;
-  return <p className="mt-1.5 text-sm text-secondary-dark">{error[0]}</p>;
+  return <p className="mt-1.5 text-sm text-danger-dark">{error[0]}</p>;
 }

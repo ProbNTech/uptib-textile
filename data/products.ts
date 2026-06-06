@@ -280,7 +280,7 @@ export const products: Product[] = [
     eyebrow: "Products · Healthcare Textile",
     title: "Institutional textiles for the UK healthcare sector",
     cardTitle: "Healthcare Textile",
-    cardBlurb: "Scrubs, gowns, hospital linen.",
+    cardBlurb: "Scrubs, gowns, hospital linen & medical uniforms.",
     summary:
       "Built for durability, hygiene and frequent industrial laundering.",
     intro:

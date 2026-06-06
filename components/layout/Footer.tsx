@@ -42,8 +42,19 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-dark text-white/80">
-      <Container className="py-16">
+    <footer className="relative isolate overflow-hidden bg-primary-dark text-white/80">
+      {/* Footer background image (no overlay) */}
+      <div aria-hidden className="absolute inset-0 -z-10">
+        <Image
+          src="/assets/images/footer-bg.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+
+      <Container className="relative pt-16 pb-5">
         <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr_1fr_1.2fr]">
           <div>
             <Image
@@ -106,11 +117,11 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="mt-10 max-w-3xl text-xs leading-relaxed text-white/50">
+        <p className="mt-10 max-w-3xl text-xs leading-relaxed text-white">
           {site.disclaimer}
         </p>
 
-        <div className="mt-6 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {site.legalName}. All rights reserved.
           </p>

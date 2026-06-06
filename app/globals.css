@@ -3,30 +3,34 @@
 @tailwind utilities;
 
 /* ------------------------------------------------------------------ */
-/* Brand tokens — official UPTIB palette                               */
-/* 1st primary  #012169 navy · 2nd  #C8102E red · 3rd  #017A3C green   */
-/* 4th  #0056A7 blue (the interactive/link blue).                      */
+/* Brand tokens — UPTIB palette (Pakistan exporting globally)          */
+/* Blue and green are co-equal lead colours; red is minimal (errors).  */
+/*   primary   #0056A7 blue  · primary-dark #001548 navy                */
+/*   secondary #017A3C green · tertiary     #017A3C green               */
+/*   danger    #C8102E red   — form validation only                     */
 /*                                                                      */
 /* Stored as space-separated RGB channels so Tailwind can apply opacity */
 /* modifiers (bg-primary/10, etc.); canonical hex is noted alongside.   */
 /* ------------------------------------------------------------------ */
 :root {
-  /* PRIMARY — Blue family (links, buttons, key accents) */
-  --color-primary: 0 86 167; /* #0056A7 interactive blue (4th brand colour) */
-  --color-primary-dark: 1 33 105; /* #012169 deep navy (1st brand colour) — dark bg, headings */
+  /* PRIMARY — Blue family (links, charts, primary CTAs, key accents) */
+  --color-primary: 0 86 167; /* #0056A7 interactive blue */
+  --color-primary-dark: 0 21 72; /* #001548 deep navy — dark site background, headings */
   --color-primary-light: 46 120 199; /* #2E78C7 lighter blue accent (gradients/flourishes) */
 
-  /* SECONDARY — Red (energy, featured tags, 2nd CTAs) */
-  --color-secondary: 200 16 46; /* #C8102E (2nd brand colour) */
-  --color-secondary-dark: 158 12 36; /* #9E0C24 */
+  /* SECONDARY — Green, co-equal with blue (eyebrows, badges, 2nd CTAs) */
+  --color-secondary: 1 122 60; /* #017A3C brand green */
+  --color-secondary-dark: 1 92 45; /* #015C2D */
+  --color-secondary-light: 45 184 92; /* #2DB85C brighter green for on-navy text */
 
   /* TERTIARY — Green (sustainability, certifications, success, fresh accent) */
-  --color-tertiary: 1 122 60; /* #017A3C (3rd brand colour) */
+  --color-tertiary: 1 122 60; /* #017A3C brand green */
   --color-tertiary-dark: 1 92 45; /* #015C2D */
   --color-tertiary-light: 45 184 92; /* #2DB85C brighter green for on-navy text */
 
-  /* Bright red for on-navy emphasis */
-  --color-secondary-light: 233 56 70; /* #E93846 */
+  /* DANGER — Red, used sparingly (form errors, required markers). */
+  --color-danger: 200 16 46; /* #C8102E */
+  --color-danger-dark: 158 12 36; /* #9E0C24 */
 
   /* Accent token retained for API stability → maps to brand green. */
   --color-accent: 1 122 60; /* #017A3C */

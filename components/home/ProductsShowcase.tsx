@@ -7,34 +7,34 @@ import { productImageTall } from "@/data/images";
 import { getIcon } from "@/lib/icons";
 import type { ProductSlug } from "@/types";
 
-// Bottom border + matching icon colour, per card (blue / red / green / red).
+// Bottom border + matching icon colour, per card — blue/green alternating.
 const accents: Record<ProductSlug, { border: string; icon: string }> = {
   "bedding-linen": { border: "bg-primary", icon: "text-primary" },
-  "apparel-accessories": { border: "bg-secondary", icon: "text-secondary" },
-  "sportswear-activewear": { border: "bg-tertiary", icon: "text-tertiary" },
-  "healthcare-textile": { border: "bg-secondary", icon: "text-secondary" },
+  "apparel-accessories": { border: "bg-tertiary", icon: "text-tertiary" },
+  "sportswear-activewear": { border: "bg-primary", icon: "text-primary" },
+  "healthcare-textile": { border: "bg-tertiary", icon: "text-tertiary" },
 };
 
 export function ProductsShowcase() {
   return (
     <section className="bg-surface">
       <Container className="py-20 lg:py-24">
-        <div className="grid gap-10 lg:grid-cols-[0.7fr_3.3fr] lg:gap-14">
+        <div className="grid gap-10 lg:grid-cols-[0.6fr_3.4fr] lg:gap-14">
           {/* Intro */}
           <div className="flex flex-col justify-center">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary">
               Our Products
             </p>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.15] text-primary-dark lg:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-[1.15] text-primary-dark lg:text-4xl">
               The textiles
               <br /> we trade
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-body">
+            <p className="mt-6 text-base leading-relaxed text-body">
               From yarn to fashion, we supply quality you can trust.
             </p>
             <Link
               href="/products"
-              className="mt-8 inline-flex items-center gap-1.5 font-semibold text-secondary hover:text-secondary-dark"
+              className="mt-12 inline-flex items-center gap-1.5 font-semibold text-secondary hover:text-secondary-dark"
             >
               View all products
               <ArrowRight className="size-4" aria-hidden />

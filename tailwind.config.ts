@@ -3,7 +3,8 @@ import type { Config } from "tailwindcss";
 /**
  * Brand tokens are declared as CSS variables in app/globals.css (:root)
  * and mapped here so Tailwind utilities (e.g. bg-primary, text-secondary)
- * resolve to the canonical hierarchy: Blue (primary) → Red (secondary) → Green (tertiary).
+ * resolve to the palette: Blue (primary) and Green (secondary/tertiary) are
+ * co-equal lead colours; Red (danger) is reserved for form validation.
  */
 const config: Config = {
   content: [
@@ -39,6 +40,10 @@ const config: Config = {
         accent: {
           DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
           dark: "rgb(var(--color-accent-dark) / <alpha-value>)",
+        },
+        danger: {
+          DEFAULT: "rgb(var(--color-danger) / <alpha-value>)",
+          dark: "rgb(var(--color-danger-dark) / <alpha-value>)",
         },
         ink: "rgb(var(--color-ink) / <alpha-value>)",
         body: "rgb(var(--color-body) / <alpha-value>)",
