@@ -58,7 +58,7 @@ export function MegaMenu({ item }: { item: NavItem }) {
         onFocus={() => setOpen(true)}
         className={cn(
           "inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium transition-colors",
-          isActive ? "text-primary-light" : "text-white/85 hover:text-white",
+          isActive ? "text-secondary-light" : "text-white hover:text-white/80",
         )}
       >
         {item.label}

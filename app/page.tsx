@@ -7,19 +7,21 @@ import { TrendsRow } from "@/components/home/TrendsRow";
 import { TrustedShield } from "@/components/home/TrustedShield";
 import { FaqSplit } from "@/components/home/FaqSplit";
 import { FinalCta } from "@/components/home/FinalCta";
+import { HomeFaq } from "@/components/home/HomeFaq";
 
 export default function HomePage() {
   return (
     <>
       <HomeHero />
       <ProductsShowcase />
-      <WhyPartner />
       <ProcessStrip />
+      <WhyPartner />
       <MarketBillions />
       <TrendsRow />
-      <TrustedShield />
       <FaqSplit />
+      <TrustedShield />
       <FinalCta />
+      <HomeFaq />
     </>
   );
 }
