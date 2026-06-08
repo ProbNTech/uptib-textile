@@ -1,0 +1,16 @@
+{
+  "name": "UK-Pakistan Tech Forum | UPTECH",
+  "short_name": "UPTECH",
+  "description": "A strategic platform strengthening technology, innovation, and digital trade between the United Kingdom and Pakistan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1220",
+  "theme_color": "#1E40AF",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

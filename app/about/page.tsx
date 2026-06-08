@@ -1,254 +1,179 @@
-import type { Metadata } from "next";
-import { MapPin } from "lucide-react";
-import { Hero } from "@/components/sections/Hero";
-import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Callout } from "@/components/ui/Callout";
-import { CTASection } from "@/components/ui/CTASection";
-import { StatStrip } from "@/components/ui/StatStrip";
-import { FeatureRow } from "@/components/sections/FeatureRow";
-import { marketStats, buyingTrends } from "@/data/stats";
-import { images } from "@/data/images";
-import { site } from "@/data/site";
+"use client";
 
-export const metadata: Metadata = {
-  title: "About — the trusted bridge for UK–Pakistan textile trade",
-  description:
-    "UPTIB is a London-based platform connecting Pakistan's textile manufacturers with UK buyers — marketing the supply, sourcing the demand, and serving both sides.",
-  alternates: { canonical: "/about" },
-};
+import { Section } from "@/components/Section";
+import { SectionHeader } from "@/components/SectionHeader";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { PageHero } from "@/components/PageHero";
+import { GlobalCTA } from "@/components/GlobalCTA";
+import { ShinyButton } from "@/components/ui/shiny-button";
+import { Button } from "@/components/Button";
+import Image from "next/image";
+import Link from "next/link";
+import { Lightbulb, Target, CheckCircle2, Award, Users, ArrowRight, Shield, UserCheck, Globe2, Handshake, Layers } from "lucide-react";
 
-const hubs = [
+const brandColors = ["#047857", "#047857", "#10B981"];
+
+const whyUptech = [
   {
-    city: "Faisalabad",
-    body: "Home textiles, towels and fabrics.",
+    icon: Shield,
+    title: "Trusted Gateway",
+    description: "UPTIB acts as a reliable bridge connecting Pakistani technology providers with UK and European companies.",
+    color: "#047857",
   },
   {
-    city: "Sialkot",
-    body: "Sportswear, teamwear and athletic apparel.",
+    icon: UserCheck,
+    title: "Verified Technology Partners",
+    description: "We work with carefully selected technology companies, researchers, and professionals to ensure high-quality collaboration.",
+    color: "#10B981",
   },
   {
-    city: "Lahore, Karachi & Multan",
-    body: "Apparel, uniforms and institutional textiles.",
+    icon: Globe2,
+    title: "Market Access Expertise",
+    description: "UPTIB provides guidance on European market entry, regulatory environments, and technology sector opportunities.",
+    color: "#047857",
   },
+  {
+    icon: Handshake,
+    title: "Cross-Border Collaboration",
+    description: "We facilitate partnerships between technology companies, research institutions, universities, innovation hubs, and investors.",
+    color: "#047857",
+  },
+  {
+    icon: Layers,
+    title: "End-to-End Support",
+    description: "From market research to partnership development and project coordination, UPTIB supports organisations throughout the collaboration process.",
+    color: "#10B981",
+  },
+];
+
+const exploreItems = [
+  { icon: Lightbulb, title: "Vision", desc: "A connected innovation ecosystem bridging UK and Pakistan's technology sectors.", href: "/about/vision", color: "#047857" },
+  { icon: Target, title: "Mission", desc: "Our strategic mission to transform Pakistan into a thriving global tech hub.", href: "/about/mission", color: "#10B981" },
+  { icon: CheckCircle2, title: "Objectives & Values", desc: "Core values, key activities, and broader impact goals driving our work.", href: "/about/objectives", color: "#047857" },
+  { icon: Award, title: "Leadership", desc: "Meet our President Khalil Choudhary â the leader of UPTIB.", href: "/about/founder", color: "#047857" },
+  { icon: Users, title: "Management Team", desc: "Board of directors, advisory forum, and executive leadership team.", href: "/about/management-team", color: "#10B981" },
 ];
 
 export default function AboutPage() {
   return (
-    <>
-      <Hero
-        eyebrow="About"
-        title="A London-based platform built to make UK–Pakistan textile trade work for both sides"
-        description="Pakistan is one of the world's leading textile producers. The UK is one of Europe's largest textile markets. We connect the two — and make the connection safe, fast and high-quality."
-        image={images.london}
-        highlights={[
-          { value: "US$2.27bn", label: "UK–Pakistan trade a year" },
-          { value: "77%", label: "of it is textiles" },
-          { value: "London + Lahore", label: "offices" },
-        ]}
-      />
+    <div>
+      <PageHero
+        label="About Us"
+        title="About UPTIB"
+        subtitle="Empowering Pakistan's Tech Leaders; innovation, entrepreneurship, investment, advocacy and visionary growth."
+        threeBg
+      >
+        <div className="flex flex-wrap items-center gap-4">
+          <ShinyButton href="/membership#apply">Apply for Membership</ShinyButton>
+          <Button href="/contact" variant="glass">Contact Us</Button>
+        </div>
+      </PageHero>
 
-      <Section>
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div className="flex flex-col gap-5">
-            <SectionHeading
-              eyebrow="Who we are"
-              title="Organising the flow, and growing it"
+      {/* About Us */}
+      <Section variant="light" className="content-body">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+          <AnimatedSection>
+            <SectionHeader
+              label="Who we are"
+              title="About the Forum"
+              color="blue"
             />
-            <div className="prose-measure space-y-4 text-body">
-              <p>
-                The UK–Pakistan Trade &amp; Investment Board (UPTIB) is a
-                London-based platform dedicated to strengthening trade between
-                the United Kingdom and Pakistan. Our textile division focuses on
-                the sector where the two economies are already most deeply
-                connected.
-              </p>
-              <p>
-                Between the two countries flows over{" "}
-                <strong className="text-primary-dark">
-                  US$2.27 billion of trade a year
-                </strong>
-                , the overwhelming majority of it textiles. Our job is to
-                organise that flow, professionalise it, and grow it.
-              </p>
-            </div>
-          </div>
-          <StatStrip
-            stats={marketStats.slice(0, 4)}
-            className="lg:grid-cols-2"
-          />
-        </div>
-      </Section>
-
-      <Section background="surface">
-        <div className="flex flex-col gap-10">
-          <SectionHeading
-            eyebrow="We serve both ends of the trade"
-            title="One platform, two audiences"
-          />
-          <div className="grid gap-6 lg:grid-cols-2">
-            <div className="rounded-2xl border border-line bg-white p-8 shadow-card">
-              <h3 className="text-xl font-semibold text-primary-dark">
-                For Pakistani manufacturers
-              </h3>
-              <p className="mt-3 text-body">
-                We provide marketing, sales and e-commerce — making them visible
-                and reachable to UK buyers.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-line bg-white p-8 shadow-card">
-              <h3 className="text-xl font-semibold text-primary-dark">
-                For UK buyers
-              </h3>
-              <p className="mt-3 text-body">
-                We provide a buying house and logistics — sourcing dependable
-                Pakistani product and delivering it landed, on-spec and on-time.
-              </p>
-            </div>
-          </div>
-          <Callout tone="blue" title="Doing both is our edge.">
-            Every manufacturer we market becomes a vetted supplier we can source
-            from; every UK order we win gives our exporters real, paying demand.
-            Holding both views makes us a sharper partner to each side.
-          </Callout>
-        </div>
-      </Section>
-
-      <Section>
-        <FeatureRow
-          eyebrow="A vetted network"
-          title="Quality controlled on the ground in Pakistan"
-          image={images.warehouse}
-          reverse
-          badge={{ value: "14+", label: "vetted companies" }}
-          cta={{ label: "Browse the directory", href: "/directory" }}
-        >
-          <p>
-            We work with a deep roster of vetted Pakistani manufacturers across
-            home textiles, apparel, sportswear and healthcare — in Faisalabad,
-            Sialkot, Lahore, Karachi and Multan.
-          </p>
-          <p>
-            Our own people inspect on the ground — raw materials, in-line,
-            midline and pre-shipment to your AQL — so what arrives matches what
-            you approved.
-          </p>
-        </FeatureRow>
-      </Section>
-
-      <Section background="surface">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-line bg-white p-8 shadow-card">
-            <h3 className="text-lg font-semibold text-primary">Mission</h3>
-            <p className="mt-3 text-body">
-              To be the preferred gateway for Pakistani textile manufacturers
-              seeking UK buyers, and for UK buyers seeking dependable Pakistani
-              supply.
+            <p className="text-[#3D4152] leading-relaxed mb-5">
+              The UK Pakistan Technology Forum brings together businesses, innovators, government partners, investors, and technology leaders from the UK and Pakistan to support cross-border innovation, trade, and economic growth. Our mission is to shape strategic technology cooperation that powers sustainable development, accelerates digital transformation, and fosters shared prosperity for both nations.
             </p>
-          </div>
-          <div className="rounded-2xl border border-line bg-white p-8 shadow-card">
-            <h3 className="text-lg font-semibold text-primary">Vision</h3>
-            <p className="mt-3 text-body">
-              A mature, trusted UK–Pakistan textile platform — a deep roster of
-              vetted exporters on one side, a growing base of repeat UK buyers
-              on the other.
+            <p className="text-[#3D4152] leading-relaxed mb-5">
+              Our primary objective is to champion a positive and soft image of Pakistan while nurturing innovation, collaboration, and continuous education within the dynamic landscape of technology.
             </p>
-          </div>
-        </div>
-      </Section>
-
-      <Section>
-        <div className="flex flex-col gap-10">
-          <SectionHeading
-            eyebrow="What UK buyers want · 2026–2030"
-            title="We organise the trade around real demand"
-            description="The trends shaping UK sourcing — and the reasons buyers increasingly choose Pakistan."
-          />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {buyingTrends.map((trend) => (
-              <div
-                key={trend.title}
-                className="rounded-2xl border border-line bg-white p-6 shadow-card"
-              >
-                <h3 className="font-semibold text-primary-dark">
-                  {trend.title}
-                </h3>
-                <p className="mt-2 text-body">{trend.body}</p>
-              </div>
-            ))}
-            <div className="flex flex-col justify-center rounded-2xl border border-accent/30 bg-accent/5 p-6">
-              <p className="text-lg font-semibold text-accent-dark">
-                The GSP+ advantage
-              </p>
-              <p className="mt-2 text-body">
-                Duty-free access, world-class cotton, large-scale capacity and
-                competitive pricing make Pakistan a low-risk choice.
-              </p>
+            <p className="text-[#3D4152] leading-relaxed mb-5">
+              Our dynamic platform empowers individuals to unlock their full potential, advance their careers, and make a lasting impact on the Forum. We champion the highest standards of professionalism, integrity, and ethics, setting a benchmark for IT societies worldwide.
+            </p>
+            <p className="text-[#3D4152] leading-relaxed mb-5">
+              By uniting Pakistani IT professionals residing and working in the United Kingdom, we establish a dynamic platform for networking, knowledge-sharing, and collective advancement.
+            </p>
+            <p className="text-[#3D4152] leading-relaxed">
+              Through our diverse community, we aim to catalyze positive transformations in IT, shaping its future, and delivering significant contributions to both the country we reside in and the country we proudly belong to.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection>
+            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border-2 border-[#047857]/15">
+              <Image
+                src="/image/about/about-section-home.jpg"
+                alt="About the Forum"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </Section>
 
-      <Section background="surface">
-        <div className="flex flex-col gap-10">
-          <SectionHeading
-            eyebrow="Our reach"
-            title="Into Pakistan's textile hubs"
-            description="We source from the cities where each category is strongest."
-          />
-          <div className="grid gap-6 sm:grid-cols-3">
-            {hubs.map((hub) => (
-              <div
-                key={hub.city}
-                className="rounded-2xl border border-line bg-white p-6 shadow-card"
-              >
-                <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-secondary/10 text-secondary">
-                  <MapPin className="size-5" aria-hidden />
-                </span>
-                <h3 className="mt-4 font-semibold text-primary-dark">
-                  {hub.city}
-                </h3>
-                <p className="mt-1 text-body">{hub.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      <Section>
-        <div className="flex flex-col gap-10">
-          <SectionHeading eyebrow="Where we are" title="London and Lahore" />
-          <div className="grid gap-6 sm:grid-cols-2">
-            {site.offices.map((office) => (
-              <div
-                key={office.label}
-                className="rounded-2xl border border-line bg-white p-8 shadow-card"
-              >
-                <h3 className="text-lg font-semibold text-primary-dark">
-                  {office.label}
-                </h3>
-                <p className="mt-3 text-body">{office.address}</p>
-                <a
-                  href={office.phoneHref}
-                  className="mt-2 inline-block font-medium text-primary hover:text-primary-dark"
+      {/* Why Choose UPTIB */}
+      <Section variant="alt">
+        <AnimatedSection>
+          <SectionHeader label="Why UPTIB" title="Why Choose UPTIB?" color="green" subtitle="The UK–Pakistan Trades & Investment Board provides a trusted platform for technology collaboration between Pakistan and Europe." />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyUptech.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="group bg-white rounded-2xl border border-[#D8D5CF] p-7 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
-                  {office.phone}
-                </a>
-              </div>
-            ))}
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style={{ background: `${item.color}10`, border: `1px solid ${item.color}25` }}>
+                    <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-2 group-hover:text-[#047857] transition-colors duration-200">{item.title}</h3>
+                  <div className="h-px bg-[#D8D5CF] mb-3" />
+                  <p className="text-base text-[#5A5F72] leading-relaxed">{item.description}</p>
+                </div>
+              );
+            })}
           </div>
-        </div>
+        </AnimatedSection>
       </Section>
 
-      <CTASection
-        image={images.london}
-        title="Ready to trade?"
-        description="Browse what we make, or see what we can do for you."
-        buttons={[
-          { label: "Browse Products", href: "/products" },
-          { label: "Our Services", href: "/services" },
-        ]}
+      {/* Explore Section */}
+      <Section variant="light">
+        <AnimatedSection>
+          <SectionHeader label="Learn more" title="Explore" color="red" subtitle="Discover our vision, mission, leadership, and partnerships that drive the UK-Pakistan technology corridor." />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {exploreItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="group text-left bg-white rounded-lg p-7 hover:shadow-lg transition-all duration-300 relative overflow-hidden block"
+                  style={{ borderTop: `3px solid ${item.color}` }}
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-y-1/2 translate-x-1/2" style={{ background: `radial-gradient(circle, ${item.color}08, transparent 70%)` }} />
+                  <div className="relative">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: `${item.color}10`, border: `1px solid ${item.color}25` }}>
+                        <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
+                      </div>
+                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200" style={{ color: item.color }} />
+                    </div>
+                    <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-2">{item.title}</h3>
+                    <p className="text-[#3D4152] text-base leading-relaxed">{item.desc}</p>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </AnimatedSection>
+      </Section>
+
+      <GlobalCTA
+        label="Join Us"
+        title="Ready to Be Part of the Movement?"
+        subtitle="Join UPTIB and connect with technology leaders, entrepreneurs, and innovators shaping the UKâPakistan tech corridor."
+        primaryButtonText="Apply for Membership"
+        primaryButtonLink="/membership#apply"
+        secondaryButtonText="Contact Us"
+        secondaryButtonLink="/contact"
       />
-    </>
+    </div>
   );
 }

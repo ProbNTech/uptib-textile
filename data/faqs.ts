@@ -48,6 +48,34 @@ export const homeFaqs: Faq[] = [
   },
 ];
 
+/** Home-page FAQs — exporter-facing, global. Grounded in the UPTIB strategy & content docs. */
+export const homeExporterFaqs: Faq[] = [
+  {
+    q: "What does UPTIB do for Pakistani exporters?",
+    a: "We make Pakistani textile manufacturers visible, credible and reachable to buyers worldwide — and run the services that get their products to market: professional profiles and branding, market intelligence, B2B matchmaking, digital campaigns, e-commerce and warehousing, and global market access.",
+  },
+  {
+    q: "I've never exported before — can you help?",
+    a: "Yes. We work with capable manufacturers exporting for the first time, guiding you through product compliance, labelling, packaging, certifications and customs — turning a strong factory into an export-ready supplier international buyers can trust.",
+  },
+  {
+    q: "Which markets can you help me reach?",
+    a: "Buyers across the EU, USA, Middle East, UK and beyond. Pakistan's GSP+ status gives qualifying textiles duty-free access into the EU — a genuine competitive edge we build into your pitch to global buyers.",
+  },
+  {
+    q: "What do I get as a member?",
+    a: "A professional profile and directory listing in front of global buyers, regular market intelligence, pre-qualified B2B matchmaking, digital campaigns and trade-event participation. Membership comes in Basic, Professional and Premium tiers, so you can start small and scale as you see value.",
+  },
+  {
+    q: "Do you help with Amazon and e-commerce?",
+    a: "Yes. We set up and optimise Amazon seller accounts and product listings, and provide warehousing, FBA prep, pick-and-pack and fulfilment — so you can reach international shoppers directly, not just wholesale buyers.",
+  },
+  {
+    q: "Which products and categories do you cover?",
+    a: "Pakistan's strongest export categories — bedding & linen, apparel & accessories, sportswear & activewear, and healthcare textiles — made across the manufacturing hubs of Faisalabad, Sialkot, Karachi, Lahore and Multan.",
+  },
+];
+
 /** Exporter FAQs live on the Marketing & Sales page. */
 export const exporterFaqs: Faq[] = [
   {

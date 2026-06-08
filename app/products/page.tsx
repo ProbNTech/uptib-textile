@@ -1,78 +1,84 @@
 import type { Metadata } from "next";
-import { Hero } from "@/components/sections/Hero";
-import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { MediaCard } from "@/components/ui/MediaCard";
-import { Callout } from "@/components/ui/Callout";
-import { CTASection } from "@/components/ui/CTASection";
-import { products } from "@/data/products";
-import { productImage, images } from "@/data/images";
-import { getIcon } from "@/lib/icons";
+import Link from "next/link";
+import { ArrowUpRight, Leaf } from "lucide-react";
+import { PageHero } from "@/components/PageHero";
+import { Section } from "@/components/Section";
+import { SectionHeader } from "@/components/SectionHeader";
+import { GlobalCTA } from "@/components/GlobalCTA";
+import { Button } from "@/components/Button";
+import { products } from "@/data/textile";
 
 export const metadata: Metadata = {
-  title: "Products — the textiles we trade",
+  title: "Products — Pakistani textiles for global buyers",
   description:
-    "Pakistan's strengths matched to UK demand: bedding & linen, apparel & accessories, sportswear & activewear and healthcare textiles.",
+    "The textiles we trade: bedding & linen, apparel & accessories, sportswear & activewear, and healthcare textile — four categories where Pakistani manufacturing is strongest.",
   alternates: { canonical: "/products" },
 };
 
-export default function ProductsPage() {
+export default function ProductsHub() {
   return (
     <>
-      <Hero
-        eyebrow="Products"
+      <PageHero
+        label="Products"
         title="The textiles we trade"
-        image={images.beddingLinen}
-        description="Pakistan's strengths, matched to the UK's demand. Four categories where Pakistani manufacturing is strongest and UK buyers are most active."
-        highlights={[
-          { value: "US$63.6bn", label: "UK textile & apparel market" },
-          { value: "US$7.2bn", label: "UK home-textile market" },
-          { value: "GSP+", label: "duty-free advantage" },
-        ]}
-      />
+        subtitle="Pakistan's strengths, matched to global demand. Four categories where Pakistani manufacturing is strongest and buyers worldwide are most active."
+        video="banner"
+      >
+        <Button href="/contact" variant="primary" size="lg" showArrow>Request a quote</Button>
+      </PageHero>
 
-      <Section>
-        <div className="flex flex-col gap-10">
-          <SectionHeading
-            eyebrow="The four categories"
-            title="Where Pakistan is strongest and UK demand is highest"
-            description="Each category links to a full page with the range, market size, UK buyers and certifications."
-          />
-          <div className="grid gap-6 sm:grid-cols-2">
-            {products.map((product) => (
-              <MediaCard
-                key={product.slug}
-                href={`/products/${product.slug}`}
-                image={productImage[product.slug]}
-                icon={getIcon(product.icon)}
-                title={product.cardTitle}
-                description={product.intro}
-                badge={product.badge}
-                meta={product.marketRows
-                  .slice(0, 2)
-                  .map((r) => `${r.value} · ${r.label}`)}
-              />
-            ))}
+      <Section variant="light" pattern>
+        <SectionHeader
+          label="The four categories"
+          title="What's in the range"
+          subtitle="Each category links to a dedicated page with what's included, the facts, and how to source it."
+          color="green"
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-2">
+          {products.map((p) => {
+            const Icon = p.icon;
+            return (
+              <Link
+                key={p.slug}
+                href={`/products/${p.slug}`}
+                className="group flex flex-col rounded-card bg-white border border-[#E5E7EB] p-8 hover:border-[#10B981] hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-14 h-14 rounded-xl bg-[#ECFDF5] border border-[#D1FAE5] flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <Icon className="w-7 h-7 text-[#047857]" strokeWidth={1.6} />
+                </div>
+                <h3 className="font-heading font-bold text-[#1C1F2E] text-2xl mb-3">{p.name}</h3>
+                <p className="text-[#3D4152] leading-relaxed flex-1">{p.short}</p>
+                <span className="inline-flex items-center gap-1.5 mt-6 font-semibold text-[#047857] group-hover:gap-2.5 transition-all">
+                  Explore <ArrowUpRight className="w-4 h-4" />
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="mt-8 rounded-card bg-[#F8FAF9] border border-[#E5E7EB] p-8 flex items-start gap-5">
+          <div className="w-12 h-12 rounded-xl bg-[#ECFDF5] border border-[#D1FAE5] flex items-center justify-center flex-shrink-0">
+            <Leaf className="w-6 h-6 text-[#047857]" />
+          </div>
+          <div>
+            <h3 className="font-heading font-bold text-[#1C1F2E] text-lg mb-2">Sustainability runs through all of it</h3>
+            <p className="text-[#3D4152] leading-relaxed">
+              Across every category we work with factories carrying the certifications global buyers increasingly require
+              &mdash; GOTS, OEKO-TEX, BCI, Sedex, WRAP and ISO &mdash; and can prioritise organic cotton, recycled
+              materials and transparent supply chains.
+            </p>
           </div>
         </div>
       </Section>
 
-      <Section background="surface" spacing="tight">
-        <Callout tone="green" title="Sustainability runs through all of it.">
-          Across every category we work with factories carrying the
-          certifications UK buyers increasingly require — GOTS, OEKO-TEX, BCI,
-          Sedex, WRAP and ISO — and can prioritise organic cotton, recycled
-          materials and transparent supply chains.
-        </Callout>
-      </Section>
-
-      <CTASection
-        image={images.warehouse}
-        title="Find the right supply for your range."
-        buttons={[
-          { label: "Browse the supplier directory", href: "/directory" },
-          { label: "Request a quote", href: "/contact?topic=source" },
-        ]}
+      <GlobalCTA
+        label="Source from Pakistan"
+        title="Ready to source from Pakistan?"
+        subtitle="Tell us what you need and we'll match it to the right vetted manufacturer — quality-checked and delivered to your market, anywhere in the world."
+        primaryButtonText="Request a quote"
+        primaryButtonLink="/contact"
+        secondaryButtonText="Global textile market"
+        secondaryButtonLink="/global-textile-market"
       />
     </>
   );

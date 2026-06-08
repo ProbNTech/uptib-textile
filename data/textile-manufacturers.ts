@@ -1,0 +1,211 @@
+// Real Pakistani textile manufacturers & sourcing partners.
+//
+// Sourced from the UPTIB textile company knowledge base
+// (assets/UPTIB_Textile_source-docs/Textile_Company_Database.md, Part A —
+// Pakistani exporters & sourcing companies). Product lists, specifications,
+// locations and websites are recorded factually from each company's own site.
+// Bangladesh-based firms (Part B) and India service-model sites (Part C) are
+// intentionally excluded — this roster is Pakistani exporters only.
+//
+// logoUrl points to each company's own logo where one could be retrieved;
+// companies without a retrievable logo fall back to an initials monogram.
+
+import type { DirectoryCompany } from "@/data/companies";
+
+export const textileManufacturers: DirectoryCompany[] = [
+  {
+    id: "textile-001",
+    slug: "pakistan-fibres",
+    name: "Pakistan Fibres",
+    category: "Home & Hospitality Textiles",
+    services: ["Towels & terry", "Bed & hotel linen", "Healthcare textiles", "Canvas & workwear fabric"],
+    location: "Faisalabad, Pakistan",
+    country: "Pakistan",
+    description:
+      "Vertically integrated manufacturer, processor and stitcher of export-grade towels, bed linen, hotel & hospital linen and canvas — supplying the Middle East, North America, the Gulf and Europe, and local giants Gul Ahmed and Nishat.",
+    logoUrl: "/image/textile/logos/pakistan-fibres.svg",
+    websiteUrl: "https://pakistanfibres.com/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-002",
+    slug: "norms-textile-sourcing",
+    name: "Norms Textile Sourcing",
+    category: "Sourcing & Buying House",
+    services: ["Denim & woven apparel", "Home textiles", "Terry towels", "Greige fabric & yarns"],
+    location: "Pakistan",
+    country: "Pakistan",
+    description:
+      "Textile buying, sourcing and quality-assurance agency (est. 1997) sourcing apparel, home textiles, hospitality linen, terry towels, fabrics and yarns for buyers across Europe, the USA, the UK, the Far East and South America.",
+    logoUrl: "/image/textile/logos/norms-textile-sourcing.png",
+    websiteUrl: "https://normstextile.com/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-003",
+    slug: "utex-international",
+    name: "Utex International",
+    category: "Sourcing & Buying House",
+    services: ["Home textiles", "Hospitality linen", "Medical & workwear", "Towels & fabrics"],
+    location: "Faisalabad, Pakistan",
+    country: "Pakistan",
+    description:
+      "Faisalabad buying house and quality-assurance partner with 22+ years' experience serving 30+ countries — fiber-to-garment vertical sourcing with factory-direct pricing, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners.",
+    logoUrl: "/image/textile/logos/utex-international.png",
+    websiteUrl: "https://www.utexinternational.com/en",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-004",
+    slug: "lahore-textiles",
+    name: "Lahore Textiles",
+    category: "Apparel & Knitwear",
+    services: ["Private-label / OEM apparel", "Hoodies & shirts", "Uniforms & workwear", "Printing & embroidery"],
+    location: "Lahore, Pakistan",
+    country: "Pakistan",
+    description:
+      "Custom clothing (private-label / OEM) manufacturer with cutting, stitching, printing, embroidery and packaging under one roof — a 100-piece MOQ per design, 50+ premium fabrics and an AQL quality system, exporting to 30+ countries.",
+    logoUrl: "/image/textile/logos/lahore-textiles.png",
+    websiteUrl: "https://lahoretextiles.com/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-005",
+    slug: "adeon-global-trade",
+    name: "Adeon Global Trade",
+    category: "Sourcing & Buying House",
+    services: ["Sourcing & procurement", "Import-export", "Towels & garments", "Factory vetting"],
+    location: "Pakistan · Turkey · Algeria",
+    country: "Pakistan",
+    description:
+      "International sourcing and trading company acting as an outsourced buying office across textiles and many product groups — regional offices in Turkey, Pakistan and Algeria, a multilingual team and clients in 70+ countries.",
+    logoUrl: "/image/textile/logos/adeon-global-trade.png",
+    websiteUrl: "https://adeonglobal.com.pk/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-006",
+    slug: "texkoncept",
+    name: "TexKoncept",
+    category: "Home & Hospitality Textiles",
+    services: ["Hotel & hospital linen", "Towels & bathrobes", "Workwear & medical garments", "Sourcing & QA"],
+    location: "Faisalabad, Pakistan",
+    country: "Pakistan",
+    description:
+      "Textile sourcing, buying and quality-assurance agency supplying hotel bed linen, hospital linen and towels to USA and European buyers through an ISO / OEKO-TEX-audited multi-factory network, acting as a single point of contact from sampling to export documentation.",
+    logoUrl: "/image/textile/logos/texkoncept.png",
+    websiteUrl: "https://texkoncept.com/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-007",
+    slug: "fablynx",
+    name: "Fablynx Inc",
+    category: "Sourcing & Buying House",
+    services: ["Yarns & fabrics", "Home furnishings", "Garments", "Technical textiles"],
+    location: "Lahore, Pakistan",
+    country: "Pakistan",
+    description:
+      "Eco-friendly textile marketing, servicing and sourcing company (15+ years) connecting global buyers with Pakistani manufacturers — fashion textiles, made-ups and technical textiles, with QC across sampling and bulk and full export-documentation support.",
+    logoUrl: "/image/textile/logos/fablynx.png",
+    websiteUrl: "http://www.fablynx.com/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-008",
+    slug: "textile-marketing-company",
+    name: "Textile Marketing Company",
+    category: "Yarn & Fabric",
+    services: ["Spinning mills", "Yarn", "Fabric", "Sustainable textiles"],
+    location: "Lahore, Pakistan",
+    country: "Pakistan",
+    description:
+      "A 30-year-old textile group built around international 'daughter companies', running its own spinning mills and warehouses with a sustainability-led, traceable 'seed to style' model across yarn, fabric and garment supply.",
+    logoUrl: "/image/textile/logos/textile-marketing-company.png",
+    websiteUrl: "https://tmc.com.pk/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-009",
+    slug: "vigour-impex",
+    name: "Vigour Impex",
+    category: "Sourcing & Buying House",
+    services: ["Yarns", "Fabrics", "Home textiles", "Garments & workwear"],
+    location: "Lahore, Pakistan",
+    country: "Pakistan",
+    description:
+      "ISO 9001:2015-registered buying office and textile sourcing / export company (since 1992) — a one-stop shop for yarns, fabrics, home textiles and garments, with AQL inspection, lab testing and a growing focus on organic cotton and recycled fibres.",
+    logoUrl: "/image/textile/logos/vigour-impex.png",
+    websiteUrl: "https://vigourimpex.com/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-010",
+    slug: "shahzad-corporation",
+    name: "Shahzad Corporation",
+    category: "Sourcing & Buying House",
+    services: ["Sourcing & inspection", "Woven fabrics & made-ups", "Towels", "Institutional linen"],
+    location: "Jhang, Pakistan",
+    country: "Pakistan",
+    description:
+      "Textile sourcing company and buying house (since 1997) acting as a buyer's exclusive sourcing agent in Pakistan — floating trade leads across a large manufacturer pool, with AQL in-line and shipment inspections, for clients across Europe and the Americas.",
+    logoUrl: "/image/textile/logos/shahzad-corporation.png",
+    websiteUrl: "http://www.shahzadcorp.com/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-011",
+    slug: "united-apparel-sourcing",
+    name: "United Apparel Sourcing",
+    category: "Apparel & Knitwear",
+    services: ["Customised apparel", "Home textiles", "Accessories", "Textile consultancy"],
+    location: "Lahore, Pakistan",
+    country: "Pakistan",
+    description:
+      "Leading apparel trading / buying house sourcing customised apparel, home textiles and accessories from reliable Pakistani manufacturers for clients mainly in Europe and America, with startup-branding support for new textile brands.",
+    logoUrl: "/image/textile/logos/united-apparel-sourcing.jpg",
+    websiteUrl: "https://www.unitedapparels.pk/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-012",
+    slug: "extreme-sportswear",
+    name: "Extreme Sportswear",
+    category: "Sportswear & Activewear",
+    services: ["Custom sportswear", "Sublimated teamwear", "Activewear & gymwear", "Low-MOQ OEM"],
+    location: "Sialkot, Pakistan",
+    country: "Pakistan",
+    description:
+      "Sialkot custom and private-label (OEM) sportswear and activewear manufacturer that has produced for 3,000+ brands, with one of the industry's lowest MOQs (50 pcs per colour / design) and full in-house design-to-dispatch facilities.",
+    logoUrl: "/image/textile/logos/extreme-sportswear.png",
+    websiteUrl: "https://xsportswears.com/",
+    source: "Member",
+    verified: true,
+  },
+  {
+    id: "textile-013",
+    slug: "albeeza-apparel",
+    name: "Albeeza Apparel",
+    category: "Healthcare Textiles",
+    services: ["Medical scrubs & lab coats", "Hospital & nurse uniforms", "Corporate uniforms", "Private-label apparel"],
+    location: "Pakistan",
+    country: "Pakistan",
+    description:
+      "Custom clothing and uniform manufacturer specialising in medical and corporate uniforms — scrubs, lab coats, patient gowns and workwear — with low MOQs for startups and bulk capacity, exporting to the USA, UK, Europe, Australia and the Middle East.",
+    logoUrl: "/image/textile/logos/albeeza-apparel.jpg",
+    websiteUrl: "https://albeezaapparel.com/",
+    source: "Member",
+    verified: true,
+  },
+];

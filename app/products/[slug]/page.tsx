@@ -1,219 +1,102 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, ShoppingBag, Building2, TrendingUp } from "lucide-react";
-import { Hero } from "@/components/sections/Hero";
-import { FeatureRow } from "@/components/sections/FeatureRow";
-import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { FeatureList } from "@/components/ui/FeatureList";
-import { FactsBox } from "@/components/ui/FactsBox";
-import { MarketTable } from "@/components/ui/MarketTable";
-import { ChipList } from "@/components/ui/ChipList";
-import { Callout } from "@/components/ui/Callout";
-import { CTASection } from "@/components/ui/CTASection";
-import { products, productBySlug, productSlugs } from "@/data/products";
-import { productImage, productImageAlt } from "@/data/images";
-import { withQuery } from "@/lib/utils";
-
-type Params = { slug: string };
+import { CheckCircle2 } from "lucide-react";
+import { PageHero } from "@/components/PageHero";
+import { Section } from "@/components/Section";
+import { GlobalCTA } from "@/components/GlobalCTA";
+import { Button } from "@/components/Button";
+import { products, getProduct } from "@/data/textile";
 
 export function generateStaticParams() {
-  return productSlugs.map((slug) => ({ slug }));
+  return products.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const product = productBySlug(slug);
-  if (!product) return {};
+  const p = getProduct(slug);
+  if (!p) return {};
   return {
-    title: `${product.cardTitle} from Pakistan`,
-    description: `${product.title}. ${product.summary}`,
-    alternates: { canonical: `/products/${product.slug}` },
+    title: `${p.name} — ${p.headline}`,
+    description: p.summary,
+    alternates: { canonical: `/products/${p.slug}` },
   };
 }
 
-export default async function ProductPage({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const product = productBySlug(slug);
-  if (!product) notFound();
+  const p = getProduct(slug);
+  if (!p) notFound();
 
-  const sourceHref = withQuery("/contact", {
-    topic: "source",
-    product: product.slug,
-  });
-  const listHref = withQuery("/contact", {
-    topic: "sell",
-    product: product.slug,
-  });
-
-  const heroHighlights = product.marketRows.slice(0, 3).map((r) => ({
-    value: r.value,
-    label: r.label,
-  }));
+  const factRows: { label: string; value: string }[] = [
+    { label: "Pakistan's strength", value: p.facts.strength },
+    { label: "Global demand", value: p.facts.globalDemand },
+    { label: "Market size", value: p.facts.marketSize },
+    { label: "Certifications", value: p.facts.certifications },
+  ];
 
   return (
     <>
-      <Hero
-        eyebrow={product.eyebrow}
-        title={product.title}
-        description={product.summary}
-        image={productImage[product.slug]}
-        actions={[
-          { label: product.primaryCta, href: sourceHref },
-          { label: "List your products", href: listHref, variant: "outline" },
-        ]}
-        highlights={heroHighlights}
-      />
+      <PageHero label={p.eyebrow} title={p.headline} subtitle={p.summary} video="banner">
+        <Button href="/contact" variant="primary" size="lg" showArrow>Source {p.name.toLowerCase()}</Button>
+      </PageHero>
 
-      {/* Overview — editorial image + copy */}
-      <Section>
-        <FeatureRow
-          eyebrow="Overview"
-          title={`Why ${product.cardTitle.toLowerCase()}, and who buys it`}
-          image={productImageAlt[product.slug]}
-          badge={{
-            value: product.marketRows[0]?.value ?? "",
-            label: product.marketRows[0]?.label ?? "",
-          }}
-        >
-          {product.overview.map((para) => (
-            <p key={para.slice(0, 24)}>{para}</p>
-          ))}
-        </FeatureRow>
-      </Section>
-
-      {/* What's included — with sub-groups when present */}
-      <Section background="surface">
-        <div className="flex flex-col gap-10">
-          <SectionHeading
-            eyebrow="What's included"
-            title="The full range we trade"
-          />
-          {product.subgroups ? (
-            <div className="grid gap-6 md:grid-cols-3">
-              {product.subgroups.map((group) => (
-                <div
-                  key={group.title}
-                  className="rounded-2xl border border-line bg-white p-6 shadow-card"
-                >
-                  <h3 className="text-lg font-semibold text-primary-dark">
-                    {group.title}
-                  </h3>
-                  <FeatureList items={group.items} className="mt-4" />
-                </div>
+      <Section variant="light" pattern>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <p className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#047857] mb-3">Overview</p>
+            <p className="text-[#3D4152] text-lg leading-relaxed">{p.intro}</p>
+          </div>
+          <div className="lg:col-span-7">
+            <h2 className="font-heading font-extrabold text-[#1C1F2E] text-2xl mb-6">What&rsquo;s included</h2>
+            <ul className="space-y-3">
+              {p.included.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                  <span className="text-[#3D4152]">{item}</span>
+                </li>
               ))}
-            </div>
-          ) : (
-            <FeatureList items={product.included} columns={2} />
-          )}
-        </div>
-      </Section>
-
-      {/* Market opportunity */}
-      <Section>
-        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div className="flex flex-col gap-6">
-            <SectionHeading
-              eyebrow="The UK opportunity"
-              title="A market worth winning"
-              description="Pakistan's strengths, matched to where UK demand is strongest and growing."
-            />
-            {product.trends ? <FeatureList items={product.trends} /> : null}
-          </div>
-          <MarketTable rows={product.marketRows} />
-        </div>
-      </Section>
-
-      {/* Why Pakistan / Who buys / Best sellers */}
-      <Section background="surface">
-        <div className="grid gap-6 lg:grid-cols-3">
-          <div className="rounded-2xl border border-line bg-white p-7 shadow-card">
-            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-tertiary/10 text-tertiary">
-              <TrendingUp className="size-5" aria-hidden />
-            </span>
-            <h3 className="mt-4 text-lg font-semibold text-primary-dark">
-              Why Pakistan
-            </h3>
-            <FeatureList items={product.whyPakistan} className="mt-4" />
-          </div>
-          <div className="rounded-2xl border border-line bg-white p-7 shadow-card">
-            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-              <Building2 className="size-5" aria-hidden />
-            </span>
-            <h3 className="mt-4 text-lg font-semibold text-primary-dark">
-              Who buys in the UK
-            </h3>
-            <ChipList items={product.whoBuys} tone="blue" className="mt-4" />
-          </div>
-          <div className="rounded-2xl border border-line bg-white p-7 shadow-card">
-            <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-accent/15 text-accent-dark">
-              <ShoppingBag className="size-5" aria-hidden />
-            </span>
-            <h3 className="mt-4 text-lg font-semibold text-primary-dark">
-              Best sellers
-            </h3>
-            <ChipList
-              items={product.bestSellers}
-              tone="gold"
-              className="mt-4"
-            />
+            </ul>
           </div>
         </div>
-      </Section>
 
-      {/* Facts box */}
-      <Section>
-        <div className="flex flex-col gap-8">
-          <SectionHeading eyebrow="At a glance" title="The facts" />
-          <FactsBox facts={product.facts} />
-          <Callout tone="green" title="Sustainability, built in.">
-            We work with factories carrying the certifications UK buyers
-            increasingly require — GOTS, OEKO-TEX, BCI, Sedex, WRAP and ISO —
-            and can prioritise organic cotton, recycled materials and
-            transparent supply chains.
-          </Callout>
-        </div>
-      </Section>
-
-      <CTASection
-        image={productImage[product.slug]}
-        title={`Source ${product.cardTitle.toLowerCase()} — or list yours.`}
-        description="Buyers source through us with quality guaranteed; manufacturers get in front of UK demand."
-        buttons={[
-          { label: product.primaryCta, href: sourceHref },
-          { label: "List your products", href: listHref },
-        ]}
-      />
-
-      {/* Sibling categories for cross-navigation. */}
-      <Section spacing="tight">
-        <p className="text-sm font-semibold uppercase tracking-wider text-muted">
-          Other categories
-        </p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          {products
-            .filter((p) => p.slug !== product.slug)
-            .map((p) => (
-              <Link
-                key={p.slug}
-                href={`/products/${p.slug}`}
-                className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-sm font-medium text-body transition-colors hover:border-primary/40 hover:text-primary"
-              >
-                {p.cardTitle}
-                <ArrowRight className="size-3.5" aria-hidden />
-              </Link>
+        {/* Facts box */}
+        <div className="mt-14 rounded-card border border-[#E5E7EB] overflow-hidden">
+          <div className="bg-[#F8FAF9] px-6 py-4 border-b border-[#E5E7EB]">
+            <h3 className="font-heading font-bold text-[#1C1F2E] text-lg">The facts</h3>
+          </div>
+          <dl className="divide-y divide-[#E5E7EB]">
+            {factRows.map((row) => (
+              <div key={row.label} className="grid grid-cols-1 sm:grid-cols-3 gap-2 px-6 py-5">
+                <dt className="font-heading font-bold text-[#047857] text-sm uppercase tracking-wide">{row.label}</dt>
+                <dd className="sm:col-span-2 text-[#3D4152]">{row.value}</dd>
+              </div>
             ))}
+          </dl>
+        </div>
+
+        {/* Product photos — slots kept filled (swap subjects one-for-one in imagery pass) */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="aspect-[4/3] rounded-card bg-[#F8FAF9] border border-dashed border-[#D1FAE5] flex items-center justify-center text-[#6B7280] text-sm"
+            >
+              {/* TODO: add licence-clear {p.name} photography (see IMAGE_CREDITS.md) */}
+              {p.name} photo {i + 1}
+            </div>
+          ))}
         </div>
       </Section>
+
+      <GlobalCTA
+        label={`Source ${p.name}`}
+        title={`Source ${p.name.toLowerCase()}, or list your products`}
+        subtitle="Buyers: tell us your spec and we'll handle sourcing, quality and delivery. Manufacturers: get listed in the supplier pool global buyers source from."
+        primaryButtonText="Request a quote"
+        primaryButtonLink="/contact"
+        secondaryButtonText="List your products"
+        secondaryButtonLink="/membership"
+      />
     </>
   );
 }

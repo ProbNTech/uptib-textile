@@ -1,91 +1,56 @@
-import Link from "next/link";
-import type { ComponentProps, ReactNode } from "react";
-import { ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
 
-type Variant =
-  | "primary"
-  | "secondary"
-  | "outline"
-  | "outlineWhite"
-  | "ghost"
-  | "white";
-type Size = "sm" | "md" | "lg";
+import { cn } from "@/lib/utils"
 
-const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60";
+const buttonVariants = cva(
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  },
+)
 
-const variants: Record<Variant, string> = {
-  primary:
-    "bg-primary text-white shadow-sm hover:bg-primary-dark hover:shadow-md",
-  secondary:
-    "bg-secondary text-white shadow-sm hover:bg-secondary-dark hover:shadow-md",
-  outline:
-    "border border-primary/30 bg-white text-primary hover:border-primary hover:bg-primary/5",
-  outlineWhite:
-    "border border-white/40 text-white hover:border-white hover:bg-white/10",
-  ghost: "text-primary hover:bg-primary/5",
-  white:
-    "bg-white text-primary-dark shadow-sm hover:bg-white/90 hover:shadow-md",
-};
-
-const sizes: Record<Size, string> = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-5 py-2.5 text-sm",
-  lg: "px-7 py-3.5 text-base",
-};
-
-type CommonProps = {
-  variant?: Variant;
-  size?: Size;
-  withArrow?: boolean;
-  className?: string;
-  children: ReactNode;
-};
-
-type ButtonAsLink = CommonProps & {
-  href: string;
-} & Omit<ComponentProps<typeof Link>, "href" | "className" | "children">;
-
-type ButtonAsButton = CommonProps & {
-  href?: undefined;
-} & Omit<ComponentProps<"button">, "className" | "children">;
-
-export function Button(props: ButtonAsLink | ButtonAsButton) {
-  const {
-    variant = "primary",
-    size = "md",
-    withArrow = false,
-    className,
-    children,
-    ...rest
-  } = props;
-
-  const classes = cn(base, variants[variant], sizes[size], className);
-  const content = (
-    <>
-      {children}
-      {withArrow ? (
-        <ArrowRight
-          className="size-4 transition-transform group-hover:translate-x-0.5"
-          aria-hidden
-        />
-      ) : null}
-    </>
-  );
-
-  if ("href" in props && props.href) {
-    const { href, ...linkRest } = rest as ButtonAsLink;
-    return (
-      <Link href={href} className={cn("group", classes)} {...linkRest}>
-        {content}
-      </Link>
-    );
-  }
-
-  return (
-    <button className={cn("group", classes)} {...(rest as ButtonAsButton)}>
-      {content}
-    </button>
-  );
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
 }
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  },
+)
+Button.displayName = "Button"
+
+export { Button, buttonVariants }

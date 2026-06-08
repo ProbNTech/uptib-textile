@@ -1,100 +1,145 @@
+// UPTIB Textile - Main application layout
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import Script from "next/script";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { site } from "@/data/site";
+import { Lato, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { CookieConsent } from "@/components/CookieConsent";
+import { BackToTop } from "@/components/ui/BackToTop";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: "--font-montserrat",
   display: "swap",
-  variable: "--font-sans",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const lato = Lato({
   subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+  variable: "--font-lato",
   display: "swap",
-  weight: ["600", "700", "800"],
-  variable: "--font-display",
 });
+
+const BASE_URL = "https://www.ukpaktrade.org.uk";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(BASE_URL),
   title: {
-    default:
-      "UPTIB Textile — Pakistan's finest textiles, sourced & sold for the UK",
-    template: "%s · UPTIB Textile",
+    default: "UPTIB Textile — Pakistan textile exports, worldwide",
+    template: "%s | UPTIB Textile",
   },
-  description: site.description,
-  applicationName: site.name,
+  description:
+    "UPTIB connects Pakistan's textile manufacturing to global buyers and markets — bedding & linen, apparel, sportswear and healthcare textiles, with sourcing, outsourcing, marketing and warehousing services.",
   keywords: [
-    "UK Pakistan textile trade",
-    "Pakistani textile manufacturers",
-    "textile buying house",
+    "Pakistan textile export",
+    "textile sourcing Pakistan",
+    "global textile buyers",
+    "UPTIB",
     "bedding and linen",
-    "sportswear manufacturing",
-    "healthcare textiles",
+    "apparel manufacturing",
+    "sportswear Sialkot",
     "GSP+ textiles",
   ],
+  authors: [{ name: "UK–Pakistan Trades & Investment Board" }],
   openGraph: {
     type: "website",
-    siteName: site.name,
-    title:
-      "UPTIB Textile — Pakistan's finest textiles, sourced & sold for the UK",
-    description: site.description,
-    url: site.url,
     locale: "en_GB",
+    url: BASE_URL,
+    siteName: "UPTIB Textile",
+    title: "UPTIB Textile — Pakistan textile exports, worldwide",
+    description:
+      "Made in Pakistan. Sold across the world. UPTIB connects Pakistan's textile manufacturing to global buyers — with sourcing, outsourcing, marketing and warehousing services.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "UPTIB Textile — Pakistan textile exports, worldwide",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "UPTIB Textile",
-    description: site.description,
+    title: "UPTIB Textile — Pakistan textile exports, worldwide",
+    description:
+      "Made in Pakistan. Sold across the world. Pakistan's textile manufacturing, connected to global buyers and markets.",
+    images: ["/og-image.png"],
   },
-  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
 };
 
-const organizationJsonLd = {
+const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: site.legalName,
-  alternateName: site.shortName,
-  url: site.url,
-  logo: `${site.url}/assets/uptib-logo.webp`,
-  description: site.description,
-  address: site.offices.map((office) => ({
+  name: "UK–Pakistan Trades & Investment Board",
+  alternateName: "UPTIB",
+  url: BASE_URL,
+  logo: `${BASE_URL}/logo.svg`,
+  description:
+    "UPTIB connects Pakistan's textile manufacturing to global buyers and markets — with sourcing, outsourcing, marketing and warehousing services.",
+  foundingDate: "2024",
+  areaServed: { "@type": "Place", name: "Worldwide" },
+  address: {
     "@type": "PostalAddress",
-    name: office.label,
-    streetAddress: office.address,
-  })),
-  sameAs: site.socials.map((s) => s.href),
+    streetAddress: "134–136 Westbourne Terrace",
+    addressLocality: "London",
+    postalCode: "W2 6QB",
+    addressCountry: "GB",
+  },
+  sameAs: [
+    "https://facebook.com/ukpaktrade",
+    "https://instagram.com/ukpaktrade",
+    "https://linkedin.com/company/ukpaktrade",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "general enquiry",
+    email: "info@ukpaktrade.org.uk",
+    telephone: "+44 7920 55 0000",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en-GB" className={`${inter.variable} ${jakarta.variable}`}>
-      <body className="flex min-h-screen flex-col">
+    <html lang="en" className={`${montserrat.variable} ${lato.variable}`}>
+      <head>
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://i.ytimg.com" />
+        <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
+      </head>
+      <body className="bg-white">
         <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-[#047857] focus:text-white focus:rounded-lg focus:text-sm focus:font-bold focus:shadow-lg focus:outline-none"
         >
-          Skip to content
+          Skip to main content
         </a>
-        <Header />
-        <main id="main" className="flex-1">
-          {children}
-        </main>
-        <Footer />
-        <Script
-          id="org-jsonld"
+        <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
+        <CookieConsent />
+        <WhatsAppButton />
+        <BackToTop />
+        <SpeedInsights />
       </body>
     </html>
   );
