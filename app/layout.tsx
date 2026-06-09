@@ -85,7 +85,7 @@ const jsonLd = {
   name: "UK–Pakistan Trades & Investment Board",
   alternateName: "UPTIB",
   url: BASE_URL,
-  logo: `${BASE_URL}/logo.svg`,
+  logo: `${BASE_URL}/image/main-logo.png`,
   description:
     "UPTIB connects Pakistan's textile manufacturing to global buyers and markets — with sourcing, outsourcing, marketing and warehousing services.",
   foundingDate: "2024",
@@ -125,7 +125,7 @@ export default function RootLayout({
       <body className="bg-white">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-[#047857] focus:text-white focus:rounded-lg focus:text-sm focus:font-bold focus:shadow-lg focus:outline-none"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-6 focus:py-3 focus:bg-[#2F7549] focus:text-white focus:rounded-lg focus:text-sm focus:font-bold focus:shadow-lg focus:outline-none"
         >
           Skip to main content
         </a>

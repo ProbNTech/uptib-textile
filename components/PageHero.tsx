@@ -302,8 +302,8 @@ export function PageHero({
             style={{
               background:
                 align === "center"
-                  ? "radial-gradient(ellipse 80% 75% at 50% 50%, rgba(5,10,20,0.55) 0%, rgba(5,10,20,0.32) 45%, rgba(5,10,20,0.08) 78%, rgba(5,10,20,0) 100%)"
-                  : "radial-gradient(ellipse 75% 70% at 35% 50%, rgba(5,10,20,0.6) 0%, rgba(5,10,20,0.35) 45%, rgba(5,10,20,0.08) 78%, rgba(5,10,20,0) 100%)",
+                  ? "radial-gradient(ellipse 85% 80% at 50% 50%, rgba(5,10,20,0.74) 0%, rgba(5,10,20,0.52) 45%, rgba(5,10,20,0.2) 75%, rgba(5,10,20,0) 100%)"
+                  : "radial-gradient(ellipse 80% 75% at 35% 50%, rgba(5,10,20,0.8) 0%, rgba(5,10,20,0.56) 45%, rgba(5,10,20,0.22) 75%, rgba(5,10,20,0) 100%)",
             }}
           />
           <motion.div
@@ -315,7 +315,7 @@ export function PageHero({
             {/* Label */}
             {label && (
               <motion.p
-                className="text-lg sm:text-xl font-extrabold uppercase tracking-[0.18em] text-[#047857] mb-4 sm:mb-5"
+                className="text-lg sm:text-xl font-extrabold uppercase tracking-[0.18em] text-[#2F7549] mb-4 sm:mb-5"
                 style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}
                 initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -394,7 +394,7 @@ export function PageHero({
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30 bg-gradient-to-r from-[#047857] via-[#10B981] to-[#047857]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30 bg-gradient-to-r from-[#2F7549] via-[#3E8F5E] to-[#2F7549]" />
     </section>
   );
 }

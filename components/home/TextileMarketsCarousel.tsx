@@ -47,7 +47,7 @@ const markets: TextileMarket[] = [
     valueLabel: "Pakistan textile exports / yr",
     note: "Pakistan's third-largest EU partner — textiles are 85%+ of exports, led by house linens and menswear.",
     categories: ["House linens", "Menswear", "Knitwear"],
-    accent: "#047857",
+    accent: "#2F7549",
   },
   {
     name: "Italy",
@@ -77,7 +77,7 @@ const markets: TextileMarket[] = [
     valueLabel: "apparel importer in Europe",
     note: "Europe's largest textile market (~20% share) and top destination for certified, sustainable goods.",
     categories: ["Knitwear", "Denim", "Technical"],
-    accent: "#059669",
+    accent: "#3C8F5E",
   },
   {
     name: "Saudi Arabia",
@@ -106,7 +106,7 @@ function MarketCard({ market }: { market: TextileMarket }) {
     <Link href="/global-textile-market" className="group block h-full w-[340px] flex-shrink-0">
       <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
         {/* Header */}
-        <div className="relative z-0 min-h-[112px] overflow-hidden px-5 pt-5 pb-8" style={{ background: `linear-gradient(135deg, ${market.accent} 0%, #064E3B 100%)` }}>
+        <div className="relative z-0 min-h-[112px] overflow-hidden px-5 pt-5 pb-8" style={{ background: `linear-gradient(135deg, ${market.accent} 0%, #15402A 100%)` }}>
           <div className="flex items-start justify-between gap-3">
             <div>
               <h3 className="font-heading text-lg font-bold text-white">{market.name}</h3>
@@ -138,12 +138,12 @@ function MarketCard({ market }: { market: TextileMarket }) {
           <p className="text-[13px] leading-relaxed text-[#5A5F72]">{market.note}</p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {market.categories.map((c) => (
-              <span key={c} className="rounded-full border border-[#047857]/10 bg-[#F0FDF4] px-2.5 py-1 text-[11px] font-semibold text-[#047857]">
+              <span key={c} className="rounded-full border border-[#2F7549]/10 bg-[#F0FDF4] px-2.5 py-1 text-[11px] font-semibold text-[#2F7549]">
                 {c}
               </span>
             ))}
           </div>
-          <div className="mt-auto flex items-center gap-1.5 border-t border-gray-100 pt-3 text-sm font-semibold text-[#047857] transition-all group-hover:gap-2.5">
+          <div className="mt-auto flex items-center gap-1.5 border-t border-gray-100 pt-3 text-sm font-semibold text-[#2F7549] transition-all group-hover:gap-2.5">
             Explore market
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </div>

@@ -175,7 +175,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       <Section variant="light" pattern>
         <div className="max-w-3xl mb-12">
-          <p className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#047857] mb-3">What it is</p>
+          <p className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#2F7549] mb-3">What it is</p>
           <p className="text-[#3D4152] text-lg sm:text-xl leading-relaxed">{d.whatItIs}</p>
         </div>
 
@@ -184,11 +184,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             if (block.type === "list") {
               return (
                 <div key={bi}>
-                  <h2 className="font-heading font-extrabold text-[#1C1F2E] text-2xl mb-6">{block.title}</h2>
+                  <h2 className="font-heading font-extrabold text-[#16291E] text-2xl mb-6">{block.title}</h2>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3">
                     {block.items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-[#3E8F5E] flex-shrink-0 mt-0.5" />
                         <span className="text-[#3D4152]">{item}</span>
                       </li>
                     ))}
@@ -199,15 +199,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             if (block.type === "steps") {
               return (
                 <div key={bi}>
-                  <h2 className="font-heading font-extrabold text-[#1C1F2E] text-2xl mb-6">{block.title}</h2>
+                  <h2 className="font-heading font-extrabold text-[#16291E] text-2xl mb-6">{block.title}</h2>
                   <ol className="space-y-4">
                     {block.items.map((it, i) => (
                       <li key={it.step} className="flex items-start gap-4 rounded-card border border-[#E5E7EB] bg-[#F8FAF9] p-5">
-                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#047857] text-white font-heading font-bold text-sm flex items-center justify-center">
+                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#2F7549] text-white font-heading font-bold text-sm flex items-center justify-center">
                           {i + 1}
                         </span>
                         <div>
-                          <p className="font-heading font-bold text-[#1C1F2E]">{it.step}</p>
+                          <p className="font-heading font-bold text-[#16291E]">{it.step}</p>
                           <p className="text-[#3D4152] mt-1 leading-relaxed">{it.text}</p>
                         </div>
                       </li>
@@ -218,9 +218,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             }
             const CIcon = block.variant === "gsp" ? BadgePercent : ShieldCheck;
             return (
-              <div key={bi} className="rounded-card bg-[#064E3B] text-white p-8 flex items-start gap-5">
+              <div key={bi} className="rounded-card bg-[#15402A] text-white p-8 flex items-start gap-5">
                 <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
-                  <CIcon className="w-6 h-6 text-[#6EE7B7]" />
+                  <CIcon className="w-6 h-6 text-[#8FD3AE]" />
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-white text-lg mb-2">{block.title}</h3>

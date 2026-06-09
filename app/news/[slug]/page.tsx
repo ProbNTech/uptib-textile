@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -32,6 +33,11 @@ export default async function ArticlePage({ params }: Props) {
   const a = getArticle(slug);
   if (!a || !a.published) notFound();
 
+  const readNext = articles
+    .filter((x) => x.published && x.slug !== a.slug)
+    .sort((x, y) => y.date.localeCompare(x.date))
+    .slice(0, 3);
+
   return (
     <>
       <PageHero
@@ -48,14 +54,24 @@ export default async function ArticlePage({ params }: Props) {
       />
 
       <Section variant="light" pattern>
-        <Link href="/news" className="inline-flex items-center gap-2 text-[#047857] text-sm font-semibold mb-8 hover:text-[#065F46] transition-colors">
+        <Link href="/news" className="inline-flex items-center gap-2 text-[#2F7549] text-sm font-semibold mb-8 hover:text-[#245C3A] transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to News
         </Link>
         <article className="max-w-3xl mx-auto content-body">
-          <p className="text-[#1C1F2E] text-xl leading-relaxed mb-10 font-medium">{a.excerpt}</p>
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-card mb-10 shadow-sm">
+            <Image
+              src={a.image}
+              alt={a.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+              priority
+            />
+          </div>
+          <p className="text-[#16291E] text-xl leading-relaxed mb-10 font-medium">{a.excerpt}</p>
           {a.body.map((section) => (
             <section key={section.heading} className="mb-10">
-              <h2 className="font-heading font-extrabold text-[#1C1F2E] text-2xl mb-4">{section.heading}</h2>
+              <h2 className="font-heading font-extrabold text-[#16291E] text-2xl mb-4">{section.heading}</h2>
               {section.paragraphs.map((p, i) => (
                 <p key={i} className="text-[#3D4152] leading-relaxed mb-4">{p}</p>
               ))}
@@ -63,7 +79,7 @@ export default async function ArticlePage({ params }: Props) {
                 <ul className="space-y-2 mt-4">
                   {section.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#10B981] flex-shrink-0" />
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#3E8F5E] flex-shrink-0" />
                       <span className="text-[#3D4152]">{b}</span>
                     </li>
                   ))}
@@ -72,6 +88,21 @@ export default async function ArticlePage({ params }: Props) {
             </section>
           ))}
         </article>
+
+        {/* Read next */}
+        <div className="max-w-5xl mx-auto mt-16 pt-12 border-t border-[#E5E7EB]">
+          <h2 className="font-heading font-extrabold text-[#16291E] text-2xl mb-6">Read next</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {readNext.map((n) => (
+              <Link key={n.slug} href={`/news/${n.slug}`} className="group flex flex-col rounded-card border border-[#E5E7EB] bg-white p-6 hover:border-[#3E8F5E] hover:shadow-lg transition-all duration-300">
+                <span className="text-xs font-bold uppercase tracking-wide text-[#2F7549] mb-2">{n.category}</span>
+                <h3 className="font-heading font-bold text-[#16291E] text-base leading-snug mb-2 group-hover:text-[#2F7549] transition-colors">{n.title}</h3>
+                <p className="text-[#6B7280] text-sm leading-relaxed flex-1">{n.excerpt}</p>
+                <span className="text-xs text-[#9CA3AF] mt-4">{n.displayDate} · {n.readTime}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
       </Section>
 
       <GlobalCTA

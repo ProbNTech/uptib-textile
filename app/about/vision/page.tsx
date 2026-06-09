@@ -14,25 +14,25 @@ const visionPillars = [
     icon: Network,
     title: "National Network",
     desc: "Create a national network of Tech businessmen, Engineers and technical professionals of Pakistani Diaspora living in the UK for networking, career advancement, and technology exchange.",
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     icon: Handshake,
     title: "Innovation Bridge",
     desc: "An inclusive support group linking Tech leaders, digital entrepreneurs, corporate executives, investors, accelerators, and emerging AI/Tech start-ups to encourage collaboration between UK/Europe and Pakistan.",
-    color: "#10B981",
+    color: "#3E8F5E",
   },
   {
     icon: Globe2,
     title: "Trusted Facilitator",
     desc: "A trusted intermediary facilitating the growth of the strategic economic relationship, trade and investment flows between Pakistan and the United Kingdom through vast business networks.",
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     icon: TrendingUp,
     title: "Strategic Growth",
     desc: "Help British Pakistani Nationals set up business in Pakistan and Pakistani Tech businesses establish a footprint in the UK through strong relationships with governments and industry bodies.",
-    color: "#047857",
+    color: "#2F7549",
   },
 ];
 
@@ -57,9 +57,9 @@ export default function VisionPage() {
           <SectionHeader label="Our purpose" title="Vision" color="red" />
           <div className="grid lg:grid-cols-2 gap-8">
             <div>
-              <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-l-4 border-l-[#047857]">
-                <Lightbulb className="w-8 h-8 text-[#047857] mb-5" strokeWidth={1.5} />
-                <h3 className="font-heading font-bold text-xl text-[#1C1F2E] mb-4">Our Vision</h3>
+              <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-l-4 border-l-[#2F7549]">
+                <Lightbulb className="w-8 h-8 text-[#2F7549] mb-5" strokeWidth={1.5} />
+                <h3 className="font-heading font-bold text-xl text-[#16291E] mb-4">Our Vision</h3>
                 <p className="text-[#3D4152] leading-relaxed mb-4">
                   A connected innovation ecosystem where UK and Pakistani technology sectors collaborate to create world-leading digital solutions that improve lives, strengthen economies, and solve global challenges.
                 </p>
@@ -95,7 +95,7 @@ export default function VisionPage() {
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: `${item.color}10`, border: `1px solid ${item.color}25` }}>
                     <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-[#1C1F2E] text-base mb-2">{item.title}</h3>
+                  <h3 className="font-heading font-bold text-[#16291E] text-base mb-2">{item.title}</h3>
                   <p className="text-[#3D4152] text-base leading-relaxed">{item.desc}</p>
                 </div>
               );

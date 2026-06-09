@@ -14,46 +14,51 @@
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
 
-    /* ─── UPTIB Textile palette — green / white / black ─── */
-    /* GREEN — primary brand scale (BUILD PROMPT §4.1) */
-    --green-50:  #ECFDF5;
-    --green-100: #D1FAE5;
-    --green-500: #10B981;  /* bright accent — icons, highlights */
-    --green-600: #059669;  /* large CTA fill */
-    --green-700: #047857;  /* ★ PRIMARY — links, key buttons (AA on white) */
-    --green-800: #065F46;  /* hover/active */
-    --green-900: #064E3B;  /* dark sections, footer, overlays */
+    /* ─── Pakistan Textile Partners palette — natural green primary, soft & professional ─── */
+    /* GREEN — PRIMARY brand scale (from logo waves), natural & soft */
+    --green-50:  #EEF6F0;
+    --green-100: #D7EADD;
+    --green-200: #B3D7C0;
+    --green-500: #4FA873;  /* bright accent — icons, highlights */
+    --green-600: #3C8F5E;  /* accent fill / large CTA */
+    --green-700: #2F7549;  /* ★ PRIMARY — links, key buttons (AA on white) */
+    --green-800: #245C3A;  /* hover/active */
+    --green-900: #15402A;  /* dark sections, footer, overlays */
 
-    /* Backgrounds */
+    /* BLUE — minor accent only (from logo emblem); never the lead */
+    --blue-500: #3A6BA5;
+    --blue-700: #2A5689;
+
+    /* Backgrounds — soft, light, gentle */
     --bg-default: #FFFFFF;
-    --bg-alt: #FFFFFF;
+    --bg-alt: #F4F8F5;     /* soft green-tinted section wash */
     --bg-white: #FFFFFF;
-    --bg-tint: #F8FAF9;     /* very light off-white section wash */
+    --bg-tint: #F4F8F5;    /* very light off-white section wash */
 
-    /* Neutral text — black headings, grey body */
-    --text-primary: #0A0A0A;
-    --text-secondary: #374151;
-    --text-muted: #6B7280;
+    /* Neutral text — soft green-charcoal headings, warm slate body */
+    --text-primary: #16291E;   /* soft green-charcoal ink (not harsh black) */
+    --text-secondary: #46554D;
+    --text-muted: #79857C;
     --text-on-dark: #FFFFFF;
 
-    /* Divider / rule color */
-    --rule-color: #C5C2BE;
-    --border-default: #E5E7EB;
-    --border-subtle: #E4E1DC;
+    /* Divider / rule color — soft warm grey */
+    --rule-color: #DCE2DC;
+    --border-default: #E6ECE7;
+    --border-subtle: #E6ECE7;
 
     /* Brand colors — green primary + green accent */
-    --primary: #047857;          /* green-700 */
-    --primary-hover: #065F46;    /* green-800 */
+    --primary: #2F7549;          /* green-700 */
+    --primary-hover: #245C3A;    /* green-800 */
     --primary-foreground: #FFFFFF;
-    --accent-green: #10B981;     /* green-500 */
-    --accent-green-hover: #059669; /* green-600 */
+    --accent-green: #3E8F5E;     /* green accent */
+    --accent-green-hover: #2F7549; /* green-700 */
 
     /* Editorial accent label — brand green */
-    --accent-label: #047857;
+    --accent-label: #2F7549;
 
     /* Dark section background — deep green */
-    --bg-dark: #064E3B;
-    --bg-dark-alt: #052e26;
+    --bg-dark: #15402A;
+    --bg-dark-alt: #0E2E1E;
 
     /* Layout */
     --container-width: 1200px;
@@ -73,8 +78,8 @@
     --shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
     --shadow-xl: 0 16px 40px rgba(0,0,0,0.12);
     --shadow-2xl: 0 25px 50px rgba(0,0,0,0.15);
-    --shadow-glow-primary: 0 0 24px rgba(4,120,87,0.15);
-    --shadow-glow-hover: 0 0 30px rgba(4,120,87,0.35);
+    --shadow-glow-primary: 0 0 24px rgba(47,117,73,0.15);
+    --shadow-glow-hover: 0 0 30px rgba(47,117,73,0.32);
 
     /* Spacing */
     --space-section: 5rem;
@@ -82,9 +87,9 @@
     --space-section-xl: 7rem;
 
     /* ─── Editorial Navbar ─── */
-    --editorial-ink: #0A0A0A;
-    --editorial-crimson: #047857; /* re-themed: brand green */
-    --editorial-nav-rule: #064E3B;
+    --editorial-ink: #16291E;
+    --editorial-crimson: #2F7549; /* re-themed: brand green */
+    --editorial-nav-rule: #15402A;
   }
 
   * {
@@ -94,7 +99,7 @@
   html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: #C5C2BE #E8E6E3;
+    scrollbar-color: #C2D2C5 #EDF3EE;
     overflow-x: hidden;
   }
 
@@ -209,7 +214,7 @@
   }
 
   .text-gradient-brand {
-    background: linear-gradient(135deg, #047857, #10B981);
+    background: linear-gradient(135deg, #2F7549, #4FA873);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -222,7 +227,7 @@
   }
 
   .animate-gradient-border {
-    background: linear-gradient(90deg, #047857, #10B981, #047857);
+    background: linear-gradient(90deg, #2F7549, #4FA873, #2F7549);
     background-size: 300% 100%;
     animation: gradient-shift 4s ease infinite;
   }
@@ -249,8 +254,8 @@
 
   /* Pulse glow for interactive elements */
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(4,120,87, 0); }
-    50% { box-shadow: 0 0 20px 4px rgba(4,120,87, 0.1); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(47,117,73, 0); }
+    50% { box-shadow: 0 0 20px 4px rgba(47,117,73, 0.1); }
   }
 
   .animate-pulse-glow {
@@ -263,20 +268,20 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #E8E6E3;
+    background: #EDF3EE;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #C5C2BE;
+    background: #C2D2C5;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #A5A2A0;
+    background: #9DB5A2;
   }
 
   ::selection {
-    background-color: rgba(4,120,87, 0.15);
+    background-color: rgba(47,117,73, 0.14);
     color: inherit;
   }
 }
@@ -324,11 +329,11 @@
 }
 
 .shiny-cta {
-  --shiny-cta-bg: #000000;
-  --shiny-cta-bg-subtle: #1a1818;
+  --shiny-cta-bg: #1B4D31;
+  --shiny-cta-bg-subtle: #245C3A;
   --shiny-cta-fg: #ffffff;
-  --shiny-cta-highlight: blue;
-  --shiny-cta-highlight-subtle: #8484ff;
+  --shiny-cta-highlight: #4FA873;
+  --shiny-cta-highlight-subtle: #A9E3C4;
   --animation: gradient-angle linear infinite;
   --duration: 3s;
   --shadow-size: 2px;
@@ -490,7 +495,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
-  background: #000000;
+  background: #1B4D31;
   border-radius: 9999px;
   border: none;
   color: #ffffff;
@@ -520,13 +525,13 @@
   border-radius: 9999px;
   background: linear-gradient(
     45deg,
-    #047857,
-    #047857,
-    #10B981,
-    #047857,
-    #047857,
-    #10B981,
-    #047857
+    #2F7549,
+    #2F7549,
+    #4FA873,
+    #2F7549,
+    #2F7549,
+    #4FA873,
+    #2F7549
   );
   background-size: 400%;
   width: calc(100% + 4px);

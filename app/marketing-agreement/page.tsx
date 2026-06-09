@@ -17,7 +17,7 @@ const sections = [
     icon: FileText,
     number: "1",
     title: "Purpose",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: (
       <p className="text-[#3D4152] text-base leading-relaxed">
         The purpose of this Agreement is to define the terms under which the Forum will promote, market, and showcase the Product Owner&apos;s products, solutions, or services to its network of members, stakeholders, and partners in the UK, Europe, Middle East and African continent.
@@ -29,7 +29,7 @@ const sections = [
     icon: Target,
     number: "2",
     title: "Scope of Services",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: (
       <div>
         <p className="text-[#3D4152] text-base leading-relaxed mb-4">The Forum agrees to provide the following marketing services:</p>
@@ -41,7 +41,7 @@ const sections = [
             "Facilitation of introductions to potential clients, investors, and partners within the Forum network.",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
-              <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+              <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
               <span className="text-[#3D4152] text-base leading-relaxed">{item}</span>
             </li>
           ))}
@@ -54,7 +54,7 @@ const sections = [
     icon: Shield,
     number: "3",
     title: "Product Owner Responsibilities",
-    accent: "border-[#10B981]",
+    accent: "border-[#3E8F5E]",
     content: (
       <div>
         <p className="text-[#3D4152] text-base leading-relaxed mb-4">The Product Owner agrees to:</p>
@@ -67,7 +67,7 @@ const sections = [
             "Pay all fees as outlined in Section 5, which are binding and enforceable.",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
-              <CheckCircle2 className="w-4 h-4 text-[#10B981] mt-0.5 flex-shrink-0" strokeWidth={2} />
+              <CheckCircle2 className="w-4 h-4 text-[#3E8F5E] mt-0.5 flex-shrink-0" strokeWidth={2} />
               <span className="text-[#3D4152] text-base leading-relaxed">{item}</span>
             </li>
           ))}
@@ -80,7 +80,7 @@ const sections = [
     icon: Shield,
     number: "4",
     title: "Intellectual Property",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: (
       <ul className="space-y-3">
         {[
@@ -89,7 +89,7 @@ const sections = [
           "Any third-party materials provided by the Product Owner must be properly licensed and free of claims.",
         ].map((item) => (
           <li key={item} className="flex items-start gap-3">
-            <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+            <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
             <span className="text-[#3D4152] text-base leading-relaxed">{item}</span>
           </li>
         ))}
@@ -101,7 +101,7 @@ const sections = [
     icon: Banknote,
     number: "5",
     title: "Fee Structure",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: (
       <div>
         <p className="text-[#3D4152] text-base leading-relaxed mb-6">
@@ -110,7 +110,7 @@ const sections = [
         <div className="overflow-x-auto mb-6">
           <table className="w-full text-base border-collapse">
             <thead>
-              <tr className="bg-[#1C1F2E] text-white">
+              <tr className="bg-[#16291E] text-white">
                 <th className="text-left py-3 px-4 font-semibold">Service</th>
                 <th className="text-left py-3 px-4 font-semibold">Description</th>
                 <th className="text-left py-3 px-4 font-semibold">Fee (GBP)</th>
@@ -125,9 +125,9 @@ const sections = [
                 { service: "Custom Marketing Services", desc: "Content creation, design, or promotional campaigns", fee: "\u00A3[Amount]", freq: "As Agreed" },
               ].map((row, i) => (
                 <tr key={row.service} className={i % 2 === 0 ? "bg-white" : "bg-[#F8F7F5]"}>
-                  <td className="py-3 px-4 font-medium text-[#1C1F2E] border-b border-[#D8D5CF]">{row.service}</td>
+                  <td className="py-3 px-4 font-medium text-[#16291E] border-b border-[#D8D5CF]">{row.service}</td>
                   <td className="py-3 px-4 text-[#3D4152] border-b border-[#D8D5CF]">{row.desc}</td>
-                  <td className="py-3 px-4 text-[#047857] font-semibold border-b border-[#D8D5CF]">{row.fee}</td>
+                  <td className="py-3 px-4 text-[#2F7549] font-semibold border-b border-[#D8D5CF]">{row.fee}</td>
                   <td className="py-3 px-4 text-[#3D4152] border-b border-[#D8D5CF]">{row.freq}</td>
                 </tr>
               ))}
@@ -137,7 +137,7 @@ const sections = [
 
         <div className="space-y-4">
           <div>
-            <h4 className="font-heading font-bold text-[#1C1F2E] text-base mb-2">Payment Terms</h4>
+            <h4 className="font-heading font-bold text-[#16291E] text-base mb-2">Payment Terms</h4>
             <ul className="space-y-2">
               {[
                 "Fees are due within 30 days of invoice.",
@@ -155,7 +155,7 @@ const sections = [
           <div className="bg-[#FEF3C7] border border-[#F59E0B]/30 rounded p-4 flex items-start gap-3">
             <AlertTriangle className="w-5 h-5 text-[#F59E0B] flex-shrink-0 mt-0.5" strokeWidth={2} />
             <div>
-              <h4 className="font-heading font-bold text-[#1C1F2E] text-base mb-1">Binding Payment Clause</h4>
+              <h4 className="font-heading font-bold text-[#16291E] text-base mb-1">Binding Payment Clause</h4>
               <p className="text-[#3D4152] text-base leading-relaxed">
                 The Product Owner unconditionally agrees to pay all fees as invoiced by the Forum. Fees are due within 30 days of invoice, and non-payment constitutes a breach of this Agreement. The Forum may suspend or terminate marketing services if payment is not received on time. Late payments incur interest at 4% per month until paid in full. This clause is legally binding and enforceable under the governing law specified in Section 8.
               </p>
@@ -170,7 +170,7 @@ const sections = [
     icon: Lock,
     number: "6",
     title: "Confidentiality",
-    accent: "border-[#10B981]",
+    accent: "border-[#3E8F5E]",
     content: (
       <p className="text-[#3D4152] text-base leading-relaxed">
         Both parties shall maintain the confidentiality of proprietary information and shall not disclose such information without prior written consent.
@@ -182,7 +182,7 @@ const sections = [
     icon: Clock,
     number: "7",
     title: "Term & Termination",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: (
       <ul className="space-y-3">
         {[
@@ -191,7 +191,7 @@ const sections = [
           "Termination does not release the Product Owner from the obligation to pay fees accrued prior to termination.",
         ].map((item) => (
           <li key={item} className="flex items-start gap-3">
-            <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+            <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
             <span className="text-[#3D4152] text-base leading-relaxed">{item}</span>
           </li>
         ))}
@@ -203,7 +203,7 @@ const sections = [
     icon: Scale,
     number: "8",
     title: "Liability",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: (
       <ul className="space-y-3">
         {[
@@ -211,7 +211,7 @@ const sections = [
           "Product Owner is responsible for accuracy of claims and materials.",
         ].map((item) => (
           <li key={item} className="flex items-start gap-3">
-            <AlertTriangle className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+            <AlertTriangle className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
             <span className="text-[#3D4152] text-base leading-relaxed">{item}</span>
           </li>
         ))}
@@ -223,7 +223,7 @@ const sections = [
     icon: Gavel,
     number: "9",
     title: "Governing Law",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: (
       <p className="text-[#3D4152] text-base leading-relaxed">
         This Agreement shall be governed by and construed in accordance with the laws of <strong>England and Wales, United Kingdom</strong>.
@@ -253,23 +253,23 @@ export default function MarketingAgreementPage() {
       <Section variant="light">
         <AnimatedSection>
           <div>
-            <p className="text-base font-semibold text-[#047857] uppercase tracking-widest mb-6">Agreement</p>
+            <p className="text-base font-semibold text-[#2F7549] uppercase tracking-widest mb-6">Agreement</p>
             <div className="bg-white border border-[#D8D5CF] rounded p-8">
-              <h2 className="font-heading font-bold text-[#1C1F2E] text-xl mb-6">Marketing Agreement</h2>
+              <h2 className="font-heading font-bold text-[#16291E] text-xl mb-6">Marketing Agreement</h2>
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="border-l-4 border-[#047857] pl-4">
+                <div className="border-l-4 border-[#2F7549] pl-4">
                   <p className="text-base text-[#7A7E8F] uppercase tracking-wider mb-1">Party A</p>
-                  <p className="font-heading font-bold text-[#1C1F2E]">[Product Owner Name]</p>
+                  <p className="font-heading font-bold text-[#16291E]">[Product Owner Name]</p>
                   <p className="text-base text-[#3D4152]">&ldquo;Product Owner&rdquo;</p>
                 </div>
-                <div className="border-l-4 border-[#10B981] pl-4">
+                <div className="border-l-4 border-[#3E8F5E] pl-4">
                   <p className="text-base text-[#7A7E8F] uppercase tracking-wider mb-1">Party B</p>
-                  <p className="font-heading font-bold text-[#1C1F2E]">UK&ndash;Pakistan Technology Forum</p>
+                  <p className="font-heading font-bold text-[#16291E]">UK&ndash;Pakistan Technology Forum</p>
                   <p className="text-base text-[#3D4152]">&ldquo;Forum&rdquo;</p>
                 </div>
               </div>
               <div className="mt-6 pt-4 border-t border-[#D8D5CF]">
-                <p className="text-base text-[#7A7E8F]">Effective Date: <span className="text-[#1C1F2E] font-medium">[Insert Date]</span></p>
+                <p className="text-base text-[#7A7E8F]">Effective Date: <span className="text-[#16291E] font-medium">[Insert Date]</span></p>
               </div>
             </div>
           </div>
@@ -299,11 +299,11 @@ export default function MarketingAgreementPage() {
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white flex-shrink-0">
-                      <Icon className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                      <Icon className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                     </div>
                     <div>
                       <span className="text-base text-[#7A7E8F] font-semibold">Section {section.number}</span>
-                      <h3 className="font-heading font-bold text-[#1C1F2E] text-lg">{section.title}</h3>
+                      <h3 className="font-heading font-bold text-[#16291E] text-lg">{section.title}</h3>
                     </div>
                   </div>
                   {section.content}
@@ -335,8 +335,8 @@ export default function MarketingAgreementPage() {
                 transition={{ duration: 0.4 }}
                 className="bg-white border border-[#D8D5CF] rounded p-6"
               >
-                <PenTool className="w-5 h-5 text-[#047857] mb-3" strokeWidth={1.5} />
-                <h3 className="font-heading font-bold text-[#1C1F2E] text-base mb-4">{signee.party}</h3>
+                <PenTool className="w-5 h-5 text-[#2F7549] mb-3" strokeWidth={1.5} />
+                <h3 className="font-heading font-bold text-[#16291E] text-base mb-4">{signee.party}</h3>
                 <div className="space-y-4">
                   {["Name", "Title", "Signature", "Date"].map((field) => (
                     <div key={field}>

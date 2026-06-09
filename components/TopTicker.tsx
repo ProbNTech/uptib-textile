@@ -21,7 +21,7 @@ export function TopTicker() {
       <span className="text-[11px] sm:text-xs font-medium tracking-wide">
         {item.text}
       </span>
-      <span className="mx-5 text-[#10B981] text-[8px] select-none" aria-hidden="true">
+      <span className="mx-5 text-[#3E8F5E] text-[8px] select-none" aria-hidden="true">
         ◆
       </span>
     </Link>
@@ -29,7 +29,7 @@ export function TopTicker() {
 
   return (
     <div
-      className="relative w-full h-[30px] bg-gradient-to-r from-[#052e26] via-[#064E3B] to-[#052e26] overflow-hidden flex items-center text-white/80"
+      className="relative w-full h-[30px] bg-gradient-to-r from-[#0E2E1E] via-[#15402A] to-[#0E2E1E] overflow-hidden flex items-center text-white/80"
       role="marquee"
       aria-label="Latest announcements"
     >

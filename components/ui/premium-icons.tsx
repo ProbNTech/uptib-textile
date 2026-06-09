@@ -10,68 +10,68 @@ export const AITechIcon = ({ className }: IconProps) => (
   <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="ai1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#059669"/>
-        <stop offset="100%" stopColor="#065F46"/>
+        <stop offset="0%" stopColor="#3C8F5E"/>
+        <stop offset="100%" stopColor="#245C3A"/>
       </linearGradient>
       <linearGradient id="ai2" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6EE7B7"/>
-        <stop offset="100%" stopColor="#047857"/>
+        <stop offset="0%" stopColor="#8FD3AE"/>
+        <stop offset="100%" stopColor="#2F7549"/>
       </linearGradient>
       <linearGradient id="ai3" x1="50%" y1="0%" x2="50%" y2="100%">
-        <stop offset="0%" stopColor="#6EE7B7"/>
-        <stop offset="100%" stopColor="#059669"/>
+        <stop offset="0%" stopColor="#8FD3AE"/>
+        <stop offset="100%" stopColor="#3C8F5E"/>
       </linearGradient>
       <filter id="aiGlow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      <filter id="aiShadow"><feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#065F46" floodOpacity="0.3"/></filter>
+      <filter id="aiShadow"><feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#245C3A" floodOpacity="0.3"/></filter>
     </defs>
     {/* Circuit board base */}
     <rect x="30" y="110" width="140" height="60" rx="8" fill="url(#ai1)" filter="url(#aiShadow)"/>
-    <rect x="35" y="115" width="130" height="50" rx="5" fill="#065F46" opacity="0.6"/>
+    <rect x="35" y="115" width="130" height="50" rx="5" fill="#245C3A" opacity="0.6"/>
     {/* Circuit traces */}
-    <line x1="50" y1="130" x2="90" y2="130" stroke="#6EE7B7" strokeWidth="2" opacity="0.6"/>
-    <line x1="110" y1="130" x2="150" y2="130" stroke="#6EE7B7" strokeWidth="2" opacity="0.6"/>
-    <line x1="70" y1="145" x2="130" y2="145" stroke="#6EE7B7" strokeWidth="1.5" opacity="0.4"/>
-    <line x1="50" y1="155" x2="80" y2="155" stroke="#6EE7B7" strokeWidth="1.5" opacity="0.4"/>
-    <line x1="120" y1="155" x2="150" y2="155" stroke="#6EE7B7" strokeWidth="1.5" opacity="0.4"/>
+    <line x1="50" y1="130" x2="90" y2="130" stroke="#8FD3AE" strokeWidth="2" opacity="0.6"/>
+    <line x1="110" y1="130" x2="150" y2="130" stroke="#8FD3AE" strokeWidth="2" opacity="0.6"/>
+    <line x1="70" y1="145" x2="130" y2="145" stroke="#8FD3AE" strokeWidth="1.5" opacity="0.4"/>
+    <line x1="50" y1="155" x2="80" y2="155" stroke="#8FD3AE" strokeWidth="1.5" opacity="0.4"/>
+    <line x1="120" y1="155" x2="150" y2="155" stroke="#8FD3AE" strokeWidth="1.5" opacity="0.4"/>
     {/* Circuit dots */}
-    <circle cx="90" cy="130" r="3" fill="#6EE7B7"/>
-    <circle cx="110" cy="130" r="3" fill="#6EE7B7"/>
-    <circle cx="70" cy="145" r="2.5" fill="#6EE7B7"/>
-    <circle cx="130" cy="145" r="2.5" fill="#6EE7B7"/>
+    <circle cx="90" cy="130" r="3" fill="#8FD3AE"/>
+    <circle cx="110" cy="130" r="3" fill="#8FD3AE"/>
+    <circle cx="70" cy="145" r="2.5" fill="#8FD3AE"/>
+    <circle cx="130" cy="145" r="2.5" fill="#8FD3AE"/>
     {/* Main CPU chip */}
     <rect x="55" y="50" width="90" height="70" rx="10" fill="url(#ai2)" filter="url(#aiShadow)"/>
     <rect x="62" y="57" width="76" height="56" rx="6" fill="#1E3A5F"/>
     {/* Brain pattern inside chip */}
     <path d="M80 75c0-5 4-9 10-9s10 2 14 6c4-2 8-1 10 3s0 8-3 10c2 4 1 8-2 10s-7 1-10-1c-3 3-7 4-10 2s-5-6-3-10c-4-3-6-7-6-11z" fill="url(#ai3)" opacity="0.8"/>
-    <circle cx="92" cy="80" r="2" fill="#A7F3D0"/>
-    <circle cx="104" cy="78" r="1.5" fill="#A7F3D0"/>
-    <circle cx="98" cy="88" r="2" fill="#A7F3D0"/>
+    <circle cx="92" cy="80" r="2" fill="#C2E9CF"/>
+    <circle cx="104" cy="78" r="1.5" fill="#C2E9CF"/>
+    <circle cx="98" cy="88" r="2" fill="#C2E9CF"/>
     {/* Chip pins top */}
-    <rect x="68" y="42" width="6" height="12" rx="2" fill="#6EE7B7"/>
-    <rect x="82" y="42" width="6" height="12" rx="2" fill="#6EE7B7"/>
-    <rect x="96" y="42" width="6" height="12" rx="2" fill="#6EE7B7"/>
-    <rect x="110" y="42" width="6" height="12" rx="2" fill="#6EE7B7"/>
+    <rect x="68" y="42" width="6" height="12" rx="2" fill="#8FD3AE"/>
+    <rect x="82" y="42" width="6" height="12" rx="2" fill="#8FD3AE"/>
+    <rect x="96" y="42" width="6" height="12" rx="2" fill="#8FD3AE"/>
+    <rect x="110" y="42" width="6" height="12" rx="2" fill="#8FD3AE"/>
     {/* Chip pins bottom */}
-    <rect x="68" y="116" width="6" height="12" rx="2" fill="#6EE7B7"/>
-    <rect x="82" y="116" width="6" height="12" rx="2" fill="#6EE7B7"/>
-    <rect x="96" y="116" width="6" height="12" rx="2" fill="#6EE7B7"/>
-    <rect x="110" y="116" width="6" height="12" rx="2" fill="#6EE7B7"/>
+    <rect x="68" y="116" width="6" height="12" rx="2" fill="#8FD3AE"/>
+    <rect x="82" y="116" width="6" height="12" rx="2" fill="#8FD3AE"/>
+    <rect x="96" y="116" width="6" height="12" rx="2" fill="#8FD3AE"/>
+    <rect x="110" y="116" width="6" height="12" rx="2" fill="#8FD3AE"/>
     {/* Chip pins left */}
-    <rect x="43" y="62" width="16" height="6" rx="2" fill="#6EE7B7"/>
-    <rect x="43" y="76" width="16" height="6" rx="2" fill="#6EE7B7"/>
-    <rect x="43" y="90" width="16" height="6" rx="2" fill="#6EE7B7"/>
+    <rect x="43" y="62" width="16" height="6" rx="2" fill="#8FD3AE"/>
+    <rect x="43" y="76" width="16" height="6" rx="2" fill="#8FD3AE"/>
+    <rect x="43" y="90" width="16" height="6" rx="2" fill="#8FD3AE"/>
     {/* Chip pins right */}
-    <rect x="141" y="62" width="16" height="6" rx="2" fill="#6EE7B7"/>
-    <rect x="141" y="76" width="16" height="6" rx="2" fill="#6EE7B7"/>
-    <rect x="141" y="90" width="16" height="6" rx="2" fill="#6EE7B7"/>
+    <rect x="141" y="62" width="16" height="6" rx="2" fill="#8FD3AE"/>
+    <rect x="141" y="76" width="16" height="6" rx="2" fill="#8FD3AE"/>
+    <rect x="141" y="90" width="16" height="6" rx="2" fill="#8FD3AE"/>
     {/* Floating data particles */}
-    <circle cx="30" cy="40" r="4" fill="#6EE7B7" opacity="0.7"/>
-    <circle cx="170" cy="35" r="3" fill="#6EE7B7" opacity="0.6"/>
-    <circle cx="25" cy="85" r="2.5" fill="#059669" opacity="0.5"/>
-    <circle cx="175" cy="90" r="3.5" fill="#6EE7B7" opacity="0.5"/>
+    <circle cx="30" cy="40" r="4" fill="#8FD3AE" opacity="0.7"/>
+    <circle cx="170" cy="35" r="3" fill="#8FD3AE" opacity="0.6"/>
+    <circle cx="25" cy="85" r="2.5" fill="#3C8F5E" opacity="0.5"/>
+    <circle cx="175" cy="90" r="3.5" fill="#8FD3AE" opacity="0.5"/>
     {/* Signal waves */}
-    <path d="M20 55c5-3 10 3 15 0" stroke="#6EE7B7" strokeWidth="1.5" opacity="0.4" fill="none"/>
-    <path d="M165 50c5-3 10 3 15 0" stroke="#6EE7B7" strokeWidth="1.5" opacity="0.4" fill="none"/>
+    <path d="M20 55c5-3 10 3 15 0" stroke="#8FD3AE" strokeWidth="1.5" opacity="0.4" fill="none"/>
+    <path d="M165 50c5-3 10 3 15 0" stroke="#8FD3AE" strokeWidth="1.5" opacity="0.4" fill="none"/>
     {/* Stars */}
     <path d="M160 25l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z" fill="#FCD34D" opacity="0.8"/>
     <path d="M35 25l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z" fill="#FCD34D" opacity="0.6"/>
@@ -82,23 +82,23 @@ export const ServicesIcon = ({ className }: IconProps) => (
   <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="svc1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#10B981"/>
+        <stop offset="0%" stopColor="#3E8F5E"/>
         <stop offset="100%" stopColor="#15803D"/>
       </linearGradient>
       <linearGradient id="svc2" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="0%" stopColor="#4ADE80"/>
-        <stop offset="100%" stopColor="#059669"/>
+        <stop offset="100%" stopColor="#3C8F5E"/>
       </linearGradient>
       <filter id="svcShadow"><feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#15803D" floodOpacity="0.3"/></filter>
     </defs>
     {/* Laptop base */}
-    <path d="M25 150l10-8h130l10 8v5H25v-5z" fill="#059669" opacity="0.6"/>
+    <path d="M25 150l10-8h130l10 8v5H25v-5z" fill="#3C8F5E" opacity="0.6"/>
     <rect x="40" y="70" width="120" height="82" rx="6" fill="url(#svc1)" filter="url(#svcShadow)"/>
-    <rect x="46" y="76" width="108" height="64" rx="3" fill="#064E3B"/>
+    <rect x="46" y="76" width="108" height="64" rx="3" fill="#15402A"/>
     {/* Screen content - dashboard */}
-    <rect x="52" y="82" width="45" height="25" rx="2" fill="#10B981" opacity="0.2"/>
+    <rect x="52" y="82" width="45" height="25" rx="2" fill="#3E8F5E" opacity="0.2"/>
     <rect x="52" y="82" width="45" height="6" rx="2" fill="#4ADE80" opacity="0.4"/>
-    <rect x="103" y="82" width="45" height="25" rx="2" fill="#10B981" opacity="0.2"/>
+    <rect x="103" y="82" width="45" height="25" rx="2" fill="#3E8F5E" opacity="0.2"/>
     <rect x="103" y="82" width="30" height="6" rx="2" fill="#4ADE80" opacity="0.4"/>
     {/* Chart bars on screen */}
     <rect x="56" y="102" width="6" height="3" rx="1" fill="#4ADE80" opacity="0.6"/>
@@ -108,16 +108,16 @@ export const ServicesIcon = ({ className }: IconProps) => (
     {/* Line chart on screen */}
     <path d="M107 102l8-4 8 2 10-6 10-3" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" fill="none"/>
     {/* Lower screen rows */}
-    <rect x="52" y="112" width="96" height="4" rx="1" fill="#10B981" opacity="0.15"/>
-    <rect x="52" y="119" width="96" height="4" rx="1" fill="#10B981" opacity="0.15"/>
-    <rect x="52" y="126" width="70" height="4" rx="1" fill="#10B981" opacity="0.15"/>
+    <rect x="52" y="112" width="96" height="4" rx="1" fill="#3E8F5E" opacity="0.15"/>
+    <rect x="52" y="119" width="96" height="4" rx="1" fill="#3E8F5E" opacity="0.15"/>
+    <rect x="52" y="126" width="70" height="4" rx="1" fill="#3E8F5E" opacity="0.15"/>
     {/* Floating gear - left */}
     <circle cx="28" cy="80" r="16" fill="url(#svc2)" filter="url(#svcShadow)"/>
-    <circle cx="28" cy="80" r="8" fill="#064E3B"/>
-    <rect x="24" y="61" width="8" height="6" rx="2" fill="#10B981"/>
-    <rect x="24" y="93" width="8" height="6" rx="2" fill="#10B981"/>
-    <rect x="9" y="76" width="6" height="8" rx="2" fill="#10B981"/>
-    <rect x="41" y="76" width="6" height="8" rx="2" fill="#10B981"/>
+    <circle cx="28" cy="80" r="8" fill="#15402A"/>
+    <rect x="24" y="61" width="8" height="6" rx="2" fill="#3E8F5E"/>
+    <rect x="24" y="93" width="8" height="6" rx="2" fill="#3E8F5E"/>
+    <rect x="9" y="76" width="6" height="8" rx="2" fill="#3E8F5E"/>
+    <rect x="41" y="76" width="6" height="8" rx="2" fill="#3E8F5E"/>
     {/* Floating document - right */}
     <rect x="155" y="55" width="32" height="40" rx="4" fill="url(#svc2)" filter="url(#svcShadow)"/>
     <rect x="160" y="62" width="22" height="3" rx="1" fill="#BBF7D0" opacity="0.7"/>
@@ -196,7 +196,7 @@ export const PartnershipIcon = ({ className }: IconProps) => (
   <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="pt1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#047857"/>
+        <stop offset="0%" stopColor="#2F7549"/>
         <stop offset="100%" stopColor="#9F1239"/>
       </linearGradient>
       <linearGradient id="pt2" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -204,8 +204,8 @@ export const PartnershipIcon = ({ className }: IconProps) => (
         <stop offset="100%" stopColor="#BE123C"/>
       </linearGradient>
       <linearGradient id="pt3" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#065F46"/>
-        <stop offset="100%" stopColor="#047857"/>
+        <stop offset="0%" stopColor="#245C3A"/>
+        <stop offset="100%" stopColor="#2F7549"/>
       </linearGradient>
       <filter id="ptShadow"><feDropShadow dx="0" dy="4" stdDeviation="5" floodColor="#9F1239" floodOpacity="0.3"/></filter>
     </defs>
@@ -216,7 +216,7 @@ export const PartnershipIcon = ({ className }: IconProps) => (
     <ellipse cx="100" cy="90" rx="35" ry="50" stroke="#FB7185" strokeWidth="0.7" opacity="0.25"/>
     <line x1="50" y1="90" x2="150" y2="90" stroke="#FB7185" strokeWidth="0.7" opacity="0.3"/>
     {/* UK flag hint - left side */}
-    <rect x="15" y="55" width="40" height="28" rx="4" fill="#065F46" filter="url(#ptShadow)"/>
+    <rect x="15" y="55" width="40" height="28" rx="4" fill="#245C3A" filter="url(#ptShadow)"/>
     <line x1="15" y1="69" x2="55" y2="69" stroke="white" strokeWidth="3"/>
     <line x1="35" y1="55" x2="35" y2="83" stroke="white" strokeWidth="3"/>
     <line x1="15" y1="55" x2="55" y2="83" stroke="#FB7185" strokeWidth="1.5" opacity="0.7"/>
@@ -346,7 +346,7 @@ export const TradeDelegationsIcon = ({ className }: IconProps) => (
     <rect x="67" y="147" width="16" height="2" rx="0.5" fill="#FDE68A" opacity="0.5"/>
     <rect x="115" y="145" width="20" height="13" rx="2" fill="#EF4444" filter="url(#tdShadow)"/>
     <rect x="117" y="147" width="16" height="2" rx="0.5" fill="#FECACA" opacity="0.5"/>
-    <rect x="90" y="148" width="20" height="10" rx="2" fill="#10B981" filter="url(#tdShadow)"/>
+    <rect x="90" y="148" width="20" height="10" rx="2" fill="#3E8F5E" filter="url(#tdShadow)"/>
     {/* Sparkles */}
     <circle cx="75" cy="45" r="3" fill="#38BDF8" opacity="0.5"/>
     <circle cx="140" cy="55" r="2.5" fill="#7DD3FC" opacity="0.5"/>
@@ -361,49 +361,49 @@ export const ProductsIcon = ({ className }: IconProps) => (
   <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="prod1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#059669"/>
-        <stop offset="100%" stopColor="#065F46"/>
+        <stop offset="0%" stopColor="#3C8F5E"/>
+        <stop offset="100%" stopColor="#245C3A"/>
       </linearGradient>
       <linearGradient id="prod2" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stopColor="#6EE7B7"/>
-        <stop offset="100%" stopColor="#047857"/>
+        <stop offset="0%" stopColor="#8FD3AE"/>
+        <stop offset="100%" stopColor="#2F7549"/>
       </linearGradient>
-      <filter id="prodSh"><feDropShadow dx="0" dy="4" stdDeviation="5" floodColor="#065F46" floodOpacity="0.3"/></filter>
+      <filter id="prodSh"><feDropShadow dx="0" dy="4" stdDeviation="5" floodColor="#245C3A" floodOpacity="0.3"/></filter>
     </defs>
     {/* Phone */}
     <rect x="55" y="30" width="55" height="110" rx="10" fill="url(#prod1)" filter="url(#prodSh)"/>
     <rect x="60" y="42" width="45" height="82" rx="3" fill="#1E3A5F"/>
     {/* Phone screen content */}
-    <circle cx="82" cy="68" r="12" fill="#059669" opacity="0.3"/>
-    <circle cx="82" cy="68" r="7" fill="#6EE7B7" opacity="0.6"/>
-    <rect x="66" y="86" width="33" height="3" rx="1" fill="#6EE7B7" opacity="0.5"/>
-    <rect x="70" y="93" width="25" height="3" rx="1" fill="#6EE7B7" opacity="0.35"/>
-    <rect x="66" y="102" width="33" height="8" rx="3" fill="#059669" opacity="0.5"/>
+    <circle cx="82" cy="68" r="12" fill="#3C8F5E" opacity="0.3"/>
+    <circle cx="82" cy="68" r="7" fill="#8FD3AE" opacity="0.6"/>
+    <rect x="66" y="86" width="33" height="3" rx="1" fill="#8FD3AE" opacity="0.5"/>
+    <rect x="70" y="93" width="25" height="3" rx="1" fill="#8FD3AE" opacity="0.35"/>
+    <rect x="66" y="102" width="33" height="8" rx="3" fill="#3C8F5E" opacity="0.5"/>
     {/* Phone notch */}
     <rect x="73" y="34" width="18" height="4" rx="2" fill="#1E3A5F"/>
     {/* Home indicator */}
-    <rect x="74" y="128" width="16" height="3" rx="1.5" fill="#6EE7B7" opacity="0.4"/>
+    <rect x="74" y="128" width="16" height="3" rx="1.5" fill="#8FD3AE" opacity="0.4"/>
     {/* Floating laptop behind */}
     <rect x="100" y="65" width="80" height="55" rx="5" fill="url(#prod2)" filter="url(#prodSh)"/>
-    <rect x="105" y="71" width="70" height="40" rx="3" fill="#064E3B"/>
-    <path d="M90 120h100l-5 8H95z" fill="#047857" opacity="0.6"/>
+    <rect x="105" y="71" width="70" height="40" rx="3" fill="#15402A"/>
+    <path d="M90 120h100l-5 8H95z" fill="#2F7549" opacity="0.6"/>
     {/* Laptop screen content */}
-    <rect x="110" y="76" width="28" height="14" rx="2" fill="#059669" opacity="0.3"/>
-    <rect x="142" y="76" width="28" height="14" rx="2" fill="#059669" opacity="0.25"/>
-    <rect x="110" y="94" width="60" height="3" rx="1" fill="#6EE7B7" opacity="0.3"/>
-    <rect x="110" y="100" width="45" height="3" rx="1" fill="#6EE7B7" opacity="0.2"/>
+    <rect x="110" y="76" width="28" height="14" rx="2" fill="#3C8F5E" opacity="0.3"/>
+    <rect x="142" y="76" width="28" height="14" rx="2" fill="#3C8F5E" opacity="0.25"/>
+    <rect x="110" y="94" width="60" height="3" rx="1" fill="#8FD3AE" opacity="0.3"/>
+    <rect x="110" y="100" width="45" height="3" rx="1" fill="#8FD3AE" opacity="0.2"/>
     {/* Floating gear */}
     <circle cx="30" cy="85" r="14" fill="url(#prod2)" filter="url(#prodSh)"/>
     <circle cx="30" cy="85" r="7" fill="#1E3A5F"/>
-    <rect x="26" y="68" width="8" height="5" rx="2" fill="#059669"/>
-    <rect x="26" y="97" width="8" height="5" rx="2" fill="#059669"/>
-    <rect x="13" y="81" width="5" height="8" rx="2" fill="#059669"/>
-    <rect x="42" y="81" width="5" height="8" rx="2" fill="#059669"/>
+    <rect x="26" y="68" width="8" height="5" rx="2" fill="#3C8F5E"/>
+    <rect x="26" y="97" width="8" height="5" rx="2" fill="#3C8F5E"/>
+    <rect x="13" y="81" width="5" height="8" rx="2" fill="#3C8F5E"/>
+    <rect x="42" y="81" width="5" height="8" rx="2" fill="#3C8F5E"/>
     {/* Connection lines */}
-    <path d="M44 85h11" stroke="#6EE7B7" strokeWidth="1.5" strokeDasharray="3 2" opacity="0.4"/>
+    <path d="M44 85h11" stroke="#8FD3AE" strokeWidth="1.5" strokeDasharray="3 2" opacity="0.4"/>
     {/* Sparkles */}
-    <circle cx="160" cy="45" r="3" fill="#6EE7B7" opacity="0.6"/>
-    <circle cx="25" cy="55" r="2.5" fill="#6EE7B7" opacity="0.5"/>
+    <circle cx="160" cy="45" r="3" fill="#8FD3AE" opacity="0.6"/>
+    <circle cx="25" cy="55" r="2.5" fill="#8FD3AE" opacity="0.5"/>
     <path d="M45 40l1.5 3 3 .5-2 2 .5 3-3-1.5-3 1.5.5-3-2-2 3-.5z" fill="#FCD34D" opacity="0.7"/>
     <path d="M170 70l1 2.5 2.5.3-1.8 1.8.4 2.5-2.2-1.2-2.2 1.2.4-2.5-1.8-1.8 2.5-.3z" fill="#FCD34D" opacity="0.6"/>
     {/* Floating notification */}
@@ -416,12 +416,12 @@ export const MentorshipIcon = ({ className }: IconProps) => (
   <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="ment1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#10B981"/>
+        <stop offset="0%" stopColor="#3E8F5E"/>
         <stop offset="100%" stopColor="#15803D"/>
       </linearGradient>
       <linearGradient id="ment2" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="0%" stopColor="#4ADE80"/>
-        <stop offset="100%" stopColor="#059669"/>
+        <stop offset="100%" stopColor="#3C8F5E"/>
       </linearGradient>
       <filter id="mentSh"><feDropShadow dx="0" dy="4" stdDeviation="5" floodColor="#14532D" floodOpacity="0.3"/></filter>
     </defs>
@@ -443,7 +443,7 @@ export const MentorshipIcon = ({ className }: IconProps) => (
     <rect x="123" y="110" width="9" height="3" rx="1" fill="#DCFCE7" opacity="0.2"/>
     {/* Connection arc between them */}
     <path d="M78 65c15-15 30-15 45 0" stroke="#4ADE80" strokeWidth="2.5" strokeDasharray="5 3" fill="none" opacity="0.6"/>
-    <circle cx="100" cy="52" r="5" fill="#10B981" opacity="0.8"/>
+    <circle cx="100" cy="52" r="5" fill="#3E8F5E" opacity="0.8"/>
     <path d="M97 52l3 3 5-5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     {/* Chat bubbles */}
     <rect x="70" y="130" width="60" height="30" rx="8" fill="url(#ment1)" filter="url(#mentSh)"/>
@@ -508,7 +508,7 @@ export const MeetingSpaceIcon = ({ className }: IconProps) => (
     <circle cx="88" cy="178" r="5" fill="#CA8A04" opacity="0.5"/>
     <circle cx="112" cy="178" r="5" fill="#CA8A04" opacity="0.5"/>
     {/* UK flag on building */}
-    <rect x="20" y="30" width="22" height="15" rx="2" fill="#065F46" filter="url(#meetSh)"/>
+    <rect x="20" y="30" width="22" height="15" rx="2" fill="#245C3A" filter="url(#meetSh)"/>
     <line x1="20" y1="37.5" x2="42" y2="37.5" stroke="white" strokeWidth="2"/>
     <line x1="31" y1="30" x2="31" y2="45" stroke="white" strokeWidth="2"/>
     {/* Location pin */}

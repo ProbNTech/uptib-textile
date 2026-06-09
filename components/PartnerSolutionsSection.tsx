@@ -23,17 +23,17 @@ const categoryAccent: Record<
   { dot: string; chip: string; chipText: string; chipRing: string; soft: string }
 > = {
   HealthTech:    { dot: "#06B6D4", chip: "#ECFEFF", chipText: "#155E75", chipRing: "#A5F3FC", soft: "#CFFAFE" },
-  "AI & Data":   { dot: "#059669", chip: "#ECFDF5", chipText: "#065F46", chipRing: "#A7F3D0", soft: "#D1FAE5" },
-  Fintech:       { dot: "#10B981", chip: "#ECFDF5", chipText: "#065F46", chipRing: "#A7F3D0", soft: "#D1FAE5" },
+  "AI & Data":   { dot: "#3C8F5E", chip: "#EEF6F0", chipText: "#245C3A", chipRing: "#C2E9CF", soft: "#D7EADD" },
+  Fintech:       { dot: "#3E8F5E", chip: "#EEF6F0", chipText: "#245C3A", chipRing: "#C2E9CF", soft: "#D7EADD" },
   Cybersecurity: { dot: "#F43F5E", chip: "#FFF1F2", chipText: "#9F1239", chipRing: "#FECDD3", soft: "#FFE4E6" },
   Cloud:         { dot: "#8B5CF6", chip: "#F5F3FF", chipText: "#5B21B6", chipRing: "#DDD6FE", soft: "#EDE9FE" },
   Consulting:    { dot: "#F59E0B", chip: "#FFFBEB", chipText: "#92400E", chipRing: "#FDE68A", soft: "#FEF3C7" },
   // Textile categories
-  "Home & Hospitality Textiles": { dot: "#047857", chip: "#ECFDF5", chipText: "#065F46", chipRing: "#A7F3D0", soft: "#D1FAE5" },
+  "Home & Hospitality Textiles": { dot: "#2F7549", chip: "#EEF6F0", chipText: "#245C3A", chipRing: "#C2E9CF", soft: "#D7EADD" },
   "Apparel & Knitwear":          { dot: "#2563EB", chip: "#EFF6FF", chipText: "#1E40AF", chipRing: "#BFDBFE", soft: "#DBEAFE" },
   "Sportswear & Activewear":     { dot: "#0D9488", chip: "#F0FDFA", chipText: "#115E59", chipRing: "#99F6E4", soft: "#CCFBF1" },
   "Healthcare Textiles":         { dot: "#0891B2", chip: "#ECFEFF", chipText: "#155E75", chipRing: "#A5F3FC", soft: "#CFFAFE" },
-  "Sourcing & Buying House":     { dot: "#059669", chip: "#ECFDF5", chipText: "#065F46", chipRing: "#A7F3D0", soft: "#D1FAE5" },
+  "Sourcing & Buying House":     { dot: "#3C8F5E", chip: "#EEF6F0", chipText: "#245C3A", chipRing: "#C2E9CF", soft: "#D7EADD" },
   "Yarn & Fabric":               { dot: "#16A34A", chip: "#F0FDF4", chipText: "#166534", chipRing: "#BBF7D0", soft: "#DCFCE7" },
 };
 
@@ -239,7 +239,7 @@ function SolutionCard({
           </p>
           <Link
             href={`/membership/directory#${solution.partnerSlug}`}
-            className="block text-[14px] font-extrabold text-[#1C1F2E] leading-tight truncate hover:text-[#15803d] transition-colors"
+            className="block text-[14px] font-extrabold text-[#16291E] leading-tight truncate hover:text-[#15803d] transition-colors"
           >
             {solution.partnerName}
           </Link>
@@ -285,7 +285,7 @@ function SolutionCard({
 
       {/* Product copy */}
       <div className="flex flex-col flex-1 px-5 pt-4 pb-5">
-        <h3 className="font-heading font-extrabold text-[#1C1F2E] text-[1.15rem] lg:text-[1.2rem] leading-snug mb-1.5">
+        <h3 className="font-heading font-extrabold text-[#16291E] text-[1.15rem] lg:text-[1.2rem] leading-snug mb-1.5">
           {solution.name}
         </h3>
 
@@ -311,7 +311,7 @@ export default function PartnerSolutionsSection() {
 
   return (
     <section
-      className="relative z-[1] py-20 lg:py-28 bg-gradient-to-b from-[#ECFDF5] via-[#D1FAE5] to-[#ECFDF5] overflow-hidden"
+      className="relative z-[1] py-20 lg:py-28 bg-gradient-to-b from-[#EEF6F0] via-[#D7EADD] to-[#EEF6F0] overflow-hidden"
       aria-labelledby="partner-solutions-heading"
     >
       <div
@@ -319,7 +319,7 @@ export default function PartnerSolutionsSection() {
         aria-hidden="true"
         style={{
           backgroundImage:
-            "radial-gradient(circle, #1C1F2E 0.5px, transparent 0.5px)",
+            "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)",
           backgroundSize: "24px 24px",
         }}
       />
@@ -367,7 +367,7 @@ export default function PartnerSolutionsSection() {
             <div className="flex items-center justify-between mt-6">
               <Link
                 href="/membership/directory"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-[#047857] hover:text-[#065F46] transition-colors"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-[#2F7549] hover:text-[#245C3A] transition-colors"
               >
                 Explore all member manufacturers
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -376,11 +376,11 @@ export default function PartnerSolutionsSection() {
               <div className="flex gap-2.5">
                 <button
                   aria-label="Previous manufacturers"
-                  className="partner-solutions-prev group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#047857]/30 transition-all duration-300"
+                  className="partner-solutions-prev group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#2F7549]/30 transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-[#6B7280] transition-all duration-300 group-hover:text-[#047857] group-hover:-translate-x-0.5"
+                    className="w-4 h-4 text-[#6B7280] transition-all duration-300 group-hover:text-[#2F7549] group-hover:-translate-x-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -391,11 +391,11 @@ export default function PartnerSolutionsSection() {
                 </button>
                 <button
                   aria-label="Next manufacturers"
-                  className="partner-solutions-next group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#047857]/30 transition-all duration-300"
+                  className="partner-solutions-next group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#2F7549]/30 transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-[#6B7280] transition-all duration-300 group-hover:text-[#047857] group-hover:translate-x-0.5"
+                    className="w-4 h-4 text-[#6B7280] transition-all duration-300 group-hover:text-[#2F7549] group-hover:translate-x-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

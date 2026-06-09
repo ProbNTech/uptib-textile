@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden text-white">
       {/* Top accent line */}
-    <div className="relative z-20 h-[3px] bg-gradient-to-r from-[#10B981] via-[#047857] to-[#064E3B] rounded-full" />
+    <div className="relative z-20 h-[3px] bg-gradient-to-r from-[#3E8F5E] via-[#2F7549] to-[#15402A] rounded-full" />
 
       {/* Main Footer */}
       <div className="relative">
@@ -34,16 +34,15 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
               {/* Column 1: Logo + Description + Follow Us */}
               <div className="md:col-span-2 lg:col-span-4">
-                <Link href="/" className="flex items-center gap-3 mb-5 group">
-                  <Image
-                    src="/logo.svg"
-                    alt="UPTIB Logo"
-                    width={50}
-                    height={50}
-                    className="h-[50px] w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <span className="font-heading font-bold text-2xl text-white">
-                    UPTIB TEXTILE
+                <Link href="/" className="inline-flex items-center mb-5 group">
+                  <span className="inline-flex items-center justify-center rounded-xl bg-white px-4 py-3 shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/image/main-logo.png"
+                      alt="Pakistan Textile Partners logo"
+                      width={150}
+                      height={158}
+                      className="h-[64px] w-auto object-contain"
+                    />
                   </span>
                 </Link>
                 <p className="text-white mb-7 leading-relaxed text-base drop-shadow-md">
@@ -71,7 +70,7 @@ export function Footer() {
                       <a
                         key={social.label}
                         href={social.href}
-                        className="w-12 h-12 rounded-full bg-white/30 border-2 border-white flex items-center justify-center text-white hover:text-white hover:bg-[#10B981]/60 hover:border-[#10B981] hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-110 transition-all duration-300 drop-shadow-lg"
+                        className="w-12 h-12 rounded-full bg-white/30 border-2 border-white flex items-center justify-center text-white hover:text-white hover:bg-[#3E8F5E]/60 hover:border-[#3E8F5E] hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-110 transition-all duration-300 drop-shadow-lg"
                         aria-label={social.label}
                       >
                         <Icon className="w-6 h-6" />
@@ -102,7 +101,7 @@ export function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-white hover:text-[#10B981] transition-colors duration-300 inline-flex items-center gap-1.5 text-base drop-shadow-md"
+                        className="text-white hover:text-[#3E8F5E] transition-colors duration-300 inline-flex items-center gap-1.5 text-base drop-shadow-md"
                       >
                         <ChevronRight className="w-3 h-3" />
                         {link.label}
@@ -129,7 +128,7 @@ export function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-white hover:text-[#10B981] transition-colors duration-300 inline-flex items-center gap-1.5 text-base drop-shadow-md"
+                        className="text-white hover:text-[#3E8F5E] transition-colors duration-300 inline-flex items-center gap-1.5 text-base drop-shadow-md"
                       >
                         <ChevronRight className="w-3 h-3" />
                         {link.label}
@@ -147,7 +146,7 @@ export function Footer() {
                 <div className="rounded-xl bg-slate-950/55 backdrop-blur-md border border-white/15 divide-y divide-white/[0.08] overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
                     {/* Address */}
                     <div className="flex items-start gap-3 px-4 py-3.5 hover:bg-white/[0.04] transition-colors duration-200">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#10B981]/25 border border-[#10B981]/55 flex items-center justify-center shadow-[0_4px_12px_rgba(16,185,129,0.2)]">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#3E8F5E]/25 border border-[#3E8F5E]/55 flex items-center justify-center shadow-[0_4px_12px_rgba(16,185,129,0.2)]">
                         <MapPin className="w-4 h-4 text-[#4ADE80]" />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -165,8 +164,8 @@ export function Footer() {
 
                     {/* Telephone */}
                     <div className="flex items-center gap-3 px-4 py-3.5 hover:bg-white/[0.04] transition-colors duration-200">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#047857]/25 border border-[#047857]/55 flex items-center justify-center shadow-[0_4px_12px_rgba(4,120,87,0.2)]">
-                        <Phone className="w-4 h-4 text-[#6EE7B7]" />
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#2F7549]/25 border border-[#2F7549]/55 flex items-center justify-center shadow-[0_4px_12px_rgba(4,120,87,0.2)]">
+                        <Phone className="w-4 h-4 text-[#8FD3AE]" />
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-white/75 text-[10.5px] uppercase tracking-[0.18em] font-bold leading-tight">Telephone</p>
@@ -181,7 +180,7 @@ export function Footer() {
 
                     {/* WhatsApp */}
                     <div className="flex items-center gap-3 px-4 py-3.5 hover:bg-white/[0.04] transition-colors duration-200">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#10B981]/25 border border-[#10B981]/55 flex items-center justify-center shadow-[0_4px_12px_rgba(16,185,129,0.2)]">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#3E8F5E]/25 border border-[#3E8F5E]/55 flex items-center justify-center shadow-[0_4px_12px_rgba(16,185,129,0.2)]">
                         <MessageCircle className="w-4 h-4 text-[#4ADE80]" />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -199,14 +198,14 @@ export function Footer() {
 
                     {/* Email */}
                     <div className="flex items-center gap-3 px-4 py-3.5 hover:bg-white/[0.04] transition-colors duration-200">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#047857]/25 border border-[#047857]/55 flex items-center justify-center shadow-[0_4px_12px_rgba(4,120,87,0.2)]">
-                        <Mail className="w-4 h-4 text-[#6EE7B7]" />
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#2F7549]/25 border border-[#2F7549]/55 flex items-center justify-center shadow-[0_4px_12px_rgba(4,120,87,0.2)]">
+                        <Mail className="w-4 h-4 text-[#8FD3AE]" />
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-white/75 text-[10.5px] uppercase tracking-[0.18em] font-bold leading-tight">Email</p>
                         <a
                           href="mailto:info@ukpaktrade.org.uk"
-                          className="text-[#6EE7B7] text-[14px] font-semibold hover:text-white transition-colors duration-200 break-all drop-shadow-sm"
+                          className="text-[#8FD3AE] text-[14px] font-semibold hover:text-white transition-colors duration-200 break-all drop-shadow-sm"
                         >
                           info@ukpaktrade.org.uk
                         </a>
@@ -231,13 +230,13 @@ export function Footer() {
                   Trades &amp; Investment Board. All rights reserved.
                 </p>
                 <div className="flex flex-wrap gap-4 text-base">
-                  <Link href="/privacy" className="text-white hover:text-[#10B981] transition-colors duration-300">Privacy Policy</Link>
+                  <Link href="/privacy" className="text-white hover:text-[#3E8F5E] transition-colors duration-300">Privacy Policy</Link>
                   <span className="text-white/40">|</span>
-                  <Link href="/terms" className="text-white hover:text-[#10B981] transition-colors duration-300">Terms</Link>
+                  <Link href="/terms" className="text-white hover:text-[#3E8F5E] transition-colors duration-300">Terms</Link>
                   <span className="text-white/40">|</span>
-                  <Link href="/cookies" className="text-white hover:text-[#10B981] transition-colors duration-300">Cookies</Link>
+                  <Link href="/cookies" className="text-white hover:text-[#3E8F5E] transition-colors duration-300">Cookies</Link>
                   <span className="text-white/40">|</span>
-                  <Link href="/gdpr" className="text-white hover:text-[#10B981] transition-colors duration-300">GDPR</Link>
+                  <Link href="/gdpr" className="text-white hover:text-[#3E8F5E] transition-colors duration-300">GDPR</Link>
                 </div>
               </div>
             </div>

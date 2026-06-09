@@ -10,20 +10,20 @@ import { Button } from "@/components/Button";
 import { Target, Award, Users, Globe2, Radio, Rocket, TrendingUp, Zap, Handshake, Briefcase, Database, GraduationCap, FlaskConical } from "lucide-react";
 
 const missionPillars = [
-  { icon: Target, title: "Apex Organization", desc: "To be the Apex organization for IT professionals in business, government, and people.", color: "#047857" },
-  { icon: Award, title: "Represent Professionals", desc: "To represent IT professionals in all aspects of their profession and increase the value of the profession.", color: "#047857" },
-  { icon: Users, title: "Inclusive Community", desc: "To be a place for anyone in the profession, representing all ages, career stages, demographics, and needs.", color: "#10B981" },
-  { icon: Globe2, title: "Global Collaboration", desc: "To collaborate with Networks and organizations representing professionals in countries around the world to unify and advance the profession globally.", color: "#047857" },
-  { icon: Radio, title: "Timely Information", desc: "To provide relevant, consistent, and timely information to stakeholders.", color: "#047857" },
-  { icon: Rocket, title: "Fuel Growth", desc: "Fuel business creation and expansion — address funding gaps for early-stage companies and increase opportunities for high-growth enterprises.", color: "#10B981" },
-  { icon: Database, title: "Information Management", desc: "Complete management of client information with easy access and updates for professionals, employers, trainers and businesses so they can benefit from the most accurate and timely information available.", color: "#047857" },
+  { icon: Target, title: "Apex Organization", desc: "To be the Apex organization for IT professionals in business, government, and people.", color: "#2F7549" },
+  { icon: Award, title: "Represent Professionals", desc: "To represent IT professionals in all aspects of their profession and increase the value of the profession.", color: "#2F7549" },
+  { icon: Users, title: "Inclusive Community", desc: "To be a place for anyone in the profession, representing all ages, career stages, demographics, and needs.", color: "#3E8F5E" },
+  { icon: Globe2, title: "Global Collaboration", desc: "To collaborate with Networks and organizations representing professionals in countries around the world to unify and advance the profession globally.", color: "#2F7549" },
+  { icon: Radio, title: "Timely Information", desc: "To provide relevant, consistent, and timely information to stakeholders.", color: "#2F7549" },
+  { icon: Rocket, title: "Fuel Growth", desc: "Fuel business creation and expansion — address funding gaps for early-stage companies and increase opportunities for high-growth enterprises.", color: "#3E8F5E" },
+  { icon: Database, title: "Information Management", desc: "Complete management of client information with easy access and updates for professionals, employers, trainers and businesses so they can benefit from the most accurate and timely information available.", color: "#2F7549" },
 ];
 
 const strategicFocus = [
-  { icon: TrendingUp, title: "Enhance Tech Adoption", desc: "Encourage the uptake of technology across Pakistani businesses to elevate productivity and competitiveness.", color: "#047857" },
-  { icon: Zap, title: "Incentivize Investment", desc: "Promote initiatives like R&D incentives, refining investor definitions, and broadening EIS/SEIS scope to stimulate business growth.", color: "#047857" },
-  { icon: Handshake, title: "Connectivity", desc: "Bridging the gaps and providing lightning-fast connectivity across the nation.", color: "#10B981" },
-  { icon: Briefcase, title: "Technical Support", desc: "To become the industry benchmark by providing one-stop solutions for all technical support and related services.", color: "#047857" },
+  { icon: TrendingUp, title: "Enhance Tech Adoption", desc: "Encourage the uptake of technology across Pakistani businesses to elevate productivity and competitiveness.", color: "#2F7549" },
+  { icon: Zap, title: "Incentivize Investment", desc: "Promote initiatives like R&D incentives, refining investor definitions, and broadening EIS/SEIS scope to stimulate business growth.", color: "#2F7549" },
+  { icon: Handshake, title: "Connectivity", desc: "Bridging the gaps and providing lightning-fast connectivity across the nation.", color: "#3E8F5E" },
+  { icon: Briefcase, title: "Technical Support", desc: "To become the industry benchmark by providing one-stop solutions for all technical support and related services.", color: "#2F7549" },
 ];
 
 export default function MissionPage() {
@@ -53,7 +53,7 @@ export default function MissionPage() {
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: `${item.color}10`, border: `1px solid ${item.color}25` }}>
                     <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-2">{item.title}</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] mb-2">{item.title}</h3>
                   <p className="text-[#3D4152] text-base leading-relaxed">{item.desc}</p>
                 </div>
               );
@@ -75,7 +75,7 @@ export default function MissionPage() {
                     <Icon className="w-4 h-4" style={{ color: item.color }} strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#1C1F2E] text-base mb-1">{item.title}</h4>
+                    <h4 className="font-semibold text-[#16291E] text-base mb-1">{item.title}</h4>
                     <p className="text-[#3D4152] text-base leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -91,20 +91,20 @@ export default function MissionPage() {
           <SectionHeader label="Broader Commitments" title="Investing in the Future" color="green" subtitle="Beyond our core pillars, UPTIB is committed to nurturing talent and inspiring the next generation of technology leaders." />
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex items-start gap-4 bg-white border border-[#D8D5CF] rounded-lg p-6 hover:shadow-md transition-all duration-300">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#10B98110", border: "1px solid #10B98125" }}>
-                <FlaskConical className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#3E8F5E10", border: "1px solid #3E8F5E25" }}>
+                <FlaskConical className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
               </div>
               <div>
-                <h4 className="font-heading font-bold text-[#1C1F2E] text-base mb-2">STEM Careers Promotion</h4>
+                <h4 className="font-heading font-bold text-[#16291E] text-base mb-2">STEM Careers Promotion</h4>
                 <p className="text-[#3D4152] text-base leading-relaxed">Promote careers in Science, Technology, Engineering and Mathematics to inspire the next generation of tech leaders.</p>
               </div>
             </div>
             <div className="flex items-start gap-4 bg-white border border-[#D8D5CF] rounded-lg p-6 hover:shadow-md transition-all duration-300">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#04785710", border: "1px solid #04785725" }}>
-                <GraduationCap className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#2F754910", border: "1px solid #2F754925" }}>
+                <GraduationCap className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
               </div>
               <div>
-                <h4 className="font-heading font-bold text-[#1C1F2E] text-base mb-2">Student Scholarships</h4>
+                <h4 className="font-heading font-bold text-[#16291E] text-base mb-2">Student Scholarships</h4>
                 <p className="text-[#3D4152] text-base leading-relaxed">Provide scholarships to outstanding students in Pakistan, ensuring access to quality education and fostering the next wave of technology talent.</p>
               </div>
             </div>

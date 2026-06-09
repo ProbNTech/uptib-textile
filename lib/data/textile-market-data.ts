@@ -12,10 +12,25 @@ export const globalStats = [
 ];
 
 // ─── Product / category strengths ────────────────────────────────────────────
-export const segments = [
+import { BedDouble, Shirt, Activity, Stethoscope, type LucideIcon } from "lucide-react";
+
+export interface Segment {
+  title: string;
+  image: string;
+  icon: LucideIcon;
+  tags: string;
+  desc: string;
+  blurb: string;
+  points: string[];
+}
+
+export const segments: Segment[] = [
   {
     title: "Home Textiles & Linens",
     image: "/image/textile/products/bedding-linen.jpg",
+    icon: BedDouble,
+    tags: "Bed linen, Towels, Terry",
+    desc: "Pakistan's #1 export across Europe",
     blurb:
       "A world-leading origin for bed linen, towels, terry and hospitality textiles — and Pakistan's single largest export across most European markets.",
     points: ["Bed & bath linen", "Terry towels", "Hotel & hospitality linens", "Kitchen & table linens"],
@@ -23,6 +38,9 @@ export const segments = [
   {
     title: "Apparel & Denim",
     image: "/image/textile/products/apparel-accessories.jpg",
+    icon: Shirt,
+    tags: "Knits, Woven, Denim",
+    desc: "Vertically integrated, cost-competitive apparel",
     blurb:
       "Vertically integrated from cotton to finished garment, giving a decisive cost edge in knit, woven and denim apparel for global fashion and value retailers.",
     points: ["Knit apparel (HS 61)", "Woven apparel (HS 62)", "Denim & workwear", "Private-label fashion"],
@@ -30,6 +48,9 @@ export const segments = [
   {
     title: "Sportswear & Activewear",
     image: "/image/textile/products/sportswear-activewear.jpg",
+    icon: Activity,
+    tags: "Performance, Gym, Teamwear",
+    desc: "Fast-growing OEM & private-label capability",
     blurb:
       "Strong OEM and private-label capability in performance garments, teamwear and compression wear — one of the fastest-growing export opportunities.",
     points: ["Performance knitwear", "Gym & activewear", "Compression garments", "Team & club kit"],
@@ -37,6 +58,9 @@ export const segments = [
   {
     title: "Healthcare & Medical Textiles",
     image: "/image/textile/products/healthcare-textile.jpg",
+    icon: Stethoscope,
+    tags: "Surgical, PPE, Nonwovens",
+    desc: "Emerging, higher-margin technical frontier",
     blurb:
       "An emerging, higher-margin frontier: surgical gowns, hospital linens, PPE and nonwovens — the fastest-growing technical-textile application worldwide.",
     points: ["Surgical gowns & scrubs", "Hospital bedding", "PPE & infection control", "Nonwoven medical fabrics"],
@@ -359,20 +383,21 @@ export const competitors = [
 ];
 
 export const advantages = [
-  { title: "Cotton at the source", desc: "One of the world's largest cotton producers — raw material on the doorstep, not on a ship." },
-  { title: "Vertical integration", desc: "Cotton to finished garment under one roof, from spinning and weaving to dyeing and stitching." },
-  { title: "Manufacturing depth", desc: "Decades of scale in knit, woven, denim and home textiles, with ~40 million people across the value chain." },
-  { title: "Preferential access", desc: "GSP+ duty-free access to the EU and long-standing UK sourcing relationships lower the landed cost." },
-  { title: "Competitive pricing", desc: "A structural cost edge over European and many Asian rivals on high-volume, value-tier production." },
-  { title: "Higher-value pivot", desc: "Fast-growing capability in sportswear, technical and medical textiles — the higher-margin frontier." },
+  { title: "Cotton at the Source", desc: "One of the world's largest cotton producers — raw material on the doorstep, not on a ship." },
+  { title: "Vertical Integration", desc: "Cotton to finished garment under one roof, from spinning and weaving to dyeing and stitching." },
+  { title: "Manufacturing Depth", desc: "Decades of scale in knit, woven, denim and home textiles, with ~40 million people across the value chain." },
+  { title: "Preferential Access", desc: "GSP+ duty-free access to the EU and long-standing UK sourcing relationships lower the landed cost." },
+  { title: "Competitive Pricing", desc: "A structural cost edge over European and many Asian rivals on high-volume, value-tier production." },
+  { title: "Higher Value per $", desc: "Fast-growing capability in sportswear, technical and medical textiles — the higher-margin frontier." },
 ];
 
 // ─── Market-entry playbook ─────────────────────────────────────────────────────
+// `image` renders as a faint photo at the foot of each playbook column.
 export const entrySteps = [
-  { title: "Certifications & compliance", desc: "GOTS, BCI, OEKO-TEX and social-compliance audits to clear European and North American buyer gates." },
-  { title: "Sustainability & ethics", desc: "Organic and recycled cotton, transparent supply chains and ethical sourcing — now decisive purchasing criteria." },
-  { title: "Product innovation", desc: "Move up the value curve into performance, technical and medical textiles where margins are strongest." },
-  { title: "Digital marketing", desc: "Direct buyer outreach, B2B marketplaces and e-commerce fulfilment, including warehousing in EU hubs." },
-  { title: "Buyer diversification", desc: "Spread risk across the US, UK, EU and GCC rather than concentrating on any single destination." },
-  { title: "Trade exhibitions", desc: "Presence at international fairs and curated trade delegations to build durable buyer relationships." },
+  { title: "Certification Compliance", desc: "GOTS, BCI, OEKO-TEX and social-compliance audits to clear European and North American buyer gates.", image: "/image/textile/products/healthcare-textile.jpg" },
+  { title: "Sustainability & Ethics", desc: "Organic and recycled cotton, transparent supply chains and ethical sourcing — now decisive purchasing criteria.", image: "/image/textile/products/bedding-linen.jpg" },
+  { title: "Product Innovation", desc: "Move up the value curve into performance, technical and medical textiles where margins are strongest.", image: "/image/textile/products/sportswear-activewear.jpg" },
+  { title: "Digital Marketing", desc: "Direct buyer outreach, B2B marketplaces and e-commerce fulfilment, including warehousing in EU hubs.", image: "/image/textile/products/apparel-accessories.jpg" },
+  { title: "Buyer Diversification", desc: "Spread risk across the US, UK, EU and GCC rather than concentrating on any single destination.", image: "/image/textile/manufacturers.jpg" },
+  { title: "Trade Exhibitions", desc: "Presence at international fairs and curated trade delegations to build durable buyer relationships.", image: "/image/textile/exporters.jpg" },
 ];

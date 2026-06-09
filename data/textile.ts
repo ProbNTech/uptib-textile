@@ -19,8 +19,11 @@ export type ProductCategory = {
   headline: string;       // product page H1
   summary: string;        // one-line under the headline
   icon: LucideIcon;
+  image: string;          // feature photo for hub + detail
   intro: string;          // 2-sentence intro (globalised)
   included: string[];     // "What's included"
+  applications: string[]; // end-markets / who sources it (chips)
+  certList: string[];     // certifications as chips
   facts: {
     strength: string;
     globalDemand: string;
@@ -77,6 +80,7 @@ export const products: ProductCategory[] = [
     headline: "Hotel-grade bedding and bath, made in Pakistan",
     summary: "Our largest category — globally recognised cotton quality and terry-towel manufacturing.",
     icon: BedDouble,
+    image: "/image/textile/products/bedding-linen.jpg",
     intro:
       "Bedding and bath is the category where Pakistan is most competitive — globally recognised cotton quality and large-scale terry-towel capacity at competitive prices. Retailers, hotel groups, property developers and online home brands across the EU, the Americas, the Middle East and the UK rely on it.",
     included: [
@@ -86,6 +90,14 @@ export const products: ProductCategory[] = [
       "Hotel linen — contract-grade bedding and bath for hospitality.",
       "Table & kitchen linen — napkins, runners, aprons.",
     ],
+    applications: [
+      "Hotels & hospitality groups",
+      "Retail & department stores",
+      "Online home & lifestyle brands",
+      "Property developers",
+      "Spas & resorts",
+    ],
+    certList: ["GOTS", "OEKO-TEX", "BCI", "ISO 9001"],
     facts: {
       strength: "Globally recognised cotton quality and terry-towel manufacturing, with large-scale capacity and competitive pricing.",
       globalDemand: "Retailers, hotel groups, hospitality operators, property developers and online home brands worldwide — from the EU and USA to the Middle East and UK.",
@@ -101,6 +113,7 @@ export const products: ProductCategory[] = [
     headline: "Private-label apparel, made to your spec",
     summary: "OEM and private-label production across woven and knit, with design support and fast turnaround.",
     icon: Shirt,
+    image: "/image/textile/products/apparel-accessories.jpg",
     intro:
       "Pakistan offers OEM and private-label capability across woven and knit — with design support, small runs and fast turnaround for brands that keep branding in-house. Brands and retailers worldwide outsource production here, with strong demand for low-MOQ partners.",
     included: [
@@ -111,6 +124,14 @@ export const products: ProductCategory[] = [
       "Uniforms & workwear — corporate, industrial, school and security.",
       "Accessories — socks, bags and more.",
     ],
+    applications: [
+      "Fashion & lifestyle brands",
+      "High-street retailers",
+      "Workwear & uniform suppliers",
+      "E-commerce & DTC labels",
+      "Corporate & promotional",
+    ],
+    certList: ["OEKO-TEX", "BCI", "WRAP", "Sedex"],
     facts: {
       strength: "Private-label and OEM capability across woven and knit, with design support, packaging and fast turnaround.",
       globalDemand: "Brands and retailers worldwide outsourcing production; strong demand for low-MOQ partners across the EU, USA, Middle East and UK.",
@@ -126,6 +147,7 @@ export const products: ProductCategory[] = [
     headline: "Performance kit from one of the world's leading hubs",
     summary: "Sialkot is globally recognised for sportswear, teamwear and customised athletic apparel.",
     icon: Dumbbell,
+    image: "/image/textile/products/sportswear-activewear.jpg",
     intro:
       "Sialkot is one of the world's leading hubs for sportswear, teamwear and customised athletic apparel — with sublimation printing and low minimum orders. It serves a fast-growing global market driven by fitness, athleisure and e-commerce fitness brands.",
     included: [
@@ -134,6 +156,14 @@ export const products: ProductCategory[] = [
       "Teamwear and custom kit (sublimated).",
       "Technical and performance fabrics.",
     ],
+    applications: [
+      "Athleisure & activewear brands",
+      "Sports teams & clubs",
+      "Gym & fitness chains",
+      "E-commerce fitness labels",
+      "Schools & academies",
+    ],
+    certList: ["OEKO-TEX", "Recycled / GRS", "Sedex"],
     facts: {
       strength: "Sialkot custom and private-label sportswear, sublimation capability, low MOQs.",
       globalDemand: "A fast-growing global market driven by fitness, athleisure and e-commerce fitness brands across the EU, USA, Middle East and UK.",
@@ -149,6 +179,7 @@ export const products: ProductCategory[] = [
     headline: "Institutional textiles for healthcare systems worldwide",
     summary: "Built for durability, hygiene and frequent industrial laundering.",
     icon: Stethoscope,
+    image: "/image/textile/products/healthcare-textile.jpg",
     intro:
       "Pakistan manufactures institutional linen and uniforms built for durability, hygiene and frequent industrial laundering, with CE/AAMI-aware surgical and antimicrobial capability. Hospitals, care homes, clinics and laboratories worldwide represent continuous, high-volume demand.",
     included: [
@@ -158,6 +189,14 @@ export const products: ProductCategory[] = [
       "Surgical drapes and theatre linen.",
       "Antimicrobial and care-home textiles.",
     ],
+    applications: [
+      "Public & private hospitals",
+      "Care homes & clinics",
+      "National health systems",
+      "Laboratories",
+      "Medical distributors",
+    ],
+    certList: ["CE", "AAMI", "ISO 13485", "OEKO-TEX"],
     facts: {
       strength: "Institutional linen and uniform manufacturing, with CE/AAMI-aware surgical and antimicrobial capability.",
       globalDemand: "Public and private hospitals, care homes, clinics and laboratories worldwide — including the NHS in the UK and large public health systems across the EU and Middle East.",

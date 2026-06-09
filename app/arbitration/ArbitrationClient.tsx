@@ -55,7 +55,7 @@ const disputeTypes = [
   {
     title: "Technology & Service Agreements",
     icon: Code2,
-    color: "#047857",
+    color: "#2F7549",
     items: [
       "Software development contracts",
       "IT outsourcing agreements",
@@ -68,7 +68,7 @@ const disputeTypes = [
   {
     title: "Marketing & Partnership Agreements",
     icon: Megaphone,
-    color: "#10B981",
+    color: "#3E8F5E",
     items: [
       "Product promotion agreements",
       "Strategic business partnerships arrangements",
@@ -78,7 +78,7 @@ const disputeTypes = [
   {
     title: "Employment & Recruitment Agreements",
     icon: Briefcase,
-    color: "#047857",
+    color: "#2F7549",
     items: [
       "International employment placements",
       "Recruitment and talent sourcing agreements",
@@ -88,7 +88,7 @@ const disputeTypes = [
   {
     title: "Research & Innovation Projects",
     icon: Lightbulb,
-    color: "#047857",
+    color: "#2F7549",
     items: [
       "Research collaboration terms & agreements",
       "Technology development partnerships",
@@ -106,7 +106,7 @@ const processSteps = [
     icon: ClipboardList,
     description: "A party may submit a formal dispute request to UPTIB including a description of the dispute, relevant agreements or documentation, and desired outcome or resolution.",
     outcome: "Dispute registered",
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     number: "02",
@@ -114,7 +114,7 @@ const processSteps = [
     icon: MessageCircle,
     description: "UPTIB will attempt to resolve the dispute through amicable mediation between the parties. The mediation process aims to encourage dialogue and reach a mutually acceptable settlement.",
     outcome: "Dialogue initiated",
-    color: "#10B981",
+    color: "#3E8F5E",
   },
   {
     number: "03",
@@ -122,7 +122,7 @@ const processSteps = [
     icon: UserCheck,
     description: "If mediation fails, UPTIB may appoint an independent arbitration panel consisting of professionals with expertise in technology law, business contracts, international trade, and digital services.",
     outcome: "Panel appointed",
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     number: "04",
@@ -130,7 +130,7 @@ const processSteps = [
     icon: FileCheck,
     description: "The arbitration panel will review the evidence presented by both parties and provide a recommended settlement or a formal arbitration decision depending on the agreed arbitration terms.",
     outcome: "Resolution delivered",
-    color: "#047857",
+    color: "#2F7549",
   },
 ];
 
@@ -164,25 +164,25 @@ const benefits = [
     title: "Neutral Platform",
     description: "UPTIB provides a neutral and professional environment for resolving disputes without bias.",
     icon: Globe2,
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     title: "Faster Resolution",
     description: "Arbitration can resolve disputes more quickly than formal litigation, saving time and resources.",
     icon: Clock,
-    color: "#10B981",
+    color: "#3E8F5E",
   },
   {
     title: "Business Relationship Protection",
     description: "The process encourages mutual understanding and continued cooperation between parties.",
     icon: Handshake,
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     title: "Cross-Border Confidence",
     description: "European companies working with Pakistani partners gain additional assurance through a structured dispute resolution mechanism.",
     icon: Shield,
-    color: "#047857",
+    color: "#2F7549",
   },
 ];
 
@@ -225,10 +225,10 @@ export default function ArbitrationClient() {
       <Section variant="light">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { value: "Independent", label: "Neutral Framework", color: "#047857" },
-            { value: "4-Step", label: "Structured Process", color: "#10B981" },
-            { value: "Expert", label: "Arbitration Panel", color: "#047857" },
-            { value: "Cross-Border", label: "UK & Pakistan", color: "#047857" },
+            { value: "Independent", label: "Neutral Framework", color: "#2F7549" },
+            { value: "4-Step", label: "Structured Process", color: "#3E8F5E" },
+            { value: "Expert", label: "Arbitration Panel", color: "#2F7549" },
+            { value: "Cross-Border", label: "UK & Pakistan", color: "#2F7549" },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -277,7 +277,7 @@ export default function ArbitrationClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="mt-6 rounded-xl bg-gradient-to-r from-[#047857]/15 to-[#10B981]/15 border border-white/10 p-6"
+                className="mt-6 rounded-xl bg-gradient-to-r from-[#2F7549]/15 to-[#3E8F5E]/15 border border-white/10 p-6"
               >
                 <h4 className="font-heading font-bold text-white text-base mb-3">
                   To file a dispute, submit:
@@ -289,7 +289,7 @@ export default function ArbitrationClient() {
                     "Desired outcome or resolution",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-2">
-                      <ArrowRight className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <ArrowRight className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-white/80 text-sm">{item}</span>
                     </div>
                   ))}
@@ -308,9 +308,9 @@ export default function ArbitrationClient() {
                 <div className="flex items-center gap-3 mb-5">
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: "#04785710", border: "1px solid #04785720" }}
+                    style={{ background: "#2F754910", border: "1px solid #2F754920" }}
                   >
-                    <Scale className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                    <Scale className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-heading font-bold text-white text-lg">Our Objectives</h3>
                 </div>
@@ -326,7 +326,7 @@ export default function ArbitrationClient() {
                       className="flex items-start gap-3"
                     >
                       <CheckCircle2
-                        className="w-4 h-4 text-[#10B981] mt-0.5 flex-shrink-0"
+                        className="w-4 h-4 text-[#3E8F5E] mt-0.5 flex-shrink-0"
                         strokeWidth={2}
                       />
                       <span className="text-white/60 text-sm leading-relaxed">{item}</span>
@@ -373,7 +373,7 @@ export default function ArbitrationClient() {
                         >
                           <Icon className="w-7 h-7" style={{ color: type.color }} strokeWidth={1.5} />
                         </div>
-                        <h3 className="font-heading font-bold text-lg text-[#1C1F2E]">
+                        <h3 className="font-heading font-bold text-lg text-[#16291E]">
                           {type.title}
                         </h3>
                       </div>
@@ -502,11 +502,11 @@ export default function ArbitrationClient() {
                 <div className="flex items-center gap-3 mb-5">
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: "#04785710", border: "1px solid #04785720" }}
+                    style={{ background: "#2F754910", border: "1px solid #2F754920" }}
                   >
-                    <Gavel className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                    <Gavel className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-[#1C1F2E] text-lg">Areas of Expertise</h3>
+                  <h3 className="font-heading font-bold text-[#16291E] text-lg">Areas of Expertise</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <ul className="space-y-4">
@@ -520,11 +520,11 @@ export default function ArbitrationClient() {
                       className="flex items-start gap-3"
                     >
                       <CheckCircle2
-                        className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0"
+                        className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0"
                         strokeWidth={2}
                       />
                       <div>
-                        <span className="font-semibold text-[#1C1F2E] text-sm block">{item.area}</span>
+                        <span className="font-semibold text-[#16291E] text-sm block">{item.area}</span>
                         <span className="text-[#5A5F72] text-xs leading-relaxed">{item.desc}</span>
                       </div>
                     </motion.li>
@@ -549,7 +549,7 @@ export default function ArbitrationClient() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {principles.map((principle, i) => {
               const Icon = principle.icon;
-              const colors = ["#6EE7B7", "#86efac", "#F9A8B4", "#6EE7B7"];
+              const colors = ["#8FD3AE", "#86efac", "#F9A8B4", "#8FD3AE"];
               const color = colors[i];
               return (
                 <motion.div
@@ -616,7 +616,7 @@ export default function ArbitrationClient() {
                       >
                         <Icon className="w-6 h-6" style={{ color: benefit.color }} strokeWidth={1.5} />
                       </div>
-                      <h3 className="font-heading font-bold text-[#1C1F2E] text-base mb-2">
+                      <h3 className="font-heading font-bold text-[#16291E] text-base mb-2">
                         {benefit.title}
                       </h3>
                       <div className="h-px bg-[#D8D5CF] mb-3" />
@@ -647,21 +647,21 @@ export default function ArbitrationClient() {
                 title: "Arbitration Act 1996",
                 subtitle: "United Kingdom",
                 description: "The primary governing legislation providing the legal framework for all arbitration proceedings under UPTIB.",
-                color: "#047857",
+                color: "#2F7549",
                 icon: Gavel,
               },
               {
                 title: "LCIA Rules",
                 subtitle: "London Court of International Arbitration",
                 description: "Internationally recognised procedural rules that may be applied for structured and professional conduct of arbitration.",
-                color: "#10B981",
+                color: "#3E8F5E",
                 icon: BookOpen,
               },
               {
                 title: "New York Convention",
                 subtitle: "1958 â International Enforceability",
                 description: "Ensures that arbitration awards are binding, final, and enforceable in the UK and internationally across 170+ countries.",
-                color: "#047857",
+                color: "#2F7549",
                 icon: Globe2,
               },
             ].map((item, i) => {
@@ -698,7 +698,7 @@ export default function ArbitrationClient() {
 
           {/* Key Framework Principles */}
           <AnimatedSection delay={0.2}>
-            <div className="rounded-xl bg-gradient-to-r from-[#047857]/15 to-[#10B981]/15 border border-white/10 p-6 lg:p-8">
+            <div className="rounded-xl bg-gradient-to-r from-[#2F7549]/15 to-[#3E8F5E]/15 border border-white/10 p-6 lg:p-8">
               <h4 className="font-heading font-bold text-white text-base mb-4">Framework Key Principles</h4>
               <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
                 {[
@@ -709,7 +709,7 @@ export default function ArbitrationClient() {
                   { label: "Global Enforceability", desc: "Awards enforceable internationally under recognised conventions" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-2">
-                    <BadgeCheck className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <BadgeCheck className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <div>
                       <span className="font-semibold text-white text-sm block">{item.label}</span>
                       <span className="text-white/60 text-xs leading-relaxed">{item.desc}</span>
@@ -740,13 +740,13 @@ export default function ArbitrationClient() {
               transition={{ duration: 0.4 }}
               className="rounded-2xl border border-[#D8D5CF] bg-white shadow-sm overflow-hidden"
             >
-              <div className="h-1 w-full bg-gradient-to-r from-[#047857] to-[#047857]/40" />
+              <div className="h-1 w-full bg-gradient-to-r from-[#2F7549] to-[#2F7549]/40" />
               <div className="p-7">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#04785710", border: "1px solid #04785720" }}>
-                    <Timer className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#2F754910", border: "1px solid #2F754920" }}>
+                    <Timer className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-[#1C1F2E] text-lg">Typical Timeline</h3>
+                  <h3 className="font-heading font-bold text-[#16291E] text-lg">Typical Timeline</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <ul className="space-y-3">
@@ -759,10 +759,10 @@ export default function ArbitrationClient() {
                   ].map((item, i) => (
                     <li key={item.step} className="flex items-center justify-between gap-2">
                       <div className="flex items-center gap-2">
-                        <span className="w-5 h-5 rounded-full bg-[#047857]/10 flex items-center justify-center text-[10px] font-bold text-[#047857]">{i + 1}</span>
+                        <span className="w-5 h-5 rounded-full bg-[#2F7549]/10 flex items-center justify-center text-[10px] font-bold text-[#2F7549]">{i + 1}</span>
                         <span className="text-[#3D4152] text-sm">{item.step}</span>
                       </div>
-                      <span className="text-xs font-semibold text-[#047857] bg-[#047857]/8 px-2 py-0.5 rounded-full whitespace-nowrap">{item.time}</span>
+                      <span className="text-xs font-semibold text-[#2F7549] bg-[#2F7549]/8 px-2 py-0.5 rounded-full whitespace-nowrap">{item.time}</span>
                     </li>
                   ))}
                 </ul>
@@ -777,13 +777,13 @@ export default function ArbitrationClient() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className="rounded-2xl border border-[#D8D5CF] bg-white shadow-sm overflow-hidden"
             >
-              <div className="h-1 w-full bg-gradient-to-r from-[#10B981] to-[#10B981]/40" />
+              <div className="h-1 w-full bg-gradient-to-r from-[#3E8F5E] to-[#3E8F5E]/40" />
               <div className="p-7">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#10B98110", border: "1px solid #10B98120" }}>
-                    <PoundSterling className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#3E8F5E10", border: "1px solid #3E8F5E20" }}>
+                    <PoundSterling className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-[#1C1F2E] text-lg">Cost Schedule</h3>
+                  <h3 className="font-heading font-bold text-[#16291E] text-lg">Cost Schedule</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <ul className="space-y-4">
@@ -795,8 +795,8 @@ export default function ArbitrationClient() {
                   ].map((item) => (
                     <li key={item.label}>
                       <div className="flex items-center justify-between mb-0.5">
-                        <span className="font-semibold text-[#1C1F2E] text-sm">{item.label}</span>
-                        <span className="text-xs font-bold text-[#10B981]">{item.range}</span>
+                        <span className="font-semibold text-[#16291E] text-sm">{item.label}</span>
+                        <span className="text-xs font-bold text-[#3E8F5E]">{item.range}</span>
                       </div>
                       <span className="text-[#5A5F72] text-xs">{item.note}</span>
                     </li>
@@ -813,13 +813,13 @@ export default function ArbitrationClient() {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="rounded-2xl border border-[#D8D5CF] bg-white shadow-sm overflow-hidden"
             >
-              <div className="h-1 w-full bg-gradient-to-r from-[#047857] to-[#047857]/40" />
+              <div className="h-1 w-full bg-gradient-to-r from-[#2F7549] to-[#2F7549]/40" />
               <div className="p-7">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#04785710", border: "1px solid #04785720" }}>
-                    <Monitor className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#2F754910", border: "1px solid #2F754920" }}>
+                    <Monitor className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-[#1C1F2E] text-lg">Digital Platform</h3>
+                  <h3 className="font-heading font-bold text-[#16291E] text-lg">Digital Platform</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <ul className="space-y-2.5">
@@ -834,7 +834,7 @@ export default function ArbitrationClient() {
                     "24/7 technical support",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-[#5A5F72] text-sm leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -847,21 +847,21 @@ export default function ArbitrationClient() {
           <AnimatedSection delay={0.3}>
             <Link
               href="/arbitration/framework"
-              className="group mt-8 block bg-gradient-to-r from-[#047857]/10 to-[#10B981]/10 rounded-2xl border border-[#047857]/20 p-8 hover:shadow-lg transition-all"
+              className="group mt-8 block bg-gradient-to-r from-[#2F7549]/10 to-[#3E8F5E]/10 rounded-2xl border border-[#2F7549]/20 p-8 hover:shadow-lg transition-all"
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-semibold text-[#047857] uppercase tracking-wider mb-1">
+                  <p className="text-sm font-semibold text-[#2F7549] uppercase tracking-wider mb-1">
                     Full Policy Document
                   </p>
-                  <h3 className="font-heading font-bold text-xl text-[#1C1F2E] mb-2">
+                  <h3 className="font-heading font-bold text-xl text-[#16291E] mb-2">
                     UPTIB Arbitration Framework Policy
                   </h3>
                   <p className="text-[#3D4152]">
                     View the complete framework including legal basis, detailed procedures, cost schedules, appointment guidelines, digital platform guide, and FAQs.
                   </p>
                 </div>
-                <ArrowRight className="w-8 h-8 text-[#047857] flex-shrink-0 group-hover:translate-x-2 transition-transform" />
+                <ArrowRight className="w-8 h-8 text-[#2F7549] flex-shrink-0 group-hover:translate-x-2 transition-transform" />
               </div>
             </Link>
           </AnimatedSection>
@@ -886,14 +886,14 @@ export default function ArbitrationClient() {
             transition={{ duration: 0.4 }}
             className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden mb-8"
           >
-            <div className="h-1 w-full bg-gradient-to-r from-[#047857] via-[#10B981] to-[#047857]" />
+            <div className="h-1 w-full bg-gradient-to-r from-[#2F7549] via-[#3E8F5E] to-[#2F7549]" />
             <div className="p-8 lg:p-10">
               <div className="flex items-start gap-4 mb-6">
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: "#04785710", border: "1px solid #04785720" }}
+                  style={{ background: "#2F754910", border: "1px solid #2F754920" }}
                 >
-                  <FileText className="w-6 h-6 text-[#047857]" strokeWidth={1.5} />
+                  <FileText className="w-6 h-6 text-[#2F7549]" strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-white text-xl mb-1">
@@ -905,8 +905,8 @@ export default function ArbitrationClient() {
                 </div>
               </div>
 
-              <blockquote className="relative border-l-4 border-[#047857] pl-6 py-5 bg-gradient-to-r from-[#047857]/15 to-transparent rounded-r-xl">
-                <div className="absolute -left-1 -top-2 text-[#047857]/20 text-6xl font-serif leading-none">&ldquo;</div>
+              <blockquote className="relative border-l-4 border-[#2F7549] pl-6 py-5 bg-gradient-to-r from-[#2F7549]/15 to-transparent rounded-r-xl">
+                <div className="absolute -left-1 -top-2 text-[#2F7549]/20 text-6xl font-serif leading-none">&ldquo;</div>
                 <p className="text-white text-base leading-relaxed font-medium relative z-10">
                   Any dispute arising from this agreement shall first be resolved through mediation facilitated by the UK–Pakistan Trades & Investment Board (UPTIB). If mediation fails, the dispute may be referred to arbitration under the standard Arbitration & Legal Framework.
                 </p>
@@ -923,14 +923,14 @@ export default function ArbitrationClient() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden"
             >
-              <div className="h-1 w-full bg-gradient-to-r from-[#10B981] to-[#10B981]/40" />
+              <div className="h-1 w-full bg-gradient-to-r from-[#3E8F5E] to-[#3E8F5E]/40" />
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-5">
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: "#10B98110", border: "1px solid #10B98120" }}
+                    style={{ background: "#3E8F5E10", border: "1px solid #3E8F5E20" }}
                   >
-                    <Users className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+                    <Users className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-heading font-bold text-white text-lg">Voluntary Participation</h3>
                 </div>
@@ -948,14 +948,14 @@ export default function ArbitrationClient() {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden"
             >
-              <div className="h-1 w-full bg-gradient-to-r from-[#047857] to-[#047857]/40" />
+              <div className="h-1 w-full bg-gradient-to-r from-[#2F7549] to-[#2F7549]/40" />
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-5">
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: "#04785710", border: "1px solid #04785720" }}
+                    style={{ background: "#2F754910", border: "1px solid #2F754920" }}
                   >
-                    <Eye className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                    <Eye className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-heading font-bold text-white text-lg">Limitations</h3>
                 </div>

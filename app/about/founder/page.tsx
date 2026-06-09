@@ -10,7 +10,7 @@ import { Button } from "@/components/Button";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
-const brandColors = ["#047857", "#047857", "#10B981"];
+const brandColors = ["#2F7549", "#2F7549", "#3E8F5E"];
 
 export default function LeadershipPage() {
   const shouldReduceMotion = useReducedMotion();
@@ -54,7 +54,7 @@ export default function LeadershipPage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-bold uppercase tracking-widest mb-3" style={{ background: `${brandColors[0]}12`, color: brandColors[0] }}>
                 President
               </div>
-              <h2 className="font-heading font-extrabold text-3xl lg:text-4xl text-[#1C1F2E] mb-3">Khalil Choudhary</h2>
+              <h2 className="font-heading font-extrabold text-3xl lg:text-4xl text-[#16291E] mb-3">Khalil Choudhary</h2>
               <div className="h-1 w-16 rounded-full mb-5" style={{ background: `linear-gradient(to right, ${brandColors[0]}, ${brandColors[1]}, ${brandColors[2]})` }} />
               <p className="text-[#3D4152] leading-relaxed mb-4">
                 A visionary leader dedicated to strengthening the UK–Pakistan technology corridor through innovation, collaboration, and sustainable partnerships. Under his leadership, UPTIB has grown into a strategic platform connecting technology professionals, entrepreneurs, and organisations across both nations.
@@ -72,8 +72,8 @@ export default function LeadershipPage() {
         <AnimatedSection>
           <SectionHeader label="From the President" title="A Message from Our President" color="green" />
           <div className="grid lg:grid-cols-[1fr_2fr] gap-8 items-start">
-            <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#047857]">
-              <div className="w-24 h-24 rounded-full overflow-hidden mb-5 ring-2 ring-[#047857]/20 ring-offset-2">
+            <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#2F7549]">
+              <div className="w-24 h-24 rounded-full overflow-hidden mb-5 ring-2 ring-[#2F7549]/20 ring-offset-2">
                 <Image
                   src="/image/ceo/khalil-choudhary-portrait.jpg"
                   alt="Khalil Choudhary — President, UPTIB"
@@ -82,8 +82,8 @@ export default function LeadershipPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-1">Khalil Choudhary</h3>
-              <p className="text-base text-[#047857] font-semibold mb-3">President, UPTIB</p>
+              <h3 className="font-heading font-bold text-lg text-[#16291E] mb-1">Khalil Choudhary</h3>
+              <p className="text-base text-[#2F7549] font-semibold mb-3">President, UPTIB</p>
               <div className="h-px bg-[#D8D5CF] mb-3" />
               <p className="text-base text-[#7A7E8F] leading-relaxed">
                 Visionary leader dedicated to strengthening the UK–Pakistan technology corridor through innovation, collaboration, and sustainable partnerships.

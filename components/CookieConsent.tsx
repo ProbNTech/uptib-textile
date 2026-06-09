@@ -72,14 +72,14 @@ export function CookieConsent() {
             <div
               className="
                 w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11
-                rounded-full bg-[#047857]/10 flex items-center justify-center flex-shrink-0
+                rounded-full bg-[#2F7549]/10 flex items-center justify-center flex-shrink-0
               "
             >
               <svg
                 className="w-5 h-5 sm:w-[22px] sm:h-[22px] lg:w-6 lg:h-6"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#047857"
+                stroke="#2F7549"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -92,7 +92,7 @@ export function CookieConsent() {
                 <path d="M7 14v.01" />
               </svg>
             </div>
-            <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-[#1C1F2E]">
+            <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-[#16291E]">
               We Value Your Privacy
             </h2>
           </div>
@@ -104,7 +104,7 @@ export function CookieConsent() {
             &ldquo;Accept All&rdquo;, you consent to our use of cookies.{" "}
             <Link
               href="/cookies"
-              className="text-[#047857] underline underline-offset-2 hover:text-[#065F46] transition-colors"
+              className="text-[#2F7549] underline underline-offset-2 hover:text-[#245C3A] transition-colors"
             >
               Learn more
             </Link>
@@ -118,9 +118,9 @@ export function CookieConsent() {
                 w-full sm:flex-1
                 py-2.5 sm:py-3 lg:py-3.5
                 px-5 sm:px-6
-                rounded-full bg-[#047857] text-white font-semibold
+                rounded-full bg-[#2F7549] text-white font-semibold
                 text-xs sm:text-sm lg:text-[15px]
-                hover:bg-[#065F46] active:scale-[0.98] transition-all cursor-pointer
+                hover:bg-[#245C3A] active:scale-[0.98] transition-all cursor-pointer
               "
             >
               Accept All
@@ -131,10 +131,10 @@ export function CookieConsent() {
                 w-full sm:flex-1
                 py-2.5 sm:py-3 lg:py-3.5
                 px-5 sm:px-6
-                rounded-full bg-white text-[#1C1F2E] font-semibold
+                rounded-full bg-white text-[#16291E] font-semibold
                 text-xs sm:text-sm lg:text-[15px]
                 border-2 border-[#D8D5CF]
-                hover:border-[#047857] hover:text-[#047857] active:scale-[0.98] transition-all cursor-pointer
+                hover:border-[#2F7549] hover:text-[#2F7549] active:scale-[0.98] transition-all cursor-pointer
               "
             >
               Reject All

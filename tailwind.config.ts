@@ -22,8 +22,8 @@ const config: Config = {
         input: "var(--border-default)",
         ring: "var(--primary)",
         primary: {
-          DEFAULT: "#047857",
-          hover: "#065F46",
+          DEFAULT: "#2F7549",
+          hover: "#245C3A",
           foreground: "#FFFFFF",
         },
         secondary: {
@@ -33,29 +33,35 @@ const config: Config = {
         accent: {
           DEFAULT: "var(--bg-alt)",
           foreground: "var(--text-primary)",
-          green: "#10B981",
-          "green-hover": "#059669",
+          green: "#3E8F5E",
+          "green-hover": "#2F7549",
         },
-        /* UPTIB green brand scale */
+        /* Natural green brand scale (from logo waves) — PRIMARY lead */
         green: {
-          50: "#ECFDF5",
-          100: "#D1FAE5",
-          500: "#10B981",
-          600: "#059669",
-          700: "#047857",
-          800: "#065F46",
-          900: "#064E3B",
+          50: "#EEF6F0",
+          100: "#D7EADD",
+          200: "#B3D7C0",
+          500: "#4FA873",
+          600: "#3C8F5E",
+          700: "#2F7549",
+          800: "#245C3A",
+          900: "#15402A",
+        },
+        /* Muted blue — minor accent only (from logo emblem); never the lead */
+        blue: {
+          500: "#3A6BA5",
+          700: "#2A5689",
         },
         destructive: {
           DEFAULT: "#DC2626",
           foreground: "#FFFFFF",
         },
-        /* Editorial palette tokens */
+        /* Editorial palette tokens — soft green-tinted neutrals */
         editorial: {
-          bg: "#EEECEA",
-          "bg-alt": "#E8E6E3",
-          rule: "#C5C2BE",
-          dark: "#1C1F2E",
+          bg: "#F1F5F1",
+          "bg-alt": "#E8EFE9",
+          rule: "#DCE2DC",
+          dark: "#16291E",
         },
         "color-1": "hsl(var(--color-1))",
         "color-2": "hsl(var(--color-2))",
@@ -126,8 +132,8 @@ const config: Config = {
           "50%": { transform: "translateY(-12px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(4, 120, 87, 0)" },
-          "50%": { boxShadow: "0 0 20px 4px rgba(4, 120, 87, 0.1)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(47, 117, 73, 0)" },
+          "50%": { boxShadow: "0 0 20px 4px rgba(47, 117, 73, 0.1)" },
         },
         rainbow: {
           "0%": { "background-position": "0%" },

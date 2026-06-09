@@ -9,7 +9,7 @@ interface CompanyLogoProps {
 
 /** Stable, soft pastel blue/cyan palette keyed off the name. */
 const palette = [
-  { bg: "#D1FAE5", fg: "#065F46" }, // emerald-100 / emerald-700
+  { bg: "#D7EADD", fg: "#245C3A" }, // emerald-100 / emerald-700
   { bg: "#CFFAFE", fg: "#0E7490" }, // cyan-100 / cyan-700
   { bg: "#E0E7FF", fg: "#4338CA" }, // emerald-100 / emerald-700
   { bg: "#DCFCE7", fg: "#15803D" }, // green-100 / green-700

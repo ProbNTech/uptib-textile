@@ -40,23 +40,23 @@ export default function ExporterFaq() {
                 label="FAQs"
                 title="Frequently asked questions"
                 body="What Pakistani textile exporters ask us most about reaching buyers worldwide."
-                color="#047857"
+                color="#2F7549"
               />
 
               {/* Support card */}
               <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#047857] text-white">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549] text-white">
                     <HelpCircle className="size-5" aria-hidden />
                   </span>
                   <div>
-                    <p className="text-sm font-bold text-[#1C1F2E]">Still have questions?</p>
+                    <p className="text-sm font-bold text-[#16291E]">Still have questions?</p>
                     <p className="text-xs text-[#5A5F72]">We usually reply within one business day.</p>
                   </div>
                 </div>
                 <Link
                   href="/contact"
-                  className="group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#047857]"
+                  className="group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549]"
                 >
                   Talk to our team
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
@@ -77,7 +77,7 @@ export default function ExporterFaq() {
                     className={cn(
                       "rounded-2xl border transition-colors duration-200",
                       isOpen
-                        ? "border-[#047857]/25 bg-[#047857]/[0.04] shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]"
+                        ? "border-[#2F7549]/25 bg-[#2F7549]/[0.04] shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]"
                         : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(4,120,87,0.12)]",
                     )}
                   >
@@ -93,19 +93,19 @@ export default function ExporterFaq() {
                         <span
                           className={cn(
                             "inline-flex size-9 shrink-0 items-center justify-center rounded-xl text-sm font-bold tabular-nums transition-colors",
-                            isOpen ? "bg-[#047857] text-white" : "bg-[#047857]/10 text-[#047857]",
+                            isOpen ? "bg-[#2F7549] text-white" : "bg-[#2F7549]/10 text-[#2F7549]",
                           )}
                           aria-hidden
                         >
                           {String(i + 1).padStart(2, "0")}
                         </span>
 
-                        <span className="flex-1 text-sm font-medium text-[#1C1F2E]">{item.q}</span>
+                        <span className="flex-1 text-sm font-medium text-[#16291E]">{item.q}</span>
 
                         <span
                           className={cn(
                             "inline-flex size-8 shrink-0 items-center justify-center rounded-full transition-colors",
-                            isOpen ? "bg-[#047857] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
+                            isOpen ? "bg-[#2F7549] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
                           )}
                           aria-hidden
                         >

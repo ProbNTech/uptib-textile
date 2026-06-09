@@ -32,9 +32,9 @@ function FilterDropdown({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-[#D8D5CF] bg-white text-base text-[#1C1F2E] hover:border-[#047857]/40 transition-colors w-full justify-between"
+        className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-[#D8D5CF] bg-white text-base text-[#16291E] hover:border-[#2F7549]/40 transition-colors w-full justify-between"
       >
-        <span className={value ? "text-[#1C1F2E]" : "text-[#6B7280]"}>
+        <span className={value ? "text-[#16291E]" : "text-[#6B7280]"}>
           {value || label}
         </span>
         <ChevronDown className={`w-4 h-4 text-[#6B7280] transition-transform ${open ? "rotate-180" : ""}`} />
@@ -58,8 +58,8 @@ function FilterDropdown({
                 onClick={() => { onChange(opt); setOpen(false); }}
                 className={`w-full text-left px-4 py-2 text-base transition-colors ${
                   value === opt
-                    ? "bg-[#047857]/5 text-[#047857] font-medium"
-                    : "text-[#1C1F2E] hover:bg-[#F3F4F6]"
+                    ? "bg-[#2F7549]/5 text-[#2F7549] font-medium"
+                    : "text-[#16291E] hover:bg-[#F3F4F6]"
                 }`}
               >
                 {opt}
@@ -100,12 +100,12 @@ function MemberCard({ member }: { member: Member }) {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="font-heading font-bold text-[#1C1F2E] text-lg mb-1 group-hover:text-[#047857] transition-colors">
+        <h3 className="font-heading font-bold text-[#16291E] text-lg mb-1 group-hover:text-[#2F7549] transition-colors">
           {member.name}
         </h3>
 
         <div className="flex flex-wrap gap-1.5 mb-3">
-          <span className="inline-block px-2 py-0.5 rounded-full bg-[#047857]/8 text-[#047857] text-base font-semibold uppercase tracking-wide">
+          <span className="inline-block px-2 py-0.5 rounded-full bg-[#2F7549]/8 text-[#2F7549] text-base font-semibold uppercase tracking-wide">
             {member.companyType}
           </span>
         </div>
@@ -157,11 +157,11 @@ export function MemberDirectory() {
     <section className="py-8 lg:py-12" style={{ backgroundColor: "#EEECEA" }}>
       <div className="px-8 sm:px-12 lg:px-16 xl:px-20">
         {/* ── Section banner ─────────────────────────────── */}
-        <div className="relative overflow-hidden rounded mb-6 -mx-2 sm:-mx-4" style={{ background: "linear-gradient(135deg, #064E3B 0%, #064E3B 100%)" }}>
-          <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: "linear-gradient(to bottom, #059669, #064E3B)" }} />
+        <div className="relative overflow-hidden rounded mb-6 -mx-2 sm:-mx-4" style={{ background: "linear-gradient(135deg, #15402A 0%, #15402A 100%)" }}>
+          <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: "linear-gradient(to bottom, #3C8F5E, #15402A)" }} />
           <div className="absolute top-0 right-0 w-40 h-full opacity-[0.06]" style={{ background: "radial-gradient(circle at 80% 30%, white 0%, transparent 70%)" }} />
           <div className="py-5 px-7 sm:px-10 pl-8 sm:pl-12">
-            <p className="text-base font-bold uppercase tracking-[0.2em] mb-1.5" style={{ color: "#6EE7B7" }}>Member Directory</p>
+            <p className="text-base font-bold uppercase tracking-[0.2em] mb-1.5" style={{ color: "#8FD3AE" }}>Member Directory</p>
             <h2 className="font-heading font-extrabold text-white text-2xl sm:text-3xl lg:text-[2.2rem] leading-tight">
               Browse Our Members
             </h2>
@@ -179,7 +179,7 @@ export function MemberDirectory() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search members..."
-                className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[#D8D5CF] text-base text-[#1C1F2E] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#047857] transition-colors"
+                className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[#D8D5CF] text-base text-[#16291E] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#2F7549] transition-colors"
               />
             </div>
 
@@ -213,7 +213,7 @@ export function MemberDirectory() {
               {companyType && (
                 <button
                   onClick={() => setCompanyType("")}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#047857]/8 text-[#047857] text-base font-medium hover:bg-[#047857]/15 transition-colors"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#2F7549]/8 text-[#2F7549] text-base font-medium hover:bg-[#2F7549]/15 transition-colors"
                 >
                   {companyType}
                   <X className="w-3 h-3" />
@@ -222,7 +222,7 @@ export function MemberDirectory() {
               {sector && (
                 <button
                   onClick={() => setSector("")}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#047857]/8 text-[#047857] text-base font-medium hover:bg-[#047857]/15 transition-colors"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#2F7549]/8 text-[#2F7549] text-base font-medium hover:bg-[#2F7549]/15 transition-colors"
                 >
                   {sector}
                   <X className="w-3 h-3" />
@@ -231,7 +231,7 @@ export function MemberDirectory() {
               {technology && (
                 <button
                   onClick={() => setTechnology("")}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#047857]/8 text-[#047857] text-base font-medium hover:bg-[#047857]/15 transition-colors"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#2F7549]/8 text-[#2F7549] text-base font-medium hover:bg-[#2F7549]/15 transition-colors"
                 >
                   {technology}
                   <X className="w-3 h-3" />
@@ -239,7 +239,7 @@ export function MemberDirectory() {
               )}
               <button
                 onClick={clearFilters}
-                className="text-base text-[#6B7280] hover:text-[#1C1F2E] underline ml-2 transition-colors"
+                className="text-base text-[#6B7280] hover:text-[#16291E] underline ml-2 transition-colors"
               >
                 Clear all
               </button>
@@ -250,7 +250,7 @@ export function MemberDirectory() {
         {/* ── Results count ───────────────────────────────── */}
         <div className="flex items-center justify-between mb-6">
           <p className="text-base text-[#4B5563]">
-            Showing <span className="font-semibold text-[#1C1F2E]">{filtered.length}</span>{" "}
+            Showing <span className="font-semibold text-[#16291E]">{filtered.length}</span>{" "}
             {filtered.length === 1 ? "member" : "members"}
           </p>
         </div>
@@ -265,7 +265,7 @@ export function MemberDirectory() {
         ) : (
           <div className="bg-white border border-[#D8D5CF] rounded-lg p-12 text-center mb-10">
             <Search className="w-10 h-10 text-[#D1D5DB] mx-auto mb-3" />
-            <h3 className="font-heading font-bold text-[#1C1F2E] text-lg mb-2">
+            <h3 className="font-heading font-bold text-[#16291E] text-lg mb-2">
               No members found
             </h3>
             <p className="text-base text-[#4B5563] mb-4">
@@ -273,7 +273,7 @@ export function MemberDirectory() {
             </p>
             <button
               onClick={clearFilters}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1C1F2E] text-white text-base font-semibold hover:bg-[#047857] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#16291E] text-white text-base font-semibold hover:bg-[#2F7549] transition-colors"
             >
               Clear all filters
             </button>
@@ -282,7 +282,7 @@ export function MemberDirectory() {
 
         {/* ── CTA ─────────────────────────────────────────── */}
         <div className="bg-white border border-[#D8D5CF] rounded-lg p-10 text-center">
-          <h2 className="font-heading font-bold text-[#1C1F2E] text-xl mb-3">
+          <h2 className="font-heading font-bold text-[#16291E] text-xl mb-3">
             Want to be listed here?
           </h2>
           <p className="text-[#4B5563] text-base leading-relaxed mx-auto mb-6">
@@ -292,13 +292,13 @@ export function MemberDirectory() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/membership"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#1C1F2E] text-white text-base font-semibold hover:bg-[#047857] transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#16291E] text-white text-base font-semibold hover:bg-[#2F7549] transition-colors duration-300"
             >
               Become a Member
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-[#1C1F2E] text-[#1C1F2E] text-base font-semibold hover:bg-[#1C1F2E] hover:text-white transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-[#16291E] text-[#16291E] text-base font-semibold hover:bg-[#16291E] hover:text-white transition-colors duration-300"
             >
               Contact Us
             </Link>

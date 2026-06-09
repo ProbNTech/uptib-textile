@@ -9,7 +9,7 @@ const advisors = [
     role: "President",
     bio: "Leading global trade partnerships, buyer engagement, and operational strategy across export markets.",
     photo: "/image/ceo/khalil-choudhary-headshot.jpg",
-    accent: "#047857",
+    accent: "#2F7549",
     delay: 0,
   },
   {
@@ -17,7 +17,7 @@ const advisors = [
     role: "Director - Trade & Exports",
     bio: "Driving export programmes, supplier development, and market-access strategy across global markets.",
     photo: "/image/board/director.jpg",
-    accent: "#047857",
+    accent: "#2F7549",
     delay: 0.15,
   },
   {
@@ -25,7 +25,7 @@ const advisors = [
     role: "Director Marketing UK",
     bio: "Leading marketing strategy, brand positioning, and stakeholder engagement across the UK.",
     photo: "/image/board/mehrouz.jpeg",
-    accent: "#047857",
+    accent: "#2F7549",
     delay: 0.15,
   },
 ];
@@ -69,7 +69,7 @@ export default function BoardOfAdvisors() {
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "radial-gradient(circle, #1C1F2E 0.5px, transparent 0.5px)",
+            "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)",
           backgroundSize: "24px 24px",
         }}
       />
@@ -85,13 +85,13 @@ export default function BoardOfAdvisors() {
           className="text-center mb-14 lg:mb-16"
         >
           <div className="flex items-center gap-3 mb-4 justify-center">
-            <div className="w-8 h-[3px] rounded-full bg-[#047857]" />
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#047857]">
+            <div className="w-8 h-[3px] rounded-full bg-[#2F7549]" />
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549]">
               Leadership
             </p>
           </div>
 
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.8rem] leading-[1.1] text-[#1C1F2E]">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.8rem] leading-[1.1] text-[#16291E]">
             Board of Advisors
           </h2>
 
@@ -125,11 +125,11 @@ export default function BoardOfAdvisors() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-14 lg:mt-16 flex items-center justify-center gap-3"
         >
-          <div className="h-px flex-1 max-w-[140px] bg-gradient-to-r from-transparent to-[#047857]/30" />
+          <div className="h-px flex-1 max-w-[140px] bg-gradient-to-r from-transparent to-[#2F7549]/30" />
           <p className="text-xs sm:text-sm text-[#5A5F72] uppercase tracking-[0.2em] font-medium text-center">
             More advisors joining soon
           </p>
-          <div className="h-px flex-1 max-w-[140px] bg-gradient-to-l from-transparent to-[#047857]/30" />
+          <div className="h-px flex-1 max-w-[140px] bg-gradient-to-l from-transparent to-[#2F7549]/30" />
         </motion.div>
       </div>
     </section>
@@ -148,7 +148,7 @@ function AdvisorCard({
     <div className="group relative flex flex-col items-center text-center rounded-xl overflow-hidden h-full">
       {/* Card background — white with subtle border */}
       <div
-        className="absolute inset-0 rounded-xl transition-all duration-500 bg-[#f7f8fa] border border-[#E5E7EB] group-hover:shadow-xl group-hover:border-[#047857]/20"
+        className="absolute inset-0 rounded-xl transition-all duration-500 bg-[#f7f8fa] border border-[#E5E7EB] group-hover:shadow-xl group-hover:border-[#2F7549]/20"
       />
 
       {/* Card content */}
@@ -179,7 +179,7 @@ function AdvisorCard({
         </div>
 
         {/* Name */}
-        <h3 className="font-heading font-bold text-[#1C1F2E] text-lg sm:text-xl leading-tight mb-3">
+        <h3 className="font-heading font-bold text-[#16291E] text-lg sm:text-xl leading-tight mb-3">
           {advisor.name}
         </h3>
 

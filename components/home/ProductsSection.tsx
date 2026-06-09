@@ -38,7 +38,7 @@ export default function ProductsSection() {
       }}
       aria-labelledby="products-heading"
     >
-      <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1C1F2E 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
+      <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">
           <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-12">
@@ -47,7 +47,7 @@ export default function ProductsSection() {
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#5A5F72]">
                 Our Products
               </p>
-              <h2 id="products-heading" className="font-heading text-3xl font-bold leading-[1.15] text-[#1C1F2E] sm:text-4xl">
+              <h2 id="products-heading" className="font-heading text-3xl font-bold leading-[1.15] text-[#16291E] sm:text-4xl">
                 The textiles<br className="hidden lg:block" /> we trade
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[#5A5F72]">

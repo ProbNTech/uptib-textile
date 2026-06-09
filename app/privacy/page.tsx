@@ -14,12 +14,12 @@ import { DownloadButton } from "@/components/DownloadButton";
 
 /* ── Retention data ───────────────────────────────────────────────── */
 const retentionData = [
-  { category: "Members", period: "Through the contract period & up to 24 months after this has ended", color: "#047857" },
-  { category: "Prospects", period: "Up to 24 months from last contact", color: "#10B981" },
-  { category: "Statutory Board Members", period: "Whilst serving and up to 6 months after term", color: "#047857" },
-  { category: "Advisory Board Members", period: "Whilst serving and up to 6 months after term", color: "#047857" },
-  { category: "Stakeholders", period: "Whilst serving and up to 6 months after term", color: "#10B981" },
-  { category: "Suppliers", period: "Through the contract period & up to 24 months after this has ended", color: "#047857" },
+  { category: "Members", period: "Through the contract period & up to 24 months after this has ended", color: "#2F7549" },
+  { category: "Prospects", period: "Up to 24 months from last contact", color: "#3E8F5E" },
+  { category: "Statutory Board Members", period: "Whilst serving and up to 6 months after term", color: "#2F7549" },
+  { category: "Advisory Board Members", period: "Whilst serving and up to 6 months after term", color: "#2F7549" },
+  { category: "Stakeholders", period: "Whilst serving and up to 6 months after term", color: "#3E8F5E" },
+  { category: "Suppliers", period: "Through the contract period & up to 24 months after this has ended", color: "#2F7549" },
 ];
 
 /* ── Quick nav sections ───────────────────────────────────────────── */
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
       <div className="content-body">
       {/* ── Introduction + Quick Nav ─────────────────────────────────── */}
       <section id="introduction" className="relative bg-white py-10 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -84,12 +84,12 @@ export default function PrivacyPage() {
                 className="lg:col-span-2"
               >
                 <div className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm">
-                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
                   <div className="flex items-start gap-4 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                    <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                      <Shield className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-heading font-bold text-lg text-[#1C1F2E] pt-2">Our Commitment to Your Privacy</h3>
+                    <h3 className="font-heading font-bold text-lg text-[#16291E] pt-2">Our Commitment to Your Privacy</h3>
                   </div>
                   <div className="h-px bg-[#D8D5CF] mb-5" />
                   <p className="text-base text-[#5A5F72] leading-relaxed mb-5">
@@ -109,8 +109,8 @@ export default function PrivacyPage() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
-                <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-5">Quick Navigation</h3>
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
+                <h3 className="font-heading font-bold text-base text-[#16291E] mb-5">Quick Navigation</h3>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <nav className="space-y-1.5">
                   {navSections.map((s) => (
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
 
       {/* ── How Do We Collect Information ─────────────────────────────── */}
       <section id="collection" className="relative py-10 overflow-hidden bg-white">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -146,12 +146,12 @@ export default function PrivacyPage() {
                 transition={{ duration: 0.4 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-xl p-6 hover:shadow-md hover:border-[#D8D5CF] transition-all duration-300 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#10B981] to-[#10B981]/40 opacity-40" />
+                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#3E8F5E] to-[#3E8F5E]/40 opacity-40" />
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center flex-shrink-0">
-                    <UserCheck className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#3E8F5E]/10 border border-[#3E8F5E]/20 flex items-center justify-center flex-shrink-0">
+                    <UserCheck className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] pt-2">Information You Give Us Directly</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] pt-2">Information You Give Us Directly</h3>
                 </div>
                 <p className="text-base text-[#7A7E8F] leading-relaxed">
                   For example, we may obtain information about you when you decide to become a member, partner or key stakeholder of UPTIB or take part in one of our events, or when you register to receive one of our newsletters. UPTIB collects information directly from individuals or from the parent companies of the individuals. The information could be collected through emails, phone calls, online registration forms, event registration forms and face-to-face meetings. UPTIB collects personal data about individuals when there is a legitimate basis, a contract or when such information is provided on a voluntary basis.
@@ -166,12 +166,12 @@ export default function PrivacyPage() {
                 transition={{ duration: 0.4, delay: 0.06 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-xl p-6 hover:shadow-md hover:border-[#D8D5CF] transition-all duration-300 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#047857] to-[#047857]/40 opacity-40" />
+                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#2F7549] to-[#2F7549]/40 opacity-40" />
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <Users className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <Users className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] pt-2">Third-Party Referrals & Networking</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] pt-2">Third-Party Referrals & Networking</h3>
                 </div>
                 <p className="text-base text-[#7A7E8F] leading-relaxed mb-4">
                   Your information may be shared with us by third parties (i.e. a referral from an existing member or a referral as part of a contract we are delivering) or by one of our Partners. In all cases the person sharing your information should be already known to you and have obtained your permission.
@@ -192,23 +192,23 @@ export default function PrivacyPage() {
                 transition={{ duration: 0.4, delay: 0.12 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-xl p-6 hover:shadow-md hover:border-[#D8D5CF] transition-all duration-300 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#047857] to-[#047857]/40 opacity-40" />
+                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#2F7549] to-[#2F7549]/40 opacity-40" />
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <Eye className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <Eye className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] pt-2">When You Visit Our Website</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] pt-2">When You Visit Our Website</h3>
                 </div>
                 <p className="text-base text-[#7A7E8F] leading-relaxed mb-4">
                   We, like many companies, automatically collect the following information:
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <span className="text-base text-[#5A5F72] leading-relaxed">Technical information, including the type of device you&apos;re using, the IP address, browser and operating system being used to connect your computer to the internet.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <span className="text-base text-[#5A5F72] leading-relaxed">Information about your visit to this website, for example we collect information about pages you visit and how you navigate the website, i.e. length of visits to certain pages, services you viewed and searched for, referral sources (e.g. how you arrived at our website).</span>
                   </li>
                 </ul>
@@ -222,12 +222,12 @@ export default function PrivacyPage() {
                 transition={{ duration: 0.4, delay: 0.18 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-xl p-6 hover:shadow-md hover:border-[#D8D5CF] transition-all duration-300 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#047857] to-[#047857]/40 opacity-40" />
+                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#2F7549] to-[#2F7549]/40 opacity-40" />
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <BarChart3 className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <BarChart3 className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] pt-2">Social Media</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] pt-2">Social Media</h3>
                 </div>
                 <p className="text-base text-[#7A7E8F] leading-relaxed">
                   When you interact with us on social media platforms such as LinkedIn and Twitter we may obtain information about you (for example, when you publicly tag us in an event photo). The information we receive will depend on the privacy preferences you have set on those types of platforms.
@@ -240,7 +240,7 @@ export default function PrivacyPage() {
 
       {/* ── What Type of Information Is Collected ─────────────────────── */}
       <section id="info-type" className="relative bg-white py-10 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -253,12 +253,12 @@ export default function PrivacyPage() {
               transition={{ duration: 0.5 }}
               className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden max-w-4xl shadow-sm"
             >
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
               <div className="flex items-start gap-4 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                  <Database className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                  <Database className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-[#1C1F2E] pt-2">Personal Information We Collect</h3>
+                <h3 className="font-heading font-bold text-lg text-[#16291E] pt-2">Personal Information We Collect</h3>
               </div>
               <div className="h-px bg-[#D8D5CF] mb-5" />
               <p className="text-base text-[#7A7E8F] leading-relaxed mb-3">
@@ -274,7 +274,7 @@ export default function PrivacyPage() {
 
       {/* ── How and Why Is Your Information Used ──────────────────────── */}
       <section id="how-used" className="relative py-10 overflow-hidden bg-white">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -287,7 +287,7 @@ export default function PrivacyPage() {
               transition={{ duration: 0.5 }}
               className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden max-w-4xl shadow-sm"
             >
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
               <ul className="space-y-3">
                 {[
                   "providing you with the services and information you asked for.",
@@ -301,7 +301,7 @@ export default function PrivacyPage() {
                   "sending you communications which you have requested or that may be of interest to you.",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <span className="text-base text-[#5A5F72] leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -313,7 +313,7 @@ export default function PrivacyPage() {
 
       {/* ── How Long Is Your Information Kept For ─────────────────────── */}
       <section id="retention" className="relative py-10 overflow-hidden bg-[#F5F4F2]">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -339,7 +339,7 @@ export default function PrivacyPage() {
                   >
                     <Clock className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-2">{item.category}</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] mb-2">{item.category}</h3>
                   <div className="h-px bg-[#D8D5CF] mb-3" />
                   <p className="text-base text-[#7A7E8F] leading-relaxed">{item.period}</p>
                 </motion.div>
@@ -351,7 +351,7 @@ export default function PrivacyPage() {
 
       {/* ── Who Has Access to Your Information ────────────────────────── */}
       <section id="access" className="relative bg-white py-10 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -364,12 +364,12 @@ export default function PrivacyPage() {
               transition={{ duration: 0.5 }}
               className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden max-w-4xl shadow-sm"
             >
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
               <div className="flex items-start gap-4 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center flex-shrink-0">
-                  <Lock className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-xl bg-[#3E8F5E]/10 border border-[#3E8F5E]/20 flex items-center justify-center flex-shrink-0">
+                  <Lock className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-[#1C1F2E] pt-2">Data Sharing Practices</h3>
+                <h3 className="font-heading font-bold text-lg text-[#16291E] pt-2">Data Sharing Practices</h3>
               </div>
               <div className="h-px bg-[#D8D5CF] mb-5" />
               <ul className="space-y-4">
@@ -380,7 +380,7 @@ export default function PrivacyPage() {
                   "We have secure cloud service providers to manage our customer details and service records.",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#10B981] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <CheckCircle2 className="w-4 h-4 text-[#3E8F5E] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <span className="text-base text-[#5A5F72] leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -392,7 +392,7 @@ export default function PrivacyPage() {
 
       {/* ── Lawful Processing ────────────────────────────────────────── */}
       <section id="lawful" className="relative py-10 overflow-hidden bg-white">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -400,40 +400,40 @@ export default function PrivacyPage() {
 
             <div className="space-y-5 max-w-5xl">
               <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.4 }} className="relative bg-white border border-[#D8D5CF] rounded-xl p-6 hover:shadow-md transition-all duration-300 overflow-hidden shadow-sm">
-                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#047857] to-[#047857]/40 opacity-40" />
+                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#2F7549] to-[#2F7549]/40 opacity-40" />
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] pt-2">Performance of a Contract</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] pt-2">Performance of a Contract</h3>
                 </div>
                 <p className="text-base text-[#7A7E8F] leading-relaxed">Where we are entering into a contract with you or performing our obligations under it, for example when you became a &apos;paying&apos; member of our network.</p>
               </motion.div>
 
               <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.4, delay: 0.06 }} className="relative bg-white border border-[#D8D5CF] rounded-xl p-6 hover:shadow-md transition-all duration-300 overflow-hidden shadow-sm">
-                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#10B981] to-[#10B981]/40 opacity-40" />
+                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#3E8F5E] to-[#3E8F5E]/40 opacity-40" />
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center flex-shrink-0">
-                    <Scale className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#3E8F5E]/10 border border-[#3E8F5E]/20 flex items-center justify-center flex-shrink-0">
+                    <Scale className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] pt-2">Legal Obligation</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] pt-2">Legal Obligation</h3>
                 </div>
                 <p className="text-base text-[#7A7E8F] leading-relaxed">Where necessary, we can comply with a legal or regulatory obligation to which we are subject.</p>
               </motion.div>
 
               <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.4, delay: 0.12 }} className="relative bg-white border border-[#D8D5CF] rounded-xl p-6 hover:shadow-md transition-all duration-300 overflow-hidden shadow-sm">
-                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#047857] to-[#047857]/40 opacity-40" />
+                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#2F7549] to-[#2F7549]/40 opacity-40" />
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <Fingerprint className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <Fingerprint className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] pt-2">Legitimate Interests</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] pt-2">Legitimate Interests</h3>
                 </div>
                 <p className="text-base text-[#7A7E8F] leading-relaxed mb-4">Where it is reasonably necessary to achieve our legitimate interests, i.e. those required for running UPTIB as a B2B strategic networking organization in pursuit of our shared aims and ideals. For example, to:</p>
                 <ul className="space-y-3 mb-5">
                   {["broker connections where there is mutual benefit in doing so","send postal communications which we think will be of interest to you;","conduct research to better understand the priorities of our membership and to represent accurately the UK and Pakistan business community.","contact you to seek your views or comments on emerging political or economic issues.","enhance, modify, personalize, or otherwise improve our services /communications for the benefit of our members, partners and stakeholders; and understand better how people interact with our website.","invite you to event(s) that we may think are relevant to you in your professional capacity."].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-base text-[#5A5F72] leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -444,12 +444,12 @@ export default function PrivacyPage() {
               </motion.div>
 
               <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.4, delay: 0.18 }} className="relative bg-white border border-[#D8D5CF] rounded-xl p-6 hover:shadow-md transition-all duration-300 overflow-hidden shadow-sm">
-                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#047857] to-[#047857]/40 opacity-40" />
+                <div className="absolute top-3 bottom-3 left-0 w-[2px] rounded-r-full bg-gradient-to-b from-[#2F7549] to-[#2F7549]/40 opacity-40" />
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <UserCheck className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <UserCheck className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-base text-[#1C1F2E] pt-2">Specific Consent</h3>
+                  <h3 className="font-heading font-bold text-base text-[#16291E] pt-2">Specific Consent</h3>
                 </div>
                 <p className="text-base text-[#7A7E8F] leading-relaxed">Where you have provided specific consent to us using your personal information in a certain way, such as to send you email, text and/or contact via telephone.</p>
               </motion.div>
@@ -460,7 +460,7 @@ export default function PrivacyPage() {
 
       {/* ── Marketing Communications & Building Profiles ──────────────── */}
       <section id="marketing" className="relative bg-white py-10 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -468,34 +468,34 @@ export default function PrivacyPage() {
 
             <div className="grid lg:grid-cols-2 gap-6 max-w-5xl">
               <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5 }} className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
                 <div className="flex items-start gap-4 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <Bell className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <Bell className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-[#1C1F2E]">Marketing</h3>
+                  <h3 className="font-heading font-bold text-lg text-[#16291E]">Marketing</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <p className="text-base text-[#7A7E8F] leading-relaxed mb-5">We may use your contact details to provide you with information about the vital work we do for the UK and Pakistan business community and additional opportunities to support us or to work together on projects, if we think it may be of interest to you.</p>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="text-base font-bold tracking-[0.1em] uppercase text-[#047857] mb-2">Email</h4>
+                    <h4 className="text-base font-bold tracking-[0.1em] uppercase text-[#2F7549] mb-2">Email</h4>
                     <p className="text-base text-[#7A7E8F] leading-relaxed">You may opt out of our marketing communications at any time by clicking the unsubscribed link at the end of our marketing emails.</p>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold tracking-[0.1em] uppercase text-[#047857] mb-2">Post</h4>
+                    <h4 className="text-base font-bold tracking-[0.1em] uppercase text-[#2F7549] mb-2">Post</h4>
                     <p className="text-base text-[#7A7E8F] leading-relaxed">We may occasionally send you marketing communications by post unless you have told us that you would prefer not to hear from us, under your access rights request (details listed below).</p>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div id="profiles" initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5, delay: 0.1 }} className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
                 <div className="flex items-start gap-4 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center flex-shrink-0">
-                    <BarChart3 className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#3E8F5E]/10 border border-[#3E8F5E]/20 flex items-center justify-center flex-shrink-0">
+                    <BarChart3 className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-[#1C1F2E]">Building Profiles</h3>
+                  <h3 className="font-heading font-bold text-lg text-[#16291E]">Building Profiles</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <p className="text-base text-[#7A7E8F] leading-relaxed mb-4">We may analyze your personal information to create a profile of your interests and preferences so that we can tailor and target our communications in a way that is timely and relevant to you {"\u2013"} an example of this would be where interest in one of our Special Interest Groups (SIGs) has been expressed by you. This allows us to be more focused, efficient, and cost effective with our resources and reduces the risk of someone receiving information they may find inappropriate or irrelevant.</p>
@@ -509,7 +509,7 @@ export default function PrivacyPage() {
 
       {/* ── Your Rights ──────────────────────────────────────────────── */}
       <section id="rights" className="relative py-10 overflow-hidden bg-white">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -517,12 +517,12 @@ export default function PrivacyPage() {
 
             <div className="grid md:grid-cols-2 gap-5 max-w-5xl">
               {[
-                { icon: Eye, title: "Right of Access", color: "#047857", desc: "You have a right to request access to the personal data that we hold about you. You also have the right to request a copy of the information we hold about you, and we will provide you with this unless legal exceptions apply. If you want to access your information, please send a description of the information you want to see and proof of your identity by email: " },
-                { icon: FileText, title: "Right to Correction", color: "#10B981", desc: "We shall update, archive or securely delete information if it goes out of date. You have the right to have inaccurate or incomplete information we hold about you corrected." },
-                { icon: Shield, title: "Right to Restrict Use", color: "#047857", desc: "You have a right to ask us to restrict the processing of some or all your personal information if there is a disagreement about its accuracy or we\u2019re not lawfully allowed to use it." },
-                { icon: AlertTriangle, title: "Right of Erasure", color: "#047857", desc: "You may ask us to delete some or all your personal information and in certain cases, and subject to certain exceptions; we will do so as far as we are required to. In many cases, we will anonymize that information, rather than delete it." },
-                { icon: Database, title: "Right to Data Portability", color: "#10B981", desc: "If we are processing your personal information (1) based on your consent, or in order to enter into or carry out a contract with you, and (2) the processing is being done by automated means, you may ask us to provide it to you or another service provider in a machine-readable format." },
-                { icon: Scale, title: "Right to Object", color: "#047857", desc: "You have the right to object to processing where we are using your personal information (1) based on legitimate interests, (2) for direct marketing or (3) for statistical/research purposes." },
+                { icon: Eye, title: "Right of Access", color: "#2F7549", desc: "You have a right to request access to the personal data that we hold about you. You also have the right to request a copy of the information we hold about you, and we will provide you with this unless legal exceptions apply. If you want to access your information, please send a description of the information you want to see and proof of your identity by email: " },
+                { icon: FileText, title: "Right to Correction", color: "#3E8F5E", desc: "We shall update, archive or securely delete information if it goes out of date. You have the right to have inaccurate or incomplete information we hold about you corrected." },
+                { icon: Shield, title: "Right to Restrict Use", color: "#2F7549", desc: "You have a right to ask us to restrict the processing of some or all your personal information if there is a disagreement about its accuracy or we\u2019re not lawfully allowed to use it." },
+                { icon: AlertTriangle, title: "Right of Erasure", color: "#2F7549", desc: "You may ask us to delete some or all your personal information and in certain cases, and subject to certain exceptions; we will do so as far as we are required to. In many cases, we will anonymize that information, rather than delete it." },
+                { icon: Database, title: "Right to Data Portability", color: "#3E8F5E", desc: "If we are processing your personal information (1) based on your consent, or in order to enter into or carry out a contract with you, and (2) the processing is being done by automated means, you may ask us to provide it to you or another service provider in a machine-readable format." },
+                { icon: Scale, title: "Right to Object", color: "#2F7549", desc: "You have the right to object to processing where we are using your personal information (1) based on legitimate interests, (2) for direct marketing or (3) for statistical/research purposes." },
               ].map((right, i) => {
                 const Icon = right.icon;
                 return (
@@ -531,27 +531,27 @@ export default function PrivacyPage() {
                     <div className="relative w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: `${right.color}10`, border: `1px solid ${right.color}20` }}>
                       <Icon className="relative z-10 w-5 h-5" style={{ color: right.color }} strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-2">{right.title}</h3>
+                    <h3 className="font-heading font-bold text-base text-[#16291E] mb-2">{right.title}</h3>
                     <div className="h-px bg-[#D8D5CF] mb-3" />
                     <p className="text-base text-[#7A7E8F] leading-relaxed">
                       {right.desc}
-                      {right.title === "Right of Access" && <a href="mailto:info@ukpaktrade.org.uk" className="text-[#047857] hover:text-[#6EE7B7] transition-colors">info@ukpaktrade.org.uk</a>}
+                      {right.title === "Right of Access" && <a href="mailto:info@ukpaktrade.org.uk" className="text-[#2F7549] hover:text-[#8FD3AE] transition-colors">info@ukpaktrade.org.uk</a>}
                     </p>
                   </motion.div>
                 );
               })}
             </div>
 
-            <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5, delay: 0.36 }} className="relative bg-gradient-to-br from-[#047857]/10 to-[#047857]/10 border border-[#047857]/20 rounded-xl p-6 mt-8 overflow-hidden max-w-5xl">
+            <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5, delay: 0.36 }} className="relative bg-gradient-to-br from-[#2F7549]/10 to-[#2F7549]/10 border border-[#2F7549]/20 rounded-xl p-6 mt-8 overflow-hidden max-w-5xl">
               <div className="relative">
                 <p className="text-base text-[#5A5F72] leading-relaxed mb-4">
                   If you want to exercise any of the above rights, please email us at{" "}
-                  <a href="mailto:info@ukpaktrade.org.uk" className="text-[#047857] hover:text-[#6EE7B7] transition-colors">info@ukpaktrade.org.uk</a>
+                  <a href="mailto:info@ukpaktrade.org.uk" className="text-[#2F7549] hover:text-[#8FD3AE] transition-colors">info@ukpaktrade.org.uk</a>
                   {" "}and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for further information and/or evidence of identity. We will endeavor to respond fully to all requests within 10 working days of your request, however if we are unable to do so we will contact you with reasons for the delay.
                 </p>
                 <p className="text-base text-[#5A5F72] leading-relaxed">
                   Please note that exceptions apply to a number of these rights, and not all rights will be applicable in all circumstances. For more details we recommend you consult the guidance published by the UK{"\u2019"}s Information Commissioner{"\u2019"}s Office,{" "}
-                  <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-[#047857] hover:text-[#6EE7B7] transition-colors">https://ico.org.uk</a>.
+                  <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-[#2F7549] hover:text-[#8FD3AE] transition-colors">https://ico.org.uk</a>.
                 </p>
               </div>
             </motion.div>
@@ -561,7 +561,7 @@ export default function PrivacyPage() {
 
       {/* ── Keeping Your Information Safe & Security ──────────────────── */}
       <section id="security" className="relative py-10 overflow-hidden bg-[#F5F4F2]">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -569,12 +569,12 @@ export default function PrivacyPage() {
 
             <div className="grid lg:grid-cols-2 gap-6 max-w-5xl">
               <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5 }} className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
                 <div className="flex items-start gap-4 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#3E8F5E]/10 border border-[#3E8F5E]/20 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-[#1C1F2E]">Technical & Organisational Controls</h3>
+                  <h3 className="font-heading font-bold text-lg text-[#16291E]">Technical & Organisational Controls</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <p className="text-base text-[#7A7E8F] leading-relaxed mb-4">When you give us personal information, we take steps to ensure that appropriate technical and organizational controls are in place to protect it.</p>
@@ -582,12 +582,12 @@ export default function PrivacyPage() {
               </motion.div>
 
               <motion.div initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5, delay: 0.1 }} className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
                 <div className="flex items-start gap-4 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <Lock className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <Lock className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-[#1C1F2E]">Security</h3>
+                  <h3 className="font-heading font-bold text-lg text-[#16291E]">Security</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <p className="text-base text-[#7A7E8F] leading-relaxed mb-4">UPTIB uses reasonable measures to safeguard personal information. We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to only those employees, contractors or agents who have a legitimate business need to have access to that data. The employees, contractors or agents will process your personal data in accordance with our instructions. They will be subject to a duty of confidentiality and due care with respect to handling personal data. We have put in place procedures to deal with any suspected data security breach and will notify you and any applicable regulator of a suspected breach where we are legally required to do so.</p>
@@ -602,17 +602,17 @@ export default function PrivacyPage() {
 
       {/* ── Contact CTA — Gradient dark section ──────────────────────── */}
       <section id="contact" className="relative overflow-hidden py-12" style={{ background: "linear-gradient(135deg, #0B0F1A 0%, #131942 50%, #0B0F1A 100%)" }}>
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/30 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.05]" style={{ background: "radial-gradient(circle, #047857, transparent 50%)" }} />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/30 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.05]" style={{ background: "radial-gradient(circle, #2F7549, transparent 50%)" }} />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
             <div>
-              <p className="text-base font-bold tracking-[0.2em] uppercase text-[#047857] mb-4">Get in Touch</p>
+              <p className="text-base font-bold tracking-[0.2em] uppercase text-[#2F7549] mb-4">Get in Touch</p>
               <h2 className="font-heading font-extrabold text-white text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6">Contact Information</h2>
               <p className="text-white/40 text-base sm:text-lg leading-relaxed mb-8">
                 For any questions about this Privacy Policy or our treatment of your Personal Information, please contact{" "}
-                <a href="mailto:info@ukpaktrade.org.uk" className="text-[#047857] hover:text-[#6EE7B7] transition-colors">info@ukpaktrade.org.uk</a>
+                <a href="mailto:info@ukpaktrade.org.uk" className="text-[#2F7549] hover:text-[#8FD3AE] transition-colors">info@ukpaktrade.org.uk</a>
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button href="/contact" variant="primary" size="lg">Contact Us</Button>

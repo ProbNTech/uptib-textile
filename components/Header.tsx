@@ -33,8 +33,8 @@ type NavLink = {
 
 type NavItem = NavGroup | NavLink;
 
-const PRODUCT_GREEN = "#047857"; // green-700
-const SERVICE_GREEN = "#065F46"; // green-800
+const PRODUCT_GREEN = "#2F7549"; // green-700 — primary lead
+const SERVICE_GREEN = "#245C3A"; // green-800 — deeper green for distinction
 
 const navItems: NavItem[] = [
   /* 1 — Product */
@@ -160,13 +160,12 @@ export function Header() {
               className="flex items-center flex-shrink-0 group"
               aria-label="UPTIB Textile — Home"
             >
-              {/* TODO: replace with final logo (colour variant) */}
               <Image
-                src="/logo.svg"
-                alt="UPTIB — UK–Pakistan Trades & Investment Board logo"
-                width={72}
-                height={72}
-                className="h-[48px] sm:h-[56px] lg:h-[68px] w-auto object-contain"
+                src="/image/main-logo.png"
+                alt="Pakistan Textile Partners logo"
+                width={150}
+                height={158}
+                className="h-[52px] sm:h-[60px] lg:h-[72px] w-auto object-contain"
                 priority
               />
             </Link>
@@ -179,7 +178,7 @@ export function Header() {
               <Link
                 href="/"
                 onMouseEnter={handleLeave}
-                className="relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] text-[#064E3B] hover:text-[#064E3B] transition-colors duration-150"
+                className="relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] text-[#15402A] hover:text-[#15402A] transition-colors duration-150"
               >
                 HOME
               </Link>
@@ -191,7 +190,7 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       onMouseEnter={handleLeave}
-                      className="relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] text-[#064E3B] hover:text-[#064E3B] transition-colors duration-150 whitespace-nowrap"
+                      className="relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] text-[#15402A] hover:text-[#15402A] transition-colors duration-150 whitespace-nowrap"
                     >
                       {(item.displayLabel ?? item.label).toUpperCase()}
                     </Link>
@@ -211,8 +210,8 @@ export function Header() {
                       font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em]
                       transition-colors duration-150 cursor-default select-none whitespace-nowrap
                       ${isActive
-                        ? "text-[#064E3B]"
-                        : "text-[#064E3B] hover:text-[#064E3B]"}
+                        ? "text-[#15402A]"
+                        : "text-[#15402A] hover:text-[#15402A]"}
                     `}
                   >
                     {(item.displayLabel ?? item.label).toUpperCase()}
@@ -227,7 +226,7 @@ export function Header() {
                     </svg>
                     <span
                       className={`
-                        absolute bottom-0 left-2 right-2 h-[2px] bg-[#064E3B]
+                        absolute bottom-0 left-2 right-2 h-[2px] bg-[#15402A]
                         transition-opacity duration-150
                         ${isActive ? "opacity-100" : "opacity-0"}
                       `}
@@ -242,7 +241,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onMouseEnter={handleLeave}
-                className="px-6 py-2.5 font-heading font-bold text-base uppercase tracking-[0.12em] bg-[#047857] text-white hover:bg-[#065F46] transition-colors duration-200 whitespace-nowrap rounded"
+                className="px-6 py-2.5 font-heading font-bold text-base uppercase tracking-[0.12em] bg-[#2F7549] text-white hover:bg-[#245C3A] transition-colors duration-200 whitespace-nowrap rounded"
               >
                 Get a Quote
               </Link>
@@ -255,9 +254,9 @@ export function Header() {
               aria-label="Open menu"
               aria-expanded={isMobileOpen}
             >
-              <span className="block w-6 h-[1.5px] bg-[#064E3B]" />
-              <span className="block w-6 h-[1.5px] bg-[#064E3B]" />
-              <span className="block w-4 h-[1.5px] self-start bg-[#064E3B]" />
+              <span className="block w-6 h-[1.5px] bg-[#15402A]" />
+              <span className="block w-6 h-[1.5px] bg-[#15402A]" />
+              <span className="block w-4 h-[1.5px] self-start bg-[#15402A]" />
             </button>
           </div>
         </div>
@@ -420,15 +419,12 @@ export function Header() {
                   onClick={() => setIsMobileOpen(false)}
                 >
                   <Image
-                    src="/logo.svg"
-                    alt="UPTIB Logo"
-                    width={100}
-                    height={100}
-                    className="h-[28px] w-auto object-contain"
+                    src="/image/main-logo.png"
+                    alt="Pakistan Textile Partners logo"
+                    width={120}
+                    height={126}
+                    className="h-[44px] w-auto object-contain"
                   />
-                  <span className="font-heading font-bold text-base uppercase tracking-[0.18em] text-[#064E3B]">
-                    UPTIB <span className="text-[#047857]">TEXTILE</span>
-                  </span>
                 </Link>
                 <button
                   onClick={() => setIsMobileOpen(false)}
@@ -546,7 +542,7 @@ export function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileOpen(false)}
-                  className="block text-center py-3 px-4 bg-[#047857] text-white font-heading font-bold text-mobile-cta uppercase hover:bg-[#065F46] transition-colors duration-200 rounded"
+                  className="block text-center py-3 px-4 bg-[#2F7549] text-white font-heading font-bold text-mobile-cta uppercase hover:bg-[#245C3A] transition-colors duration-200 rounded"
                 >
                   Get a Quote
                 </Link>

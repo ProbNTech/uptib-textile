@@ -110,7 +110,7 @@ export function AwardsHeroBg() {
                     cy={y + 20}
                     rx="18"
                     ry="10"
-                    fill="#10B981"
+                    fill="#3E8F5E"
                     opacity="0.15"
                     transform={`rotate(${-30 + i * 8} ${80 - curve} ${y + 20})`}
                   />
@@ -119,7 +119,7 @@ export function AwardsHeroBg() {
                     cy={y + 20}
                     rx="14"
                     ry="7"
-                    fill="#10B981"
+                    fill="#3E8F5E"
                     opacity="0.08"
                     transform={`rotate(${-25 + i * 8} ${80 - curve + 5} ${y + 20})`}
                   />
@@ -130,7 +130,7 @@ export function AwardsHeroBg() {
             <path
               d="M80 20 Q50 180 80 340"
               fill="none"
-              stroke="#10B981"
+              stroke="#3E8F5E"
               strokeWidth="2"
               opacity="0.12"
             />
@@ -150,7 +150,7 @@ export function AwardsHeroBg() {
                     cy={y + 20}
                     rx="18"
                     ry="10"
-                    fill="#10B981"
+                    fill="#3E8F5E"
                     opacity="0.15"
                     transform={`rotate(${30 - i * 8} ${20 + curve} ${y + 20})`}
                   />
@@ -159,7 +159,7 @@ export function AwardsHeroBg() {
                     cy={y + 20}
                     rx="14"
                     ry="7"
-                    fill="#10B981"
+                    fill="#3E8F5E"
                     opacity="0.08"
                     transform={`rotate(${25 - i * 8} ${20 + curve - 5} ${y + 20})`}
                   />
@@ -169,7 +169,7 @@ export function AwardsHeroBg() {
             <path
               d="M20 20 Q50 180 20 340"
               fill="none"
-              stroke="#10B981"
+              stroke="#3E8F5E"
               strokeWidth="2"
               opacity="0.12"
             />
@@ -180,16 +180,16 @@ export function AwardsHeroBg() {
         {[
           { x: 200, y: 80, size: 14, delay: 0, color: "#EAB308" },
           { x: 1300, y: 100, size: 12, delay: 0.5, color: "#EAB308" },
-          { x: 400, y: 500, size: 10, delay: 1, color: "#047857" },
+          { x: 400, y: 500, size: 10, delay: 1, color: "#2F7549" },
           { x: 1100, y: 480, size: 12, delay: 1.5, color: "#EAB308" },
-          { x: 680, y: 60, size: 8, delay: 0.8, color: "#047857" },
-          { x: 300, y: 300, size: 10, delay: 2, color: "#047857" },
-          { x: 1250, y: 340, size: 8, delay: 1.2, color: "#10B981" },
+          { x: 680, y: 60, size: 8, delay: 0.8, color: "#2F7549" },
+          { x: 300, y: 300, size: 10, delay: 2, color: "#2F7549" },
+          { x: 1250, y: 340, size: 8, delay: 1.2, color: "#3E8F5E" },
           { x: 550, y: 520, size: 10, delay: 0.3, color: "#EAB308" },
-          { x: 150, y: 450, size: 6, delay: 1.8, color: "#047857" },
+          { x: 150, y: 450, size: 6, delay: 1.8, color: "#2F7549" },
           { x: 1350, y: 200, size: 8, delay: 0.6, color: "#EAB308" },
-          { x: 750, y: 540, size: 7, delay: 2.2, color: "#047857" },
-          { x: 480, y: 120, size: 6, delay: 1.6, color: "#10B981" },
+          { x: 750, y: 540, size: 7, delay: 2.2, color: "#2F7549" },
+          { x: 480, y: 120, size: 6, delay: 1.6, color: "#3E8F5E" },
         ].map((star, i) => {
           const s = star.size;
           const path = `M${star.x} ${star.y - s} L${star.x + s * 0.38} ${star.y - s * 0.3} L${star.x + s} ${star.y - s * 0.2} L${star.x + s * 0.5} ${star.y + s * 0.2} L${star.x + s * 0.62} ${star.y + s} L${star.x} ${star.y + s * 0.55} L${star.x - s * 0.62} ${star.y + s} L${star.x - s * 0.5} ${star.y + s * 0.2} L${star.x - s} ${star.y - s * 0.2} L${star.x - s * 0.38} ${star.y - s * 0.3} Z`;
@@ -214,13 +214,13 @@ export function AwardsHeroBg() {
           <circle cx="200" cy="180" r="35" fill="none" stroke="#EAB308" strokeWidth="1.5" opacity="0.08" />
           <circle cx="200" cy="180" r="28" fill="none" stroke="#EAB308" strokeWidth="1" opacity="0.06" />
           {/* Ribbon */}
-          <path d="M180 148 L175 120 M220 148 L225 120" stroke="#047857" strokeWidth="1.5" opacity="0.08" />
+          <path d="M180 148 L175 120 M220 148 L225 120" stroke="#2F7549" strokeWidth="1.5" opacity="0.08" />
         </motion.g>
 
         <motion.g {...float(2, 5.5)}>
           <circle cx="1280" cy="420" r="30" fill="none" stroke="#EAB308" strokeWidth="1.5" opacity="0.08" />
           <circle cx="1280" cy="420" r="24" fill="none" stroke="#EAB308" strokeWidth="1" opacity="0.06" />
-          <path d="M1262 394 L1258 370 M1298 394 L1302 370" stroke="#047857" strokeWidth="1.5" opacity="0.08" />
+          <path d="M1262 394 L1258 370 M1298 394 L1302 370" stroke="#2F7549" strokeWidth="1.5" opacity="0.08" />
         </motion.g>
 
         {/* Gradient definitions */}

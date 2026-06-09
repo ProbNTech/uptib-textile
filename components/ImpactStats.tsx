@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import CountUp from "react-countup";
 import { LiquidCard, CardContent } from "@/components/ui/liquid-glass-card";
@@ -41,53 +41,26 @@ const stats = [
   },
 ];
 
-/* ─── Half-circle gauge ─── */
-function HalfCircleGauge({ percent, color, animate }: { percent: number; color: string; animate: boolean }) {
-  const strokeRef = useRef<SVGCircleElement>(null);
-  const gradIdRef = useRef(`gauge-${Math.random().toString(36).slice(2, 6)}`);
-  const gradId = gradIdRef.current;
-  const radius = 45;
-  const circumference = 2 * Math.PI * radius;
-  const halfCirc = circumference / 2;
-  const strokeDasharray = `${halfCirc} ${halfCirc}`;
-  const targetOffset = -Math.min(percent / 100, 1) * halfCirc;
-
-  useEffect(() => {
-    if (!animate || !strokeRef.current) return;
-    strokeRef.current.animate(
-      [
-        { strokeDashoffset: "0", offset: 0 },
-        { strokeDashoffset: "0", offset: 0.3 },
-        { strokeDashoffset: targetOffset.toString() },
-      ],
-      {
-        duration: 1400,
-        easing: "cubic-bezier(0.65, 0, 0.35, 1)",
-        fill: "forwards",
-      },
-    );
-  }, [animate, targetOffset]);
+/* ─── Horizontal progress bar ─── */
+function HorizontalBar({ percent, color, animate }: { percent: number; color: string; animate: boolean }) {
+  const target = Math.min(Math.max(percent, 0), 100);
 
   return (
-    <svg className="block mx-auto w-auto max-w-full h-32" viewBox="0 0 100 50" aria-hidden="true">
-      <defs>
-        <linearGradient id={gradId} x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor={`${color}60`} />
-          <stop offset="50%" stopColor={color} />
-          <stop offset="100%" stopColor={`${color}90`} />
-        </linearGradient>
-      </defs>
-      <g fill="none" strokeWidth="10" transform="translate(50, 50.5)">
-        <circle className="stroke-white/10" r={radius} strokeDasharray={strokeDasharray} />
-        <circle
-          ref={strokeRef}
-          stroke={`url(#${gradId})`}
-          strokeDasharray={strokeDasharray}
-          strokeLinecap="round"
-          r={radius}
-        />
-      </g>
-    </svg>
+    <div
+      className="relative h-2.5 w-full overflow-hidden rounded-full bg-white/10"
+      role="progressbar"
+      aria-valuenow={target}
+      aria-valuemin={0}
+      aria-valuemax={100}
+    >
+      <motion.div
+        className="absolute inset-y-0 left-0 rounded-full"
+        style={{ background: `linear-gradient(90deg, ${color}80, ${color})`, boxShadow: `0 0 12px ${color}66` }}
+        initial={{ width: 0 }}
+        animate={{ width: animate ? `${target}%` : 0 }}
+        transition={{ duration: 1.4, ease: [0.65, 0, 0.35, 1] }}
+      />
+    </div>
   );
 }
 
@@ -124,20 +97,18 @@ function StatScoreCard({ stat, index }: { stat: typeof stats[0]; index: number }
               </span>
             </div>
 
-            {/* Half-circle gauge + value */}
-            <div className="relative mb-4">
-              <HalfCircleGauge percent={stat.percent} color={stat.color} animate={isInView} />
-              <div className="absolute bottom-0 w-full text-center">
-                <div className="text-4xl font-bold h-12 overflow-hidden text-white">
-                  {shouldReduceMotion ? (
-                    `${stat.value}${stat.suffix}`
-                  ) : isInView ? (
-                    <CountUp end={stat.value} duration={2.2} suffix={stat.suffix} separator="," />
-                  ) : (
-                    `${stat.value}${stat.suffix}`
-                  )}
-                </div>
+            {/* Value + horizontal bar */}
+            <div className="mb-5">
+              <div className="text-5xl font-bold mb-4 text-white leading-none" style={{ color: stat.color }}>
+                {shouldReduceMotion ? (
+                  `${stat.value}${stat.suffix}`
+                ) : isInView ? (
+                  <CountUp end={stat.value} duration={2.2} suffix={stat.suffix} separator="," />
+                ) : (
+                  `${stat.value}${stat.suffix}`
+                )}
               </div>
+              <HorizontalBar percent={stat.percent} color={stat.color} animate={isInView} />
             </div>
 
             {/* Description */}

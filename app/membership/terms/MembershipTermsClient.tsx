@@ -30,10 +30,10 @@ import { DownloadButton } from "@/components/DownloadButton";
 
 /* ââ Membership Overview Stats âââââââââââââââââââââââââââââââââââ */
 const overviewStats = [
-  { value: "Open", label: "To All Eligible Applicants", color: "#047857" },
-  { value: "Annual", label: "Membership Term", color: "#10B981" },
-  { value: "UK Law", label: "Governed by England & Wales", color: "#047857" },
-  { value: "GDPR", label: "Data Protection Compliant", color: "#047857" },
+  { value: "Open", label: "To All Eligible Applicants", color: "#2F7549" },
+  { value: "Annual", label: "Membership Term", color: "#3E8F5E" },
+  { value: "UK Law", label: "Governed by England & Wales", color: "#2F7549" },
+  { value: "GDPR", label: "Data Protection Compliant", color: "#2F7549" },
 ];
 
 /* ââ Core Terms (Sections 1â5 from PDF) ââââââââââââââââââââââââââ */
@@ -42,7 +42,7 @@ const coreTerms = [
     number: "01",
     title: "Membership",
     icon: Users,
-    color: "#047857",
+    color: "#2F7549",
     items: [
       "Membership is available to individuals or entities who meet UPTIB's membership criteria",
       "UPTIB offers different membership tiers, each with associated benefits",
@@ -55,7 +55,7 @@ const coreTerms = [
     number: "02",
     title: "Member Responsibilities",
     icon: ClipboardList,
-    color: "#047857",
+    color: "#2F7549",
     items: [
       "Provide accurate and complete information during the application process",
       "Comply with UPTIB's policies, codes of conduct, and applicable UK law",
@@ -68,7 +68,7 @@ const coreTerms = [
     number: "03",
     title: "UPTIB Responsibilities",
     icon: Shield,
-    color: "#047857",
+    color: "#2F7549",
     items: [
       "Provide the services and benefits associated with the Member's chosen membership tier",
       "Notify Members of any changes to services or policies",
@@ -79,7 +79,7 @@ const coreTerms = [
     number: "04",
     title: "Termination",
     icon: XCircle,
-    color: "#10B981",
+    color: "#3E8F5E",
     items: [
       "UPTIB may terminate membership if the Member breaches these Terms, misuses services, or violates applicable law",
       "Members may terminate their membership by giving written notice to UPTIB",
@@ -90,15 +90,15 @@ const coreTerms = [
 
 /* ââ Code of Conduct Principles ââââââââââââââââââââââââââââââââââ */
 const conductPrinciples = [
-  { title: "Integrity", description: "Consistently demonstrate honesty and ethical behaviour in all actions and decisions.", icon: Shield, color: "#047857" },
-  { title: "Respect & Equality", description: "Treat all members with dignity, equality, and cultural sensitivity, without discrimination.", icon: Heart, color: "#10B981" },
-  { title: "Competence", description: "Accurately represent skills and experience; continuously strive to maintain professional competence.", icon: Target, color: "#047857" },
-  { title: "Loyalty", description: "Act with unwavering loyalty towards the Forum and maintain confidentiality of sensitive information.", icon: Lock, color: "#047857" },
-  { title: "Impartiality", description: "Provide objective advice; disclose any potential conflicts of interest promptly and transparently.", icon: Scale, color: "#10B981" },
-  { title: "Ethical Conduct", description: "Do not pursue personal gain at the expense of the Forum; actively enhance its reputation.", icon: Award, color: "#047857" },
-  { title: "Non-discrimination", description: "Refrain from engaging in discriminatory practices in any professional activities.", icon: Ban, color: "#047857" },
-  { title: "Continuous Development", description: "Commit to lifelong learning and actively seek opportunities to develop skills and knowledge.", icon: RefreshCw, color: "#10B981" },
-  { title: "Professionalism", description: "Adhere to recognised professional standards; offer services diligently within areas of expertise.", icon: BadgeCheck, color: "#047857" },
+  { title: "Integrity", description: "Consistently demonstrate honesty and ethical behaviour in all actions and decisions.", icon: Shield, color: "#2F7549" },
+  { title: "Respect & Equality", description: "Treat all members with dignity, equality, and cultural sensitivity, without discrimination.", icon: Heart, color: "#3E8F5E" },
+  { title: "Competence", description: "Accurately represent skills and experience; continuously strive to maintain professional competence.", icon: Target, color: "#2F7549" },
+  { title: "Loyalty", description: "Act with unwavering loyalty towards the Forum and maintain confidentiality of sensitive information.", icon: Lock, color: "#2F7549" },
+  { title: "Impartiality", description: "Provide objective advice; disclose any potential conflicts of interest promptly and transparently.", icon: Scale, color: "#3E8F5E" },
+  { title: "Ethical Conduct", description: "Do not pursue personal gain at the expense of the Forum; actively enhance its reputation.", icon: Award, color: "#2F7549" },
+  { title: "Non-discrimination", description: "Refrain from engaging in discriminatory practices in any professional activities.", icon: Ban, color: "#2F7549" },
+  { title: "Continuous Development", description: "Commit to lifelong learning and actively seek opportunities to develop skills and knowledge.", icon: RefreshCw, color: "#3E8F5E" },
+  { title: "Professionalism", description: "Adhere to recognised professional standards; offer services diligently within areas of expertise.", icon: BadgeCheck, color: "#2F7549" },
 ];
 
 /* ââ Disciplinary Procedure Steps ââââââââââââââââââââââââââââââââ */
@@ -119,37 +119,37 @@ const legalProtections = [
     title: "Governing Law",
     description: "These Terms shall be governed by and construed in accordance with the laws of England and Wales.",
     icon: Scale,
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     title: "Limitation of Liability",
     description: "UPTIB shall not be liable for any indirect, incidental, or consequential losses arising from membership, to the maximum extent permitted by law.",
     icon: Shield,
-    color: "#10B981",
+    color: "#3E8F5E",
   },
   {
     title: "Intellectual Property",
     description: "All intellectual property related to the UPTIB website, branding, content, and services are owned by UPTIB or its licensors.",
     icon: Lock,
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     title: "Data Protection",
     description: "Personal data is processed in accordance with GDPR. Members have the right to access, update, or delete their personal data at any time.",
     icon: Eye,
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     title: "Dispute Resolution",
     description: "Disputes shall be resolved through the UPTIB Arbitration Framework or in the courts located within England and Wales.",
     icon: Globe2,
-    color: "#10B981",
+    color: "#3E8F5E",
   },
   {
     title: "Force Majeure",
     description: "Neither party shall be held responsible for any delay or failure to perform due to events beyond their reasonable control.",
     icon: AlertTriangle,
-    color: "#047857",
+    color: "#2F7549",
   },
 ];
 
@@ -250,10 +250,10 @@ export default function MembershipTermsClient() {
             <div className="lg:col-span-2">
               <div className="rounded-2xl border border-[#D8D5CF] bg-white shadow-sm p-8 sticky top-8">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#04785710", border: "1px solid #04785720" }}>
-                    <FileText className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#2F754910", border: "1px solid #2F754920" }}>
+                    <FileText className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-[#1C1F2E] text-lg">Key Points</h3>
+                  <h3 className="font-heading font-bold text-[#16291E] text-lg">Key Points</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <ul className="space-y-3">
@@ -265,7 +265,7 @@ export default function MembershipTermsClient() {
                     "Code of Conduct is binding on all members",
                   ].map((item, i) => (
                     <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#10B981] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-4 h-4 text-[#3E8F5E] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-[#5A5F72] text-sm leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -330,7 +330,7 @@ export default function MembershipTermsClient() {
                       <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: `${p.color}10`, border: `1px solid ${p.color}20` }}>
                         <Icon className="w-6 h-6" style={{ color: p.color }} strokeWidth={1.5} />
                       </div>
-                      <h3 className="font-heading font-bold text-[#1C1F2E] text-base mb-2">{p.title}</h3>
+                      <h3 className="font-heading font-bold text-[#16291E] text-base mb-2">{p.title}</h3>
                       <p className="text-[#5A5F72] text-sm leading-relaxed">{p.description}</p>
                     </div>
                   </div>
@@ -356,10 +356,10 @@ export default function MembershipTermsClient() {
                 {disciplinarySteps.map((item, i) => (
                   <div key={item.step} className="flex items-center justify-between bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 px-4 py-3">
                     <div className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-[#10B981]/10 flex items-center justify-center text-xs font-bold text-[#10B981]">{i + 1}</span>
+                      <span className="w-6 h-6 rounded-full bg-[#3E8F5E]/10 flex items-center justify-center text-xs font-bold text-[#3E8F5E]">{i + 1}</span>
                       <span className="text-white text-sm font-medium">{item.step}</span>
                     </div>
-                    <span className="text-xs font-bold text-[#10B981] bg-[#10B981]/8 px-2.5 py-1 rounded-full whitespace-nowrap">{item.outcome}</span>
+                    <span className="text-xs font-bold text-[#3E8F5E] bg-[#3E8F5E]/8 px-2.5 py-1 rounded-full whitespace-nowrap">{item.outcome}</span>
                   </div>
                 ))}
               </div>
@@ -367,7 +367,7 @@ export default function MembershipTermsClient() {
 
             <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#04785710", border: "1px solid #04785720" }}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#2F754910", border: "1px solid #2F754920" }}>
                   <AlertTriangle className="w-5 h-5 text-[#F9A8B4]" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading font-bold text-white text-lg">Disciplinary Actions</h3>
@@ -381,8 +381,8 @@ export default function MembershipTermsClient() {
                   { action: "Expulsion", desc: "Permanent removal from membership. Forum may inform members confidentially at its discretion." },
                 ].map((item, i) => (
                   <li key={item.action} className="flex items-start gap-3">
-                    <div className="w-4 h-4 rounded-full mt-0.5 flex-shrink-0 flex items-center justify-center" style={{ background: i < 2 ? "#EAB30820" : "#04785720" }}>
-                      <div className="w-1.5 h-1.5 rounded-full" style={{ background: i < 2 ? "#EAB308" : "#047857" }} />
+                    <div className="w-4 h-4 rounded-full mt-0.5 flex-shrink-0 flex items-center justify-center" style={{ background: i < 2 ? "#EAB30820" : "#2F754920" }}>
+                      <div className="w-1.5 h-1.5 rounded-full" style={{ background: i < 2 ? "#EAB308" : "#2F7549" }} />
                     </div>
                     <div>
                       <span className="font-semibold text-white text-sm">{item.action}</span>
@@ -437,7 +437,7 @@ export default function MembershipTermsClient() {
 
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="rounded-2xl border border-[#D8D5CF] bg-white shadow-sm p-7">
-              <h3 className="font-heading font-bold text-[#1C1F2E] text-lg mb-5">Membership Rules</h3>
+              <h3 className="font-heading font-bold text-[#16291E] text-lg mb-5">Membership Rules</h3>
               <div className="h-px bg-[#D8D5CF] mb-5" />
               <ul className="space-y-3">
                 {[
@@ -448,9 +448,9 @@ export default function MembershipTermsClient() {
                   { label: "Survival", desc: "Provisions related to confidentiality, intellectual property, and indemnity survive termination of membership." },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-2.5">
-                    <BadgeCheck className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <BadgeCheck className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <div>
-                      <span className="font-semibold text-[#1C1F2E] text-sm">{item.label}</span>
+                      <span className="font-semibold text-[#16291E] text-sm">{item.label}</span>
                       <p className="text-[#5A5F72] text-xs mt-0.5">{item.desc}</p>
                     </div>
                   </li>
@@ -459,7 +459,7 @@ export default function MembershipTermsClient() {
             </div>
 
             <div className="rounded-2xl border border-[#D8D5CF] bg-white shadow-sm p-7">
-              <h3 className="font-heading font-bold text-[#1C1F2E] text-lg mb-5">Website & Communication</h3>
+              <h3 className="font-heading font-bold text-[#16291E] text-lg mb-5">Website & Communication</h3>
               <div className="h-px bg-[#D8D5CF] mb-5" />
               <ul className="space-y-3">
                 {[
@@ -470,9 +470,9 @@ export default function MembershipTermsClient() {
                   { label: "Amendments", desc: "UPTIB may update these Terms from time to time. Members will be notified of material changes; continued use constitutes acceptance." },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-2.5">
-                    <BadgeCheck className="w-4 h-4 text-[#10B981] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <BadgeCheck className="w-4 h-4 text-[#3E8F5E] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <div>
-                      <span className="font-semibold text-[#1C1F2E] text-sm">{item.label}</span>
+                      <span className="font-semibold text-[#16291E] text-sm">{item.label}</span>
                       <p className="text-[#5A5F72] text-xs mt-0.5">{item.desc}</p>
                     </div>
                   </li>
@@ -509,9 +509,9 @@ export default function MembershipTermsClient() {
             </p>
             <p className="text-[#5A5F72] text-base leading-relaxed mb-8">
               These Terms and Conditions, along with our{" "}
-              <Link href="/privacy" className="text-[#047857] hover:underline">Privacy Policy</Link>,{" "}
-              <Link href="/code-of-conduct" className="text-[#047857] hover:underline">Code of Conduct</Link>, and{" "}
-              <Link href="/arbitration/framework" className="text-[#047857] hover:underline">Arbitration Framework</Link>,
+              <Link href="/privacy" className="text-[#2F7549] hover:underline">Privacy Policy</Link>,{" "}
+              <Link href="/code-of-conduct" className="text-[#2F7549] hover:underline">Code of Conduct</Link>, and{" "}
+              <Link href="/arbitration/framework" className="text-[#2F7549] hover:underline">Arbitration Framework</Link>,
               constitute the entire agreement between you and UPTIB regarding your membership.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -529,12 +529,12 @@ export default function MembershipTermsClient() {
         <AnimatedSection>
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-[#5A5F72] text-sm leading-relaxed">
-              <span className="font-semibold text-[#1C1F2E]">UK–Pakistan Trades & Investment Board (UPTIB)</span>
+              <span className="font-semibold text-[#16291E]">UK–Pakistan Trades & Investment Board (UPTIB)</span>
               <br />
               134-136 Westbourne Terrace, London, W2 6QB, United Kingdom
               <br />
               For any questions about these Terms, please contact{" "}
-              <a href="mailto:info@ukpaktrade.org.uk" className="text-[#047857] hover:underline">info@ukpaktrade.org.uk</a>
+              <a href="mailto:info@ukpaktrade.org.uk" className="text-[#2F7549] hover:underline">info@ukpaktrade.org.uk</a>
             </p>
           </div>
         </AnimatedSection>

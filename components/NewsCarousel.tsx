@@ -55,7 +55,7 @@ export default function NewsCarousel({ articles, light = false, cta }: NewsCarou
             type="button"
             aria-label="Previous slide"
             onClick={() => swiperRef.current?.slidePrev()}
-            className="group w-11 h-11 flex items-center justify-center rounded-full bg-[#10B981] shadow-md hover:bg-[#16a34a] hover:scale-105 transition-[transform,background-color] duration-300 ease-out"
+            className="group w-11 h-11 flex items-center justify-center rounded-full bg-[#3E8F5E] shadow-md hover:bg-[#16a34a] hover:scale-105 transition-[transform,background-color] duration-300 ease-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ export default function NewsCarousel({ articles, light = false, cta }: NewsCarou
             type="button"
             aria-label="Next slide"
             onClick={() => swiperRef.current?.slideNext()}
-            className="group w-11 h-11 flex items-center justify-center rounded-full bg-[#10B981] shadow-md hover:bg-[#16a34a] hover:scale-105 transition-[transform,background-color] duration-300 ease-out"
+            className="group w-11 h-11 flex items-center justify-center rounded-full bg-[#3E8F5E] shadow-md hover:bg-[#16a34a] hover:scale-105 transition-[transform,background-color] duration-300 ease-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

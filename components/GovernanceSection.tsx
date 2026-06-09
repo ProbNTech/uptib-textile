@@ -6,7 +6,7 @@ import { Section } from "@/components/Section";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
-const brandColors = ["#047857", "#047857", "#10B981"];
+const brandColors = ["#2F7549", "#2F7549", "#3E8F5E"];
 
 export function GovernanceSection({
   id,
@@ -43,7 +43,7 @@ export function GovernanceSection({
       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-bold uppercase tracking-widest mb-3" style={{ background: `${color}12`, color }}>
         {title}
       </div>
-      <h2 className="font-heading font-extrabold text-3xl text-[#1C1F2E] mb-2 leading-tight">{title}</h2>
+      <h2 className="font-heading font-extrabold text-3xl text-[#16291E] mb-2 leading-tight">{title}</h2>
       <div className="h-1 w-14 rounded-full mb-5" style={{ background: color }} />
       <p className="text-[#3D4152] leading-relaxed mb-7">{desc}</p>
       <div className="rounded-lg p-6 relative overflow-hidden" style={{ background: `${color}06`, border: `1px solid ${color}20` }}>

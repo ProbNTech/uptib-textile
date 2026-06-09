@@ -82,6 +82,155 @@ export const articles: Article[] = [
     ],
   },
   {
+    slug: "uk-dcts-garment-rules-2026",
+    title: "UK Eases Garment Rules for Pakistani Exporters from January 2026",
+    excerpt:
+      "From 1 January 2026 the UK's Developing Countries Trading Scheme has dropped the \"double transformation\" rule for clothing — a real, recurring advantage for Pakistani garment exporters selling into Britain.",
+    date: "2026-01-20",
+    displayDate: "20 January 2026",
+    author: "UPTIB Textile",
+    category: "Trade & Policy",
+    readTime: "6 min read",
+    image: "/image/apparel.jpg",
+    published: true,
+    body: [
+      {
+        heading: "What changed on 1 January 2026",
+        paragraphs: [
+          "The UK's Developing Countries Trading Scheme (DCTS) — which replaced the UK's Generalised Scheme of Preferences on 19 June 2023 — has just become more generous for clothing. From 1 January 2026 the UK liberalised the product-specific rules of origin for apparel (HS chapters 61 and 62), removing the \"double transformation\" requirement that previously obliged two significant manufacturing processes to take place inside the exporting country.",
+          "Under the new rules, Enhanced Preference countries — Pakistan among them — now receive the same treatment as the top Comprehensive Preference tier, and can source between 47.5% and 100% of a garment's inputs from another qualifying country for further manufacture. In practice, more Pakistani-made clothing qualifies for duty-free entry into the UK, with less restrictive paperwork.",
+        ],
+      },
+      {
+        heading: "Why it matters for Pakistan",
+        paragraphs: [
+          "Pakistan is one of the largest beneficiaries of the DCTS, accounting for roughly 11.8% of all UK imports made under the scheme. It sits in both the Enhanced Preferences tier and the 18-country Asia Regional Cumulation Group, which lets exporters combine inputs from across the region and still qualify.",
+          "The reform also cuts the rules-of-origin restrictiveness for textiles — by one published measure, from 5.92 under the old GSP to around 3.02 under the DCTS, close to a 50% reduction. For UK buyers, that preferential, duty-free access is a recurring cost saving that lands directly in the delivered price.",
+        ],
+      },
+      {
+        heading: "The UK–Pakistan trade backdrop",
+        paragraphs: [
+          "The change lands as the trading relationship deepens. Total UK–Pakistan trade reached roughly £5.5 billion by November 2025, and the two governments held their first formal UK–Pakistan Trade Dialogue in 2025 — agreeing to fast-track a trade mechanism and work through non-tariff barriers. Textiles and apparel remain the backbone of that relationship.",
+        ],
+      },
+      {
+        heading: "What buyers and exporters should do",
+        paragraphs: [
+          "Preferential access still depends on getting the documentation and origin right. Before relying on the new rules, check the essentials:",
+        ],
+        bullets: [
+          "Proof of origin — that the supplier can issue valid documentation under the UK's registered exporter (REX) system.",
+          "HS code eligibility — that the specific garment's tariff code is covered.",
+          "Regional cumulation — make use of the Asia group rules where inputs are sourced across multiple countries.",
+          "Compliance standing — that the supplier upholds the labour and environmental standards the scheme is built around.",
+        ],
+      },
+      {
+        heading: "Getting started",
+        paragraphs: [
+          "The simplest way to capture the benefit is to source through an accountable partner who confirms eligibility and handles the origin paperwork end-to-end. UPTIB Textile sources garments from a vetted network of Pakistani manufacturers and delivers landed, on-spec and duty-optimised into the UK.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "pakistan-textile-exports-fy2025-record",
+    title: "Pakistan Textile Exports Hit a Record $17.88 Billion in FY2025",
+    excerpt:
+      "Pakistan closed FY2025 with a record US$17.88 billion in textile and apparel exports — up 7.39% — and value-added categories are still leading the way into FY2026.",
+    date: "2026-05-20",
+    displayDate: "20 May 2026",
+    author: "UPTIB Textile",
+    category: "Market Insight",
+    readTime: "6 min read",
+    image: "/image/private-label.jpg",
+    published: true,
+    body: [
+      {
+        heading: "A record year",
+        paragraphs: [
+          "In FY2025 (July 2024–June 2025), Pakistan's textile and apparel exports rose 7.39% to US$17.88 billion, up from US$16.65 billion the year before, according to the Pakistan Bureau of Statistics. Textiles accounted for nearly 55% of the country's total exports — underlining how central the sector is to the wider economy. June 2025 alone brought in US$1.52 billion, 7.59% higher than June 2024.",
+        ],
+      },
+      {
+        heading: "Value-added led the growth",
+        paragraphs: [
+          "The gains were concentrated in finished, higher-margin products rather than raw yarn or grey fabric — exactly the categories international buyers source for private-label and contract production:",
+        ],
+        bullets: [
+          "Knitwear — up 13.68% to US$5.01 billion.",
+          "Readymade garments — up 15.85% to US$4.13 billion.",
+          "Bedwear — up 11.1% to US$3.11 billion.",
+        ],
+      },
+      {
+        heading: "FY2026 so far",
+        paragraphs: [
+          "Growth has cooled but stayed positive into the current year. Textile exports reached about US$10.9 billion in the first seven months of FY2026 (July 2025–January 2026), up 1.25% year-on-year, and roughly US$15.07 billion across the first ten months to April 2026, up about 1.48%. Analysts describe the FY2026 outlook as cautious amid stiff global competition — but value-added segments are proving the most resilient.",
+        ],
+      },
+      {
+        heading: "What it means for buyers",
+        paragraphs: [
+          "Pakistan remains one of the world's top-ten textile exporters, with deep, vertically integrated capacity from cotton through to finished product. For buyers, steady growth in value-added categories signals a mature, dependable supplier base for bedding, knitwear and garments — best accessed through an accountable partner who manages specifications, samples, quality and delivery. UPTIB Textile sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "pakistan-india-bangladesh-sourcing-comparison",
+    title: "Pakistan vs India vs Bangladesh: Choosing a Textile Sourcing Origin",
+    excerpt:
+      "Three of the world's biggest textile origins, three very different strengths. A clear-eyed comparison to help buyers route each product category to the right country.",
+    date: "2026-04-15",
+    displayDate: "15 April 2026",
+    author: "UPTIB Textile",
+    category: "Buyer's Guide",
+    readTime: "8 min read",
+    image: "/image/who-we-are.png",
+    published: true,
+    body: [
+      {
+        heading: "Three origins, three strengths",
+        paragraphs: [
+          "Choosing a sourcing origin is one of the most consequential decisions a buyer makes. Pakistan, India and Bangladesh each offer distinct strengths — and meaningful trade-offs. Picking well starts with being honest about what each country is genuinely best at:",
+        ],
+        bullets: [
+          "Pakistan — cotton-rich vertical integration; strongest in home textiles, denim, knitwear and workwear. Best for cotton-intensive categories and EU buyers using GSP+.",
+          "India — vast product diversity; strong in fashion fabrics, handlooms, embroidery and apparel design. Best for diversity, craft and sustainability credentials.",
+          "Bangladesh — a volume-led fast-fashion powerhouse; dominant in basic knit and woven garments at high scale. Best for mass volume of fast-fashion basics.",
+        ],
+      },
+      {
+        heading: "How they compare",
+        paragraphs: [
+          "Look past the headline labour rate and the picture gets more nuanced. A few of the comparisons that matter most to buyers:",
+        ],
+        bullets: [
+          "Cotton & integration — Pakistan grows its own cotton (a top-three global producer) and runs fibre-to-garment integration; Bangladesh imports most of its fabric.",
+          "Trade access — Pakistan holds GSP+ duty preferences into the EU and Enhanced Preferences under the UK's DCTS; Bangladesh has graduated from LDC status, reducing some EU access.",
+          "Minimum orders — Pakistan typically runs 500–5,000 pcs, India is the most flexible at 200–3,000 pcs, and Bangladesh skews higher at 3,000–10,000 pcs.",
+          "Lead times — Pakistani woven production runs roughly 45–75 days, competitive with both neighbours.",
+          "Home textiles — Pakistan is the world's leading exporter of bed and bath textiles by volume, where Bangladesh has minimal presence.",
+        ],
+      },
+      {
+        heading: "When to choose Pakistan",
+        paragraphs: [
+          "Pakistan is the clear pick when you need cotton-intensive categories — denim, bed linen, towels and knitwear — when you sell into the EU and want the GSP+ advantage, or when you want strong vertical integration with competitive pricing at mid-to-large volumes. Its top-tier export factories rival any origin on quality infrastructure, with in-house labs, AQL inspection as standard, and compliance to major Western retailer codes.",
+        ],
+      },
+      {
+        heading: "A portfolio approach often wins",
+        paragraphs: [
+          "Many experienced global buyers do not choose a single origin at all — they build a portfolio, routing cotton-heavy categories to Pakistan, craft and design-led product to India, and high-volume basics to Bangladesh. Understanding each origin's genuine strengths is what lets buyers extract maximum value from each.",
+          "Wherever Pakistan fits in your strategy, the route in is the same: send a clear brief, approve samples in writing, and let an accountable partner manage quality and delivery. UPTIB Textile sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "global-textile-export-trends-2026",
     title: "Global Textile Export Trends 2026",
     excerpt:

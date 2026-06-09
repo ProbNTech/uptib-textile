@@ -50,7 +50,7 @@ export function RatingStars({
         })}
       </div>
       {showValue && (
-        <span className={`font-heading font-bold text-[#1C1F2E] ${textSize}`}>
+        <span className={`font-heading font-bold text-[#16291E] ${textSize}`}>
           {clamped.toFixed(1)}
         </span>
       )}

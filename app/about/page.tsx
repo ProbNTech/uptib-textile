@@ -11,47 +11,47 @@ import Image from "next/image";
 import Link from "next/link";
 import { Lightbulb, Target, CheckCircle2, Award, Users, ArrowRight, Shield, UserCheck, Globe2, Handshake, Layers } from "lucide-react";
 
-const brandColors = ["#047857", "#047857", "#10B981"];
+const brandColors = ["#2F7549", "#2F7549", "#3E8F5E"];
 
 const whyUptech = [
   {
     icon: Shield,
     title: "Trusted Gateway",
     description: "UPTIB acts as a reliable bridge connecting Pakistani technology providers with UK and European companies.",
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     icon: UserCheck,
     title: "Verified Technology Partners",
     description: "We work with carefully selected technology companies, researchers, and professionals to ensure high-quality collaboration.",
-    color: "#10B981",
+    color: "#3E8F5E",
   },
   {
     icon: Globe2,
     title: "Market Access Expertise",
     description: "UPTIB provides guidance on European market entry, regulatory environments, and technology sector opportunities.",
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     icon: Handshake,
     title: "Cross-Border Collaboration",
     description: "We facilitate partnerships between technology companies, research institutions, universities, innovation hubs, and investors.",
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     icon: Layers,
     title: "End-to-End Support",
     description: "From market research to partnership development and project coordination, UPTIB supports organisations throughout the collaboration process.",
-    color: "#10B981",
+    color: "#3E8F5E",
   },
 ];
 
 const exploreItems = [
-  { icon: Lightbulb, title: "Vision", desc: "A connected innovation ecosystem bridging UK and Pakistan's technology sectors.", href: "/about/vision", color: "#047857" },
-  { icon: Target, title: "Mission", desc: "Our strategic mission to transform Pakistan into a thriving global tech hub.", href: "/about/mission", color: "#10B981" },
-  { icon: CheckCircle2, title: "Objectives & Values", desc: "Core values, key activities, and broader impact goals driving our work.", href: "/about/objectives", color: "#047857" },
-  { icon: Award, title: "Leadership", desc: "Meet our President Khalil Choudhary â the leader of UPTIB.", href: "/about/founder", color: "#047857" },
-  { icon: Users, title: "Management Team", desc: "Board of directors, advisory forum, and executive leadership team.", href: "/about/management-team", color: "#10B981" },
+  { icon: Lightbulb, title: "Vision", desc: "A connected innovation ecosystem bridging UK and Pakistan's technology sectors.", href: "/about/vision", color: "#2F7549" },
+  { icon: Target, title: "Mission", desc: "Our strategic mission to transform Pakistan into a thriving global tech hub.", href: "/about/mission", color: "#3E8F5E" },
+  { icon: CheckCircle2, title: "Objectives & Values", desc: "Core values, key activities, and broader impact goals driving our work.", href: "/about/objectives", color: "#2F7549" },
+  { icon: Award, title: "Leadership", desc: "Meet our President Khalil Choudhary â the leader of UPTIB.", href: "/about/founder", color: "#2F7549" },
+  { icon: Users, title: "Management Team", desc: "Board of directors, advisory forum, and executive leadership team.", href: "/about/management-team", color: "#3E8F5E" },
 ];
 
 export default function AboutPage() {
@@ -95,7 +95,7 @@ export default function AboutPage() {
             </p>
           </AnimatedSection>
           <AnimatedSection>
-            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border-2 border-[#047857]/15">
+            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border-2 border-[#2F7549]/15">
               <Image
                 src="/image/about/about-section-home.jpg"
                 alt="About the Forum"
@@ -123,7 +123,7 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style={{ background: `${item.color}10`, border: `1px solid ${item.color}25` }}>
                     <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-2 group-hover:text-[#047857] transition-colors duration-200">{item.title}</h3>
+                  <h3 className="font-heading font-bold text-lg text-[#16291E] mb-2 group-hover:text-[#2F7549] transition-colors duration-200">{item.title}</h3>
                   <div className="h-px bg-[#D8D5CF] mb-3" />
                   <p className="text-base text-[#5A5F72] leading-relaxed">{item.description}</p>
                 </div>
@@ -155,7 +155,7 @@ export default function AboutPage() {
                       </div>
                       <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200" style={{ color: item.color }} />
                     </div>
-                    <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-2">{item.title}</h3>
+                    <h3 className="font-heading font-bold text-lg text-[#16291E] mb-2">{item.title}</h3>
                     <p className="text-[#3D4152] text-base leading-relaxed">{item.desc}</p>
                   </div>
                 </Link>

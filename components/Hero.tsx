@@ -102,7 +102,7 @@ export function Hero() {
               transition={{ duration: prefersReducedMotion ? 0 : 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
               <p
-                className="text-lg sm:text-xl md:text-2xl font-extrabold uppercase tracking-[0.18em] text-[#34D399] mb-4 sm:mb-5"
+                className="text-lg sm:text-xl md:text-2xl font-extrabold uppercase tracking-[0.18em] text-[#6FC79A] mb-4 sm:mb-5"
                 style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}
               >
                 {slide.label}
@@ -171,14 +171,14 @@ export function Hero() {
             onClick={() => setCurrentIndex(index)}
             aria-label={`Switch to slide ${index + 1}`}
             className={`h-2 rounded-full transition-all duration-500 ${
-              index === currentIndex ? "bg-[#10B981] w-8" : "bg-white/40 w-2 hover:bg-white/60"
+              index === currentIndex ? "bg-[#3E8F5E] w-8" : "bg-white/40 w-2 hover:bg-white/60"
             }`}
           />
         ))}
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30 bg-gradient-to-r from-[#10B981] via-[#047857] to-[#064E3B]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30 bg-gradient-to-r from-[#3E8F5E] via-[#2F7549] to-[#15402A]" />
     </section>
   );
 }

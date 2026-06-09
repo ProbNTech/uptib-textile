@@ -16,9 +16,9 @@ const categoryIcons: Record<string, typeof HelpCircle> = {
 };
 
 const categoryMeta: Record<string, { color: string; desc: string }> = {
-  General: { color: "#047857", desc: "Learn about UPTIB, our mission, and how to get involved." },
-  Membership: { color: "#10B981", desc: "Tiers, benefits, application process, and cancellation policy." },
-  "Programs & Services": { color: "#047857", desc: "Training, mentorship, incubation, and business support." },
+  General: { color: "#2F7549", desc: "Learn about UPTIB, our mission, and how to get involved." },
+  Membership: { color: "#3E8F5E", desc: "Tiers, benefits, application process, and cancellation policy." },
+  "Programs & Services": { color: "#2F7549", desc: "Training, mentorship, incubation, and business support." },
   "Funding & Grants": { color: "#6366F1", desc: "Investment stages, eligibility criteria, and application timelines." },
   "Events & Networking": { color: "#EAB308", desc: "Conferences, sponsorship, speaking opportunities, and networking." },
 };
@@ -123,9 +123,9 @@ export default function FAQsPage() {
           <AnimatedSection>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { value: String(faqCategories.length), label: "Categories", color: "#047857" },
-                { value: String(totalQuestions), label: "Questions Answered", color: "#10B981" },
-                { value: "24/7", label: "Online Access", color: "#047857" },
+                { value: String(faqCategories.length), label: "Categories", color: "#2F7549" },
+                { value: String(totalQuestions), label: "Questions Answered", color: "#3E8F5E" },
+                { value: "24/7", label: "Online Access", color: "#2F7549" },
                 { value: "5\u201310", label: "Days Response Time", color: "#6366F1" },
               ].map((stat, index) => (
                 <motion.div
@@ -157,12 +157,12 @@ export default function FAQsPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search questions..."
-                className="w-full pl-10 pr-9 py-2.5 text-sm rounded-lg border border-[#E5E7EB] bg-[#f7f8fa] focus:bg-white focus:border-[#047857] focus:ring-2 focus:ring-[#047857]/20 outline-none transition-all duration-200"
+                className="w-full pl-10 pr-9 py-2.5 text-sm rounded-lg border border-[#E5E7EB] bg-[#f7f8fa] focus:bg-white focus:border-[#2F7549] focus:ring-2 focus:ring-[#2F7549]/20 outline-none transition-all duration-200"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9CA3AF] hover:text-[#1C1F2E] transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9CA3AF] hover:text-[#16291E] transition-colors"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -175,8 +175,8 @@ export default function FAQsPage() {
                 onClick={() => setActiveCategory("All")}
                 className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-full border transition-all duration-200 ${
                   activeCategory === "All"
-                    ? "bg-[#1C1F2E] text-white border-[#1C1F2E]"
-                    : "bg-white text-[#5A5F72] border-[#E5E7EB] hover:border-[#1C1F2E]/30"
+                    ? "bg-[#16291E] text-white border-[#16291E]"
+                    : "bg-white text-[#5A5F72] border-[#E5E7EB] hover:border-[#16291E]/30"
                 }`}
               >
                 All ({totalQuestions})
@@ -226,7 +226,7 @@ export default function FAQsPage() {
                           <Icon className="w-6 h-6" style={{ color: meta.color }} strokeWidth={1.8} />
                         </div>
                         <div>
-                          <h2 className="font-heading font-extrabold text-[#1C1F2E] text-2xl sm:text-3xl leading-tight">
+                          <h2 className="font-heading font-extrabold text-[#16291E] text-2xl sm:text-3xl leading-tight">
                             {cat.category}
                           </h2>
                           <p className="text-sm text-[#5A5F72] mt-0.5">{meta.desc}</p>
@@ -254,11 +254,11 @@ export default function FAQsPage() {
           ) : (
             <div className="text-center py-20">
               <Search className="w-12 h-12 text-[#D1D5DB] mx-auto mb-4" />
-              <p className="text-lg font-semibold text-[#1C1F2E] mb-2">No results found</p>
+              <p className="text-lg font-semibold text-[#16291E] mb-2">No results found</p>
               <p className="text-sm text-[#5A5F72] mb-6">Try a different search term or browse all categories.</p>
               <button
                 onClick={() => { setSearchQuery(""); setActiveCategory("All"); }}
-                className="px-5 py-2.5 text-sm font-bold text-[#047857] bg-[#047857]/10 rounded-lg hover:bg-[#047857]/20 transition-colors"
+                className="px-5 py-2.5 text-sm font-bold text-[#2F7549] bg-[#2F7549]/10 rounded-lg hover:bg-[#2F7549]/20 transition-colors"
               >
                 Clear filters
               </button>
@@ -347,7 +347,7 @@ function FAQAccordion({
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className={`font-heading font-bold text-base sm:text-[17px] flex-1 leading-snug transition-colors duration-200 ${isOpen ? "text-[#1C1F2E]" : "text-[#3D4152] group-hover:text-[#1C1F2E]"}`}>
+                <span className={`font-heading font-bold text-base sm:text-[17px] flex-1 leading-snug transition-colors duration-200 ${isOpen ? "text-[#16291E]" : "text-[#3D4152] group-hover:text-[#16291E]"}`}>
                   <HighlightText text={faq.question} query={searchQuery} />
                 </span>
                 <div

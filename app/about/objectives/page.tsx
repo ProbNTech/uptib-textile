@@ -9,13 +9,13 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import { Button } from "@/components/Button";
 import { CheckCircle2, Globe2, Handshake, TrendingUp, Zap, Cpu, Building2, Monitor, FlaskConical } from "lucide-react";
 
-const brandColors = ["#047857", "#047857", "#10B981"];
+const brandColors = ["#2F7549", "#2F7549", "#3E8F5E"];
 
 const broaderImpact = [
-  { icon: Globe2, title: "Global Market Access", desc: "Expand global market access and exports for UK and Pakistani tech companies.", color: "#047857" },
-  { icon: Handshake, title: "Strategic Partnerships", desc: "Build strategic partnerships across industry, government, and academia.", color: "#047857" },
-  { icon: TrendingUp, title: "Investment & Innovation", desc: "Unlock investment and innovation opportunities for growing businesses.", color: "#10B981" },
-  { icon: Zap, title: "Technology Transfer", desc: "Promote technology transfer between the United Kingdom and Pakistan.", color: "#047857" },
+  { icon: Globe2, title: "Global Market Access", desc: "Expand global market access and exports for UK and Pakistani tech companies.", color: "#2F7549" },
+  { icon: Handshake, title: "Strategic Partnerships", desc: "Build strategic partnerships across industry, government, and academia.", color: "#2F7549" },
+  { icon: TrendingUp, title: "Investment & Innovation", desc: "Unlock investment and innovation opportunities for growing businesses.", color: "#3E8F5E" },
+  { icon: Zap, title: "Technology Transfer", desc: "Promote technology transfer between the United Kingdom and Pakistan.", color: "#2F7549" },
 ];
 
 const additionalObjectives = [
@@ -49,8 +49,8 @@ export default function ObjectivesPage() {
           <SectionHeader label="Our foundation" title="Objectives &amp; Values" color="blue" subtitle="We provide a platform to all Pakistani IT professionals residing in the United Kingdom working across various levels and industry sectors." />
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Values */}
-            <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#047857]">
-              <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-5">Our Values</h3>
+            <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#2F7549]">
+              <h3 className="font-heading font-bold text-lg text-[#16291E] mb-5">Our Values</h3>
               <p className="text-[#3D4152] text-base leading-relaxed mb-5">UPTIB members share and practice a set of unique values:</p>
               <ul className="space-y-3">
                 {[
@@ -62,7 +62,7 @@ export default function ObjectivesPage() {
                   "Honesty and Integrity",
                 ].map((val) => (
                   <li key={val} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <span className="text-[#3D4152] text-base leading-relaxed">{val}</span>
                   </li>
                 ))}
@@ -70,8 +70,8 @@ export default function ObjectivesPage() {
             </div>
 
             {/* Activities */}
-            <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#10B981]">
-              <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-5">Key Activities</h3>
+            <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#3E8F5E]">
+              <h3 className="font-heading font-bold text-lg text-[#16291E] mb-5">Key Activities</h3>
               <ul className="space-y-3">
                 {[
                   "Career Counseling & Leadership Development",
@@ -89,7 +89,7 @@ export default function ObjectivesPage() {
                   "Conferences & Seminars on latest tech trends",
                 ].map((act) => (
                   <li key={act} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#10B981] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <CheckCircle2 className="w-4 h-4 text-[#3E8F5E] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <span className="text-[#3D4152] text-base leading-relaxed">{act}</span>
                   </li>
                 ))}
@@ -105,36 +105,36 @@ export default function ObjectivesPage() {
           <SectionHeader label="Strategic Objectives" title="Key Focus Areas" color="green" subtitle="Detailed objectives driving UPTIB's mission to empower Pakistani IT professionals and foster innovation worldwide." />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#04785715", border: "1px solid #04785730" }}>
-                <TrendingUp className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#2F754915", border: "1px solid #2F754930" }}>
+                <TrendingUp className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
               </div>
               <h3 className="font-heading font-bold text-white text-base mb-2">Professional Development</h3>
               <p className="text-white/70 text-base leading-relaxed">Enable network members to participate in Tech development, management, maintenance, and support. Create income opportunities through revenue sharing, royalties, and the Innovative Collective Startup Model.</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#04785715", border: "1px solid #04785730" }}>
-                <Cpu className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#2F754915", border: "1px solid #2F754930" }}>
+                <Cpu className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
               </div>
               <h3 className="font-heading font-bold text-white text-base mb-2">Collective Startups</h3>
               <p className="text-white/70 text-base leading-relaxed">Develop AI-driven Tech platforms, systems, and tools for organizations, sector-specific collectives, and governments. Ensure access to AI Tech and support services across all economic sectors.</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#10B98115", border: "1px solid #10B98130" }}>
-                <Building2 className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#3E8F5E15", border: "1px solid #3E8F5E30" }}>
+                <Building2 className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
               </div>
               <h3 className="font-heading font-bold text-white text-base mb-2">IT/AI Pakistani Services Companies</h3>
               <p className="text-white/70 text-base leading-relaxed">Establish Pakistani professional-owned IT/AI services companies in every country. Provide stable jobs and income opportunities for IT professionals and Tech service providers.</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#04785715", border: "1px solid #04785730" }}>
-                <Monitor className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#2F754915", border: "1px solid #2F754930" }}>
+                <Monitor className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
               </div>
               <h3 className="font-heading font-bold text-white text-base mb-2">Local Community Support</h3>
               <p className="text-white/70 text-base leading-relaxed">Develop Tech Centers with co-working spaces. Facilitate IT support services to local communities through UPTIB.</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#04785715", border: "1px solid #04785730" }}>
-                <FlaskConical className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#2F754915", border: "1px solid #2F754930" }}>
+                <FlaskConical className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
               </div>
               <h3 className="font-heading font-bold text-white text-base mb-2">STEM Careers Promotion</h3>
               <p className="text-white/70 text-base leading-relaxed">Promote careers in Science, Technology, Engineering and Mathematics to inspire the next generation of tech leaders.</p>
@@ -155,7 +155,7 @@ export default function ObjectivesPage() {
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: `${item.color}10`, border: `1px solid ${item.color}25` }}>
                     <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-[#1C1F2E] text-base mb-2">{item.title}</h3>
+                  <h3 className="font-heading font-bold text-[#16291E] text-base mb-2">{item.title}</h3>
                   <p className="text-[#3D4152] text-base leading-relaxed">{item.desc}</p>
                 </div>
               );

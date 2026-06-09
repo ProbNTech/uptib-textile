@@ -31,7 +31,7 @@ const PakistanTopCompaniesShowcase = dynamic(() => import("@/components/Pakistan
   loading: () => <div className="py-20 bg-white" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="h-48 bg-[#f7f8fa] rounded-xl animate-pulse" /></div></div>,
 });
 const PartnerSolutionsSection = dynamic(() => import("@/components/PartnerSolutionsSection"), {
-  loading: () => <div className="py-20 bg-gradient-to-b from-[#ECFDF5] via-[#D1FAE5] to-[#ECFDF5]" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: 3 }).map((_, i) => <div key={i} className="h-96 bg-white rounded-2xl animate-pulse" />)}</div></div></div>,
+  loading: () => <div className="py-20 bg-gradient-to-b from-[#EEF6F0] via-[#D7EADD] to-[#EEF6F0]" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: 3 }).map((_, i) => <div key={i} className="h-96 bg-white rounded-2xl animate-pulse" />)}</div></div></div>,
 });
 import ExporterFaq from "@/components/home/ExporterFaq";
 import ProductsSection from "@/components/home/ProductsSection";
@@ -56,10 +56,10 @@ const sponsorCarouselLogos = sponsorLogos.map((logo, i) => ({
 
 /* ─── Our Services — exporter-facing grid (Pakistani exporters → global markets) ─── */
 const pakistanServicesData = [
-  { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers — professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing", color: "#10B981" },
-  { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/warehousing", color: "#10B981" },
-  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/membership", color: "#10B981" },
-  { id: 8, title: "Global market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#10B981" },
+  { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers — professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing", color: "#3E8F5E" },
+  { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/warehousing", color: "#3E8F5E" },
+  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/membership", color: "#3E8F5E" },
+  { id: 8, title: "Global market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#3E8F5E" },
 ];
 
 export default function Home() {
@@ -78,12 +78,12 @@ export default function Home() {
         }}
         aria-labelledby="about-heading"
       >
-        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1C1F2E 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
+        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div>
-                <SectionLabel label="Who we are" title="Pakistan's textiles, connected to the world — from a platform headquartered in London." color="#047857" />
+                <SectionLabel label="Who we are" title="Pakistan's textiles, connected to the world — from a platform headquartered in London." color="#2F7549" />
                 <div className="content-body">
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-5">
                     UPTIB is the UK–Pakistan Trades & Investment Board — a London-based platform, with a Lahore office, that helps Pakistani textile manufacturers reach global markets and runs the services that take them there: marketing, e-commerce, warehousing and global market access.
@@ -98,12 +98,12 @@ export default function Home() {
                 <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(4,120,87,0.15)]">
                   <Image src="/image/who-we-are.png" alt="Pakistani textile manufacturing and global export — UPTIB Textile" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/60">
-                    <p className="font-heading font-extrabold text-[#047857] text-lg leading-none">~$17.9bn</p>
+                    <p className="font-heading font-extrabold text-[#2F7549] text-lg leading-none">~$17.9bn</p>
                     <p className="text-[#5A5F72] text-xs mt-0.5">Pakistan textile exports, FY2025</p>
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-28 h-28 rounded-xl bg-[#047857]/20 z-0" aria-hidden="true" />
-                <div className="absolute -top-4 -right-4 w-36 h-36 rounded-full bg-[#10B981]/20 z-0" aria-hidden="true" />
+                <div className="absolute -bottom-4 -left-4 w-28 h-28 rounded-xl bg-[#2F7549]/20 z-0" aria-hidden="true" />
+                <div className="absolute -top-4 -right-4 w-36 h-36 rounded-full bg-[#3E8F5E]/20 z-0" aria-hidden="true" />
               </div>
             </div>
           </AnimatedSection>
@@ -132,7 +132,7 @@ export default function Home() {
               label="Our Services"
               title="Grow your textile exports, worldwide"
               body="Four services that help Pakistani textile manufacturers reach buyers across the world — marketing, e-commerce and warehousing, membership, and global market access."
-              color="#047857"
+              color="#2F7549"
               align="center"
             />
 
@@ -143,7 +143,7 @@ export default function Home() {
                 eyebrow="Services"
                 audience="Pakistani exporters"
                 context="Reaching global markets — marketing, e-commerce & warehousing, membership, and worldwide market access."
-                accentColor="#10B981"
+                accentColor="#3E8F5E"
               />
             </div>
           </AnimatedSection>
@@ -155,7 +155,7 @@ export default function Home() {
         className="relative z-[1] py-20 lg:py-28 overflow-hidden"
         style={{
           background:
-            "radial-gradient(1100px circle at 0% 0%, rgba(4,120,87,0.22), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(16,185,129,0.15), transparent 50%), radial-gradient(700px circle at 50% 50%, rgba(5,150,105,0.08), transparent 70%), #064E3B",
+            "radial-gradient(1100px circle at 0% 0%, rgba(4,120,87,0.22), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(16,185,129,0.15), transparent 50%), radial-gradient(700px circle at 50% 50%, rgba(5,150,105,0.08), transparent 70%), #15402A",
         }}
         aria-labelledby="more-heading"
       >
@@ -165,10 +165,10 @@ export default function Home() {
             <SectionLabel label="Discover More" title="More from UPTIB" body="The products we trade, the markets we reach, membership, and the latest insights." color="#86efac" align="center" light />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { href: "/products", icon: ProductsIcon, color: "#047857", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles — the four categories we trade." },
-                { href: "/global-textile-market", icon: MentorshipIcon, color: "#10B981", title: "Global Textile Market", desc: "The size of the global textile opportunity, and Pakistan's place in it — with the key figures." },
-                { href: "/membership", icon: MeetingSpaceIcon, color: "#059669", title: "Membership", desc: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers." },
-                { href: "/news", icon: StructureIcon, color: "#065F46", title: "News & Insights", desc: "Export guides and market insight for Pakistani textile exporters reaching global buyers." },
+                { href: "/products", icon: ProductsIcon, color: "#2F7549", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles — the four categories we trade." },
+                { href: "/global-textile-market", icon: MentorshipIcon, color: "#3E8F5E", title: "Global Textile Market", desc: "The size of the global textile opportunity, and Pakistan's place in it — with the key figures." },
+                { href: "/membership", icon: MeetingSpaceIcon, color: "#3C8F5E", title: "Membership", desc: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers." },
+                { href: "/news", icon: StructureIcon, color: "#245C3A", title: "News & Insights", desc: "Export guides and market insight for Pakistani textile exporters reaching global buyers." },
               ].map((card, index) => {
                 const CardIcon = card.icon;
                 return (
@@ -260,14 +260,14 @@ export default function Home() {
         className="relative z-[1] py-20 lg:py-24 overflow-hidden"
         style={{
           background:
-            "radial-gradient(1000px circle at 100% 0%, rgba(16,185,129,0.20), transparent 50%), radial-gradient(900px circle at 0% 100%, rgba(16,185,129,0.13), transparent 50%), #064E3B",
+            "radial-gradient(1000px circle at 100% 0%, rgba(16,185,129,0.20), transparent 50%), radial-gradient(900px circle at 0% 100%, rgba(16,185,129,0.13), transparent 50%), #15402A",
         }}
         aria-labelledby="impact-heading"
       >
         <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame UPTIB's work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#6EE7B7" align="center" light />
+            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame UPTIB's work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#8FD3AE" align="center" light />
             <ImpactStats />
           </AnimatedSection>
         </div>
@@ -284,16 +284,16 @@ export default function Home() {
       >
         <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Market Intelligence" title="The global textile market — and Pakistan's place in it" color="#047857" />
+            <SectionLabel label="Market Intelligence" title="The global textile market — and Pakistan's place in it" color="#2F7549" />
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-2">
                 <div className="grid grid-cols-2 gap-6">
                   {[
-                    { value: 359, label: "US apparel market — the world's largest (2024)", color: "#047857", prefix: "$", suffix: "B" },
-                    { value: 4.3, decimals: 1, label: "Pakistan's textile exports to the US (2025)", color: "#10B981", prefix: "$", suffix: "B+" },
-                    { value: 63.6, decimals: 1, label: "UK textile & apparel market (2025)", color: "#065F46", prefix: "$", suffix: "B" },
-                    { value: 62.7, decimals: 1, label: "European sportswear market (2025)", color: "#065F46", prefix: "$", suffix: "B" },
+                    { value: 359, label: "US apparel market — the world's largest (2024)", color: "#2F7549", prefix: "$", suffix: "B" },
+                    { value: 4.3, decimals: 1, label: "Pakistan's textile exports to the US (2025)", color: "#3E8F5E", prefix: "$", suffix: "B+" },
+                    { value: 63.6, decimals: 1, label: "UK textile & apparel market (2025)", color: "#245C3A", prefix: "$", suffix: "B" },
+                    { value: 62.7, decimals: 1, label: "European sportswear market (2025)", color: "#245C3A", prefix: "$", suffix: "B" },
                   ].map((stat, index) => (
                     <motion.div
                       key={stat.label}
@@ -330,7 +330,7 @@ export default function Home() {
             </div>
 
             <AnimatedSection animation="fade-up">
-              <div className="mt-10 relative overflow-hidden rounded-xl bg-gradient-to-r from-[#064E3B] to-[#047857]">
+              <div className="mt-10 relative overflow-hidden rounded-xl bg-gradient-to-r from-[#15402A] to-[#2F7549]">
                 <div className="absolute inset-0 opacity-[0.05]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 0%, transparent 50%), radial-gradient(circle at 80% 50%, white 0%, transparent 50%)" }} />
                 <div className="relative px-8 sm:px-10 py-8">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
@@ -338,7 +338,7 @@ export default function Home() {
                       <h3 className="font-heading font-bold text-white text-xl sm:text-2xl leading-snug mb-2">Explore the global textile market in full</h3>
                       <p className="text-white/80 text-sm sm:text-base leading-relaxed">Market sizing, Pakistan's global position, key export markets, and category strengths — with cited figures.</p>
                     </div>
-                    <Link href="/global-textile-market" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-white text-[#064E3B] text-sm font-bold hover:bg-[#10B981] hover:text-white transition-colors duration-300 shadow-lg whitespace-nowrap">
+                    <Link href="/global-textile-market" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-white text-[#15402A] text-sm font-bold hover:bg-[#3E8F5E] hover:text-white transition-colors duration-300 shadow-lg whitespace-nowrap">
                       Explore the market <ArrowUpRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -357,7 +357,7 @@ export default function Home() {
         className="relative z-[1] py-20 lg:py-28 overflow-hidden"
         style={{
           background:
-            "radial-gradient(1000px circle at 0% 0%, rgba(134,239,172,0.13), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(4,120,87,0.18), transparent 50%), #064E3B",
+            "radial-gradient(1000px circle at 0% 0%, rgba(134,239,172,0.13), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(4,120,87,0.18), transparent 50%), #15402A",
         }}
         aria-labelledby="news-heading"
       >
@@ -391,13 +391,13 @@ export default function Home() {
         className="relative z-[1] py-14 lg:py-20 overflow-hidden"
         style={{
           background:
-            "radial-gradient(1000px circle at 50% 0%, rgba(16,185,129,0.16), transparent 55%), radial-gradient(700px circle at 0% 100%, rgba(16,185,129,0.12), transparent 50%), radial-gradient(700px circle at 100% 100%, rgba(6,95,70,0.10), transparent 50%), #064E3B",
+            "radial-gradient(1000px circle at 50% 0%, rgba(16,185,129,0.16), transparent 55%), radial-gradient(700px circle at 0% 100%, rgba(16,185,129,0.12), transparent 50%), radial-gradient(700px circle at 100% 100%, rgba(6,95,70,0.10), transparent 50%), #15402A",
         }}
         aria-labelledby="network-heading"
       >
         <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
         <div className="relative text-center px-6 sm:px-10 lg:px-16 xl:px-20">
-          <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#6EE7B7" align="center" light />
+          <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#8FD3AE" align="center" light />
           <LogoCarousel columnCount={5} logos={sponsorCarouselLogos} />
         </div>
       </section>

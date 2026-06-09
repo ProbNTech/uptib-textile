@@ -28,10 +28,10 @@ import {
 } from "lucide-react";
 
 const stats = [
-  { value: "Central", label: "London Location", color: "#047857" },
-  { value: "5+", label: "Membership Tiers", color: "#10B981" },
-  { value: "40hrs", label: "Top Tier Annual", color: "#047857" },
-  { value: "Flexible", label: "Booking Options", color: "#047857" },
+  { value: "Central", label: "London Location", color: "#2F7549" },
+  { value: "5+", label: "Membership Tiers", color: "#3E8F5E" },
+  { value: "40hrs", label: "Top Tier Annual", color: "#2F7549" },
+  { value: "Flexible", label: "Booking Options", color: "#2F7549" },
 ];
 
 const uses = [
@@ -43,11 +43,11 @@ const uses = [
 ];
 
 const facilities = [
-  { icon: Building2, title: "Fully Furnished Boardrooms", desc: "Fully furnished boardrooms and meeting rooms.", color: "#047857" },
-  { icon: Wifi, title: "High-Speed Internet", desc: "High-speed internet connectivity.", color: "#10B981" },
-  { icon: Monitor, title: "Video Conferencing & AV", desc: "Video conferencing and AV facilities.", color: "#047857" },
-  { icon: UserCheck, title: "Reception Support", desc: "Reception support (where applicable).", color: "#047857" },
-  { icon: Clock, title: "Flexible Booking", desc: "Flexible hourly and daily booking options.", color: "#10B981" },
+  { icon: Building2, title: "Fully Furnished Boardrooms", desc: "Fully furnished boardrooms and meeting rooms.", color: "#2F7549" },
+  { icon: Wifi, title: "High-Speed Internet", desc: "High-speed internet connectivity.", color: "#3E8F5E" },
+  { icon: Monitor, title: "Video Conferencing & AV", desc: "Video conferencing and AV facilities.", color: "#2F7549" },
+  { icon: UserCheck, title: "Reception Support", desc: "Reception support (where applicable).", color: "#2F7549" },
+  { icon: Clock, title: "Flexible Booking", desc: "Flexible hourly and daily booking options.", color: "#3E8F5E" },
 ];
 
 const bilateralBenefits = [
@@ -73,7 +73,7 @@ const tierTableData = [
     policyEngagement: "Direct Advisory Roundtable Access",
     brandVisibility: "Premium Logo Placement & Event Recognition",
     highlight: true,
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     tier: "Corporate Member",
@@ -83,7 +83,7 @@ const tierTableData = [
     policyEngagement: "Participation in Policy Working Groups",
     brandVisibility: "Featured on Website & Publications",
     highlight: false,
-    color: "#10B981",
+    color: "#3E8F5E",
   },
   {
     tier: "SME Member",
@@ -93,7 +93,7 @@ const tierTableData = [
     policyEngagement: "Industry Consultation Access",
     brandVisibility: "Listed in Member Directory",
     highlight: false,
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     tier: "Startup / Associate",
@@ -103,7 +103,7 @@ const tierTableData = [
     policyEngagement: "Observer Access to Forums",
     brandVisibility: "Directory Listing",
     highlight: false,
-    color: "#047857",
+    color: "#2F7549",
   },
   {
     tier: "Government / Institutional",
@@ -113,7 +113,7 @@ const tierTableData = [
     policyEngagement: "Formal Bilateral Engagement",
     brandVisibility: "Institutional Recognition",
     highlight: false,
-    color: "#10B981",
+    color: "#3E8F5E",
   },
 ];
 
@@ -126,10 +126,10 @@ const meetingSpaceTerms = [
 ];
 
 const addOnServices = [
-  { icon: ClipboardList, title: "Secretariat Support", desc: "Secretariat support for delegation visits.", color: "#047857" },
-  { icon: HeadphonesIcon, title: "Event Coordination", desc: "Event coordination assistance.", color: "#10B981" },
-  { icon: Palette, title: "Meeting Space Branding", desc: "Branding within meeting space.", color: "#047857" },
-  { icon: UtensilsCrossed, title: "Catering & Hospitality", desc: "Catering and hospitality arrangements.", color: "#047857" },
+  { icon: ClipboardList, title: "Secretariat Support", desc: "Secretariat support for delegation visits.", color: "#2F7549" },
+  { icon: HeadphonesIcon, title: "Event Coordination", desc: "Event coordination assistance.", color: "#3E8F5E" },
+  { icon: Palette, title: "Meeting Space Branding", desc: "Branding within meeting space.", color: "#2F7549" },
+  { icon: UtensilsCrossed, title: "Catering & Hospitality", desc: "Catering and hospitality arrangements.", color: "#2F7549" },
 ];
 
 const bookingChecklist = [
@@ -210,7 +210,7 @@ export default function MeetingSpacePage() {
                   <div className="group relative rounded-xl border border-[#D8D5CF]/60 p-px h-full hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                     <GlowingEffect spread={40} glow disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
                     <div className="relative h-full bg-white rounded-xl p-6 flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#10B981] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-5 h-5 text-[#3E8F5E] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-base text-[#3D4152] leading-relaxed">{item}</span>
                     </div>
                   </div>
@@ -226,8 +226,8 @@ export default function MeetingSpacePage() {
                 <div className="group relative rounded-xl border border-[#D8D5CF]/60 p-px h-full hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                   <GlowingEffect spread={40} glow disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
                   <div className="relative h-full bg-white rounded-xl p-6 flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-4 h-4 text-[#047857]" strokeWidth={1.5} />
+                    <div className="w-8 h-8 rounded-lg bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4 text-[#2F7549]" strokeWidth={1.5} />
                     </div>
                     <span className="text-[#3D4152] font-semibold text-base">Central London location with excellent transport links</span>
                   </div>
@@ -252,9 +252,9 @@ export default function MeetingSpacePage() {
                       <div className="relative h-full bg-white rounded-xl p-6 flex items-start gap-4">
                         <div
                           className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                          style={{ backgroundColor: i === 0 ? "#04785710" : "#10B98110", border: `1px solid ${i === 0 ? "#04785720" : "#10B98120"}` }}
+                          style={{ backgroundColor: i === 0 ? "#2F754910" : "#3E8F5E10", border: `1px solid ${i === 0 ? "#2F754920" : "#3E8F5E20"}` }}
                         >
-                          <Icon className="w-5 h-5" style={{ color: i === 0 ? "#047857" : "#10B981" }} strokeWidth={1.5} />
+                          <Icon className="w-5 h-5" style={{ color: i === 0 ? "#2F7549" : "#3E8F5E" }} strokeWidth={1.5} />
                         </div>
                         <span className="text-base text-[#3D4152] leading-relaxed">{item.text}</span>
                       </div>
@@ -293,7 +293,7 @@ export default function MeetingSpacePage() {
                         >
                           <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
                         </div>
-                        <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-2">{item.title}</h3>
+                        <h3 className="font-heading font-bold text-base text-[#16291E] mb-2">{item.title}</h3>
                         <div className="h-px bg-[#D8D5CF] mb-3" />
                         <p className="text-base text-[#5A5F72] leading-relaxed">{item.desc}</p>
                       </div>
@@ -331,7 +331,7 @@ export default function MeetingSpacePage() {
                   <div className="group relative rounded-xl border border-[#D8D5CF]/60 p-px h-full hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                     <GlowingEffect spread={40} glow disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
                     <div className="relative h-full bg-white rounded-xl p-6 flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#10B981] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-5 h-5 text-[#3E8F5E] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-base text-[#3D4152] leading-relaxed">{item}</span>
                     </div>
                   </div>
@@ -341,10 +341,10 @@ export default function MeetingSpacePage() {
 
             {/* Member Benefits as GlowingEffect cards */}
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#04785710", border: "1px solid #04785720" }}>
-                <BadgeCheck className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#2F754910", border: "1px solid #2F754920" }}>
+                <BadgeCheck className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
               </div>
-              <h3 className="font-heading font-bold text-[#1C1F2E] text-lg">Eligible members may receive:</h3>
+              <h3 className="font-heading font-bold text-[#16291E] text-lg">Eligible members may receive:</h3>
             </div>
             <div className="grid sm:grid-cols-2 gap-6">
               {memberBenefits.map((item, i) => (
@@ -358,7 +358,7 @@ export default function MeetingSpacePage() {
                   <div className="group relative rounded-xl border border-[#D8D5CF]/60 p-px h-full hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                     <GlowingEffect spread={40} glow disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
                     <div className="relative h-full bg-white rounded-xl p-6 flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-5 h-5 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-base text-[#3D4152] leading-relaxed">{item}</span>
                     </div>
                   </div>
@@ -372,7 +372,7 @@ export default function MeetingSpacePage() {
       {/* ââ Membership Tier Benefits Table â Styled Grid ââââââââââââââ */}
       <section className="relative py-10 overflow-hidden bg-white">
         {/* Top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/30 to-transparent" />
         {/* Grid pattern */}
         <div
           className="absolute inset-0 opacity-[0.02]"
@@ -386,13 +386,13 @@ export default function MeetingSpacePage() {
         <div
           className="absolute top-0 right-1/4 w-96 h-96 opacity-[0.02]"
           style={{
-            background: "radial-gradient(circle, #047857, transparent 60%)",
+            background: "radial-gradient(circle, #2F7549, transparent 60%)",
           }}
         />
         <div
           className="absolute bottom-0 left-1/4 w-96 h-96 opacity-[0.02]"
           style={{
-            background: "radial-gradient(circle, #047857, transparent 60%)",
+            background: "radial-gradient(circle, #2F7549, transparent 60%)",
           }}
         />
 
@@ -408,7 +408,7 @@ export default function MeetingSpacePage() {
                   className="absolute top-0 left-0 right-0 h-[2px]"
                   style={{
                     background:
-                      "linear-gradient(to right, #047857, #10B981, #047857, #047857, #10B981)",
+                      "linear-gradient(to right, #2F7549, #3E8F5E, #2F7549, #2F7549, #3E8F5E)",
                   }}
                 />
                 <div className="overflow-x-auto">
@@ -483,7 +483,7 @@ export default function MeetingSpacePage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`group relative rounded-xl overflow-hidden ${
                     row.highlight
-                      ? "bg-gradient-to-br from-[#047857]/[0.08] to-[#047857]/[0.05] border-2 border-[#047857]/40 shadow-[0_0_30px_rgba(4,120,87,0.15)]"
+                      ? "bg-gradient-to-br from-[#2F7549]/[0.08] to-[#2F7549]/[0.05] border-2 border-[#2F7549]/40 shadow-[0_0_30px_rgba(4,120,87,0.15)]"
                       : "bg-white border border-[#D8D5CF] shadow-sm"
                   }`}
                 >
@@ -492,7 +492,7 @@ export default function MeetingSpacePage() {
                       className="absolute top-0 left-0 right-0 h-[3px]"
                       style={{
                         background:
-                          "linear-gradient(to right, #047857, #6EE7B7, #047857)",
+                          "linear-gradient(to right, #2F7549, #8FD3AE, #2F7549)",
                       }}
                     />
                   )}
@@ -568,7 +568,7 @@ export default function MeetingSpacePage() {
                   <div className="group relative rounded-xl border border-[#D8D5CF]/60 p-px h-full hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                     <GlowingEffect spread={40} glow disabled={false} proximity={64} inactiveZone={0.01} borderWidth={2} />
                     <div className="relative h-full bg-white rounded-xl p-6 flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-5 h-5 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-base text-[#3D4152] leading-relaxed">{term}</span>
                     </div>
                   </div>
@@ -606,7 +606,7 @@ export default function MeetingSpacePage() {
                           <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-2">{item.title}</h3>
+                          <h3 className="font-heading font-bold text-base text-[#16291E] mb-2">{item.title}</h3>
                           <p className="text-base text-[#5A5F72] leading-relaxed">{item.desc}</p>
                         </div>
                       </div>

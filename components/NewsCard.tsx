@@ -18,22 +18,22 @@ export interface NewsCardProps {
 
 /* Brand-color mapping for category dots */
 const categoryColors: Record<string, string> = {
-  Policy: "#047857",
-  Events: "#047857",
-  Investment: "#10B981",
-  Leadership: "#1C1F2E",
-  Technology: "#047857",
+  Policy: "#2F7549",
+  Events: "#2F7549",
+  Investment: "#3E8F5E",
+  Leadership: "#16291E",
+  Technology: "#2F7549",
   Industry: "#EAB308",
-  Innovation: "#10B981",
-  Cybersecurity: "#047857",
+  Innovation: "#3E8F5E",
+  Cybersecurity: "#2F7549",
   Funding: "#EAB308",
-  Research: "#047857",
+  Research: "#2F7549",
   Awards: "#EAB308",
-  Regulation: "#047857",
+  Regulation: "#2F7549",
 };
 
 function getCategoryColor(category: string): string {
-  return categoryColors[category] || "#047857";
+  return categoryColors[category] || "#2F7549";
 }
 
 export function NewsCard({ slug, title, category, date, image, excerpt, index = 0, light = false }: NewsCardProps) {
@@ -73,7 +73,7 @@ export function NewsCard({ slug, title, category, date, image, excerpt, index = 
               {date}
             </p>
           </div>
-          <h2 className={`line-clamp-2 text-lg leading-5 font-semibold tracking-tight ${light ? "text-white group-hover:text-[#86efac]" : "text-[#1C1F2E]"} transition-colors duration-200`}>
+          <h2 className={`line-clamp-2 text-lg leading-5 font-semibold tracking-tight ${light ? "text-white group-hover:text-[#86efac]" : "text-[#16291E]"} transition-colors duration-200`}>
             {title}
           </h2>
           <p className={`line-clamp-3 text-sm ${light ? "text-gray-300" : "text-[#3D4152]/70"}`}>

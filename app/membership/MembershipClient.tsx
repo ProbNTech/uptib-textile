@@ -1,671 +1,673 @@
 "use client";
 
-import { AnimatedSection } from "@/components/AnimatedSection";
-import { Button } from "@/components/Button";
-import { Section } from "@/components/Section";
+import { useState, Fragment } from "react";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  Users,
-  Network,
-  Building2,
-  CheckCircle2,
-  Star,
-  Globe,
-  ArrowRight,
-  DollarSign,
-  Lightbulb,
-  Eye,
-  Megaphone,
+  Globe2,
   Handshake,
-  CalendarDays,
+  Users,
+  Megaphone,
   BarChart3,
-  GraduationCap,
-  FileText,
-  Download,
-  Shield,
-  ScrollText,
-  Gavel,
-  Scale,
+  CalendarDays,
+  Award,
+  BadgePercent,
+  Check,
+  Star,
+  Factory,
+  Building2,
+  Rocket,
+  Package,
+  ClipboardCheck,
+  ShieldCheck,
+  UserCheck,
+  CheckCircle2,
+  ArrowRight,
+  Plus,
+  HelpCircle,
+  Layers,
 } from "lucide-react";
-import { SectionHeader } from "@/components/SectionHeader";
 import { PageHero } from "@/components/PageHero";
-import MembershipApplyForm from "@/components/membership/MembershipApplyForm";
-import { GlobalCTA } from "@/components/GlobalCTA";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { SectionLabel } from "@/components/ui/SectionLabel";
+import { Button } from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
-import Image from "next/image";
+import { GlobalCTA } from "@/components/GlobalCTA";
+import { homeStats, markets } from "@/data/textile";
+import { cn } from "@/lib/utils";
 
-/* ─── Data ─── */
+const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 
-const membershipBenefits = [
-  { icon: Globe, title: "Industry Access", description: "Engage with key decision-makers, regulators, and thought leaders across the UK, Europe and Pakistan.", color: "#047857" },
-  { icon: Network, title: "Networking & Collaboration", description: "Connect with startups, scale-ups, corporates, and accelerators.", color: "#10B981" },
-  { icon: Eye, title: "Market Visibility", description: "Promote your products, services, and solutions through Forum channels, digital campaigns, and cross-border events.", color: "#047857" },
-  { icon: DollarSign, title: "Funding & Investment Support", description: "Receive guidance and access to startup funding, Series A and B investment, and accelerator programs.", color: "#047857" },
-  { icon: Users, title: "Talent & Employment Opportunities", description: "Leverage overseas contract employment programs to access global tech talent.", color: "#10B981" },
-  { icon: Lightbulb, title: "Thought Leadership", description: "Position your organisation as a leader in technology through speaking opportunities, published insights, and policy engagement.", color: "#047857" },
-  { icon: Building2, title: "Business Incubation Centres", description: "Members have access to shared boardrooms, office space, and other resources in our London office.", color: "#047857" },
-  { icon: Megaphone, title: "Sponsorships", description: "To increase exposure in both markets and demonstrate commitment to the bilateral relationship, UPTIB offers sponsorship opportunities exclusive to our member companies.", color: "#10B981" },
-  { icon: Handshake, title: "Business Matchmaking", description: "B2B meetings with international companies, partner introductions, collaboration opportunities with technology firms, and client acquisition support.", color: "#047857" },
-  { icon: CalendarDays, title: "Technology Events", description: "Participate in international technology conferences, business networking events, startup showcase programs, and innovation forums.", color: "#047857" },
-  { icon: BarChart3, title: "Research & Market Intelligence", description: "Access IT market reports, technology trends and opportunities, and sector-specific research insights covering key European technology markets.", color: "#10B981" },
-  { icon: GraduationCap, title: "Talent & Collaboration", description: "Collaborate with universities, research institutions, innovation hubs, and technology accelerators to support innovation and knowledge exchange.", color: "#047857" },
+/* ── Hero floating facts card ────────────────────────────────────── */
+const overviewFacts = [
+  { icon: Users, value: "Open", label: "To all eligible exporters & manufacturers" },
+  { icon: BadgePercent, value: "On request", label: "Tiered pricing — start small, scale up" },
+  { icon: Globe2, value: "Global", label: "Reach buyers across key markets" },
+  { icon: Layers, value: "3 Tiers", label: "Basic · Professional · Premium" },
 ];
 
-const suitableFor = [
-  "Technology companies (SMEs and large enterprises)",
-  "Innovation centres and incubators",
-  "Investors and venture funds",
-  "Government agencies and public sector bodies",
-  "Academic and research institutions",
+/* ── Why membership matters (compact benefit grid) ───────────────── */
+const benefits = [
+  { icon: Globe2, title: "Access to real buyers", desc: "A place in the supplier pool we source from for live orders." },
+  { icon: Handshake, title: "B2B matchmaking", desc: "Pre-qualified meetings with buyers, distributors and procurement teams." },
+  { icon: Users, title: "Buyer introductions", desc: "Warm introductions to retailers, importers and brands actively sourcing." },
+  { icon: Megaphone, title: "Live leads & enquiries", desc: "Buyer enquiries matched to your products, plus lead-generation support." },
+  { icon: BarChart3, title: "Market intelligence", desc: "Trends, certification rules and demand forecasts for key markets." },
+  { icon: CalendarDays, title: "Trade events", desc: "Exhibitions, webinars and the UK–Pak Textile Export Forum." },
+  { icon: Award, title: "International representation", desc: "We represent your products to buyers as an accountable partner." },
+  { icon: BadgePercent, title: "The GSP+ advantage", desc: "Pakistan's preferential duty-free EU access, built into your price." },
 ];
 
-const europeanMarkets = [
-  { name: "United Kingdom", flag: "🇬🇧" },
-  { name: "Germany", flag: "🇩🇪" },
-  { name: "Netherlands", flag: "🇳🇱" },
-  { name: "France", flag: "🇫🇷" },
-  { name: "Switzerland", flag: "🇨🇭" },
-  { name: "Spain", flag: "🇪🇸" },
-  { name: "Poland", flag: "🇵🇱" },
-  { name: "Estonia", flag: "🇪🇪" },
-  { name: "Latvia", flag: "🇱🇻" },
-  { name: "Lithuania", flag: "🇱🇹" },
-];
-
-const whoCanBecomeMembers = [
-  "IT companies and software firms",
-  "Technology startups",
-  "Research organizations",
-  "Digital service providers",
-  "IT professionals and consultants",
-  "IT Professionals with computer and related education",
-  "Contract and consulting employees",
-  "AI/IT professionals or freelancers",
-  "IT enabled support services providers",
-  "Students: IT, management and related fields",
-];
-
-const whoShouldJoin = [
-  { image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=85&auto=format&fit=crop", title: "Startups & Scale-ups", description: "Access funding, mentorship, market entry support, and collaboration opportunities.", color: "#047857" },
-  { image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=85&auto=format&fit=crop", title: "SMEs & Technology Firms", description: "Grow your network, promote solutions, and explore cross-border opportunities.", color: "#10B981" },
-  { image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=85&auto=format&fit=crop", title: "Corporates & Investors", description: "Discover high-potential startups, engage in partnerships, and participate in innovation programs.", color: "#047857" },
-];
-
-const membershipTiers = [
+/* ── Membership tiers ────────────────────────────────────────────── */
+const tiers = [
   {
-    name: "Chairman\u2019s Circle Membership",
-    highlight: true,
-    description: "For established corporates, venture capitalists, and institutional investors",
+    name: "Basic",
+    icon: Factory,
+    tagline: "Perfect for getting started.",
+    featured: false,
     features: [
-      "Access to senior-level members of UPTIB",
-      "A seat on UPTIB board of directors",
-      "Priority invitations to CEO-level briefings and bilateral meetings",
-      "Leadership opportunities in executive trade missions, annual meetings, and events",
-      "Increased visibility for company branding",
-      "Participation in setting Forum\u2019s advocacy goals and strategic planning",
-      "Advocacy assistance to resolve company-specific trade or investment issues",
-      "All Corporate Membership benefits listed below",
+      "Company profile listing",
+      "Buyer-directory access",
+      "Monthly market reports",
+      "Inclusion in the sourcing pool",
     ],
   },
   {
-    name: "Corporate Membership",
-    highlight: false,
-    description: "Any Company, Corporation, Firm, Concern or other legal business entity in UK and Pakistan actively engaged in the AI & Information Technology industry",
+    name: "Professional",
+    icon: Building2,
+    tagline: "For growing exporters ready to scale.",
+    featured: true,
     features: [
-      "Participation on the Forum\u2019s policy task forces",
-      "Assistance with securing appointments for company executives visiting UK",
-      "Opportunities to participate in Forum members-only events, executive trade missions, and briefings",
-      "Policy papers and sector-specific advocacy updates",
-      "UPTIB economy and policy updates",
+      "Everything in Basic",
+      "B2B matchmaking",
+      "Buyer introductions",
+      "Trade-event participation",
+      "Lead-generation support",
     ],
   },
   {
-    name: "SME / Scale-up Membership",
-    highlight: false,
-    description: "For growing technology businesses",
+    name: "Premium",
+    icon: Award,
+    tagline: "For established exporters expanding globally.",
+    featured: false,
     features: [
-      "Full access to industry forums, funding opportunities, overseas contract programs, and marketing support",
-      "Inclusion in cross-border collaborations and accelerator programs",
-    ],
-  },
-  {
-    name: "Startup Membership",
-    highlight: false,
-    description: "Designed for early-stage technology companies",
-    features: [
-      "Access to funding programs, SME Connect, and digital promotion channels",
-      "Participation in networking events and mentorship programs",
-    ],
-  },
-  {
-    name: "Associates",
-    highlight: false,
-    description: "Any Company, Association, Forum shall apply for membership in the \u2018Associate\u2019 Category.",
-    features: [],
-  },
-  {
-    name: "Academic Institutions",
-    highlight: false,
-    description: "Any Institution, Academy, Company, Corporation, Firm actively engaged in Information Technology",
-    features: [],
-  },
-  {
-    name: "Individual Membership",
-    highlight: false,
-    description: "Those who are working in advancing the theory or application of Computer Science, Information Technology or other related disciplines.",
-    features: [
-      "Extensive Networking Opportunities",
-      "Collaborate Nationwide",
-      "Leadership Development",
-      "Stay Ahead in Technology",
-      "Share Your Expertise",
-      "Fellowships recognition",
+      "Everything in Professional",
+      "Dedicated market advisor",
+      "Buyer-sourcing campaigns",
+      "International representation",
+      "Featured promotion",
     ],
   },
 ];
 
-const pakistanToUkServices = [
-  "Individual Consultations",
-  "Government Relations",
-  "Partners and Channels",
-  "Delegations and Missions",
+const tierValues = [
+  { title: "Tailored to your stage", desc: "Pick the tier that matches where your export business is today." },
+  { title: "Scale up anytime", desc: "Start on Basic and upgrade to Professional or Premium as you see value." },
+  { title: "Pricing on request", desc: "Transparent, tier-based pricing — no hidden costs." },
+  { title: "Built for orders", desc: "Every tier is designed to connect you to paying demand." },
 ];
 
-const ukToPakistanServices = [
-  "Market Entry Advisory",
-  "Local Partner Identification",
-  "Regulatory & Compliance Support",
-  "Investment Facilitation",
+/* ── Who can join ────────────────────────────────────────────────── */
+const whoCanJoin = [
+  { icon: Factory, title: "Manufacturers & mills", desc: "Bedding, apparel, sportswear, healthcare and home-textile producers ready to supply at scale." },
+  { icon: Building2, title: "Exporters & trading houses", desc: "Established exporters widening their buyer base and diversifying into new destinations." },
+  { icon: Rocket, title: "First-time & SME exporters", desc: "Smaller producers needing a credible route, low-MOQ partners and hands-on support to go global." },
+  { icon: Package, title: "Accessories & allied suppliers", desc: "Trims, packaging and service providers supporting the textile supply chain." },
 ];
 
-/* ─── Component ─── */
+/* ── Journey / how it works ──────────────────────────────────────── */
+const steps = [
+  { icon: ClipboardCheck, title: "Apply online", desc: "Send your details to our membership team to get started." },
+  { icon: ShieldCheck, title: "Verification", desc: "Our team reviews and verifies your details." },
+  { icon: UserCheck, title: "Onboarding", desc: "We set up your profile and member access." },
+  { icon: Handshake, title: "Get matched", desc: "Start connecting with buyers and live orders." },
+];
+
+/* ── Apply teaser chips ──────────────────────────────────────────── */
+const applyChips = [
+  { icon: ClipboardCheck, label: "Simple application" },
+  { icon: ShieldCheck, label: "Careful review" },
+  { icon: UserCheck, label: "Fast onboarding" },
+  { icon: Handshake, label: "Start connecting" },
+];
+
+/* ── FAQs ────────────────────────────────────────────────────────── */
+const faqs = [
+  {
+    q: "Who is eligible for UPTIB membership?",
+    a: "Membership is open to verified Pakistani textile manufacturers, mills, exporters, trading houses and allied suppliers who can supply international buyers. First-time and SME exporters are welcome.",
+  },
+  {
+    q: "How is this different from a directory listing?",
+    a: "A directory listing is passive — it waits to be found. Membership is active: you join the pool we source from for live orders, get introduced to qualified buyers worldwide, receive market intelligence, and have UPTIB representing your products to real demand.",
+  },
+  {
+    q: "What do the membership tiers cost?",
+    a: "Pricing is provided on request. Every tier builds on the one before it, so you can start at Basic and upgrade as your export activity grows. Talk to our team for current tier pricing.",
+  },
+  {
+    q: "How do I apply?",
+    a: "Use the Apply now button to get in touch with our membership team. Share your organisation details and product categories, and we will review your interest and be in touch about next steps.",
+  },
+  {
+    q: "Can I start small and upgrade later?",
+    a: "Yes. Membership is tiered so a first-time exporter can start on Basic and scale up to Professional or Premium as they see value. Pricing for each tier is provided on request.",
+  },
+  {
+    q: "Which markets can membership help me reach?",
+    a: "Members are matched to buyers across the European Union, the United States, the United Kingdom, the Middle East, Africa and Latin America — wherever there is qualified demand for your products.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 
 export default function MembershipClient() {
   const shouldReduceMotion = useReducedMotion();
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <div className="content-body">
-      {/* ── Hero ── */}
+    <div>
+      {/* ── HERO ─────────────────────────────────────────────────── */}
       <PageHero
         label="Membership"
-        title="At UK Pakistan Tech Forum, Membership Means Business"
-        subtitle="Whether your priorities are to network with the industry and key stakeholders, to help shape policy, or to have access to insights that help your business to grow, UPTIB membership will positively impact your organisation in whatever way matters most to you."
-        image="/image/banners/banner102.png"
+        title="More than a listing — a route to real buyers"
+        subtitle="Join the supplier pool global buyers source from. Build credibility, get matched to qualified demand, and grow your textile exports worldwide."
+        image="/image/hero-bg/closeup-view-handshake-two-businessmen-suits-shaking-hands.jpg"
       >
         <div className="flex flex-wrap items-center gap-4">
-          <ShinyButton href="#apply">Apply Now</ShinyButton>
-          <Button href="#tiers" variant="glass">View Tiers</Button>
+          <ShinyButton href="#apply">Apply for membership</ShinyButton>
+          <Button href="#benefits" variant="glass" size="lg">
+            Explore benefits
+          </Button>
         </div>
       </PageHero>
 
-      {/* ── Membership application form ── */}
-      <MembershipApplyForm />
-
-      {/* ── Intro ── */}
-      <Section variant="light">
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
-          <AnimatedSection>
-            <SectionHeader label="About UPTIB Membership" title="Why UPTIB?" color="blue" />
-            <p className="text-[#3D4152] leading-relaxed mb-8">
-              UPTIB is a non-governmental, results-focused business forum that is committed to your organization&#39;s bilateral success in Technology, business, trade, and investment. We offer a range of both universal as well as custom-built services to our UK and Pakistani corporate members, including on-the-ground UK market support for Pakistani businesses; policy guidelines and regulatory analysis; and one-stop-shop Business Incubation Centre packages.
-            </p>
-
-            <h3 className="font-heading font-bold text-2xl text-[#1C1F2E] mb-5">
-              Membership is suitable for
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {suitableFor.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.4, delay: index * 0.08 }}
-                  className="flex items-start gap-3 bg-white border border-[#D8D5CF] rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300"
+      {/* ── FLOATING FACTS CARD (overlaps hero) ──────────────────── */}
+      <div className={cn("relative z-[3] -mt-14 sm:-mt-16 lg:-mt-20", PX)}>
+        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(4,120,87,0.30)] p-6 sm:p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
+            {overviewFacts.map((f, i) => {
+              const Icon = f.icon;
+              return (
+                <div
+                  key={f.value}
+                  className={cn(
+                    "flex items-start gap-3.5",
+                    i > 0 && "lg:border-l lg:border-[#E5E7EB] lg:pl-6",
+                  )}
                 >
-                  <CheckCircle2 className="w-4 h-4 text-[#10B981] flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-[#5A5F72] leading-relaxed">{item}</span>
-                </motion.div>
-              ))}
-            </div>
-          </AnimatedSection>
-          <AnimatedSection>
-            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border-2 border-[#047857]/15">
-              <Image
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=85&auto=format&fit=crop"
-                alt="Professionals collaborating in a modern office"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549]">
+                    <Icon className="size-5" strokeWidth={1.75} aria-hidden />
+                  </span>
+                  <div>
+                    <p className="font-heading font-extrabold text-lg text-[#16291E] leading-tight">{f.value}</p>
+                    <p className="text-[13px] text-[#5A5F72] leading-snug mt-0.5">{f.label}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* ── WHY MEMBERSHIP MATTERS ───────────────────────────────── */}
+      <section id="benefits" className="bg-white py-20 lg:py-28 scroll-mt-24">
+        <div className={PX}>
+          <AnimatedSection animation="blur-in">
+            <div className="grid gap-12 lg:grid-cols-[1fr_2.6fr] lg:gap-16 xl:gap-20">
+              <div className="lg:sticky lg:top-28 lg:self-start lg:max-w-sm">
+                <SectionLabel
+                  label="Why membership matters"
+                  title="Why membership beats a directory listing"
+                  color="#2F7549"
+                  hideLine
+                />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
+                <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
+                  Standing out in global markets takes more than being found — it takes being trusted. UPTIB membership
+                  gives you the credibility, tools and connections to grow with confidence, because we run the
+                  buyer-facing sourcing business too.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-9">
+                {benefits.map((b, index) => {
+                  const Icon = b.icon;
+                  return (
+                    <motion.div
+                      key={b.title}
+                      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.45, delay: index * 0.05 }}
+                    >
+                      <div className="flex items-center gap-2.5 mb-2">
+                        <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#2F7549]/10 text-[#2F7549]">
+                          <Icon className="size-[18px]" strokeWidth={1.75} aria-hidden />
+                        </span>
+                        <h3 className="font-heading font-bold text-[15px] text-[#16291E] leading-snug">{b.title}</h3>
+                      </div>
+                      <p className="text-sm text-[#5A5F72] leading-relaxed">{b.desc}</p>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
           </AnimatedSection>
         </div>
-      </Section>
+      </section>
 
-      {/* ── Who Should Join ── */}
-      <Section variant="alt">
-        <AnimatedSection>
-          <SectionHeader label="Who Should Join" title="Who Should Join" color="red" />
-          <div className="grid md:grid-cols-3 gap-6">
-            {whoShouldJoin.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative h-full"
-              >
-                <div className="relative h-full bg-white rounded-2xl border border-[#D8D5CF] overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                  </div>
-                  <div className="p-7">
-                    <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-2">{item.title}</h3>
-                    <div className="h-px mb-3" style={{ background: `linear-gradient(to right, ${item.color}30, transparent)` }} />
-                    <p className="text-base text-[#5A5F72] leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </AnimatedSection>
-      </Section>
-
-      {/* ── Membership Documents ── */}
-      <Section variant="light">
-        <AnimatedSection>
-          <SectionHeader label="Official Documents" title="Membership Documents" color="blue" subtitle="Download the key legal documents governing UPTIB membership, partnerships, and dispute resolution." />
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {[
-              { icon: Shield, title: "Membership Terms & Conditions", description: "Rules, obligations, and policies governing your UPTIB membership.", href: "/documents/UPTIB-Membership-Terms-and-Conditions.pdf", webPage: "/membership/terms", color: "#047857", pages: "3 Pages" },
-              { icon: Gavel, title: "Arbitration Framework Policy", description: "Dispute resolution framework under the Arbitration Act 1996 (UK) and LCIA Rules.", href: "/documents/UPTIB-Arbitration-Framework.pdf", webPage: "/arbitration/framework", color: "#047857", pages: "4 Pages" },
-              { icon: Scale, title: "Code of Conduct", description: "Binding principles of integrity, professionalism, and ethical behaviour for all members.", href: "/documents/UPTIB-Code-of-Conduct.pdf", webPage: "/code-of-conduct", color: "#047857", pages: "3 Pages" },
-              { icon: ScrollText, title: "Sales Commission Agreement", description: "Terms for UPTIB promoting and selling your products/services in UK and European markets.", href: "/documents/UPTIB-Sales-Commission-Agreement.pdf", color: "#10B981", pages: "5 Pages" },
-              { icon: Handshake, title: "Memorandum of Understanding", description: "Framework for institutional partnerships between UPTIB and trade organisations.", href: "/documents/UPTIB-Memorandum-of-Understanding.pdf", color: "#047857", pages: "4 Pages" },
-            ].map((doc, i) => {
-              const Icon = doc.icon;
-              return (
-                <motion.div
-                  key={doc.title}
-                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.45, delay: i * 0.1 }}
-                  className="group relative bg-white border border-[#D8D5CF] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                >
-                  {/* Colored top accent bar */}
-                  <div className="h-1 w-full" style={{ background: doc.color }} />
-
-                  <div className="p-7 lg:p-8 flex flex-col h-full">
-                    {/* Icon + badge row */}
-                    <div className="flex items-start justify-between mb-5">
-                      <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-                        style={{ background: `${doc.color}10`, border: `1px solid ${doc.color}20` }}
-                      >
-                        <Icon className="w-5.5 h-5.5" style={{ color: doc.color }} strokeWidth={1.5} />
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-[#F5F4F2] text-[#5A5F72]">
-                          PDF
-                        </span>
-                        <span className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md" style={{ background: `${doc.color}08`, color: doc.color }}>
-                          {doc.pages}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-2 leading-snug">
-                      {doc.title}
-                    </h3>
-
-                    {/* Divider */}
-                    <div className="h-px bg-[#D8D5CF] mb-3" />
-
-                    {/* Description */}
-                    <p className="text-[#5A5F72] text-base leading-relaxed mb-6 flex-1">
-                      {doc.description}
-                    </p>
-
-                    {/* Buttons */}
-                    <div className="flex items-center gap-3">
-                      <a
-                        href={doc.href}
-                        download
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 group-hover:gap-3 w-fit"
-                        style={{ background: doc.color, color: "#fff" }}
-                      >
-                        <Download className="w-4 h-4" strokeWidth={2} />
-                        Download PDF
-                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" />
-                      </a>
-                      {"webPage" in doc && doc.webPage && (
-                        <a
-                          href={doc.webPage}
-                          className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-semibold text-[#5A5F72] border border-[#D8D5CF] hover:bg-[#F5F4F2] transition-all duration-300"
-                        >
-                          <FileText className="w-3.5 h-3.5" strokeWidth={2} />
-                          View Online
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </AnimatedSection>
-      </Section>
-
-      {/* ── Membership Benefits ── */}
-      <Section variant="light">
-        <AnimatedSection>
-          <SectionHeader label="Membership Benefits" title="Membership Benefits" color="green" />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {membershipBenefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="group relative h-full rounded-2xl border border-[#D8D5CF]/60 p-px hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-                >
-                  <GlowingEffect
-                    spread={40}
-                    glow
-                    disabled={false}
-                    proximity={64}
-                    inactiveZone={0.01}
-                    borderWidth={2}
-                  />
-                  <div className="relative h-full bg-white rounded-2xl p-7">
-                    <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                      style={{ backgroundColor: `${benefit.color}12`, border: `1px solid ${benefit.color}25` }}
-                    >
-                      <Icon className="w-5 h-5" style={{ color: benefit.color }} />
-                    </div>
-                    <h3 className="font-heading font-bold text-lg text-[#1C1F2E] mb-2">{benefit.title}</h3>
-                    <div className="h-px bg-[#D8D5CF] mb-3" />
-                    <p className="text-base text-[#5A5F72] leading-relaxed">{benefit.description}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </AnimatedSection>
-      </Section>
-
-      {/* ── Market Access ── */}
-      <Section variant="alt">
-        <AnimatedSection>
-          <SectionHeader label="Market Access" title="Access to UK & European Markets" color="blue" subtitle="Members gain access to opportunities in major European technology markets. UPTIB helps members identify potential clients, partners, and collaboration opportunities." />
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {europeanMarkets.map((market, index) => (
-              <motion.div
-                key={market.name}
-                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group relative bg-white border border-[#D8D5CF] rounded-xl p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
-              >
-                <span className="text-3xl mb-2 block">{market.flag}</span>
-                <span className="text-base font-semibold text-[#1C1F2E]">{market.name}</span>
-              </motion.div>
-            ))}
-          </div>
-        </AnimatedSection>
-      </Section>
-
-      {/* ── Membership Tiers (hidden) ── */}
-      <div className="hidden" aria-hidden="true">
-        <Section variant="light" id="tiers">
+      {/* ── MEMBERSHIP TIERS ─────────────────────────────────────── */}
+      <section id="tiers" className="bg-[#F8FAFC] py-20 lg:py-28 scroll-mt-24">
+        <div className={PX}>
           <AnimatedSection>
-            <SectionHeader label="Membership Levels" title="Membership Tiers & Benefits" color="blue" subtitle="Choose the membership tier that best fits your organisation and goals." />
+            <SectionLabel
+              label="Membership tiers"
+              title="Choose the level of support you need"
+              body="Flexible plans. Real impact. Designed for exporters at every stage — pricing on request."
+              color="#2F7549"
+              hideLine
+            />
+          </AnimatedSection>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-              {membershipTiers.slice(0, 3).map((tier, index) => (
-                <TierCard key={index} tier={tier} index={index} shouldReduceMotion={shouldReduceMotion} />
-              ))}
+          <div className="grid lg:grid-cols-[2.3fr_1fr] gap-10 lg:gap-12 items-start">
+            {/* Tier cards */}
+            <div className="grid sm:grid-cols-3 gap-5 items-stretch">
+              {tiers.map((tier) => {
+                const Icon = tier.icon;
+                return (
+                  <div
+                    key={tier.name}
+                    className={cn(
+                      "relative flex flex-col rounded-2xl border p-7",
+                      tier.featured
+                        ? "border-[#3E8F5E] text-white bg-gradient-to-b from-[#053827] to-[#0B6E51] ring-1 ring-[#3E8F5E]/40 shadow-[0_28px_70px_-24px_rgba(16,185,129,0.7)] lg:-mt-3 lg:mb-3"
+                        : "border-[#E5E7EB] bg-white shadow-sm",
+                    )}
+                  >
+                    {tier.featured && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#3E8F5E] text-[#0E2E1E] text-[11px] font-bold tracking-wide">
+                        <Star className="w-3.5 h-3.5" /> Most Popular
+                      </span>
+                    )}
+                    {/* Icon + title on one line */}
+                    <div className="flex items-center gap-3">
+                      <span
+                        className={cn(
+                          "inline-flex size-11 shrink-0 items-center justify-center rounded-xl",
+                          tier.featured ? "bg-white/10 text-[#8FD3AE]" : "bg-[#2F7549]/10 text-[#2F7549]",
+                        )}
+                      >
+                        <Icon className="size-5" strokeWidth={1.75} aria-hidden />
+                      </span>
+                      <h3 className={cn("font-heading font-bold text-xl", tier.featured ? "text-white" : "text-[#16291E]")}>
+                        {tier.name}
+                      </h3>
+                    </div>
+                    <p
+                      className={cn(
+                        "!text-left text-[13px] mt-3 leading-snug",
+                        tier.featured ? "text-white/70" : "text-[#6B7280]",
+                      )}
+                    >
+                      {tier.tagline}
+                    </p>
+                    <p
+                      className={cn(
+                        "font-heading font-extrabold text-lg mt-4 pb-4 border-b",
+                        tier.featured ? "text-[#8FD3AE] border-white/15" : "text-[#2F7549] border-[#E5E7EB]",
+                      )}
+                    >
+                      Pricing on request
+                    </p>
+                    <ul className="mt-5 space-y-3 flex-1">
+                      {tier.features.map((f) => (
+                        <li key={f} className="flex items-start gap-2.5 text-sm">
+                          <Check
+                            className={cn("w-4 h-4 flex-shrink-0 mt-0.5", tier.featured ? "text-[#8FD3AE]" : "text-[#3E8F5E]")}
+                          />
+                          <span className={tier.featured ? "text-white/90" : "text-[#3D4152]"}>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-              {membershipTiers.slice(3, 6).map((tier, index) => (
-                <TierCard key={index + 3} tier={tier} index={index + 3} shouldReduceMotion={shouldReduceMotion} />
+
+            {/* Value props */}
+            <ul className="space-y-6 lg:pt-4">
+              {tierValues.map((v) => (
+                <li key={v.title} className="flex items-start gap-3.5">
+                  <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-[#2F7549] text-white mt-0.5">
+                    <Check className="size-4" strokeWidth={3} aria-hidden />
+                  </span>
+                  <div>
+                    <p className="font-heading font-bold text-[15px] text-[#16291E]">{v.title}</p>
+                    <p className="text-sm text-[#5A5F72] leading-relaxed mt-0.5">{v.desc}</p>
+                  </div>
+                </li>
               ))}
-            </div>
-            <div className="grid md:grid-cols-1 gap-6 max-w-md mx-auto">
-              {membershipTiers.slice(6).map((tier, index) => (
-                <TierCard key={index + 6} tier={tier} index={index + 6} shouldReduceMotion={shouldReduceMotion} />
-              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHO CAN JOIN ─────────────────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className={PX}>
+          <AnimatedSection>
+            <SectionLabel
+              label="Criteria"
+              title="Membership is built for textile suppliers"
+              body="From large mills to first-time exporters — if you supply textiles, there is a route in."
+              color="#2F7549"
+              hideLine
+            />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {whoCanJoin.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={item.title}
+                    initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.45, delay: index * 0.08 }}
+                    className="rounded-2xl border border-[#E5E7EB] bg-white p-7 shadow-sm hover:shadow-[0_18px_40px_-18px_rgba(4,120,87,0.25)] hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <span className="inline-flex size-12 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549] mb-5">
+                      <Icon className="size-5" strokeWidth={1.75} aria-hidden />
+                    </span>
+                    <h3 className="font-heading font-bold text-[16px] text-[#16291E] mb-2 leading-snug">{item.title}</h3>
+                    <p className="text-sm text-[#5A5F72] leading-relaxed">{item.desc}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </AnimatedSection>
-        </Section>
-      </div>
+        </div>
+      </section>
 
-      {/* ── Who Can Become Members ── */}
-      <Section variant="alt">
-        <AnimatedSection>
-          <SectionHeader label="Who Can Join" title="Who Can Become Members" color="green" />
-          <div className="grid md:grid-cols-2 gap-4">
-            {whoCanBecomeMembers.map((point, index) => (
-              <motion.div
-                key={index}
-                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="flex items-start gap-4 bg-white border border-[#D8D5CF] rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-300"
-              >
-                <div className="w-8 h-8 rounded-lg bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
-                </div>
-                <span className="text-base text-[#5A5F72] leading-relaxed pt-1">{point}</span>
-              </motion.div>
-            ))}
-          </div>
-        </AnimatedSection>
-      </Section>
+      {/* ── JOURNEY / HOW IT WORKS ───────────────────────────────── */}
+      <section className="bg-[#F8FAFC] py-20 lg:py-28">
+        <div className={PX}>
+          <AnimatedSection>
+            <div className="text-center mb-12">
+              <SectionLabel
+                label="Your journey with UPTIB"
+                title="From application to your first introductions"
+                color="#2F7549"
+                align="center"
+                hideLine
+              />
+              <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] mx-auto -mt-4" />
+            </div>
 
-      {/* ── Cross-Border Market Entry ── */}
-      <Section variant="light">
-        <AnimatedSection>
-          <SectionHeader label="Cross-Border Support" title="Cross-Border Market Entry" color="red" />
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Pakistan → UK */}
-            <motion.div
-              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6 }}
-              className="relative h-full"
-            >
-              <div className="relative h-full bg-white rounded-2xl border border-[#D8D5CF] p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#10B981]/10 border border-[#10B981]/25">
-                    <ArrowRight className="w-4 h-4 text-[#10B981]" />
-                  </div>
-                  <h3 className="font-heading font-bold text-xl text-[#1C1F2E]">
-                    For Pakistan Companies entering UK
-                  </h3>
-                </div>
-                <div className="h-px bg-[#D8D5CF] mb-5" />
-                <p className="text-base text-[#5A5F72] leading-relaxed mb-5">
-                  Launching and maintaining momentum in UK/Europe is key for organizations investing in these regions. UPTIB offers practical solutions for Pakistani organizations entering UK/European that are designed to meet your needs.
-                </p>
-                <ul className="space-y-3">
-                  {pakistanToUkServices.map((service, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-base">
-                      <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#10B981]" />
-                      <span className="text-[#3D4152]">{service}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-center gap-8 md:gap-2 max-w-5xl mx-auto">
+              {steps.map((s, i) => {
+                const Icon = s.icon;
+                return (
+                  <Fragment key={s.title}>
+                    <div className="flex-1 text-center md:max-w-[200px]">
+                      <div className="relative mx-auto w-16 h-16 rounded-full border-2 border-[#2F7549]/20 bg-white flex items-center justify-center mb-4">
+                        <Icon className="w-6 h-6 text-[#2F7549]" strokeWidth={1.75} aria-hidden />
+                        <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-[#15402A] text-white text-[11px] font-bold flex items-center justify-center">
+                          {i + 1}
+                        </span>
+                      </div>
+                      <h3 className="font-heading font-bold text-[15px] text-[#16291E] mb-1">{s.title}</h3>
+                      <p className="text-sm text-[#5A5F72] leading-relaxed">{s.desc}</p>
+                    </div>
+                    {i < steps.length - 1 && (
+                      <ArrowRight className="hidden md:block w-5 h-5 text-[#2F7549]/40 shrink-0 mt-5" aria-hidden />
+                    )}
+                  </Fragment>
+                );
+              })}
+            </div>
+
+            <div className="mt-12 flex justify-center">
+              <ShinyButton href="#apply">Start your application</ShinyButton>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── GLOBAL REACH (dark stats band) ───────────────────────── */}
+      <section className="relative overflow-hidden bg-[#15402A] py-20 lg:py-28">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
+            backgroundSize: "48px 48px",
+          }}
+        />
+        <div className={cn("relative", PX)}>
+          <AnimatedSection>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div>
+                <SectionLabel
+                  label="One membership. Global demand."
+                  title="One membership, demand worldwide"
+                  body="UPTIB connects Pakistani manufacturers with retailers, importers, hotel groups and brands across the markets where Pakistani textiles are in demand."
+                  color="#8FD3AE"
+                  light
+                  hideLine
+                />
+                <Button href="/global-textile-market" variant="glass" size="lg" showArrow>
+                  Explore global reach
+                </Button>
               </div>
-            </motion.div>
 
-            {/* UK → Pakistan */}
-            <motion.div
-              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6 }}
-              className="relative h-full"
-            >
-              <div className="relative h-full bg-white rounded-2xl border border-[#D8D5CF] p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[#047857]/10 border border-[#047857]/25">
-                    <ArrowRight className="w-4 h-4 text-[#047857]" />
-                  </div>
-                  <h3 className="font-heading font-bold text-xl text-[#1C1F2E]">
-                    For UK Companies entering Pakistan
-                  </h3>
-                </div>
-                <div className="h-px bg-[#D8D5CF] mb-5" />
-                <p className="text-base text-[#5A5F72] leading-relaxed mb-5">
-                  UK/Europe companies entering Pakistani take many forms, such as greenfield investment and technology partnerships. UPTIB is a critical partner when entering Pakistan.
-                </p>
-                <ul className="space-y-3">
-                  {ukToPakistanServices.map((service, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-base">
-                      <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#047857]" />
-                      <span className="text-[#3D4152]">{service}</span>
-                    </li>
+              <div>
+                <div className="grid grid-cols-2 gap-x-8 gap-y-10">
+                  {homeStats.map((stat) => (
+                    <div key={stat.label} className="border-l-2 border-[#3E8F5E]/40 pl-5">
+                      <p className="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-none mb-2">
+                        {stat.value}
+                      </p>
+                      <p className="text-[13px] text-white/60 leading-snug">{stat.label}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
+                <div className="mt-10 flex flex-wrap gap-2.5">
+                  {markets.map((m) => (
+                    <span
+                      key={m.name}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13px] text-white/80"
+                    >
+                      <Globe2 className="size-3.5 text-[#8FD3AE]" aria-hidden />
+                      {m.name}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </motion.div>
-          </div>
-        </AnimatedSection>
-      </Section>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-      {/* ── Why Membership Matters ── */}
-      <Section variant="light">
-        <AnimatedSection>
-          <SectionHeader
-            label="Why It Matters"
-            title="Why Membership Matters"
-            color="green"
-            subtitle="Membership with the Forum provides more than just networking — it's a gateway to growth, visibility, and influence in the UK-Pakistan technology corridor. Our members gain practical support, strategic connections, and market insights that accelerate business success and cross-border collaboration. Join today. Connect, grow, and lead the future of UK-Pakistan technology."
-          />
-        </AnimatedSection>
-      </Section>
+      {/* ── APPLY (teaser) ───────────────────────────────────────── */}
+      <section id="apply" className="bg-white py-20 lg:py-28 scroll-mt-24">
+        <div className={PX}>
+          <AnimatedSection>
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              <div>
+                <SectionLabel
+                  label="Ready to join?"
+                  title="Apply for membership"
+                  body="Take the next step toward global growth. Join UPTIB and become part of the supplier pool buyers source from."
+                  color="#2F7549"
+                  hideLine
+                />
+                <div className="flex flex-wrap items-center gap-4">
+                  <ShinyButton href="/contact">Apply now</ShinyButton>
+                  <Button href="/contact" variant="secondary" size="lg">
+                    Book a consultation
+                  </Button>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-b from-white to-[#F8FAFC] p-7 shadow-[0_18px_50px_-24px_rgba(4,120,87,0.25)]">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F7549] mb-6">What happens next</p>
+                <ol className="relative space-y-6">
+                  {/* connecting rail */}
+                  <span className="absolute left-[21px] top-2 bottom-2 w-px bg-[#2F7549]/15" aria-hidden />
+                  {applyChips.map((c, i) => {
+                    const Icon = c.icon;
+                    return (
+                      <li key={c.label} className="relative flex items-center gap-4">
+                        <span className="relative z-[1] inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549] ring-4 ring-white">
+                          <Icon className="size-5" strokeWidth={1.75} aria-hidden />
+                        </span>
+                        <span className="flex-1 text-[15px] font-semibold text-[#16291E]">{c.label}</span>
+                        <span className="text-xs font-bold tabular-nums text-[#2F7549]/35">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
-      {/* ── CTA ── */}
+      {/* ── FAQs (home-page accordion design) ────────────────────── */}
+      <section
+        className="relative z-[1] py-20 lg:py-28 overflow-hidden"
+        style={{
+          background:
+            "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.06), transparent 50%), #F8FAFC",
+        }}
+        aria-labelledby="membership-faq-heading"
+      >
+        <div className={cn("relative", PX)}>
+          <AnimatedSection animation="blur-in">
+            <div className="grid gap-12 lg:grid-cols-[0.85fr_1.6fr] lg:gap-16">
+              <div className="lg:sticky lg:top-28 lg:self-start">
+                <SectionLabel
+                  label="FAQs"
+                  title="Membership questions, answered"
+                  body="What Pakistani textile exporters ask us most about joining UPTIB and reaching buyers worldwide."
+                  color="#2F7549"
+                  as="h2"
+                  hideLine
+                />
+                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]">
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549] text-white">
+                      <HelpCircle className="size-5" aria-hidden />
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold text-[#16291E]">Still have questions?</p>
+                      <p className="text-xs text-[#5A5F72]">Read the full terms or talk to our team.</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+                    <Link href="/contact" className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549]">
+                      Talk to our team
+                      <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                    </Link>
+                    <Link
+                      href="/membership/terms"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5A5F72] hover:text-[#16291E]"
+                    >
+                      Membership terms
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                {faqs.map((item, i) => {
+                  const isOpen = openFaq === i;
+                  const panelId = `membership-faq-panel-${i}`;
+                  const buttonId = `membership-faq-button-${i}`;
+
+                  return (
+                    <div
+                      key={item.q}
+                      className={cn(
+                        "rounded-2xl border transition-colors duration-200",
+                        isOpen
+                          ? "border-[#2F7549]/25 bg-[#2F7549]/[0.04] shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]"
+                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(4,120,87,0.12)]",
+                      )}
+                    >
+                      <h3>
+                        <button
+                          id={buttonId}
+                          type="button"
+                          aria-expanded={isOpen}
+                          aria-controls={panelId}
+                          onClick={() => setOpenFaq(isOpen ? null : i)}
+                          className="flex w-full items-center gap-4 px-4 py-4 text-left sm:px-5"
+                        >
+                          <span
+                            className={cn(
+                              "inline-flex size-9 shrink-0 items-center justify-center rounded-xl text-sm font-bold tabular-nums transition-colors",
+                              isOpen ? "bg-[#2F7549] text-white" : "bg-[#2F7549]/10 text-[#2F7549]",
+                            )}
+                            aria-hidden
+                          >
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+
+                          <span className="flex-1 text-sm font-medium text-[#16291E]">{item.q}</span>
+
+                          <span
+                            className={cn(
+                              "inline-flex size-8 shrink-0 items-center justify-center rounded-full transition-colors",
+                              isOpen ? "bg-[#2F7549] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
+                            )}
+                            aria-hidden
+                          >
+                            <Plus className={cn("size-4 transition-transform duration-200", isOpen && "rotate-45")} />
+                          </span>
+                        </button>
+                      </h3>
+
+                      <div
+                        id={panelId}
+                        role="region"
+                        aria-labelledby={buttonId}
+                        hidden={!isOpen}
+                        className="px-4 pb-5 pl-[4.25rem] pr-12 text-[#5A5F72] leading-relaxed sm:px-5 sm:pl-[4.75rem]"
+                      >
+                        {item.a}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      </section>
+
+      {/* ── BOTTOM CTA (shared GlobalCTA) ────────────────────────── */}
       <GlobalCTA
-        label="Join Today"
-        title="Ready to Join UPTIB?"
-        subtitle="Membership with the Forum provides more than just networking — it's a gateway to growth, visibility, and influence in the UK–Pakistan technology corridor."
-        primaryButtonText="Apply for Membership"
-        primaryButtonLink="/membership#apply"
-        secondaryButtonText="Get in Touch"
+        label="Grow your exports"
+        title="Not sure which tier is right for you?"
+        subtitle="Tell us about your business and our team will help you choose the best fit — and put your products in front of qualified demand worldwide."
+        primaryButtonText="Contact us"
+        primaryButtonLink="/contact"
+        secondaryButtonText="Request guidance"
         secondaryButtonLink="/contact"
       />
     </div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   TIER CARD COMPONENT
-═══════════════════════════════════════════════════════════════ */
-
-function TierCard({
-  tier,
-  index,
-  shouldReduceMotion,
-}: {
-  tier: {
-    name: string;
-    highlight: boolean;
-    description: string;
-    features: string[];
-  };
-  index: number;
-  shouldReduceMotion: boolean | null;
-}) {
-  const tierColors: Record<string, string> = {
-    "Chairman\u2019s Circle Membership": "#047857",
-    "Corporate Membership": "#10B981",
-    "SME / Scale-up Membership": "#047857",
-    "Startup Membership": "#047857",
-    Associates: "#10B981",
-    "Academic Institutions": "#047857",
-    "Individual Membership": "#047857",
-  };
-
-  const color = tierColors[tier.name] || "#047857";
-
-  return (
-    <motion.div
-      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="relative h-full"
-    >
-      <div className="relative h-full bg-white rounded-2xl border border-[#D8D5CF] p-7 flex flex-col shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
-        {/* Premium badge for Chairman's Circle */}
-        {tier.highlight && (
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#047857]/10 border border-[#047857]/20 mb-4 self-start">
-            <Star className="w-3 h-3 text-[#047857]" />
-            <span className="text-[9px] font-bold tracking-[0.15em] uppercase text-[#047857]">Premium</span>
-          </div>
-        )}
-
-        <h3 className="font-heading font-bold text-xl mb-2" style={{ color }}>
-          {tier.name}
-        </h3>
-        <p className="text-base mb-5 leading-relaxed text-[#5A5F72]">
-          {tier.description}
-        </p>
-
-        <div className="h-px mb-5" style={{ background: `linear-gradient(to right, ${color}20, transparent)` }} />
-
-        {tier.features.length > 0 && (
-          <ul className="space-y-3 flex-1 mb-7">
-            {tier.features.map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-2.5 text-base">
-                <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color }} />
-                <span className="text-[#3D4152]">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-
-        {tier.features.length === 0 && <div className="flex-1 mb-7" />}
-
-        {tier.highlight ? (
-          <a
-            href="/membership#apply"
-            className="group/btn relative inline-flex items-center justify-center gap-2.5 w-full px-7 py-3.5 rounded-xl font-heading font-bold text-base text-white bg-[#047857] hover:bg-[#065F46] transition-all duration-300 shadow-sm hover:shadow-md"
-          >
-            Apply Now
-            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform duration-200" />
-          </a>
-        ) : (
-          <a
-            href="/membership#apply"
-            className="inline-flex items-center justify-center gap-2.5 w-full px-7 py-3.5 rounded-xl font-heading font-bold text-base border border-[#D8D5CF] text-[#3D4152] bg-[#F5F4F2] hover:bg-white hover:text-[#1C1F2E] transition-all duration-300"
-          >
-            Apply Now
-          </a>
-        )}
-      </div>
-    </motion.div>
   );
 }

@@ -59,8 +59,8 @@ const disciplinarySteps = [
   { step: "11", title: "Final Verdict", description: "The verdict rendered by the Executive Committee on the appeal(s) shall be final and non-negotiable." },
 ];
 
-const principleColors = ["#047857", "#10B981", "#047857", "#047857", "#10B981", "#047857", "#047857", "#10B981", "#047857"];
-const disciplinaryColors = ["#047857", "#10B981", "#047857", "#047857", "#10B981", "#047857", "#047857", "#10B981", "#047857", "#10B981", "#047857"];
+const principleColors = ["#2F7549", "#3E8F5E", "#2F7549", "#2F7549", "#3E8F5E", "#2F7549", "#2F7549", "#3E8F5E", "#2F7549"];
+const disciplinaryColors = ["#2F7549", "#3E8F5E", "#2F7549", "#2F7549", "#3E8F5E", "#2F7549", "#2F7549", "#3E8F5E", "#2F7549", "#3E8F5E", "#2F7549"];
 
 export default function CodeOfConductPage() {
   const shouldReduceMotion = useReducedMotion();
@@ -94,7 +94,7 @@ export default function CodeOfConductPage() {
       <div className="content-body">
       {/* ââ Summary + Quick Nav â Light section ââââââââââââââââââââââââ */}
       <section className="relative bg-white py-10 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -131,8 +131,8 @@ export default function CodeOfConductPage() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
-                <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-5">Quick Navigation</h3>
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
+                <h3 className="font-heading font-bold text-base text-[#16291E] mb-5">Quick Navigation</h3>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <nav className="space-y-2">
                   {navSections.map((s) => (
@@ -141,7 +141,7 @@ export default function CodeOfConductPage() {
                       onClick={() => scrollToSection(s.id)}
                       className={`w-full text-left px-4 py-3 text-base font-medium transition-all duration-200 border-l-2 rounded-r-lg ${
                         activeSection === s.id
-                          ? "border-[#047857] text-[#047857] bg-[#047857]/[0.08]"
+                          ? "border-[#2F7549] text-[#2F7549] bg-[#2F7549]/[0.08]"
                           : "border-transparent text-[#7A7E8F] hover:text-[#3D4152] hover:border-[#D8D5CF] hover:bg-[#F5F4F2]"
                       }`}
                     >
@@ -157,7 +157,7 @@ export default function CodeOfConductPage() {
 
       {/* ââ 9 Principles â Light alt section âââââââââââââââââââââââââââ */}
       <section id="principles" className="relative py-10 overflow-hidden bg-white">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -192,7 +192,7 @@ export default function CodeOfConductPage() {
                       />
                       <Icon className="relative z-10 w-5 h-5" style={{ color }} strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-2">{item.title}</h3>
+                    <h3 className="font-heading font-bold text-base text-[#16291E] mb-2">{item.title}</h3>
                     <div className="h-px bg-[#D8D5CF] mb-3" />
                     <p className="text-base text-[#7A7E8F] leading-relaxed">{item.description}</p>
                   </motion.div>
@@ -205,7 +205,7 @@ export default function CodeOfConductPage() {
 
       {/* ââ WhatsApp Group Rules â Light section âââââââââââââââââââââââ */}
       <section id="whatsapp-rules" className="relative bg-white py-10 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -220,11 +220,11 @@ export default function CodeOfConductPage() {
                   transition={{ duration: 0.5 }}
                   className="flex items-center gap-3 mb-6"
                 >
-                  <div className="p-3 rounded-xl bg-[#10B981]/10 border border-[#10B981]/20">
-                    <MessageCircle className="w-6 h-6 text-[#10B981]" strokeWidth={1.5} />
+                  <div className="p-3 rounded-xl bg-[#3E8F5E]/10 border border-[#3E8F5E]/20">
+                    <MessageCircle className="w-6 h-6 text-[#3E8F5E]" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-lg text-[#1C1F2E]">Group Communication Policy</h3>
+                    <h3 className="font-heading font-bold text-lg text-[#16291E]">Group Communication Policy</h3>
                     <p className="text-base text-[#7A7E8F]">Applicable to all UPTIB WhatsApp groups and channels</p>
                   </div>
                 </motion.div>
@@ -240,7 +240,7 @@ export default function CodeOfConductPage() {
                     >
                       <span
                         className="text-base font-bold tabular-nums pt-0.5 flex-shrink-0"
-                        style={{ color: "#10B981" }}
+                        style={{ color: "#3E8F5E" }}
                       >
                         {item.number}
                       </span>
@@ -261,7 +261,7 @@ export default function CodeOfConductPage() {
                   >
                     <span
                       className="text-base font-bold tabular-nums pt-0.5 flex-shrink-0"
-                      style={{ color: "#10B981" }}
+                      style={{ color: "#3E8F5E" }}
                     >
                       {item.number}
                     </span>
@@ -275,10 +275,10 @@ export default function CodeOfConductPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-30px" }}
                   transition={{ duration: 0.4, delay: 0.25 }}
-                  className="relative bg-gradient-to-br from-[#047857]/10 to-[#047857]/10 border border-[#047857]/20 rounded-xl p-6 mt-3 overflow-hidden"
+                  className="relative bg-gradient-to-br from-[#2F7549]/10 to-[#2F7549]/10 border border-[#2F7549]/20 rounded-xl p-6 mt-3 overflow-hidden"
                 >
                   <div className="relative">
-                    <AlertTriangle className="w-5 h-5 text-[#047857] mb-3" />
+                    <AlertTriangle className="w-5 h-5 text-[#2F7549] mb-3" />
                     <p className="text-[#5A5F72] text-base leading-relaxed">
                       Violations of these rules may result in removal from the group and further disciplinary action as outlined in the Disciplinary Procedure below.
                     </p>
@@ -292,7 +292,7 @@ export default function CodeOfConductPage() {
 
       {/* ââ Disciplinary Procedure â Light alt section âââââââââââââââââ */}
       <section id="disciplinary" className="relative py-10 overflow-hidden bg-[#F5F4F2]">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -319,7 +319,7 @@ export default function CodeOfConductPage() {
                     </div>
                   </div>
                   <div className="py-6 pl-6 border-l border-[#D8D5CF]">
-                    <h3 className="font-heading font-bold text-base text-[#1C1F2E] mb-2">{item.title}</h3>
+                    <h3 className="font-heading font-bold text-base text-[#16291E] mb-2">{item.title}</h3>
                     <p className="text-base text-[#7A7E8F] leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
@@ -332,7 +332,7 @@ export default function CodeOfConductPage() {
 
       {/* ââ Reporting & Commitment â Light section ââââââââââââââââââââ */}
       <section className="relative bg-white py-10 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -347,12 +347,12 @@ export default function CodeOfConductPage() {
                 transition={{ duration: 0.5 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
                 <div className="flex items-start gap-4 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
-                    <Gavel className="w-5 h-5 text-[#047857]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
+                    <Gavel className="w-5 h-5 text-[#2F7549]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-[#1C1F2E]">Reporting a Concern</h3>
+                  <h3 className="font-heading font-bold text-lg text-[#16291E]">Reporting a Concern</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <p className="text-base text-[#7A7E8F] leading-relaxed mb-5">
@@ -366,7 +366,7 @@ export default function CodeOfConductPage() {
                     "Contact the designated ethics officer directly",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#10B981] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-4 h-4 text-[#3E8F5E] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-base text-[#5A5F72] leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -381,12 +381,12 @@ export default function CodeOfConductPage() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
                 <div className="flex items-start gap-4 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#10B981]/10 border border-[#10B981]/20 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-5 h-5 text-[#10B981]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl bg-[#3E8F5E]/10 border border-[#3E8F5E]/20 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-5 h-5 text-[#3E8F5E]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-[#1C1F2E]">Our Commitment</h3>
+                  <h3 className="font-heading font-bold text-lg text-[#16291E]">Our Commitment</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
                 <ul className="space-y-3">
@@ -399,7 +399,7 @@ export default function CodeOfConductPage() {
                     "Zero tolerance for violations of ethical standards",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-4 h-4 text-[#2F7549] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-base text-[#5A5F72] leading-relaxed">{item}</span>
                     </li>
                   ))}

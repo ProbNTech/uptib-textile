@@ -23,25 +23,25 @@ const guidanceSections = [
   {
     icon: Briefcase,
     title: "Accessing Services",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: "As a member, you have access to a range of services including business networks, mentorship, digital marketing support, business support, and more. Visit the Services section of the website to explore what is available and contact our team for personalised support.",
   },
   {
     icon: GraduationCap,
     title: "Participating in Programmes",
-    accent: "border-[#10B981]",
+    accent: "border-[#3E8F5E]",
     content: "UPTIB runs regular programmes including AI & Tech Programs, Skill Development, and Incubation. Programme applications are announced through our newsletter and events page. Members receive priority access and preferential rates for all programmes.",
   },
   {
     icon: Calendar,
     title: "Events & Networking",
-    accent: "border-[#047857]",
+    accent: "border-[#2F7549]",
     content: "Stay active in the UPTIB community by attending events, roundtables, and trade delegations. Member-exclusive events are marked in the events calendar. We encourage members to actively participate, share their expertise, and build meaningful connections.",
   },
   {
     icon: Banknote,
     title: "Funding & Grants",
-    accent: "border-[#10B981]",
+    accent: "border-[#3E8F5E]",
     content: "Members can apply for funding through our Funding & Grants programmes. Visit the funding page for current opportunities, eligibility criteria, and application guidance. Our team is available to support you through the application process.",
   },
 ];
@@ -73,9 +73,9 @@ export default function MembersGuidancePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="border-t-2 border-[#047857] bg-white rounded p-6"
+                className="border-t-2 border-[#2F7549] bg-white rounded p-6"
               >
-                <span className="text-2xl font-heading font-bold text-[#047857] mb-3 block">
+                <span className="text-2xl font-heading font-bold text-[#2F7549] mb-3 block">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="text-[#3D4152] text-base leading-relaxed">{step}</p>
@@ -103,10 +103,10 @@ export default function MembersGuidancePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className={`bg-white border border-[#D8D5CF] border-l-4 ${section.accent} rounded p-6 hover:border-[#047857]/40 transition-colors duration-300`}
+                  className={`bg-white border border-[#D8D5CF] border-l-4 ${section.accent} rounded p-6 hover:border-[#2F7549]/40 transition-colors duration-300`}
                 >
-                  <Icon className="w-6 h-6 text-[#047857] mb-3" strokeWidth={1.5} />
-                  <h3 className="font-heading font-bold text-[#1C1F2E] text-base mb-2">{section.title}</h3>
+                  <Icon className="w-6 h-6 text-[#2F7549] mb-3" strokeWidth={1.5} />
+                  <h3 className="font-heading font-bold text-[#16291E] text-base mb-2">{section.title}</h3>
                   <div className="h-px bg-[#D8D5CF] mb-3" />
                   <p className="text-[#3D4152] text-base leading-relaxed">{section.content}</p>
                 </motion.div>

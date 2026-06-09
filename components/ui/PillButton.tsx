@@ -12,10 +12,10 @@ export function PillButton({ href, children, variant = "dark" }: PillButtonProps
     "inline-flex items-center gap-2 px-7 py-3 rounded-full text-base font-semibold transition-colors duration-300 shadow-sm";
   const styles =
     variant === "blue"
-      ? "bg-[#047857] text-white hover:bg-[#065F46]"
+      ? "bg-[#2F7549] text-white hover:bg-[#245C3A]"
       : variant === "white"
-      ? "bg-white text-[#1C1F2E] hover:bg-[#10B981] hover:text-white"
-      : "bg-[#1C1F2E] text-white hover:bg-[#047857]";
+      ? "bg-white text-[#16291E] hover:bg-[#3E8F5E] hover:text-white"
+      : "bg-[#16291E] text-white hover:bg-[#2F7549]";
 
   return (
     <Link href={href} className={`${base} ${styles}`}>

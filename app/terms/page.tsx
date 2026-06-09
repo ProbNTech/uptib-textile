@@ -230,10 +230,10 @@ const termsSections = [
 
 /* Section accent colours — cycle through palette */
 const sectionAccents = [
-  "#047857", "#10B981", "#047857", "#047857", "#10B981",
-  "#047857", "#047857", "#10B981", "#047857", "#047857",
-  "#10B981", "#047857", "#047857", "#10B981", "#047857",
-  "#047857", "#10B981",
+  "#2F7549", "#3E8F5E", "#2F7549", "#2F7549", "#3E8F5E",
+  "#2F7549", "#2F7549", "#3E8F5E", "#2F7549", "#2F7549",
+  "#3E8F5E", "#2F7549", "#2F7549", "#3E8F5E", "#2F7549",
+  "#2F7549", "#3E8F5E",
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -283,7 +283,7 @@ export default function TermsPage() {
       <div className="content-body">
       {/* ── Background Notice — Light section ──────────────────────── */}
       <section className="relative bg-white py-10 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -297,11 +297,11 @@ export default function TermsPage() {
                 transition={{ duration: 0.5 }}
                 className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 overflow-hidden shadow-sm"
               >
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
                 <div className="flex items-start gap-4 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center flex-shrink-0">
                     <FileText
-                      className="w-5 h-5 text-[#047857]"
+                      className="w-5 h-5 text-[#2F7549]"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -325,7 +325,7 @@ export default function TermsPage() {
 
       {/* ── Expand / Collapse Controls + Section Nav — Light alt ─── */}
       <section className="relative py-10 overflow-hidden bg-white">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
@@ -335,7 +335,7 @@ export default function TermsPage() {
             <div className="flex flex-wrap gap-3 mb-8">
               <button
                 onClick={expandAll}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#047857]/10 border border-[#047857]/20 text-[#047857] text-base font-semibold hover:bg-[#047857]/20 transition-colors duration-200"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2F7549]/10 border border-[#2F7549]/20 text-[#2F7549] text-base font-semibold hover:bg-[#2F7549]/20 transition-colors duration-200"
               >
                 Expand All
               </button>
@@ -385,7 +385,7 @@ export default function TermsPage() {
                     >
                       {section.number.padStart(2, "0")}
                     </span>
-                    <h3 className="font-heading font-semibold text-[#3D4152] text-base sm:text-base leading-snug group-hover:text-[#1C1F2E] transition-colors duration-200 line-clamp-2">
+                    <h3 className="font-heading font-semibold text-[#3D4152] text-base sm:text-base leading-snug group-hover:text-[#16291E] transition-colors duration-200 line-clamp-2">
                       {section.title}
                     </h3>
                   </motion.button>
@@ -398,7 +398,7 @@ export default function TermsPage() {
 
       {/* ── Accordion Sections — Light background ────── */}
       <section className="relative overflow-hidden bg-[#F5F4F2]">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#10B981]/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3E8F5E]/20 to-transparent" />
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20py-10">
           <AnimatedSection>
@@ -453,7 +453,7 @@ export default function TermsPage() {
                       >
                         {section.number.padStart(2, "0")}
                       </span>
-                      <span className="font-heading font-semibold text-base flex-1 text-[#1C1F2E] transition-colors duration-200">
+                      <span className="font-heading font-semibold text-base flex-1 text-[#16291E] transition-colors duration-200">
                         {section.title}
                       </span>
                       <div
@@ -598,12 +598,12 @@ export default function TermsPage() {
             "linear-gradient(135deg, #0B0F1A 0%, #131942 50%, #0B0F1A 100%)",
         }}
       >
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#047857]/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2F7549]/30 to-transparent" />
         {/* Glow orb */}
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.05]"
           style={{
-            background: "radial-gradient(circle, #047857, transparent 50%)",
+            background: "radial-gradient(circle, #2F7549, transparent 50%)",
           }}
         />
 
@@ -612,13 +612,13 @@ export default function TermsPage() {
             <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#047857]/10 border border-[#047857]/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#2F7549]/10 border border-[#2F7549]/20 flex items-center justify-center">
                     <Mail
-                      className="w-5 h-5 text-[#047857]"
+                      className="w-5 h-5 text-[#2F7549]"
                       strokeWidth={1.5}
                     />
                   </div>
-                  <p className="text-base font-bold tracking-[0.2em] uppercase text-[#047857]">
+                  <p className="text-base font-bold tracking-[0.2em] uppercase text-[#2F7549]">
                     Questions?
                   </p>
                 </div>
@@ -629,7 +629,7 @@ export default function TermsPage() {
                   To contact Us, please email Us at{" "}
                   <a
                     href="mailto:info@ukpaktrade.org.uk"
-                    className="text-[#047857] hover:text-[#6EE7B7] transition-colors"
+                    className="text-[#2F7549] hover:text-[#8FD3AE] transition-colors"
                   >
                     info@ukpaktrade.org.uk
                   </a>{" "}
