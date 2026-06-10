@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="UPTIB logo placeholder">
+  <!-- TODO: replace with final white/mono logo variant -->
+  <rect width="120" height="120" rx="16" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="60" y="58" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF">U</text>
+  <text x="60" y="92" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#6EE7B7">PTIB</text>
+</svg>

@@ -1,297 +1,247 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight } from "lucide-react";
-import { Hero } from "@/components/sections/Hero";
-import { FeatureRow } from "@/components/sections/FeatureRow";
-import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { FeatureList } from "@/components/ui/FeatureList";
-import { MarketTable } from "@/components/ui/MarketTable";
-import { Callout } from "@/components/ui/Callout";
-import { Badge } from "@/components/ui/Badge";
-import { Accordion } from "@/components/ui/Accordion";
-import { CTASection } from "@/components/ui/CTASection";
-import { ProcessSteps } from "@/components/sections/ProcessSteps";
-import { MembershipTable } from "@/components/sections/MembershipTable";
-import { services, serviceBySlug, serviceSlugs } from "@/data/services";
-import { serviceImage, images } from "@/data/images";
+import { CheckCircle2, ShieldCheck, BadgePercent } from "lucide-react";
+import { PageHero } from "@/components/PageHero";
+import { Section } from "@/components/Section";
+import { GlobalCTA } from "@/components/GlobalCTA";
+import { Button } from "@/components/Button";
+import { services, getService } from "@/data/textile";
 
-type Params = { slug: string };
+/* ── Flexible content blocks ── */
+type Block =
+  | { type: "list"; title: string; items: string[] }
+  | { type: "steps"; title: string; items: { step: string; text: string }[] }
+  | { type: "callout"; variant: "qa" | "gsp"; title: string; text: string };
+
+type ServiceDetail = {
+  whatItIs: string;
+  blocks: Block[];
+  secondaryCta?: { label: string; href: string };
+};
+
+const detail: Record<string, ServiceDetail> = {
+  buying: {
+    whatItIs:
+      "For international buyers sourcing finished textiles from Pakistan. Tell us what you need and we find the right factory, control the quality, handle the paperwork and deliver to your market — you deal with one accountable partner.",
+    blocks: [
+      {
+        type: "steps",
+        title: "How it works",
+        items: [
+          { step: "Brief & quote", text: "We capture your requirement in full — product, fabric, thread count/GSM, sizes, quantities, certifications, target price, packaging and delivery date." },
+          { step: "Supplier match", text: "We match your brief to the right manufacturer(s) from our vetted network." },
+          { step: "Sampling & approval", text: "We arrange samples, manage revisions, and secure your written approval before any bulk commitment." },
+          { step: "Price & order", text: "We negotiate competitive pricing without compromising quality, and place the order." },
+          { step: "Quality & delivery", text: "We inspect through production, run pre-shipment QA to your AQL, handle the documentation and coordinate freight to your door." },
+        ],
+      },
+      {
+        type: "list",
+        title: "Ways to work with us",
+        items: [
+          "Trial / single order — test Pakistan, and test us, on one defined project.",
+          "Repeat / programme sourcing — we become your ongoing Pakistan procurement function.",
+          "Quality-assurance only — you have a factory; we provide independent inspection.",
+        ],
+      },
+    ],
+    secondaryCta: { label: "Browse the global market", href: "/global-textile-market" },
+  },
+  outsourcing: {
+    whatItIs:
+      "Your outsourced Pakistan procurement department. We act as a full sourcing house for overseas businesses — vetted factories, sample approval, price negotiation, multi-stage QA to AQL, export documentation and end-to-end logistics. One accountable partner from brief to delivery, anywhere in the world.",
+    blocks: [
+      {
+        type: "steps",
+        title: "The process",
+        items: [
+          { step: "Brief & quote", text: "Full requirement capture — specs, certifications, target price, packaging and delivery date." },
+          { step: "Supplier match", text: "Matched to the right vetted manufacturer(s) for your product and volume." },
+          { step: "Sampling & approval", text: "Samples arranged, revisions managed, written approval secured before bulk." },
+          { step: "Price & order", text: "Competitive pricing negotiated; order placed and confirmed." },
+          { step: "Production monitoring", text: "Inspection at roughly 40–50% completion — catching issues while there's still time to fix them." },
+          { step: "Final quality audit", text: "Pre-shipment inspection to your agreed AQL standard. Nothing ships until it passes." },
+          { step: "Documentation & delivery", text: "Commercial invoices, packing lists, certificates of origin and GSP+ paperwork handled; freight coordinated through to delivery." },
+        ],
+      },
+      {
+        type: "callout",
+        variant: "qa",
+        title: "Quality control isn't a step — it is the product",
+        text: "The most valuable thing we sell is the confidence that what arrives matches what you ordered: checked against your approved sample at every stage, by independent inspectors on the ground in Pakistan.",
+      },
+      {
+        type: "list",
+        title: "Logistics, handled",
+        items: [
+          "Freight coordination (typically FOB Karachi or Port Qasim) with shipment visibility to your market.",
+          "Customs clearance and export documentation.",
+          "Importer & Exporter of Record (IOR/EOR) set-up where required.",
+          "Route-to-market, representation and distribution support.",
+        ],
+      },
+      {
+        type: "callout",
+        variant: "gsp",
+        title: "The GSP+ advantage",
+        text: "Pakistan's preferential trade status gives qualifying textiles duty-free entry into the EU — a direct, recurring cost saving we build into your landed price.",
+      },
+    ],
+    secondaryCta: { label: "See the global market", href: "/global-textile-market" },
+  },
+  marketing: {
+    whatItIs:
+      "Mainly for Pakistani exporters. We make manufacturers visible, credible and reachable to buyers worldwide — and we generate and qualify the global demand that turns into orders.",
+    blocks: [
+      {
+        type: "list",
+        title: "What we do",
+        items: [
+          "Professional profile & branding — your products, capabilities and certifications, packaged for an international audience.",
+          "Market intelligence — global trends, certification requirements, import rules and demand forecasts.",
+          "B2B matchmaking — pre-qualified meetings with buyers, distributors and procurement teams worldwide.",
+          "Digital campaigns — LinkedIn, email and social outreach to decision-makers in your target markets.",
+          "Events — webinars and textile export forums connecting you to global buyers.",
+          "Directory listing — your company in the supplier pool we source from for live orders.",
+          "Market-entry support — compliance, labelling, packaging and customs guidance for each destination.",
+        ],
+      },
+      {
+        type: "callout",
+        variant: "qa",
+        title: "More than a directory listing",
+        text: "Membership puts you in the pool we actually source from on behalf of real buyers — not just a profile, but a route to paying demand.",
+      },
+    ],
+    secondaryCta: { label: "See membership tiers", href: "/membership" },
+  },
+  warehousing: {
+    whatItIs:
+      "Warehousing, e-commerce and Amazon market access for Pakistani exporters. We turn suppliers into brand owners selling directly to consumers in global marketplaces — starting with the UK and Europe and expanding outward.",
+    blocks: [
+      {
+        type: "list",
+        title: "Amazon account creation & services",
+        items: [
+          "Amazon seller account creation and setup.",
+          "Product listing creation and optimisation.",
+          "Amazon store and brand page setup.",
+          "Account management and ongoing support.",
+          "Product image, title and description guidance.",
+          "Support to reach international Amazon customers.",
+        ],
+      },
+      {
+        type: "list",
+        title: "Warehousing & fulfilment",
+        items: [
+          "Secure warehousing and storage close to customers.",
+          "Pick & pack and contract fulfilment.",
+          "Order-to-cash handling.",
+          "Amazon FBA prep and store-and-ship.",
+        ],
+      },
+    ],
+    secondaryCta: { label: "Become a member", href: "/membership" },
+  },
+};
 
 export function generateStaticParams() {
-  return serviceSlugs.map((slug) => ({ slug }));
+  return services.map((s) => ({ slug: s.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const service = serviceBySlug(slug);
-  if (!service) return {};
+  const s = getService(slug);
+  if (!s) return {};
   return {
-    title: service.cardTitle,
-    description: `${service.title}. ${service.summary}`,
-    alternates: { canonical: `/services/${service.slug}` },
+    title: `${s.name} — ${s.headline}`,
+    description: s.summary,
+    alternates: { canonical: `/services/${s.slug}` },
   };
 }
 
-export default async function ServicePage({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = serviceBySlug(slug);
-  if (!service) notFound();
-
-  const heroActions = [
-    { label: service.primaryCta, href: service.primaryHref },
-    ...(service.secondaryCta && service.secondaryHref
-      ? [
-          {
-            label: service.secondaryCta,
-            href: service.secondaryHref,
-            variant: "outline" as const,
-          },
-        ]
-      : []),
-  ];
-
-  const heroHighlights = service.marketRows
-    ?.slice(0, 3)
-    .map((r) => ({ value: r.value, label: r.label }));
+  const s = getService(slug);
+  const d = detail[slug];
+  if (!s || !d) notFound();
 
   return (
     <>
-      <Hero
-        eyebrow={service.eyebrow}
-        title={service.title}
-        description={service.summary}
-        image={serviceImage[service.slug]}
-        actions={heroActions}
-        highlights={heroHighlights}
-      />
+      <PageHero label={s.eyebrow} title={s.headline} subtitle={s.summary} video="banner">
+        <Button href={s.primaryCta.href} variant="primary" size="lg" showArrow>{s.primaryCta.label}</Button>
+      </PageHero>
 
-      {/* What it is — editorial image + copy */}
-      <Section>
-        <FeatureRow
-          eyebrow="What it is"
-          title={service.summary}
-          image={serviceImage[service.slug]}
-        >
-          {service.overview ? (
-            service.overview.map((para) => (
-              <p key={para.slice(0, 24)}>{para}</p>
-            ))
-          ) : (
-            <p>{service.whatItIs}</p>
-          )}
-        </FeatureRow>
-      </Section>
+      <Section variant="light" pattern>
+        <div className="max-w-3xl mb-12">
+          <p className="font-sans text-xs font-bold uppercase tracking-[0.18em] text-[#2F7549] mb-3">What it is</p>
+          <p className="text-[#3D4152] text-lg sm:text-xl leading-relaxed">{d.whatItIs}</p>
+        </div>
 
-      {/* What we do */}
-      <Section background="surface">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <SectionHeading
-              eyebrow="What we do"
-              title="Included in this service"
-            />
-            <FeatureList items={service.whatWeDo} className="mt-6" />
-          </div>
-          <div className="flex flex-col gap-8">
-            {service.extraLists?.map((list) => (
-              <div key={list.title}>
-                <h3 className="text-xl font-semibold text-primary-dark">
-                  {list.title}
-                </h3>
-                <FeatureList items={list.items} className="mt-5" />
-              </div>
-            ))}
-
-            {service.marketplaces ? (
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted">
-                  Marketplaces we support
-                </h3>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {service.marketplaces.map((m) => (
-                    <Badge key={m} tone="blue">
-                      {m}
-                    </Badge>
-                  ))}
+        <div className="space-y-12">
+          {d.blocks.map((block, bi) => {
+            if (block.type === "list") {
+              return (
+                <div key={bi}>
+                  <h2 className="font-heading font-extrabold text-[#16291E] text-2xl mb-6">{block.title}</h2>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3">
+                    {block.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-[#3E8F5E] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#3D4152]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            }
+            if (block.type === "steps") {
+              return (
+                <div key={bi}>
+                  <h2 className="font-heading font-extrabold text-[#16291E] text-2xl mb-6">{block.title}</h2>
+                  <ol className="space-y-4">
+                    {block.items.map((it, i) => (
+                      <li key={it.step} className="flex items-start gap-4 rounded-card border border-[#E5E7EB] bg-[#F8FAF9] p-5">
+                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-[#2F7549] text-white font-heading font-bold text-sm flex items-center justify-center">
+                          {i + 1}
+                        </span>
+                        <div>
+                          <p className="font-heading font-bold text-[#16291E]">{it.step}</p>
+                          <p className="text-[#3D4152] mt-1 leading-relaxed">{it.text}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              );
+            }
+            const CIcon = block.variant === "gsp" ? BadgePercent : ShieldCheck;
+            return (
+              <div key={bi} className="rounded-card bg-[#15402A] text-white p-8 flex items-start gap-5">
+                <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
+                  <CIcon className="w-6 h-6 text-[#8FD3AE]" />
+                </div>
+                <div>
+                  <h3 className="font-heading font-bold text-white text-lg mb-2">{block.title}</h3>
+                  <p className="text-white/80 leading-relaxed">{block.text}</p>
                 </div>
               </div>
-            ) : null}
-          </div>
+            );
+          })}
         </div>
       </Section>
 
-      {/* Market context (E-commerce) */}
-      {service.marketRows ? (
-        <Section background="surface" spacing="tight">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <SectionHeading
-              eyebrow="The opportunity"
-              title="Why this matters now"
-            />
-            <MarketTable rows={service.marketRows} />
-          </div>
-        </Section>
-      ) : null}
-
-      {/* Benefits */}
-      {service.benefits ? (
-        <Section background={service.marketRows ? "white" : "surface"}>
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <SectionHeading
-              eyebrow="What you get"
-              title={
-                service.slug === "buying-house"
-                  ? "Quality you can rely on"
-                  : "The value to you"
-              }
-            />
-            <FeatureList items={service.benefits} columns={1} />
-          </div>
-        </Section>
-      ) : null}
-
-      {/* Phased programme (Marketing engine) */}
-      {service.phases ? (
-        <Section background="surface">
-          <div className="flex flex-col gap-10">
-            <SectionHeading
-              eyebrow="Our marketing engine"
-              title="From 'never heard of us' to live buyer conversations"
-              description="A structured, three-phase programme that moves you toward paying UK buyers."
-            />
-            <div className="grid gap-6 md:grid-cols-3">
-              {service.phases.map((phase) => (
-                <div
-                  key={phase.name}
-                  className="flex flex-col rounded-2xl border border-line bg-white p-7 shadow-card"
-                >
-                  <Badge tone="blue">{phase.name}</Badge>
-                  <h3 className="mt-4 text-lg font-semibold text-primary-dark">
-                    {phase.title}
-                  </h3>
-                  <p className="mt-2 text-body">{phase.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      ) : null}
-
-      {/* Numbered process (Buying House, E-commerce) */}
-      {service.process ? (
-        <Section background={service.phases ? "white" : "surface"}>
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <SectionHeading
-              eyebrow={service.processEyebrow ?? "How it works"}
-              title={service.processTitle ?? "Source, sample, inspect, deliver"}
-            />
-            <ProcessSteps steps={service.process} />
-          </div>
-        </Section>
-      ) : null}
-
-      {/* QA / GSP+ / margin / membership callout */}
-      {service.callout ? (
-        <Section spacing="tight">
-          <Callout tone={service.callout.tone} title={service.callout.title}>
-            {service.callout.body}
-          </Callout>
-        </Section>
-      ) : null}
-
-      {/* Membership (Marketing & Sales) */}
-      {service.membership ? (
-        <Section background="surface">
-          <div className="flex flex-col gap-10">
-            <SectionHeading
-              eyebrow="Membership"
-              title="Choose the package that fits"
-              description="Pricing to be confirmed — shown as “on request” until set."
-            />
-            <MembershipTable tiers={service.membership} />
-          </div>
-        </Section>
-      ) : null}
-
-      {/* Ways to work with us (Buying House) */}
-      {service.waysToWork ? (
-        <Section>
-          <div className="flex flex-col gap-10">
-            <SectionHeading eyebrow="Engagement" title="Ways to work with us" />
-            <div className="grid gap-6 sm:grid-cols-3">
-              {service.waysToWork.map((way) => (
-                <div
-                  key={way.title}
-                  className="rounded-2xl border border-line bg-white p-6 shadow-card"
-                >
-                  <h3 className="font-semibold text-primary-dark">
-                    {way.title}
-                  </h3>
-                  <p className="mt-2 text-body">{way.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      ) : null}
-
-      {/* FAQs */}
-      {service.faqs ? (
-        <Section background={service.waysToWork ? "surface" : "white"}>
-          <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-            <SectionHeading
-              eyebrow="FAQs"
-              title={
-                service.slug === "buying-house"
-                  ? "Questions from buyers"
-                  : "Questions from exporters"
-              }
-            />
-            <Accordion items={service.faqs} />
-          </div>
-        </Section>
-      ) : null}
-
-      <CTASection
-        image={images.london}
-        title="Ready to get started?"
-        buttons={[
-          { label: service.primaryCta, href: service.primaryHref },
-          ...(service.secondaryCta && service.secondaryHref
-            ? [{ label: service.secondaryCta, href: service.secondaryHref }]
-            : [{ label: "Talk to us", href: "/contact?topic=service" }]),
-        ]}
+      <GlobalCTA
+        label={s.name}
+        title={`Let's talk about ${s.name.toLowerCase()}`}
+        subtitle={s.summary}
+        primaryButtonText={s.primaryCta.label}
+        primaryButtonLink={s.primaryCta.href}
+        secondaryButtonText={d.secondaryCta?.label}
+        secondaryButtonLink={d.secondaryCta?.href}
+        image="/image/textile/products/apparel-accessories.jpg"
       />
-
-      <Section spacing="tight">
-        <p className="text-sm font-semibold uppercase tracking-wider text-muted">
-          Other services
-        </p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          {services
-            .filter((s) => s.slug !== service.slug)
-            .map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-sm font-medium text-body transition-colors hover:border-primary/40 hover:text-primary"
-              >
-                {s.cardTitle}
-                <ArrowRight className="size-3.5" aria-hidden />
-              </Link>
-            ))}
-        </div>
-      </Section>
     </>
   );
 }

@@ -1,0 +1,146 @@
+UK-PAKISTAN TECHNOLOGY COUNCIL
+
+
+Arbitration Framework Policy
+Version 1.0 — Dispute Resolution under the Arbitration Act 1996 (UK)
+134-136 Westbourne Terrace, London, W2 6QB, United Kingdom
+
+
+
+
+1. Introduction & Scope
+This policy establishes the UPTECH Arbitration Framework for resolving disputes arising in technology
+agreements, SaaS platforms, digital assets, software development contracts, and intellectual property
+transactions.
+
+The purpose of the Framework is to provide a fast, confidential, and enforceable dispute resolution process that
+leverages technology while complying with UK law (Arbitration Act 1996) and international arbitration standards.
+
+This Framework applies to all contracts entered into by UPTECH involving technology services, software
+licensing, SaaS, and platform agreements, as well as disputes between UPTECH and clients, vendors,
+technology partners, and investors where contracts reference arbitration.
+
+Applies To:
+    •   Technology services & software licensing
+    •   SaaS & platform agreements
+    •   Digital asset & blockchain disputes
+    •   Intellectual property transactions
+    •   Disputes with clients, vendors, and partners
+    •   Investor disputes (where contracts reference arbitration)
+
+Excluded: Employment disputes (separate HR policy) and regulatory/statutory enforcement matters.
+
+2. Legal Basis
+2.1. Arbitration Act 1996 (UK)
+     The primary governing legislation for all arbitration proceedings under the UPTECH Framework.
+2.2. LCIA Rules
+     London Court of International Arbitration Rules applied for structured and professional conduct of arbitration.
+2.3. New York Convention (1958)
+     Ensures arbitration awards are binding, final, and enforceable internationally across 170+ countries.
+
+3. Key Principles
+.    Party Autonomy
+     Parties can select arbitrators, agree on rules, and decide procedures within the framework.
+.    Expert Arbitrators
+     Arbitrators with technical and industry expertise are appointed to ensure informed decisions.
+.    Speed & Efficiency
+     Digital processes aim to resolve disputes within 30–90 days.
+.    Confidentiality
+     All proceedings, submissions, and awards are confidential.
+
+
+
+
+UK-Pakistan Technology Council (UPTECH)                                                                            Page 1
+.   Global Enforceability
+    Awards designed to be enforceable internationally under recognised conventions.
+
+4. Arbitration Acceptance Agreement
+Under the Arbitration Act 1996 — United Kingdom. Parties sign a formal Arbitration Acceptance Agreement
+covering the following key provisions:
+
+    •   Agreement to arbitrate all disputes
+    •   Governing law: Laws of England and Wales
+    •   Arbitration procedure under the Arbitration Act 1996
+    •   Appointment of independent arbitrator(s)
+    •   Seat and venue: London, England (or agreed alternative)
+    •   Confidentiality of all proceedings and awards
+    •   Binding and enforceable decision
+    •   Arbitrator authority to allocate costs
+    •   Waiver of court proceedings (except enforcement)
+    •   Voluntary acceptance by both parties
+
+5. Arbitration Procedure
+5.1. Initiating Arbitration
+    •   Party raises dispute using the UPTECH digital arbitration platform
+    •   Include: nature of the dispute, relevant contracts, relief requested
+    •   Framework administrator acknowledges receipt within 3 business days
+    •   Preliminary review verifies eligibility and scope
+5.2. Arbitrator Appointment
+    •   Single arbitrator for simple disputes (< £250,000)
+    •   Three-member tribunal for complex or high-value disputes
+    •   Arbitrators selected from UPTECH’s Technical Arbitration Panel or mutually agreed
+    •   Appointment timeline: 7–14 days
+    •   All arbitrators must disclose potential conflicts before appointment
+5.3. Case Management & Evidence
+    •   Procedural timetable set in consultation with parties
+    •   Submission deadlines for claims, counterclaims, and evidence
+    •   Electronic evidence admissible: code, logs, screenshots, blockchain records
+    •   Witness statements and expert testimony presented virtually or at hearings
+    •   All filings digitally managed via the UPTECH secure platform
+5.4. Hearing & Award
+    •   Hearings: document-only, virtual (secure video), hybrid, or in-person
+    •   Arbitrator issues final written award with findings, reasoning, and remedies
+    •   Timeline: 30–60 days after final hearing
+    •   Awards are final under the Arbitration Act 1996
+    •   Internationally enforceable under the New York Convention
+
+6. Arbitrator Appointment Timeline
+    Initial party selection attempt — 7 days
+    UPTECH Committee appointment (if no agreement) — 5 days
+    Conflict-of-interest disclosures — 3 days
+    Final appointment confirmation — 2 days
+
+
+
+
+UK-Pakistan Technology Council (UPTECH)                                                               Page 2
+7. Cost Schedule
+Arbitrator Fees:
+    • Single Arbitrator (simple dispute): £3,000 – £10,000
+    • Three-Member Tribunal (complex/high-value): £10,000 – £30,000
+    • Hourly Rate (additional services): £250 – £500/hr
+
+Platform & Admin Fees:
+    •   Digital platform usage fee: £500 flat per case
+    •   Additional document storage: £50 per GB
+    •   Administrative fee: £250 – £1,000
+    •   Scheduling & case management: £100 per party
+
+8. Digital Arbitration Platform
+.   Secure Access
+    Two-factor authentication (2FA) with role-based access for Claimant, Respondent, Arbitrator, and Administrator.
+.   Case Dashboard
+    Notifications, case summary with status and timeline, document repository, and encrypted messaging system.
+.   Digital Filing
+    Submit notices, claims, defences, and evidence in PDF or approved digital formats with automatic timestamping.
+.   Virtual Hearings
+    Integrated video conferencing for virtual and hybrid hearing sessions with secure platform-provided links.
+.   Automated Reminders
+    Real-time alerts for deadlines, hearings, new messages, and procedural updates.
+.   Security & Compliance
+    All communications encrypted. GDPR and UK data protection compliant. Access restricted to authorised users.
+
+9. Contact & Support
+24/7 technical support is available via the platform, chat, email, or phone. The UPTECH Arbitration Committee
+provides procedural guidance and handles all enquiries regarding arbitration proceedings.
+
+UK-Pakistan Technology Council (UPTECH)
+134-136 Westbourne Terrace, London, W2 6QB, United Kingdom
+Email: info@uptechcouncil.org
+
+
+
+
+UK-Pakistan Technology Council (UPTECH)                                                                          Page 3
+

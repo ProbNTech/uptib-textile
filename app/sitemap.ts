@@ -1,39 +1,44 @@
-import type { MetadataRoute } from "next";
-import { site } from "@/data/site";
-import { productSlugs } from "@/data/products";
-import { serviceSlugs } from "@/data/services";
+import type { MetadataRoute } from 'next';
+import { products, services } from '@/data/textile';
+
+const BASE_URL = 'https://www.ukpaktrade.org.uk';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = site.url;
-  const staticRoutes = [
-    "",
-    "/about",
-    "/products",
-    "/services",
-    "/directory",
-    "/contact",
+  const now = new Date();
+
+  const staticRoutes: { path: string; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
+    { path: '', changeFrequency: 'weekly', priority: 1.0 },
+    { path: '/about', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/about/founder', changeFrequency: 'yearly', priority: 0.5 },
+    { path: '/about/management-team', changeFrequency: 'yearly', priority: 0.5 },
+    { path: '/about/mission', changeFrequency: 'yearly', priority: 0.5 },
+    { path: '/about/vision', changeFrequency: 'yearly', priority: 0.5 },
+    { path: '/about/objectives', changeFrequency: 'yearly', priority: 0.5 },
+    { path: '/products', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/services', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/global-textile-market', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/membership', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/membership/terms', changeFrequency: 'yearly', priority: 0.4 },
+    { path: '/news', changeFrequency: 'weekly', priority: 0.7 },
+    { path: '/faqs', changeFrequency: 'monthly', priority: 0.5 },
+    { path: '/contact', changeFrequency: 'monthly', priority: 0.6 },
+    { path: '/members-guidance', changeFrequency: 'yearly', priority: 0.4 },
+    { path: '/code-of-conduct', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/marketing-agreement', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/cookies', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/gdpr', changeFrequency: 'yearly', priority: 0.3 },
+    { path: '/excellence-management-terms', changeFrequency: 'yearly', priority: 0.3 },
   ];
 
-  const routes: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
-    url: `${base}${path}`,
-    changeFrequency: "monthly",
-    priority: path === "" ? 1 : 0.8,
+  const productRoutes = products.map((p) => ({ path: `/products/${p.slug}`, changeFrequency: 'monthly' as const, priority: 0.7 }));
+  const serviceRoutes = services.map((s) => ({ path: `/services/${s.slug}`, changeFrequency: 'monthly' as const, priority: 0.7 }));
+
+  return [...staticRoutes, ...productRoutes, ...serviceRoutes].map((r) => ({
+    url: `${BASE_URL}${r.path}`,
+    lastModified: now,
+    changeFrequency: r.changeFrequency,
+    priority: r.priority,
   }));
-
-  for (const slug of productSlugs) {
-    routes.push({
-      url: `${base}/products/${slug}`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    });
-  }
-  for (const slug of serviceSlugs) {
-    routes.push({
-      url: `${base}/services/${slug}`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    });
-  }
-
-  return routes;
 }

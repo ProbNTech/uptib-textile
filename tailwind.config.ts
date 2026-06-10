@@ -1,84 +1,159 @@
 import type { Config } from "tailwindcss";
 
-/**
- * Brand tokens are declared as CSS variables in app/globals.css (:root)
- * and mapped here so Tailwind utilities (e.g. bg-primary, text-secondary)
- * resolve to the palette: Blue (primary) and Green (secondary/tertiary) are
- * co-equal lead colours; Red (danger) is reserved for form validation.
- */
 const config: Config = {
   content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./data/**/*.{ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./data/**/*.{js,ts}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "1.25rem",
-      screens: {
-        "2xl": "1280px",
-      },
-    },
     extend: {
       colors: {
+        background: "var(--bg-default)",
+        foreground: "var(--text-primary)",
+        card: "var(--bg-white)",
+        "card-foreground": "var(--text-primary)",
+        popover: "var(--bg-white)",
+        "popover-foreground": "var(--text-primary)",
+        muted: "var(--bg-alt)",
+        "muted-foreground": "var(--text-muted)",
+        border: "var(--border-default)",
+        input: "var(--border-default)",
+        ring: "var(--primary)",
         primary: {
-          DEFAULT: "rgb(var(--color-primary) / <alpha-value>)",
-          dark: "rgb(var(--color-primary-dark) / <alpha-value>)",
-          light: "rgb(var(--color-primary-light) / <alpha-value>)",
+          DEFAULT: "#2F7549",
+          hover: "#245C3A",
+          foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "rgb(var(--color-secondary) / <alpha-value>)",
-          dark: "rgb(var(--color-secondary-dark) / <alpha-value>)",
-          light: "rgb(var(--color-secondary-light) / <alpha-value>)",
-        },
-        tertiary: {
-          DEFAULT: "rgb(var(--color-tertiary) / <alpha-value>)",
-          dark: "rgb(var(--color-tertiary-dark) / <alpha-value>)",
-          light: "rgb(var(--color-tertiary-light) / <alpha-value>)",
+          DEFAULT: "var(--bg-alt)",
+          foreground: "var(--text-primary)",
         },
         accent: {
-          DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
-          dark: "rgb(var(--color-accent-dark) / <alpha-value>)",
+          DEFAULT: "var(--bg-alt)",
+          foreground: "var(--text-primary)",
+          green: "#3E8F5E",
+          "green-hover": "#2F7549",
         },
-        danger: {
-          DEFAULT: "rgb(var(--color-danger) / <alpha-value>)",
-          dark: "rgb(var(--color-danger-dark) / <alpha-value>)",
+        /* Natural green brand scale (from logo waves) — PRIMARY lead */
+        green: {
+          50: "#EEF6F0",
+          100: "#D7EADD",
+          200: "#B3D7C0",
+          500: "#4FA873",
+          600: "#3C8F5E",
+          700: "#2F7549",
+          800: "#245C3A",
+          900: "#15402A",
         },
-        ink: "rgb(var(--color-ink) / <alpha-value>)",
-        body: "rgb(var(--color-body) / <alpha-value>)",
-        muted: "rgb(var(--color-muted) / <alpha-value>)",
-        line: "rgb(var(--color-line) / <alpha-value>)",
-        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        /* Muted blue — minor accent only (from logo emblem); never the lead */
+        blue: {
+          500: "#3A6BA5",
+          700: "#2A5689",
+        },
+        destructive: {
+          DEFAULT: "#DC2626",
+          foreground: "#FFFFFF",
+        },
+        /* Editorial palette tokens — soft green-tinted neutrals */
+        editorial: {
+          bg: "#F1F5F1",
+          "bg-alt": "#E8EFE9",
+          rule: "#DCE2DC",
+          dark: "#16291E",
+        },
+        "color-1": "hsl(var(--color-1))",
+        "color-2": "hsl(var(--color-2))",
+        "color-3": "hsl(var(--color-3))",
+        "color-4": "hsl(var(--color-4))",
+        "color-5": "hsl(var(--color-5))",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-sans)", "sans-serif"],
+        sans: ["var(--font-montserrat)", "system-ui", "sans-serif"],
+        heading: ["var(--font-lato)", "system-ui", "sans-serif"],
       },
-      borderRadius: {
-        "2xl": "1rem",
-        "3xl": "1.5rem",
-      },
-      boxShadow: {
-        card: "0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.06)",
-        "card-hover":
-          "0 2px 4px rgba(15, 23, 42, 0.06), 0 16px 40px rgba(15, 23, 42, 0.10)",
+      fontSize: {
+        // ─── Header / Navigation ───────────────────────────────────
+        "nav-label":  ["10px", { lineHeight: "1", letterSpacing: "0.13em" }],   // taglines, CTA buttons, micro-labels
+        "nav-item":   ["15px", { lineHeight: "1.2", letterSpacing: "0.12em" }], // top-bar nav links (Home, About…)
+        "nav-cta":    ["11px", { lineHeight: "1", letterSpacing: "0.14em" }],   // "Become a Member" button text
+
+        // ─── Mega-panel dropdown ───────────────────────────────────
+        "panel-eyebrow":  ["11px", { lineHeight: "1", letterSpacing: "0.2em" }],  // "Who we are", "Section index"
+        "panel-title":    ["32px", { lineHeight: "1.1", letterSpacing: "-0.01em" }], // Left-col section title
+        "panel-item":     ["17px", { lineHeight: "1.3", letterSpacing: "0" }],    // Centre-col item label
+        "panel-desc":     ["14px", { lineHeight: "1.7", letterSpacing: "0" }],    // Centre-col item description
+        "panel-quote":    ["22px", { lineHeight: "1.3", letterSpacing: "-0.01em" }], // Right-col pull-quote
+        "panel-body":     ["14px", { lineHeight: "1.7", letterSpacing: "0" }],    // Right-col body copy
+        "panel-index":    ["12px", { lineHeight: "1", letterSpacing: "0" }],      // "01", "02" index numbers
+
+        // ─── Mobile drawer ─────────────────────────────────────────
+        "mobile-group":   ["13px", { lineHeight: "1.2", letterSpacing: "0.16em" }], // Group accordion labels
+        "mobile-item":    ["14px", { lineHeight: "1.3", letterSpacing: "0" }],    // Sub-item labels
+        "mobile-desc":    ["12px", { lineHeight: "1.6", letterSpacing: "0" }],    // Sub-item descriptions
+        "mobile-cta":     ["11px", { lineHeight: "1", letterSpacing: "0.14em" }], // Drawer CTA buttons
       },
       maxWidth: {
-        prose: "70ch",
+        content: "1200px",
+        container: "var(--container-width)",
+      },
+      borderRadius: {
+        sm: "var(--radius-sm)",
+        md: "var(--radius-md)",
+        lg: "var(--radius-lg)",
+        xl: "var(--radius-xl)",
+        "2xl": "var(--radius-2xl)",
+        card: "var(--radius-card)",
+        pill: "var(--radius-pill)",
+        full: "9999px",
+      },
+      spacing: {
+        section: "var(--space-section)",
+        "section-lg": "var(--space-section-lg)",
+        "section-xl": "var(--space-section-xl)",
+      },
+      boxShadow: {
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        xl: "var(--shadow-xl)",
+        "2xl": "var(--shadow-2xl)",
+        "glow-primary": "var(--shadow-glow-primary)",
+        "glow-hover": "var(--shadow-glow-hover)",
       },
       keyframes: {
-        "fade-up": {
-          from: { opacity: "0", transform: "translateY(12px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
+        "shimmer-sweep": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(47, 117, 73, 0)" },
+          "50%": { boxShadow: "0 0 20px 4px rgba(47, 117, 73, 0.1)" },
+        },
+        rainbow: {
+          "0%": { "background-position": "0%" },
+          "100%": { "background-position": "200%" },
+        },
+        "ticker-scroll": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
       animation: {
-        "fade-up": "fade-up 0.5s ease-out both",
+        shimmer: "shimmer-sweep 2s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
+        "float-slow": "float 8s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        rainbow: "rainbow var(--speed, 2s) infinite linear",
+        "ticker-scroll": "ticker-scroll 35s linear infinite",
       },
     },
   },
   plugins: [],
 };
-
 export default config;

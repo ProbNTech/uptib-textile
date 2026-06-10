@@ -1,0 +1,21 @@
+{
+  "name": "Pakistan Textile Partners | UPTIB Textile",
+  "short_name": "UPTIB Textile",
+  "description": "Connecting Pakistan's textile manufacturing to global buyers worldwide — bedding, apparel, sportswear and healthcare textiles.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2F7549",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
