@@ -628,6 +628,7 @@ export default function MeetingSpacePage() {
         primaryButtonLink="/membership"
         secondaryButtonText="Contact Us"
         secondaryButtonLink="/contact"
+        image="/image/private-label.jpg"
       />
     </div>
   );

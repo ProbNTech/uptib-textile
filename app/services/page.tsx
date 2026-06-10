@@ -68,6 +68,7 @@ export default function ServicesHub() {
         primaryButtonLink="/contact"
         secondaryButtonText="Become a member"
         secondaryButtonLink="/membership"
+        image="/image/sportswear-h.jpg"
       />
     </>
   );

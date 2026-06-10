@@ -27,7 +27,7 @@ export interface Segment {
 export const segments: Segment[] = [
   {
     title: "Home Textiles & Linens",
-    image: "/image/textile/products/bedding-linen.jpg",
+    image: "/image/bedding-h.jpg",
     icon: BedDouble,
     tags: "Bed linen, Towels, Terry",
     desc: "Pakistan's #1 export across Europe",
@@ -37,7 +37,7 @@ export const segments: Segment[] = [
   },
   {
     title: "Apparel & Denim",
-    image: "/image/textile/products/apparel-accessories.jpg",
+    image: "/image/apparel-h.jpg",
     icon: Shirt,
     tags: "Knits, Woven, Denim",
     desc: "Vertically integrated, cost-competitive apparel",
@@ -47,7 +47,7 @@ export const segments: Segment[] = [
   },
   {
     title: "Sportswear & Activewear",
-    image: "/image/textile/products/sportswear-activewear.jpg",
+    image: "/image/sportswear-h.jpg",
     icon: Activity,
     tags: "Performance, Gym, Teamwear",
     desc: "Fast-growing OEM & private-label capability",
@@ -57,7 +57,7 @@ export const segments: Segment[] = [
   },
   {
     title: "Healthcare & Medical Textiles",
-    image: "/image/textile/products/healthcare-textile.jpg",
+    image: "/image/healthcare-h.jpg",
     icon: Stethoscope,
     tags: "Surgical, PPE, Nonwovens",
     desc: "Emerging, higher-margin technical frontier",
@@ -93,7 +93,7 @@ export const regions: Region[] = [
     name: "North America",
     short: "North America",
     flags: ["us", "ca"],
-    image: "/image/textile/products/apparel-accessories.jpg",
+    image: "/image/north-america.jpg",
     tagline: "The largest apparel market on earth — plus a maturing Canadian opening",
     overview:
       "The United States is the world's largest apparel market, where Pakistan already ranks among the top-10 textile suppliers. Canada offers an attractive, less-contested opening — it imports most of its textiles and apparel and rewards reliable home-textile, denim and sportswear partners.",
@@ -134,7 +134,7 @@ export const regions: Region[] = [
     name: "United Kingdom",
     short: "UK",
     flags: ["gb"],
-    image: "/image/textile/products/bedding-linen.jpg",
+    image: "/image/uk.jpg",
     tagline: "A long-standing, relationship-rich destination across every category",
     overview:
       "The UK remains one of Pakistan's most important export destinations, built on preferential access and decades-old sourcing relationships. Demand is strong across apparel, home textiles, sportswear and healthcare textiles — with sustainability and ethical sourcing now central purchasing criteria.",
@@ -165,7 +165,7 @@ export const regions: Region[] = [
     name: "Continental Europe",
     short: "Europe",
     flags: ["de", "fr", "it", "es", "nl", "pl"],
-    image: "/image/textile/manufacturers.jpg",
+    image: "/image/europe.jpg",
     tagline: "Germany, France, Italy, Spain, the Netherlands and Poland anchor the demand",
     overview:
       "For Pakistani exporters, Europe's largest opportunities concentrate in Germany, France, Italy, Spain, the Netherlands and Poland — together accounting for the majority of European textile and apparel imports. The European sportswear market alone was valued at ~$62.7B in 2025 and is forecast to grow rapidly. GSP+ duty-free access into the EU is a genuine competitive edge.",
@@ -200,7 +200,7 @@ export const regions: Region[] = [
     name: "Middle East (GCC)",
     short: "Middle East",
     flags: ["sa", "ae", "qa", "kw"],
-    image: "/image/textile/products/healthcare-textile.jpg",
+    image: "/image/middle-east.jpg",
     tagline: "Import-led Gulf markets, with Saudi Arabia and the UAE in the lead",
     overview:
       "The GCC imports a large share of its textiles, apparel, sportswear and healthcare products. The UAE serves as both a consumer market and a re-export hub, while Saudi Arabia offers the largest single GCC opportunity — driven by population growth, healthcare investment and retail expansion.",

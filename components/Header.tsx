@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { TopTicker } from "@/components/TopTicker";
 import {
@@ -99,6 +100,13 @@ export function Header() {
   const openTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const shouldReduceMotion = useReducedMotion();
+  const pathname = usePathname();
+
+  /* Active when the link's href is the current page (or a parent of it). */
+  const isLinkActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+  /* A dropdown group is active when any of its sub-pages is the current page. */
+  const isGroupActive = (items: { href: string }[]) => items.some((i) => isLinkActive(i.href));
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10);
@@ -154,10 +162,10 @@ export function Header() {
         <div className="px-5 sm:px-8 lg:px-12 xl:px-8 2xl:px-16">
           <div className="flex items-center justify-between gap-6 h-[70px] sm:h-[80px] lg:h-[90px]">
 
-            {/* ── Left: Logo only ──────────────────────────────── */}
+            {/* ── Left: Logo + wordmark ────────────────────────── */}
             <Link
               href="/"
-              className="flex items-center flex-shrink-0 group"
+              className="flex items-center gap-0 flex-shrink-0 group"
               aria-label="UPTIB Textile — Home"
             >
               <Image
@@ -167,6 +175,13 @@ export function Header() {
                 height={158}
                 className="h-[52px] sm:h-[60px] lg:h-[72px] w-auto object-contain"
                 priority
+              />
+              <Image
+                src="/image/wordmark.png"
+                alt="Pakistan Textile Partners"
+                width={329}
+                height={64}
+                className="hidden sm:block h-[26px] lg:h-[32px] w-auto object-contain -ml-3 sm:-ml-4"
               />
             </Link>
 
@@ -178,7 +193,9 @@ export function Header() {
               <Link
                 href="/"
                 onMouseEnter={handleLeave}
-                className="relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] text-[#15402A] hover:text-[#15402A] transition-colors duration-150"
+                className={`relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] transition-colors duration-150 ${
+                  isLinkActive("/") ? "text-[#2F7549]" : "text-[#0A0A0A] hover:text-[#2F7549]"
+                }`}
               >
                 HOME
               </Link>
@@ -190,7 +207,9 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       onMouseEnter={handleLeave}
-                      className="relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] text-[#15402A] hover:text-[#15402A] transition-colors duration-150 whitespace-nowrap"
+                      className={`relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] transition-colors duration-150 whitespace-nowrap ${
+                        isLinkActive(item.href) ? "text-[#2F7549]" : "text-[#0A0A0A] hover:text-[#2F7549]"
+                      }`}
                     >
                       {(item.displayLabel ?? item.label).toUpperCase()}
                     </Link>
@@ -198,6 +217,8 @@ export function Header() {
                 }
 
                 const isActive = openGroup === item.label;
+                const groupActive = isGroupActive(item.items);
+                const highlight = isActive || groupActive;
                 return (
                   <button
                     key={item.label}
@@ -209,9 +230,9 @@ export function Header() {
                       relative h-full px-2 2xl:px-3.5 flex items-center gap-1
                       font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em]
                       transition-colors duration-150 cursor-default select-none whitespace-nowrap
-                      ${isActive
-                        ? "text-[#15402A]"
-                        : "text-[#15402A] hover:text-[#15402A]"}
+                      ${highlight
+                        ? "text-[#2F7549]"
+                        : "text-[#0A0A0A] hover:text-[#2F7549]"}
                     `}
                   >
                     {(item.displayLabel ?? item.label).toUpperCase()}
@@ -226,9 +247,9 @@ export function Header() {
                     </svg>
                     <span
                       className={`
-                        absolute bottom-0 left-2 right-2 h-[2px] bg-[#15402A]
+                        absolute bottom-0 left-2 right-2 h-[2px] bg-[#2F7549]
                         transition-opacity duration-150
-                        ${isActive ? "opacity-100" : "opacity-0"}
+                        ${highlight ? "opacity-100" : "opacity-0"}
                       `}
                     />
                   </button>
@@ -415,7 +436,7 @@ export function Header() {
               <div className="px-6 py-5 border-b-2 border-[#0A0A0A] flex items-center justify-between flex-shrink-0">
                 <Link
                   href="/"
-                  className="flex items-center gap-2.5"
+                  className="flex items-center gap-0"
                   onClick={() => setIsMobileOpen(false)}
                 >
                   <Image
@@ -424,6 +445,13 @@ export function Header() {
                     width={120}
                     height={126}
                     className="h-[44px] w-auto object-contain"
+                  />
+                  <Image
+                    src="/image/wordmark.png"
+                    alt="Pakistan Textile Partners"
+                    width={329}
+                    height={64}
+                    className="h-[22px] w-auto object-contain -ml-2.5"
                   />
                 </Link>
                 <button

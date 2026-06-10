@@ -85,7 +85,6 @@ export default function BoardOfAdvisors() {
           className="text-center mb-14 lg:mb-16"
         >
           <div className="flex items-center gap-3 mb-4 justify-center">
-            <div className="w-8 h-[3px] rounded-full bg-[#2F7549]" />
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549]">
               Leadership
             </p>

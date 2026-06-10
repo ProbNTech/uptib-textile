@@ -15,8 +15,8 @@ export function Footer() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/image/footer/newukimage.jpeg"
-            alt="London Skyline at Night"
+            src="/image/container-ship-unloading-commercial-dock-dusk-generated-by-ai.jpg.jpeg"
+            alt="Container ship unloading at a commercial dock at dusk"
             fill
             className="object-cover object-center"
             sizes="100vw"
@@ -35,13 +35,20 @@ export function Footer() {
               {/* Column 1: Logo + Description + Follow Us */}
               <div className="md:col-span-2 lg:col-span-4">
                 <Link href="/" className="inline-flex items-center mb-5 group">
-                  <span className="inline-flex items-center justify-center rounded-xl bg-white px-4 py-3 shadow-sm group-hover:scale-105 transition-transform duration-300">
+                  <span className="inline-flex items-center gap-0 rounded-xl bg-white px-4 py-3 shadow-sm group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/image/main-logo.png"
                       alt="Pakistan Textile Partners logo"
                       width={150}
                       height={158}
                       className="h-[64px] w-auto object-contain"
+                    />
+                    <Image
+                      src="/image/wordmark.png"
+                      alt="Pakistan Textile Partners"
+                      width={329}
+                      height={64}
+                      className="h-[30px] w-auto object-contain -ml-3.5"
                     />
                   </span>
                 </Link>

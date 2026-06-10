@@ -9,15 +9,17 @@ import {
   ArrowUpRight,
   Globe2,
   ShieldCheck,
-  Handshake,
-  BadgePercent,
   Leaf,
   Award,
   Recycle,
-  ScrollText,
   Plus,
   HelpCircle,
   PackageCheck,
+  Globe,
+  Users,
+  Hash,
+  Flower2,
+  type LucideIcon,
 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -32,20 +34,20 @@ const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 
 /* Why source through UPTIB */
 const whyUptib = [
-  { icon: Globe2, title: "A vetted global network", desc: "Profiled Pakistani manufacturers across every category, matched to buyers worldwide." },
-  { icon: ShieldCheck, title: "Quality on the ground", desc: "Independent, multi-stage inspection to your agreed AQL — not just the factory's word." },
-  { icon: Handshake, title: "One accountable partner", desc: "A single point of contact from first enquiry to final delivery, anywhere in the world." },
-  { icon: BadgePercent, title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles, built into your price." },
+  { icon: Globe2, title: "A vetted global network", desc: "Pre-vetted Pakistani manufacturers across every category, matched to buyers worldwide." },
+  { icon: ShieldCheck, title: "Quality at every step", desc: "Independent, multi-stage inspection on your agreed AQL — not just at the factory gate." },
+  { icon: Users, title: "One accountable partner", desc: "A single point of contact from first sample to final delivery, anywhere in the world." },
+  { icon: Award, title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles. Built into your price." },
 ];
 
 /* Sustainability & compliance certifications */
-const certifications = [
-  { code: "GOTS", note: "Global Organic Textile Standard" },
-  { code: "OEKO-TEX", note: "Tested for harmful substances" },
-  { code: "BCI", note: "Better Cotton Initiative" },
-  { code: "Sedex", note: "Ethical & social audit" },
-  { code: "WRAP", note: "Responsible production" },
-  { code: "ISO", note: "Quality management" },
+const certifications: { code: string; note: string; icon: LucideIcon }[] = [
+  { code: "GOTS", note: "Certifies organic textiles", icon: Leaf },
+  { code: "OEKO-TEX", note: "Tests for harmful substances", icon: Hash },
+  { code: "BCI", note: "Better Cotton Initiative", icon: Flower2 },
+  { code: "Sedex", note: "Ethical trade verified", icon: Users },
+  { code: "WRAP", note: "Responsible production", icon: Globe },
+  { code: "ISO", note: "Quality management systems", icon: ShieldCheck },
 ];
 
 /* Products-specific FAQs */
@@ -90,6 +92,39 @@ const heroFacts = [
   { icon: Award, value: "Certified", label: "GOTS · OEKO-TEX · WRAP · ISO" },
 ];
 
+/* Product card images for the products page (override the shared data images) */
+const productImages: Record<string, string> = {
+  "bedding-linen": "/image/bedding-p.jpg",
+  "apparel-accessories": "/image/apparel-p.jpg",
+  "sportswear-activewear": "/image/sportswear-p.jpg",
+  "healthcare-textile": "/image/healthcare-p.jpg",
+};
+
+/* Category chips (presentation-only — distinct from data `applications`) */
+const categoryChips: Record<string, string[]> = {
+  "bedding-linen": ["Hotels & hospitality", "White & dyed textiles", "Cotton & blends"],
+  "apparel-accessories": ["Tops & bottoms", "High-street fashion", "Workwear & uniforms"],
+  "sportswear-activewear": ["Sports & fitnesswear", "Team uniforms", "Active & lifestyle"],
+  "healthcare-textile": ["Patient & provider apparel", "Care textiles & linens", "Medical textiles"],
+};
+
+/* Small text-chip row used across the category cards */
+function FeatureChips({ slug }: { slug: string }) {
+  const chips = categoryChips[slug] ?? [];
+  return (
+    <div className="flex flex-wrap gap-2">
+      {chips.map((c) => (
+        <span
+          key={c}
+          className="inline-flex items-center rounded-full bg-[#EEF6F0] px-2.5 py-1 text-[11px] font-medium text-[#2F7549]"
+        >
+          {c}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function ProductsClient() {
   const shouldReduceMotion = useReducedMotion();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -99,9 +134,10 @@ export default function ProductsClient() {
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <PageHero
         label="Products"
+        labelClassName="text-white"
         title="The textiles Pakistan exports to the world"
         subtitle="Four categories where Pakistani manufacturing is strongest and global demand is highest — bedding & linen, apparel, sportswear and healthcare textiles, sourced and delivered with one accountable partner."
-        image="/image/hero-bg/crane-lifting-shipping-containers-seaport.jpg.jpeg"
+        image="/image/hero-bg/pexels-cottonbro-6580549.jpg"
       >
         <div className="flex flex-wrap items-center gap-4">
           <ShinyButton href="/contact">Request a quote</ShinyButton>
@@ -139,17 +175,25 @@ export default function ProductsClient() {
       {/* ── CATEGORIES ───────────────────────────────────────────── */}
       <section id="categories" className="bg-white py-20 lg:py-28 scroll-mt-24">
         <div className={PX}>
+          {/* Header */}
           <AnimatedSection animation="blur-in">
-            <SectionLabel
-              label="The four categories"
-              title="What's in the range"
-              body="Each category is a proven Pakistani strength matched to live global demand. Open one to see what's included, the facts and how to source it."
-              color="#2F7549"
-              hideLine
-            />
+            <div className="mb-10 max-w-2xl lg:mb-12">
+              <div className="mb-4 flex items-center gap-3">
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549]">The four categories</p>
+                <span className="h-px w-10 bg-[#2F7549]/40" aria-hidden />
+              </div>
+              <h2 className="mb-4 font-heading font-extrabold text-4xl sm:text-5xl leading-[1.1] text-[#16291E]">
+                What&apos;s in the range
+              </h2>
+              <p className="text-[#5A5F72] text-base leading-relaxed">
+                Each category is an export Pakistani strength matched to global demand. Open one to see what&apos;s
+                included, the facts and how to source it.
+              </p>
+            </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+          {/* 4-column card grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((p, index) => {
               const Icon = p.icon;
               return (
@@ -162,39 +206,33 @@ export default function ProductsClient() {
                 >
                   <Link
                     href={`/products/${p.slug}`}
-                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#3E8F5E]/50 hover:shadow-[0_28px_60px_-28px_rgba(4,120,87,0.35)]"
+                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm"
                   >
                     {/* image */}
-                    <div className="relative aspect-[16/10] overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <Image
-                        src={p.image}
+                        src={productImages[p.slug] ?? p.image}
                         alt={p.name}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
-                      <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#2F7549]">
-                        <Icon className="size-3.5" strokeWidth={2} aria-hidden />
-                        {p.name}
+                      {/* icon · number · name pill */}
+                      <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur px-2.5 py-1.5 shadow-sm">
+                        <Icon className="size-3.5 text-[#2F7549]" strokeWidth={2} aria-hidden />
+                        <span className="text-[10px] font-extrabold tabular-nums text-[#2F7549]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-[10px] font-bold uppercase tracking-wide text-[#16291E]">{p.name}</span>
                       </span>
                     </div>
                     {/* body */}
-                    <div className="flex flex-1 flex-col p-7">
-                      <h3 className="font-heading font-bold text-[#16291E] text-2xl mb-2.5">{p.headline}</h3>
-                      <p className="text-[#5A5F72] leading-relaxed flex-1">{p.short}</p>
-                      <div className="mt-5 flex flex-wrap gap-2">
-                        {p.applications.slice(0, 3).map((a) => (
-                          <span
-                            key={a}
-                            className="inline-flex items-center rounded-full bg-[#EEF6F0] px-3 py-1 text-xs font-medium text-[#2F7549]"
-                          >
-                            {a}
-                          </span>
-                        ))}
-                      </div>
-                      <span className="mt-6 inline-flex items-center gap-1.5 font-semibold text-[#2F7549] transition-all group-hover:gap-2.5">
-                        Explore {p.name} <ArrowUpRight className="w-4 h-4" />
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="mb-2 font-heading font-bold text-lg leading-snug text-[#16291E]">{p.headline}</h3>
+                      <p className="mb-4 text-sm text-[#5A5F72] leading-relaxed">{p.short}</p>
+                      <FeatureChips slug={p.slug} />
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549]">
+                        Explore {p.name} <ArrowUpRight className="size-4" />
                       </span>
                     </div>
                   </Link>
@@ -206,11 +244,12 @@ export default function ProductsClient() {
       </section>
 
       {/* ── WHY SOURCE THROUGH UPTIB ─────────────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
+      <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
-            <div className="grid gap-12 lg:grid-cols-[1fr_2.6fr] lg:gap-16 xl:gap-20">
-              <div className="lg:sticky lg:top-28 lg:self-start lg:max-w-sm">
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.55fr] lg:gap-16 xl:gap-20">
+              {/* Left: copy + decorative image */}
+              <div>
                 <SectionLabel
                   label="Why UPTIB"
                   title="Product is only half the story"
@@ -222,9 +261,22 @@ export default function ProductsClient() {
                   Great textiles still need a partner who can vouch for the factory, guarantee the quality and get the
                   goods to your market. That is what we do — across all four categories.
                 </p>
+
+                <div className="relative mt-10 hidden lg:block">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                    <Image
+                      src="/image/map.png"
+                      alt="Global reach of Pakistani textile exports"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 0px, 33vw"
+                    />
+                  </div>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-9">
+              {/* Right: 2×2 value cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-7">
                 {whyUptib.map((b, index) => {
                   const Icon = b.icon;
                   return (
@@ -236,10 +288,11 @@ export default function ProductsClient() {
                       transition={{ duration: 0.45, delay: index * 0.06 }}
                       className="rounded-2xl border border-[#E5E7EB] bg-white p-7 shadow-sm"
                     >
-                      <span className="inline-flex size-12 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549] mb-5">
-                        <Icon className="size-5" strokeWidth={1.75} aria-hidden />
+                      <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#2F7549]/10 text-[#2F7549] mb-6">
+                        <Icon className="size-6" strokeWidth={1.75} aria-hidden />
                       </span>
-                      <h3 className="font-heading font-bold text-[16px] text-[#16291E] mb-2 leading-snug">{b.title}</h3>
+                      <h3 className="font-heading font-bold text-lg text-[#16291E] leading-snug">{b.title}</h3>
+                      <div className="mt-2.5 mb-4 h-0.5 w-8 rounded-full bg-[#2F7549]" />
                       <p className="text-sm text-[#5A5F72] leading-relaxed">{b.desc}</p>
                     </motion.div>
                   );
@@ -251,7 +304,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── SUSTAINABILITY & COMPLIANCE ──────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-[#F8FAF9] py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -259,11 +312,16 @@ export default function ProductsClient() {
                 <SectionLabel
                   label="Responsible by default"
                   title="Sustainability runs through all of it"
-                  body="Across every category we work with factories carrying the certifications global buyers increasingly require — and can prioritise organic cotton, recycled materials and transparent, audited supply chains."
                   color="#2F7549"
                   hideLine
                 />
-                <div className="flex flex-wrap gap-3">
+                <div className="-mt-4 mb-6 h-1 w-16 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E]" />
+                <p className="mb-7 max-w-md text-base sm:text-lg leading-relaxed text-[#5A5F72]">
+                  Across every category we work with factories carrying the certifications global
+                  buyers increasingly require — and can prioritise organic cotton, recycled materials
+                  and full traceability on request.
+                </p>
+                <div className="flex flex-col items-start gap-3">
                   <span className="inline-flex items-center gap-2 rounded-full bg-[#EEF6F0] px-4 py-2 text-sm font-semibold text-[#2F7549]">
                     <Leaf className="size-4" aria-hidden /> Organic cotton
                   </span>
@@ -271,21 +329,29 @@ export default function ProductsClient() {
                     <Recycle className="size-4" aria-hidden /> Recycled materials
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-full bg-[#EEF6F0] px-4 py-2 text-sm font-semibold text-[#2F7549]">
-                    <ScrollText className="size-4" aria-hidden /> Audited supply chains
+                    <ShieldCheck className="size-4" aria-hidden /> Audited supply chains
                   </span>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {certifications.map((c) => (
-                  <div
-                    key={c.code}
-                    className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAF9] p-5 text-center transition-colors hover:border-[#3E8F5E]/50"
-                  >
-                    <p className="font-heading font-extrabold text-[#16291E] text-lg leading-none">{c.code}</p>
-                    <p className="mt-2 text-[11px] leading-snug text-[#5A5F72]">{c.note}</p>
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
+                {certifications.map((c) => {
+                  const Icon = c.icon;
+                  return (
+                    <div
+                      key={c.code}
+                      className="flex flex-col items-center rounded-2xl border border-[#E5E7EB] bg-white px-4 py-7 text-center shadow-sm"
+                    >
+                      <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#2F7549]/10 text-[#2F7549]">
+                        <Icon className="size-6" strokeWidth={1.75} aria-hidden />
+                      </span>
+                      <p className="mt-5 font-heading font-extrabold text-[#16291E] text-lg leading-none">
+                        {c.code}
+                      </p>
+                      <p className="mt-2 text-[12px] leading-snug text-[#5A5F72]">{c.note}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </AnimatedSection>
@@ -302,9 +368,12 @@ export default function ProductsClient() {
             backgroundSize: "48px 48px",
           }}
         />
+        {/* TRIAL: decorative globe — revert if not kept */}
+        <Image src="/image/globe.png" alt="" aria-hidden width={560} height={560} className="pointer-events-none select-none absolute -right-24 top-1/2 -translate-y-1/2 w-[340px] lg:w-[520px] h-auto opacity-[0.16]" />
         <div className={cn("relative", PX)}>
           <AnimatedSection>
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Top: heading + button (left) · horizontal stat strip (right) */}
+            <div className="grid gap-10 lg:grid-cols-[0.85fr_1.4fr] lg:gap-16 lg:items-center">
               <div>
                 <SectionLabel
                   label="Where it ships"
@@ -320,21 +389,30 @@ export default function ProductsClient() {
               </div>
 
               <div>
-                <div className="grid grid-cols-2 gap-x-8 gap-y-10">
-                  {homeStats.map((stat) => (
-                    <div key={stat.label} className="border-l-2 border-[#3E8F5E]/40 pl-5">
-                      <p className="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-none mb-2">
+                {/* Horizontal stat strip */}
+                <div className="grid grid-cols-2 gap-y-8 sm:grid-cols-4 sm:gap-y-0">
+                  {homeStats.map((stat, i) => (
+                    <div
+                      key={stat.label}
+                      className={cn(
+                        "px-0 sm:px-6 first:pl-0",
+                        i > 0 && "sm:border-l sm:border-white/15",
+                      )}
+                    >
+                      <p className="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-none">
                         {stat.value}
                       </p>
-                      <p className="text-[13px] text-white/60 leading-snug">{stat.label}</p>
+                      <p className="mt-3 text-[13px] text-white/55 leading-snug">{stat.label}</p>
                     </div>
                   ))}
                 </div>
-                <div className="mt-10 flex flex-wrap gap-2.5">
+
+                {/* Destination chips directly below the stats */}
+                <div className="mt-10 flex flex-wrap gap-2.5 border-t border-white/10 pt-8">
                   {markets.map((m) => (
                     <span
                       key={m.name}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13px] text-white/80"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[13px] font-medium text-white/85 transition-colors hover:border-[#8FD3AE]/50 hover:bg-white/[0.08]"
                     >
                       <Globe2 className="size-3.5 text-[#8FD3AE]" aria-hidden />
                       {m.name}
@@ -461,6 +539,7 @@ export default function ProductsClient() {
         primaryButtonLink="/contact"
         secondaryButtonText="Global textile market"
         secondaryButtonLink="/global-textile-market"
+        image="/image/apparel-h.jpg"
       />
     </div>
   );

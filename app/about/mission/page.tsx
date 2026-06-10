@@ -33,7 +33,7 @@ export default function MissionPage() {
         label="Our Mission"
         title="Mission"
         subtitle="Our mission is to transform Pakistan into a thriving tech hub. By forging connections with global experts and harnessing diverse resources, we're setting the stage for a tech-driven future."
-        image="/image/banners/banner116.png"
+        image="/image/banners/banner116.jpg"
       >
         <div className="flex flex-wrap items-center gap-4">
           <ShinyButton href="/membership#apply">Join UPTIB</ShinyButton>
@@ -120,6 +120,7 @@ export default function MissionPage() {
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Our Objectives"
         secondaryButtonLink="/about/objectives"
+        image="/image/hero-bg/pexels-waqas-ilyas-81841622-36740614.jpg"
       />
     </div>
   );

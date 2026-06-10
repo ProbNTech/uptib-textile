@@ -5,10 +5,10 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { products } from "@/data/textile";
 
 const productImages: Record<string, string> = {
-  "bedding-linen": "/image/bedding.jpg",
-  "apparel-accessories": "/image/apparel.jpg",
-  "sportswear-activewear": "/image/sportswear.jpg",
-  "healthcare-textile": "/image/healthcare.png",
+  "bedding-linen": "/image/bedding-v1.jpg",
+  "apparel-accessories": "/image/apparels-v1.jpg",
+  "sportswear-activewear": "/image/sprtswear-v1.jpg",
+  "healthcare-textile": "/image/healthcare-v1.jpg",
 };
 
 /* Short card taglines — concise, matching the showcase layout */

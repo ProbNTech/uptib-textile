@@ -758,6 +758,7 @@ export default function FrameworkClient() {
   primaryButtonLink = "/contact"
   secondaryButtonText = "Back to Overview"
   secondaryButtonLink = "/arbitration"
+  image = "/image/exporters-and-sellers.jpg"
     />
     </div >
   );

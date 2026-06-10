@@ -294,7 +294,7 @@ export default function MembershipClient() {
                     )}
                   >
                     {tier.featured && (
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#3E8F5E] text-[#0E2E1E] text-[11px] font-bold tracking-wide">
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#3E8F5E] text-white text-[11px] font-bold tracking-wide">
                         <Star className="w-3.5 h-3.5" /> Most Popular
                       </span>
                     )}
@@ -463,6 +463,7 @@ export default function MembershipClient() {
                   color="#8FD3AE"
                   light
                   hideLine
+                  bodyClassName="!text-white/90"
                 />
                 <Button href="/global-textile-market" variant="glass" size="lg" showArrow>
                   Explore global reach
@@ -476,7 +477,7 @@ export default function MembershipClient() {
                       <p className="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-none mb-2">
                         {stat.value}
                       </p>
-                      <p className="text-[13px] text-white/60 leading-snug">{stat.label}</p>
+                      <p className="text-[13px] text-white/90 leading-snug">{stat.label}</p>
                     </div>
                   ))}
                 </div>
@@ -484,7 +485,7 @@ export default function MembershipClient() {
                   {markets.map((m) => (
                     <span
                       key={m.name}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13px] text-white/80"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13px] text-white/90"
                     >
                       <Globe2 className="size-3.5 text-[#8FD3AE]" aria-hidden />
                       {m.name}
@@ -667,6 +668,7 @@ export default function MembershipClient() {
         primaryButtonLink="/contact"
         secondaryButtonText="Request guidance"
         secondaryButtonLink="/contact"
+        image="/image/first-time-exporter.jpg"
       />
     </div>
   );

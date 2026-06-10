@@ -59,13 +59,23 @@ export default function ContactPage() {
       <section className="relative z-[2] w-full overflow-hidden bg-[#0a1410] min-h-[520px] md:min-h-[560px] lg:min-h-[600px] flex items-center">
         {/* Background image */}
         <Image
-          src="/image/hero-bg/contact-hero-background.jpg"
+          src="/image/hero-bg/pexels-jan-van-der-wolf-11680885-29298932.jpg"
           alt=""
           fill
           priority
           quality={95}
           sizes="100vw"
           className="object-cover object-center"
+        />
+
+        {/* Full-hero dark overlay — left-weighted for content legibility */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-[1]"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(8,20,16,0.92) 0%, rgba(8,20,16,0.78) 38%, rgba(8,20,16,0.5) 68%, rgba(8,20,16,0.3) 100%)",
+          }}
         />
 
         {/* Content */}
@@ -87,7 +97,7 @@ export default function ContactPage() {
               Let&apos;s start a{" "}
               <span className="text-[#3E8F5E]">conversation</span>
             </h1>
-            <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-md mb-10">
+            <p className="text-white/95 text-base md:text-lg leading-relaxed max-w-md mb-10">
               Whether you have a question, need assistance, or want to explore opportunities — we&apos;re here to help.
             </p>
 
@@ -105,7 +115,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-heading font-bold text-white text-sm leading-tight">{b.title}</p>
-                    <p className="text-white/60 text-xs mt-1 leading-snug max-w-[130px]">{b.desc}</p>
+                    <p className="text-white/90 text-xs mt-1 leading-snug max-w-[130px]">{b.desc}</p>
                   </div>
                 </div>
               ))}

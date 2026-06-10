@@ -485,6 +485,7 @@ export default function ManagementTeamPage() {
         primaryButtonLink="/membership"
         secondaryButtonText="Code of Conduct"
         secondaryButtonLink="/code-of-conduct"
+        image="/image/textile/exporters.jpg"
       />
     </div>
   );

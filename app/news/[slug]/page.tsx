@@ -113,6 +113,7 @@ export default async function ArticlePage({ params }: Props) {
         primaryButtonLink="/contact"
         secondaryButtonText="Browse products"
         secondaryButtonLink="/products"
+        image="/image/apparels-v1.jpg"
       />
     </>
   );

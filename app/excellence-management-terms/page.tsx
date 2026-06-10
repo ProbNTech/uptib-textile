@@ -148,6 +148,7 @@ export default function ExcellenceManagementTermsPage() {
         subtitle="For questions about these terms, contact us at info@ukpaktrade.org.uk."
         primaryButtonText="Contact Us"
         primaryButtonLink="/contact"
+        image="/image/bedding-v1.jpg"
       />
     </div>
   );

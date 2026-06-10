@@ -194,11 +194,6 @@ export default function WhatWeDoCards({
         <div className="mb-8 lg:mb-10">
           {eyebrow && (
             <div className="flex items-center gap-3 mb-3">
-              <span
-                className="block w-12 h-[3px] rounded-full"
-                style={{ background: accentColor }}
-                aria-hidden="true"
-              />
               <p
                 className="text-xs sm:text-sm font-bold uppercase tracking-[0.22em]"
                 style={{ color: accentColor }}

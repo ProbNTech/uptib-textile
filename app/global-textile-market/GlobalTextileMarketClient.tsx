@@ -26,6 +26,11 @@ import {
   PieChart,
   ChevronLeft,
   ChevronRight,
+  Leaf,
+  Megaphone,
+  Handshake,
+  ClipboardCheck,
+  Info,
 } from "lucide-react";
 
 // ─── Icons cycled across each region's three headline stats ──────────────────
@@ -33,6 +38,9 @@ const statIcons = [BarChart3, Trophy, PieChart];
 
 // ─── Icons for the "Why buyers choose Pakistan" advantages (order matches data) ─
 const advantageIcons = [Sprout, Layers, Factory, ShieldCheck, BadgeDollarSign, Coins];
+
+// ─── Icons for the exporter-playbook steps (order matches `entrySteps`) ───────
+const playbookIcons = [ClipboardCheck, Leaf, TrendingUp, Megaphone, Globe, Handshake];
 
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -156,7 +164,7 @@ function MarketHero() {
           >
             <a
               href="/services"
-              className="group inline-flex items-center justify-center gap-2 rounded-md bg-[#3E8F5E] px-7 py-3.5 text-base font-semibold text-[#052e22] transition-all duration-300 hover:bg-[#6FC79A]"
+              className="group inline-flex items-center justify-center gap-2 rounded-md bg-[#3E8F5E] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#6FC79A]"
             >
               Explore Services
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -232,7 +240,7 @@ function ExportPotential() {
             </p>
             <a
               href="#regions"
-              className="group mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-[#3E8F5E] px-7 py-3.5 text-base font-semibold text-[#052e22] transition-all duration-300 hover:bg-[#2F7549] hover:text-white"
+              className="group mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-[#3E8F5E] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#2F7549]"
             >
               See Full Potential
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -303,7 +311,6 @@ function ExportFootprint() {
           {/* Left — intro */}
           <AnimatedSection animation="slide-right">
             <div className="inline-flex items-center gap-2 mb-5">
-              <span className="h-px w-7 bg-[#3E8F5E]" />
               <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#2F7549]">
                 Explore Data
               </span>
@@ -871,8 +878,7 @@ export default function GlobalTextileMarketClient() {
             {/* Left — title block */}
             <AnimatedSection animation="slide-right" className="lg:col-span-4">
               <div className="inline-flex items-center gap-2 mb-5">
-                <span className="h-px w-7 bg-[#3E8F5E]" />
-                <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#2F7549]">
+                  <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#2F7549]">
                   Competitive Landscape
                 </span>
               </div>
@@ -925,74 +931,51 @@ export default function GlobalTextileMarketClient() {
       </section>
 
       {/* ── Market-entry playbook ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#0B3A2C]">
-        {/* Dotted texture */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.5]"
-          style={{
-            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)",
-            backgroundSize: "22px 22px",
-          }}
-        />
+      <section className="relative bg-white">
+        <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            {/* Left — playbook points */}
+            <div className="lg:col-span-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
+              {entrySteps.map((s, i) => {
+                const Icon = playbookIcons[i] ?? ShieldCheck;
+                return (
+                  <AnimatedSection key={s.title} delay={(i % 3) * 0.08}>
+                    <div>
+                      <div className="flex items-center gap-2.5 mb-2.5">
+                        <Icon className="w-5 h-5 shrink-0 text-[#3E8F5E]" strokeWidth={1.7} aria-hidden />
+                        <h3 className="font-heading font-bold text-[#0F2C22] text-base leading-snug">
+                          {s.title}
+                        </h3>
+                      </div>
+                      <p className="text-sm text-[#6b7280] leading-relaxed">{s.desc}</p>
+                    </div>
+                  </AnimatedSection>
+                );
+              })}
+            </div>
 
-        {/* Heading */}
-        <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20 pt-12 lg:pt-14">
-          <AnimatedSection>
-            <div className="max-w-3xl">
-              <span className="inline-flex items-center gap-2 rounded-md border border-[#3E8F5E]/30 bg-[#3E8F5E]/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#8FD3AE]">
-                Exporter Playbook
-              </span>
-              <h2 className="mt-5 font-heading font-extrabold text-white text-2xl sm:text-3xl lg:text-[2.2rem] leading-tight">
+            {/* Right — title block */}
+            <AnimatedSection animation="slide-left" className="lg:col-span-4">
+              <div className="inline-flex items-center gap-2 mb-5">
+                <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#2F7549]">
+                  Exporter Playbook
+                </span>
+              </div>
+              <h2 className="font-heading font-extrabold text-[#0F2C22] text-3xl sm:text-4xl lg:text-[2.6rem] leading-[1.08] tracking-tight">
                 How exporters win the next decade
               </h2>
-              <p className="mt-3 text-white/70 text-base sm:text-lg leading-relaxed">
+              <p className="mt-5 text-base leading-relaxed text-[#3D4152]">
                 Our playbook helps Pakistani exporters scale with clarity, compliance, and confidence.
               </p>
-            </div>
-          </AnimatedSection>
-        </div>
-
-        {/* Numbered columns — full-width band, 1px dividers via gap */}
-        <div className="relative mt-9 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-white/10 border-t border-white/10">
-          {entrySteps.map((s, i) => (
-            <AnimatedSection
-              key={s.title}
-              delay={(i % 6) * 0.05}
-              className="relative bg-[#0B3A2C]"
-            >
-              <div className="relative flex h-full flex-col px-5 lg:px-6 pt-6 pb-16">
-                <div className="relative z-10">
-                  <span className="font-heading font-extrabold text-3xl text-[#4ade80] leading-none">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-3.5 font-heading font-bold text-white leading-snug">{s.title}</h3>
-                  <p className="mt-2 text-sm text-white/60 leading-relaxed">{s.desc}</p>
-                </div>
-
-                {/* Faint footer image */}
-                <div className="absolute inset-x-0 bottom-0 h-14 pointer-events-none">
-                  <Image
-                    src={s.image}
-                    alt=""
-                    fill
-                    aria-hidden
-                    className="object-cover opacity-[0.14]"
-                    sizes="(max-width: 1024px) 50vw, 17vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B3A2C] via-[#0B3A2C]/60 to-transparent" />
-                </div>
-              </div>
+              <p className="mt-7 flex items-start gap-2 text-sm text-[#9aa0a6]">
+                <Info className="h-4 w-4 shrink-0 mt-0.5 text-[#2F7549]" />
+                <span>
+                  <span className="font-semibold text-[#3D4152]">Source:</span> Pakistan Export
+                  Market Report 2026–2030. Figures are indicative; refresh before final launch.
+                </span>
+              </p>
             </AnimatedSection>
-          ))}
-        </div>
-
-        <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20 py-6">
-          <AnimatedSection delay={0.2}>
-            <p className="text-white/40 text-sm flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              Source: Pakistan Export Market Report 2026–2030. Figures are indicative; refresh before final launch.
-            </p>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
@@ -1004,6 +987,7 @@ export default function GlobalTextileMarketClient() {
         primaryButtonLink="/contact"
         secondaryButtonText="Grow your exports"
         secondaryButtonLink="/membership"
+        image="/image/sprtswear-v1.jpg"
       />
     </main>
   );

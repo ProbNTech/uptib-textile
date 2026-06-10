@@ -1,15 +1,20 @@
 {
-  "name": "UK-Pakistan Tech Forum | UPTECH",
-  "short_name": "UPTECH",
-  "description": "A strategic platform strengthening technology, innovation, and digital trade between the United Kingdom and Pakistan.",
+  "name": "Pakistan Textile Partners | UPTIB Textile",
+  "short_name": "UPTIB Textile",
+  "description": "Connecting Pakistan's textile manufacturing to global buyers worldwide — bedding, apparel, sportswear and healthcare textiles.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0B1220",
-  "theme_color": "#1E40AF",
+  "background_color": "#ffffff",
+  "theme_color": "#2F7549",
   "icons": [
     {
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

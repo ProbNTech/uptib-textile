@@ -240,6 +240,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         primaryButtonLink={s.primaryCta.href}
         secondaryButtonText={d.secondaryCta?.label}
         secondaryButtonLink={d.secondaryCta?.href}
+        image="/image/textile/products/apparel-accessories.jpg"
       />
     </>
   );

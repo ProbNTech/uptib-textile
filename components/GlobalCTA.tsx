@@ -74,8 +74,8 @@ export function GlobalCTA({
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
           {/* Blend the photo into the emerald panel */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#15402A] via-[#15402A]/45 to-transparent" />
-          <div className="absolute inset-0 lg:hidden bg-[#15402A]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#15402A]/70 via-[#15402A]/8 to-transparent" />
+          <div className="absolute inset-0 lg:hidden bg-[#15402A]/12" />
         </div>
       </div>
     </section>

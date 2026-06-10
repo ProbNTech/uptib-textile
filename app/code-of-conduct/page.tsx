@@ -421,6 +421,7 @@ export default function CodeOfConductPage() {
         primaryButtonLink="/contact"
         secondaryButtonText="Apply for Membership"
         secondaryButtonLink="/membership#apply"
+        image="/image/bedding-h.jpg"
       />
     </div>
   );

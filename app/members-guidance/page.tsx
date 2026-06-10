@@ -125,6 +125,7 @@ export default function MembersGuidancePage() {
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Contact Us"
         secondaryButtonLink="/contact"
+        image="/image/hero-bg/pexels-jan-van-der-wolf-11680885-29298932.jpg"
       />
     </div>
   );

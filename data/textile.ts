@@ -30,6 +30,9 @@ export type ProductCategory = {
     marketSize: string;
     certifications: string;
   };
+  demandDrivers: { title: string; desc: string }[]; // "What's driving demand" — market trends
+  strengths: string[];    // "Why Pakistan leads here" — competitive advantages
+  strengthsNote?: string; // optional callout under the strengths (e.g. brands supplied)
 };
 
 export type Service = {
@@ -104,6 +107,20 @@ export const products: ProductCategory[] = [
       marketSize: "Pakistan is a world-leading origin for home textiles; the global home-textile market runs into the hundreds of billions of dollars.",
       certifications: "GOTS, OEKO-TEX and ISO available through our network.",
     },
+    demandDrivers: [
+      { title: "Hospitality expansion", desc: "New hotels, resorts and serviced-apartment groups worldwide drive steady demand for contract-grade bedding and bath." },
+      { title: "Online home brands", desc: "Direct-to-consumer and marketplace home-and-lifestyle brands need dependable, certified bedding and towelling at scale." },
+      { title: "Sustainability requirements", desc: "Retailers increasingly require organic cotton, recycled content and traceable, audited supply chains." },
+      { title: "Premium cotton & towelling", desc: "Lasting demand for genuine long-staple cotton sheeting and high-GSM terry towels that survive heavy laundering." },
+    ],
+    strengths: [
+      "Globally recognised cotton and yarn quality, including long-staple varieties.",
+      "World-class terry-towel manufacturing, from everyday to high-GSM spa grades.",
+      "Vertically integrated mills — spinning, weaving, dyeing and finishing under one roof.",
+      "Large-scale capacity that scales from boutique runs to full container volumes.",
+      "Hotel and contract-grade finishing built for repeated industrial laundering.",
+      "GOTS, OEKO-TEX, BCI and ISO 9001 certified production available.",
+    ],
   },
   {
     slug: "apparel-accessories",
@@ -138,6 +155,20 @@ export const products: ProductCategory[] = [
       marketSize: "Knitwear (~US$5.0bn) and readymade garments (~US$4.1bn) are among Pakistan's largest export categories (FY2025).",
       certifications: "OEKO-TEX, BCI, WRAP, Sedex available through our network.",
     },
+    demandDrivers: [
+      { title: "Private-label growth", desc: "Brands keep design and marketing in-house and outsource production to flexible OEM partners." },
+      { title: "Low-MOQ sourcing", desc: "E-commerce and DTC labels want small, fast runs backed by design and sampling support." },
+      { title: "Responsible sourcing", desc: "Retailers demand WRAP, Sedex and BCI-audited factories with transparent supply chains." },
+      { title: "Knitwear & basics", desc: "Steady worldwide demand for jersey basics, fleece, denim and workwear in volume." },
+    ],
+    strengths: [
+      "OEM and private-label capability across both woven and knit.",
+      "In-house design, sampling and tech-pack support.",
+      "Deep knitwear and readymade-garment base — among Pakistan's largest export categories.",
+      "Flexible volumes, from low-MOQ runs to bulk production programmes.",
+      "Fast turnaround with packaging and finishing handled in-house.",
+      "OEKO-TEX, BCI, WRAP and Sedex certified options.",
+    ],
   },
   {
     slug: "sportswear-activewear",
@@ -170,6 +201,22 @@ export const products: ProductCategory[] = [
       marketSize: "Activewear is one of the fastest-growing apparel segments worldwide, expanding at mid-to-high single digits annually.",
       certifications: "OEKO-TEX and recycled-material options available.",
     },
+    demandDrivers: [
+      { title: "Athleisure everywhere", desc: "Activewear is now everyday wear — one of the fastest-growing apparel segments across global retail." },
+      { title: "Women's activewear", desc: "The largest, fastest-growing segment — leggings, sports bras, matching sets and inclusive sizing." },
+      { title: "Sustainable performance", desc: "Brands increasingly require recycled-polyester and eco-friendly performance fabrics." },
+      { title: "Low-MOQ private label", desc: "E-commerce and DTC fitness brands outsource production while they focus on marketing and community." },
+    ],
+    strengths: [
+      "Sialkot — one of the world's leading hubs for sportswear and teamwear.",
+      "Advanced sublimation printing for custom kit and club merchandise.",
+      "Performance-fabric expertise — moisture-wicking, four-way stretch, compression.",
+      "Low minimum orders with full custom branding.",
+      "Proven private-label production for international brands.",
+      "OEKO-TEX and recycled / GRS material options.",
+    ],
+    strengthsNote:
+      "Pakistani sourcing networks have supplied major international sportswear names — including Adidas, Puma, Hummel, Hugo Boss and Kempa.",
   },
   {
     slug: "healthcare-textile",
@@ -203,6 +250,20 @@ export const products: ProductCategory[] = [
       marketSize: "The global medical-textile market is multi-billion dollar and growing steadily as healthcare capacity expands.",
       certifications: "CE / AAMI / ISO 13485, OEKO-TEX available through our network.",
     },
+    demandDrivers: [
+      { title: "Continuous institutional demand", desc: "Hospitals, care homes and clinics worldwide need a constant, high-volume supply of linen and uniforms." },
+      { title: "Infection control", desc: "Stricter hygiene standards drive demand for antimicrobial, high-temperature-washable textiles." },
+      { title: "Antimicrobial textiles", desc: "The global antimicrobial hospital-textile sector exceeded US$8.5bn in 2024 and is growing fast." },
+      { title: "Outsourced procurement", desc: "Health systems increasingly source through linen-management and procurement contractors — an opening for overseas manufacturers." },
+    ],
+    strengths: [
+      "Large-scale institutional linen and uniform manufacturing.",
+      "Built for durability, hygiene and frequent industrial laundering.",
+      "CE/AAMI-aware surgical and antimicrobial capability.",
+      "Cotton and poly-cotton expertise carried over from hotel and hospitality linen.",
+      "Competitive pricing on long-term, high-volume programmes.",
+      "CE, AAMI, ISO 13485 and OEKO-TEX certified options.",
+    ],
   },
 ];
 

@@ -48,8 +48,8 @@ export function NewsCard({ slug, title, category, date, image, excerpt, index = 
     >
       <Link
         href={`/news/${slug}`}
-        className={`group flex h-full flex-col gap-2 rounded-lg p-2 duration-75 active:scale-[0.99] ${
-          light ? "hover:bg-white/[0.06]" : "hover:bg-[#E8E6E3]/60 active:bg-[#E8E6E3]"
+        className={`flex h-full flex-col gap-2 rounded-lg p-2 ${
+          light ? "bg-[#15402A]/70 backdrop-blur-sm border border-white/10" : ""
         }`}
       >
         <LazyImage
@@ -57,7 +57,6 @@ export function NewsCard({ slug, title, category, date, image, excerpt, index = 
           inView={false}
           alt={title}
           ratio={16 / 9}
-          className="transition-all duration-500 group-hover:scale-105"
           AspectRatioClassName={light ? "border-white/10" : "border-[#D8D5CF]"}
         />
         <div className="space-y-2 px-2 pb-2">
@@ -73,10 +72,10 @@ export function NewsCard({ slug, title, category, date, image, excerpt, index = 
               {date}
             </p>
           </div>
-          <h2 className={`line-clamp-2 text-lg leading-5 font-semibold tracking-tight ${light ? "text-white group-hover:text-[#86efac]" : "text-[#16291E]"} transition-colors duration-200`}>
+          <h2 className={`line-clamp-2 text-lg leading-5 font-semibold tracking-tight ${light ? "text-white" : "text-[#16291E]"}`}>
             {title}
           </h2>
-          <p className={`line-clamp-3 text-sm ${light ? "text-gray-300" : "text-[#3D4152]/70"}`}>
+          <p className={`line-clamp-3 text-sm ${light ? "text-white/85" : "text-[#3D4152]/70"}`}>
             {excerpt}
           </p>
         </div>

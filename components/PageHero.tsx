@@ -57,6 +57,8 @@ interface PageHeroProps {
   align?: "center" | "left";
   className?: string;
   label?: string;
+  /** Override the eyebrow label color classes (defaults to brand green). */
+  labelClassName?: string;
   image?: string;
   video?: string;
   videoSpeed?: number;
@@ -81,6 +83,7 @@ export function PageHero({
   align = "left",
   className = "",
   label,
+  labelClassName,
   image,
   video,
   videoSpeed = 1,
@@ -315,7 +318,7 @@ export function PageHero({
             {/* Label */}
             {label && (
               <motion.p
-                className="text-lg sm:text-xl font-extrabold uppercase tracking-[0.18em] text-[#2F7549] mb-4 sm:mb-5"
+                className={`text-lg sm:text-xl font-extrabold uppercase tracking-[0.18em] mb-4 sm:mb-5 ${labelClassName || "text-[#2F7549]"}`}
                 style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}
                 initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}

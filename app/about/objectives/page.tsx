@@ -180,6 +180,7 @@ export default function ObjectivesPage() {
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Meet Our Founder"
         secondaryButtonLink="/about/founder"
+        image="/image/hero-bg/pexels-wasifmehmood997-15817294.jpg"
       />
     </div>
   );

@@ -1,9 +1,7 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { LazyVideo } from "@/components/LazyVideo";
 
 import { Factory, TrendingUp } from "lucide-react";
 
@@ -195,30 +193,18 @@ const MarketsIcon = ({ className, style }: { className?: string; style?: React.C
 );
 
 export default function MembershipSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const overlayOpacity = useTransform(scrollYProgress, [0, 0.2], [0.3, 0.6]);
-
   return (
-    <div ref={containerRef} className="relative w-full">
+    <div className="relative w-full">
       <section className="relative w-full min-h-screen lg:min-h-[700px] overflow-hidden z-10">
-        {/* Background Video — lazy-loaded */}
-        <LazyVideo
+        {/* Background Image */}
+        <Image
           aria-hidden="true"
-          src="/videos/banner.mp4"
-          poster="/videos/banner-poster.jpg"
-          className="absolute top-0 left-0 w-full h-full"
-        />
-
-        {/* Overlay */}
-        <motion.div
-          className="absolute inset-0 bg-black pointer-events-none"
-          style={{ opacity: overlayOpacity }}
+          src="/image/hero-bg/pexels-denis-komarov-195926247-11537258.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="absolute top-0 left-0 w-full h-full object-cover"
         />
 
         {/* Content */}
@@ -232,7 +218,7 @@ export default function MembershipSection() {
             {/* Left Side */}
             <div className="flex flex-col justify-center h-full">
               <div className="relative z-10 flex flex-col justify-center h-full max-w-5xl mx-auto py-8">
-                <span className="text-sm sm:text-xl font-bold text-white/70 mb-3">
+                <span className="text-sm sm:text-xl font-bold text-white bg-black/30 inline-block w-fit px-4 py-1.5 rounded-md mb-3">
                   Membership
                 </span>
                 <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white bg-black/30 inline-block px-4 py-2 rounded-md">
@@ -257,14 +243,14 @@ export default function MembershipSection() {
                 {
                   title: "Exporters & Sellers",
                   desc: "Exporters seeking global reach, e-commerce and warehousing to sell directly to consumers worldwide.",
-                  image: "/image/exporters-sellers.jpg",
+                  image: "/image/exporters-and-sellers.jpg",
                   icon: TrendingUp,
                   color: "#3E8F5E",
                 },
                 {
                   title: "First-time Exporters",
                   desc: "Capable producers exporting for the first time — we make you visible, credible and ready for international buyers.",
-                  image: "/image/first-time-exporters.jpg",
+                  image: "/image/first-time-exporter.jpg",
                   icon: TrendingUp,
                   color: "#3C8F5E",
                 },
@@ -281,14 +267,14 @@ export default function MembershipSection() {
                   <Link
                     key={item.title}
                     href="/membership"
-                    className="group block rounded-xl overflow-hidden bg-black/30 backdrop-blur-md border border-white/[0.12] hover:-translate-y-1 hover:bg-black/40 hover:border-white/[0.2] transition-all duration-300 shadow-lg shadow-black/20"
+                    className="block rounded-xl overflow-hidden bg-black/30 backdrop-blur-md border border-white/[0.12] shadow-lg shadow-black/20"
                   >
                     <div className="relative h-[180px] overflow-hidden rounded-t-xl">
                       <Image
                         src={item.image}
                         alt={item.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     </div>
@@ -299,7 +285,7 @@ export default function MembershipSection() {
                           {item.title}
                         </h3>
                       </div>
-                      <p className="text-white/75 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-white/90 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </Link>
                 );
@@ -329,7 +315,6 @@ export function WhatDrivesUs() {
             {/* Left Side: Header */}
             <div className="lg:w-1/3 flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-[3px] rounded-full bg-[#2F7549]" />
                 <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549]">Our Focus</p>
               </div>
               <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.8rem] leading-[1.1] text-[#16291E]">

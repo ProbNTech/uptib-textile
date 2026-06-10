@@ -549,6 +549,7 @@ export default function MembershipTermsClient() {
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Membership Overview"
         secondaryButtonLink="/membership"
+        image="/image/healthcare-v1.jpg"
       />
     </div>
   );

@@ -112,6 +112,7 @@ export default function VisionPage() {
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Our Mission"
         secondaryButtonLink="/about/mission"
+        image="/image/hero-bg/pexels-denis-komarov-195926247-11537258.jpg"
       />
     </div>
   );

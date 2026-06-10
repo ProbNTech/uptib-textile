@@ -188,7 +188,7 @@ export const articles: Article[] = [
     author: "UPTIB Textile",
     category: "Buyer's Guide",
     readTime: "8 min read",
-    image: "/image/who-we-are.png",
+    image: "/image/who-we-are.jpg",
     published: true,
     body: [
       {

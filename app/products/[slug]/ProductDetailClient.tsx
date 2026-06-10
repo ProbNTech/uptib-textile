@@ -14,6 +14,8 @@ import {
   BadgeCheck,
   Users,
   Sparkles,
+  TrendingUp,
+  Award,
 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -26,12 +28,29 @@ import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 
+/* Provided high-quality category imagery (override the shared data images).
+   -h = wide hero/CTA · -v1 = landscape feature · -p = portrait card */
+const detailImages: Record<string, { hero: string; feature: string }> = {
+  "bedding-linen": { hero: "/image/bedding-h.jpg", feature: "/image/bedding-v1.jpg" },
+  "apparel-accessories": { hero: "/image/apparel-h.jpg", feature: "/image/apparels-v1.jpg" },
+  "sportswear-activewear": { hero: "/image/sportswear-h.jpg", feature: "/image/sportswear.jpg" },
+  "healthcare-textile": { hero: "/image/healthcare-h.jpg", feature: "/image/healthcare-v1.jpg" },
+};
+
+const cardImages: Record<string, string> = {
+  "bedding-linen": "/image/bedding-p.jpg",
+  "apparel-accessories": "/image/apparel-p.jpg",
+  "sportswear-activewear": "/image/sportswear-p.jpg",
+  "healthcare-textile": "/image/healthcare-p.jpg",
+};
+
 export default function ProductDetailClient({ slug }: { slug: string }) {
   const shouldReduceMotion = useReducedMotion();
   const p = getProduct(slug);
   if (!p) notFound();
 
   const others = products.filter((x) => x.slug !== p.slug);
+  const imgs = detailImages[p.slug] ?? { hero: p.image, feature: p.image };
 
   const factRows: { label: string; value: string }[] = [
     { label: "Pakistan's strength", value: p.facts.strength },
@@ -50,7 +69,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
   return (
     <div>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <PageHero label={p.eyebrow} title={p.headline} subtitle={p.summary} image={p.image}>
+      <PageHero label={p.eyebrow} labelClassName="text-white" title={p.headline} subtitle={p.summary} image={imgs.hero}>
         <div className="flex flex-wrap items-center gap-4">
           <ShinyButton href="/contact">Source {p.name.toLowerCase()}</ShinyButton>
           <Button href="/products" variant="glass" size="lg">
@@ -113,7 +132,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
 
               <div className="lg:col-span-7">
                 <div className="relative aspect-[16/11] overflow-hidden rounded-2xl border border-[#E5E7EB] shadow-[0_28px_60px_-28px_rgba(4,120,87,0.35)]">
-                  <Image src={p.image} alt={p.name} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
+                  <Image src={imgs.feature} alt={p.name} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   <span className="absolute left-5 bottom-5 inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-1.5 text-sm font-bold text-[#2F7549]">
                     <Sparkles className="size-4" aria-hidden /> Made in Pakistan
@@ -155,8 +174,42 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* ── THE FACTS ────────────────────────────────────────────── */}
+      {/* ── WHAT'S DRIVING DEMAND ────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
+        <div className={PX}>
+          <AnimatedSection>
+            <SectionLabel
+              label="Market outlook"
+              title="What's driving demand"
+              body={`The trends pulling global buyers toward ${p.name.toLowerCase()} — and where the opportunity is growing.`}
+              color="#2F7549"
+              hideLine
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {p.demandDrivers.map((d, index) => (
+                <motion.div
+                  key={d.title}
+                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.45, delay: index * 0.06 }}
+                  className="flex h-full flex-col rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm"
+                >
+                  <span className="inline-flex size-12 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549] mb-5">
+                    <TrendingUp className="size-5" strokeWidth={1.75} aria-hidden />
+                  </span>
+                  <h3 className="font-heading font-bold text-[#16291E] text-base leading-snug">{d.title}</h3>
+                  <div className="mt-2.5 mb-3 h-0.5 w-8 rounded-full bg-[#2F7549]" />
+                  <p className="text-sm text-[#5A5F72] leading-relaxed">{d.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── THE FACTS ────────────────────────────────────────────── */}
+      <section className="bg-[#F8FAF9] py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-16">
@@ -193,6 +246,46 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* ── WHY PAKISTAN LEADS HERE ──────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className={PX}>
+          <AnimatedSection>
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+              <div className="lg:sticky lg:top-28 lg:self-start lg:max-w-sm">
+                <SectionLabel label="The advantage" title="Why Pakistan leads here" color="#2F7549" hideLine />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
+                <p className="text-[#5A5F72] text-base leading-relaxed">
+                  The manufacturing strengths that make Pakistan a dependable origin for {p.name.toLowerCase()} — at
+                  the quality, scale and price global buyers need.
+                </p>
+                {p.strengthsNote && (
+                  <div className="mt-7 flex items-start gap-3.5 rounded-2xl border border-[#D7EADD] bg-[#EEF6F0] p-5">
+                    <Award className="size-5 shrink-0 text-[#2F7549] mt-0.5" aria-hidden />
+                    <p className="text-sm font-medium text-[#16291E] leading-relaxed">{p.strengthsNote}</p>
+                  </div>
+                )}
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {p.strengths.map((s, index) => (
+                  <motion.div
+                    key={s}
+                    initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="flex items-start gap-3.5 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm"
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-[#3E8F5E] flex-shrink-0 mt-0.5" aria-hidden />
+                    <span className="text-[#3D4152] leading-relaxed">{s}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── OTHER CATEGORIES ─────────────────────────────────────── */}
       <section className="bg-[#F8FAF9] py-20 lg:py-28">
         <div className={PX}>
@@ -214,7 +307,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                   >
                     <div className="relative aspect-[16/10] overflow-hidden">
                       <Image
-                        src={o.image}
+                        src={cardImages[o.slug] ?? o.image}
                         alt={o.name}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -249,7 +342,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
         primaryButtonLink="/contact"
         secondaryButtonText="See all products"
         secondaryButtonLink="/products"
-        image={p.image}
+        image={imgs.hero}
       />
     </div>
   );

@@ -173,6 +173,7 @@ export default function AboutPage() {
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Contact Us"
         secondaryButtonLink="/contact"
+        image="/image/hero-bg/pexels-kazmisalman-12912453.jpg"
       />
     </div>
   );

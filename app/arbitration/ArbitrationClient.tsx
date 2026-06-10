@@ -978,6 +978,7 @@ export default function ArbitrationClient() {
         primaryButtonLink="/contact"
         secondaryButtonText="Become a Member"
         secondaryButtonLink="/membership"
+        image="/image/manufacturing-mils.jpg"
       />
     </div>
   );

@@ -118,7 +118,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="text-white/80 text-base sm:text-lg leading-relaxed max-w-xl mb-8"
+              className="text-white/95 text-base sm:text-lg leading-relaxed max-w-xl mb-8"
             >
               Your source for the latest updates, market trends, export insights, and industry
               stories from Pakistan&apos;s textile sector.
@@ -180,7 +180,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                   <span className="block font-heading font-bold text-white text-sm leading-tight">
                     {h.title}
                   </span>
-                  <span className="block text-white/60 text-xs mt-1">{h.desc}</span>
+                  <span className="block text-white/85 text-xs mt-1">{h.desc}</span>
                 </span>
               </button>
             ))}
@@ -224,7 +224,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                         </p>
                         <Link
                           href={`/news/${activeFeatured.slug}`}
-                          className="inline-flex items-center gap-2 rounded-full bg-[#3E8F5E] hover:bg-[#6FC79A] text-[#053C2E] font-semibold px-6 py-3 transition-colors w-fit"
+                          className="inline-flex items-center gap-2 rounded-full bg-[#3E8F5E] hover:bg-[#6FC79A] text-white font-semibold px-6 py-3 transition-colors w-fit"
                         >
                           Read Full Story <ArrowRight className="w-4 h-4" />
                         </Link>
@@ -407,7 +407,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
             />
             <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
               <div className="flex items-start gap-5 max-w-xl">
-                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#3E8F5E] text-[#053C2E] flex-shrink-0">
+                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#3E8F5E] text-white flex-shrink-0">
                   <Mail className="w-6 h-6" />
                 </span>
                 <div>
@@ -442,7 +442,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                   />
                   <button
                     type="submit"
-                    className="rounded-full bg-[#3E8F5E] hover:bg-[#6FC79A] text-[#053C2E] font-semibold px-7 py-3 transition-colors whitespace-nowrap"
+                    className="rounded-full bg-[#3E8F5E] hover:bg-[#6FC79A] text-white font-semibold px-7 py-3 transition-colors whitespace-nowrap"
                   >
                     Subscribe
                   </button>

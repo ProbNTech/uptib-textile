@@ -15,7 +15,6 @@ const WhatWeDoCards = dynamic(() => import("@/components/WhatWeDoCards"), {
   loading: () => <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6" aria-busy="true">{Array.from({ length: 4 }).map((_, i) => <div key={i} className="h-64 bg-[#f7f8fa] rounded-xl animate-pulse" />)}</div>,
 });
 import { articles } from "@/data/news";
-import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { sponsorLogos } from "@/data/sponsor-logos";
 const ImpactStats = dynamic(() =>
   import("@/components/ImpactStats").then((m) => ({ default: m.ImpactStats })),
@@ -96,14 +95,15 @@ export default function Home() {
               </div>
               <div className="relative">
                 <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(4,120,87,0.15)]">
-                  <Image src="/image/who-we-are.png" alt="Pakistani textile manufacturing and global export — UPTIB Textile" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                  <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export — UPTIB Textile" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/60">
                     <p className="font-heading font-extrabold text-[#2F7549] text-lg leading-none">~$17.9bn</p>
                     <p className="text-[#5A5F72] text-xs mt-0.5">Pakistan textile exports, FY2025</p>
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-28 h-28 rounded-xl bg-[#2F7549]/20 z-0" aria-hidden="true" />
-                <div className="absolute -top-4 -right-4 w-36 h-36 rounded-full bg-[#3E8F5E]/20 z-0" aria-hidden="true" />
+                {/* TRIAL: Pakistan map accent — revert if not kept */}
+                <Image src="/image/pakistan.png" alt="" aria-hidden width={320} height={320} className="pointer-events-none select-none absolute -top-12 -right-10 w-48 lg:w-60 h-auto opacity-[0.14] z-0" />
               </div>
             </div>
           </AnimatedSection>
@@ -159,6 +159,8 @@ export default function Home() {
         }}
         aria-labelledby="more-heading"
       >
+        <Image src="/image/hero-bg/pexels-wasifmehmood997-15817294.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
+        <div className="absolute inset-0 bg-[#15402A]/65" aria-hidden="true" />
         <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
@@ -182,39 +184,25 @@ export default function Home() {
                   >
                   <Link
                     href={card.href}
-                    className="group relative flex h-full flex-col rounded-2xl p-6 lg:p-7 overflow-hidden hover:-translate-y-2 transition-[transform,box-shadow,background] duration-300 ease-out [transform:translateZ(0)]"
+                    className="relative flex h-full flex-col rounded-2xl p-6 lg:p-7 overflow-hidden [transform:translateZ(0)]"
                     style={{
-                      background: "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)",
-                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "linear-gradient(180deg, rgba(21,64,42,0.72) 0%, rgba(21,64,42,0.58) 100%)",
+                      border: "1px solid rgba(255,255,255,0.12)",
                       backdropFilter: "blur(12px)",
                       WebkitBackdropFilter: "blur(12px)",
                       boxShadow: "0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05)",
                     }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow = `0 20px 50px -10px ${card.color}55, 0 0 0 1px ${card.color}30 inset, inset 0 1px 0 rgba(255,255,255,0.1)`;
-                      e.currentTarget.style.background = `linear-gradient(180deg, ${card.color}1A 0%, rgba(255,255,255,0.03) 100%)`;
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05)";
-                      e.currentTarget.style.background = "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)";
-                    }}
                   >
                     {/* Top accent gradient bar */}
                     <div
-                      className="absolute top-0 left-0 right-0 h-[2px] rounded-t-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      className="absolute top-0 left-0 right-0 h-[2px] rounded-t-2xl opacity-70"
                       aria-hidden="true"
                       style={{ background: `linear-gradient(90deg, ${card.color}, ${card.color}80, transparent)` }}
-                    />
-                    {/* Radial accent glow on hover */}
-                    <div
-                      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                      aria-hidden="true"
-                      style={{ background: `radial-gradient(400px circle at top left, ${card.color}25 0%, transparent 55%)` }}
                     />
                     <div className="relative flex flex-1 flex-col">
                       <div className="mb-4 flex items-center">
                         <div
-                          className="rounded-xl p-2.5 group-hover:scale-105 transition-all duration-300"
+                          className="rounded-xl p-2.5"
                           style={{
                             backgroundColor: `${card.color}22`,
                             boxShadow: `0 0 0 1px ${card.color}33 inset`,
@@ -224,18 +212,15 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="flex items-start justify-between gap-2">
-                        <h3
-                          className="font-heading font-bold text-white text-[1.15rem] mb-2 transition-colors duration-300 group-hover:text-[var(--card-color)]"
-                          style={{ "--card-color": card.color } as React.CSSProperties}
-                        >
+                        <h3 className="font-heading font-bold text-white text-[1.15rem] mb-2">
                           {card.title}
                         </h3>
                         <ArrowUpRight
-                          className="w-5 h-5 shrink-0 mt-1 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                          className="w-5 h-5 shrink-0 mt-1"
                           style={{ color: card.color }}
                         />
                       </div>
-                      <p className="text-gray-300/90 text-sm leading-relaxed">{card.desc}</p>
+                      <p className="text-white/85 text-sm leading-relaxed">{card.desc}</p>
                     </div>
                   </Link>
                   </motion.div>
@@ -282,7 +267,9 @@ export default function Home() {
         }}
         aria-labelledby="market-heading"
       >
-        <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
+        {/* TRIAL: decorative globe — revert if not kept */}
+        <Image src="/image/globe.png" alt="" aria-hidden width={520} height={520} className="pointer-events-none select-none absolute -right-16 -top-10 w-[300px] lg:w-[440px] h-auto opacity-[0.10] z-0" />
+        <div className="relative z-[1] px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
             <SectionLabel label="Market Intelligence" title="The global textile market — and Pakistan's place in it" color="#2F7549" />
 
@@ -349,6 +336,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PAKISTAN'S TEXTILE & TRADE INSTITUTIONS — horizontal auto-scrolling marquee */}
+      <section className="relative z-[1] py-14 lg:py-20 overflow-hidden bg-[#F8FAFC]" aria-labelledby="network-heading">
+        <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "28px 28px" }} />
+        <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
+          <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#2F7549" align="center" />
+          <div
+            className="group relative mt-10 overflow-hidden"
+            style={{
+              WebkitMaskImage: "linear-gradient(to right, transparent, black 7%, black 93%, transparent)",
+              maskImage: "linear-gradient(to right, transparent, black 7%, black 93%, transparent)",
+            }}
+          >
+            <div className="flex w-max items-center gap-10 sm:gap-14 animate-scroll group-hover:[animation-play-state:paused]">
+              {[...sponsorCarouselLogos, ...sponsorCarouselLogos].map((logo, i) => (
+                <div key={`${logo.id}-${i}`} className="flex h-16 w-[150px] flex-shrink-0 items-center justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    loading="lazy"
+                    className="max-h-12 w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 11. BOARD OF ADVISORS */}
       <BoardOfAdvisors />
 
@@ -361,13 +377,15 @@ export default function Home() {
         }}
         aria-labelledby="news-heading"
       >
+        <Image src="/image/pak-map.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
+        <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
         <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-4 flex flex-col justify-center">
                 <SectionLabel label="Stay Informed" title="News & Insights" color="#86efac" light />
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                <p className="text-white/85 text-sm sm:text-base leading-relaxed">
                   Export guides, global market trends, and insight for Pakistani textile exporters reaching buyers worldwide.
                 </p>
               </div>
@@ -386,23 +404,7 @@ export default function Home() {
       {/* 13. FAQs */}
       <ExporterFaq />
 
-      {/* 15. PAKISTAN ECOSYSTEM NETWORK */}
-      <section
-        className="relative z-[1] py-14 lg:py-20 overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(1000px circle at 50% 0%, rgba(16,185,129,0.16), transparent 55%), radial-gradient(700px circle at 0% 100%, rgba(16,185,129,0.12), transparent 50%), radial-gradient(700px circle at 100% 100%, rgba(6,95,70,0.10), transparent 50%), #15402A",
-        }}
-        aria-labelledby="network-heading"
-      >
-        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
-        <div className="relative text-center px-6 sm:px-10 lg:px-16 xl:px-20">
-          <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#8FD3AE" align="center" light />
-          <LogoCarousel columnCount={5} logos={sponsorCarouselLogos} />
-        </div>
-      </section>
-
-      {/* 16. GLOBAL CTA */}
+      {/* GLOBAL CTA */}
       <GlobalCTA
         label="Work with UPTIB"
         title="Ready to take your textiles to the world?"
@@ -411,6 +413,7 @@ export default function Home() {
         primaryButtonLink="/membership"
         secondaryButtonText="Talk to our team"
         secondaryButtonLink="/contact"
+        image="/image/bedding.jpg"
       />
     </div>
   );

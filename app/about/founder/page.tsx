@@ -115,6 +115,7 @@ export default function LeadershipPage() {
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Management Team"
         secondaryButtonLink="/about/management-team"
+        image="/image/textile/manufacturers.jpg"
       />
     </div>
   );

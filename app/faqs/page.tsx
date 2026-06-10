@@ -276,6 +276,7 @@ export default function FAQsPage() {
         primaryButtonLink="/contact"
         secondaryButtonText="Apply for Membership"
         secondaryButtonLink="/membership#apply"
+        image="/image/healthcare-h.jpg"
       />
     </div>
   );
