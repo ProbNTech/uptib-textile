@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
@@ -25,7 +26,16 @@ export default function PakistanTopCompaniesShowcase() {
           "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.05), transparent 50%), #FFFFFF",
       }}
     >
-      <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
+      {/* Pakistan map — section background watermark */}
+      <Image
+        src="/image/pakistan.png"
+        alt=""
+        aria-hidden
+        width={900}
+        height={760}
+        className="pointer-events-none select-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] lg:w-[900px] max-w-none h-auto opacity-[0.45] z-0"
+      />
+      <div className="relative z-[1] px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">
           <SectionHeader
             label="Showcase"

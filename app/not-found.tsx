@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
@@ -13,9 +14,11 @@ export default function NotFound() {
         products and services.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row">
-        <Button href="/">Back to home</Button>
-        <Button href="/products" variant="outline">
-          Browse products
+        <Button asChild>
+          <Link href="/">Back to home</Link>
+        </Button>
+        <Button asChild variant="outline">
+          <Link href="/products">Browse products</Link>
         </Button>
       </div>
     </Container>
