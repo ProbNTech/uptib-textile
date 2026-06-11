@@ -23,7 +23,7 @@ export const buyerFaqs: Faq[] = [
 /** A general mix for the home page — serving both buyers and exporters. */
 export const homeFaqs: Faq[] = [
   {
-    q: "Who is UPTIB for?",
+    q: "Who is Pakistan Textile Partners for?",
     a: "Both sides of the trade. UK buyers source dependable Pakistani textiles through us; Pakistani manufacturers reach UK buyers through us. You never have to label yourself — just tell us what you need.",
   },
   {
@@ -48,10 +48,10 @@ export const homeFaqs: Faq[] = [
   },
 ];
 
-/** Home-page FAQs — exporter-facing, global. Grounded in the UPTIB strategy & content docs. */
+/** Home-page FAQs — exporter-facing, global. Grounded in the Pakistan Textile Partners strategy & content docs. */
 export const homeExporterFaqs: Faq[] = [
   {
-    q: "What does UPTIB do for Pakistani exporters?",
+    q: "What does Pakistan Textile Partners do for Pakistani exporters?",
     a: "We make Pakistani textile manufacturers visible, credible and reachable to buyers worldwide — and run the services that get their products to market: professional profiles and branding, market intelligence, B2B matchmaking, digital campaigns, e-commerce and warehousing, and global market access.",
   },
   {

@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 const items = [
-  { text: "UPTIB Textile — Made in Pakistan, sold across the world", href: "/products" },
+  { text: "Pakistan Textile Partners — Made in Pakistan, sold across the world", href: "/products" },
   { text: "~US$17.9bn in Pakistani textile exports — a global top-10 exporter", href: "/global-textile-market" },
   { text: "World-leading origin for cotton and home textiles", href: "/products/bedding-linen" },
   { text: "GSP+ duty-free access into the EU", href: "/global-textile-market" },

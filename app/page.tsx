@@ -1,4 +1,4 @@
-// UPTIB Textile - Home page
+// Pakistan Textile Partners - Home page
 "use client";
 
 import dynamic from "next/dynamic";
@@ -85,7 +85,7 @@ export default function Home() {
                 <SectionLabel label="Who we are" title="Pakistan's textiles, connected to the world — from a platform headquartered in London." color="#2F7549" />
                 <div className="content-body">
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-5">
-                    UPTIB is the UK–Pakistan Trades & Investment Board — a London-based platform, with a Lahore office, that helps Pakistani textile manufacturers reach global markets and runs the services that take them there: marketing, e-commerce, warehousing and global market access.
+                    Pakistan Textile Partners is the textile arm of the UK–Pakistan Trades & Investment Board — a London-based platform, with a Lahore office, that helps Pakistani textile manufacturers reach global markets and runs the services that take them there: marketing, e-commerce, warehousing and global market access.
                   </p>
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-8">
                     Pakistan is one of the world's top-ten textile exporters and a global leader in cotton and home textiles. We organise that supply, professionalise it, and connect Pakistani exporters to buyers in the EU, USA, Middle East, UK and beyond.
@@ -95,7 +95,7 @@ export default function Home() {
               </div>
               <div className="relative">
                 <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(4,120,87,0.15)]">
-                  <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export — UPTIB Textile" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                  <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export — Pakistan Textile Partners" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/60">
                     <p className="font-heading font-extrabold text-[#2F7549] text-lg leading-none">~$17.9bn</p>
                     <p className="text-[#5A5F72] text-xs mt-0.5">Pakistan textile exports, FY2025</p>
@@ -149,7 +149,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. MORE FROM UPTIB */}
+      {/* 5. MORE FROM Pakistan Textile Partners */}
       <section
         className="relative z-[1] py-20 lg:py-28 overflow-hidden"
         style={{
@@ -163,7 +163,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Discover More" title="More from UPTIB" body="The products we trade, the markets we reach, membership, and the latest insights." color="#86efac" align="center" light />
+            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#86efac" align="center" light />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { href: "/products", icon: ProductsIcon, color: "#2F7549", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles — the four categories we trade." },
@@ -233,6 +233,60 @@ export default function Home() {
       {/* 6. PAKISTAN'S TOP AI & IT COMPANIES */}
       <PakistanTopCompaniesShowcase />
 
+      {/* 6b. RAW MATERIAL — cotton field, fixed "shutter" parallax band */}
+      <section
+        className="relative isolate flex min-h-[70vh] items-center overflow-hidden py-24 lg:py-32"
+        style={{
+          backgroundImage: "url('/image/cotton.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+        aria-label="Raw material — cotton"
+      >
+        {/* Brand overlay for legibility — green-led, deep at the left where copy sits */}
+        <div
+          className="absolute inset-0 -z-10"
+          aria-hidden="true"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(11,33,22,0.92) 0%, rgba(21,64,42,0.78) 42%, rgba(21,64,42,0.32) 70%, rgba(21,64,42,0.12) 100%)",
+          }}
+        />
+        <div className="absolute inset-0 -z-10 opacity-[0.05]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
+        <div className="relative w-full px-6 sm:px-10 lg:px-16 xl:px-20">
+          <AnimatedSection animation="blur-in">
+            <div className="max-w-2xl">
+              <SectionLabel
+                label="Raw material"
+                title="It starts in the cotton field"
+                color="#8FD3AE"
+                light
+              />
+              <p className="text-white/85 text-base sm:text-lg leading-relaxed">
+                Pakistan is one of the world&apos;s leading cotton producers — the raw material behind
+                its bedding, linen and apparel. That homegrown cotton, and the spinning and weaving
+                built around it, is why Pakistan ranks among the world&apos;s top-ten textile exporters.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                {[
+                  { value: "~39%", label: "of the global textile market is cotton-based" },
+                  { value: "Top 10", label: "world textile exporter" },
+                ].map((chip) => (
+                  <div
+                    key={chip.value}
+                    className="flex items-baseline gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur-sm"
+                  >
+                    <span className="font-heading font-extrabold text-white text-lg leading-none">{chip.value}</span>
+                    <span className="text-white/75 text-xs sm:text-sm">{chip.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* 7. PARTNER SOLUTIONS */}
       <PartnerSolutionsSection />
 
@@ -251,7 +305,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame UPTIB's work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#8FD3AE" align="center" light />
+            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pakistan Textile Partners' work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#8FD3AE" align="center" light />
             <ImpactStats />
           </AnimatedSection>
         </div>
@@ -405,9 +459,9 @@ export default function Home() {
 
       {/* GLOBAL CTA */}
       <GlobalCTA
-        label="Work with UPTIB"
+        label="Work with Pakistan Textile Partners"
         title="Ready to take your textiles to the world?"
-        subtitle="Grow your exports worldwide — UPTIB markets Pakistani textile manufacturers to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
+        subtitle="Grow your exports worldwide — Pakistan Textile Partners markets Pakistani textile manufacturers to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
         primaryButtonText="Become a member"
         primaryButtonLink="/membership"
         secondaryButtonText="Talk to our team"

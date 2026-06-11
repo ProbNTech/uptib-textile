@@ -14,7 +14,7 @@ export interface PartnerSolution {
   order: number;
 }
 
-// Real UPTIB member manufacturers & sourcing partners, drawn from the textile
+// Real Pakistan Textile Partners member manufacturers & sourcing partners, drawn from the textile
 // company knowledge base (Textile_Company_Database.md, Part A). Capability and
 // product detail are recorded factually from each company's own site.
 export const partnerSolutions: PartnerSolution[] = [
@@ -26,7 +26,7 @@ export const partnerSolutions: PartnerSolution[] = [
     description:
       "Vertically integrated maker of ring-spun towels (400–700+ GSM), fitted & flat sheets, duvets and hotel & hospital linen — built for hundreds of industrial washes and supplied across the Gulf, Europe and North America.",
     category: "Home & Hospitality Textiles",
-    image: "/image/textile/products/bedding-linen.jpg",
+    image: "/image/pexels-cottonbro-6466235.jpg",
     href: "https://pakistanfibres.com/",
     partnerName: "Pakistan Fibres",
     partnerSlug: "pakistan-fibres",
@@ -42,7 +42,7 @@ export const partnerSolutions: PartnerSolution[] = [
     description:
       "Custom clothing manufacturer with cutting, stitching, printing, embroidery and packaging in-house — 50+ premium fabrics, AQL quality control and a 100-piece-per-design MOQ, exporting to 30+ countries.",
     category: "Apparel & Knitwear",
-    image: "/image/textile/products/apparel-accessories.jpg",
+    image: "/image/pexels-gulsahaydgn-30263570.jpg",
     href: "https://lahoretextiles.com/",
     partnerName: "Lahore Textiles",
     partnerSlug: "lahore-textiles",
@@ -58,7 +58,7 @@ export const partnerSolutions: PartnerSolution[] = [
     description:
       "Sialkot OEM sportswear maker for 3,000+ brands — gymwear, sublimated kits and teamwear with full in-house design-to-dispatch and one of the industry's lowest MOQs at 50 pieces per colour and design.",
     category: "Sportswear & Activewear",
-    image: "/image/textile/products/sportswear-activewear.jpg",
+    image: "/image/pexels-laura-rincon-318039951-14792843.jpg",
     href: "https://xsportswears.com/",
     partnerName: "Extreme Sportswear",
     partnerSlug: "extreme-sportswear",
@@ -74,7 +74,7 @@ export const partnerSolutions: PartnerSolution[] = [
     description:
       "Custom uniform manufacturer specialising in scrubs, lab coats, nurse and doctor uniforms and patient gowns — breathable, durable fabrics with low MOQs for startups and bulk capacity, exporting worldwide.",
     category: "Healthcare Textiles",
-    image: "/image/textile/products/healthcare-textile.jpg",
+    image: "/image/pexels-karola-g-5207099.jpg",
     href: "https://albeezaapparel.com/",
     partnerName: "Albeeza Apparel",
     partnerSlug: "albeeza-apparel",
@@ -90,7 +90,7 @@ export const partnerSolutions: PartnerSolution[] = [
     description:
       "Faisalabad buying house with 22+ years' experience — factory-direct pricing, on-ground QC, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners across home, hospitality, medical and apparel textiles.",
     category: "Sourcing & Buying House",
-    image: "/image/textile/manufacturers.jpg",
+    image: "/image/pexels-cottonbro-6069087.jpg",
     href: "https://www.utexinternational.com/en",
     partnerName: "Utex International",
     partnerSlug: "utex-international",
@@ -106,12 +106,42 @@ export const partnerSolutions: PartnerSolution[] = [
     description:
       "Sourcing and quality-assurance agency supplying hotel and hospital bed linen, towels and workwear to USA and European buyers through an ISO / OEKO-TEX-audited multi-factory network — one contact from sampling to export docs.",
     category: "Home & Hospitality Textiles",
-    image: "/image/textile/exporters.jpg",
+    image: "/image/pexels-artbovich-7746950.jpg",
     href: "https://texkoncept.com/",
     partnerName: "TexKoncept",
     partnerSlug: "texkoncept",
     partnerLogo: "/image/textile/logos/texkoncept.png",
     featured: true,
     order: 6,
+  },
+  {
+    id: 7,
+    slug: "denim-woven-bottoms",
+    name: "Denim & woven bottoms",
+    tagline: "Jeans, chinos and workwear bottoms at scale.",
+    description:
+      "Pakistan is one of the world's largest denim producers — full-package jeans, chinos and woven bottoms with in-house washing, finishing and laundry effects, supplied to high-street and DTC brands worldwide.",
+    category: "Apparel & Knitwear",
+    image: "/image/pexels-cottonbro-6764132.jpg",
+    href: "/products/apparel-accessories",
+    partnerName: "",
+    partnerSlug: "",
+    featured: true,
+    order: 7,
+  },
+  {
+    id: 8,
+    slug: "cotton-yarn-greige-fabric",
+    name: "Cotton yarn & greige fabric",
+    tagline: "Ring-spun yarns and woven base cloth.",
+    description:
+      "A leading origin for cotton and blended yarns and greige fabric — ring-spun, carded and combed counts plus woven base cloth feeding mills and converters across Asia, Europe and the Americas.",
+    category: "Yarn & Fabric",
+    image: "/image/pexels-pavel-danilyuk-5788367.jpg",
+    href: "/products",
+    partnerName: "",
+    partnerSlug: "",
+    featured: true,
+    order: 8,
   },
 ];

@@ -69,7 +69,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
   return (
     <div>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <PageHero label={p.eyebrow} labelClassName="text-white" title={p.headline} subtitle={p.summary} image={imgs.hero}>
+      <PageHero label={p.eyebrow} labelClassName="text-white" minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]" title={p.headline} subtitle={p.summary} image={imgs.hero}>
         <div className="flex flex-wrap items-center gap-4">
           <ShinyButton href="/contact">Source {p.name.toLowerCase()}</ShinyButton>
           <Button href="/products" variant="glass" size="lg">

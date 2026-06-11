@@ -1,6 +1,6 @@
 // Real Pakistani textile manufacturers & sourcing partners.
 //
-// Sourced from the UPTIB textile company knowledge base
+// Sourced from the Pakistan Textile Partners textile company knowledge base
 // (assets/UPTIB_Textile_source-docs/Textile_Company_Database.md, Part A —
 // Pakistani exporters & sourcing companies). Product lists, specifications,
 // locations and websites are recorded factually from each company's own site.

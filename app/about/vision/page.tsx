@@ -46,7 +46,7 @@ export default function VisionPage() {
         image="/image/banners/banner15.jpg"
       >
         <div className="flex flex-wrap items-center gap-4">
-          <ShinyButton href="/membership#apply">Join UPTIB</ShinyButton>
+          <ShinyButton href="/membership#apply">Join Pakistan Textile Partners</ShinyButton>
           <Button href="/about/mission" variant="glass">Our Mission</Button>
         </div>
       </PageHero>
@@ -73,7 +73,7 @@ export default function VisionPage() {
                 We are an inclusive support group to create an innovation bridge through links with Tech leaders, digital entrepreneurs, influential corporate executives, savvy investors, Angel/Seed Investors, accelerators, emerging start-ups in AI/Tech, professionals, advisors, policy makers &amp; public bodies with aim to encourage investment collaboration on tech enabled social projects between UK/Europe and Pakistan.
               </p>
               <p className="text-[#3D4152] leading-relaxed">
-                The organization also plays the important role of a trusted facilitator in the growth of the strategic economic relationship, trade and investment flows between Pakistan and the United Kingdom. UPTIB acts as the intermediary for British Pakistani Nationals to understand how to approach the business community and set up business in Pakistan â conversely for Pakistani Tech businesses that want to have a footprint in UK.
+                The organization also plays the important role of a trusted facilitator in the growth of the strategic economic relationship, trade and investment flows between Pakistan and the United Kingdom. Pakistan Textile Partners acts as the intermediary for British Pakistani Nationals to understand how to approach the business community and set up business in Pakistan â conversely for Pakistani Tech businesses that want to have a footprint in UK.
               </p>
               <p className="text-[#3D4152] leading-relaxed">
                 It strives to do so through its vast network of businessmen, professionals, in both regions but also through strong relationships with governments and industry bodies of both countries.

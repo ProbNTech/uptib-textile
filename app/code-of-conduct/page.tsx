@@ -108,7 +108,7 @@ export default function CodeOfConductPage() {
                 transition={{ duration: 0.5 }}
               >
                 <p className="text-[#5A5F72] text-base leading-relaxed mb-5">
-                  All members are required to give an undertaking to the effect that they would abide by the UPTIB Code of Conduct. The Code of Conduct will also specify the procedure for the action to be taken against concerned members for any breach of this Code. The following is the Code of Conduct prepared by the Executive Committee and adopted after approval by balloting by the Voting Members of UPTIB.
+                  All members are required to give an undertaking to the effect that they would abide by the Pakistan Textile Partners Code of Conduct. The Code of Conduct will also specify the procedure for the action to be taken against concerned members for any breach of this Code. The following is the Code of Conduct prepared by the Executive Committee and adopted after approval by balloting by the Voting Members of Pakistan Textile Partners.
                 </p>
                 <p className="text-[#5A5F72] text-base leading-relaxed mb-5">
                   UK–Pakistan Trades & Investment Board Code of Conduct is issued under the authority of the Constitution of the UK–Pakistan Trades & Investment Board and is binding on all members of the Organization. {"\u201C"}UK-Pakistani Tech Forum is hereby also mentioned as UPTIB{"\u201D"}
@@ -120,7 +120,7 @@ export default function CodeOfConductPage() {
                   As a binding document, adherence to this Code is mandatory for all members, ensuring consistency, integrity, and professionalism in our collective endeavors. By adhering to these ethical and behavioral guidelines, we demonstrate our commitment to excellence, integrity, and mutual respect within our community and in our interactions with others. {"\u201C"}UK-Pakistani Tech Forum is hereby also mentioned as UPTIB{"\u201D"}
                 </p>
                 <p className="text-[#5A5F72] text-base leading-relaxed">
-                  The UPTIB Code of Conduct is compulsory for all members and adherence to its principles is obligatory. Therefore, it is imperative for every member of UPTIB to possess a comprehensive understanding and knowledge of its provisions.
+                  The Pakistan Textile Partners Code of Conduct is compulsory for all members and adherence to its principles is obligatory. Therefore, it is imperative for every member of Pakistan Textile Partners to possess a comprehensive understanding and knowledge of its provisions.
                 </p>
               </motion.div>
 
@@ -161,7 +161,7 @@ export default function CodeOfConductPage() {
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
-            <SectionHeader label="Core Values" title="Our 9 Principles" subtitle="The foundation of ethical conduct and professional standards that every UPTIB member upholds." color="blue" />
+            <SectionHeader label="Core Values" title="Our 9 Principles" subtitle="The foundation of ethical conduct and professional standards that every Pakistan Textile Partners member upholds." color="blue" />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {principles.map((item, i) => {
@@ -209,7 +209,7 @@ export default function CodeOfConductPage() {
 
         <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20">
           <AnimatedSection>
-            <SectionHeader label="Communication Standards" title="WhatsApp Group Rules" subtitle="Guidelines for professional conduct in UPTIB WhatsApp groups and digital communication channels." color="green" />
+            <SectionHeader label="Communication Standards" title="WhatsApp Group Rules" subtitle="Guidelines for professional conduct in Pakistan Textile Partners WhatsApp groups and digital communication channels." color="green" />
 
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               <div>
@@ -225,7 +225,7 @@ export default function CodeOfConductPage() {
                   </div>
                   <div>
                     <h3 className="font-heading font-bold text-lg text-[#16291E]">Group Communication Policy</h3>
-                    <p className="text-base text-[#7A7E8F]">Applicable to all UPTIB WhatsApp groups and channels</p>
+                    <p className="text-base text-[#7A7E8F]">Applicable to all Pakistan Textile Partners WhatsApp groups and channels</p>
                   </div>
                 </motion.div>
                 <div className="space-y-3">

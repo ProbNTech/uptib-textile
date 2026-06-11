@@ -36,7 +36,7 @@ export default function MissionPage() {
         image="/image/banners/banner116.jpg"
       >
         <div className="flex flex-wrap items-center gap-4">
-          <ShinyButton href="/membership#apply">Join UPTIB</ShinyButton>
+          <ShinyButton href="/membership#apply">Join Pakistan Textile Partners</ShinyButton>
           <Button href="/about/objectives" variant="glass">Our Objectives</Button>
         </div>
       </PageHero>
@@ -88,7 +88,7 @@ export default function MissionPage() {
       {/* Broader Mission Commitments */}
       <Section variant="light">
         <AnimatedSection>
-          <SectionHeader label="Broader Commitments" title="Investing in the Future" color="green" subtitle="Beyond our core pillars, UPTIB is committed to nurturing talent and inspiring the next generation of technology leaders." />
+          <SectionHeader label="Broader Commitments" title="Investing in the Future" color="green" subtitle="Beyond our core pillars, Pakistan Textile Partners is committed to nurturing talent and inspiring the next generation of technology leaders." />
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex items-start gap-4 bg-white border border-[#D8D5CF] rounded-lg p-6 hover:shadow-md transition-all duration-300">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#3E8F5E10", border: "1px solid #3E8F5E25" }}>
@@ -115,7 +115,7 @@ export default function MissionPage() {
       <GlobalCTA
         label="Join Our Mission"
         title="Help Shape the Future of Tech"
-        subtitle="Join UPTIB and become part of the mission to transform the UK-Pakistan technology corridor into a global innovation powerhouse."
+        subtitle="Join Pakistan Textile Partners and become part of the mission to transform the UK-Pakistan technology corridor into a global innovation powerhouse."
         primaryButtonText="Apply for Membership"
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Our Objectives"

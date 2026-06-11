@@ -1,5 +1,5 @@
 /* ──────────────────────────────────────────────────────────────────
-   UPTIB Textile — central content model.
+   Pakistan Textile Partners — central content model.
    Single source of truth for products, services, stats and markets so
    copy is editable in one place (BUILD PROMPT §11). All copy is written
    GLOBAL-first: Pakistan → the world; UK is one example market.
@@ -65,7 +65,7 @@ export const markets: { name: string; note: string }[] = [
   { name: "Latin America", note: "Emerging market for cotton-based products" },
 ];
 
-/* ── Why UPTIB ── */
+/* ── Why Pakistan Textile Partners ── */
 export const whyUptib: { title: string; desc: string; icon: LucideIcon }[] = [
   { title: "A vetted global supplier network", desc: "Profiled Pakistani manufacturers across every category, matched to buyers worldwide.", icon: Globe2 },
   { title: "Quality control on the ground", desc: "Independent, multi-stage inspection to your agreed AQL — not just the factory's word.", icon: ShieldCheck },

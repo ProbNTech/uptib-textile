@@ -43,7 +43,7 @@ import {
 const legalBasis = [
   {
     title: "Arbitration Act 1996 (UK)",
-    description: "The primary governing legislation for all arbitration proceedings under the UPTIB Framework.",
+    description: "The primary governing legislation for all arbitration proceedings under the Pakistan Textile Partners Framework.",
     icon: Gavel,
     color: "#2F7549",
   },
@@ -103,7 +103,7 @@ const detailedSteps = [
     icon: ClipboardList,
     color: "#2F7549",
     items: [
-      "Party raises dispute using the UPTIB digital arbitration platform",
+      "Party raises dispute using the Pakistan Textile Partners digital arbitration platform",
       "Include: nature of the dispute, relevant contracts, relief requested",
       "Framework administrator acknowledges receipt within 3 business days",
       "Preliminary review verifies eligibility and scope",
@@ -117,7 +117,7 @@ const detailedSteps = [
     items: [
       "Single arbitrator for simple disputes (< \u00a3250,000)",
       "Three-member tribunal for complex or high-value disputes",
-      "Arbitrators selected from UPTIB\u2019s Technical Arbitration Panel or mutually agreed",
+      "Arbitrators selected from Pakistan Textile Partners\u2019 Technical Arbitration Panel or mutually agreed",
       "Appointment timeline: 7\u201314 days",
       "All arbitrators must disclose potential conflicts before appointment",
     ],
@@ -132,7 +132,7 @@ const detailedSteps = [
       "Submission deadlines for claims, counterclaims, and evidence",
       "Electronic evidence admissible: code, logs, screenshots, blockchain records",
       "Witness statements and expert testimony presented virtually or at hearings",
-      "All filings digitally managed via the UPTIB secure platform",
+      "All filings digitally managed via the Pakistan Textile Partners secure platform",
     ],
   },
   {
@@ -153,7 +153,7 @@ const detailedSteps = [
 /* ── Appointment Timeline ────────────────────────────────────────── */
 const appointmentTimeline = [
   { step: "Initial party selection attempt", duration: "7 days" },
-  { step: "UPTIB Committee appointment (if no agreement)", duration: "5 days" },
+  { step: "Pakistan Textile Partners Committee appointment (if no agreement)", duration: "5 days" },
   { step: "Conflict-of-interest disclosures", duration: "3 days" },
   { step: "Final appointment confirmation", duration: "2 days" },
 ];
@@ -199,7 +199,7 @@ const faqs = [
   },
   {
     q: "How do I initiate arbitration?",
-    a: "Submit a Notice of Dispute via the UPTIB Digital Arbitration Platform including details of the dispute, contract references, and requested relief.",
+    a: "Submit a Notice of Dispute via the Pakistan Textile Partners Digital Arbitration Platform including details of the dispute, contract references, and requested relief.",
   },
   {
     q: "How many arbitrators are appointed?",
@@ -227,11 +227,11 @@ const faqs = [
   },
   {
     q: "Who appoints the arbitrator(s)?",
-    a: "Parties attempt to mutually agree on arbitrator(s) within 7 days. If no agreement is reached, the UPTIB Arbitration Committee appoints arbitrator(s) from the Technical Arbitration Panel. Arbitrators must have relevant technical, industry, or legal expertise.",
+    a: "Parties attempt to mutually agree on arbitrator(s) within 7 days. If no agreement is reached, the Pakistan Textile Partners Arbitration Committee appoints arbitrator(s) from the Technical Arbitration Panel. Arbitrators must have relevant technical, industry, or legal expertise.",
   },
   {
     q: "Who can I contact for support?",
-    a: "24/7 technical support is available via the platform, chat, email, or phone. The UPTIB Arbitration Committee provides procedural guidance and handles all enquiries regarding arbitration proceedings.",
+    a: "24/7 technical support is available via the platform, chat, email, or phone. The Pakistan Textile Partners Arbitration Committee provides procedural guidance and handles all enquiries regarding arbitration proceedings.",
   },
 ];
 
@@ -245,7 +245,7 @@ export default function FrameworkClient() {
         label="Policy Document"
         title={
           <>
-            UPTIB Arbitration
+            Pakistan Textile Partners Arbitration
             <br />
             Framework Policy
           </>
@@ -273,13 +273,13 @@ export default function FrameworkClient() {
               color="blue"
             />
             <p className="text-[#3D4152] text-lg leading-relaxed mb-5">
-              This policy establishes the UPTIB Arbitration Framework for resolving disputes arising in technology agreements, SaaS platforms, digital assets, software development contracts, and intellectual property transactions.
+              This policy establishes the Pakistan Textile Partners Arbitration Framework for resolving disputes arising in technology agreements, SaaS platforms, digital assets, software development contracts, and intellectual property transactions.
             </p>
             <p className="text-[#5A5F72] text-lg leading-relaxed mb-5">
               The purpose of the Framework is to provide a fast, confidential, and enforceable dispute resolution process that leverages technology while complying with UK law (Arbitration Act 1996) and international arbitration standards.
             </p>
             <p className="text-[#5A5F72] text-lg leading-relaxed">
-              This Framework applies to all contracts entered into by UPTIB involving technology services, software licensing, SaaS, and platform agreements, as well as disputes between UPTIB and clients, vendors, technology partners, and investors where contracts reference arbitration.
+              This Framework applies to all contracts entered into by Pakistan Textile Partners involving technology services, software licensing, SaaS, and platform agreements, as well as disputes between Pakistan Textile Partners and clients, vendors, technology partners, and investors where contracts reference arbitration.
             </p>
           </div>
 
@@ -419,7 +419,7 @@ export default function FrameworkClient() {
                   { label: "Seat of Arbitration", desc: "Typically London, England" },
                   { label: "Governing Law", desc: "Laws of England & Wales" },
                   { label: "Number of Arbitrators", desc: "One or three, based on dispute complexity" },
-                  { label: "Procedural Rules", desc: "LCIA or UPTIB digital arbitration rules" },
+                  { label: "Procedural Rules", desc: "LCIA or Pakistan Textile Partners digital arbitration rules" },
                   { label: "Language", desc: "English as the language of proceedings" },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-2.5">
@@ -516,7 +516,7 @@ export default function FrameworkClient() {
         <div className="grid lg:grid-cols-2 gap-8">
           <div>
             <p className="text-white/80 text-lg leading-relaxed mb-5">
-              Parties attempt to mutually agree on arbitrators within 7 days of the Notice of Arbitration. If no agreement is reached, the UPTIB Arbitration Committee appoints from the Technical Arbitration Panel. All arbitrators must have relevant technical, industry, or legal expertise.
+              Parties attempt to mutually agree on arbitrators within 7 days of the Notice of Arbitration. If no agreement is reached, the Pakistan Textile Partners Arbitration Committee appoints from the Technical Arbitration Panel. All arbitrators must have relevant technical, industry, or legal expertise.
             </p>
 
             <div className="space-y-3">
@@ -544,7 +544,7 @@ export default function FrameworkClient() {
               {[
                 "All potential arbitrators must disclose any conflicts of interest",
                 "Parties may raise objections within 3 business days of disclosure",
-                "UPTIB Arbitration Committee resolves objections fairly and promptly",
+                "Pakistan Textile Partners Arbitration Committee resolves objections fairly and promptly",
                 "Appointed arbitrators sign a declaration of compliance with the Framework",
                 "All appointments formally documented via the digital platform",
               ].map((item, i) => (
@@ -562,7 +562,7 @@ export default function FrameworkClient() {
     {/* ── Cost Schedule ────────────────────────────────────────── */ }
     < Section variant = "light" >
       <AnimatedSection>
-        <SectionHeader label="Fees" title="Cost Schedule & Fees" subtitle="Transparent pricing for arbitration services under the UPTIB Framework." color="red" />
+        <SectionHeader label="Fees" title="Cost Schedule & Fees" subtitle="Transparent pricing for arbitration services under the Pakistan Textile Partners Framework." color="red" />
 
         <div className="grid md:grid-cols-2 gap-7">
           {costSchedule.map((group, gi) => (
@@ -613,7 +613,7 @@ export default function FrameworkClient() {
     {/* ── Digital Platform ─────────────────────────────────────── */ }
     < Section variant = "dark" >
       <AnimatedSection>
-        <SectionHeader label="Technology" title="UPTIB Digital Arbitration Platform" subtitle="A secure, GDPR-compliant platform for managing the entire arbitration process digitally." color="blue" dark />
+        <SectionHeader label="Technology" title="Pakistan Textile Partners Digital Arbitration Platform" subtitle="A secure, GDPR-compliant platform for managing the entire arbitration process digitally." color="blue" dark />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {platformFeatures.map((feature, i) => {
@@ -665,10 +665,10 @@ export default function FrameworkClient() {
             <blockquote className="relative border-l-4 border-[#3E8F5E] pl-6 py-5 bg-gradient-to-r from-[#3E8F5E]/5 to-transparent rounded-r-xl">
               <div className="absolute -left-1 -top-2 text-[#3E8F5E]/20 text-6xl font-serif leading-none">&ldquo;</div>
               <p className="text-[#16291E] text-base leading-[1.8] font-medium relative z-10">
-                Any dispute, controversy, or claim arising out of or relating to this Agreement, including any question regarding its existence, validity, or termination, shall be referred to and finally resolved by arbitration under the UPTIB Arbitration Framework.
+                Any dispute, controversy, or claim arising out of or relating to this Agreement, including any question regarding its existence, validity, or termination, shall be referred to and finally resolved by arbitration under the Pakistan Textile Partners Arbitration Framework.
               </p>
               <p className="text-[#16291E] text-base leading-[1.8] font-medium relative z-10 mt-4">
-                The arbitration shall be conducted in accordance with the Arbitration Act 1996 (UK) and any applicable LCIA or UPTIB digital arbitration rules. The number of arbitrators shall be one for disputes under &pound;250,000 or three for complex disputes, as determined by the UPTIB Arbitration Committee. The seat of arbitration shall be London, England. The language of arbitration shall be English. The arbitrator(s) shall have the authority to allocate costs and fees, and the award shall be final and binding upon the Parties.
+                The arbitration shall be conducted in accordance with the Arbitration Act 1996 (UK) and any applicable LCIA or Pakistan Textile Partners digital arbitration rules. The number of arbitrators shall be one for disputes under &pound;250,000 or three for complex disputes, as determined by the Pakistan Textile Partners Arbitration Committee. The seat of arbitration shall be London, England. The language of arbitration shall be English. The arbitrator(s) shall have the authority to allocate costs and fees, and the award shall be final and binding upon the Parties.
               </p>
             </blockquote>
           </div>
@@ -714,7 +714,7 @@ export default function FrameworkClient() {
               </div>
               <div className="h-px bg-[#D8D5CF] mb-4" />
               <p className="text-[#5A5F72] text-base leading-relaxed mb-4">
-                The UPTIB Arbitration Committee oversees implementation, arbitrator selection, and compliance. The Committee reports annually to the Board of Directors on arbitration activity, efficiency, and lessons learned.
+                The Pakistan Textile Partners Arbitration Committee oversees implementation, arbitrator selection, and compliance. The Committee reports annually to the Board of Directors on arbitration activity, efficiency, and lessons learned.
               </p>
               <p className="text-[#5A5F72] text-base leading-relaxed">
                 The Framework maintains secure digital records of disputes, awards, and timelines. Analytics are used to improve process efficiency, identify recurring issues, and update rules.
@@ -753,7 +753,7 @@ export default function FrameworkClient() {
     < GlobalCTA
   label = "Get Started"
   title = "Ready to Use the Framework?"
-  subtitle = "Contact UPTIB to initiate arbitration or learn more about our dispute resolution services."
+  subtitle = "Contact Pakistan Textile Partners to initiate arbitration or learn more about our dispute resolution services."
   primaryButtonText = "File a Dispute"
   primaryButtonLink = "/contact"
   secondaryButtonText = "Back to Overview"

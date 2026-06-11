@@ -13,15 +13,15 @@ const policies = {
   privacy: {
     title: "Privacy Policy",
     intro:
-      "How UPTIB collects, uses and protects the personal data you share with us.",
+      "How Pakistan Textile Partners collects, uses and protects the personal data you share with us.",
   },
   cookies: {
     title: "Cookie Policy",
-    intro: "How UPTIB uses cookies and similar technologies on this website.",
+    intro: "How Pakistan Textile Partners uses cookies and similar technologies on this website.",
   },
   terms: {
     title: "Terms of Use",
-    intro: "The terms that govern your use of the UPTIB Textile website.",
+    intro: "The terms that govern your use of the Pakistan Textile Partners website.",
   },
 } as const;
 

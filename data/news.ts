@@ -1,4 +1,4 @@
-/* UPTIB Textile — News / insights content.
+/* Pakistan Textile Partners — News / insights content.
    Flagship article is globalised from the source "Textile & Apparel Sourcing
    from Pakistan" guide; figures align with BUILD PROMPT §8. */
 
@@ -26,7 +26,7 @@ export const articles: Article[] = [
       "Why Pakistan is one of the world's most competitive textile origins — and how international buyers source bedding, apparel, sportswear and healthcare textiles with quality guaranteed.",
     date: "2026-01-15",
     displayDate: "15 January 2026",
-    author: "UPTIB Textile",
+    author: "Pakistan Textile Partners",
     category: "Sourcing Guide",
     readTime: "9 min read",
     image: "/image/manufacturing-mils.jpg",
@@ -76,7 +76,7 @@ export const articles: Article[] = [
       {
         heading: "Getting started",
         paragraphs: [
-          "Whether you're testing Pakistan on a single trial order or building an ongoing procurement programme, the route is the same: send a brief, review samples and pricing, and let an accountable partner manage quality and delivery to your market. UPTIB Textile sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
+          "Whether you're testing Pakistan on a single trial order or building an ongoing procurement programme, the route is the same: send a brief, review samples and pricing, and let an accountable partner manage quality and delivery to your market. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
         ],
       },
     ],
@@ -88,7 +88,7 @@ export const articles: Article[] = [
       "From 1 January 2026 the UK's Developing Countries Trading Scheme has dropped the \"double transformation\" rule for clothing — a real, recurring advantage for Pakistani garment exporters selling into Britain.",
     date: "2026-01-20",
     displayDate: "20 January 2026",
-    author: "UPTIB Textile",
+    author: "Pakistan Textile Partners",
     category: "Trade & Policy",
     readTime: "6 min read",
     image: "/image/apparel.jpg",
@@ -129,7 +129,7 @@ export const articles: Article[] = [
       {
         heading: "Getting started",
         paragraphs: [
-          "The simplest way to capture the benefit is to source through an accountable partner who confirms eligibility and handles the origin paperwork end-to-end. UPTIB Textile sources garments from a vetted network of Pakistani manufacturers and delivers landed, on-spec and duty-optimised into the UK.",
+          "The simplest way to capture the benefit is to source through an accountable partner who confirms eligibility and handles the origin paperwork end-to-end. Pakistan Textile Partners sources garments from a vetted network of Pakistani manufacturers and delivers landed, on-spec and duty-optimised into the UK.",
         ],
       },
     ],
@@ -141,7 +141,7 @@ export const articles: Article[] = [
       "Pakistan closed FY2025 with a record US$17.88 billion in textile and apparel exports — up 7.39% — and value-added categories are still leading the way into FY2026.",
     date: "2026-05-20",
     displayDate: "20 May 2026",
-    author: "UPTIB Textile",
+    author: "Pakistan Textile Partners",
     category: "Market Insight",
     readTime: "6 min read",
     image: "/image/private-label.jpg",
@@ -173,7 +173,7 @@ export const articles: Article[] = [
       {
         heading: "What it means for buyers",
         paragraphs: [
-          "Pakistan remains one of the world's top-ten textile exporters, with deep, vertically integrated capacity from cotton through to finished product. For buyers, steady growth in value-added categories signals a mature, dependable supplier base for bedding, knitwear and garments — best accessed through an accountable partner who manages specifications, samples, quality and delivery. UPTIB Textile sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time.",
+          "Pakistan remains one of the world's top-ten textile exporters, with deep, vertically integrated capacity from cotton through to finished product. For buyers, steady growth in value-added categories signals a mature, dependable supplier base for bedding, knitwear and garments — best accessed through an accountable partner who manages specifications, samples, quality and delivery. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time.",
         ],
       },
     ],
@@ -185,7 +185,7 @@ export const articles: Article[] = [
       "Three of the world's biggest textile origins, three very different strengths. A clear-eyed comparison to help buyers route each product category to the right country.",
     date: "2026-04-15",
     displayDate: "15 April 2026",
-    author: "UPTIB Textile",
+    author: "Pakistan Textile Partners",
     category: "Buyer's Guide",
     readTime: "8 min read",
     image: "/image/who-we-are.jpg",
@@ -225,7 +225,7 @@ export const articles: Article[] = [
         heading: "A portfolio approach often wins",
         paragraphs: [
           "Many experienced global buyers do not choose a single origin at all — they build a portfolio, routing cotton-heavy categories to Pakistan, craft and design-led product to India, and high-volume basics to Bangladesh. Understanding each origin's genuine strengths is what lets buyers extract maximum value from each.",
-          "Wherever Pakistan fits in your strategy, the route in is the same: send a clear brief, approve samples in writing, and let an accountable partner manage quality and delivery. UPTIB Textile sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
+          "Wherever Pakistan fits in your strategy, the route in is the same: send a clear brief, approve samples in writing, and let an accountable partner manage quality and delivery. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
         ],
       },
     ],
@@ -237,7 +237,7 @@ export const articles: Article[] = [
       "The global textile market is heading toward US$2 trillion. Where the growth is, and how Pakistan is positioned across the EU, USA and emerging markets.",
     date: "2026-02-01",
     displayDate: "1 February 2026",
-    author: "UPTIB Textile",
+    author: "Pakistan Textile Partners",
     category: "Market Insight",
     readTime: "7 min read",
     image: "/image/exporters-sellers.jpg",
@@ -285,7 +285,7 @@ export const articles: Article[] = [
       "What GSP+ is, which products qualify, and how duty-free EU access translates into a real cost advantage for buyers and exporters.",
     date: "2026-02-15",
     displayDate: "15 February 2026",
-    author: "UPTIB Textile",
+    author: "Pakistan Textile Partners",
     category: "Trade & Policy",
     readTime: "6 min read",
     image: "/image/first-time-exporters.jpg",
@@ -343,7 +343,7 @@ export const articles: Article[] = [
       "Why Pakistan is a world-leading origin for bed linen and towels — and what that means for hotel groups and online home brands worldwide.",
     date: "2026-03-01",
     displayDate: "1 March 2026",
-    author: "UPTIB Textile",
+    author: "Pakistan Textile Partners",
     category: "Category Focus",
     readTime: "7 min read",
     image: "/image/bedding.jpg",
@@ -387,7 +387,7 @@ export const articles: Article[] = [
       {
         heading: "Getting started",
         paragraphs: [
-          "Whether you're a hotel group placing a recurring bath-linen order or an online brand testing a first private-label range, the route is the same: send a brief with your specs and target price, review samples, and let an accountable partner manage quality and delivery to your market. UPTIB Textile sources home textiles from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
+          "Whether you're a hotel group placing a recurring bath-linen order or an online brand testing a first private-label range, the route is the same: send a brief with your specs and target price, review samples, and let an accountable partner manage quality and delivery to your market. Pakistan Textile Partners sources home textiles from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
         ],
       },
     ],
