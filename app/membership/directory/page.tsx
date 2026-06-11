@@ -5,11 +5,11 @@ import { MemberDirectory } from "@/components/MemberDirectory";
 export const metadata: Metadata = {
   title: "Membership Directory",
   description:
-    "Browse the UPTIB membership directory — technology companies, investors, academic institutions, and professionals driving UK–Pakistan bilateral growth.",
+    "Browse the Pakistan Textile Partners membership directory — technology companies, investors, academic institutions, and professionals driving UK–Pakistan bilateral growth.",
   openGraph: {
-    title: "Membership Directory | UPTIB",
+    title: "Membership Directory | Pakistan Textile Partners",
     description:
-      "Browse the UPTIB membership directory — technology companies, investors, academic institutions, and professionals.",
+      "Browse the Pakistan Textile Partners membership directory — technology companies, investors, academic institutions, and professionals.",
   },
 };
 

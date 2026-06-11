@@ -89,7 +89,7 @@ export async function POST(req: NextRequest) {
       await sendAlert({
         subject: `${isFooter ? "New footer enquiry" : "New contact form"}: ${enquiryType.trim()} — ${name.trim()}`,
         text: renderRowsText(rows),
-        html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New enquiry submitted via the UPTIB ${isFooter ? "footer form" : "contact form"}.</p>${renderRowsHtml(
+        html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New enquiry submitted via the Pakistan Textile Partners ${isFooter ? "footer form" : "contact form"}.</p>${renderRowsHtml(
           rows
         )}`,
         replyTo: email.trim(),

@@ -56,7 +56,7 @@ const reasons = [
 export default function ContactPage() {
   return (
     <>
-      <section className="relative z-[2] w-full overflow-hidden bg-[#0a1410] min-h-[520px] md:min-h-[560px] lg:min-h-[600px] flex items-center">
+      <section className="relative z-[2] w-full overflow-hidden bg-[#0a1410] min-h-[600px] md:min-h-[640px] lg:min-h-[700px] flex items-center">
         {/* Background image */}
         <Image
           src="/image/hero-bg/pexels-jan-van-der-wolf-11680885-29298932.jpg"

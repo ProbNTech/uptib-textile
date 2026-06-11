@@ -12,7 +12,7 @@ const BANNER_POSTER = "/videos/banner-poster.jpg";
 
 const slides = [
   {
-    label: "UPTIB TEXTILE",
+    label: "PAKISTAN TEXTILE PARTNERS",
     headline: "Made in Pakistan. Sold across the world.",
     cta: { text: "Browse products", href: "/products" },
     secondary: { text: "Our services", href: "/services" },

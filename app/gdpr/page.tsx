@@ -31,7 +31,7 @@ const yourRights = [
 const lawfulBases = [
   { icon: FileText, title: "Performance of a Contract", color: "#2F7549", desc: "Where we are entering into a contract with you or performing our obligations under it, for example when you became a \u2018paying\u2019 member of our network." },
   { icon: Scale, title: "Legal Obligation", color: "#3E8F5E", desc: "Where necessary, we can comply with a legal or regulatory obligation to which we are subject." },
-  { icon: CheckCircle2, title: "Legitimate Interests", color: "#2F7549", desc: "Where it is reasonably necessary to achieve our legitimate interests, i.e. those required for running UPTIB as a B2B strategic networking organization in pursuit of our shared aims and ideals." },
+  { icon: CheckCircle2, title: "Legitimate Interests", color: "#2F7549", desc: "Where it is reasonably necessary to achieve our legitimate interests, i.e. those required for running Pakistan Textile Partners as a B2B strategic networking organization in pursuit of our shared aims and ideals." },
   { icon: Mail, title: "Specific Consent", color: "#2F7549", desc: "Where you have provided specific consent to us using your personal information in a certain way, such as to send you email, text and/or contact via telephone." },
 ];
 
@@ -198,7 +198,7 @@ export default function GDPRPage() {
                   <h3 className="font-heading font-bold text-lg text-[#16291E] pt-2">Safeguarding Your Data</h3>
                 </div>
                 <div className="h-px bg-[#D8D5CF] mb-5" />
-                <p className="text-base text-[#5A5F72] leading-relaxed">UPTIB uses reasonable measures to safeguard personal information. We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to only those employees, contractors or agents who have a legitimate business need to have access to that data.</p>
+                <p className="text-base text-[#5A5F72] leading-relaxed">Pakistan Textile Partners uses reasonable measures to safeguard personal information. We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to only those employees, contractors or agents who have a legitimate business need to have access to that data.</p>
               </motion.div>
             </div>
           </AnimatedSection>

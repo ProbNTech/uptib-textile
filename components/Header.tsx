@@ -8,7 +8,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { TopTicker } from "@/components/TopTicker";
 import {
   BedDouble, Shirt, Dumbbell, Stethoscope,
-  ShoppingCart, Truck, Megaphone, Warehouse,
+  ShoppingCart, ClipboardCheck, Megaphone, Warehouse,
   type LucideIcon,
 } from "lucide-react";
 
@@ -68,10 +68,10 @@ const navItems: NavItem[] = [
       cta: { label: "View all services →", href: "/services" },
     },
     items: [
-      { label: "Buying House", href: "/services/buying-house", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL, docs and logistics.", icon: ShoppingCart },
-      { label: "Marketing & Sales", href: "/services/marketing-sales", desc: "Visibility, B2B matchmaking and market intelligence for Pakistani exporters going global.", icon: Megaphone },
-      { label: "E-commerce & Warehouse", href: "/services/ecommerce-warehouse", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse },
-      { label: "Logistics", href: "/services/logistics", desc: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.", icon: Truck },
+      { label: "Buying", href: "/services/buying", desc: "Source finished textiles from Pakistan — quote to delivery, quality guaranteed.", icon: ShoppingCart },
+      { label: "Outsourcing", href: "/services/outsourcing", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL, docs and logistics.", icon: ClipboardCheck },
+      { label: "Marketing", href: "/services/marketing", desc: "Visibility, B2B matchmaking and market intelligence for exporters going global.", icon: Megaphone },
+      { label: "Warehousing", href: "/services/warehousing", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse },
     ],
   },
   /* 3 — Global Textile Market */
@@ -166,7 +166,7 @@ export function Header() {
             <Link
               href="/"
               className="flex items-center gap-0 flex-shrink-0 group"
-              aria-label="UPTIB Textile — Home"
+              aria-label="Pakistan Textile Partners — Home"
             >
               <Image
                 src="/image/main-logo.png"

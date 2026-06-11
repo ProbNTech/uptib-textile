@@ -18,14 +18,14 @@ export type CompanyCategory =
   | "Cloud"
   | "Cybersecurity"
   | "Data"
-  // Categories used by real UPTIB members on /pakistan-top-companies — chosen
+  // Categories used by real Pakistan Textile Partners members on /pakistan-top-companies — chosen
   // to reflect what each company actually does (AI/automation, custom software,
   // SaaS, project consulting), not the generic CompanyService bucket.
   | "AI & Automation"
   | "Software Development"
   | "SaaS Products"
   | "Consulting"
-  // Textile categories — used by the UPTIB textile manufacturer showcase
+  // Textile categories — used by the Pakistan Textile Partners textile manufacturer showcase
   | "Home & Hospitality Textiles"
   | "Apparel & Knitwear"
   | "Sportswear & Activewear"

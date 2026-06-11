@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export const WHATSAPP_NUMBER = "447920550000";
 export const WHATSAPP_DISPLAY = "0044 7920 550000";
 export const WHATSAPP_MESSAGE =
-  "Hello UPTIB,\n\nI came across your website and would like to learn more about UPTIB membership and how to get involved.\n\nCould you share more details?";
+  "Hello Pakistan Textile Partners,\n\nI came across your website and would like to learn more about Pakistan Textile Partners membership and how to get involved.\n\nCould you share more details?";
 export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE
 )}`;

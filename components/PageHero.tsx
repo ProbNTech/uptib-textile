@@ -59,6 +59,8 @@ interface PageHeroProps {
   label?: string;
   /** Override the eyebrow label color classes (defaults to brand green). */
   labelClassName?: string;
+  /** Override the hero min-height (responsive Tailwind classes). */
+  minHeightClass?: string;
   image?: string;
   video?: string;
   videoSpeed?: number;
@@ -84,6 +86,7 @@ export function PageHero({
   className = "",
   label,
   labelClassName,
+  minHeightClass = "min-h-[480px] md:min-h-[520px] lg:min-h-[560px]",
   image,
   video,
   videoSpeed = 1,
@@ -293,7 +296,7 @@ export function PageHero({
 
       {/* Content */}
       <div
-        className={`relative z-20 flex items-center min-h-[480px] md:min-h-[520px] lg:min-h-[560px] px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 lg:py-20 ${
+        className={`relative z-20 flex items-center ${minHeightClass} px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 lg:py-20 ${
           align === "center" ? "justify-center" : ""
         }`}
       >

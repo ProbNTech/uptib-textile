@@ -16,7 +16,7 @@ const categoryIcons: Record<string, typeof HelpCircle> = {
 };
 
 const categoryMeta: Record<string, { color: string; desc: string }> = {
-  General: { color: "#2F7549", desc: "Learn about UPTIB, our mission, and how to get involved." },
+  General: { color: "#2F7549", desc: "Learn about Pakistan Textile Partners, our mission, and how to get involved." },
   Membership: { color: "#3E8F5E", desc: "Tiers, benefits, application process, and cancellation policy." },
   "Programs & Services": { color: "#2F7549", desc: "Training, mentorship, incubation, and business support." },
   "Funding & Grants": { color: "#6366F1", desc: "Investment stages, eligibility criteria, and application timelines." },
@@ -27,9 +27,9 @@ const faqCategories = [
   {
     category: "General",
     faqs: [
-      { question: "What is UPTIB?", answer: "UPTIB (UK\u2013Pakistan Tech Forum) is a strategic platform strengthening technology, innovation, and digital trade between the United Kingdom and Pakistan. We connect companies, investors, professionals, and policymakers across both ecosystems." },
-      { question: "Who can join UPTIB?", answer: "UPTIB is open to technology companies, startups, investors, professionals, researchers, and organisations with an interest in the UK\u2013Pakistan technology corridor. Both individuals and companies can apply for membership." },
-      { question: "Where is UPTIB based?", answer: "UPTIB operates across both the UK and Pakistan, with presence in London and Islamabad. Our programmes and events take place in both countries and online." },
+      { question: "What is Pakistan Textile Partners?", answer: "Pakistan Textile Partners (UK\u2013Pakistan Tech Forum) is a strategic platform strengthening technology, innovation, and digital trade between the United Kingdom and Pakistan. We connect companies, investors, professionals, and policymakers across both ecosystems." },
+      { question: "Who can join Pakistan Textile Partners?", answer: "Pakistan Textile Partners is open to technology companies, startups, investors, professionals, researchers, and organisations with an interest in the UK\u2013Pakistan technology corridor. Both individuals and companies can apply for membership." },
+      { question: "Where is Pakistan Textile Partners based?", answer: "Pakistan Textile Partners operates across both the UK and Pakistan, with presence in London and Islamabad. Our programmes and events take place in both countries and online." },
       { question: "How can I get involved?", answer: "You can get involved by becoming a member, attending our events, applying for our programmes, or partnering with us. Visit our membership page or contact us to learn more." },
     ],
   },
@@ -45,7 +45,7 @@ const faqCategories = [
   {
     category: "Programs & Services",
     faqs: [
-      { question: "What programmes does UPTIB offer?", answer: "We offer AI & Tech Programs, Skill Development Centre training, Incubation & Collective Startups support, mentorship, business networks, digital marketing hub services, overseas employment facilitation, and business support services." },
+      { question: "What programmes does Pakistan Textile Partners offer?", answer: "We offer AI & Tech Programs, Skill Development Centre training, Incubation & Collective Startups support, mentorship, business networks, digital marketing hub services, overseas employment facilitation, and business support services." },
       { question: "Are programmes free for members?", answer: "Many core programmes are included in membership. Some premium services, specialised training, and intensive accelerator programmes may have additional fees. Members always receive preferential rates." },
       { question: "How do I apply for a programme?", answer: "Applications for specific programmes are accepted through our website or during open application windows. Check individual programme pages for current availability and application deadlines." },
       { question: "Can non-members access services?", answer: "Some events and resources are available to non-members. However, full access to programmes, mentorship, and business support services requires active membership." },
@@ -63,9 +63,9 @@ const faqCategories = [
   {
     category: "Events & Networking",
     faqs: [
-      { question: "What types of events does UPTIB host?", answer: "We host conferences, roundtables, webinars, trade delegations, networking events, awards ceremonies, workshops, and hackathons across the UK and Pakistan." },
-      { question: "Are events open to non-members?", answer: "Some events are open to the public, while others are exclusive to UPTIB members. Event listings indicate whether registration is open to all or members only." },
-      { question: "How can I speak at an UPTIB event?", answer: "If you are interested in speaking, moderating, or presenting at an UPTIB event, please contact our events team with your topic, bio, and any relevant materials. We welcome proposals from industry leaders and experts." },
+      { question: "What types of events does Pakistan Textile Partners host?", answer: "We host conferences, roundtables, webinars, trade delegations, networking events, awards ceremonies, workshops, and hackathons across the UK and Pakistan." },
+      { question: "Are events open to non-members?", answer: "Some events are open to the public, while others are exclusive to Pakistan Textile Partners members. Event listings indicate whether registration is open to all or members only." },
+      { question: "How can I speak at a Pakistan Textile Partners event?", answer: "If you are interested in speaking, moderating, or presenting at a Pakistan Textile Partners event, please contact our events team with your topic, bio, and any relevant materials. We welcome proposals from industry leaders and experts." },
       { question: "Can my company sponsor an event?", answer: "Yes, we offer sponsorship opportunities for our events and programmes. Sponsorship packages include branding, speaking slots, exhibition space, and delegate access. Contact us for details." },
     ],
   },
@@ -113,7 +113,7 @@ export default function FAQsPage() {
       <PageHero
         label="Help Centre"
         title="Frequently Asked Questions"
-        subtitle="Find answers to common questions about UPTIB, membership, programmes, funding, and more."
+        subtitle="Find answers to common questions about Pakistan Textile Partners, membership, programmes, funding, and more."
         image="/image/banners/faq.jpg"
       />
 
@@ -271,7 +271,7 @@ export default function FAQsPage() {
       <GlobalCTA
         label="Still Have Questions?"
         title="We're Here to Help"
-        subtitle="Can't find the answer you're looking for? Our team is ready to assist with any questions about UPTIB, membership, programmes, or partnerships."
+        subtitle="Can't find the answer you're looking for? Our team is ready to assist with any questions about Pakistan Textile Partners, membership, programmes, or partnerships."
         primaryButtonText="Contact Us"
         primaryButtonLink="/contact"
         secondaryButtonText="Apply for Membership"

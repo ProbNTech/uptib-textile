@@ -16,42 +16,42 @@ const terms = [
     number: "01",
     title: "Scope",
     accent: "border-[#2F7549]",
-    content: "These terms and conditions apply to all participants, nominees, and awardees involved in UPTIB\u2019s excellence management programmes, including the Tech Excellence Awards, recognition initiatives, and related activities.",
+    content: "These terms and conditions apply to all participants, nominees, and awardees involved in Pakistan Textile Partners\u2019 excellence management programmes, including the Tech Excellence Awards, recognition initiatives, and related activities.",
   },
   {
     icon: Users,
     number: "02",
     title: "Eligibility",
     accent: "border-[#3E8F5E]",
-    content: "Participation in excellence management programmes is open to UPTIB members and invited participants who meet the published eligibility criteria for each programme. UPTIB reserves the right to verify eligibility and disqualify participants who do not meet the requirements.",
+    content: "Participation in excellence management programmes is open to Pakistan Textile Partners members and invited participants who meet the published eligibility criteria for each programme. Pakistan Textile Partners reserves the right to verify eligibility and disqualify participants who do not meet the requirements.",
   },
   {
     icon: Award,
     number: "03",
     title: "Nomination & Selection",
     accent: "border-[#2F7549]",
-    content: "Nominations may be submitted by members, partners, or the UPTIB team. All nominations are reviewed by an independent panel. The selection process is based on merit, impact, innovation, and alignment with UPTIB\u2019s values and objectives. Decisions of the judging panel are final.",
+    content: "Nominations may be submitted by members, partners, or the Pakistan Textile Partners team. All nominations are reviewed by an independent panel. The selection process is based on merit, impact, innovation, and alignment with Pakistan Textile Partners\u2019 values and objectives. Decisions of the judging panel are final.",
   },
   {
     icon: Trophy,
     number: "04",
     title: "Awards & Recognition",
     accent: "border-[#3E8F5E]",
-    content: "Awards and recognition are granted at the sole discretion of UPTIB and the judging panel. UPTIB reserves the right to withhold or withdraw awards if the recipient is found to have breached these terms, the Code of Conduct, or any applicable laws.",
+    content: "Awards and recognition are granted at the sole discretion of Pakistan Textile Partners and the judging panel. Pakistan Textile Partners reserves the right to withhold or withdraw awards if the recipient is found to have breached these terms, the Code of Conduct, or any applicable laws.",
   },
   {
     icon: Shield,
     number: "05",
     title: "Intellectual Property",
     accent: "border-[#2F7549]",
-    content: "By participating, you grant UPTIB a non-exclusive, royalty-free licence to use your name, likeness, company name, and submitted materials for promotional and marketing purposes related to the programme.",
+    content: "By participating, you grant Pakistan Textile Partners a non-exclusive, royalty-free licence to use your name, likeness, company name, and submitted materials for promotional and marketing purposes related to the programme.",
   },
   {
     icon: Scale,
     number: "06",
     title: "Liability",
     accent: "border-[#2F7549]",
-    content: "UPTIB shall not be liable for any loss, damage, or expense arising from participation in excellence management programmes, except where caused by our negligence. Participants are responsible for their own travel, accommodation, and related expenses unless otherwise specified.",
+    content: "Pakistan Textile Partners shall not be liable for any loss, damage, or expense arising from participation in excellence management programmes, except where caused by our negligence. Participants are responsible for their own travel, accommodation, and related expenses unless otherwise specified.",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function ExcellenceManagementTermsPage() {
     <div>
       <PageHero
         title="Excellence Management Terms & Conditions"
-        subtitle="Terms governing participation in UPTIB's excellence management programmes, awards, and recognition initiatives."
+        subtitle="Terms governing participation in Pakistan Textile Partners' excellence management programmes, awards, and recognition initiatives."
         image="/image/banners/banner31.jpg"
       />
 

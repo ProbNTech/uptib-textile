@@ -134,12 +134,12 @@ const applyChips = [
 /* ── FAQs ────────────────────────────────────────────────────────── */
 const faqs = [
   {
-    q: "Who is eligible for UPTIB membership?",
+    q: "Who is eligible for Pakistan Textile Partners membership?",
     a: "Membership is open to verified Pakistani textile manufacturers, mills, exporters, trading houses and allied suppliers who can supply international buyers. First-time and SME exporters are welcome.",
   },
   {
     q: "How is this different from a directory listing?",
-    a: "A directory listing is passive — it waits to be found. Membership is active: you join the pool we source from for live orders, get introduced to qualified buyers worldwide, receive market intelligence, and have UPTIB representing your products to real demand.",
+    a: "A directory listing is passive — it waits to be found. Membership is active: you join the pool we source from for live orders, get introduced to qualified buyers worldwide, receive market intelligence, and have Pakistan Textile Partners representing your products to real demand.",
   },
   {
     q: "What do the membership tiers cost?",
@@ -178,6 +178,7 @@ export default function MembershipClient() {
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <PageHero
         label="Membership"
+        minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="More than a listing — a route to real buyers"
         subtitle="Join the supplier pool global buyers source from. Build credibility, get matched to qualified demand, and grow your textile exports worldwide."
         image="/image/hero-bg/closeup-view-handshake-two-businessmen-suits-shaking-hands.jpg"
@@ -232,7 +233,7 @@ export default function MembershipClient() {
                 />
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
-                  Standing out in global markets takes more than being found — it takes being trusted. UPTIB membership
+                  Standing out in global markets takes more than being found — it takes being trusted. Pakistan Textile Partners membership
                   gives you the credibility, tools and connections to grow with confidence, because we run the
                   buyer-facing sourcing business too.
                 </p>
@@ -403,7 +404,7 @@ export default function MembershipClient() {
           <AnimatedSection>
             <div className="text-center mb-12">
               <SectionLabel
-                label="Your journey with UPTIB"
+                label="Your journey with Pakistan Textile Partners"
                 title="From application to your first introductions"
                 color="#2F7549"
                 align="center"
@@ -459,7 +460,7 @@ export default function MembershipClient() {
                 <SectionLabel
                   label="One membership. Global demand."
                   title="One membership, demand worldwide"
-                  body="UPTIB connects Pakistani manufacturers with retailers, importers, hotel groups and brands across the markets where Pakistani textiles are in demand."
+                  body="Pakistan Textile Partners connects Pakistani manufacturers with retailers, importers, hotel groups and brands across the markets where Pakistani textiles are in demand."
                   color="#8FD3AE"
                   light
                   hideLine
@@ -507,7 +508,7 @@ export default function MembershipClient() {
                 <SectionLabel
                   label="Ready to join?"
                   title="Apply for membership"
-                  body="Take the next step toward global growth. Join UPTIB and become part of the supplier pool buyers source from."
+                  body="Take the next step toward global growth. Join Pakistan Textile Partners and become part of the supplier pool buyers source from."
                   color="#2F7549"
                   hideLine
                 />
@@ -560,7 +561,7 @@ export default function MembershipClient() {
                 <SectionLabel
                   label="FAQs"
                   title="Membership questions, answered"
-                  body="What Pakistani textile exporters ask us most about joining UPTIB and reaching buyers worldwide."
+                  body="What Pakistani textile exporters ask us most about joining Pakistan Textile Partners and reaching buyers worldwide."
                   color="#2F7549"
                   as="h2"
                   hideLine

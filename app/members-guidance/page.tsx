@@ -30,13 +30,13 @@ const guidanceSections = [
     icon: GraduationCap,
     title: "Participating in Programmes",
     accent: "border-[#3E8F5E]",
-    content: "UPTIB runs regular programmes including AI & Tech Programs, Skill Development, and Incubation. Programme applications are announced through our newsletter and events page. Members receive priority access and preferential rates for all programmes.",
+    content: "Pakistan Textile Partners runs regular programmes including AI & Tech Programs, Skill Development, and Incubation. Programme applications are announced through our newsletter and events page. Members receive priority access and preferential rates for all programmes.",
   },
   {
     icon: Calendar,
     title: "Events & Networking",
     accent: "border-[#2F7549]",
-    content: "Stay active in the UPTIB community by attending events, roundtables, and trade delegations. Member-exclusive events are marked in the events calendar. We encourage members to actively participate, share their expertise, and build meaningful connections.",
+    content: "Stay active in the Pakistan Textile Partners community by attending events, roundtables, and trade delegations. Member-exclusive events are marked in the events calendar. We encourage members to actively participate, share their expertise, and build meaningful connections.",
   },
   {
     icon: Banknote,
@@ -53,7 +53,7 @@ export default function MembersGuidancePage() {
     <div>
       <PageHero
         title="Members Guidance"
-        subtitle="A guide for UPTIB members on how to access services, participate in programmes, and make the most of your membership."
+        subtitle="A guide for Pakistan Textile Partners members on how to access services, participate in programmes, and make the most of your membership."
         image="/image/banners/banner27.jpg"
       />
 
@@ -63,7 +63,7 @@ export default function MembersGuidancePage() {
           <SectionHeader
             label="Member Handbook"
             title="Getting Started"
-            subtitle="Welcome to UPTIB. Once your membership is confirmed, follow these steps to get the most out of your membership."
+            subtitle="Welcome to Pakistan Textile Partners. Once your membership is confirmed, follow these steps to get the most out of your membership."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {gettingStartedSteps.map((step, i) => (
@@ -90,7 +90,7 @@ export default function MembersGuidancePage() {
         <AnimatedSection>
           <SectionHeader
             label="Your Membership"
-            title="How to Make the Most of UPTIB"
+            title="How to Make the Most of Pakistan Textile Partners"
             subtitle="Explore the services, programmes, events, and funding available to you as a member."
           />
           <div className="grid md:grid-cols-2 gap-6">

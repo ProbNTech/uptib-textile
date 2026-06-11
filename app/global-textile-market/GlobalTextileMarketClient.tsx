@@ -94,7 +94,7 @@ function MarketHero() {
   return (
     <section className="relative bg-white">
       {/* Dark hero region */}
-      <div className="relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#06231b] lg:min-h-[720px]">
+      <div className="relative isolate flex min-h-[540px] items-center overflow-hidden bg-[#06231b] lg:min-h-[640px]">
         {/* Background image — globe + textile spools, biased to the right */}
         <div aria-hidden className="absolute inset-0">
           <Image
@@ -151,7 +151,7 @@ function MarketHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            UPTIB is the UK–Pakistan Trades &amp; Investment Board — a London-based
+            Pakistan Textile Partners is the textile arm of the UK–Pakistan Trades &amp; Investment Board — a London-based
             platform, with a Lahore office, that helps Pakistani textile
             manufacturers reach global markets.
           </motion.p>
@@ -305,8 +305,17 @@ function ExportFootprint() {
   const activeCountry = europeFootprints[active];
 
   return (
-    <section className="relative bg-[#f7f6f4]">
-      <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+    <section className="relative overflow-hidden bg-[#f7f6f4]">
+      {/* Decorative antique globe — "100+ countries across 6 continents" */}
+      <Image
+        src="/image/explained-globe.png"
+        alt=""
+        aria-hidden
+        width={520}
+        height={520}
+        className="pointer-events-none select-none absolute -left-28 -bottom-20 z-0 hidden h-auto w-[440px] opacity-100 lg:block"
+      />
+      <div className="relative z-[1] px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
         <div className="grid lg:grid-cols-[300px_1fr] gap-10 lg:gap-12 items-start">
           {/* Left — intro */}
           <AnimatedSection animation="slide-right">
@@ -980,7 +989,7 @@ export default function GlobalTextileMarketClient() {
       </section>
 
       <GlobalCTA
-        label="Work with UPTIB"
+        label="Work with Pakistan Textile Partners"
         title="Source from Pakistan, or grow your exports"
         subtitle="Tap into one of the world's leading textile origins — for buyers seeking dependable supply, and for manufacturers seeking global demand."
         primaryButtonText="Source from Pakistan"

@@ -104,7 +104,7 @@ const processSteps = [
     number: "01",
     title: "Filing a Dispute",
     icon: ClipboardList,
-    description: "A party may submit a formal dispute request to UPTIB including a description of the dispute, relevant agreements or documentation, and desired outcome or resolution.",
+    description: "A party may submit a formal dispute request to Pakistan Textile Partners including a description of the dispute, relevant agreements or documentation, and desired outcome or resolution.",
     outcome: "Dispute registered",
     color: "#2F7549",
   },
@@ -112,7 +112,7 @@ const processSteps = [
     number: "02",
     title: "Initial Mediation",
     icon: MessageCircle,
-    description: "UPTIB will attempt to resolve the dispute through amicable mediation between the parties. The mediation process aims to encourage dialogue and reach a mutually acceptable settlement.",
+    description: "Pakistan Textile Partners will attempt to resolve the dispute through amicable mediation between the parties. The mediation process aims to encourage dialogue and reach a mutually acceptable settlement.",
     outcome: "Dialogue initiated",
     color: "#3E8F5E",
   },
@@ -120,7 +120,7 @@ const processSteps = [
     number: "03",
     title: "Arbitration Panel",
     icon: UserCheck,
-    description: "If mediation fails, UPTIB may appoint an independent arbitration panel consisting of professionals with expertise in technology law, business contracts, international trade, and digital services.",
+    description: "If mediation fails, Pakistan Textile Partners may appoint an independent arbitration panel consisting of professionals with expertise in technology law, business contracts, international trade, and digital services.",
     outcome: "Panel appointed",
     color: "#2F7549",
   },
@@ -162,7 +162,7 @@ const principles = [
 const benefits = [
   {
     title: "Neutral Platform",
-    description: "UPTIB provides a neutral and professional environment for resolving disputes without bias.",
+    description: "Pakistan Textile Partners provides a neutral and professional environment for resolving disputes without bias.",
     icon: Globe2,
     color: "#2F7549",
   },
@@ -209,7 +209,7 @@ export default function ArbitrationClient() {
             Resolution Services
           </>
         }
-        subtitle="Ensuring trust in cross-border technology collaboration. UPTIB provides an independent dispute resolution framework to facilitate the fair, efficient, and amicable settlement of disputes."
+        subtitle="Ensuring trust in cross-border technology collaboration. Pakistan Textile Partners provides an independent dispute resolution framework to facilitate the fair, efficient, and amicable settlement of disputes."
         heroVideo="/videos/banner.mp4"
         heroVideoSpeed={2}
       >
@@ -265,10 +265,10 @@ export default function ArbitrationClient() {
                 dark
               />
               <p className="text-white/80 text-lg leading-relaxed mb-5">
-                Cross-border business relationships sometimes lead to misunderstandings or contractual disputes. UPTIB offers a structured framework to help parties resolve issues efficiently, professionally, and without unnecessary litigation.
+                Cross-border business relationships sometimes lead to misunderstandings or contractual disputes. Pakistan Textile Partners offers a structured framework to help parties resolve issues efficiently, professionally, and without unnecessary litigation.
               </p>
               <p className="text-white/60 text-lg leading-relaxed mb-5">
-                The UK–Pakistan Trades & Investment Board (UPTIB) provides an independent dispute resolution framework to facilitate the fair, efficient, and amicable settlement of disputes arising from business collaborations, service agreements, employment arrangements, research partnerships, and technology transactions involving UPTIB members or affiliated parties.
+                The UK–Pakistan Trades & Investment Board (UPTIB) provides an independent dispute resolution framework to facilitate the fair, efficient, and amicable settlement of disputes arising from business collaborations, service agreements, employment arrangements, research partnerships, and technology transactions involving Pakistan Textile Partners members or affiliated parties.
               </p>
 
               {/* Filing info card inline */}
@@ -345,7 +345,7 @@ export default function ArbitrationClient() {
           <SectionHeader
             label="Scope"
             title="Types of Disputes Covered"
-            subtitle="UPTIB arbitration services may assist in resolving disputes related to the following areas."
+            subtitle="Pakistan Textile Partners arbitration services may assist in resolving disputes related to the following areas."
             color="red"
           />
 
@@ -484,7 +484,7 @@ export default function ArbitrationClient() {
                 color="blue"
               />
               <p className="text-[#3D4152] text-lg leading-relaxed mb-5">
-                If mediation fails, UPTIB may appoint an independent arbitration panel consisting of professionals with deep expertise across critical areas relevant to cross-border technology disputes.
+                If mediation fails, Pakistan Textile Partners may appoint an independent arbitration panel consisting of professionals with deep expertise across critical areas relevant to cross-border technology disputes.
               </p>
               <p className="text-[#5A5F72] text-lg leading-relaxed">
                 The panel reviews the evidence presented by both parties and provides either a recommended settlement or a formal arbitration decision depending on the agreed arbitration terms.
@@ -588,7 +588,7 @@ export default function ArbitrationClient() {
       <Section variant="light">
         <AnimatedSection>
           <SectionHeader
-            label="Why Choose UPTIB"
+            label="Why Choose Pakistan Textile Partners"
             title="Benefits for Members and Partners"
             color="green"
           />
@@ -636,7 +636,7 @@ export default function ArbitrationClient() {
           <SectionHeader
             label="Legal Basis"
             title="Governed by UK Law & International Standards"
-            subtitle="The UPTIB Arbitration Framework is built on established legal foundations ensuring enforceability and credibility."
+            subtitle="The Pakistan Textile Partners Arbitration Framework is built on established legal foundations ensuring enforceability and credibility."
             color="blue"
             dark
           />
@@ -646,7 +646,7 @@ export default function ArbitrationClient() {
               {
                 title: "Arbitration Act 1996",
                 subtitle: "United Kingdom",
-                description: "The primary governing legislation providing the legal framework for all arbitration proceedings under UPTIB.",
+                description: "The primary governing legislation providing the legal framework for all arbitration proceedings under Pakistan Textile Partners.",
                 color: "#2F7549",
                 icon: Gavel,
               },
@@ -855,7 +855,7 @@ export default function ArbitrationClient() {
                     Full Policy Document
                   </p>
                   <h3 className="font-heading font-bold text-xl text-[#16291E] mb-2">
-                    UPTIB Arbitration Framework Policy
+                    Pakistan Textile Partners Arbitration Framework Policy
                   </h3>
                   <p className="text-[#3D4152]">
                     View the complete framework including legal basis, detailed procedures, cost schedules, appointment guidelines, digital platform guide, and FAQs.
@@ -900,7 +900,7 @@ export default function ArbitrationClient() {
                     Recommended Arbitration Clause
                   </h3>
                   <p className="text-white/60 text-sm">
-                    UPTIB recommends that agreements facilitated through its platform include the following clause:
+                    Pakistan Textile Partners recommends that agreements facilitated through its platform include the following clause:
                   </p>
                 </div>
               </div>
@@ -936,7 +936,7 @@ export default function ArbitrationClient() {
                 </div>
                 <div className="h-px bg-white/10 mb-4" />
                 <p className="text-white/60 text-base leading-relaxed">
-                  Participation in UPTIB arbitration services is voluntary and typically requires agreement from both parties through contractual clauses referencing the UPTIB arbitration framework.
+                  Participation in Pakistan Textile Partners arbitration services is voluntary and typically requires agreement from both parties through contractual clauses referencing the Pakistan Textile Partners arbitration framework.
                 </p>
               </div>
             </motion.div>
@@ -961,7 +961,7 @@ export default function ArbitrationClient() {
                 </div>
                 <div className="h-px bg-white/10 mb-4" />
                 <p className="text-white/60 text-base leading-relaxed">
-                  UPTIB arbitration services are intended to support amicable dispute resolution and do not replace the jurisdiction of national courts in the United Kingdom or other relevant jurisdictions.
+                  Pakistan Textile Partners arbitration services are intended to support amicable dispute resolution and do not replace the jurisdiction of national courts in the United Kingdom or other relevant jurisdictions.
                 </p>
               </div>
             </motion.div>
@@ -973,7 +973,7 @@ export default function ArbitrationClient() {
       <GlobalCTA
         label="Get Started"
         title="Need Dispute Resolution?"
-        subtitle="Contact UPTIB to learn more about our arbitration services or to submit a formal dispute request."
+        subtitle="Contact Pakistan Textile Partners to learn more about our arbitration services or to submit a formal dispute request."
         primaryButtonText="File a Dispute"
         primaryButtonLink="/contact"
         secondaryButtonText="Become a Member"

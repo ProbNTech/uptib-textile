@@ -32,7 +32,7 @@ import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 
-/* Why source through UPTIB */
+/* Why source through Pakistan Textile Partners */
 const whyUptib = [
   { icon: Globe2, title: "A vetted global network", desc: "Pre-vetted Pakistani manufacturers across every category, matched to buyers worldwide." },
   { icon: ShieldCheck, title: "Quality at every step", desc: "Independent, multi-stage inspection on your agreed AQL — not just at the factory gate." },
@@ -135,6 +135,7 @@ export default function ProductsClient() {
       <PageHero
         label="Products"
         labelClassName="text-white"
+        minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="The textiles Pakistan exports to the world"
         subtitle="Four categories where Pakistani manufacturing is strongest and global demand is highest — bedding & linen, apparel, sportswear and healthcare textiles, sourced and delivered with one accountable partner."
         image="/image/hero-bg/pexels-cottonbro-6580549.jpg"
@@ -243,7 +244,7 @@ export default function ProductsClient() {
         </div>
       </section>
 
-      {/* ── WHY SOURCE THROUGH UPTIB ─────────────────────────────── */}
+      {/* ── WHY SOURCE THROUGH Pakistan Textile Partners ─────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
@@ -251,7 +252,7 @@ export default function ProductsClient() {
               {/* Left: copy + decorative image */}
               <div>
                 <SectionLabel
-                  label="Why UPTIB"
+                  label="Why Pakistan Textile Partners"
                   title="Product is only half the story"
                   color="#2F7549"
                   hideLine

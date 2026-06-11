@@ -42,11 +42,11 @@ const orgChart = [
     icon: Crown,
     level: "Executive Leadership",
     responsibilities: [
-      "Provide strategic oversight and governance for UPTIB",
+      "Provide strategic oversight and governance for Pakistan Textile Partners",
       "Chair Board meetings and ensure effective governance",
       "Approve major partnerships, initiatives, and strategic decisions",
       "Ensure compliance with the Constitution and governance policies",
-      "Serve as a senior ambassador for UPTIB in formal settings",
+      "Serve as a senior ambassador for Pakistan Textile Partners in formal settings",
     ],
   },
   {
@@ -54,9 +54,9 @@ const orgChart = [
     icon: Shield,
     level: "Executive Leadership",
     responsibilities: [
-      "Provide strategic direction and vision for UPTIB",
+      "Provide strategic direction and vision for Pakistan Textile Partners",
       "Lead day-to-day operations and strategic execution",
-      "Represent UPTIB at the highest levels with governments and international bodies",
+      "Represent Pakistan Textile Partners at the highest levels with governments and international bodies",
       "Drive membership growth and stakeholder engagement",
       "Oversee programme delivery and service quality",
       "Serve as the principal ambassador for the Forum",
@@ -139,11 +139,11 @@ const orgChart = [
     icon: Users,
     level: "Regional Leadership",
     responsibilities: [
-      "Lead UPTIB activities and membership engagement in assigned regions",
+      "Lead Pakistan Textile Partners activities and membership engagement in assigned regions",
       "Coordinate local events, meetups, and networking sessions",
       "Identify and develop regional partnerships and opportunities",
       "Report on regional performance and member feedback",
-      "Represent UPTIB at regional forums and conferences",
+      "Represent Pakistan Textile Partners at regional forums and conferences",
     ],
   },
   {
@@ -218,7 +218,7 @@ const governanceCards = [
   { id: "governance-structure", title: "Governance Structure", desc: "Our framework for accountability, transparency, and ethical oversight.", tags: ["Ethics", "Accountability"], colorIdx: 0 },
   { id: "board-of-directors", title: "Board of Directors", desc: "Strategic oversight and decision-making at the highest level.", tags: ["Oversight", "Strategy"], colorIdx: 1 },
   { id: "advisory-forum", title: "Advisory Forum", desc: "Expert guidance and strategic counsel from industry leaders.", tags: ["Expertise", "Guidance"], colorIdx: 2 },
-  { id: "executive-leadership", title: "Executive Leadership", desc: "Day-to-day operations and strategic execution of UPTIB initiatives.", tags: ["Execution", "Operations"], colorIdx: 0 },
+  { id: "executive-leadership", title: "Executive Leadership", desc: "Day-to-day operations and strategic execution of Pakistan Textile Partners initiatives.", tags: ["Execution", "Operations"], colorIdx: 0 },
 ];
 
 const stats = [
@@ -281,7 +281,7 @@ export default function ManagementTeamPage() {
       {/* Governance Overview */}
       <Section variant="light">
         <AnimatedSection>
-          <SectionHeader label="Our Framework" title="Organisational Structure" subtitle="UPTIB operates through a clearly defined hierarchy with defined roles, responsibilities, and reporting lines." color="blue" />
+          <SectionHeader label="Our Framework" title="Organisational Structure" subtitle="Pakistan Textile Partners operates through a clearly defined hierarchy with defined roles, responsibilities, and reporting lines." color="blue" />
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <motion.div
               initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
@@ -368,7 +368,7 @@ export default function ManagementTeamPage() {
       {/* Key Positions & Responsibilities */}
       <Section variant="light">
         <AnimatedSection>
-          <SectionHeader label="Leadership Roles" title="Key Positions &amp; Responsibilities" subtitle="Each role within UPTIB has defined responsibilities and accountability lines." color="red" />
+          <SectionHeader label="Leadership Roles" title="Key Positions &amp; Responsibilities" subtitle="Each role within Pakistan Textile Partners has defined responsibilities and accountability lines." color="red" />
           <div className="grid md:grid-cols-2 gap-5">
             {orgChart.map((role, i) => {
               const Icon = role.icon;
@@ -416,29 +416,29 @@ export default function ManagementTeamPage() {
       {/* Governance Detail Sections */}
       <GovernanceSection
         id="governance-structure" variant="alt" title="Governance Structure"
-        desc="A comprehensive framework ensuring accountability, transparency, and ethical decision-making across all UPTIB operations."
-        image="/image/Leadership%20Governance/Governance_Structure.webp" imageAlt="UPTIB Governance Structure" imageLeft={false}
+        desc="A comprehensive framework ensuring accountability, transparency, and ethical decision-making across all Pakistan Textile Partners operations."
+        image="/image/Leadership%20Governance/Governance_Structure.webp" imageAlt="Pakistan Textile Partners Governance Structure" imageLeft={false}
         responsibilities={["Establish and maintain ethical standards", "Oversee strategic direction and planning", "Ensure legal and regulatory compliance", "Provide transparent reporting", "Manage conflicts of interest", "Facilitate stakeholder engagement"]}
         colorIdx={0}
       />
       <GovernanceSection
         id="board-of-directors" variant="light" title="Board of Directors"
-        desc="Strategic oversight and governance at the highest level, ensuring UPTIB's mission and values guide all decisions."
-        image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=90&auto=format&fit=crop" imageAlt="UPTIB Board of Directors in a professional boardroom meeting" imageLeft={true}
+        desc="Strategic oversight and governance at the highest level, ensuring Pakistan Textile Partners' mission and values guide all decisions."
+        image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=90&auto=format&fit=crop" imageAlt="Pakistan Textile Partners Board of Directors in a professional boardroom meeting" imageLeft={true}
         responsibilities={["Approve strategic plans and major initiatives", "Oversee financial management and resources", "Appoint and evaluate executive leadership", "Ensure compliance with governance policies", "Review and approve annual reports", "Provide strategic guidance on partnerships"]}
         colorIdx={1}
       />
       <GovernanceSection
         id="advisory-forum" variant="alt" title="Advisory Forum"
         desc="Expert guidance and strategic counsel from distinguished leaders across technology, business, and policy."
-        image="/image/Leadership%20Governance/Advisory_Council.webp" imageAlt="UPTIB Advisory Forum" imageLeft={false}
-        responsibilities={["Provide expert guidance on technology trends", "Offer strategic counsel on program development", "Facilitate connections with key stakeholders", "Review and provide feedback on initiatives", "Serve as ambassadors for UPTIB's mission", "Contribute to thought leadership"]}
+        image="/image/Leadership%20Governance/Advisory_Council.webp" imageAlt="Pakistan Textile Partners Advisory Forum" imageLeft={false}
+        responsibilities={["Provide expert guidance on technology trends", "Offer strategic counsel on program development", "Facilitate connections with key stakeholders", "Review and provide feedback on initiatives", "Serve as ambassadors for Pakistan Textile Partners' mission", "Contribute to thought leadership"]}
         colorIdx={2}
       />
       <GovernanceSection
         id="executive-leadership" variant="light" title="Executive Leadership"
-        desc="Day-to-day operations and strategic execution of UPTIB's programs, initiatives, and member services."
-        image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=90&auto=format&fit=crop" imageAlt="UPTIB Executive Leadership team collaborating" imageLeft={true}
+        desc="Day-to-day operations and strategic execution of Pakistan Textile Partners' programs, initiatives, and member services."
+        image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=90&auto=format&fit=crop" imageAlt="Pakistan Textile Partners Executive Leadership team collaborating" imageLeft={true}
         responsibilities={["Execute strategic plans and initiatives", "Manage day-to-day operations and delivery", "Build and maintain stakeholder partnerships", "Oversee financial management and resources", "Provide regular reporting to the Board", "Ensure compliance with policies and procedures"]}
         colorIdx={0}
       />
@@ -480,7 +480,7 @@ export default function ManagementTeamPage() {
       <GlobalCTA
         label="Get Involved"
         title="Transparent Governance, Collective Impact"
-        subtitle="Our structure ensures every member has a voice. Learn more about how you can contribute to UPTIB's mission."
+        subtitle="Our structure ensures every member has a voice. Learn more about how you can contribute to Pakistan Textile Partners' mission."
         primaryButtonText="Become a Member"
         primaryButtonLink="/membership"
         secondaryButtonText="Code of Conduct"

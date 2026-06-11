@@ -105,7 +105,7 @@ export async function POST(req: NextRequest) {
       await sendAlert({
         subject: `New membership application — ${body.orgName?.trim() || "(unknown org)"}`,
         text: renderRowsText(rows),
-        html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New membership application submitted via the UPTIB website.</p>${renderRowsHtml(
+        html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New membership application submitted via the Pakistan Textile Partners website.</p>${renderRowsHtml(
           rows
         )}`,
         replyTo: body.personEmail?.trim() || undefined,

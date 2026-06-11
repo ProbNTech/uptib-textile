@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Vision",
   description:
-    "UPTIB's vision for a connected innovation ecosystem where UK and Pakistani technology sectors collaborate to create world-leading digital solutions.",
+    "Pakistan Textile Partners' vision for a connected innovation ecosystem where UK and Pakistani technology sectors collaborate to create world-leading digital solutions.",
   openGraph: {
-    title: "Our Vision | UPTIB",
+    title: "Our Vision | Pakistan Textile Partners",
     description:
-      "UPTIB's vision for a connected innovation ecosystem where UK and Pakistani technology sectors collaborate to create world-leading digital solutions.",
+      "Pakistan Textile Partners' vision for a connected innovation ecosystem where UK and Pakistani technology sectors collaborate to create world-leading digital solutions.",
   },
 };
 

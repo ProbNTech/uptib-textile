@@ -17,7 +17,7 @@ const whyUptech = [
   {
     icon: Shield,
     title: "Trusted Gateway",
-    description: "UPTIB acts as a reliable bridge connecting Pakistani technology providers with UK and European companies.",
+    description: "Pakistan Textile Partners acts as a reliable bridge connecting Pakistani technology providers with UK and European companies.",
     color: "#2F7549",
   },
   {
@@ -29,7 +29,7 @@ const whyUptech = [
   {
     icon: Globe2,
     title: "Market Access Expertise",
-    description: "UPTIB provides guidance on European market entry, regulatory environments, and technology sector opportunities.",
+    description: "Pakistan Textile Partners provides guidance on European market entry, regulatory environments, and technology sector opportunities.",
     color: "#2F7549",
   },
   {
@@ -41,7 +41,7 @@ const whyUptech = [
   {
     icon: Layers,
     title: "End-to-End Support",
-    description: "From market research to partnership development and project coordination, UPTIB supports organisations throughout the collaboration process.",
+    description: "From market research to partnership development and project coordination, Pakistan Textile Partners supports organisations throughout the collaboration process.",
     color: "#3E8F5E",
   },
 ];
@@ -50,7 +50,7 @@ const exploreItems = [
   { icon: Lightbulb, title: "Vision", desc: "A connected innovation ecosystem bridging UK and Pakistan's technology sectors.", href: "/about/vision", color: "#2F7549" },
   { icon: Target, title: "Mission", desc: "Our strategic mission to transform Pakistan into a thriving global tech hub.", href: "/about/mission", color: "#3E8F5E" },
   { icon: CheckCircle2, title: "Objectives & Values", desc: "Core values, key activities, and broader impact goals driving our work.", href: "/about/objectives", color: "#2F7549" },
-  { icon: Award, title: "Leadership", desc: "Meet our President Khalil Choudhary â the leader of UPTIB.", href: "/about/founder", color: "#2F7549" },
+  { icon: Award, title: "Leadership", desc: "Meet our President Khalil Choudhary â the leader of Pakistan Textile Partners.", href: "/about/founder", color: "#2F7549" },
   { icon: Users, title: "Management Team", desc: "Board of directors, advisory forum, and executive leadership team.", href: "/about/management-team", color: "#3E8F5E" },
 ];
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
     <div>
       <PageHero
         label="About Us"
-        title="About UPTIB"
+        title="About Pakistan Textile Partners"
         subtitle="Empowering Pakistan's Tech Leaders; innovation, entrepreneurship, investment, advocacy and visionary growth."
         threeBg
       >
@@ -108,10 +108,10 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* Why Choose UPTIB */}
+      {/* Why Choose Pakistan Textile Partners */}
       <Section variant="alt">
         <AnimatedSection>
-          <SectionHeader label="Why UPTIB" title="Why Choose UPTIB?" color="green" subtitle="The UK–Pakistan Trades & Investment Board provides a trusted platform for technology collaboration between Pakistan and Europe." />
+          <SectionHeader label="Why Pakistan Textile Partners" title="Why Choose Pakistan Textile Partners?" color="green" subtitle="The UK–Pakistan Trades & Investment Board provides a trusted platform for technology collaboration between Pakistan and Europe." />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyUptech.map((item) => {
               const Icon = item.icon;
@@ -168,7 +168,7 @@ export default function AboutPage() {
       <GlobalCTA
         label="Join Us"
         title="Ready to Be Part of the Movement?"
-        subtitle="Join UPTIB and connect with technology leaders, entrepreneurs, and innovators shaping the UKâPakistan tech corridor."
+        subtitle="Join Pakistan Textile Partners and connect with technology leaders, entrepreneurs, and innovators shaping the UKâPakistan tech corridor."
         primaryButtonText="Apply for Membership"
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Contact Us"

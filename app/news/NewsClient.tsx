@@ -27,7 +27,7 @@ const HIGHLIGHTS = [
   { icon: TrendingUp, title: "Industry Insights", desc: "In-depth analysis & trends" },
   { icon: BarChart3, title: "Market Updates", desc: "Latest data & export stats" },
   { icon: Users, title: "Expert Opinions", desc: "Voices from industry leaders" },
-  { icon: CalendarDays, title: "Events & Activities", desc: "Stay updated with UPTIB" },
+  { icon: CalendarDays, title: "Events & Activities", desc: "Stay updated with Pakistan Textile Partners" },
 ];
 
 export function NewsClient({ articles }: { articles: Article[] }) {
@@ -94,7 +94,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
         <div className="absolute inset-0 bg-gradient-to-r from-[#053C2E]/95 via-[#15402A]/80 to-[#15402A]/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#053C2E] via-transparent to-[#053C2E]/40" />
 
-        <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-20 pb-0">
+        <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-28 lg:pt-36 pb-0">
           <div className="max-w-2xl">
             <motion.p
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
@@ -158,7 +158,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
         </div>
 
         {/* Highlight cards — overlap the hero bottom */}
-        <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 mt-12 pb-px">
+        <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 mt-16 lg:mt-24 pb-px">
           <motion.div
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
