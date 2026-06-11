@@ -1,6 +1,6 @@
 // Pakistan Textile Partners - Main application layout
 import type { Metadata } from "next";
-import { Lato, Montserrat } from "next/font/google";
+import { Lato, Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -22,6 +22,16 @@ const lato = Lato({
   display: "swap",
 });
 
+// Elegant high-contrast serif — used only for the editorial product showcase
+// (the magazine-style "lookbook" sections), via the --font-playfair variable.
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
 const BASE_URL = "https://www.ukpaktrade.org.uk";
 
 export const metadata: Metadata = {
@@ -31,7 +41,7 @@ export const metadata: Metadata = {
     template: "%s | Pakistan Textile Partners",
   },
   description:
-    "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets — bedding & linen, apparel, sportswear and healthcare textiles, with sourcing, outsourcing, marketing and warehousing services.",
+    "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets — home textile, apparel, sportswear and healthcare textiles, with sourcing, outsourcing, marketing and warehousing services.",
   keywords: [
     "Pakistan textile export",
     "textile sourcing Pakistan",
@@ -120,7 +130,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${lato.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${lato.variable} ${playfair.variable}`}>
       <head>
         <link rel="dns-prefetch" href="https://www.youtube.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />

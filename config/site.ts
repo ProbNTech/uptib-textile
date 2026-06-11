@@ -8,7 +8,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.ukpaktrade.org.uk",
   portalUrl: process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.ukpaktrade.org.uk",
   description:
-    "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets — bedding & linen, apparel, sportswear and healthcare textiles, with sourcing, outsourcing, marketing and warehousing services.",
+    "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets — home textile, apparel, sportswear and healthcare textiles, with sourcing, outsourcing, marketing and warehousing services.",
   email: "info@ukpaktrade.org.uk",
   phone: "0044 7920 55 0000",
   social: {

@@ -23,6 +23,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlobalCTA } from "@/components/GlobalCTA";
+import { ProductShowcase } from "@/components/products/ProductShowcase";
 import { products, getProduct } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
@@ -144,35 +145,41 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* ── WHAT'S INCLUDED ──────────────────────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
-        <div className={PX}>
-          <AnimatedSection>
-            <SectionLabel
-              label="The range"
-              title="What's included"
-              body="The product lines we source and supply within this category — built to your spec and certifications."
-              color="#2F7549"
-              hideLine
-            />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {p.included.map((item, index) => (
-                <motion.div
-                  key={item}
-                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 14 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="flex items-start gap-3.5 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm"
-                >
-                  <CheckCircle2 className="w-5 h-5 text-[#3E8F5E] flex-shrink-0 mt-0.5" aria-hidden />
-                  <span className="text-[#3D4152] leading-relaxed">{item}</span>
-                </motion.div>
-              ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      {/* ── THE RANGE ────────────────────────────────────────────────
+          Categories with a `showcase` render the image-rich editorial
+          collection; the rest fall back to the plain "What's included" list. */}
+      {p.showcase ? (
+        <ProductShowcase showcase={p.showcase} />
+      ) : (
+        <section className="bg-[#F8FAF9] py-20 lg:py-28">
+          <div className={PX}>
+            <AnimatedSection>
+              <SectionLabel
+                label="The range"
+                title="What's included"
+                body="The product lines we source and supply within this category — built to your spec and certifications."
+                color="#2F7549"
+                hideLine
+              />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {p.included.map((item, index) => (
+                  <motion.div
+                    key={item}
+                    initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="flex items-start gap-3.5 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm"
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-[#3E8F5E] flex-shrink-0 mt-0.5" aria-hidden />
+                    <span className="text-[#3D4152] leading-relaxed">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+      )}
 
       {/* ── WHAT'S DRIVING DEMAND ────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">

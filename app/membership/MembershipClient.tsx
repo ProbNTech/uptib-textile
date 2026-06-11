@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, Fragment } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -33,6 +34,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlobalCTA } from "@/components/GlobalCTA";
+import { MembershipForm } from "@/components/MembershipForm";
 import { homeStats, markets } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
@@ -123,7 +125,7 @@ const steps = [
   { icon: Handshake, title: "Get matched", desc: "Start connecting with buyers and live orders." },
 ];
 
-/* ── Apply teaser chips ──────────────────────────────────────────── */
+/* ── Apply: what happens next ─────────────────────────────────────── */
 const applyChips = [
   { icon: ClipboardCheck, label: "Simple application" },
   { icon: ShieldCheck, label: "Careful review" },
@@ -499,47 +501,137 @@ export default function MembershipClient() {
         </div>
       </section>
 
-      {/* ── APPLY (teaser) ───────────────────────────────────────── */}
-      <section id="apply" className="bg-white py-20 lg:py-28 scroll-mt-24">
-        <div className={PX}>
+      {/* ── APPLY (membership form) ──────────────────────────────── */}
+      <section
+        id="apply"
+        className="relative overflow-hidden bg-white py-20 lg:py-28 scroll-mt-24"
+      >
+        {/* Faint globe watermark + soft green glows */}
+        <Image
+          src="/image/globe.png"
+          alt=""
+          aria-hidden
+          width={760}
+          height={760}
+          className="pointer-events-none absolute -right-32 -top-16 w-[560px] max-w-none opacity-[0.05] select-none"
+        />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(700px circle at 0% 0%, rgba(4,120,87,0.06), transparent 50%), radial-gradient(700px circle at 100% 100%, rgba(16,185,129,0.05), transparent 50%)",
+          }}
+          aria-hidden
+        />
+
+        <div className={cn("relative", PX)}>
           <AnimatedSection>
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              <div>
-                <SectionLabel
-                  label="Ready to join?"
-                  title="Apply for membership"
-                  body="Take the next step toward global growth. Join Pakistan Textile Partners and become part of the supplier pool buyers source from."
-                  color="#2F7549"
-                  hideLine
-                />
-                <div className="flex flex-wrap items-center gap-4">
-                  <ShinyButton href="/contact">Apply now</ShinyButton>
-                  <Button href="/contact" variant="secondary" size="lg">
+            <div className="grid lg:grid-cols-[0.85fr_1.6fr] gap-10 lg:gap-12 items-start">
+              {/* Left: content as cards */}
+              <div className="flex flex-col gap-5">
+                {/* Heading */}
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#2F7549] mb-3">Ready to join?</p>
+                  <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-[#16291E] leading-[1.1]">
+                    Apply for membership
+                  </h2>
+                  <p className="mt-4 text-base leading-relaxed text-[#5A5F72]">
+                    Take the next step toward global growth. Complete the application and join the supplier pool
+                    buyers source from.
+                  </p>
+                </div>
+
+                {/* Card — Stats */}
+                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_50px_-30px_rgba(4,120,87,0.25)]">
+                  <div className="grid grid-cols-2 gap-x-5 gap-y-5">
+                    {homeStats.map((stat) => (
+                      <div key={stat.label} className="border-l-2 border-[#2F7549]/30 pl-3.5">
+                        <p className="font-heading font-extrabold text-2xl text-[#16291E] leading-none">{stat.value}</p>
+                        <p className="text-[12px] text-[#5A5F72] leading-snug mt-1.5">{stat.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Card — Why members join (dark green) */}
+                <div className="rounded-2xl bg-gradient-to-br from-[#15402A] to-[#0a1f17] p-6">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#8FD3AE] mb-4">Why members join</p>
+                  <ul className="space-y-3">
+                    {[
+                      "A place in the supplier pool buyers source from",
+                      "Warm introductions to qualified global buyers",
+                      "Market intelligence and trade-event access",
+                      "International representation for your products",
+                    ].map((point) => (
+                      <li key={point} className="flex items-start gap-2.5 text-[14px] leading-snug text-white/90">
+                        <CheckCircle2 className="size-[18px] shrink-0 text-[#8FD3AE]" strokeWidth={2} aria-hidden />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Card — What happens next */}
+                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_50px_-30px_rgba(4,120,87,0.25)]">
+                  <div className="flex items-center gap-2.5 mb-5">
+                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-[#2F7549]/10 text-[#2F7549]">
+                      <ClipboardCheck className="size-4" strokeWidth={1.9} aria-hidden />
+                    </span>
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F7549]">What happens next</p>
+                  </div>
+                  <ol className="relative space-y-5">
+                    <span className="absolute left-[19px] top-2 bottom-2 w-px bg-[#2F7549]/15" aria-hidden />
+                    {applyChips.map((c, i) => {
+                      const Icon = c.icon;
+                      return (
+                        <li key={c.label} className="relative flex items-center gap-4">
+                          <span className="relative z-[1] inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549] ring-4 ring-white">
+                            <Icon className="size-[18px]" strokeWidth={1.75} aria-hidden />
+                          </span>
+                          <span className="flex-1 text-[14px] font-semibold text-[#16291E]">{c.label}</span>
+                          <span className="text-xs font-bold tabular-nums text-[#2F7549]/35">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </div>
+
+                {/* Card — Help / consultation (dark green) */}
+                <div className="rounded-2xl bg-gradient-to-br from-[#15402A] to-[#0a1f17] p-5">
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-white/10 border border-white/20 text-[#8FD3AE]">
+                      <HelpCircle className="size-5" aria-hidden />
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold text-white">Questions before you apply?</p>
+                      <p className="text-xs text-white/70">Our team is happy to help you choose a tier.</p>
+                    </div>
+                  </div>
+                  <Link
+                    href="/contact"
+                    className="group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#8FD3AE]"
+                  >
                     Book a consultation
-                  </Button>
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                  </Link>
+                </div>
+
+                {/* Illustration — fills the column on desktop */}
+                <div className="hidden lg:block">
+                  <Image
+                    src="/image/membership-form-2.jpg"
+                    alt="Global textile business — networking, export, trade and worldwide reach"
+                    width={960}
+                    height={680}
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
-              <div className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-b from-white to-[#F8FAFC] p-7 shadow-[0_18px_50px_-24px_rgba(4,120,87,0.25)]">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F7549] mb-6">What happens next</p>
-                <ol className="relative space-y-6">
-                  {/* connecting rail */}
-                  <span className="absolute left-[21px] top-2 bottom-2 w-px bg-[#2F7549]/15" aria-hidden />
-                  {applyChips.map((c, i) => {
-                    const Icon = c.icon;
-                    return (
-                      <li key={c.label} className="relative flex items-center gap-4">
-                        <span className="relative z-[1] inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549] ring-4 ring-white">
-                          <Icon className="size-5" strokeWidth={1.75} aria-hidden />
-                        </span>
-                        <span className="flex-1 text-[15px] font-semibold text-[#16291E]">{c.label}</span>
-                        <span className="text-xs font-bold tabular-nums text-[#2F7549]/35">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ol>
-              </div>
+
+              {/* Right: the application form */}
+              <MembershipForm />
             </div>
           </AnimatedSection>
         </div>
