@@ -102,8 +102,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-28 h-28 rounded-xl bg-[#2F7549]/20 z-0" aria-hidden="true" />
-                {/* TRIAL: Pakistan map accent — revert if not kept */}
-                <Image src="/image/pakistan.png" alt="" aria-hidden width={320} height={320} className="pointer-events-none select-none absolute -top-12 -right-10 w-48 lg:w-60 h-auto opacity-[0.14] z-0" />
+                <div className="absolute -top-4 -right-4 w-36 h-36 rounded-full bg-[#3E8F5E]/20 z-0" aria-hidden="true" />
               </div>
             </div>
           </AnimatedSection>
@@ -268,7 +267,7 @@ export default function Home() {
         aria-labelledby="market-heading"
       >
         {/* TRIAL: decorative globe — revert if not kept */}
-        <Image src="/image/globe.png" alt="" aria-hidden width={520} height={520} className="pointer-events-none select-none absolute -right-16 -top-10 w-[300px] lg:w-[440px] h-auto opacity-[0.10] z-0" />
+        <Image src="/image/globe.png" alt="" aria-hidden width={520} height={520} className="pointer-events-none select-none absolute -right-16 -top-10 w-[300px] lg:w-[440px] h-auto opacity-25 z-0" />
         <div className="relative z-[1] px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
             <SectionLabel label="Market Intelligence" title="The global textile market — and Pakistan's place in it" color="#2F7549" />

@@ -369,7 +369,7 @@ export default function ProductsClient() {
           }}
         />
         {/* TRIAL: decorative globe — revert if not kept */}
-        <Image src="/image/globe.png" alt="" aria-hidden width={560} height={560} className="pointer-events-none select-none absolute -right-24 top-1/2 -translate-y-1/2 w-[340px] lg:w-[520px] h-auto opacity-[0.16]" />
+        <Image src="/image/globe.png" alt="" aria-hidden width={560} height={560} className="pointer-events-none select-none absolute -right-24 top-1/2 -translate-y-1/2 w-[340px] lg:w-[520px] h-auto opacity-40" />
         <div className={cn("relative", PX)}>
           <AnimatedSection>
             {/* Top: heading + button (left) · horizontal stat strip (right) */}
