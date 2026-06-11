@@ -137,7 +137,7 @@ export default function ProductsClient() {
         labelClassName="text-white"
         minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="The textiles Pakistan exports to the world"
-        subtitle="Four categories where Pakistani manufacturing is strongest and global demand is highest — bedding & linen, apparel, sportswear and healthcare textiles, sourced and delivered with one accountable partner."
+        subtitle="Four categories where Pakistani manufacturing is strongest and global demand is highest — home textile, apparel, sportswear and healthcare textiles, sourced and delivered with one accountable partner."
         image="/image/hero-bg/pexels-cottonbro-6580549.jpg"
       >
         <div className="flex flex-wrap items-center gap-4">

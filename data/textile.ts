@@ -11,6 +11,17 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+/* A single product line shown as an editorial "lookbook" block:
+   an elegant heading + paragraph beside a mosaic of product photos.
+   (Used to render image-rich category pages — see ProductShowcase.) */
+export type ShowcaseGroup = {
+  name: string;            // line name, e.g. "Premium Towels & Bath"
+  tagline: string;         // short italic kicker, e.g. "Egyptian & terry cotton"
+  desc: string;            // one short editorial paragraph
+  items: string[];         // bulleted product list for this line
+  images: { src: string; alt: string }[]; // 3-5 photos for the mosaic
+};
+
 export type ProductCategory = {
   slug: string;
   name: string;
@@ -33,6 +44,16 @@ export type ProductCategory = {
   demandDrivers: { title: string; desc: string }[]; // "What's driving demand" — market trends
   strengths: string[];    // "Why Pakistan leads here" — competitive advantages
   strengthsNote?: string; // optional callout under the strengths (e.g. brands supplied)
+  /* Optional image-rich showcase. When present, the detail page renders an
+     editorial, photo-led collection instead of the plain "What's included"
+     list. Rolled out per category — Home Textile first. */
+  showcase?: {
+    eyebrow: string;       // small label above the collection title
+    title: string;         // serif display title for the collection
+    intro: string;         // lead paragraph under the title
+    heroImage: { src: string; alt: string }; // full-bleed banner image
+    groups: ShowcaseGroup[];
+  };
 };
 
 export type Service = {
@@ -77,10 +98,10 @@ export const whyUptib: { title: string; desc: string; icon: LucideIcon }[] = [
 export const products: ProductCategory[] = [
   {
     slug: "bedding-linen",
-    name: "Bedding & Linen",
-    eyebrow: "Products · Bedding & Linen",
-    short: "Bed linen, towels, and hotel & bath textiles — Pakistan's strongest category.",
-    headline: "Hotel-grade bedding and bath, made in Pakistan",
+    name: "Home Textile",
+    eyebrow: "Products · Home Textile",
+    short: "Bed linen, towels, hotel textiles, curtains & mattress protectors — Pakistan's strongest category.",
+    headline: "The complete home textile range, made in Pakistan",
     summary: "Our largest category — globally recognised cotton quality and terry-towel manufacturing.",
     icon: BedDouble,
     image: "/image/textile/products/bedding-linen.jpg",
@@ -121,6 +142,104 @@ export const products: ProductCategory[] = [
       "Hotel and contract-grade finishing built for repeated industrial laundering.",
       "GOTS, OEKO-TEX, BCI and ISO 9001 certified production available.",
     ],
+    showcase: {
+      eyebrow: "The collection",
+      title: "Everything for the modern home",
+      intro:
+        "From the bedroom to the bath to the window, Pakistan's mills produce the full home textile range under one roof — woven, dyed, printed and finished to the standards the world's leading retailers and hotel groups demand.",
+      heroImage: {
+        src: "/image/textile/home/hotel-1.jpg",
+        alt: "A made-up hotel bed with crisp white bed linen and a tufted headboard",
+      },
+      groups: [
+        {
+          name: "Bed Linen & Bed Sets",
+          tagline: "Reactive-dyed, digitally printed & sateen",
+          desc:
+            "Long-staple cotton sheeting, duvet sets and comforters — woven, reactive-dyed and digitally printed to your colourway, then finished for a soft hand that survives wash after wash.",
+          items: [
+            "Flat & fitted sheets, pillowcases",
+            "Duvet covers & comforter sets",
+            "Dyed, printed & stripe-sateen ranges",
+            "200–1000 thread-count cotton",
+          ],
+          images: [
+            { src: "/image/textile/home/bed-linen-1.jpg", alt: "Crisp white stripe-sateen bed linen, close up" },
+            { src: "/image/textile/home/bed-linen-2.jpg", alt: "A styled bed dressed in soft white bedding and pillows" },
+            { src: "/image/textile/home/bed-linen-3.jpg", alt: "White bedding and pillows detail" },
+          ],
+        },
+        {
+          name: "Premium Towels & Bath",
+          tagline: "Egyptian & terry cotton, 400–700+ GSM",
+          desc:
+            "The category Pakistan is famous for. Ring-spun and combed terry towelling in every weight — from everyday bath towels to plush spa grades and bathrobes, with hotel-grade durability built in.",
+          items: [
+            "Bath, hand, face & guest towels",
+            "Spa, pool & beach towels",
+            "Bathrobes & towelling sets",
+            "Dobby borders & custom logos",
+          ],
+          images: [
+            { src: "/image/textile/home/towels-1.jpg", alt: "A folded stack of towels in soft neutral colours" },
+            { src: "/image/textile/home/towels-4.jpg", alt: "A blush spa bathrobe styled with bath accessories" },
+            { src: "/image/textile/home/towels-2.jpg", alt: "Rolled towels in a woven basket beside a pool" },
+            { src: "/image/textile/home/towels-5.jpg", alt: "Rolled towels dressed with fresh flowers" },
+          ],
+        },
+        {
+          name: "Hotel & Hospitality Textiles",
+          tagline: "Contract-grade linen for hospitality",
+          desc:
+            "Bedding, bath and table linen engineered for repeated industrial laundering — the contract-grade textiles hotel groups, resorts and serviced-apartment operators specify worldwide.",
+          items: [
+            "Hotel bed linen & duvets",
+            "Bath linen & pool towels",
+            "Table & restaurant linen",
+            "Stripe-sateen & jacquard ranges",
+          ],
+          images: [
+            { src: "/image/textile/home/hotel-1.jpg", alt: "A luxury hotel bed made up with white linen and a tufted headboard" },
+            { src: "/image/textile/home/hotel-2.jpg", alt: "A hotel bed with a breakfast tray and fresh flowers" },
+          ],
+        },
+        {
+          name: "Curtains & Drapery",
+          tagline: "Sheer, dim-out & blackout",
+          desc:
+            "Made-to-measure window treatments in every weight and weave — from airy sheers to full blackout — in fabrics and colourways coordinated to the rest of the room.",
+          items: [
+            "Sheer & voile curtains",
+            "Dim-out & blackout drapery",
+            "Eyelet, pencil-pleat & tab-top headings",
+            "Coordinated cushion & accessory fabrics",
+          ],
+          images: [
+            { src: "/image/textile/home/curtains-1.jpg", alt: "Blue and grey curtains dressing a bright living room" },
+            { src: "/image/textile/home/curtains-3.jpg", alt: "Elegant terracotta floor-length drapes" },
+            { src: "/image/textile/home/curtains-2.jpg", alt: "Warm sheer curtains filtering daylight" },
+            { src: "/image/textile/home/curtains-4.jpg", alt: "Deep blue curtains framing a window" },
+          ],
+        },
+        {
+          name: "Mattress Protectors & Toppers",
+          tagline: "Quilted & water-repellent",
+          desc:
+            "Quilted protectors and toppers that guard the mattress and add a layer of comfort — with water-repellent and breathable finishes for homes, hotels and care settings alike.",
+          items: [
+            "Quilted mattress protectors",
+            "Water-repellent & waterproof grades",
+            "Mattress toppers & pads",
+            "Fitted-skirt & strap fittings",
+          ],
+          images: [
+            { src: "/image/textile/home/mattress-1.jpg", alt: "A white quilted mattress protector" },
+            { src: "/image/textile/home/mattress-2.jpg", alt: "Hands fitting a quilted protector onto a mattress" },
+            { src: "/image/textile/home/mattress-3.jpg", alt: "A quilted mattress protector dressed on a bed" },
+          ],
+        },
+      ],
+    },
   },
   {
     slug: "apparel-accessories",
@@ -169,6 +288,90 @@ export const products: ProductCategory[] = [
       "Fast turnaround with packaging and finishing handled in-house.",
       "OEKO-TEX, BCI, WRAP and Sedex certified options.",
     ],
+    showcase: {
+      eyebrow: "The collection",
+      title: "Private label, made to your spec",
+      intro:
+        "From everyday basics to denim, knitwear and workwear, Pakistan's vertically integrated factories produce OEM and private-label apparel across woven and knit — with design support, sampling and the finishing to carry your own brand.",
+      heroImage: {
+        src: "/image/textile/apparel/knit-1.jpg",
+        alt: "A model in a soft, neutral-toned knitted sweater",
+      },
+      groups: [
+        {
+          name: "Fashion Basics & Loungewear",
+          tagline: "T-shirts, polos, hoodies & fleece",
+          desc:
+            "The everyday staples brands sell in volume — ring-spun cotton tees, polos, hoodies and loungewear, cut and finished to a clean, consistent standard run after run.",
+          items: [
+            "T-shirts, polos & long-sleeves",
+            "Hoodies, fleece & sweatshirts",
+            "Loungewear & joggers",
+            "Kids' & baby basics",
+          ],
+          images: [
+            { src: "/image/textile/apparel/basics-1.jpg", alt: "A soft mint t-shirt styled with cotton stems" },
+            { src: "/image/textile/apparel/basics-2.jpg", alt: "A stack of folded cream cotton t-shirts" },
+            { src: "/image/textile/apparel/basics-3.jpg", alt: "Neatly rolled neutral-toned basics" },
+            { src: "/image/textile/apparel/basics-4.jpg", alt: "A folded stack of knitted sweaters" },
+          ],
+        },
+        {
+          name: "Knitwear & Sweaters",
+          tagline: "Jersey, ribbed & cable knit",
+          desc:
+            "Fine- and chunky-gauge knitwear in cotton, wool and blended yarns — from roll-necks and crews to cardigans, knitted to a soft hand and held shape.",
+          items: [
+            "Crew, V & roll-neck knits",
+            "Cardigans & cable knit",
+            "Fine-gauge jersey",
+            "Cotton, wool & blended yarns",
+          ],
+          images: [
+            { src: "/image/textile/apparel/knit-1.jpg", alt: "A model in a soft beige knitted sweater by a window" },
+            { src: "/image/textile/apparel/knit-2.jpg", alt: "Neutral knitted sweaters being folded" },
+            { src: "/image/textile/apparel/knit-3.jpg", alt: "Close detail of a ribbed knit cuff" },
+            { src: "/image/textile/apparel/knit-4.jpg", alt: "A soft beige roll-neck sweater" },
+          ],
+        },
+        {
+          name: "Denim & Woven",
+          tagline: "Jeans, jackets & shirting",
+          desc:
+            "Woven garments built around Pakistan's deep denim base — five-pocket jeans, jackets, shirts and chinos, in the washes, fades and finishes your range calls for.",
+          items: [
+            "Five-pocket jeans & jackets",
+            "Woven shirts & chinos",
+            "Washes, fades & finishes",
+            "Stretch & rigid denim",
+          ],
+          images: [
+            { src: "/image/textile/apparel/denim-1.jpg", alt: "Folded denim jeans on a soft pink background" },
+            { src: "/image/textile/apparel/denim-2.jpg", alt: "A neat stack of folded light-blue jeans" },
+            { src: "/image/textile/apparel/denim-3.jpg", alt: "Close detail of folded jeans and pocket stitching" },
+            { src: "/image/textile/apparel/denim-4.jpg", alt: "A stack of folded indigo denim" },
+          ],
+        },
+        {
+          name: "Uniforms & Workwear",
+          tagline: "Corporate, school & industrial",
+          desc:
+            "Programme-run uniforms and workwear — corporate, hospitality, school and industrial — produced to a fixed spec for reliable repeat ordering at scale.",
+          items: [
+            "Corporate & hospitality uniforms",
+            "School & academic wear",
+            "Industrial & hi-vis workwear",
+            "Polo, oxford & chino programmes",
+          ],
+          images: [
+            { src: "/image/textile/apparel/uniform-1.jpg", alt: "A minimalist rail of neutral garments" },
+            { src: "/image/textile/apparel/uniform-2.jpg", alt: "Grey garments hung on a clothing rail" },
+            { src: "/image/textile/apparel/uniform-3.jpg", alt: "A pressed shirt on a hanger" },
+            { src: "/image/textile/apparel/uniform-4.jpg", alt: "A clothing rail of neutral-toned apparel" },
+          ],
+        },
+      ],
+    },
   },
   {
     slug: "sportswear-activewear",
@@ -217,6 +420,89 @@ export const products: ProductCategory[] = [
     ],
     strengthsNote:
       "Pakistani sourcing networks have supplied major international sportswear names — including Adidas, Puma, Hummel, Hugo Boss and Kempa.",
+    showcase: {
+      eyebrow: "The collection",
+      title: "Performance kit, from the Sialkot hub",
+      intro:
+        "Sialkot is one of the world's leading hubs for sportswear and teamwear — pairing sublimation printing and low minimums with genuine performance-fabric expertise, across gymwear, training and custom club kit.",
+      heroImage: {
+        src: "/image/textile/sportswear/gym-1.jpg",
+        alt: "An athlete stretching in soft, neutral-toned activewear",
+      },
+      groups: [
+        {
+          name: "Gymwear & Activewear",
+          tagline: "Leggings, sports bras & sets",
+          desc:
+            "The fastest-growing segment — leggings, sports bras and matching co-ords in seamless and sculpting fits, with the stretch and recovery that everyday activewear demands.",
+          items: [
+            "Leggings & cycling shorts",
+            "Sports bras & crop tops",
+            "Matching co-ord sets",
+            "Seamless & sculpting fits",
+          ],
+          images: [
+            { src: "/image/textile/sportswear/gym-1.jpg", alt: "An athlete stretching in neutral-toned activewear" },
+            { src: "/image/textile/sportswear/gym-2.jpg", alt: "A cropped activewear set in soft tones" },
+            { src: "/image/textile/sportswear/gym-3.jpg", alt: "Back detail of a seamless sports bra" },
+            { src: "/image/textile/sportswear/gym-4.jpg", alt: "Full-length neutral activewear" },
+          ],
+        },
+        {
+          name: "Performance & Training",
+          tagline: "Tees, tracksuits & hoodies",
+          desc:
+            "Training-day essentials — performance tees, tracksuits, hoodies and shorts in moisture-wicking knits, built to move and to survive heavy rotation.",
+          items: [
+            "Performance tees & tanks",
+            "Tracksuits & joggers",
+            "Training hoodies & quarter-zips",
+            "Shorts & base layers",
+          ],
+          images: [
+            { src: "/image/textile/sportswear/perf-1.jpg", alt: "A soft-toned athleisure flat lay" },
+            { src: "/image/textile/sportswear/perf-2.jpg", alt: "Neutral training sneakers in a flat lay" },
+            { src: "/image/textile/sportswear/perf-3.jpg", alt: "A folded stack of joggers" },
+            { src: "/image/textile/sportswear/perf-4.jpg", alt: "An athleisure flat lay with accessories" },
+          ],
+        },
+        {
+          name: "Teamwear & Custom Kit",
+          tagline: "Sublimated club & team kit",
+          desc:
+            "Fully sublimated club and team kit with low minimums and full custom branding — jerseys, shorts and warm-up wear for clubs, academies and brands.",
+          items: [
+            "Sublimated jerseys & shorts",
+            "Football, rugby & cricket kit",
+            "Training & warm-up wear",
+            "Full custom branding & low MOQs",
+          ],
+          images: [
+            { src: "/image/textile/sportswear/team-1.jpg", alt: "A team jersey on a hanger" },
+            { src: "/image/textile/sportswear/team-2.jpg", alt: "A player in a blue team jersey" },
+            { src: "/image/textile/sportswear/team-3.jpg", alt: "Back of a yellow team kit on the pitch" },
+          ],
+        },
+        {
+          name: "Technical Fabrics",
+          tagline: "Moisture-wicking & 4-way stretch",
+          desc:
+            "The engineering behind the kit — moisture-wicking knits, four-way stretch, compression and mesh ventilation, with recycled-polyester options on request.",
+          items: [
+            "Moisture-wicking knits",
+            "Four-way stretch & compression",
+            "Mesh & ventilation panels",
+            "Recycled / GRS options",
+          ],
+          images: [
+            { src: "/image/textile/sportswear/tech-1.jpg", alt: "Soft pastel sports bras showing fabric detail" },
+            { src: "/image/textile/sportswear/tech-2.jpg", alt: "Close detail of grey performance mesh fabric" },
+            { src: "/image/textile/sportswear/tech-3.jpg", alt: "Detail of a seamless performance top" },
+            { src: "/image/textile/sportswear/tech-4.jpg", alt: "Close detail of breathable mesh knit" },
+          ],
+        },
+      ],
+    },
   },
   {
     slug: "healthcare-textile",
@@ -264,6 +550,89 @@ export const products: ProductCategory[] = [
       "Competitive pricing on long-term, high-volume programmes.",
       "CE, AAMI, ISO 13485 and OEKO-TEX certified options.",
     ],
+    showcase: {
+      eyebrow: "The collection",
+      title: "Institutional textiles, built to last",
+      intro:
+        "Built for durability, hygiene and frequent industrial laundering — scrubs, gowns, hospital linen and surgical textiles for health systems, care homes and clinics worldwide, with CE/AAMI-aware capability.",
+      heroImage: {
+        src: "/image/textile/healthcare/linen-2.jpg",
+        alt: "Soft white hospital-grade bed linen in daylight",
+      },
+      groups: [
+        {
+          name: "Scrubs & Medical Uniforms",
+          tagline: "Scrubs, tunics & lab coats",
+          desc:
+            "Hard-wearing scrubs, tunics and uniforms in poly-cotton blends that hold colour and shape through repeated high-temperature laundering — with antimicrobial finishes on request.",
+          items: [
+            "Medical scrubs & tunics",
+            "Nurse & doctor uniforms",
+            "Lab coats & theatre wear",
+            "Antimicrobial finishes",
+          ],
+          images: [
+            { src: "/image/textile/healthcare/scrubs-1.jpg", alt: "A healthcare worker in navy medical scrubs" },
+            { src: "/image/textile/healthcare/scrubs-2.jpg", alt: "A clinician in soft grey scrubs" },
+            { src: "/image/textile/healthcare/scrubs-3.jpg", alt: "Green scrubs with a stethoscope" },
+            { src: "/image/textile/healthcare/scrubs-4.jpg", alt: "Detail of a navy scrub uniform" },
+          ],
+        },
+        {
+          name: "Patient Gowns & Provider Wear",
+          tagline: "Gowns & care-setting uniforms",
+          desc:
+            "Patient gowns and care-setting uniforms in easy-wash, hard-wearing fabrics — available in reusable and single-use grades for hospitals, clinics and care homes.",
+          items: [
+            "Patient & examination gowns",
+            "Care-home uniforms",
+            "Reusable & single-use grades",
+            "Easy-wash, hard-wearing fabrics",
+          ],
+          images: [
+            { src: "/image/textile/healthcare/care-1.jpg", alt: "A smiling nurse in uniform" },
+            { src: "/image/textile/healthcare/care-2.jpg", alt: "Two care workers in medical uniforms" },
+            { src: "/image/textile/healthcare/care-3.jpg", alt: "A provider in navy uniform with a tablet" },
+            { src: "/image/textile/healthcare/care-4.jpg", alt: "Two nurses in teal scrubs" },
+          ],
+        },
+        {
+          name: "Hospital Bed Linen & Draw Sheets",
+          tagline: "Sheets, draw sheets & blankets",
+          desc:
+            "High-temperature-washable bed linen, draw sheets and blankets carried over from Pakistan's hotel and hospitality expertise — durable, hygienic and built for institutional laundries.",
+          items: [
+            "Bed sheets & pillowcases",
+            "Draw sheets & under-pads",
+            "Cellular & thermal blankets",
+            "High-temperature-washable cotton",
+          ],
+          images: [
+            { src: "/image/textile/healthcare/linen-1.jpg", alt: "A folded stack of clean white bed linen" },
+            { src: "/image/textile/healthcare/linen-2.jpg", alt: "Soft white bed linen in daylight" },
+            { src: "/image/textile/healthcare/linen-3.jpg", alt: "Crisp white sheeting in soft light" },
+            { src: "/image/textile/healthcare/linen-4.jpg", alt: "White hospital-grade sheeting" },
+          ],
+        },
+        {
+          name: "Surgical Drapes & Theatre Linen",
+          tagline: "CE/AAMI-aware theatre textiles",
+          desc:
+            "Theatre textiles produced with surgical-barrier capability in mind — drapes, gowns and wraps, with CE / AAMI / ISO 13485-aware manufacturing for export health systems.",
+          items: [
+            "Surgical drapes & gowns",
+            "Theatre linen & wraps",
+            "Sterile-barrier fabrics",
+            "CE / AAMI / ISO 13485 aware",
+          ],
+          images: [
+            { src: "/image/textile/healthcare/surgical-1.jpg", alt: "A green surgical drape with instruments laid out" },
+            { src: "/image/textile/healthcare/surgical-2.jpg", alt: "Theatre lights above an operating table" },
+            { src: "/image/textile/healthcare/surgical-3.jpg", alt: "An operating theatre prepared for surgery" },
+          ],
+        },
+      ],
+    },
   },
 ];
 

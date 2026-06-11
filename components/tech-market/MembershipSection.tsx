@@ -207,6 +207,12 @@ export default function MembershipSection() {
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
 
+        {/* Dark overlay for content legibility */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/65 to-black/50"
+        />
+
         {/* Content */}
         <div className="relative z-20 flex flex-col justify-center items-start h-full px-6 sm:px-10 lg:px-16 xl:px-20">
           <motion.div
@@ -218,13 +224,13 @@ export default function MembershipSection() {
             {/* Left Side */}
             <div className="flex flex-col justify-center h-full">
               <div className="relative z-10 flex flex-col justify-center h-full max-w-5xl mx-auto py-8">
-                <span className="text-sm sm:text-xl font-bold text-white bg-black/30 inline-block w-fit px-4 py-1.5 rounded-md mb-3">
+                <span className="text-sm sm:text-xl font-bold text-white inline-block w-fit mb-3">
                   Membership
                 </span>
-                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white bg-black/30 inline-block px-4 py-2 rounded-md">
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white inline-block">
                   Who can join?
                 </h2>
-                <p className="mt-5 text-white text-base sm:text-lg lg:text-xl bg-black/20 px-4 py-3 rounded-md max-w-3xl leading-relaxed">
+                <p className="mt-5 text-white text-base sm:text-lg lg:text-xl max-w-3xl leading-relaxed">
                   Membership connects Pakistani textile manufacturers and exporters with buyers worldwide — from first-time exporters to established mills ready to scale globally.
                 </p>
               </div>

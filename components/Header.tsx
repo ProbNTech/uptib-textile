@@ -50,7 +50,7 @@ const navItems: NavItem[] = [
       cta: { label: "View all products →", href: "/products" },
     },
     items: [
-      { label: "Bedding & Linen", href: "/products/bedding-linen", desc: "Bed linen, towels, and hotel & bath textiles — Pakistan's strongest category.", icon: BedDouble },
+      { label: "Home Textile", href: "/products/bedding-linen", desc: "Bed linen, towels, hotel textiles, curtains & mattress protectors — Pakistan's strongest category.", icon: BedDouble },
       { label: "Apparel & Accessories", href: "/products/apparel-accessories", desc: "Private-label fashion, denim, knitwear, uniforms and accessories.", icon: Shirt },
       { label: "Sportswear & Activewear", href: "/products/sportswear-activewear", desc: "Gymwear, teamwear and performance kit from the Sialkot hub.", icon: Dumbbell },
       { label: "Healthcare Textile", href: "/products/healthcare-textile", desc: "Scrubs, gowns, hospital linen and antimicrobial textiles.", icon: Stethoscope },

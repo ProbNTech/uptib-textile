@@ -72,7 +72,7 @@ export const homeExporterFaqs: Faq[] = [
   },
   {
     q: "Which products and categories do you cover?",
-    a: "Pakistan's strongest export categories — bedding & linen, apparel & accessories, sportswear & activewear, and healthcare textiles — made across the manufacturing hubs of Faisalabad, Sialkot, Karachi, Lahore and Multan.",
+    a: "Pakistan's strongest export categories — home textile, apparel & accessories, sportswear & activewear, and healthcare textiles — made across the manufacturing hubs of Faisalabad, Sialkot, Karachi, Lahore and Multan.",
   },
 ];
 
