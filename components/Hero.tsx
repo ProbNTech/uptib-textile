@@ -33,7 +33,7 @@ const slides = [
     label: "REACH NEW MARKETS",
     headline: "Helping Pakistani manufacturers reach buyers across the EU, USA, Middle East and beyond",
     cta: { text: "Become a member", href: "/membership" },
-    secondary: { text: "Marketing & visibility", href: "/services/marketing" },
+    secondary: { text: "Marketing & visibility", href: "/services/marketing-sales" },
   },
 ];
 

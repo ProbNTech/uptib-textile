@@ -67,186 +67,11 @@ type ServiceDetail = {
   secondaryCta?: { label: string; href: string };
 };
 
-/* Shared value-prop sets reused across services */
+/* Shared value-prop sets reused across services
+   (keyed to the build-guide taxonomy: marketing-sales · ecommerce-warehouse · buying-house · logistics) */
 const detail: Record<string, ServiceDetail> = {
-  /* ───────────────────────────── BUYING ───────────────────────────── */
-  buying: {
-    hero: "/image/buying.jpg",
-    feature: "/image/buying-2.jpg",
-    featureTag: "Vetted in Pakistan",
-    intro:
-      "For international buyers sourcing finished textiles from Pakistan. Tell us what you need and we find the right factory, control the quality, handle the paperwork and deliver to your market — you deal with one accountable partner, from first enquiry to final delivery.",
-    whoForLabel: "Who sources this way",
-    whoFor: [
-      "Retailers & department stores",
-      "Importers & wholesalers",
-      "Hotel & hospitality buyers",
-      "E-commerce & DTC brands",
-      "Sourcing & procurement teams",
-    ],
-    stats: [
-      { icon: Handshake, value: "One partner", label: "Quote to delivery, accountable" },
-      { icon: ShieldCheck, value: "AQL-checked", label: "Independent pre-shipment QA" },
-      { icon: BadgeCheck, value: "Vetted", label: "Pre-screened factory network" },
-      { icon: BadgePercent, value: "GSP+", label: "EU duty-free on qualifying goods" },
-    ],
-    contentLabel: {
-      eyebrow: "The service",
-      title: "From your brief to your door",
-      body: "A clear, controlled path from requirement to delivered goods — with quality checked at every stage.",
-    },
-    blocks: [
-      {
-        type: "steps",
-        title: "How it works",
-        intro: "Six stages, one point of contact — we run the whole process so you don't have to.",
-        icons: [FileText, Search, FlaskConical, Tag, ShieldCheck, Truck],
-        items: [
-          { step: "Brief & quote", text: "We capture your requirement in full — product, fabric, thread count/GSM, sizes, quantities, certifications, target price, packaging and delivery date." },
-          { step: "Supplier match", text: "We match your brief to the right manufacturer(s) from our vetted network." },
-          { step: "Sampling & approval", text: "We arrange samples, manage revisions, and secure your written approval before any bulk commitment." },
-          { step: "Price & order", text: "We negotiate competitive pricing without compromising quality, and place the order." },
-          { step: "Quality & delivery", text: "We inspect through production, run pre-shipment QA to your AQL, handle the documentation and coordinate freight to your door." },
-          { step: "Delivered", text: "Delivered to your destination — on time, on spec, with one partner accountable end to end." },
-        ],
-      },
-      {
-        type: "list",
-        title: "Ways to work with us",
-        icons: [FlaskConical, RefreshCw, ShieldCheck, Shuffle],
-        items: [
-          "Trial / single order — test Pakistan, and test us, on one defined project.",
-          "Repeat / long-term sourcing — we become your ongoing Pakistan procurement function.",
-          "Quality assurance only — you have a factory; we provide independent inspection.",
-          "Hybrid — we co-manage sourcing while you keep final control.",
-        ],
-      },
-    ],
-    facts: {
-      factsLabel: {
-        eyebrow: "The facts",
-        title: "What you actually get",
-        body: "The substance behind the service — so you can buy from a new origin with confidence.",
-      },
-      chips: ["No middle layer", "AQL pre-ship", "GSP+ coverage", "Healthcare textiles"],
-      rows: [
-        { label: "Accountability", value: "A single point of contact — sourcing, sampling, QA, documentation and delivery, handled end-to-end. You're not just another number." },
-        { label: "Quality control", value: "Independent, multi-stage inspection on the ground in Pakistan, checked against your approved sample to your agreed AQL." },
-        { label: "Pricing", value: "Competitive factory pricing negotiated on your behalf, with GSP+ duty-free savings built into your landed cost where goods qualify." },
-        { label: "Range", value: "Bedding & linen, apparel, sportswear and bathroom textiles — from low-MOQ runs to full container volumes." },
-      ],
-    },
-    why: {
-      eyebrow: "The advantage",
-      title: "Why buyers source through us",
-      body: "Give us the full assignment and we vouch for the factory, guarantee the quality and get the goods to your door.",
-      items: [
-        { icon: Globe2, title: "A vetted global network", desc: "Pre-screened Pakistani manufacturers across every category, matched to your spec and volume." },
-        { icon: ShieldCheck, title: "Quality on the ground", desc: "Independent, multi-stage inspection to your agreed AQL — not just the factory's word." },
-        { icon: Handshake, title: "One accountable partner", desc: "A single point of accountability from first enquiry to final delivery, anywhere in the world." },
-        { icon: BadgePercent, title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles, built into your price." },
-      ],
-    },
-    primaryCtaOverride: { label: "Request a quote", href: "/contact" },
-    secondaryCta: { label: "Browse the global market", href: "/global-textile-market" },
-  },
-
-  /* ──────────────────────────── OUTSOURCING ───────────────────────── */
-  outsourcing: {
-    hero: "/image/outsourcing.jpg",
-    feature: "/image/outsourcing-2.jpg",
-    cta: "/image/outsourcing-3.jpg",
-    featureTag: "Your team in Pakistan",
-    intro:
-      "Your outsourced Pakistan procurement department. We act as a full sourcing house for overseas businesses — vetted factories, sample approval, price negotiation, multi-stage QA to AQL, export documentation and end-to-end logistics. One accountable partner from brief to delivery, anywhere in the world.",
-    whoForLabel: "Who outsources to us",
-    whoFor: [
-      "Overseas retail businesses",
-      "Brands without a sourcing office",
-      "Importers scaling volume",
-      "Procurement departments",
-      "Buyers entering Pakistan",
-    ],
-    stats: [
-      { icon: ClipboardCheck, value: "End-to-end", label: "Brief to delivery, anywhere" },
-      { icon: ShieldCheck, value: "2-stage QA", label: "Mid-production + pre-shipment" },
-      { icon: Truck, value: "Docs + freight", label: "Export paperwork handled" },
-      { icon: BadgePercent, value: "GSP+", label: "EU duty-free advantage" },
-    ],
-    contentLabel: {
-      eyebrow: "The service",
-      title: "A full procurement function, outsourced",
-      body: "Everything an in-country sourcing office does — without the office, the headcount or the risk.",
-    },
-    blocks: [
-      {
-        type: "steps",
-        title: "The process",
-        intro: "Seven controlled stages, with quality designed in rather than inspected at the end.",
-        items: [
-          { step: "Brief & quote", text: "Full requirement capture — specs, certifications, target price, packaging and delivery date." },
-          { step: "Supplier match", text: "Matched to the right vetted manufacturer(s) for your product and volume." },
-          { step: "Sampling & approval", text: "Samples arranged, revisions managed, written approval secured before bulk." },
-          { step: "Price & order", text: "Competitive pricing negotiated; order placed and confirmed." },
-          { step: "Production monitoring", text: "Inspection at roughly 40–50% completion — catching issues while there's still time to fix them." },
-          { step: "Final quality audit", text: "Pre-shipment inspection to your agreed AQL standard. Nothing ships until it passes." },
-          { step: "Documentation & delivery", text: "Commercial invoices, packing lists, certificates of origin and GSP+ paperwork handled; freight coordinated through to delivery." },
-        ],
-      },
-      {
-        type: "callout",
-        variant: "qa",
-        title: "Quality control isn't a step — it is the product",
-        text: "The most valuable thing we sell is the confidence that what arrives matches what you ordered: checked against your approved sample at every stage, by independent inspectors on the ground in Pakistan.",
-      },
-      {
-        type: "list",
-        title: "Logistics, handled",
-        items: [
-          "Freight coordination (typically FOB Karachi or Port Qasim) with shipment visibility to your market.",
-          "Customs clearance and export documentation.",
-          "Importer & Exporter of Record (IOR/EOR) set-up where required.",
-          "Route-to-market, representation and distribution support.",
-        ],
-      },
-      {
-        type: "callout",
-        variant: "gsp",
-        title: "The GSP+ advantage",
-        text: "Pakistan's preferential trade status gives qualifying textiles duty-free entry into the EU — a direct, recurring cost saving we build into your landed price.",
-      },
-    ],
-    facts: {
-      factsLabel: {
-        eyebrow: "The facts",
-        title: "What the function covers",
-        body: "Four pillars that together replace an in-country procurement team.",
-      },
-      chips: ["Sourcing", "Quality assurance", "Documentation", "Logistics"],
-      rows: [
-        { label: "Sourcing", value: "Vetted factories matched to your product and volume, with sampling and written approval before any bulk commitment." },
-        { label: "Quality assurance", value: "In-production inspection at ~40–50% completion and a final pre-shipment audit to your AQL — nothing ships until it passes." },
-        { label: "Documentation", value: "Commercial invoices, packing lists, certificates of origin and GSP+ paperwork prepared and managed." },
-        { label: "Logistics", value: "Freight coordination (typically FOB Karachi or Port Qasim), customs clearance and IOR/EOR set-up where required." },
-      ],
-    },
-    why: {
-      eyebrow: "The advantage",
-      title: "Why outsource to us",
-      body: "Sourcing from a new country is the risky part. We take it on — and put our name to the result.",
-      items: [
-        { icon: Globe2, title: "A vetted supplier network", desc: "Profiled manufacturers across every category, matched to your product and volume." },
-        { icon: ShieldCheck, title: "De-risked quality", desc: "Two-stage independent inspection to your AQL, so defects are caught before they ship." },
-        { icon: Handshake, title: "One accountable partner", desc: "A single point of accountability from brief to delivery — no chasing factories yourself." },
-        { icon: Award, title: "Lower landed cost", desc: "Competitive pricing plus GSP+ duty-free entry into the EU on qualifying goods." },
-      ],
-    },
-    primaryCtaOverride: { label: "Talk to us about sourcing", href: "/contact" },
-    secondaryCta: { label: "See the global market", href: "/global-textile-market" },
-  },
-
-  /* ───────────────────────────── MARKETING ────────────────────────── */
-  marketing: {
+  /* ───────────────────────── MARKETING & SALES ─────────────────────── */
+  "marketing-sales": {
     hero: "/image/marketing.jpg",
     feature: "/image/e-commerce.jpg",
     featureTag: "For Pakistani exporters",
@@ -332,8 +157,8 @@ const detail: Record<string, ServiceDetail> = {
     secondaryCta: { label: "See membership", href: "/membership" },
   },
 
-  /* ──────────────────────────── WAREHOUSING ───────────────────────── */
-  warehousing: {
+  /* ───────────────────── E-COMMERCE & WAREHOUSE ────────────────────── */
+  "ecommerce-warehouse": {
     hero: "/image/warehouse.jpg",
     feature: "/image/warehouse-2.jpg",
     cta: "/image/warehouse-3.jpg",
@@ -427,17 +252,183 @@ const detail: Record<string, ServiceDetail> = {
         { icon: Globe2, title: "Recurring revenue", desc: "Turn one-off export sales into an ongoing direct-to-consumer business across the UK and Europe." },
       ],
     },
-    primaryCtaOverride: { label: "Start selling online", href: "/contact" },
+    primaryCtaOverride: { label: "Start selling on Amazon", href: "/contact" },
     secondaryCta: { label: "Become a member", href: "/membership" },
+  },
+
+  /* ─────────────────── BUYING HOUSE (OUTSOURCING) ──────────────────── */
+  "buying-house": {
+    hero: "/image/buying.jpg",
+    feature: "/image/buying-2.jpg",
+    cta: "/image/outsourcing-3.jpg",
+    featureTag: "Vetted in Pakistan",
+    intro:
+      "Your outsourced Pakistan procurement department. Tell us what you need; we find the right factory, control the quality, handle the paperwork and deliver. You deal with one accountable partner — and source from a new origin without taking on the risk yourself.",
+    whoForLabel: "Who sources this way",
+    whoFor: [
+      "Retailers & department stores",
+      "Importers & wholesalers",
+      "Hotel & hospitality buyers",
+      "E-commerce & DTC brands",
+      "Sourcing & procurement teams",
+    ],
+    stats: [
+      { icon: Handshake, value: "One partner", label: "Brief to delivery, accountable" },
+      { icon: ShieldCheck, value: "AQL-checked", label: "Independent pre-shipment QA" },
+      { icon: BadgeCheck, value: "Vetted", label: "Pre-screened factory network" },
+      { icon: BadgePercent, value: "GSP+", label: "EU duty-free on qualifying goods" },
+    ],
+    contentLabel: {
+      eyebrow: "The service",
+      title: "From your brief to your door",
+      body: "A clear, controlled path from requirement to delivered goods — with quality checked at every stage.",
+    },
+    blocks: [
+      {
+        type: "steps",
+        title: "How it works",
+        intro: "Seven controlled stages, one point of contact — with quality designed in rather than inspected at the end.",
+        items: [
+          { step: "Brief & quote", text: "We capture your requirement in full — product, fabric, thread count/GSM, sizes, quantities, certifications, target price, packaging and delivery date." },
+          { step: "Supplier match", text: "We match your brief to the right manufacturer(s) from our vetted network." },
+          { step: "Sampling & approval", text: "We arrange samples, manage revisions, and secure your written approval before any bulk commitment." },
+          { step: "Price & order", text: "We negotiate competitive pricing without compromising quality, and place the order." },
+          { step: "Production monitoring", text: "We inspect at roughly 40–50% completion — catching issues while there's still time to fix them." },
+          { step: "Final quality audit", text: "We carry out pre-shipment inspection to your agreed AQL standard. Nothing ships until it passes." },
+          { step: "Documentation & delivery", text: "We handle the paperwork and coordinate freight through to delivery — see our Logistics service." },
+        ],
+      },
+      {
+        type: "callout",
+        variant: "qa",
+        title: "Quality control isn't a step — it is the product",
+        text: "The most valuable thing we sell is the confidence that what arrives matches what you ordered: checked against your approved sample at every stage, by independent inspectors on the ground in Pakistan.",
+      },
+      {
+        type: "list",
+        title: "Ways to work with us",
+        icons: [FlaskConical, RefreshCw, ShieldCheck, Shuffle],
+        items: [
+          "Trial / single order — test Pakistan, and test us, on one defined project.",
+          "Repeat / programme sourcing — we become your ongoing Pakistan procurement function.",
+          "Quality assurance only — you have a factory; we provide independent inspection.",
+          "Hybrid — we co-manage sourcing while you keep final control.",
+        ],
+      },
+    ],
+    facts: {
+      factsLabel: {
+        eyebrow: "The facts",
+        title: "What you actually get",
+        body: "The substance behind the service — so you can buy from a new origin with confidence.",
+      },
+      chips: ["No middle layer", "AQL pre-ship", "GSP+ coverage", "Healthcare textiles"],
+      rows: [
+        { label: "Accountability", value: "A single point of contact — sourcing, sampling, QA, documentation and delivery, handled end-to-end. You're not just another number." },
+        { label: "Quality control", value: "Independent, multi-stage inspection on the ground in Pakistan, checked against your approved sample to your agreed AQL." },
+        { label: "Pricing", value: "Competitive factory pricing negotiated on your behalf, with GSP+ duty-free savings built into your landed cost where goods qualify." },
+        { label: "Range", value: "Home textiles, apparel, sportswear and healthcare textiles — from low-MOQ runs to full container volumes." },
+      ],
+    },
+    why: {
+      eyebrow: "The advantage",
+      title: "Why buyers source through us",
+      body: "Give us the full assignment and we vouch for the factory, guarantee the quality and get the goods to your door.",
+      items: [
+        { icon: Globe2, title: "A vetted global network", desc: "Pre-screened Pakistani manufacturers across every category, matched to your spec and volume." },
+        { icon: ShieldCheck, title: "Quality on the ground", desc: "Independent, multi-stage inspection to your agreed AQL — not just the factory's word." },
+        { icon: Handshake, title: "One accountable partner", desc: "A single point of accountability from first enquiry to final delivery, anywhere in the world." },
+        { icon: BadgePercent, title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles, built into your price." },
+      ],
+    },
+    primaryCtaOverride: { label: "Request a quote", href: "/contact" },
+    secondaryCta: { label: "Talk to us about logistics", href: "/services/logistics" },
+  },
+
+  /* ─────────────────────────────── LOGISTICS ───────────────────────── */
+  logistics: {
+    hero: "/image/logistics.jpg",
+    feature: "/image/shipping-logistics-2.jpg",
+    cta: "/image/logostics-3.jpg",
+    featureTag: "Factory to your door",
+    intro:
+      "For buyers and exporters alike — the movement and paperwork that gets product from a Pakistani factory to your door. We coordinate freight, clear customs, prepare the export documentation and set up Importer/Exporter of Record where it's needed, so a low-cost origin becomes a low-hassle one.",
+    whoForLabel: "Who this is for",
+    whoFor: [
+      "International buyers & importers",
+      "Pakistani exporters",
+      "Retail & e-commerce sellers",
+      "Distributors & wholesalers",
+      "Anyone shipping from Pakistan",
+    ],
+    stats: [
+      { icon: Truck, value: "FOB Karachi", label: "Freight coordinated to your market" },
+      { icon: FileText, value: "Docs handled", label: "Invoices, packing lists, origin" },
+      { icon: ClipboardCheck, value: "IOR / EOR", label: "Set-up where required" },
+      { icon: BadgePercent, value: "GSP+", label: "EU duty-free paperwork prepared" },
+    ],
+    contentLabel: {
+      eyebrow: "The service",
+      title: "We move it and clear it",
+      body: "The freight, customs and documentation that turn a factory price into landed, on-time delivery.",
+    },
+    blocks: [
+      {
+        type: "list",
+        title: "What we handle",
+        intro: "Everything between the factory gate and your door — coordinated by one accountable partner.",
+        icons: [Truck, ShieldCheck, FileText, ClipboardCheck, Globe2],
+        items: [
+          "Freight coordination — typically FOB Karachi or Port Qasim, with shipment visibility through to your market.",
+          "Customs clearance — into the EU, UK and other destination markets.",
+          "Export documentation — commercial invoices, packing lists, certificates of origin and GSP+ duty-free paperwork.",
+          "Importer & Exporter of Record (IOR/EOR) set-up where required.",
+          "Route-to-market, representation and distribution support.",
+        ],
+      },
+      {
+        type: "callout",
+        variant: "gsp",
+        title: "The GSP+ advantage",
+        text: "Pakistan's preferential trade status gives qualifying Pakistani textiles duty-free entry into the EU — a direct, recurring cost saving we build into your landed price.",
+      },
+    ],
+    facts: {
+      factsLabel: {
+        eyebrow: "The facts",
+        title: "What the service covers",
+        body: "The four pieces that move goods from a Pakistani factory to a destination market.",
+      },
+      chips: ["Freight", "Customs", "Documentation", "IOR / EOR"],
+      rows: [
+        { label: "Freight", value: "Coordination from Pakistan (typically FOB Karachi or Port Qasim) with shipment visibility through to delivery in your market." },
+        { label: "Customs", value: "Clearance into the EU, UK and other destinations, handled so your goods don't sit at the border." },
+        { label: "Documentation", value: "Commercial invoices, packing lists, certificates of origin and GSP+ duty-free paperwork prepared and managed." },
+        { label: "IOR / EOR", value: "Importer and Exporter of Record set-up where your shipment requires it, plus route-to-market and distribution support." },
+      ],
+    },
+    why: {
+      eyebrow: "The advantage",
+      title: "Why ship through us",
+      body: "A low-cost origin only pays off if it arrives cleanly. We handle the movement and the paperwork so it does.",
+      items: [
+        { icon: Truck, title: "Freight, coordinated", desc: "Shipments arranged from Karachi or Port Qasim with visibility through to your destination." },
+        { icon: FileText, title: "Paperwork, handled", desc: "Invoices, packing lists, certificates of origin and customs documentation prepared correctly the first time." },
+        { icon: BadgePercent, title: "GSP+ duty-free", desc: "Qualifying Pakistani textiles enter the EU duty-free — a saving we build into your landed price." },
+        { icon: Handshake, title: "One accountable partner", desc: "Freight, customs and documentation under one roof — no juggling forwarders and brokers yourself." },
+      ],
+    },
+    primaryCtaOverride: { label: "Talk to us about logistics", href: "/contact" },
+    secondaryCta: { label: "See the buying house", href: "/services/buying-house" },
   },
 };
 
 /* Cross-link card images reuse each service's hero */
 const serviceCardImages: Record<string, string> = {
-  buying: detail.buying.hero,
-  outsourcing: detail.outsourcing.hero,
-  marketing: detail.marketing.hero,
-  warehousing: detail.warehousing.hero,
+  "marketing-sales": detail["marketing-sales"].hero,
+  "ecommerce-warehouse": detail["ecommerce-warehouse"].hero,
+  "buying-house": detail["buying-house"].hero,
+  logistics: detail.logistics.hero,
 };
 
 const fallbackServiceIcon: LucideIcon = Megaphone;

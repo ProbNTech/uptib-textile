@@ -483,8 +483,8 @@ export default function ManagementTeamPage() {
         subtitle="Our structure ensures every member has a voice. Learn more about how you can contribute to Pakistan Textile Partners' mission."
         primaryButtonText="Become a Member"
         primaryButtonLink="/membership"
-        secondaryButtonText="Code of Conduct"
-        secondaryButtonLink="/code-of-conduct"
+        secondaryButtonText="View FAQs"
+        secondaryButtonLink="/faqs"
         image="/image/textile/exporters.jpg"
       />
     </div>

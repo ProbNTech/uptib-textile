@@ -505,13 +505,13 @@ export default function MembershipTermsClient() {
           <div className="max-w-3xl mx-auto text-center">
             <SectionHeader label="Acceptance" title="Agreement & Acceptance" color="green" />
             <p className="text-[#5A5F72] text-lg leading-relaxed mb-6">
-              By submitting an application for membership or maintaining membership, you acknowledge that you have read, understood, and agreed to be bound by these Terms and Conditions, including the Code of Conduct, Disciplinary Procedure, and all associated policies.
+              By submitting an application for membership or maintaining membership, you acknowledge that you have read, understood, and agreed to be bound by these Terms and Conditions and all associated policies.
             </p>
             <p className="text-[#5A5F72] text-base leading-relaxed mb-8">
               These Terms and Conditions, along with our{" "}
-              <Link href="/privacy" className="text-[#2F7549] hover:underline">Privacy Policy</Link>,{" "}
-              <Link href="/code-of-conduct" className="text-[#2F7549] hover:underline">Code of Conduct</Link>, and{" "}
-              <Link href="/arbitration/framework" className="text-[#2F7549] hover:underline">Arbitration Framework</Link>,
+              <Link href="/privacy" className="text-[#2F7549] hover:underline">Privacy Policy</Link>{" "}
+              and{" "}
+              <Link href="/terms" className="text-[#2F7549] hover:underline">Terms &amp; Conditions</Link>,
               constitute the entire agreement between you and Pakistan Textile Partners regarding your membership.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">

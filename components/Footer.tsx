@@ -37,18 +37,11 @@ export function Footer() {
                 <Link href="/" className="inline-flex items-center mb-5 group">
                   <span className="inline-flex items-center gap-0 rounded-xl bg-white px-4 py-3 shadow-sm group-hover:scale-105 transition-transform duration-300">
                     <Image
-                      src="/image/main-logo.png"
+                      src="/image/main-logo-v1.png"
                       alt="Pakistan Textile Partners logo"
-                      width={150}
-                      height={158}
-                      className="h-[64px] w-auto object-contain"
-                    />
-                    <Image
-                      src="/image/wordmark.png"
-                      alt="Pakistan Textile Partners"
-                      width={329}
-                      height={64}
-                      className="h-[30px] w-auto object-contain -ml-3.5"
+                      width={200}
+                      height={100}
+                      className="h-[80px] sm:h-[100px] lg:h-[150px] w-auto object-contain"
                     />
                   </span>
                 </Link>
@@ -125,10 +118,10 @@ export function Footer() {
                 </h3>
                 <ul className="space-y-3">
                   {[
+                    { label: "About Us", href: "/about" },
+                    { label: "FAQs", href: "/faqs" },
                     { label: "Privacy Policy", href: "/privacy" },
                     { label: "Terms & Conditions", href: "/terms" },
-                    { label: "Excellence Management T&Cs", href: "/excellence-management-terms" },
-                    { label: "Members Guidance", href: "/members-guidance" },
                     { label: "Cookies Policy", href: "/cookies" },
                     { label: "GDPR Policy", href: "/gdpr" },
                   ].map((link) => (

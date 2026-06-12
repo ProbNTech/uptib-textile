@@ -7,7 +7,7 @@ const items = [
   { text: "~US$17.9bn in Pakistani textile exports — a global top-10 exporter", href: "/global-textile-market" },
   { text: "World-leading origin for cotton and home textiles", href: "/products/bedding-linen" },
   { text: "GSP+ duty-free access into the EU", href: "/global-textile-market" },
-  { text: "Source from Pakistan, quality guaranteed", href: "/services/buying" },
+  { text: "Source from Pakistan, quality guaranteed", href: "/services/buying-house" },
   { text: "Grow your exports — become a member", href: "/membership" },
 ];
 

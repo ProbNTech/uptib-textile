@@ -1,179 +1,226 @@
-"use client";
-
-import { Section } from "@/components/Section";
-import { SectionHeader } from "@/components/SectionHeader";
-import { AnimatedSection } from "@/components/AnimatedSection";
-import { PageHero } from "@/components/PageHero";
+import type { Metadata } from "next";
+import { Target, Eye, MapPin, Phone } from "lucide-react";
+import { PolicyHero } from "@/components/PolicyHero";
 import { GlobalCTA } from "@/components/GlobalCTA";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { Button } from "@/components/Button";
-import Image from "next/image";
-import Link from "next/link";
-import { Lightbulb, Target, CheckCircle2, Award, Users, ArrowRight, Shield, UserCheck, Globe2, Handshake, Layers } from "lucide-react";
+import { site } from "@/data/site";
+import { products, services, homeStats, markets, whyUptib } from "@/data/textile";
 
-const brandColors = ["#2F7549", "#2F7549", "#3E8F5E"];
+export const metadata: Metadata = {
+  title: "About Pakistan Textile Partners",
+  description: "The trusted bridge for UK–Pakistan textile trade — connecting Pakistan's manufacturers and exporters with buyers worldwide.",
+  alternates: { canonical: "/about" },
+};
 
-const whyUptech = [
-  {
-    icon: Shield,
-    title: "Trusted Gateway",
-    description: "Pakistan Textile Partners acts as a reliable bridge connecting Pakistani technology providers with UK and European companies.",
-    color: "#2F7549",
-  },
-  {
-    icon: UserCheck,
-    title: "Verified Technology Partners",
-    description: "We work with carefully selected technology companies, researchers, and professionals to ensure high-quality collaboration.",
-    color: "#3E8F5E",
-  },
-  {
-    icon: Globe2,
-    title: "Market Access Expertise",
-    description: "Pakistan Textile Partners provides guidance on European market entry, regulatory environments, and technology sector opportunities.",
-    color: "#2F7549",
-  },
-  {
-    icon: Handshake,
-    title: "Cross-Border Collaboration",
-    description: "We facilitate partnerships between technology companies, research institutions, universities, innovation hubs, and investors.",
-    color: "#2F7549",
-  },
-  {
-    icon: Layers,
-    title: "End-to-End Support",
-    description: "From market research to partnership development and project coordination, Pakistan Textile Partners supports organisations throughout the collaboration process.",
-    color: "#3E8F5E",
-  },
-];
-
-const exploreItems = [
-  { icon: Lightbulb, title: "Vision", desc: "A connected innovation ecosystem bridging UK and Pakistan's technology sectors.", href: "/about/vision", color: "#2F7549" },
-  { icon: Target, title: "Mission", desc: "Our strategic mission to transform Pakistan into a thriving global tech hub.", href: "/about/mission", color: "#3E8F5E" },
-  { icon: CheckCircle2, title: "Objectives & Values", desc: "Core values, key activities, and broader impact goals driving our work.", href: "/about/objectives", color: "#2F7549" },
-  { icon: Award, title: "Leadership", desc: "Meet our President Khalil Choudhary â the leader of Pakistan Textile Partners.", href: "/about/founder", color: "#2F7549" },
-  { icon: Users, title: "Management Team", desc: "Board of directors, advisory forum, and executive leadership team.", href: "/about/management-team", color: "#3E8F5E" },
-];
+function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
+  return (
+    <header className="mb-8">
+      <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-[#2F7549]">{eyebrow}</p>
+      <h2 className="font-heading text-[1.7rem] sm:text-[2rem] font-bold leading-[1.2] text-[#16291E]">{title}</h2>
+      <div className="mt-4 h-px w-12 bg-[#3E8F5E]" />
+    </header>
+  );
+}
 
 export default function AboutPage() {
   return (
     <div>
-      <PageHero
-        label="About Us"
+      <PolicyHero
+        eyebrow="About Us"
+        breadcrumb="About Us"
         title="About Pakistan Textile Partners"
-        subtitle="Empowering Pakistan's Tech Leaders; innovation, entrepreneurship, investment, advocacy and visionary growth."
-        threeBg
+        subtitle="The trusted bridge for UK–Pakistan textile trade — connecting Pakistan's manufacturers and exporters with buyers worldwide."
+        icon={Target}
       >
-        <div className="flex flex-wrap items-center gap-4">
-          <ShinyButton href="/membership#apply">Apply for Membership</ShinyButton>
-          <Button href="/contact" variant="glass">Contact Us</Button>
-        </div>
-      </PageHero>
+        <ShinyButton href="/membership#apply">Apply for Membership</ShinyButton>
+        <Button href="/contact" variant="glass">Contact Us</Button>
+      </PolicyHero>
 
-      {/* About Us */}
-      <Section variant="light" className="content-body">
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
-          <AnimatedSection>
-            <SectionHeader
-              label="Who we are"
-              title="About the Forum"
-              color="blue"
-            />
-            <p className="text-[#3D4152] leading-relaxed mb-5">
-              The UK Pakistan Technology Forum brings together businesses, innovators, government partners, investors, and technology leaders from the UK and Pakistan to support cross-border innovation, trade, and economic growth. Our mission is to shape strategic technology cooperation that powers sustainable development, accelerates digital transformation, and fosters shared prosperity for both nations.
+      {/* Who we are */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-3xl px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24">
+          <SectionHead eyebrow="Who we are" title="A London-based platform for textile trade" />
+          <div className="space-y-4 text-[15.5px] leading-[1.85] text-[#4B5563]">
+            <p>
+              Pakistan Textile Partners is a London-based platform for UK–Pakistan textile trade. We trade
+              quality Pakistani textiles and run the services that move them — buying, outsourced
+              procurement, marketing and warehousing — connecting Pakistan’s manufacturers and exporters
+              with buyers worldwide.
             </p>
-            <p className="text-[#3D4152] leading-relaxed mb-5">
-              Our primary objective is to champion a positive and soft image of Pakistan while nurturing innovation, collaboration, and continuous education within the dynamic landscape of technology.
+            <p>
+              As the textile division of the UK–Pakistan Trade and Investment Board (UPTIB), we act as a
+              trusted bridge between Pakistani manufacturing and global demand: marketing the supply,
+              sourcing the demand, and standing as one accountable partner to both.
             </p>
-            <p className="text-[#3D4152] leading-relaxed mb-5">
-              Our dynamic platform empowers individuals to unlock their full potential, advance their careers, and make a lasting impact on the Forum. We champion the highest standards of professionalism, integrity, and ethics, setting a benchmark for IT societies worldwide.
+            <p>
+              Pakistan is one of the world’s top-ten textile exporters and a global leader in cotton and
+              home textiles. We make that capability visible, credible and reachable — helping
+              international buyers source dependable product on-spec and on-time, and helping Pakistani
+              exporters reach markets across the EU, the Americas, the Middle East and beyond.
             </p>
-            <p className="text-[#3D4152] leading-relaxed mb-5">
-              By uniting Pakistani IT professionals residing and working in the United Kingdom, we establish a dynamic platform for networking, knowledge-sharing, and collective advancement.
-            </p>
-            <p className="text-[#3D4152] leading-relaxed">
-              Through our diverse community, we aim to catalyze positive transformations in IT, shaping its future, and delivering significant contributions to both the country we reside in and the country we proudly belong to.
-            </p>
-          </AnimatedSection>
-          <AnimatedSection>
-            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border-2 border-[#2F7549]/15">
-              <Image
-                src="/image/about/about-section-home.jpg"
-                alt="About the Forum"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
+          </div>
+        </div>
+      </section>
+
+      {/* What we do */}
+      <section className="border-y border-[#ECECE6] bg-[#F7F8F6]">
+        <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24">
+          <SectionHead eyebrow="What we do" title="Products and services, end to end" />
+          <div className="grid gap-x-16 gap-y-12 lg:grid-cols-2">
+            <div>
+              <h3 className="mb-5 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#16291E]">
+                What we trade
+              </h3>
+              <div className="divide-y divide-[#E2E2DC] border-y border-[#E2E2DC]">
+                {products.map((p) => {
+                  const Icon = p.icon;
+                  return (
+                    <div key={p.slug} className="flex gap-4 py-4">
+                      <Icon className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#2F7549]" strokeWidth={1.6} />
+                      <div>
+                        <p className="font-heading text-[1rem] font-semibold text-[#16291E]">{p.name}</p>
+                        <p className="mt-1 text-[14.5px] leading-[1.7] text-[#5A5F72]">{p.short}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </AnimatedSection>
+            <div>
+              <h3 className="mb-5 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#16291E]">
+                What we do for you
+              </h3>
+              <div className="divide-y divide-[#E2E2DC] border-y border-[#E2E2DC]">
+                {services.map((s) => {
+                  const Icon = s.icon;
+                  return (
+                    <div key={s.slug} className="flex gap-4 py-4">
+                      <Icon className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#2F7549]" strokeWidth={1.6} />
+                      <div>
+                        <p className="font-heading text-[1rem] font-semibold text-[#16291E]">{s.name}</p>
+                        <p className="mt-1 text-[14.5px] leading-[1.7] text-[#5A5F72]">{s.short}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
-      </Section>
+      </section>
 
-      {/* Why Choose Pakistan Textile Partners */}
-      <Section variant="alt">
-        <AnimatedSection>
-          <SectionHeader label="Why Pakistan Textile Partners" title="Why Choose Pakistan Textile Partners?" color="green" subtitle="The UK–Pakistan Trades & Investment Board provides a trusted platform for technology collaboration between Pakistan and Europe." />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyUptech.map((item) => {
+      {/* Mission & Vision */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24">
+          <div className="grid gap-x-16 gap-y-12 lg:grid-cols-2">
+            <div>
+              <div className="mb-5 flex items-center gap-3">
+                <Target className="h-6 w-6 text-[#2F7549]" strokeWidth={1.6} />
+                <h2 className="font-heading text-[1.5rem] font-bold text-[#16291E]">Our Mission</h2>
+              </div>
+              <p className="text-[15.5px] leading-[1.85] text-[#4B5563]">
+                To connect Pakistan’s textile manufacturing to buyers around the world — marketing the
+                supply, sourcing the demand, and giving both sides a single accountable partner from first
+                enquiry to final delivery.
+              </p>
+            </div>
+            <div>
+              <div className="mb-5 flex items-center gap-3">
+                <Eye className="h-6 w-6 text-[#2F7549]" strokeWidth={1.6} />
+                <h2 className="font-heading text-[1.5rem] font-bold text-[#16291E]">Our Vision</h2>
+              </div>
+              <p className="text-[15.5px] leading-[1.85] text-[#4B5563]">
+                To be the trusted bridge for UK–Pakistan textile trade — making Pakistan’s world-class
+                cotton, home textiles, apparel and institutional textiles visible, credible and reachable
+                to buyers everywhere, while helping Pakistani exporters grow into global markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="border-y border-[#ECECE6] bg-[#F7F8F6]">
+        <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24">
+          <SectionHead eyebrow="Why us" title="Why Choose Pakistan Textile Partners" />
+          <div className="mt-2 grid gap-x-12 gap-y-9 sm:grid-cols-2">
+            {whyUptib.map((item) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={item.title}
-                  className="group bg-white rounded-2xl border border-[#D8D5CF] p-7 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style={{ background: `${item.color}10`, border: `1px solid ${item.color}25` }}>
-                    <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
+                <div key={item.title} className="flex gap-4">
+                  <Icon className="mt-0.5 h-6 w-6 flex-shrink-0 text-[#2F7549]" strokeWidth={1.6} />
+                  <div>
+                    <h3 className="font-heading text-[1.05rem] font-semibold text-[#16291E]">{item.title}</h3>
+                    <p className="mt-1.5 text-[15px] leading-[1.8] text-[#5A5F72]">{item.desc}</p>
                   </div>
-                  <h3 className="font-heading font-bold text-lg text-[#16291E] mb-2 group-hover:text-[#2F7549] transition-colors duration-200">{item.title}</h3>
-                  <div className="h-px bg-[#D8D5CF] mb-3" />
-                  <p className="text-base text-[#5A5F72] leading-relaxed">{item.description}</p>
                 </div>
               );
             })}
           </div>
-        </AnimatedSection>
-      </Section>
+        </div>
+      </section>
 
-      {/* Explore Section */}
-      <Section variant="light">
-        <AnimatedSection>
-          <SectionHeader label="Learn more" title="Explore" color="red" subtitle="Discover our vision, mission, leadership, and partnerships that drive the UK-Pakistan technology corridor." />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {exploreItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  className="group text-left bg-white rounded-lg p-7 hover:shadow-lg transition-all duration-300 relative overflow-hidden block"
-                  style={{ borderTop: `3px solid ${item.color}` }}
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-y-1/2 translate-x-1/2" style={{ background: `radial-gradient(circle, ${item.color}08, transparent 70%)` }} />
-                  <div className="relative">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: `${item.color}10`, border: `1px solid ${item.color}25` }}>
-                        <Icon className="w-5 h-5" style={{ color: item.color }} strokeWidth={1.5} />
-                      </div>
-                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200" style={{ color: item.color }} />
-                    </div>
-                    <h3 className="font-heading font-bold text-lg text-[#16291E] mb-2">{item.title}</h3>
-                    <p className="text-[#3D4152] text-base leading-relaxed">{item.desc}</p>
-                  </div>
-                </Link>
-              );
-            })}
+      {/* By the numbers + markets */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24">
+          <SectionHead eyebrow="The opportunity" title="Pakistan textiles, by the numbers" />
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
+            {homeStats.map((stat) => (
+              <div key={stat.label}>
+                <p className="font-heading text-3xl font-extrabold text-[#2F7549] sm:text-4xl">{stat.value}</p>
+                <p className="mt-2 text-[14px] leading-[1.6] text-[#5A5F72]">{stat.label}</p>
+              </div>
+            ))}
           </div>
-        </AnimatedSection>
-      </Section>
+
+          <h3 className="mb-5 mt-14 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#16291E]">
+            Markets we reach
+          </h3>
+          <dl className="divide-y divide-[#ECECE6] border-y border-[#ECECE6]">
+            {markets.map((m) => (
+              <div key={m.name} className="grid gap-1 py-4 sm:grid-cols-[220px_minmax(0,1fr)] sm:gap-6">
+                <dt className="font-semibold text-[#16291E]">{m.name}</dt>
+                <dd className="text-[15px] text-[#5A5F72]">{m.note}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* Where we operate */}
+      <section className="border-y border-[#ECECE6] bg-[#F7F8F6]">
+        <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24">
+          <SectionHead eyebrow="Where we are" title="Offices in the UK and Pakistan" />
+          <div className="grid gap-x-12 gap-y-8 sm:grid-cols-2">
+            {site.offices.map((office) => (
+              <div key={office.label}>
+                <h3 className="font-heading text-[1.1rem] font-semibold text-[#16291E]">{office.label}</h3>
+                <div className="mt-3 space-y-2.5 text-[15px] text-[#5A5F72]">
+                  <p className="flex gap-3">
+                    <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#2F7549]" strokeWidth={1.7} />
+                    <span>{office.address}</span>
+                  </p>
+                  <p className="flex gap-3">
+                    <Phone className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#2F7549]" strokeWidth={1.7} />
+                    <a href={office.phoneHref} className="hover:text-[#2F7549]">{office.phone}</a>
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <GlobalCTA
         label="Join Us"
-        title="Ready to Be Part of the Movement?"
-        subtitle="Join Pakistan Textile Partners and connect with technology leaders, entrepreneurs, and innovators shaping the UKâPakistan tech corridor."
+        title="Ready to Be Part of UK–Pakistan Textile Trade?"
+        subtitle="Join Pakistan Textile Partners and connect with the manufacturers, exporters and buyers driving textile trade between Pakistan and the world."
         primaryButtonText="Apply for Membership"
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Contact Us"
         secondaryButtonLink="/contact"
-        image="/image/hero-bg/pexels-kazmisalman-12912453.jpg"
+        image="/image/textile/products/bedding-linen.jpg"
       />
     </div>
   );

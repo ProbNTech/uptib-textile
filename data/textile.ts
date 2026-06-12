@@ -6,7 +6,7 @@
 ─────────────────────────────────────────────────────────────────── */
 import {
   BedDouble, Shirt, Dumbbell, Stethoscope,
-  ShoppingCart, ClipboardCheck, Megaphone, Warehouse,
+  ShoppingCart, Megaphone, Warehouse, Truck,
   ShieldCheck, Globe2, Handshake, BadgePercent,
   type LucideIcon,
 } from "lucide-react";
@@ -19,7 +19,15 @@ export type ShowcaseGroup = {
   tagline: string;         // short italic kicker, e.g. "Egyptian & terry cotton"
   desc: string;            // one short editorial paragraph
   items: string[];         // bulleted product list for this line
-  images: { src: string; alt: string }[]; // 3-5 photos for the mosaic
+  images: { src: string; alt: string }[]; // 2-4 photos for the mosaic
+  /* Mosaic composition. Image count must match:
+       quad      → 4 (even 2×2)
+       stack     → 4 (wide · two squares · wide)
+       tall-left → 3 (one tall main + two stacked)
+       top-wide  → 3 (one wide on top + two squares)
+       duo       → 2 (two offset portraits)
+     Omit to auto-pick from the image count. */
+  layout?: "quad" | "stack" | "tall-left" | "top-wide" | "duo";
 };
 
 export type ProductCategory = {
@@ -223,6 +231,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Mattress Protectors & Toppers",
+          layout: "top-wide",
           tagline: "Quilted & water-repellent",
           desc:
             "Quilted protectors and toppers that guard the mattress and add a layer of comfort — with water-repellent and breathable finishes for homes, hotels and care settings alike.",
@@ -236,6 +245,41 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/home/mattress-1.jpg", alt: "A white quilted mattress protector" },
             { src: "/image/textile/home/mattress-2.jpg", alt: "Hands fitting a quilted protector onto a mattress" },
             { src: "/image/textile/home/mattress-3.jpg", alt: "A quilted mattress protector dressed on a bed" },
+          ],
+        },
+        {
+          name: "Cushions & Throws",
+          layout: "top-wide",
+          tagline: "Decorative & accent textiles",
+          desc:
+            "The finishing layer — woven and knitted cushions, throws and blankets in seasonal colourways and textures that pull a room together, for retail and hospitality alike.",
+          items: [
+            "Cushion covers & filled cushions",
+            "Knitted & woven throws",
+            "Blankets & bedspreads",
+            "Seasonal colours & textures",
+          ],
+          images: [
+            { src: "/image/textile/home/cushions-1.jpg", alt: "A soft knitted throw with tasselled edges" },
+            { src: "/image/textile/home/cushions-2.jpg", alt: "Neutral cushions and a knitted throw on a bed" },
+            { src: "/image/textile/home/cushions-3.jpg", alt: "Soft grey cushions styled on a bed" },
+          ],
+        },
+        {
+          name: "Table & Kitchen Linen",
+          layout: "duo",
+          tagline: "Napkins, runners & aprons",
+          desc:
+            "Everyday and occasion table linen in cotton and linen weaves — napkins, runners, placemats and aprons, dyed and finished to coordinate with the rest of the range.",
+          items: [
+            "Napkins & table runners",
+            "Placemats & tablecloths",
+            "Tea towels & kitchen linen",
+            "Aprons & oven textiles",
+          ],
+          images: [
+            { src: "/image/textile/home/table-1.jpg", alt: "A neutral place setting with linen and cutlery" },
+            { src: "/image/textile/home/table-2.jpg", alt: "Crisp white folded napkins with cutlery" },
           ],
         },
       ],
@@ -366,8 +410,43 @@ export const products: ProductCategory[] = [
           images: [
             { src: "/image/textile/apparel/uniform-1.jpg", alt: "A minimalist rail of neutral garments" },
             { src: "/image/textile/apparel/uniform-2.jpg", alt: "Grey garments hung on a clothing rail" },
-            { src: "/image/textile/apparel/uniform-3.jpg", alt: "A pressed shirt on a hanger" },
+            { src: "/image/textile/apparel/uniform-3.jpg", alt: "A folded stack of uniform shirts" },
             { src: "/image/textile/apparel/uniform-4.jpg", alt: "A clothing rail of neutral-toned apparel" },
+          ],
+        },
+        {
+          name: "Children's & Baby Wear",
+          layout: "tall-left",
+          tagline: "Soft, safe everyday kids' clothing",
+          desc:
+            "Gentle-on-skin children's and baby clothing in soft cottons and certified, low-irritant finishes — bodysuits, sets and everyday basics, made to the safety standards retailers require.",
+          items: [
+            "Bodysuits, rompers & sleepsuits",
+            "Tops, leggings & sets",
+            "Soft, certified cottons",
+            "OEKO-TEX low-irritant finishes",
+          ],
+          images: [
+            { src: "/image/textile/apparel/kids-1.jpg", alt: "Delicate white lace-collar baby dresses" },
+            { src: "/image/textile/apparel/kids-2.jpg", alt: "A neutral baby-clothing flat lay with flowers" },
+            { src: "/image/textile/apparel/kids-3.jpg", alt: "A folded beige baby onesie and accessories" },
+          ],
+        },
+        {
+          name: "Accessories",
+          layout: "duo",
+          tagline: "Socks, beanies, scarves & bags",
+          desc:
+            "The add-on lines that round out an order — knitted socks, beanies, scarves and bags, produced to the same spec and finish as the main collection.",
+          items: [
+            "Socks & hosiery",
+            "Beanies, scarves & gloves",
+            "Caps & headwear",
+            "Bags & totes",
+          ],
+          images: [
+            { src: "/image/textile/apparel/acc-1.jpg", alt: "Soft knitted beanies and socks in neutral tones" },
+            { src: "/image/textile/apparel/acc-2.jpg", alt: "Knitted socks in warm neutral colours" },
           ],
         },
       ],
@@ -460,10 +539,10 @@ export const products: ProductCategory[] = [
             "Shorts & base layers",
           ],
           images: [
-            { src: "/image/textile/sportswear/perf-1.jpg", alt: "A soft-toned athleisure flat lay" },
-            { src: "/image/textile/sportswear/perf-2.jpg", alt: "Neutral training sneakers in a flat lay" },
+            { src: "/image/textile/sportswear/perf-1.jpg", alt: "A man in a grey training tracksuit" },
+            { src: "/image/textile/sportswear/perf-2.jpg", alt: "A woman in a grey performance hoodie" },
             { src: "/image/textile/sportswear/perf-3.jpg", alt: "A folded stack of joggers" },
-            { src: "/image/textile/sportswear/perf-4.jpg", alt: "An athleisure flat lay with accessories" },
+            { src: "/image/textile/sportswear/perf-4.jpg", alt: "Back detail of a grey training hoodie" },
           ],
         },
         {
@@ -499,6 +578,41 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/sportswear/tech-2.jpg", alt: "Close detail of grey performance mesh fabric" },
             { src: "/image/textile/sportswear/tech-3.jpg", alt: "Detail of a seamless performance top" },
             { src: "/image/textile/sportswear/tech-4.jpg", alt: "Close detail of breathable mesh knit" },
+          ],
+        },
+        {
+          name: "Outerwear & Layers",
+          layout: "tall-left",
+          tagline: "Jackets, windbreakers & vests",
+          desc:
+            "Train-through-the-seasons layers — windbreakers, track jackets, gilets and mid-layers in water-resistant and breathable fabrics, finished for the gym, the trail and the everyday.",
+          items: [
+            "Windbreakers & track jackets",
+            "Gilets & mid-layers",
+            "Water-resistant & breathable shells",
+            "Zip, bonded & taped finishes",
+          ],
+          images: [
+            { src: "/image/textile/sportswear/outer-1.jpg", alt: "A model in a soft khaki windbreaker" },
+            { src: "/image/textile/sportswear/outer-2.jpg", alt: "A grey performance sport jacket" },
+            { src: "/image/textile/sportswear/outer-3.jpg", alt: "A grey jacket on a hanger" },
+          ],
+        },
+        {
+          name: "Sports Accessories",
+          layout: "duo",
+          tagline: "Caps, bags, socks & support",
+          desc:
+            "The kit around the kit — performance socks, caps, bags and training accessories, branded to match and produced alongside the main programme.",
+          items: [
+            "Performance & compression socks",
+            "Caps, headbands & gloves",
+            "Gym bags & drawstring sacks",
+            "Support & training accessories",
+          ],
+          images: [
+            { src: "/image/textile/sportswear/sacc-1.jpg", alt: "A sports duffel gym bag" },
+            { src: "/image/textile/sportswear/sacc-2.jpg", alt: "Rolled sports socks on a neutral background" },
           ],
         },
       ],
@@ -631,56 +745,93 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/healthcare/surgical-3.jpg", alt: "An operating theatre prepared for surgery" },
           ],
         },
+        {
+          name: "Antimicrobial & Care-Home Textiles",
+          layout: "top-wide",
+          tagline: "Infection-control fabrics",
+          desc:
+            "Soft, hard-wearing textiles for long-term care — bedding, blankets and uniforms with antimicrobial, high-temperature-washable finishes that hold up to constant institutional laundering.",
+          items: [
+            "Antimicrobial bedding & blankets",
+            "Care-home uniforms & linen",
+            "High-temperature-washable fabrics",
+            "Soft, skin-friendly finishes",
+          ],
+          images: [
+            { src: "/image/textile/healthcare/anti-1.jpg", alt: "Neatly folded white and cream care textiles" },
+            { src: "/image/textile/healthcare/anti-2.jpg", alt: "Soft folded cream towels on a wooden stool" },
+            { src: "/image/textile/healthcare/anti-3.jpg", alt: "A stack of soft pastel folded linens" },
+          ],
+        },
+        {
+          name: "Towels & Wipes",
+          layout: "duo",
+          tagline: "Huck towels, cloths & wipes",
+          desc:
+            "The high-turnover essentials every facility runs through — huck towels, washcloths and reusable cloths in absorbent cotton, built for repeated high-temperature laundering.",
+          items: [
+            "Huck & surgical towels",
+            "Washcloths & flannels",
+            "Reusable cleaning cloths",
+            "Absorbent cotton & blends",
+          ],
+          images: [
+            { src: "/image/textile/healthcare/towels-1.jpg", alt: "A neat stack of folded white towels" },
+            { src: "/image/textile/healthcare/towels-2.jpg", alt: "Gloved hands folding clean white towels" },
+          ],
+        },
       ],
     },
   },
 ];
 
-/* ── Services (new taxonomy: Buying · Outsourcing · Marketing · Warehousing) ── */
+/* ── Services — aligned to the source build guide (UPTIB_Textile_Website_Content §2.4):
+   Marketing & Sales · E-commerce & Warehouse · Buying House (Outsourcing) · Logistics.
+   Written global-first; UK is one of several destination markets. ── */
 export const services: Service[] = [
   {
-    slug: "buying",
-    name: "Buying",
-    audience: "For international buyers",
-    eyebrow: "Services · Buying",
-    short: "Source finished textiles from Pakistan — quote to delivery, quality guaranteed.",
-    headline: "Source finished textiles from Pakistan",
-    summary: "For international buyers sourcing dependable Pakistani product, delivered on-spec and on-time.",
-    icon: ShoppingCart,
-    primaryCta: { label: "Request a quote", href: "/contact" },
-  },
-  {
-    slug: "outsourcing",
-    name: "Outsourcing",
-    audience: "For overseas businesses",
-    eyebrow: "Services · Outsourcing",
-    short: "Your outsourced Pakistan procurement house — vetted factories, QA to AQL, docs and logistics.",
-    headline: "Your outsourced Pakistan procurement department",
-    summary: "Vetted factories, sample approval, multi-stage QA, export docs, shipping and customs — de-risked.",
-    icon: ClipboardCheck,
-    primaryCta: { label: "Talk to us about sourcing", href: "/contact" },
-  },
-  {
-    slug: "marketing",
-    name: "Marketing",
+    slug: "marketing-sales",
+    name: "Marketing & Sales",
     audience: "For Pakistani exporters",
-    eyebrow: "Services · Marketing",
-    short: "Visibility, B2B matchmaking and market intelligence for exporters going global.",
+    eyebrow: "Services · Marketing & Sales",
+    short: "Visibility, B2B matchmaking and market intelligence — get your products in front of global buyers.",
     headline: "Reach global buyers and grow your exports",
-    summary: "We make Pakistani manufacturers visible, credible and reachable to buyers worldwide.",
+    summary: "We make Pakistani manufacturers visible, credible and reachable to buyers worldwide — and generate the demand that turns into orders.",
     icon: Megaphone,
     primaryCta: { label: "Become a member", href: "/membership" },
   },
   {
-    slug: "warehousing",
-    name: "Warehousing",
-    audience: "For Pakistani exporters",
-    eyebrow: "Services · Warehousing",
-    short: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.",
+    slug: "ecommerce-warehouse",
+    name: "E-commerce & Warehouse",
+    audience: "For exporters & sellers",
+    eyebrow: "Services · E-commerce & Warehouse",
+    short: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing and fulfilment.",
     headline: "Sell online — and store close to your customers",
-    summary: "Turn suppliers into brand owners selling directly to consumers in global marketplaces.",
+    summary: "Reach shoppers directly on Amazon and online marketplaces, with the warehousing and fulfilment to back it up.",
     icon: Warehouse,
-    primaryCta: { label: "Start selling online", href: "/contact" },
+    primaryCta: { label: "Start selling on Amazon", href: "/contact" },
+  },
+  {
+    slug: "buying-house",
+    name: "Buying House (Outsourcing)",
+    audience: "For international buyers",
+    eyebrow: "Services · Buying House (Outsourcing)",
+    short: "Your outsourced Pakistan procurement house — source, sample, inspect and deliver, de-risked.",
+    headline: "Source textiles from Pakistan — without the risk",
+    summary: "Your outsourced Pakistan procurement department: we find the factory, control the quality, handle the paperwork and deliver.",
+    icon: ShoppingCart,
+    primaryCta: { label: "Request a quote", href: "/contact" },
+  },
+  {
+    slug: "logistics",
+    name: "Logistics",
+    audience: "For buyers & exporters",
+    eyebrow: "Services · Logistics",
+    short: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.",
+    headline: "From a Pakistani factory to your door",
+    summary: "We move the goods and handle the paperwork — so a low-cost origin becomes a low-hassle one.",
+    icon: Truck,
+    primaryCta: { label: "Talk to us about logistics", href: "/contact" },
   },
 ];
 

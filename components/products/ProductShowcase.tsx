@@ -13,48 +13,85 @@ const SERIF = "font-[family-name:var(--font-playfair)]";
 type Showcase = NonNullable<ProductCategory["showcase"]>;
 type Group = Showcase["groups"][number];
 
-/* Magazine-style photo mosaic. Lays the 2–4 photos out asymmetrically,
-   echoing the reference brochure's collage spreads. */
-function Mosaic({ images, priority = false }: { images: Group["images"]; priority?: boolean }) {
-  const n = images.length;
-  const img = (i: number, className: string, sizes: string) => (
-    <div className={cn("relative overflow-hidden rounded-2xl bg-[#E8E1D4] shadow-[0_18px_40px_-24px_rgba(40,30,15,0.45)]", className)}>
-      <Image
-        src={images[i].src}
-        alt={images[i].alt}
-        fill
-        priority={priority && i === 0}
-        className="object-cover transition-transform duration-[1.2s] ease-out hover:scale-[1.04]"
-        sizes={sizes}
-      />
-    </div>
-  );
+type Layout = NonNullable<Group["layout"]>;
 
-  if (n >= 4) {
+function pickLayout(images: Group["images"], layout?: Layout): Layout {
+  if (layout) return layout;
+  if (images.length >= 4) return "quad";
+  if (images.length === 3) return "tall-left";
+  return "duo";
+}
+
+/* Magazine-style photo mosaic. Five asymmetric compositions, mixed across
+   rows, echoing the reference brochure's collage spreads. */
+function Mosaic({ images, layout, priority = false }: { images: Group["images"]; layout?: Layout; priority?: boolean }) {
+  const SZ = "(max-width:1024px) 100vw, 30vw";
+  const img = (i: number, className: string) => {
+    const src = images[i];
+    if (!src) return null;
     return (
-      <div className="grid grid-cols-2 gap-3 sm:gap-4">
-        {img(0, "aspect-[4/5]", "(max-width:1024px) 50vw, 28vw")}
-        {img(1, "aspect-[4/5]", "(max-width:1024px) 50vw, 28vw")}
-        {img(2, "aspect-[4/5]", "(max-width:1024px) 50vw, 28vw")}
-        {img(3, "aspect-[4/5]", "(max-width:1024px) 50vw, 28vw")}
+      <div className={cn("relative overflow-hidden rounded-2xl bg-[#E8E1D4] shadow-[0_18px_40px_-24px_rgba(40,30,15,0.45)]", className)}>
+        <Image
+          src={src.src}
+          alt={src.alt}
+          fill
+          priority={priority && i === 0}
+          className="object-cover transition-transform duration-[1.2s] ease-out hover:scale-[1.04]"
+          sizes={SZ}
+        />
       </div>
     );
+  };
+
+  switch (pickLayout(images, layout)) {
+    // Two offset portraits.
+    case "duo":
+      return (
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          {img(0, "aspect-[4/5]")}
+          {img(1, "aspect-[4/5] sm:mt-10")}
+        </div>
+      );
+    // One tall main + two stacked beside it.
+    case "tall-left":
+      return (
+        <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:gap-4">
+          {img(0, "row-span-2 h-full min-h-[320px] sm:min-h-[440px]")}
+          {img(1, "aspect-[5/4]")}
+          {img(2, "aspect-[5/4]")}
+        </div>
+      );
+    // One wide on top, two squares below.
+    case "top-wide":
+      return (
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="col-span-2">{img(0, "aspect-[16/9]")}</div>
+          {img(1, "aspect-square")}
+          {img(2, "aspect-square")}
+        </div>
+      );
+    // Wide · two squares · wide.
+    case "stack":
+      return (
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="col-span-2">{img(0, "aspect-[16/9]")}</div>
+          {img(1, "aspect-square")}
+          {img(2, "aspect-square")}
+          <div className="col-span-2">{img(3, "aspect-[16/10]")}</div>
+        </div>
+      );
+    // Even 2×2.
+    case "quad":
+    default:
+      return (
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          {img(0, "aspect-[4/5]")}
+          {img(1, "aspect-[4/5]")}
+          {img(2, "aspect-[4/5]")}
+          {img(3, "aspect-[4/5]")}
+        </div>
+      );
   }
-  if (n === 3) {
-    return (
-      <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:gap-4">
-        {img(0, "row-span-2 aspect-[3/4] h-full", "(max-width:1024px) 50vw, 28vw")}
-        {img(1, "aspect-[5/4]", "(max-width:1024px) 50vw, 28vw")}
-        {img(2, "aspect-[5/4]", "(max-width:1024px) 50vw, 28vw")}
-      </div>
-    );
-  }
-  return (
-    <div className="grid grid-cols-2 gap-3 sm:gap-4">
-      {img(0, "aspect-[4/5]", "(max-width:1024px) 50vw, 28vw")}
-      {img(1, "aspect-[4/5] mt-8", "(max-width:1024px) 50vw, 28vw")}
-    </div>
-  );
 }
 
 function ShowcaseRow({ group, index }: { group: Group; index: number }) {
@@ -84,7 +121,7 @@ function ShowcaseRow({ group, index }: { group: Group; index: number }) {
 
         {/* Image mosaic */}
         <div className={cn(reverse && "lg:order-1")}>
-          <Mosaic images={group.images} priority={index === 0} />
+          <Mosaic images={group.images} layout={group.layout} priority={index === 0} />
         </div>
       </div>
     </AnimatedSection>

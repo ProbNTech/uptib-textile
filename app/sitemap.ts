@@ -22,14 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/news', changeFrequency: 'weekly', priority: 0.7 },
     { path: '/faqs', changeFrequency: 'monthly', priority: 0.5 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.6 },
-    { path: '/members-guidance', changeFrequency: 'yearly', priority: 0.4 },
-    { path: '/code-of-conduct', changeFrequency: 'yearly', priority: 0.3 },
-    { path: '/marketing-agreement', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/cookies', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/gdpr', changeFrequency: 'yearly', priority: 0.3 },
-    { path: '/excellence-management-terms', changeFrequency: 'yearly', priority: 0.3 },
   ];
 
   const productRoutes = products.map((p) => ({ path: `/products/${p.slug}`, changeFrequency: 'monthly' as const, priority: 0.7 }));
