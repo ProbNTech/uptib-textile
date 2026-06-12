@@ -34,7 +34,7 @@ const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 const detailImages: Record<string, { hero: string; feature: string }> = {
   "bedding-linen": { hero: "/image/bedding-h.jpg", feature: "/image/bedding-v1.jpg" },
   "apparel-accessories": { hero: "/image/apparel-h.jpg", feature: "/image/apparels-v1.jpg" },
-  "sportswear-activewear": { hero: "/image/sportswear-h.jpg", feature: "/image/sportswear.jpg" },
+  "sportswear-activewear": { hero: "/image/sportswear-h.jpg", feature: "/image/sportswear-second.jpg" },
   "healthcare-textile": { hero: "/image/healthcare-h.jpg", feature: "/image/healthcare-v1.jpg" },
 };
 

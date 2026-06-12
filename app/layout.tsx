@@ -99,7 +99,7 @@ const jsonLd = {
     alternateName: "UPTIB",
   },
   url: BASE_URL,
-  logo: `${BASE_URL}/image/main-logo.png`,
+  logo: `${BASE_URL}/image/main-logo-v1.png`,
   description:
     "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets — with sourcing, outsourcing, marketing and warehousing services.",
   foundingDate: "2024",

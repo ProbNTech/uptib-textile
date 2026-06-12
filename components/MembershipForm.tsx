@@ -309,7 +309,6 @@ export function MembershipForm() {
     if (form.selectedSectors.length === 0) e.selectedSectors = "Select at least one sector";
     if (!form.termsAccepted) e.termsAccepted = "Required";
     if (!form.membershipTermsAccepted) e.membershipTermsAccepted = "Required";
-    if (!form.arbitrationAccepted) e.arbitrationAccepted = "Required";
 
     setErrors(e);
     if (Object.keys(e).length > 0) {
@@ -593,18 +592,6 @@ export function MembershipForm() {
                       I accept the{" "}
                       <Link href="/membership/terms" target="_blank" className="font-semibold text-[#2F7549] underline underline-offset-2">
                         Membership Terms
-                      </Link>
-                      .
-                    </>
-                  ),
-                },
-                {
-                  key: "arbitrationAccepted" as const,
-                  node: (
-                    <>
-                      I accept the{" "}
-                      <Link href="/arbitration/framework" target="_blank" className="font-semibold text-[#2F7549] underline underline-offset-2">
-                        Arbitration Framework
                       </Link>
                       .
                     </>

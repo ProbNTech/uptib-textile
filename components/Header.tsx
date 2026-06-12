@@ -8,7 +8,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { TopTicker } from "@/components/TopTicker";
 import {
   BedDouble, Shirt, Dumbbell, Stethoscope,
-  ShoppingCart, ClipboardCheck, Megaphone, Warehouse,
+  ShoppingCart, Megaphone, Warehouse, Truck,
   type LucideIcon,
 } from "lucide-react";
 
@@ -68,10 +68,10 @@ const navItems: NavItem[] = [
       cta: { label: "View all services →", href: "/services" },
     },
     items: [
-      { label: "Buying", href: "/services/buying", desc: "Source finished textiles from Pakistan — quote to delivery, quality guaranteed.", icon: ShoppingCart },
-      { label: "Outsourcing", href: "/services/outsourcing", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL, docs and logistics.", icon: ClipboardCheck },
-      { label: "Marketing", href: "/services/marketing", desc: "Visibility, B2B matchmaking and market intelligence for exporters going global.", icon: Megaphone },
-      { label: "Warehousing", href: "/services/warehousing", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse },
+      { label: "Marketing & Sales", href: "/services/marketing-sales", desc: "Visibility, B2B matchmaking and market intelligence for exporters going global.", icon: Megaphone },
+      { label: "E-commerce & Warehouse", href: "/services/ecommerce-warehouse", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse },
+      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL and delivery.", icon: ShoppingCart },
+      { label: "Logistics", href: "/services/logistics", desc: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.", icon: Truck },
     ],
   },
   /* 3 — Global Textile Market */
@@ -165,23 +165,23 @@ export function Header() {
             {/* ── Left: Logo + wordmark ────────────────────────── */}
             <Link
               href="/"
-              className="flex items-center gap-0 flex-shrink-0 group"
+              className="flex items-center gap-2 sm:gap-3 lg:gap-2.5 flex-shrink-0 group"
               aria-label="Pakistan Textile Partners — Home"
             >
               <Image
-                src="/image/main-logo.png"
+                src="/image/main-logo-v1.png"
                 alt="Pakistan Textile Partners logo"
-                width={150}
-                height={158}
+                width={250}
+                height={258}
                 className="h-[52px] sm:h-[60px] lg:h-[72px] w-auto object-contain"
                 priority
               />
               <Image
                 src="/image/wordmark.png"
                 alt="Pakistan Textile Partners"
-                width={329}
-                height={64}
-                className="hidden sm:block h-[26px] lg:h-[32px] w-auto object-contain -ml-3 sm:-ml-4"
+                width={1499}
+                height={328}
+                className="hidden sm:block h-[26px] lg:h-[32px] w-auto object-contain"
               />
             </Link>
 
@@ -436,22 +436,22 @@ export function Header() {
               <div className="px-6 py-5 border-b-2 border-[#0A0A0A] flex items-center justify-between flex-shrink-0">
                 <Link
                   href="/"
-                  className="flex items-center gap-0"
+                  className="flex items-center gap-2"
                   onClick={() => setIsMobileOpen(false)}
                 >
                   <Image
-                    src="/image/main-logo.png"
+                    src="/image/main-logo-v1.png"
                     alt="Pakistan Textile Partners logo"
-                    width={120}
-                    height={126}
+                    width={320}
+                    height={226}
                     className="h-[44px] w-auto object-contain"
                   />
                   <Image
                     src="/image/wordmark.png"
                     alt="Pakistan Textile Partners"
-                    width={329}
-                    height={64}
-                    className="h-[22px] w-auto object-contain -ml-2.5"
+                    width={1499}
+                    height={328}
+                    className="h-[22px] w-auto object-contain"
                   />
                 </Link>
                 <button

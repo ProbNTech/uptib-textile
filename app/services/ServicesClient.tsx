@@ -29,10 +29,10 @@ const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 
 /* Service hero/feature imagery (mirrors the detail pages) */
 const serviceImages: Record<string, string> = {
-  buying: "/image/buying.jpg",
-  outsourcing: "/image/outsourcing.jpg",
-  marketing: "/image/marketing.jpg",
-  warehousing: "/image/warehouse.jpg",
+  "marketing-sales": "/image/marketing.jpg",
+  "ecommerce-warehouse": "/image/warehouse.jpg",
+  "buying-house": "/image/buying.jpg",
+  logistics: "/image/logistics.jpg",
 };
 
 /* Hero floating facts */
@@ -49,15 +49,15 @@ const sides = [
     icon: ShoppingBag,
     eyebrow: "For international buyers",
     title: "Source the supply",
-    body: "Source dependable Pakistani product, delivered on-spec and on-time — with one accountable partner from brief to delivery.",
-    slugs: ["buying", "outsourcing"],
+    body: "Source dependable Pakistani product, delivered on-spec and on-time — with one accountable partner running the buying house and the logistics behind it.",
+    slugs: ["buying-house", "logistics"],
   },
   {
     icon: Megaphone,
     eyebrow: "For Pakistani exporters",
     title: "Grow your exports",
     body: "Get visible to buyers worldwide, win real demand, and sell directly online — from a profile to a fully managed market presence.",
-    slugs: ["marketing", "warehousing"],
+    slugs: ["marketing-sales", "ecommerce-warehouse"],
   },
 ];
 
@@ -117,7 +117,7 @@ export default function ServicesClient() {
         labelClassName="text-white"
         minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="What we do"
-        subtitle="Four services that cover both sourcing Pakistani textiles for buyers worldwide and helping Pakistani exporters reach global markets — buying, outsourcing, marketing and warehousing, with one accountable partner for both."
+        subtitle="Four services that cover both sourcing Pakistani textiles for buyers worldwide and helping Pakistani exporters reach global markets — marketing & sales, e-commerce & warehousing, a buying house and logistics, with one accountable partner for both."
         image="/image/services.jpg"
       >
         <div className="flex flex-wrap items-center gap-4">

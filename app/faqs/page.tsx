@@ -1,388 +1,157 @@
 "use client";
 
-import { AnimatedSection } from "@/components/AnimatedSection";
-import { PageHero } from "@/components/PageHero";
-import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
-import { ChevronDown, HelpCircle, Users, Briefcase, Banknote, Calendar, Search, X } from "lucide-react";
 import { useState, useMemo } from "react";
-import { GlobalCTA } from "@/components/GlobalCTA";
-
-const categoryIcons: Record<string, typeof HelpCircle> = {
-  General: HelpCircle,
-  Membership: Users,
-  "Programs & Services": Briefcase,
-  "Funding & Grants": Banknote,
-  "Events & Networking": Calendar,
-};
-
-const categoryMeta: Record<string, { color: string; desc: string }> = {
-  General: { color: "#2F7549", desc: "Learn about Pakistan Textile Partners, our mission, and how to get involved." },
-  Membership: { color: "#3E8F5E", desc: "Tiers, benefits, application process, and cancellation policy." },
-  "Programs & Services": { color: "#2F7549", desc: "Training, mentorship, incubation, and business support." },
-  "Funding & Grants": { color: "#6366F1", desc: "Investment stages, eligibility criteria, and application timelines." },
-  "Events & Networking": { color: "#EAB308", desc: "Conferences, sponsorship, speaking opportunities, and networking." },
-};
+import { HelpCircle, ChevronDown, Search, X } from "lucide-react";
+import { PolicyHero } from "@/components/PolicyHero";
 
 const faqCategories = [
   {
     category: "General",
     faqs: [
-      { question: "What is Pakistan Textile Partners?", answer: "Pakistan Textile Partners (UK\u2013Pakistan Tech Forum) is a strategic platform strengthening technology, innovation, and digital trade between the United Kingdom and Pakistan. We connect companies, investors, professionals, and policymakers across both ecosystems." },
-      { question: "Who can join Pakistan Textile Partners?", answer: "Pakistan Textile Partners is open to technology companies, startups, investors, professionals, researchers, and organisations with an interest in the UK\u2013Pakistan technology corridor. Both individuals and companies can apply for membership." },
-      { question: "Where is Pakistan Textile Partners based?", answer: "Pakistan Textile Partners operates across both the UK and Pakistan, with presence in London and Islamabad. Our programmes and events take place in both countries and online." },
-      { question: "How can I get involved?", answer: "You can get involved by becoming a member, attending our events, applying for our programmes, or partnering with us. Visit our membership page or contact us to learn more." },
+      { question: "What is Pakistan Textile Partners?", answer: "Pakistan Textile Partners is a London-based platform for UK–Pakistan textile trade. We trade quality Pakistani textiles and run the services that move them — buying, outsourced procurement, marketing and warehousing — connecting Pakistan’s manufacturers with buyers worldwide." },
+      { question: "Who is behind Pakistan Textile Partners?", answer: "We are the textile division of UK–Pakistan Trade and Investment Board Ltd (UPTIB), a company registered in England & Wales (no. 15417151), with offices in London and Lahore." },
+      { question: "What products can I source from Pakistan?", answer: "Four main categories: Home Textile (bed linen, towels, hotel linen, curtains), Apparel & Accessories (private-label fashion, denim, knitwear, uniforms), Sportswear & Activewear (gymwear and teamwear from the Sialkot hub), and Healthcare Textile (scrubs, gowns and hospital linen)." },
+      { question: "How can I get involved?", answer: "Buyers can request a quote or sourcing support; Pakistani manufacturers and exporters can apply for membership to reach global buyers. Visit our membership or contact page to start." },
     ],
   },
   {
     category: "Membership",
     faqs: [
-      { question: "What are the membership tiers?", answer: "We offer individual and corporate membership tiers, each with different levels of access to resources, events, programmes, and networking opportunities. Contact us for the latest membership structure." },
-      { question: "What benefits do members receive?", answer: "Members receive access to exclusive events, networking opportunities, business support services, mentorship programmes, funding guidance, trade delegations, and discounts on partner services." },
-      { question: "How do I apply for membership?", answer: "You can apply for membership through our website. Complete the application form, and our team will review your application and get back to you within 5\u201310 business days." },
-      { question: "Can I cancel my membership?", answer: "Yes, you can cancel your membership at any time by contacting our membership team." },
+      { question: "Who can become a member?", answer: "Membership is open to Pakistani textile manufacturers and exporters who want to reach international buyers, as well as buyers sourcing dependable Pakistani product. Both individuals and companies can apply." },
+      { question: "What benefits do members receive?", answer: "A profile in the membership directory, B2B matchmaking with global buyers, market intelligence, priority handling and preferential rates on our services, and invitations to relevant trade delegations and exhibitions." },
+      { question: "How do I apply for membership?", answer: "Apply through our website. Complete the application form, and our team will review your application and get back to you, typically within 5–10 business days." },
+      { question: "Can I cancel my membership?", answer: "Yes, you can cancel your membership at any time by contacting our membership team at info@ukpaktrade.org.uk." },
     ],
   },
   {
-    category: "Programs & Services",
+    category: "Sourcing & Buying",
     faqs: [
-      { question: "What programmes does Pakistan Textile Partners offer?", answer: "We offer AI & Tech Programs, Skill Development Centre training, Incubation & Collective Startups support, mentorship, business networks, digital marketing hub services, overseas employment facilitation, and business support services." },
-      { question: "Are programmes free for members?", answer: "Many core programmes are included in membership. Some premium services, specialised training, and intensive accelerator programmes may have additional fees. Members always receive preferential rates." },
-      { question: "How do I apply for a programme?", answer: "Applications for specific programmes are accepted through our website or during open application windows. Check individual programme pages for current availability and application deadlines." },
-      { question: "Can non-members access services?", answer: "Some events and resources are available to non-members. However, full access to programmes, mentorship, and business support services requires active membership." },
+      { question: "How does your Buying service work?", answer: "We take you from first enquiry and quotation through to delivery — sourcing finished textiles from vetted Pakistani factories, with quality controlled to your agreed AQL and one accountable partner throughout." },
+      { question: "What are your minimum order quantities (MOQs)?", answer: "MOQs vary by product and factory. Pakistan offers low-MOQ partners for private-label apparel and sportswear as well as full-container programmes for home and institutional textiles — tell us your volume and we’ll match you to the right factory." },
+      { question: "Can I get samples before placing an order?", answer: "Yes. Sample approval is a standard step in our Outsourcing service: we arrange samples, confirm specification and colourways, and only proceed to bulk once you sign off." },
+      { question: "How do I get a quote?", answer: "Send us your product, specification and target volume via the contact page and we’ll come back with a quote. The more detail you provide, the faster and more accurate the quotation." },
     ],
   },
   {
-    category: "Funding & Grants",
+    category: "Selling & Marketing",
     faqs: [
-      { question: "What types of funding are available?", answer: "We offer pre-seed and seed investment, Series A/B growth capital facilitation, R&D grants, innovation grants, and bilateral project funding. The type of funding depends on your stage, sector, and project objectives." },
-      { question: "How long does the funding application process take?", answer: "Initial applications are reviewed within 2\u20134 weeks. The full process \u2014 including due diligence and funding decision \u2014 typically takes 6\u201312 weeks depending on the funding type and complexity of the proposal." },
-      { question: "What are the eligibility criteria?", answer: "Eligible projects should be technology-focused with clear innovation potential, demonstrate alignment with UK\u2013Pakistan partnership objectives, and have a viable business model or research proposal with an experienced team." },
-      { question: "Can I apply for multiple funding streams?", answer: "Yes, you can apply for multiple funding streams simultaneously, provided you meet the eligibility criteria for each. Our team can advise on the most appropriate funding mix." },
+      { question: "How can Pakistani exporters reach global buyers?", answer: "Our Marketing service makes manufacturers visible, credible and reachable to buyers worldwide — through B2B matchmaking, a directory profile, market intelligence, and introductions at trade delegations and exhibitions." },
+      { question: "Do you help exporters sell online or on Amazon?", answer: "Yes. Our Warehousing service provides warehousing, e-commerce and Amazon market access, so exporters can store stock close to their customers and sell directly to consumers in global marketplaces." },
+      { question: "Which markets do you reach?", answer: "Pakistani textiles ship worldwide — the EU (with GSP+ duty-free access), the United States, the United Kingdom, the Middle East, Africa and Latin America. We help match your product to the right destination markets." },
+      { question: "Can you support our branding and private label?", answer: "Yes. Pakistan offers strong OEM and private-label capability across woven and knit, with design, sampling and finishing so you can sell under your own brand." },
     ],
   },
   {
-    category: "Events & Networking",
+    category: "Quality & Logistics",
     faqs: [
-      { question: "What types of events does Pakistan Textile Partners host?", answer: "We host conferences, roundtables, webinars, trade delegations, networking events, awards ceremonies, workshops, and hackathons across the UK and Pakistan." },
-      { question: "Are events open to non-members?", answer: "Some events are open to the public, while others are exclusive to Pakistan Textile Partners members. Event listings indicate whether registration is open to all or members only." },
-      { question: "How can I speak at a Pakistan Textile Partners event?", answer: "If you are interested in speaking, moderating, or presenting at a Pakistan Textile Partners event, please contact our events team with your topic, bio, and any relevant materials. We welcome proposals from industry leaders and experts." },
-      { question: "Can my company sponsor an event?", answer: "Yes, we offer sponsorship opportunities for our events and programmes. Sponsorship packages include branding, speaking slots, exhibition space, and delegate access. Contact us for details." },
+      { question: "How do you guarantee quality?", answer: "We run independent, multi-stage inspection to your agreed AQL — not just the factory’s word — covering pre-production, in-line and final-random checks before goods ship." },
+      { question: "What certifications are available?", answer: "Depending on category and factory, our network offers GOTS, OEKO-TEX, BCI, WRAP, Sedex and ISO, plus CE / AAMI / ISO 13485 awareness for healthcare textiles. Tell us what your buyers require." },
+      { question: "How are textiles shipped, and what about customs?", answer: "We handle export documentation, shipping and customs as part of our Outsourcing service, coordinating freight to your agreed Incoterms so you receive goods on-spec and on-time." },
+      { question: "What is the GSP+ advantage?", answer: "Qualifying Pakistani textiles enter the EU duty-free under the GSP+ scheme — a preferential tariff advantage we build into your landed price." },
     ],
   },
 ];
 
-const totalQuestions = faqCategories.reduce((sum, cat) => sum + cat.faqs.length, 0);
-
 export default function FAQsPage() {
-  const shouldReduceMotion = useReducedMotion();
-  const [activeCategory, setActiveCategory] = useState<string>("All");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [query, setQuery] = useState("");
+  const [open, setOpen] = useState<string | null>(null);
 
-  const filteredCategories = useMemo(() => {
-    let cats = faqCategories;
-
-    if (activeCategory !== "All") {
-      cats = cats.filter((c) => c.category === activeCategory);
-    }
-
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      cats = cats
-        .map((cat) => ({
-          ...cat,
-          faqs: cat.faqs.filter(
-            (faq) =>
-              faq.question.toLowerCase().includes(q) ||
-              faq.answer.toLowerCase().includes(q)
-          ),
-        }))
-        .filter((cat) => cat.faqs.length > 0);
-    }
-
-    return cats;
-  }, [activeCategory, searchQuery]);
-
-  const scrollToCategory = (category: string) => {
-    setActiveCategory(category);
-    setSearchQuery("");
-    window.scrollTo({ top: 400, behavior: "smooth" });
-  };
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return faqCategories;
+    return faqCategories
+      .map((cat) => ({
+        ...cat,
+        faqs: cat.faqs.filter(
+          (f) => f.question.toLowerCase().includes(q) || f.answer.toLowerCase().includes(q),
+        ),
+      }))
+      .filter((cat) => cat.faqs.length > 0);
+  }, [query]);
 
   return (
     <div>
-      <PageHero
-        label="Help Centre"
+      <PolicyHero
+        eyebrow="Help Centre"
+        breadcrumb="FAQs"
         title="Frequently Asked Questions"
-        subtitle="Find answers to common questions about Pakistan Textile Partners, membership, programmes, funding, and more."
-        image="/image/banners/faq.jpg"
+        subtitle="Find answers to common questions about Pakistan Textile Partners, membership, sourcing, selling, quality and logistics."
+        icon={HelpCircle}
       />
 
-      {/* Stats Bar */}
-      <section className="relative py-10 lg:py-14 bg-white">
-        <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
-          <AnimatedSection>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { value: String(faqCategories.length), label: "Categories", color: "#2F7549" },
-                { value: String(totalQuestions), label: "Questions Answered", color: "#3E8F5E" },
-                { value: "24/7", label: "Online Access", color: "#2F7549" },
-                { value: "5\u201310", label: "Days Response Time", color: "#6366F1" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.4, delay: index * 0.08 }}
-                  className="text-center flex flex-col items-center gap-1"
-                >
-                  <p className="font-heading font-extrabold text-4xl lg:text-5xl" style={{ color: stat.color }}>{stat.value}</p>
-                  <p className="text-sm sm:text-base text-[#5A5F72] font-medium">{stat.label}</p>
-                </motion.div>
-              ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Search + Filter Bar */}
-      <section className="sticky top-[120px] sm:top-[150px] z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E7EB] py-4">
-        <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
-          <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+      <div className="bg-white">
+        <div className="px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24">
+          <div className="mx-auto max-w-3xl">
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9CA3AF]" />
+            <div className="relative mb-12">
+              <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#9AA0AC]" />
               <input
                 type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search questions..."
-                className="w-full pl-10 pr-9 py-2.5 text-sm rounded-lg border border-[#E5E7EB] bg-[#f7f8fa] focus:bg-white focus:border-[#2F7549] focus:ring-2 focus:ring-[#2F7549]/20 outline-none transition-all duration-200"
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  setOpen(null);
+                }}
+                placeholder="Search questions…"
+                className="w-full rounded-full border border-[#E2E2DC] bg-white py-3 pl-11 pr-10 text-[15px] text-[#16291E] outline-none transition-colors duration-150 placeholder:text-[#9AA0AC] focus:border-[#2F7549]"
               />
-              {searchQuery && (
+              {query && (
                 <button
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9CA3AF] hover:text-[#16291E] transition-colors"
+                  onClick={() => setQuery("")}
+                  aria-label="Clear search"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[#9AA0AC] hover:text-[#16291E]"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="h-4 w-4" />
                 </button>
               )}
             </div>
 
-            {/* Category Pills */}
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setActiveCategory("All")}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-full border transition-all duration-200 ${
-                  activeCategory === "All"
-                    ? "bg-[#16291E] text-white border-[#16291E]"
-                    : "bg-white text-[#5A5F72] border-[#E5E7EB] hover:border-[#16291E]/30"
-                }`}
-              >
-                All ({totalQuestions})
-              </button>
-              {faqCategories.map((cat) => {
-                const meta = categoryMeta[cat.category];
-                const isActive = activeCategory === cat.category;
-                return (
-                  <button
-                    key={cat.category}
-                    onClick={() => scrollToCategory(cat.category)}
-                    className="px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-full border transition-all duration-200"
-                    style={{
-                      background: isActive ? meta.color : "#fff",
-                      color: isActive ? "#fff" : "#5A5F72",
-                      borderColor: isActive ? meta.color : "#E5E7EB",
-                    }}
-                  >
-                    {cat.category} ({cat.faqs.length})
-                  </button>
-                );
-              })}
-            </div>
+            {filtered.length === 0 ? (
+              <p className="text-[15.5px] text-[#5A5F72]">
+                No results found. Try a different search term.
+              </p>
+            ) : (
+              filtered.map((cat) => (
+                <section key={cat.category} className="mb-14 last:mb-0">
+                  <h2 className="font-heading text-[1.4rem] font-bold leading-tight text-[#16291E]">
+                    {cat.category}
+                  </h2>
+                  <div className="mt-3 mb-5 h-px w-12 bg-[#3E8F5E]" />
+                  <div className="border-t border-[#ECECE6]">
+                    {cat.faqs.map((f, i) => {
+                      const key = `${cat.category}-${i}`;
+                      const isOpen = open === key;
+                      return (
+                        <div key={key} className="border-b border-[#ECECE6]">
+                          <button
+                            onClick={() => setOpen(isOpen ? null : key)}
+                            aria-expanded={isOpen}
+                            className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                          >
+                            <span className="font-heading text-[1.02rem] font-semibold text-[#16291E]">
+                              {f.question}
+                            </span>
+                            <ChevronDown
+                              className={`h-5 w-5 flex-shrink-0 text-[#2F7549] transition-transform duration-200 ${
+                                isOpen ? "rotate-180" : ""
+                              }`}
+                            />
+                          </button>
+                          {isOpen && (
+                            <p className="-mt-1 pb-6 pr-8 text-[15.5px] leading-[1.85] text-[#4B5563]">
+                              {f.answer}
+                            </p>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
+              ))
+            )}
           </div>
         </div>
-      </section>
-
-      {/* FAQ Sections */}
-      <section className="py-12 lg:py-20 bg-[#f7f8fa]">
-        <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
-          {filteredCategories.length > 0 ? (
-            <div className="space-y-16">
-              {filteredCategories.map((cat) => {
-                const Icon = categoryIcons[cat.category] || HelpCircle;
-                const meta = categoryMeta[cat.category];
-                const sectionId = `faq-${cat.category.toLowerCase().replace(/[^a-z]/g, "-")}`;
-
-                return (
-                  <div key={cat.category} id={sectionId} className="scroll-mt-48">
-                    <AnimatedSection animation="blur-in">
-                      {/* Category Header */}
-                      <div className="flex items-center gap-4 mb-8">
-                        <div
-                          className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
-                          style={{ background: `${meta.color}12`, border: `1.5px solid ${meta.color}25` }}
-                        >
-                          <Icon className="w-6 h-6" style={{ color: meta.color }} strokeWidth={1.8} />
-                        </div>
-                        <div>
-                          <h2 className="font-heading font-extrabold text-[#16291E] text-2xl sm:text-3xl leading-tight">
-                            {cat.category}
-                          </h2>
-                          <p className="text-sm text-[#5A5F72] mt-0.5">{meta.desc}</p>
-                        </div>
-                        <span
-                          className="hidden sm:inline-flex ml-auto text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full"
-                          style={{ background: `${meta.color}10`, color: meta.color }}
-                        >
-                          {cat.faqs.length} questions
-                        </span>
-                      </div>
-
-                      {/* Accordion */}
-                      <FAQAccordion
-                        faqs={cat.faqs}
-                        shouldReduceMotion={shouldReduceMotion}
-                        color={meta.color}
-                        searchQuery={searchQuery}
-                      />
-                    </AnimatedSection>
-                  </div>
-                );
-              })}
-            </div>
-          ) : (
-            <div className="text-center py-20">
-              <Search className="w-12 h-12 text-[#D1D5DB] mx-auto mb-4" />
-              <p className="text-lg font-semibold text-[#16291E] mb-2">No results found</p>
-              <p className="text-sm text-[#5A5F72] mb-6">Try a different search term or browse all categories.</p>
-              <button
-                onClick={() => { setSearchQuery(""); setActiveCategory("All"); }}
-                className="px-5 py-2.5 text-sm font-bold text-[#2F7549] bg-[#2F7549]/10 rounded-lg hover:bg-[#2F7549]/20 transition-colors"
-              >
-                Clear filters
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <GlobalCTA
-        label="Still Have Questions?"
-        title="We're Here to Help"
-        subtitle="Can't find the answer you're looking for? Our team is ready to assist with any questions about Pakistan Textile Partners, membership, programmes, or partnerships."
-        primaryButtonText="Contact Us"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Apply for Membership"
-        secondaryButtonLink="/membership#apply"
-        image="/image/healthcare-h.jpg"
-      />
-    </div>
-  );
-}
-
-/* ─── Highlight matching text ─── */
-function HighlightText({ text, query }: { text: string; query: string }) {
-  if (!query.trim()) return <>{text}</>;
-  const q = query.trim();
-  const regex = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
-  const parts = text.split(regex);
-  return (
-    <>
-      {parts.map((part, i) =>
-        regex.test(part) ? (
-          <mark key={i} className="bg-yellow-200/60 text-inherit rounded px-0.5">{part}</mark>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
-    </>
-  );
-}
-
-function FAQAccordion({
-  faqs,
-  shouldReduceMotion,
-  color,
-  searchQuery,
-}: {
-  faqs: { question: string; answer: string }[];
-  shouldReduceMotion: boolean | null;
-  color: string;
-  searchQuery: string;
-}) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  return (
-    <div className="space-y-3">
-      {faqs.map((faq, index) => {
-        const isOpen = openIndex === index;
-        return (
-          <motion.div
-            key={faq.question}
-            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.35, delay: index * 0.06 }}
-          >
-            <div
-              className={`bg-white rounded-xl overflow-hidden transition-all duration-300 ${
-                isOpen
-                  ? "shadow-lg"
-                  : "shadow-sm border border-[#E5E7EB] hover:shadow-md hover:border-[#D1D5DB]"
-              }`}
-              style={isOpen ? { boxShadow: `0 0 0 1px ${color}30, 0 10px 15px -3px rgb(0 0 0 / 0.1)`, borderLeft: `3px solid ${color}` } : {}}
-            >
-              <button
-                onClick={() => setOpenIndex(isOpen ? null : index)}
-                className="w-full flex items-center gap-4 p-5 lg:p-6 text-left group"
-              >
-                <span
-                  className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center text-sm font-bold transition-all duration-300"
-                  style={
-                    isOpen
-                      ? { background: color, color: "#fff" }
-                      : { background: `${color}0D`, color }
-                  }
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className={`font-heading font-bold text-base sm:text-[17px] flex-1 leading-snug transition-colors duration-200 ${isOpen ? "text-[#16291E]" : "text-[#3D4152] group-hover:text-[#16291E]"}`}>
-                  <HighlightText text={faq.question} query={searchQuery} />
-                </span>
-                <div
-                  className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300"
-                  style={{ background: isOpen ? `${color}10` : "transparent" }}
-                >
-                  <ChevronDown
-                    className="w-4.5 h-4.5 transition-transform duration-300"
-                    style={{ color: isOpen ? color : "#9CA3AF", transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
-                  />
-                </div>
-              </button>
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-5 lg:px-6 pb-6 pl-[4.25rem] lg:pl-[4.75rem]">
-                      <div className="h-px bg-[#E5E7EB] mb-4" />
-                      <p className="text-[#5A5F72] text-[15px] leading-[1.85]">
-                        <HighlightText text={faq.answer} query={searchQuery} />
-                      </p>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </motion.div>
-        );
-      })}
+      </div>
     </div>
   );
 }

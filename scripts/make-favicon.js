@@ -4,7 +4,7 @@ const path = require("path");
 const sharp = require("sharp");
 
 const ROOT = path.join(__dirname, "..");
-const SRC = path.join(ROOT, "public", "image", "main-logo.png");
+const SRC = path.join(ROOT, "public", "image", "main-logo-v1.png");
 
 // Emblem region within the 345x345 logo (drops the bottom wordmark band).
 const region = { left: 38, top: 6, width: 270, height: 248 };
