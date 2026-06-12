@@ -505,8 +505,8 @@ export const products: ProductCategory[] = [
       intro:
         "Sialkot is one of the world's leading hubs for sportswear and teamwear — pairing sublimation printing and low minimums with genuine performance-fabric expertise, across gymwear, training and custom club kit.",
       heroImage: {
-        src: "/image/textile/sportswear/gym-1.jpg",
-        alt: "An athlete stretching in soft, neutral-toned activewear",
+        src: "/image/textile/sportswear/gym-1-v4.jpg",
+        alt: "A woman in a white activewear jacket and leggings against a light backdrop",
       },
       groups: [
         {
@@ -521,11 +521,12 @@ export const products: ProductCategory[] = [
             "Seamless & sculpting fits",
           ],
           images: [
-            { src: "/image/textile/sportswear/gym-1.jpg", alt: "An athlete stretching in neutral-toned activewear" },
-            { src: "/image/textile/sportswear/gym-2.jpg", alt: "A cropped activewear set in soft tones" },
-            { src: "/image/textile/sportswear/gym-3.jpg", alt: "Back detail of a seamless sports bra" },
-            { src: "/image/textile/sportswear/gym-4.jpg", alt: "Full-length neutral activewear" },
+            { src: "/image/textile/sportswear/gym-1-v4.jpg", alt: "A woman in a white activewear jacket and leggings" },
+            { src: "/image/textile/sportswear/gym-2-v4.jpg", alt: "A woman in a taupe activewear set" },
+            { src: "/image/textile/sportswear/gym-3-v4.jpg", alt: "A woman in grey activewear leaning on a wall" },
+            { src: "/image/textile/sportswear/gym-4-v4.jpg", alt: "A woman in a soft teal tracksuit" },
           ],
+
         },
         {
           name: "Performance & Training",
