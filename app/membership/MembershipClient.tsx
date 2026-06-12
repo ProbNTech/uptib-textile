@@ -269,7 +269,7 @@ export default function MembershipClient() {
       </section>
 
       {/* ── MEMBERSHIP TIERS ─────────────────────────────────────── */}
-      <section id="tiers" className="bg-[#F8FAFC] py-20 lg:py-28 scroll-mt-24">
+      <section id="tiers" className="bg-white py-20 lg:py-28 scroll-mt-24">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -400,51 +400,6 @@ export default function MembershipClient() {
         </div>
       </section>
 
-      {/* ── JOURNEY / HOW IT WORKS ───────────────────────────────── */}
-      <section className="bg-[#F8FAFC] py-20 lg:py-28">
-        <div className={PX}>
-          <AnimatedSection>
-            <div className="text-center mb-12">
-              <SectionLabel
-                label="Your journey with Pakistan Textile Partners"
-                title="From application to your first introductions"
-                color="#2F7549"
-                align="center"
-                hideLine
-              />
-              <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] mx-auto -mt-4" />
-            </div>
-
-            <div className="flex flex-col md:flex-row md:items-start md:justify-center gap-8 md:gap-2 max-w-5xl mx-auto">
-              {steps.map((s, i) => {
-                const Icon = s.icon;
-                return (
-                  <Fragment key={s.title}>
-                    <div className="flex-1 text-center md:max-w-[200px]">
-                      <div className="relative mx-auto w-16 h-16 rounded-full border-2 border-[#2F7549]/20 bg-white flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6 text-[#2F7549]" strokeWidth={1.75} aria-hidden />
-                        <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-[#15402A] text-white text-[11px] font-bold flex items-center justify-center">
-                          {i + 1}
-                        </span>
-                      </div>
-                      <h3 className="font-heading font-bold text-[15px] text-[#16291E] mb-1">{s.title}</h3>
-                      <p className="text-sm text-[#5A5F72] leading-relaxed">{s.desc}</p>
-                    </div>
-                    {i < steps.length - 1 && (
-                      <ArrowRight className="hidden md:block w-5 h-5 text-[#2F7549]/40 shrink-0 mt-5" aria-hidden />
-                    )}
-                  </Fragment>
-                );
-              })}
-            </div>
-
-            <div className="mt-12 flex justify-center">
-              <ShinyButton href="#apply">Start your application</ShinyButton>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* ── GLOBAL REACH (dark stats band) ───────────────────────── */}
       <section className="relative overflow-hidden bg-[#15402A] py-20 lg:py-28">
         <div
@@ -501,25 +456,63 @@ export default function MembershipClient() {
         </div>
       </section>
 
+      {/* ── JOURNEY / HOW IT WORKS ───────────────────────────────── */}
+      <section className="bg-white py-20 lg:py-28">
+        <div className={PX}>
+          <AnimatedSection>
+            <div className="text-center mb-12">
+              <SectionLabel
+                label="Your journey with Pakistan Textile Partners"
+                title="From application to your first introductions"
+                color="#2F7549"
+                align="center"
+                hideLine
+              />
+              <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] mx-auto -mt-4" />
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-start md:justify-center gap-8 md:gap-2 max-w-5xl mx-auto">
+              {steps.map((s, i) => {
+                const Icon = s.icon;
+                return (
+                  <Fragment key={s.title}>
+                    <div className="flex-1 text-center md:max-w-[200px]">
+                      <div className="relative mx-auto w-16 h-16 rounded-full border-2 border-[#2F7549]/20 bg-white flex items-center justify-center mb-4">
+                        <Icon className="w-6 h-6 text-[#2F7549]" strokeWidth={1.75} aria-hidden />
+                        <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-[#15402A] text-white text-[11px] font-bold flex items-center justify-center">
+                          {i + 1}
+                        </span>
+                      </div>
+                      <h3 className="font-heading font-bold text-[15px] text-[#16291E] mb-1">{s.title}</h3>
+                      <p className="text-sm text-[#5A5F72] leading-relaxed">{s.desc}</p>
+                    </div>
+                    {i < steps.length - 1 && (
+                      <ArrowRight className="hidden md:block w-5 h-5 text-[#2F7549]/40 shrink-0 mt-5" aria-hidden />
+                    )}
+                  </Fragment>
+                );
+              })}
+            </div>
+
+            <div className="mt-12 flex justify-center">
+              <ShinyButton href="#apply">Start your application</ShinyButton>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── APPLY (membership form) ──────────────────────────────── */}
       <section
         id="apply"
-        className="relative overflow-hidden bg-white py-20 lg:py-28 scroll-mt-24"
+        className="relative overflow-hidden bg-[#15402A] py-20 lg:py-28 scroll-mt-24"
       >
-        {/* Faint globe watermark + soft green glows */}
-        <Image
-          src="/image/globe.png"
-          alt=""
-          aria-hidden
-          width={760}
-          height={760}
-          className="pointer-events-none absolute -right-32 -top-16 w-[560px] max-w-none opacity-[0.05] select-none"
-        />
+        {/* Dot texture (matches the dark green stats band) */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
-            background:
-              "radial-gradient(700px circle at 0% 0%, rgba(4,120,87,0.06), transparent 50%), radial-gradient(700px circle at 100% 100%, rgba(16,185,129,0.05), transparent 50%)",
+            backgroundImage:
+              "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
+            backgroundSize: "48px 48px",
           }}
           aria-hidden
         />
@@ -531,11 +524,11 @@ export default function MembershipClient() {
               <div className="flex flex-col gap-5">
                 {/* Heading */}
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#2F7549] mb-3">Ready to join?</p>
-                  <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-[#16291E] leading-[1.1]">
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#8FD3AE] mb-3">Ready to join?</p>
+                  <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-[1.1]">
                     Apply for membership
                   </h2>
-                  <p className="mt-4 text-base leading-relaxed text-[#5A5F72]">
+                  <p className="mt-4 text-base leading-relaxed text-white/80">
                     Take the next step toward global growth. Complete the application and join the supplier pool
                     buyers source from.
                   </p>
@@ -554,7 +547,7 @@ export default function MembershipClient() {
                 </div>
 
                 {/* Card — Why members join (dark green) */}
-                <div className="rounded-2xl bg-gradient-to-br from-[#15402A] to-[#0a1f17] p-6">
+                <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1b4d33] to-[#0a1f17] p-6">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#8FD3AE] mb-4">Why members join</p>
                   <ul className="space-y-3">
                     {[
@@ -599,7 +592,7 @@ export default function MembershipClient() {
                 </div>
 
                 {/* Card — Help / consultation (dark green) */}
-                <div className="rounded-2xl bg-gradient-to-br from-[#15402A] to-[#0a1f17] p-5">
+                <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1b4d33] to-[#0a1f17] p-5">
                   <div className="flex items-center gap-3">
                     <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-white/10 border border-white/20 text-[#8FD3AE]">
                       <HelpCircle className="size-5" aria-hidden />
@@ -625,13 +618,15 @@ export default function MembershipClient() {
                     alt="Global textile business — networking, export, trade and worldwide reach"
                     width={960}
                     height={680}
-                    className="w-full h-auto"
+                    className="w-full h-auto rounded-2xl"
                   />
                 </div>
               </div>
 
               {/* Right: the application form */}
-              <MembershipForm />
+              <div className="lg:mt-[25px]">
+                <MembershipForm />
+              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -642,7 +637,7 @@ export default function MembershipClient() {
         className="relative z-[1] py-20 lg:py-28 overflow-hidden"
         style={{
           background:
-            "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.06), transparent 50%), #F8FAFC",
+            "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.06), transparent 50%), #FFFFFF",
         }}
         aria-labelledby="membership-faq-heading"
       >

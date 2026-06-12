@@ -53,23 +53,25 @@ const headingVariants = {
   },
 };
 
-export default function BoardOfAdvisors() {
+export default function BoardOfAdvisors({ dark = false }: { dark?: boolean }) {
   const reduce = useReducedMotion();
 
   return (
     <section
       className="relative py-20 lg:py-28 overflow-hidden"
       style={{
-        background:
-          "radial-gradient(1000px circle at 50% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 10% 100%, rgba(5,150,105,0.05), transparent 50%), radial-gradient(700px circle at 90% 100%, rgba(16,185,129,0.04), transparent 50%), #FFFFFF",
+        background: dark
+          ? "linear-gradient(135deg, #15402A 0%, #0B1410 100%)"
+          : "radial-gradient(1000px circle at 50% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 10% 100%, rgba(5,150,105,0.05), transparent 50%), radial-gradient(700px circle at 90% 100%, rgba(16,185,129,0.04), transparent 50%), #FFFFFF",
       }}
     >
       {/* Subtle dot-grid texture */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className={dark ? "absolute inset-0 opacity-[0.06]" : "absolute inset-0 opacity-[0.03]"}
         style={{
-          backgroundImage:
-            "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)",
+          backgroundImage: dark
+            ? "radial-gradient(circle, #FFFFFF 0.5px, transparent 0.5px)"
+            : "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)",
           backgroundSize: "24px 24px",
         }}
       />
@@ -85,16 +87,16 @@ export default function BoardOfAdvisors() {
           className="text-center mb-14 lg:mb-16"
         >
           <div className="flex items-center gap-3 mb-4 justify-center">
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549]">
+            <p className={`text-sm font-bold uppercase tracking-[0.22em] ${dark ? "text-[#8FD3AE]" : "text-[#2F7549]"}`}>
               Leadership
             </p>
           </div>
 
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.8rem] leading-[1.1] text-[#16291E]">
+          <h2 className={`font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.8rem] leading-[1.1] ${dark ? "text-white" : "text-[#16291E]"}`}>
             Board of Advisors
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto text-[#5A5F72]">
+          <p className={`mt-4 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto ${dark ? "text-white/70" : "text-[#5A5F72]"}`}>
             Guided by distinguished leaders committed to strengthening
             Pakistan&rsquo;s textile trade with the world.
           </p>
@@ -124,11 +126,11 @@ export default function BoardOfAdvisors() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-14 lg:mt-16 flex items-center justify-center gap-3"
         >
-          <div className="h-px flex-1 max-w-[140px] bg-gradient-to-r from-transparent to-[#2F7549]/30" />
-          <p className="text-xs sm:text-sm text-[#5A5F72] uppercase tracking-[0.2em] font-medium text-center">
+          <div className={`h-px flex-1 max-w-[140px] bg-gradient-to-r from-transparent ${dark ? "to-white/30" : "to-[#2F7549]/30"}`} />
+          <p className={`text-xs sm:text-sm uppercase tracking-[0.2em] font-medium text-center ${dark ? "text-white/70" : "text-[#5A5F72]"}`}>
             More advisors joining soon
           </p>
-          <div className="h-px flex-1 max-w-[140px] bg-gradient-to-l from-transparent to-[#2F7549]/30" />
+          <div className={`h-px flex-1 max-w-[140px] bg-gradient-to-l from-transparent ${dark ? "to-white/30" : "to-[#2F7549]/30"}`} />
         </motion.div>
       </div>
     </section>

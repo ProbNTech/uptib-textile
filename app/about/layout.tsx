@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Pakistan Textile Partners",
-  description: "Learn about the UK–Pakistan Technology Forum, our mission to strengthen technology collaboration, and our vision for bilateral digital trade.",
+  description: "Learn about Pakistan Textile Partners — the trusted bridge for UK–Pakistan textile trade, our mission, vision and the team connecting Pakistan's manufacturers with buyers worldwide.",
   openGraph: {
-    title: "About Pakistan Textile Partners | UK–Pakistan Tech Forum",
-    description: "Learn about Pakistan Textile Partners’ mission to strengthen UK–Pakistan technology collaboration.",
+    title: "About Pakistan Textile Partners",
+    description: "The trusted bridge for UK–Pakistan textile trade — connecting Pakistan's manufacturers and exporters with buyers worldwide.",
   },
 };
 
