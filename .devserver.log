@@ -1692,3 +1692,35 @@ https://nextjs.org/docs/messages/module-not-found
 ✓ Compiled in 1244ms
 ✓ Compiled in 1311ms
 ✓ Compiled in 982ms
+ GET /products 200 in 1419ms (compile: 190ms, render: 1229ms)
+ GET /services 200 in 1445ms (compile: 383ms, render: 1062ms)
+✓ Compiled in 545ms
+ GET /global-textile-market 200 in 1026ms (compile: 383ms, render: 643ms)
+ GET /products 200 in 1029ms (compile: 290ms, render: 739ms)
+ GET / 200 in 1032ms (compile: 173ms, render: 859ms)
+ GET /services 200 in 581ms (compile: 312ms, render: 269ms)
+ GET /services/ecommerce-warehouse 200 in 209ms (compile: 25ms, generate-params: 12ms, render: 184ms)
+ GET /about 200 in 1053ms (compile: 608ms, render: 445ms)
+✓ Compiled in 534ms
+ GET /products 200 in 843ms (compile: 11ms, render: 832ms)
+ GET /services 200 in 760ms (compile: 316ms, render: 443ms)
+ GET / 200 in 452ms (compile: 184ms, render: 268ms)
+ GET /global-textile-market 200 in 455ms (compile: 102ms, render: 353ms)
+ GET /services/ecommerce-warehouse 200 in 189ms (compile: 20ms, generate-params: 12ms, render: 169ms)
+ GET /about 200 in 790ms (compile: 165ms, render: 625ms)
+ GET / 200 in 1429ms (compile: 10ms, render: 1419ms)
+ GET / 200 in 923ms (compile: 8ms, render: 915ms)
+ GET /about 200 in 2.0s (compile: 16ms, render: 1992ms)
+ GET /about 200 in 953ms (compile: 13ms, render: 940ms)
+✓ Compiled in 569ms
+✓ Compiled in 489ms
+✓ Compiled in 1194ms
+✓ Compiled in 985ms
+✓ Compiled in 1102ms
+✓ Compiled in 1063ms
+✓ Compiled in 1020ms
+✓ Compiled in 971ms
+✓ Compiled in 1456ms
+✓ Compiled in 1233ms
+✓ Compiled in 1129ms
+✓ Compiled in 1086ms
