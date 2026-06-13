@@ -20,11 +20,7 @@ export default function PakistanTopCompaniesShowcase() {
 
   return (
     <section
-      className="relative z-[1] py-16 lg:py-20 overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.05), transparent 50%), #FFFFFF",
-      }}
+      className="relative z-[1] py-16 lg:py-20 overflow-hidden bg-white"
     >
       {/* Pakistan map — section background watermark */}
       <Image

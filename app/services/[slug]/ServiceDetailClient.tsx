@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -7,6 +8,10 @@ import { motion, useReducedMotion } from "framer-motion";
 import {
   CheckCircle2,
   ArrowUpRight,
+  ArrowRight,
+  Check,
+  X,
+  Minus,
   ShieldCheck,
   BadgePercent,
   BadgeCheck,
@@ -27,6 +32,9 @@ import {
   Tag,
   RefreshCw,
   Shuffle,
+  Clock,
+  Rocket,
+  Repeat,
   type LucideIcon,
 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
@@ -35,6 +43,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlobalCTA } from "@/components/GlobalCTA";
+import { GrowthBanner } from "@/components/GrowthBanner";
 import { services, getService } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
@@ -48,7 +57,27 @@ const LIST_ICONS: LucideIcon[] = [CheckCircle2, Sparkles, Award, Globe2, ShieldC
 type Block =
   | { type: "list"; title: string; intro?: string; items: string[]; icons?: LucideIcon[] }
   | { type: "steps"; title: string; intro?: string; items: { step: string; text: string }[]; icons?: LucideIcon[] }
-  | { type: "callout"; variant: "qa" | "gsp"; title: string; text: string };
+  | { type: "callout"; variant: "qa" | "gsp"; title: string; text: string }
+  | {
+      type: "outcomes";
+      title: string;
+      eyebrow?: string;
+      intro?: string;
+      items: { icon: LucideIcon; metric: string; label: string; desc: string }[];
+    }
+  | {
+      type: "compare";
+      title: string;
+      intro?: string;
+      without: { label: string; points: string[] };
+      with: { label: string; points: string[] };
+    }
+  | {
+      type: "flow";
+      title: string;
+      intro?: string;
+      lanes: { label: string; tone: "muted" | "brand"; note?: string; nodes: string[] }[];
+    };
 
 type ServiceDetail = {
   hero: string;
@@ -61,10 +90,12 @@ type ServiceDetail = {
   stats: { icon: LucideIcon; value: string; label: string }[];
   contentLabel: { eyebrow: string; title: string; body: string };
   blocks: Block[];
-  facts: { factsLabel: { eyebrow: string; title: string; body: string }; chips: string[]; rows: { label: string; value: string }[] };
+  facts: { factsLabel: { eyebrow: string; title: string; body: string }; chips: string[]; rows: { label: string; value: string }[]; factsImage?: string };
   why: { eyebrow: string; title: string; body: string; note?: string; items: { icon: LucideIcon; title: string; desc: string }[] };
   primaryCtaOverride?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  /* Unique growth imagery per service: a full-width parallax "shutter" photo + a secondary illustration */
+  growth?: { banner: string; secondary?: string };
 };
 
 /* Shared value-prop sets reused across services
@@ -122,6 +153,41 @@ const detail: Record<string, ServiceDetail> = {
         ],
       },
       {
+        type: "outcomes",
+        title: "What membership delivers",
+        eyebrow: "What you gain",
+        intro: "The concrete results of being marketed by a partner who also runs the buying side.",
+        items: [
+          { icon: Globe2, metric: "Worldwide", label: "Buyer visibility", desc: "Your factory profile in front of retailers, importers and sourcing houses across global markets." },
+          { icon: Users, metric: "B2B", label: "Qualified meetings", desc: "Pre-screened buyer matchmaking — real conversations, not cold lead lists." },
+          { icon: Sparkles, metric: "Live", label: "Order demand", desc: "A place in the supplier pool we actively source from for paying orders." },
+          { icon: Rocket, metric: "Faster", label: "Market entry", desc: "Compliance, labelling and customs guidance for every destination you target." },
+        ],
+      },
+      {
+        type: "compare",
+        title: "Two ways to reach global buyers",
+        intro: "Marketing your factory alone rarely reaches a purchase order. Here's the difference a partner makes.",
+        without: {
+          label: "Marketing on your own",
+          points: [
+            "Cold outreach that rarely reaches the right buyer",
+            "No independent credibility with procurement teams",
+            "Leads — if any — that go nowhere near an order",
+            "You guess at each market's compliance and labelling rules",
+          ],
+        },
+        with: {
+          label: "With Pakistan Textile Partners",
+          points: [
+            "A professional profile presented the way buyers expect",
+            "Pre-qualified introductions to decision-makers worldwide",
+            "A place in the pool we source from for live orders",
+            "Market-entry guidance for every destination, built in",
+          ],
+        },
+      },
+      {
         type: "callout",
         variant: "qa",
         title: "More than a directory listing",
@@ -129,6 +195,7 @@ const detail: Record<string, ServiceDetail> = {
       },
     ],
     facts: {
+      factsImage: "/image/growth/sl_033020_29450_24.jpg",
       factsLabel: {
         eyebrow: "The opportunity",
         title: "The demand we connect you to",
@@ -155,6 +222,9 @@ const detail: Record<string, ServiceDetail> = {
     },
     primaryCtaOverride: { label: "Become a member", href: "/membership" },
     secondaryCta: { label: "See membership", href: "/membership" },
+    growth: {
+      banner: "/image/growth/pexels-anna-nekrashevich-6801636.jpg",
+    },
   },
 
   /* ───────────────────── E-COMMERCE & WAREHOUSE ────────────────────── */
@@ -221,6 +291,37 @@ const detail: Record<string, ServiceDetail> = {
         ],
       },
       {
+        type: "flow",
+        title: "Where the margin goes",
+        intro: "Every link in the traditional export chain takes a cut. Selling direct collapses the chain — and the margin you lose along it stays with you.",
+        lanes: [
+          {
+            label: "Traditional export chain",
+            tone: "muted",
+            note: "margin shrinks at each step",
+            nodes: ["Manufacturer", "Importer", "Wholesaler", "Retailer", "Consumer"],
+          },
+          {
+            label: "Direct-to-consumer with us",
+            tone: "brand",
+            note: "you keep far more per unit",
+            nodes: ["Manufacturer", "Warehouse", "Marketplace", "Consumer"],
+          },
+        ],
+      },
+      {
+        type: "outcomes",
+        title: "What selling direct gets you",
+        eyebrow: "What you gain",
+        intro: "The payoff of owning the customer relationship instead of selling a container once.",
+        items: [
+          { icon: TrendingUp, metric: "30–100%", label: "Higher margins", desc: "Capture far more of the retail price by cutting out the middle layers." },
+          { icon: Repeat, metric: "Recurring", label: "Revenue, not one-offs", desc: "Turn a single container sale into an ongoing direct-to-consumer business." },
+          { icon: PackageCheck, metric: "Prime", label: "Fast fulfilment", desc: "FBA-ready warehousing close to customers for the next-day delivery shoppers expect." },
+          { icon: Store, metric: "Your name", label: "A brand you own", desc: "Sell under your own brand instead of disappearing into someone else's supply chain." },
+        ],
+      },
+      {
         type: "callout",
         variant: "gsp",
         title: "Why direct-to-consumer changes the maths",
@@ -228,32 +329,39 @@ const detail: Record<string, ServiceDetail> = {
       },
     ],
     facts: {
+      factsImage: "/image/your-advantage.png",
       factsLabel: {
-        eyebrow: "The opportunity",
+        eyebrow: "Your advantage",
         title: "Why selling direct is worth it",
-        body: "The shift from one-off container sales to owning the customer relationship.",
+        body: "Take control of your brand and customer experience — and grow profitably.",
       },
-      chips: ["Amazon", "Shopify", "eBay", "TikTok Shop"],
+      chips: ["More control", "More data", "More trust", "More loyalty", "Better margins"],
       rows: [
-        { label: "The shift", value: "Instead of selling a container once to an importer, you sell directly to consumers — building a brand, recurring revenue and far higher margins." },
-        { label: "Margin uplift", value: "Moving from the traditional export chain to a direct-to-consumer model lifts margins by roughly 30–100%, depending on category and positioning." },
-        { label: "Marketplaces", value: "Amazon UK & EU, Shopify, eBay, TikTok Shop and Etsy — backed by warehousing for the next-day delivery shoppers expect." },
-        { label: "The market", value: "The UK alone is Europe's largest e-commerce market — £127bn+ a year and 62m+ online shoppers — with billions in addressable textile demand." },
+        { label: "Control", value: "You set prices, offers and customer experience — you own it all." },
+        { label: "Margins", value: "Keep more of what you earn by removing marketplace fees." },
+        { label: "Growth", value: "Build repeat customers and increase lifetime value." },
+        { label: "Trust", value: "Your brand, your promises — build stronger relationships." },
       ],
     },
     why: {
-      eyebrow: "The advantage",
+      eyebrow: "For every stage",
       title: "From supplier to brand owner",
-      body: "We give Pakistani manufacturers a direct route to global consumers — and the infrastructure to back it up.",
+      body: "Solutions for every business size — from startup to scale.",
       items: [
-        { icon: Store, title: "Build your own brand", desc: "Sell under your name on Amazon and your own store, instead of disappearing into someone else's supply chain." },
-        { icon: TrendingUp, title: "Higher margins", desc: "Cut out the middle layers and capture far more of the retail price per unit." },
-        { icon: PackageCheck, title: "Fulfilment, handled", desc: "Warehousing, pick-and-pack and FBA prep close to your customers for fast delivery." },
-        { icon: Globe2, title: "Recurring revenue", desc: "Turn one-off export sales into an ongoing direct-to-consumer business across the UK and Europe." },
+        { icon: Rocket, title: "Built for Startups", desc: "Low minimums, quick onboarding and expert guidance." },
+        { icon: TrendingUp, title: "Higher Margins", desc: "The direct-to-consumer model helps you keep more profit." },
+        { icon: PackageCheck, title: "Fulfilment that Scales", desc: "Scale orders up or down without operational headaches." },
+        { icon: ShieldCheck, title: "Reliable & Trusted", desc: "Secure storage, insured inventory and strict quality checks." },
+        { icon: RefreshCw, title: "Returns Management", desc: "Hassle-free returns, reverse logistics and refunds." },
+        { icon: Globe2, title: "Worldwide Reach", desc: "Deliver to consumers across the UK, Europe and beyond." },
       ],
     },
     primaryCtaOverride: { label: "Start selling on Amazon", href: "/contact" },
     secondaryCta: { label: "Become a member", href: "/membership" },
+    growth: {
+      banner: "/image/growth/pexels-goumbik-669621.jpg",
+      secondary: "/image/growth/24132d01-b592-4476-929f-06388c7bd3aa.jpg",
+    },
   },
 
   /* ─────────────────── BUYING HOUSE (OUTSOURCING) ──────────────────── */
@@ -305,6 +413,41 @@ const detail: Record<string, ServiceDetail> = {
         text: "The most valuable thing we sell is the confidence that what arrives matches what you ordered: checked against your approved sample at every stage, by independent inspectors on the ground in Pakistan.",
       },
       {
+        type: "compare",
+        title: "Sourcing a new origin: alone vs through us",
+        intro: "Buying from an unfamiliar market is where deals go wrong. Here's what changes when we run it for you.",
+        without: {
+          label: "Sourcing Pakistan alone",
+          points: [
+            "Unknown factories you have to vet and trust yourself",
+            "Quality you only discover when the container lands",
+            "Export paperwork and customs left for you to figure out",
+            "No one accountable when something goes wrong",
+          ],
+        },
+        with: {
+          label: "Through our buying house",
+          points: [
+            "Pre-vetted manufacturers matched to your exact spec",
+            "Independent AQL inspection before anything ships",
+            "Documentation, freight and customs handled end-to-end",
+            "One partner accountable from brief to delivery",
+          ],
+        },
+      },
+      {
+        type: "outcomes",
+        title: "What you actually get",
+        eyebrow: "What you gain",
+        intro: "The substance behind the service — so you can buy from a new origin with confidence.",
+        items: [
+          { icon: Handshake, metric: "One", label: "Accountable partner", desc: "A single point of contact from your brief to delivered goods." },
+          { icon: ShieldCheck, metric: "AQL", label: "Guaranteed quality", desc: "Independent, multi-stage inspection against your approved sample." },
+          { icon: BadgePercent, metric: "GSP+", label: "Duty-free savings", desc: "Preferential EU entry built into your landed cost where goods qualify." },
+          { icon: Globe2, metric: "New origin", label: "De-risked", desc: "Source from Pakistan without taking on the supplier risk yourself." },
+        ],
+      },
+      {
         type: "list",
         title: "Ways to work with us",
         icons: [FlaskConical, RefreshCw, ShieldCheck, Shuffle],
@@ -317,6 +460,7 @@ const detail: Record<string, ServiceDetail> = {
       },
     ],
     facts: {
+      factsImage: "/image/growth/SL-012322-48100-19.jpg",
       factsLabel: {
         eyebrow: "The facts",
         title: "What you actually get",
@@ -343,6 +487,9 @@ const detail: Record<string, ServiceDetail> = {
     },
     primaryCtaOverride: { label: "Request a quote", href: "/contact" },
     secondaryCta: { label: "Talk to us about logistics", href: "/services/logistics" },
+    growth: {
+      banner: "/image/growth/pexels-rdne-7947849.jpg",
+    },
   },
 
   /* ─────────────────────────────── LOGISTICS ───────────────────────── */
@@ -387,6 +534,37 @@ const detail: Record<string, ServiceDetail> = {
         ],
       },
       {
+        type: "flow",
+        title: "Factory to your door",
+        intro: "Coordinating freight, customs and paperwork yourself means handoffs between parties — and gaps where shipments stall. We hold every link under one roof.",
+        lanes: [
+          {
+            label: "Coordinating it yourself",
+            tone: "muted",
+            note: "gaps at each handoff",
+            nodes: ["Forwarder", "Broker", "Customs agent", "You chase the paperwork"],
+          },
+          {
+            label: "Through our logistics service",
+            tone: "brand",
+            note: "one accountable partner",
+            nodes: ["Factory", "Freight", "Customs", "Documentation", "Your door"],
+          },
+        ],
+      },
+      {
+        type: "outcomes",
+        title: "What lands on your end",
+        eyebrow: "What you gain",
+        intro: "A low-cost origin only pays off if it arrives cleanly — here's what you actually receive.",
+        items: [
+          { icon: PackageCheck, metric: "Landed", label: "Not just FOB", desc: "Goods delivered to your market, not left at the port for you to manage." },
+          { icon: BadgePercent, metric: "GSP+", label: "Duty-free entry", desc: "Qualifying Pakistani textiles enter the EU duty-free — the saving built into your price." },
+          { icon: Clock, metric: "No delays", label: "Cleared at the border", desc: "Customs handled in advance so your shipment doesn't sit waiting." },
+          { icon: Handshake, metric: "One roof", label: "Freight + customs + docs", desc: "No juggling forwarders and brokers — one accountable partner throughout." },
+        ],
+      },
+      {
         type: "callout",
         variant: "gsp",
         title: "The GSP+ advantage",
@@ -394,6 +572,7 @@ const detail: Record<string, ServiceDetail> = {
       },
     ],
     facts: {
+      factsImage: "/image/growth/business-graphics-presentation-illustration.jpg",
       factsLabel: {
         eyebrow: "The facts",
         title: "What the service covers",
@@ -420,6 +599,9 @@ const detail: Record<string, ServiceDetail> = {
     },
     primaryCtaOverride: { label: "Talk to us about logistics", href: "/contact" },
     secondaryCta: { label: "See the buying house", href: "/services/buying-house" },
+    growth: {
+      banner: "/image/growth/pexels-rdne-7948063.jpg",
+    },
   },
 };
 
@@ -521,7 +703,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── MAIN CONTENT BLOCKS ──────────────────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
+      <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -577,29 +759,257 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                           const Icon = stepIcons[i % stepIcons.length];
                           const isLast = i === block.items.length - 1;
                           return (
-                            <li key={it.step} className="relative lg:flex-1 lg:min-w-0">
+                            <motion.li
+                              key={it.step}
+                              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true, margin: "-40px" }}
+                              transition={{ duration: 0.45, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                              className="group relative lg:flex-1 lg:min-w-0"
+                            >
                               {!isLast && (
-                                <span
+                                <motion.span
                                   aria-hidden
-                                  className="hidden lg:block absolute top-[17px] left-[2.6rem] right-0 h-[2px] rounded-full bg-[#C8E2D2]"
+                                  className="hidden lg:block absolute top-[17px] left-[2.6rem] right-0 h-[2px] origin-left rounded-full bg-gradient-to-r from-[#2F7549] to-[#C8E2D2]"
+                                  initial={shouldReduceMotion ? { scaleX: 1 } : { scaleX: 0 }}
+                                  whileInView={{ scaleX: 1 }}
+                                  viewport={{ once: true, margin: "-40px" }}
+                                  transition={{ duration: 0.6, delay: 0.2 + i * 0.12, ease: "easeInOut" }}
                                 />
                               )}
                               <div className="flex items-center mb-5">
-                                <span className="relative z-[1] flex size-9 shrink-0 items-center justify-center rounded-full bg-[#2F7549] text-white font-heading font-bold text-sm shadow-[0_6px_14px_-4px_rgba(47,117,73,0.6)]">
+                                <span className="relative z-[1] flex size-9 shrink-0 items-center justify-center rounded-full bg-[#2F7549] text-white font-heading font-bold text-sm shadow-[0_6px_14px_-4px_rgba(47,117,73,0.6)] transition-transform duration-300 group-hover:scale-110">
                                   {i + 1}
                                 </span>
                               </div>
                               <div className="lg:pr-6">
-                                <span className="inline-flex size-10 items-center justify-center rounded-xl border border-[#E5E7EB] bg-white text-[#2F7549] shadow-sm mb-4">
+                                <span className="inline-flex size-10 items-center justify-center rounded-xl border border-[#E5E7EB] bg-white text-[#2F7549] shadow-sm mb-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3E8F5E]/50 group-hover:shadow-[0_12px_24px_-12px_rgba(4,120,87,0.45)]">
                                   <Icon className="size-5" strokeWidth={1.6} aria-hidden />
                                 </span>
                                 <p className="font-heading font-bold text-[#16291E] leading-snug">{it.step}</p>
                                 <p className="text-sm text-[#5A5F72] mt-1.5 leading-relaxed">{it.text}</p>
                               </div>
-                            </li>
+                            </motion.li>
                           );
                         })}
                       </ol>
+                    </div>
+                  );
+                }
+                if (block.type === "outcomes") {
+                  const n = block.items.length;
+                  const lgCols = n >= 4 ? "lg:grid-cols-4" : n === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2";
+                  return (
+                    <div
+                      key={bi}
+                      className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden bg-gradient-to-br from-[#15402A] to-[#0a1f17] py-16 sm:py-20 lg:py-24"
+                    >
+                      {/* decorative dot grid */}
+                      <div
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+                        style={{
+                          backgroundImage:
+                            "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
+                          backgroundSize: "48px 48px",
+                        }}
+                      />
+                      {/* soft glow */}
+                      <motion.div
+                        aria-hidden
+                        className="pointer-events-none absolute -top-24 right-[8%] h-72 w-72 rounded-full bg-[#3E8F5E]/25 blur-[110px]"
+                        animate={shouldReduceMotion ? undefined : { opacity: [0.5, 0.85, 0.5] }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                      />
+                      <div className={cn("relative", PX)}>
+                        <div className="mb-9 sm:mb-11">
+                          <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#8FD3AE] mb-3">
+                            <Sparkles className="size-4" aria-hidden /> {block.eyebrow ?? "What you gain"}
+                          </p>
+                          <h3 className="font-heading font-extrabold text-white text-3xl sm:text-4xl">{block.title}</h3>
+                          {block.intro && <p className="text-white/70 leading-relaxed mt-3 max-w-2xl">{block.intro}</p>}
+                        </div>
+                        <div className={cn("grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6", lgCols)}>
+                          {block.items.map((it, i) => {
+                            const Icon = it.icon;
+                            return (
+                              <motion.div
+                                key={it.label}
+                                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-40px" }}
+                                transition={{ duration: 0.55, delay: i * 0.09, ease: [0.22, 1, 0.36, 1] }}
+                                className="relative flex flex-col overflow-hidden rounded-2xl border border-white/[0.12] bg-white/[0.06] p-6 backdrop-blur-sm"
+                              >
+                                <span className="inline-flex size-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-[#8FD3AE] mb-5">
+                                  <Icon className="size-6" strokeWidth={1.7} aria-hidden />
+                                </span>
+                                <p className="font-heading font-extrabold text-[1.7rem] sm:text-[1.85rem] text-white leading-none">
+                                  {it.metric}
+                                </p>
+                                <p className="mt-2 font-heading font-bold text-[15px] text-[#8FD3AE]">{it.label}</p>
+                                <p className="mt-2.5 text-sm text-white/65 leading-relaxed">{it.desc}</p>
+                              </motion.div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+                if (block.type === "compare") {
+                  return (
+                    <div key={bi}>
+                      <h3 className="font-heading font-extrabold text-[#16291E] text-2xl mb-2">{block.title}</h3>
+                      {block.intro && <p className="text-[#5A5F72] leading-relaxed mb-9 max-w-2xl">{block.intro}</p>}
+                      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
+                        <span
+                          aria-hidden
+                          className="pointer-events-none absolute left-1/2 top-1/2 z-[2] hidden -translate-x-1/2 -translate-y-1/2 lg:flex size-12 items-center justify-center rounded-full bg-[#2F7549] text-white shadow-[0_10px_24px_-8px_rgba(47,117,73,0.6)] ring-4 ring-white"
+                        >
+                          <motion.span
+                            animate={shouldReduceMotion ? undefined : { x: [-3, 3, -3] }}
+                            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+                          >
+                            <ArrowRight className="size-5" />
+                          </motion.span>
+                        </span>
+                        <motion.div
+                          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: -24 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true, margin: "-40px" }}
+                          transition={{ duration: 0.5 }}
+                          className="rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-7"
+                        >
+                          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#9CA3AF] mb-5">{block.without.label}</p>
+                          <ul className="space-y-4">
+                            {block.without.points.map((p) => (
+                              <li key={p} className="flex items-start gap-3">
+                                <span className="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-[#E5E7EB] text-[#9CA3AF]">
+                                  <X className="size-3.5" strokeWidth={2.5} aria-hidden />
+                                </span>
+                                <span className="text-sm text-[#6B7280] leading-relaxed">{p}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                        <motion.div
+                          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: 24 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true, margin: "-40px" }}
+                          transition={{ duration: 0.5, delay: 0.08 }}
+                          className="rounded-2xl border border-[#2F7549]/30 bg-gradient-to-br from-[#15402A] to-[#0a1f17] p-7 text-white shadow-[0_28px_60px_-30px_rgba(4,120,87,0.55)]"
+                        >
+                          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8FD3AE] mb-5">{block.with.label}</p>
+                          <ul className="space-y-4">
+                            {block.with.points.map((p) => (
+                              <li key={p} className="flex items-start gap-3">
+                                <span className="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-[#8FD3AE]/20 text-[#8FD3AE]">
+                                  <Check className="size-3.5" strokeWidth={2.75} aria-hidden />
+                                </span>
+                                <span className="text-sm text-white/85 leading-relaxed">{p}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      </div>
+                    </div>
+                  );
+                }
+                if (block.type === "flow") {
+                  return (
+                    <div key={bi}>
+                      <h3 className="font-heading font-extrabold text-[#16291E] text-2xl mb-2">{block.title}</h3>
+                      {block.intro && <p className="text-[#5A5F72] leading-relaxed mb-9 max-w-2xl">{block.intro}</p>}
+                      <div className="flex flex-col gap-5">
+                        {block.lanes.map((lane) => {
+                          const brand = lane.tone === "brand";
+                          return (
+                            <motion.div
+                              key={lane.label}
+                              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 18 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true, margin: "-40px" }}
+                              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                              className={cn(
+                                "relative overflow-hidden rounded-2xl border p-6 sm:p-7",
+                                brand
+                                  ? "border-[#2F7549]/40 bg-gradient-to-br from-[#15402A] to-[#0a1f17] shadow-[0_28px_60px_-30px_rgba(4,120,87,0.55)]"
+                                  : "border-[#E5E7EB] bg-[#F8FAFC]",
+                              )}
+                            >
+                              {brand && (
+                                <div
+                                  aria-hidden
+                                  className="pointer-events-none absolute inset-0 opacity-[0.06]"
+                                  style={{
+                                    backgroundImage:
+                                      "radial-gradient(circle at 15% 30%, white 0, transparent 2px), radial-gradient(circle at 65% 70%, white 0, transparent 2px)",
+                                    backgroundSize: "40px 40px",
+                                  }}
+                                />
+                              )}
+                              <div className="relative mb-5 flex flex-wrap items-center gap-3">
+                                <span
+                                  className={cn(
+                                    "inline-flex size-7 items-center justify-center rounded-full",
+                                    brand ? "bg-[#8FD3AE]/20 text-[#8FD3AE]" : "bg-[#D1D5DB] text-[#6B7280]",
+                                  )}
+                                  aria-hidden
+                                >
+                                  {brand ? <Check className="size-4" strokeWidth={2.75} /> : <Minus className="size-4" strokeWidth={2.5} />}
+                                </span>
+                                <p className={cn("font-heading font-bold", brand ? "text-white" : "text-[#6B7280]")}>{lane.label}</p>
+                                {lane.note && (
+                                  <span
+                                    className={cn(
+                                      "ml-auto rounded-full px-3 py-1 text-[11px] font-semibold",
+                                      brand ? "bg-white/10 text-[#8FD3AE]" : "bg-[#E5E7EB] text-[#9CA3AF]",
+                                    )}
+                                  >
+                                    {lane.note}
+                                  </span>
+                                )}
+                              </div>
+                              <div className="relative flex flex-col sm:flex-row sm:flex-wrap sm:items-stretch gap-2 sm:gap-0">
+                                {lane.nodes.map((node, ni) => (
+                                  <Fragment key={node}>
+                                    <motion.span
+                                      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.9 }}
+                                      whileInView={{ opacity: 1, scale: 1 }}
+                                      viewport={{ once: true, margin: "-30px" }}
+                                      transition={{ duration: 0.4, delay: ni * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                                      className={cn(
+                                        "flex flex-1 items-center justify-center rounded-xl border px-3 py-3 text-center text-[13px] font-semibold leading-snug",
+                                        brand
+                                          ? "border-white/15 bg-white/[0.08] text-white backdrop-blur-sm"
+                                          : "border-[#E5E7EB] bg-white text-[#6B7280]",
+                                      )}
+                                    >
+                                      {node}
+                                    </motion.span>
+                                    {ni < lane.nodes.length - 1 && (
+                                      <motion.span
+                                        aria-hidden
+                                        className="flex shrink-0 items-center justify-center self-center px-0.5 sm:px-2"
+                                        animate={shouldReduceMotion ? undefined : { opacity: [0.35, 1, 0.35] }}
+                                        transition={{ duration: 1.8, repeat: Infinity, delay: ni * 0.25, ease: "easeInOut" }}
+                                      >
+                                        <ArrowRight
+                                          className={cn(
+                                            "size-4 rotate-90 sm:rotate-0",
+                                            brand ? "text-[#8FD3AE]" : "text-[#C7CBD3]",
+                                          )}
+                                        />
+                                      </motion.span>
+                                    )}
+                                  </Fragment>
+                                ))}
+                              </div>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
                     </div>
                   );
                 }
@@ -621,39 +1031,99 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* ── GROWTH SHUTTER (banner) ──────────────────────────────── */}
+      {d.growth && (
+        <GrowthBanner
+          image={d.growth.banner}
+          title={`Where ${s.name.toLowerCase()} takes you`}
+          body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+        />
+      )}
+
       {/* ── THE FACTS / OPPORTUNITY ──────────────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
+      <section className="bg-white pt-20 lg:pt-28 pb-8 lg:pb-10">
         <div className={PX}>
           <AnimatedSection>
-            <div className="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-16">
-              <div className="lg:sticky lg:top-28 lg:self-start lg:max-w-sm">
-                <SectionLabel
-                  label={d.facts.factsLabel.eyebrow}
-                  title={d.facts.factsLabel.title}
-                  color="#2F7549"
-                  hideLine
-                />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
-                <p className="text-[#5A5F72] text-base leading-relaxed mb-7">{d.facts.factsLabel.body}</p>
+            <div
+              className={cn(
+                "grid items-center gap-10 lg:gap-12",
+                d.facts.factsImage ? "lg:grid-cols-12" : "lg:grid-cols-[1fr_1.6fr] lg:gap-16",
+              )}
+            >
+              {/* Left — eyebrow, heading, body, checklist */}
+              <div
+                className={cn(
+                  d.facts.factsImage ? "lg:col-span-4" : "lg:sticky lg:top-28 lg:self-start lg:max-w-sm",
+                )}
+              >
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549] mb-4">
+                  {d.facts.factsLabel.eyebrow}
+                </p>
+                <h2 className="font-heading font-extrabold text-3xl sm:text-[2.2rem] leading-[1.15] text-[#16291E]">
+                  {d.facts.factsLabel.title}
+                </h2>
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] mt-5 mb-5" />
+                <p className="text-[#5A5F72] text-base leading-relaxed mb-7 max-w-sm">{d.facts.factsLabel.body}</p>
                 <ul className="space-y-3.5">
-                  {d.facts.chips.map((c) => (
-                    <li key={c} className="flex items-center gap-3">
+                  {d.facts.chips.map((c, i) => (
+                    <motion.li
+                      key={c}
+                      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: -12 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-40px" }}
+                      transition={{ duration: 0.4, delay: i * 0.07 }}
+                      className="flex items-center gap-3"
+                    >
                       <CheckCircle2 className="size-5 shrink-0 text-[#3E8F5E]" aria-hidden />
                       <span className="text-[15px] font-semibold text-[#16291E]">{c}</span>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-2xl border border-[#E5E7EB] overflow-hidden shadow-sm">
-                <dl className="divide-y divide-[#E5E7EB]">
-                  {d.facts.rows.map((row) => (
-                    <div key={row.label} className="grid grid-cols-1 sm:grid-cols-3 gap-2 px-6 py-6 bg-white">
-                      <dt className="font-heading font-bold text-[#2F7549] text-sm uppercase tracking-wide">{row.label}</dt>
-                      <dd className="sm:col-span-2 text-[#3D4152] leading-relaxed">{row.value}</dd>
-                    </div>
-                  ))}
-                </dl>
+              {/* Center — illustration */}
+              {d.facts.factsImage && (
+                <motion.div
+                  className="lg:col-span-3"
+                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.94 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <div className="relative mx-auto aspect-[4/3] w-full max-w-md">
+                    <Image
+                      src={d.facts.factsImage}
+                      alt=""
+                      aria-hidden
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 1024px) 80vw, 28vw"
+                    />
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Right — labeled card */}
+              <div className={cn(d.facts.factsImage && "lg:col-span-5")}>
+                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-2 shadow-[0_24px_60px_-34px_rgba(4,120,87,0.30)] sm:p-3">
+                  <dl className="divide-y divide-[#EEF0F2]">
+                    {d.facts.rows.map((row, i) => (
+                      <motion.div
+                        key={row.label}
+                        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-40px" }}
+                        transition={{ duration: 0.4, delay: i * 0.08 }}
+                        className="px-5 py-5 sm:px-6"
+                      >
+                        <dt className="font-heading font-extrabold text-[#2F7549] text-sm uppercase tracking-[0.12em]">
+                          {row.label}
+                        </dt>
+                        <dd className="mt-1.5 text-[15px] leading-relaxed text-[#5A5F72]">{row.value}</dd>
+                      </motion.div>
+                    ))}
+                  </dl>
+                </div>
               </div>
             </div>
           </AnimatedSection>
@@ -661,13 +1131,16 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── WHY IT WORKS ─────────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white pt-8 lg:pt-10 pb-20 lg:pb-28">
         <div className={PX}>
           <AnimatedSection>
-            <div className="grid gap-12 lg:grid-cols-[1fr_1.55fr] lg:gap-16">
+            <div className="grid gap-12 lg:grid-cols-[0.8fr_2fr] lg:gap-16">
               <div className="lg:sticky lg:top-28 lg:self-start lg:max-w-sm">
-                <SectionLabel label={d.why.eyebrow} title={d.why.title} color="#2F7549" hideLine />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549] mb-4">{d.why.eyebrow}</p>
+                <h2 className="font-heading font-extrabold text-3xl sm:text-[2.2rem] leading-[1.15] text-[#16291E]">
+                  {d.why.title}
+                </h2>
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] mt-5 mb-5" />
                 <p className="text-[#5A5F72] text-base leading-relaxed">{d.why.body}</p>
                 {d.why.note && (
                   <div className="mt-7 flex items-start gap-3.5 rounded-2xl border border-[#D7EADD] bg-[#EEF6F0] p-5">
@@ -675,22 +1148,47 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                     <p className="text-sm font-medium text-[#16291E] leading-relaxed">{d.why.note}</p>
                   </div>
                 )}
+                {d.growth?.secondary && (
+                  <motion.div
+                    initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                    className="relative mt-7 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_50px_-30px_rgba(4,120,87,0.35)]"
+                  >
+                    <Image
+                      src={d.growth.secondary}
+                      alt="Business growth"
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 1024px) 100vw, 24rem"
+                    />
+                    <span className="absolute left-3 bottom-3 inline-flex items-center gap-1.5 rounded-full bg-[#EEF6F0] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#2F7549]">
+                      <TrendingUp className="size-3.5" aria-hidden /> Growth
+                    </span>
+                  </motion.div>
+                )}
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-9">
+              <div
+                className={cn(
+                  "grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10",
+                  d.why.items.length % 3 === 0 ? "lg:grid-cols-3" : "lg:grid-cols-2",
+                )}
+              >
                 {d.why.items.map((b, index) => {
                   const Icon = b.icon;
                   return (
                     <motion.div
                       key={b.title}
-                      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
+                      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 18 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: "-40px" }}
-                      transition={{ duration: 0.45, delay: index * 0.06 }}
-                      className="flex flex-col"
+                      transition={{ duration: 0.45, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                      className="group flex flex-col"
                     >
-                      <span className="inline-flex size-12 items-center justify-center rounded-full bg-[#2F7549]/10 text-[#2F7549] mb-4">
-                        <Icon className="size-6" strokeWidth={1.7} aria-hidden />
+                      <span className="inline-flex size-12 items-center justify-center rounded-full bg-[#15402A] text-white mb-4 shadow-[0_10px_22px_-10px_rgba(4,120,87,0.6)] transition-transform duration-300 group-hover:scale-110">
+                        <Icon className="size-[22px]" strokeWidth={1.8} aria-hidden />
                       </span>
                       <h3 className="font-heading font-bold text-lg text-[#16291E] leading-snug">{b.title}</h3>
                       <p className="text-sm text-[#5A5F72] leading-relaxed mt-2">{b.desc}</p>
@@ -704,7 +1202,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── OTHER SERVICES ───────────────────────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
+      <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel label="Keep exploring" title="Our other services" color="#2F7549" hideLine />

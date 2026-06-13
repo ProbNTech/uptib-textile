@@ -305,7 +305,7 @@ function ExportFootprint() {
   const activeCountry = europeFootprints[active];
 
   return (
-    <section className="relative overflow-hidden bg-[#f7f6f4]">
+    <section className="relative overflow-hidden bg-white">
       {/* Decorative antique globe — "100+ countries across 6 continents" */}
       <Image
         src="/image/explained-globe.png"
@@ -801,7 +801,7 @@ export default function GlobalTextileMarketClient() {
       <ExportPotential />
 
       {/* ── Product segments / Our services ───────────────────────────── */}
-      <section className="relative bg-[#F5F4F2]">
+      <section className="relative bg-white">
         <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
           <AnimatedSection>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -881,17 +881,25 @@ export default function GlobalTextileMarketClient() {
       <ExportFootprint />
 
       {/* ── Competitive landscape ─────────────────────────────────────── */}
-      <section className="relative bg-white">
-        <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+      <section className="relative overflow-hidden bg-[#15402A]">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
+            backgroundSize: "48px 48px",
+          }}
+        />
+        <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left — title block */}
             <AnimatedSection animation="slide-right" className="lg:col-span-4">
               <div className="inline-flex items-center gap-2 mb-5">
-                  <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#2F7549]">
+                  <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#8FD3AE]">
                   Competitive Landscape
                 </span>
               </div>
-              <h2 className="font-heading font-extrabold text-[#0F2C22] text-3xl sm:text-4xl lg:text-[2.6rem] leading-[1.08] tracking-tight">
+              <h2 className="font-heading font-extrabold text-white text-3xl sm:text-4xl lg:text-[2.6rem] leading-[1.08] tracking-tight">
                 Why buyers
                 <br />
                 choose Pakistan
@@ -899,16 +907,16 @@ export default function GlobalTextileMarketClient() {
 
               {/* Competitors */}
               <div className="mt-7">
-                <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#9aa0a6]">
-                  <Globe2 className="w-4 h-4 text-[#2F7549]" /> Competing against
+                <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
+                  <Globe2 className="w-4 h-4 text-[#8FD3AE]" /> Competing against
                 </span>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {competitors.map((c) => (
                     <span
                       key={c.name}
-                      className="inline-flex items-center gap-2 rounded-full border border-[#e2e0dc] bg-[#f7f6f4] text-[#3D4152] text-xs font-medium px-3 py-1.5"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 text-white/90 text-xs font-medium px-3 py-1.5"
                     >
-                      <Flag code={c.flag} className="h-3 w-[18px] rounded-[2px] ring-1 ring-black/10" />
+                      <Flag code={c.flag} className="h-3 w-[18px] rounded-[2px] ring-1 ring-white/15" />
                       {c.name}
                     </span>
                   ))}
@@ -924,12 +932,12 @@ export default function GlobalTextileMarketClient() {
                   <AnimatedSection key={a.title} delay={(i % 3) * 0.08}>
                     <div>
                       <div className="flex items-center gap-2.5 mb-2.5">
-                        <Icon className="w-5 h-5 shrink-0 text-[#3E8F5E]" strokeWidth={1.7} aria-hidden />
-                        <h3 className="font-heading font-bold text-[#0F2C22] text-base leading-snug">
+                        <Icon className="w-5 h-5 shrink-0 text-[#8FD3AE]" strokeWidth={1.7} aria-hidden />
+                        <h3 className="font-heading font-bold text-white text-base leading-snug">
                           {a.title}
                         </h3>
                       </div>
-                      <p className="text-sm text-[#6b7280] leading-relaxed">{a.desc}</p>
+                      <p className="text-sm text-white/70 leading-relaxed">{a.desc}</p>
                     </div>
                   </AnimatedSection>
                 );

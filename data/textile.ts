@@ -356,7 +356,7 @@ export const products: ProductCategory[] = [
           images: [
             { src: "/image/textile/apparel/basics-1.jpg", alt: "A soft mint t-shirt styled with cotton stems" },
             { src: "/image/textile/apparel/basics-2.jpg", alt: "A stack of folded cream cotton t-shirts" },
-            { src: "/image/textile/apparel/basics-3.jpg", alt: "Neatly rolled neutral-toned basics" },
+            { src: "/image/textile/apparel/basics-3.jpg", alt: "A cozy flat lay of a soft knit and accessories" },
             { src: "/image/textile/apparel/basics-4.jpg", alt: "A folded stack of knitted sweaters" },
           ],
         },
@@ -447,6 +447,42 @@ export const products: ProductCategory[] = [
           images: [
             { src: "/image/textile/apparel/acc-1.jpg", alt: "Soft knitted beanies and socks in neutral tones" },
             { src: "/image/textile/apparel/acc-2.jpg", alt: "Knitted socks in warm neutral colours" },
+          ],
+        },
+        {
+          name: "Skirts & Dresses",
+          tagline: "Skirts, midi & maxi dresses",
+          desc:
+            "Woven and jersey skirts and dresses — A-line, pleated and midi silhouettes in soft solids, prints and linens, cut and finished to your seasonal range.",
+          items: [
+            "A-line, pleated & denim skirts",
+            "Midi & maxi dresses",
+            "Woven, linen & jersey dresses",
+            "Seasonal prints & solids",
+          ],
+          images: [
+            { src: "/image/textile/apparel/skirts-1.jpg", alt: "An elegant white dress styled by a vintage screen" },
+            { src: "/image/textile/apparel/skirts-2.jpg", alt: "A woman in a floral summer dress outdoors" },
+            { src: "/image/textile/apparel/skirts-3.jpg", alt: "Two women in summer dresses" },
+            { src: "/image/textile/apparel/skirts-4.jpg", alt: "Models in white tops and denim skirts" },
+          ],
+        },
+        {
+          name: "Leather Jackets & Goods",
+          layout: "tall-left",
+          tagline: "Jackets, bags & accessories",
+          desc:
+            "Genuine and faux-leather jackets and goods drawing on Sialkot's leather heritage — biker, bomber and blazer styles, plus bags and accessories, in rich tans and classic black.",
+          items: [
+            "Leather & faux-leather jackets",
+            "Biker, bomber & blazer styles",
+            "Bags, belts & wallets",
+            "Genuine & PU options",
+          ],
+          images: [
+            { src: "/image/textile/apparel/leather-1.jpg", alt: "A man in a black leather jacket" },
+            { src: "/image/textile/apparel/leather-2.jpg", alt: "A woman in a black leather jacket" },
+            { src: "/image/textile/apparel/leather-3.jpg", alt: "A man in a black leather jacket" },
           ],
         },
       ],

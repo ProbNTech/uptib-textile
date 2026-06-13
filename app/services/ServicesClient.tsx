@@ -22,6 +22,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlobalCTA } from "@/components/GlobalCTA";
+import { GrowthBanner } from "@/components/GrowthBanner";
 import { services, homeStats, markets, whyUptib } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
@@ -231,7 +232,7 @@ export default function ServicesClient() {
       </section>
 
       {/* ── WE SERVE BOTH ENDS OF THE TRADE ──────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
+      <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -293,12 +294,29 @@ export default function ServicesClient() {
         </div>
       </section>
 
+      {/* ── GROWTH SHUTTER (banner) ──────────────────────────────── */}
+      <GrowthBanner
+        image="/image/growth/hand-arrange-white-letters-as-growth.jpg"
+        label="Built for your growth"
+        title="Source or sell — the goal is the same: growth"
+        body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right."
+      />
+
       {/* ── WHY Pakistan Textile Partners ────────────────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.55fr] lg:gap-16 xl:gap-20">
               <div>
+                <span className="mb-5 inline-flex size-16 items-center justify-center rounded-2xl bg-[#EEF6F0] ring-1 ring-[#D7EADD] shadow-[0_18px_40px_-22px_rgba(4,120,87,0.5)]">
+                  <Image
+                    src="/image/growth/krzysztof-m-graph-7128344_1920.png"
+                    alt="Upward growth trend"
+                    width={64}
+                    height={64}
+                    className="size-11 object-contain"
+                  />
+                </span>
                 <SectionLabel label="Why Pakistan Textile Partners" title="One partner, accountable on both sides" color="#2F7549" hideLine />
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
@@ -415,11 +433,7 @@ export default function ServicesClient() {
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.06), transparent 50%), #F8FAFC",
-        }}
+        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
         aria-labelledby="services-faq-heading"
       >
         <div className={cn("relative", PX)}>

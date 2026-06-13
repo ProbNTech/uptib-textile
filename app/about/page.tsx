@@ -11,8 +11,10 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import BoardOfAdvisors from "@/components/BoardOfAdvisors";
+import ExporterFaq from "@/components/home/ExporterFaq";
 import { site } from "@/data/site";
 import { homeStats } from "@/data/textile";
+import { aboutFaqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
   title: "About Pakistan Textile Partners",
@@ -203,8 +205,17 @@ export default function AboutPage() {
       </section>
 
       {/* ── 3. STATS BAND — primary deep green ─────────────────────── */}
-      <section className="bg-gradient-to-br from-[#15402A] to-[#0B1410]">
-        <Container className="py-16 lg:py-20">
+      <section className="relative overflow-hidden bg-[#15402A]">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
+            backgroundSize: "48px 48px",
+          }}
+          aria-hidden
+        />
+        <Container className="relative py-16 lg:py-20">
           <div className="grid grid-cols-2 gap-y-12 lg:grid-cols-4">
             {homeStats.map((stat, i) => (
               <AnimatedSection
@@ -232,9 +243,20 @@ export default function AboutPage() {
           <section
             key={p.id}
             id={p.id}
-            className={p.dark ? "bg-gradient-to-br from-[#15402A] to-[#0B1410]" : "bg-white"}
+            className={p.dark ? "relative overflow-hidden bg-[#15402A]" : "bg-white"}
           >
-            <Container className="py-16 lg:py-24">
+            {p.dark && (
+              <div
+                className="absolute inset-0 opacity-[0.06] pointer-events-none"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
+                  backgroundSize: "48px 48px",
+                }}
+                aria-hidden
+              />
+            )}
+            <Container className="relative py-16 lg:py-24">
               <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                 {/* Image collage */}
                 <AnimatedSection
@@ -361,6 +383,14 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      {/* ── 9. FAQs ────────────────────────────────────────────────── */}
+      <ExporterFaq
+        faqs={aboutFaqs}
+        label="FAQs"
+        title="About Pakistan Textile Partners — your questions answered"
+        body="The questions buyers and manufacturers ask us most about who we are and how we work."
+      />
 
       <GlobalCTA
         label="Join Us"

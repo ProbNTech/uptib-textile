@@ -30,7 +30,7 @@ const PakistanTopCompaniesShowcase = dynamic(() => import("@/components/Pakistan
   loading: () => <div className="py-20 bg-white" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="h-48 bg-[#f7f8fa] rounded-xl animate-pulse" /></div></div>,
 });
 const PartnerSolutionsSection = dynamic(() => import("@/components/PartnerSolutionsSection"), {
-  loading: () => <div className="py-20 bg-gradient-to-b from-[#EEF6F0] via-[#D7EADD] to-[#EEF6F0]" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: 3 }).map((_, i) => <div key={i} className="h-96 bg-white rounded-2xl animate-pulse" />)}</div></div></div>,
+  loading: () => <div className="py-20 bg-white" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: 3 }).map((_, i) => <div key={i} className="h-96 bg-white rounded-2xl animate-pulse" />)}</div></div></div>,
 });
 import ExporterFaq from "@/components/home/ExporterFaq";
 import ProductsSection from "@/components/home/ProductsSection";
@@ -70,11 +70,7 @@ export default function Home() {
 
       {/* 2. ABOUT */}
       <section
-        className="relative py-20 lg:py-28 overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(900px circle at 10% -10%, rgba(4,120,87,0.08), transparent 50%), radial-gradient(800px circle at 95% 110%, rgba(16,185,129,0.07), transparent 50%), #FFFFFF",
-        }}
+        className="relative py-20 lg:py-28 overflow-hidden bg-white"
         aria-labelledby="about-heading"
       >
         <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
@@ -118,11 +114,7 @@ export default function Home() {
       {/* 5. OUR SERVICES — exporter-facing grid */}
       <section
         id="services"
-        className="relative z-[1] pt-10 lg:pt-12 pb-20 lg:pb-28 scroll-mt-24 overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(1100px circle at 0% 0%, rgba(16,185,129,0.07), transparent 55%), radial-gradient(1000px circle at 100% 100%, rgba(4,120,87,0.08), transparent 55%), radial-gradient(700px circle at 50% 50%, rgba(255,255,255,0.6), transparent 70%), #F8FAFC",
-        }}
+        className="relative z-[1] pt-10 lg:pt-12 pb-20 lg:pb-28 scroll-mt-24 overflow-hidden bg-white"
         aria-labelledby="services-heading"
       >
         <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -160,7 +152,7 @@ export default function Home() {
       >
         <Image src="/image/hero-bg/pexels-wasifmehmood997-15817294.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
         <div className="absolute inset-0 bg-[#15402A]/65" aria-hidden="true" />
-        <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
+        <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
             <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#86efac" align="center" light />
@@ -302,7 +294,7 @@ export default function Home() {
         }}
         aria-labelledby="impact-heading"
       >
-        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
+        <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
             <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pakistan Textile Partners' work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#8FD3AE" align="center" light />
@@ -313,11 +305,7 @@ export default function Home() {
 
       {/* 10. TECH MARKET OVERVIEW — Market Intelligence */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(900px circle at 5% 0%, rgba(4,120,87,0.08), transparent 50%), radial-gradient(800px circle at 95% 100%, rgba(6,95,70,0.06), transparent 50%), radial-gradient(700px circle at 50% 50%, rgba(16,185,129,0.04), transparent 60%), #F8FAFC",
-        }}
+        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
         aria-labelledby="market-heading"
       >
         {/* TRIAL: decorative globe — revert if not kept */}
@@ -390,7 +378,7 @@ export default function Home() {
       </section>
 
       {/* PAKISTAN'S TEXTILE & TRADE INSTITUTIONS — horizontal auto-scrolling marquee */}
-      <section className="relative z-[1] py-14 lg:py-20 overflow-hidden bg-[#F8FAFC]" aria-labelledby="network-heading">
+      <section className="relative z-[1] py-14 lg:py-20 overflow-hidden bg-white" aria-labelledby="network-heading">
         <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "28px 28px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#2F7549" align="center" />
@@ -419,7 +407,7 @@ export default function Home() {
       </section>
 
       {/* 11. BOARD OF ADVISORS */}
-      <BoardOfAdvisors />
+      <BoardOfAdvisors dark />
 
       {/* 12. NEWS & INSIGHTS */}
       <section
@@ -432,7 +420,7 @@ export default function Home() {
       >
         <Image src="/image/pak-map.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
         <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
-        <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
+        <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
             <div className="grid lg:grid-cols-12 gap-12 items-center">

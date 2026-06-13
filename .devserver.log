@@ -1,0 +1,1694 @@
+
+> uptech-website@1.0.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.18.50:3000
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 1622ms
+ GET /membership/industries 200 in 2.4s (compile: 1251ms, render: 1152ms)
+⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/membership'
+}
+○ Compiling /_error ...
+ GET /membership 500 in 4.9s (compile: 4.4s, render: 430ms)
+ GET /services 200 in 7.9s (compile: 1028ms, render: 6.9s)
+ GET /services/ecommerce-warehouse 200 in 7.9s (compile: 3.5s, generate-params: 2.6s, render: 4.4s)
+ GET /services/buying-house 200 in 7.8s (compile: 3.6s, generate-params: 2.7s, render: 4.3s)
+ GET /services/logistics 200 in 7.9s (compile: 3.7s, generate-params: 2.8s, render: 4.1s)
+ GET /services/marketing-sales 200 in 7.9s (compile: 4.9s, generate-params: 3.5s, render: 3.0s)
+ GET /membership/industries 200 in 3.0s (compile: 172ms, render: 2.8s)
+ GET /membership/industries 200 in 1092ms (compile: 53ms, render: 1039ms)
+ GET /membership/industries 200 in 687ms (compile: 14ms, render: 674ms)
+ GET /membership/industries 200 in 1500ms (compile: 20ms, render: 1480ms)
+ GET /membership/industries 200 in 479ms (compile: 12ms, render: 467ms)
+✓ Compiled in 3.1s
+✓ Compiled in 539ms
+✓ Compiled in 925ms
+✓ Compiled in 1714ms
+✓ Compiled in 601ms
+✓ Compiled in 962ms
+ GET /services/marketing-sales 200 in 1381ms (compile: 248ms, generate-params: 21ms, render: 1133ms)
+ GET /services/ecommerce-warehouse 200 in 735ms (compile: 27ms, generate-params: 13ms, render: 708ms)
+ GET /services/marketing-sales 200 in 401ms (compile: 38ms, generate-params: 20ms, render: 363ms)
+✓ Compiled in 2.9s
+ GET /services/ecommerce-warehouse 200 in 320ms (compile: 215ms, generate-params: 9ms, render: 106ms)
+✓ Compiled in 475ms
+✓ Compiled in 476ms
+✓ Compiled in 553ms
+✓ Compiled in 548ms
+✓ Compiled in 745ms
+✓ Compiled in 1323ms
+ GET /services/marketing-sales 200 in 2.5s (compile: 712ms, generate-params: 33ms, render: 1779ms)
+✓ Compiled in 2.4s
+✓ Compiled in 1782ms
+✓ Compiled in 1283ms
+✓ Compiled in 736ms
+✓ Compiled in 785ms
+✓ Compiled in 729ms
+✓ Compiled in 1976ms
+✓ Compiled in 1012ms
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/[slug]/ServiceDetailClient.tsx:46:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 44 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 45 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 46 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 47 |[39m [36mimport[39m { services[33m,[39m getService } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 48 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 49 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/[slug]/ServiceDetailClient.tsx
+    ./app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/services/ServicesClient.tsx:25:1
+Module not found: Can't resolve '@/components/GrowthShowcase'
+[0m [90m 23 |[39m [36mimport[39m { [33mShinyButton[39m } [36mfrom[39m [32m"@/components/ui/shiny-button"[39m[33m;[39m
+ [90m 24 |[39m [36mimport[39m { [33mGlobalCTA[39m } [36mfrom[39m [32m"@/components/GlobalCTA"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 25 |[39m [36mimport[39m { [33mGrowthShowcase[39m } [36mfrom[39m [32m"@/components/GrowthShowcase"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 26 |[39m [36mimport[39m { services[33m,[39m homeStats[33m,[39m markets[33m,[39m whyUptib } [36mfrom[39m [32m"@/data/textile"[39m[33m;[39m
+ [90m 27 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+ [90m 28 |[39m[0m
+
+Import map: aliased to relative './components/GrowthShowcase' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/services/ServicesClient.tsx
+    ./app/services/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 663ms
+ GET /services/buying-house 200 in 1067ms (compile: 681ms, generate-params: 21ms, render: 385ms)
+ GET /services 200 in 2.8s (compile: 388ms, render: 2.4s)
+ GET /membership/industries 200 in 2.8s (compile: 829ms, render: 1993ms)
+ GET /services/logistics 200 in 1381ms (compile: 839ms, generate-params: 38µs, render: 542ms)
+ GET /services/ecommerce-warehouse 200 in 1391ms (compile: 927ms, generate-params: 64µs, render: 464ms)
+ GET /membership 200 in 3.0s (compile: 1056ms, render: 1910ms)
+ GET /services/buying-house 404 in 5.2s (compile: 3.5s, render: 1685ms)
+ GET /services/ecommerce-warehouse 200 in 686ms (compile: 13ms, generate-params: 37µs, render: 674ms)
+ GET /services/ecommerce-warehouse 200 in 741ms (compile: 12ms, generate-params: 35µs, render: 730ms)
+ GET /services 200 in 745ms (compile: 18ms, render: 727ms)
+ GET /membership/industries 200 in 633ms (compile: 27ms, render: 606ms)
+ GET /services/marketing-sales 200 in 637ms (compile: 129ms, generate-params: 36µs, render: 508ms)
+ GET /services/logistics 200 in 411ms (compile: 16ms, generate-params: 42µs, render: 396ms)
+ GET /services/ecommerce-warehouse 200 in 327ms (compile: 6ms, generate-params: 32µs, render: 321ms)
+ GET /services/marketing-sales 200 in 262ms (compile: 18ms, generate-params: 9ms, render: 244ms)
+✓ Compiled in 579ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServicesClient (app\services\ServicesClient.tsx:298:8)
+  296 |
+  297 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 298 |       <GrowthShowcase
+      |        ^
+  299 |         label="Built for your growth"
+  300 |         title="Source or sell — the goal is the same: growth"
+  301 |         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right." {
+  digest: '3996331814'
+}
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1160:8)
+  1158 |
+  1159 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1160 |       <GrowthShowcase
+       |        ^
+  1161 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1162 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1163 |       /> {
+  digest: '2785210681'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1160:8)
+  1158 |
+  1159 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1160 |       <GrowthShowcase
+       |        ^
+  1161 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1162 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1163 |       /> {
+  digest: '2785210681'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1160:8)
+  1158 |
+  1159 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1160 |       <GrowthShowcase
+       |        ^
+  1161 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1162 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1163 |       /> {
+  digest: '2785210681'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1160:8)
+  1158 |
+  1159 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1160 |       <GrowthShowcase
+       |        ^
+  1161 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1162 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1163 |       /> {
+  digest: '2785210681'
+}
+ GET /services 500 in 2.8s (compile: 16ms, render: 2.8s)
+ GET /services/logistics 500 in 2.2s (compile: 213ms, generate-params: 14ms, render: 1957ms)
+ GET /services/ecommerce-warehouse 500 in 2.1s (compile: 766ms, generate-params: 59µs, render: 1382ms)
+ GET /services/ecommerce-warehouse 500 in 1097ms (compile: 97ms, generate-params: 38µs, render: 1000ms)
+ GET /services/marketing-sales 500 in 1100ms (compile: 21ms, generate-params: 67µs, render: 1079ms)
+✓ Compiled in 637ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1165:8)
+  1163 |
+  1164 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1165 |       <GrowthShowcase
+       |        ^
+  1166 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1167 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1168 |       /> {
+  digest: '1248631890'
+}
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServicesClient (app\services\ServicesClient.tsx:298:8)
+  296 |
+  297 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 298 |       <GrowthShowcase
+      |        ^
+  299 |         label="Built for your growth"
+  300 |         title="Source or sell — the goal is the same: growth"
+  301 |         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right." {
+  digest: '3996331814'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1165:8)
+  1163 |
+  1164 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1165 |       <GrowthShowcase
+       |        ^
+  1166 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1167 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1168 |       /> {
+  digest: '1248631890'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1165:8)
+  1163 |
+  1164 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1165 |       <GrowthShowcase
+       |        ^
+  1166 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1167 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1168 |       /> {
+  digest: '1248631890'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1165:8)
+  1163 |
+  1164 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1165 |       <GrowthShowcase
+       |        ^
+  1166 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1167 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1168 |       /> {
+  digest: '1248631890'
+}
+ GET /services/marketing-sales 500 in 3.1s (compile: 449ms, generate-params: 42ms, render: 2.6s)
+ GET /services 500 in 1696ms (compile: 18ms, render: 1678ms)
+ GET /services/ecommerce-warehouse 500 in 1385ms (compile: 157ms, generate-params: 49µs, render: 1229ms)
+ GET /services/ecommerce-warehouse 500 in 1393ms (compile: 26ms, generate-params: 47µs, render: 1367ms)
+ GET /services/logistics 500 in 1391ms (compile: 262ms, generate-params: 78µs, render: 1130ms)
+✓ Compiled in 649ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServicesClient (app\services\ServicesClient.tsx:298:8)
+  296 |
+  297 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 298 |       <GrowthShowcase
+      |        ^
+  299 |         label="Built for your growth"
+  300 |         title="Source or sell — the goal is the same: growth"
+  301 |         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right." {
+  digest: '3996331814'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1170:8)
+  1168 |
+  1169 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1170 |       <GrowthShowcase
+       |        ^
+  1171 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1172 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1173 |       /> {
+  digest: '1270887639'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1170:8)
+  1168 |
+  1169 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1170 |       <GrowthShowcase
+       |        ^
+  1171 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1172 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1173 |       /> {
+  digest: '1270887639'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1170:8)
+  1168 |
+  1169 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1170 |       <GrowthShowcase
+       |        ^
+  1171 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1172 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1173 |       /> {
+  digest: '1270887639'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1170:8)
+  1168 |
+  1169 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1170 |       <GrowthShowcase
+       |        ^
+  1171 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1172 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1173 |       /> {
+  digest: '1270887639'
+}
+ GET /services 500 in 2.8s (compile: 26ms, render: 2.8s)
+ GET /services/logistics 500 in 2.4s (compile: 623ms, generate-params: 53µs, render: 1760ms)
+ GET /services/marketing-sales 500 in 2.4s (compile: 344ms, generate-params: 11ms, render: 2.1s)
+ GET /services/ecommerce-warehouse 500 in 2.4s (compile: 538ms, generate-params: 78µs, render: 1856ms)
+ GET /services/ecommerce-warehouse 500 in 723ms (compile: 31ms, generate-params: 16ms, render: 692ms)
+✓ Compiled in 553ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1175:8)
+  1173 |
+  1174 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1175 |       <GrowthShowcase
+       |        ^
+  1176 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1177 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1178 |       /> {
+  digest: '1191304947'
+}
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServicesClient (app\services\ServicesClient.tsx:298:8)
+  296 |
+  297 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 298 |       <GrowthShowcase
+      |        ^
+  299 |         label="Built for your growth"
+  300 |         title="Source or sell — the goal is the same: growth"
+  301 |         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right." {
+  digest: '3996331814'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1175:8)
+  1173 |
+  1174 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1175 |       <GrowthShowcase
+       |        ^
+  1176 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1177 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1178 |       /> {
+  digest: '1191304947'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1175:8)
+  1173 |
+  1174 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1175 |       <GrowthShowcase
+       |        ^
+  1176 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1177 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1178 |       /> {
+  digest: '1191304947'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1175:8)
+  1173 |
+  1174 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1175 |       <GrowthShowcase
+       |        ^
+  1176 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1177 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1178 |       /> {
+  digest: '1191304947'
+}
+ GET /services/marketing-sales 500 in 3.4s (compile: 391ms, generate-params: 30ms, render: 3.0s)
+ GET /services 500 in 1881ms (compile: 49ms, render: 1832ms)
+ GET /services/logistics 500 in 1525ms (compile: 21ms, generate-params: 35µs, render: 1503ms)
+ GET /services/ecommerce-warehouse 500 in 1518ms (compile: 446ms, generate-params: 33µs, render: 1071ms)
+ GET /services/ecommerce-warehouse 500 in 1528ms (compile: 354ms, generate-params: 38µs, render: 1174ms)
+✓ Compiled in 825ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServicesClient (app\services\ServicesClient.tsx:298:8)
+  296 |
+  297 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 298 |       <GrowthShowcase
+      |        ^
+  299 |         label="Built for your growth"
+  300 |         title="Source or sell — the goal is the same: growth"
+  301 |         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right." {
+  digest: '3996331814'
+}
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1180:8)
+  1178 |
+  1179 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1180 |       <GrowthShowcase
+       |        ^
+  1181 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1182 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1183 |       /> {
+  digest: '1023490742'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1180:8)
+  1178 |
+  1179 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1180 |       <GrowthShowcase
+       |        ^
+  1181 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1182 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1183 |       /> {
+  digest: '1023490742'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1180:8)
+  1178 |
+  1179 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1180 |       <GrowthShowcase
+       |        ^
+  1181 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1182 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1183 |       /> {
+  digest: '1023490742'
+}
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServiceDetailClient (app\services\[slug]\ServiceDetailClient.tsx:1180:8)
+  1178 |
+  1179 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 1180 |       <GrowthShowcase
+       |        ^
+  1181 |         title={`Where ${s.name.toLowerCase()} takes you`}
+  1182 |         body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+  1183 |       /> {
+  digest: '1023490742'
+}
+ GET /services 500 in 3.2s (compile: 11ms, render: 3.2s)
+ GET /services/ecommerce-warehouse 500 in 2.8s (compile: 332ms, generate-params: 10ms, render: 2.5s)
+ GET /services/marketing-sales 500 in 2.8s (compile: 554ms, generate-params: 60µs, render: 2.3s)
+ GET /services/logistics 500 in 2.8s (compile: 1513ms, generate-params: 30µs, render: 1316ms)
+ GET /services/ecommerce-warehouse 500 in 995ms (compile: 52ms, generate-params: 24ms, render: 943ms)
+✓ Compiled in 552ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServicesClient (app\services\ServicesClient.tsx:298:8)
+  296 |
+  297 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 298 |       <GrowthShowcase
+      |        ^
+  299 |         label="Built for your growth"
+  300 |         title="Source or sell — the goal is the same: growth"
+  301 |         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right." {
+  digest: '3996331814'
+}
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /services 500 in 3.1s (compile: 34ms, render: 3.1s)
+ GET /services/ecommerce-warehouse 200 in 2.6s (compile: 302ms, generate-params: 12ms, render: 2.3s)
+ GET /services/marketing-sales 200 in 2.6s (compile: 598ms, generate-params: 63µs, render: 2.0s)
+ GET /services/logistics 200 in 2.6s (compile: 513ms, generate-params: 30µs, render: 2.1s)
+ GET /services/ecommerce-warehouse 200 in 1989ms (compile: 1071ms, generate-params: 39µs, render: 918ms)
+✓ Compiled in 713ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServicesClient (app\services\ServicesClient.tsx:298:8)
+  296 |
+  297 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 298 |       <GrowthShowcase
+      |        ^
+  299 |         label="Built for your growth"
+  300 |         title="Source or sell — the goal is the same: growth"
+  301 |         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right." {
+  digest: '3996331814'
+}
+ GET /services 500 in 492ms (compile: 11ms, render: 481ms)
+✓ Compiled in 657ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: GrowthShowcase is not defined
+    at ServicesClient (app\services\ServicesClient.tsx:298:8)
+  296 |
+  297 |       {/* ── GROWTH SHUTTER ───────────────────────────────────────── */}
+> 298 |       <GrowthShowcase
+      |        ^
+  299 |         label="Built for your growth"
+  300 |         title="Source or sell — the goal is the same: growth"
+  301 |         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right." {
+  digest: '3996331814'
+}
+ GET /services 500 in 449ms (compile: 14ms, render: 435ms)
+✓ Compiled in 1263ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /services 200 in 1432ms (compile: 277ms, render: 1155ms)
+✓ Compiled in 1348ms
+ GET /services/buying-house 200 in 3.1s (compile: 1396ms, generate-params: 20ms, render: 1727ms)
+✓ Compiled in 670ms
+✓ Compiled in 1090ms
+✓ Compiled in 935ms
+✓ Compiled in 1230ms
+✓ Compiled in 897ms
+✓ Compiled in 965ms
+✓ Compiled in 983ms
+✓ Compiled in 1497ms
+✓ Compiled in 1318ms
+ GET /services/buying-house 200 in 1702ms (compile: 356ms, generate-params: 12ms, render: 1347ms)
+✓ Compiled in 1097ms
+✓ Compiled in 951ms
+ GET /services/logistics 200 in 1771ms (compile: 367ms, generate-params: 44ms, render: 1405ms)
+✓ Compiled in 1405ms
+✓ Compiled in 1046ms
+ GET /membership 200 in 100ms (compile: 20ms, render: 80ms)
+ GET / 200 in 3.0s (compile: 3.0s, render: 65ms)
+ GET /news 200 in 2.0s (compile: 1351ms, render: 684ms)
+ GET /contact 200 in 3.5s (compile: 1859ms, render: 1663ms)
+ GET /global-textile-market 200 in 1427ms (compile: 1367ms, render: 60ms)
+ GET /image/flags/pk.svg 404 in 638ms (compile: 199ms, render: 439ms)
+ GET /membership 200 in 609ms (compile: 24ms, render: 585ms)
+ GET /membership/industries 200 in 727ms (compile: 20ms, render: 707ms)
+ GET /about 200 in 1502ms (compile: 118ms, render: 1383ms)
+ GET /faqs 200 in 1493ms (compile: 1089ms, render: 403ms)
+✓ Compiled in 806ms
+✓ Compiled in 555ms
+✓ Compiled in 649ms
+✓ Compiled in 666ms
+✓ Compiled in 723ms
+✓ Compiled in 780ms
+✓ Compiled in 796ms
+ GET /membership/industries 200 in 1817ms (compile: 686ms, render: 1131ms)
+ GET / 200 in 1822ms (compile: 286ms, render: 1536ms)
+ GET /global-textile-market 200 in 1820ms (compile: 1116ms, render: 704ms)
+ GET /services/ecommerce-warehouse 200 in 530ms (compile: 213ms, generate-params: 11ms, render: 317ms)
+ GET /about 200 in 2.5s (compile: 369ms, render: 2.1s)
+✓ Compiled in 940ms
+ GET / 200 in 1091ms (compile: 502ms, render: 589ms)
+ GET /membership/industries 200 in 1092ms (compile: 602ms, render: 490ms)
+ GET /global-textile-market 200 in 1094ms (compile: 740ms, render: 354ms)
+ GET /services/ecommerce-warehouse 200 in 235ms (compile: 20ms, generate-params: 11ms, render: 215ms)
+ GET /about 200 in 1121ms (compile: 235ms, render: 886ms)
+✓ Compiled in 1158ms
+✓ Compiled in 1244ms
+✓ Compiled in 1311ms
+✓ Compiled in 982ms

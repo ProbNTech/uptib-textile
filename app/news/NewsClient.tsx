@@ -298,7 +298,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
       )}
 
       {/* ============ LATEST NEWS GRID ============ */}
-      <section id="latest" className="relative bg-[#F8FAF9]">
+      <section id="latest" className="relative bg-white">
         {/* dot pattern */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -395,7 +395,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
       </section>
 
       {/* ============ NEWSLETTER ============ */}
-      <section className="bg-[#F8FAF9] pb-14 lg:pb-20">
+      <section className="bg-white pb-14 lg:pb-20">
         <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="relative overflow-hidden rounded-card bg-[#15402A] px-6 sm:px-10 lg:px-14 py-10">
             <div

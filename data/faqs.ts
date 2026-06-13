@@ -76,6 +76,34 @@ export const homeExporterFaqs: Faq[] = [
   },
 ];
 
+/** About-page FAQs — who we are and how we work, for buyers and exporters alike. */
+export const aboutFaqs: Faq[] = [
+  {
+    q: "What is Pakistan Textile Partners?",
+    a: "A London-based platform for UK–Pakistan textile trade and the textile division of the UK–Pakistan Trade and Investment Board (UPTIB). We act as the trusted bridge between Pakistan's manufacturing and global demand — marketing the supply, sourcing the demand, and standing as one accountable partner to both.",
+  },
+  {
+    q: "How is Pakistan Textile Partners related to UPTIB?",
+    a: "UPTIB is our parent company — the UK–Pakistan Trade and Investment Board. Pakistan Textile Partners is its dedicated textile division, focused solely on connecting Pakistan's textile makers with buyers worldwide.",
+  },
+  {
+    q: "Are you for buyers or for manufacturers?",
+    a: "Both. Buyers source dependable Pakistani textiles through us — vetted factories, samples, on-the-ground quality control and delivery. Pakistani manufacturers reach global buyers through us — profiles, market intelligence, matchmaking and market access. You never have to label yourself; just tell us what you need.",
+  },
+  {
+    q: "Where are you based?",
+    a: "We operate from offices in London and Lahore, giving us a presence on both sides of the trade — close to global buyers and close to the mills.",
+  },
+  {
+    q: "How do you guarantee quality?",
+    a: "Independent, on-the-ground inspection against your approved sample — raw material, in-line, midline and final pre-shipment to your AQL. Nothing ships until it passes.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Buyers can send a brief or request a quote and we'll return suitable factories, samples and pricing. Manufacturers can apply for membership to get in front of global buyers. Either way, contact us and we'll guide you from first enquiry to final delivery.",
+  },
+];
+
 /** Exporter FAQs live on the Marketing & Sales page. */
 export const exporterFaqs: Faq[] = [
   {

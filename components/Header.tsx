@@ -9,6 +9,7 @@ import { TopTicker } from "@/components/TopTicker";
 import {
   BedDouble, Shirt, Dumbbell, Stethoscope,
   ShoppingCart, Megaphone, Warehouse, Truck,
+  Compass, ClipboardList, Factory,
   type LucideIcon,
 } from "lucide-react";
 
@@ -77,7 +78,22 @@ const navItems: NavItem[] = [
   /* 3 — Global Textile Market */
   { kind: "link", label: "Global Textile Market", href: "/global-textile-market" },
   /* 4 — Membership */
-  { kind: "link", label: "Membership", href: "/membership" },
+  {
+    kind: "group",
+    label: "Membership",
+    tagline: "Join the supplier pool",
+    color: PRODUCT_GREEN,
+    editorial: {
+      headline: "More than a listing —\na route to real buyers.",
+      body: "Join the supplier pool global buyers source from. Build credibility, get matched to qualified demand, and grow your textile exports worldwide.",
+      cta: { label: "Membership overview →", href: "/membership" },
+    },
+    items: [
+      { label: "Overview", href: "/membership", desc: "Why membership beats a listing — benefits, the three tiers and who can join.", icon: Compass },
+      { label: "Become a Member", href: "/membership#apply", desc: "Complete the application and join the supplier pool buyers source from.", icon: ClipboardList },
+      { label: "Industry Directory", href: "/membership/industries", desc: "Explore Pakistan's textile sectors and the companies driving each one.", icon: Factory },
+    ],
+  },
   /* 5 — News */
   { kind: "link", label: "News", href: "/news" },
   /* 6 — Contact */

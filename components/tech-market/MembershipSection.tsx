@@ -307,13 +307,7 @@ export default function MembershipSection() {
 /* ───────────── WHAT DRIVES US — Separate exported component ───────────── */
 export function WhatDrivesUs() {
   return (
-    <section
-      className="relative z-[1] py-20 lg:py-28 overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(900px circle at 95% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 5% 100%, rgba(4,120,87,0.06), transparent 50%), #FFFFFF",
-      }}
-    >
+    <section className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white">
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">
