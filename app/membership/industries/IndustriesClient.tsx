@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import {
   BedDouble,
   Shirt,
@@ -18,6 +18,13 @@ import {
   Network,
   Plus,
   HelpCircle,
+  Star,
+  ChevronLeft,
+  ChevronRight,
+  MapPin,
+  Quote,
+  BadgeCheck,
+  ExternalLink,
   type LucideIcon,
 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
@@ -31,9 +38,6 @@ import type { CompanyCategory, DirectoryCompany } from "@/data/companies";
 import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
-
-const slugify = (s: string) =>
-  s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 /* ── Sector metadata — ordered as the value chain reads ──────────── */
 type SectorMeta = {
@@ -88,14 +92,6 @@ const sectors: SectorMeta[] = [
     image: "/image/textile/sectors/healthcare.jpg",
     span: "",
   },
-  {
-    key: "Sourcing & Buying House",
-    short: "Sourcing",
-    icon: Handshake,
-    tagline: "Buying houses that vet, audit and ship at scale.",
-    image: "/image/textile/sectors/sourcing.jpg",
-    span: "sm:col-span-2 lg:col-span-3",
-  },
 ];
 
 /* ── Value chain (fibre → freight) ───────────────────────────────── */
@@ -145,58 +141,149 @@ const faqJsonLd = {
   })),
 };
 
-const countFor = (key: CompanyCategory) =>
-  textileManufacturers.filter((c) => c.category === key).length;
+/* Sourcing & buying houses are intentionally excluded — we *are* the sourcing
+   partner, so the directory showcases the manufacturers, not the agents. */
+const sectorKeys = new Set<CompanyCategory>(sectors.map((s) => s.key));
+const directoryCompanies = textileManufacturers.filter((c) => sectorKeys.has(c.category));
 
-/* ── Company card (static — no hover effect) ─────────────────────── */
-function CompanyCard({ company }: { company: DirectoryCompany }) {
-  const [imgError, setImgError] = useState(false);
-  const initials = company.name
+const countFor = (key: CompanyCategory) =>
+  directoryCompanies.filter((c) => c.category === key).length;
+
+const sectorOf = (key: CompanyCategory) => sectors.find((s) => s.key === key);
+
+/* Hand-picked spotlight — Pakistan's flagship textile names. */
+const FEATURED_SLUGS = ["interloop", "masood-textile-mills"];
+const featuredCompanies = FEATURED_SLUGS.map(
+  (slug) => directoryCompanies.find((c) => c.slug === slug),
+).filter((c): c is DirectoryCompany => Boolean(c));
+
+/* Spotlight image galleries — a varied bento mosaic of each firm's textiles. */
+const FEATURED_GALLERIES: Record<string, string[]> = {
+  // Interloop — world's largest hosiery maker: socks-led, plus denim, seamless
+  // activewear and knitwear.
+  interloop: [
+    "/image/textile/featured/interloop-socks-1.jpg",
+    "/image/textile/apparel/denim-1.jpg",
+    "/image/textile/sportswear/gym-2-v4.jpg",
+    "/image/textile/apparel/knit-2.jpg",
+    "/image/textile/featured/interloop-socks-2.jpg",
+  ],
+  // Masood Textile Mills — vertically integrated knit apparel: knitwear,
+  // spinning/yarn, dyeing & finishing and finished garments.
+  "masood-textile-mills": [
+    "/image/textile/featured/masood-1.jpg",
+    "/image/textile/featured/masood-2.jpg",
+    "/image/textile/featured/masood-3.jpg",
+    "/image/textile/featured/masood-4.jpg",
+    "/image/textile/featured/masood-5.jpg",
+  ],
+};
+
+/* Bento spans for the 5-tile mosaic (3×3 grid) — deliberately uneven. */
+const GALLERY_SPANS = [
+  "col-span-2 row-span-2",
+  "col-span-1 row-span-1",
+  "col-span-1 row-span-2",
+  "col-span-1 row-span-1",
+  "col-span-1 row-span-1",
+];
+
+const initialsOf = (name: string) =>
+  name
     .split(" ")
     .slice(0, 2)
     .map((w) => w[0])
     .join("")
     .toUpperCase();
 
+/* ── Company card — flat grid tile (badge + location + tags) ──────── */
+function CompanyCard({ company }: { company: DirectoryCompany }) {
+  const [imgError, setImgError] = useState(false);
+  const sector = sectorOf(company.category);
+
   return (
-    <div className="flex flex-col rounded-xl border border-[#E8ECEA] bg-white p-5">
-      <div className="flex items-center gap-3.5">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#E8ECEA] bg-white p-6 shadow-[0_2px_12px_-8px_rgba(8,19,13,0.18)] transition-colors duration-200 hover:border-[#2F7549]/35">
+      {/* brand accent line */}
+      <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#15402A] to-[#2F7549]" aria-hidden />
+
+      <div className="flex items-start gap-3.5">
         {company.logoUrl && !imgError ? (
-          <span className="flex h-10 w-[72px] shrink-0 items-center justify-center">
+          <span className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#EEF1EF] bg-white p-1.5">
             <Image
               src={company.logoUrl}
               alt={company.name}
-              width={144}
-              height={80}
-              className="max-h-10 w-auto object-contain"
+              width={96}
+              height={96}
+              className="max-h-9 w-auto object-contain"
               onError={() => setImgError(true)}
             />
           </span>
         ) : (
-          <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#2F7549]/10 font-heading text-sm font-extrabold text-[#2F7549]">
-            {initials}
+          <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 font-heading text-sm font-extrabold text-[#2F7549]">
+            {initialsOf(company.name)}
           </span>
         )}
-        <h4 className="font-heading text-[15px] font-bold leading-snug text-[#16291E]">
-          {company.name}
-        </h4>
+        <div className="min-w-0">
+          <h4 className="font-heading text-[15px] font-bold leading-snug text-[#16291E]">
+            {company.name}
+          </h4>
+          <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1">
+            {sector && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#2F7549]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#2F7549]">
+                <sector.icon className="size-3" strokeWidth={2} aria-hidden />
+                {sector.short}
+              </span>
+            )}
+            {company.verified && (
+              <span className="inline-flex items-center gap-1 text-[11px] font-medium text-[#6B7280]">
+                <BadgeCheck className="size-3.5 text-[#2F7549]" aria-hidden />
+                Verified member
+              </span>
+            )}
+          </div>
+        </div>
       </div>
 
-      <p className="mt-3.5 flex-1 text-sm leading-relaxed text-[#6B7280] line-clamp-3">
+      <p className="mt-3.5 flex items-center gap-1.5 text-[13px] font-medium text-[#5A5F72]">
+        <MapPin className="size-3.5 shrink-0 text-[#9CA3AF]" aria-hidden />
+        {company.location}
+      </p>
+
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-[#6B7280] line-clamp-3">
         {company.description}
       </p>
 
-      {company.websiteUrl && (
-        <a
-          href={company.websiteUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-[#2F7549]"
-        >
-          Visit website
-          <ArrowRight className="size-3.5" aria-hidden />
-        </a>
+      {company.services.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {company.services.slice(0, 4).map((s) => (
+            <span
+              key={s}
+              className="rounded-md bg-[#F4F7F5] px-2.5 py-1 text-[11px] font-medium text-[#475467]"
+            >
+              {s}
+            </span>
+          ))}
+        </div>
       )}
+
+      <div className="mt-5 flex items-center justify-between border-t border-[#EEF1EF] pt-4">
+        {company.websiteUrl ? (
+          <a
+            href={company.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549]"
+          >
+            Visit website
+            <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden />
+          </a>
+        ) : (
+          <span />
+        )}
+        <span className="text-[10px] font-semibold uppercase tracking-wide text-[#B6BEB9]">
+          Verified Member
+        </span>
+      </div>
     </div>
   );
 }
@@ -204,10 +291,15 @@ function CompanyCard({ company }: { company: DirectoryCompany }) {
 export default function IndustriesClient() {
   const shouldReduceMotion = useReducedMotion();
   const populatedSectors = sectors.filter((s) => countFor(s.key) > 0);
-  const totalCompanies = textileManufacturers.length;
+  const totalCompanies = directoryCompanies.length;
 
   const [active, setActive] = useState<CompanyCategory | "all">("all");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const visibleCompanies =
+    active === "all"
+      ? directoryCompanies
+      : directoryCompanies.filter((c) => c.category === active);
 
   return (
     <div>
@@ -215,7 +307,7 @@ export default function IndustriesClient() {
       <PageHero
         label="Industries"
         minHeightClass="min-h-[540px] md:min-h-[580px] lg:min-h-[620px]"
-        title="Inside Pakistan's textile industry"
+        title="Leading industries inside Pakistan's textile"
         subtitle="From the cotton fields of Punjab to the sportswear hub of Sialkot — explore the sectors that make Pakistan a top-ten global textile exporter, and the companies operating across each one."
         image="/image/hero-bg/pexels-cottonbro-6580549.jpg"
       >
@@ -271,8 +363,8 @@ export default function IndustriesClient() {
           <AnimatedSection>
             <SectionLabel
               label="The textile landscape"
-              title="Six sectors, one supply chain"
-              body="Pakistan's textile industry spans the full value chain — from yarn and fabric to finished home textiles, apparel, sportswear and healthcare garments, joined by the sourcing houses that connect it to buyers worldwide."
+              title="Five sectors, one supply chain"
+              body="Pakistan's textile industry spans the full value chain — from yarn and fabric to finished home textiles, apparel, sportswear and healthcare garments — supplying buyers worldwide."
               color="#2F7549"
               hideLine
             />
@@ -285,8 +377,8 @@ export default function IndustriesClient() {
               return (
                 <motion.a
                   key={s.key}
-                  href={`#sector-${slugify(s.key)}`}
-                  onClick={() => setActive("all")}
+                  href="#directory"
+                  onClick={() => setActive(s.key)}
                   initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 22 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -419,13 +511,22 @@ export default function IndustriesClient() {
                 Companies across the value chain
               </h2>
               <p className="mt-5 max-w-md text-base leading-relaxed text-[#5A5F72]">
-                A snapshot of the manufacturers, mills and sourcing houses operating across every
-                stage of Pakistan&apos;s textile industry — the kind of producers that supply buyers
+                A snapshot of the manufacturers and mills operating across every stage of
+                Pakistan&apos;s textile industry — the kind of producers that supply buyers
                 worldwide.
               </p>
             </div>
           </div>
         </div>
+
+        {/* Featured spotlight */}
+        {featuredCompanies.length > 0 && (
+          <div className="bg-white">
+            <div className={cn(PX, "pt-12 lg:pt-16")}>
+              <FeaturedSpotlight companies={featuredCompanies} />
+            </div>
+          </div>
+        )}
 
         {/* Filter tabs */}
         <div className="bg-white">
@@ -444,94 +545,35 @@ export default function IndustriesClient() {
           </div>
         </div>
 
-        {/* Sector rows — alternating light / dark-green bands */}
-        {populatedSectors.map((s, i) => {
-          if (active !== "all" && active !== s.key) return null;
-          const Icon = s.icon;
-          const dark = i % 2 === 1;
-          const list = textileManufacturers.filter((c) => c.category === s.key);
-          return (
-            <div
-              key={s.key}
-              id={`sector-${slugify(s.key)}`}
-              className={cn(
-                "scroll-mt-24",
-                dark ? "relative overflow-hidden bg-[#15402A]" : "bg-white",
-              )}
+        {/* Company grid — one flat, filterable grid (badges narrow it down) */}
+        <div className="bg-white">
+          <div className={cn(PX, "pb-2")}>
+            <motion.div
+              layout
+              className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
             >
-              {dark && (
-                <div
-                  className="pointer-events-none absolute inset-0 opacity-[0.06]"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
-                    backgroundSize: "48px 48px",
-                  }}
-                  aria-hidden
-                />
-              )}
-              <div className={cn("relative", PX, "py-12 lg:py-14")}>
-                <motion.div
-                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.45 }}
-                  className="lg:grid lg:grid-cols-[248px_1fr] lg:gap-10"
-                >
-                  {/* Left: sector label */}
-                  <div className="mb-6 lg:mb-0">
-                    <span
-                      className={cn(
-                        "inline-flex size-8 items-center justify-center rounded-lg text-xs font-bold tabular-nums",
-                        dark ? "bg-[#8FD3AE] text-[#0A1F16]" : "bg-[#15402A] text-white",
-                      )}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div
-                      className={cn(
-                        "mt-5 mb-4 inline-flex size-[72px] items-center justify-center rounded-full border",
-                        dark
-                          ? "border-white/20 bg-white/10 text-[#8FD3AE]"
-                          : "border-[#E4EAE6] bg-[#F4F7F5] text-[#2F7549]",
-                      )}
-                    >
-                      <Icon className="size-8" strokeWidth={1.5} aria-hidden />
-                    </div>
-                    <h3
-                      className={cn(
-                        "font-heading text-lg font-bold leading-snug",
-                        dark ? "text-white" : "text-[#16291E]",
-                      )}
-                    >
-                      {s.key}
-                    </h3>
-                    <p
-                      className={cn(
-                        "mt-2 max-w-[220px] text-sm leading-relaxed",
-                        dark ? "text-white/70" : "text-[#6B7280]",
-                      )}
-                    >
-                      {s.tagline}
-                    </p>
-                  </div>
-
-                  {/* Right: company cards */}
-                  <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                    {list.map((company) => (
-                      <CompanyCard key={company.slug} company={company} />
-                    ))}
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          );
-        })}
+              <AnimatePresence mode="popLayout">
+                {visibleCompanies.map((company) => (
+                  <motion.div
+                    key={company.slug}
+                    layout
+                    initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <CompanyCard company={company} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </div>
 
         {/* Closing band */}
         <div className="bg-white">
-          <div className={cn(PX, "py-12 lg:py-16")}>
-            <div className="relative overflow-hidden rounded-2xl bg-[#EEF2F0] px-7 py-8 sm:px-10">
+          <div className={cn(PX, "pt-2 pb-12 lg:pb-16")}>
+            <div className="relative overflow-hidden rounded-2xl bg-[#15402A] px-7 py-8 sm:px-10">
               <div
                 className="pointer-events-none absolute -right-6 top-1/2 hidden -translate-y-1/2 opacity-[0.18] sm:block"
                 aria-hidden
@@ -540,7 +582,7 @@ export default function IndustriesClient() {
                   className="h-40 w-56"
                   style={{
                     backgroundImage:
-                      "repeating-linear-gradient(60deg, #15402A 0 2px, transparent 2px 14px)",
+                      "repeating-linear-gradient(60deg, white 0 2px, transparent 2px 14px)",
                     maskImage: "radial-gradient(circle at 70% 50%, black, transparent 70%)",
                     WebkitMaskImage: "radial-gradient(circle at 70% 50%, black, transparent 70%)",
                   }}
@@ -551,16 +593,16 @@ export default function IndustriesClient() {
                   <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[#2F7549] shadow-sm">
                     <Network className="size-7" strokeWidth={1.6} aria-hidden />
                   </span>
-                  <h3 className="font-heading text-xl font-extrabold leading-tight text-[#16291E] sm:text-2xl">
+                  <h3 className="font-heading text-xl font-extrabold leading-tight text-white sm:text-2xl">
                     Building connections.
                     <br className="hidden sm:block" /> Weaving success.
                   </h3>
                 </div>
-                <p className="max-w-sm text-sm leading-relaxed text-[#6B7280]">
+                <p className="max-w-sm text-sm leading-relaxed text-white/85">
                   Join the supplier pool global buyers source from and put your products in front of
                   qualified demand worldwide.
                 </p>
-                <Button href="/membership" variant="primary" size="lg" showArrow className="shrink-0">
+                <Button href="/membership" variant="glass" size="lg" showArrow className="shrink-0">
                   Join the network
                 </Button>
               </div>
@@ -711,5 +753,215 @@ function FilterTab({
     >
       {label}
     </button>
+  );
+}
+
+/* ── Featured spotlight carousel ─────────────────────────────────── */
+function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
+  const [idx, setIdx] = useState(0);
+  const [logoError, setLogoError] = useState(false);
+  const count = companies.length;
+  const company = companies[idx];
+  const sector = sectorOf(company.category);
+  const gallery = FEATURED_GALLERIES[company.slug] ?? [];
+
+  const go = (next: number) => {
+    setLogoError(false);
+    setIdx((next + count) % count);
+  };
+
+  return (
+    <div>
+      {/* Header row */}
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#2F7549]/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#2F7549]">
+            <Star className="size-3.5 fill-current" aria-hidden />
+            {count} Featured {count === 1 ? "Company" : "Companies"}
+          </span>
+          <h2 className="mt-4 font-heading text-2xl font-extrabold leading-tight text-[#16291E] sm:text-3xl lg:text-[2.3rem]">
+            Editorial picks — Pakistan&apos;s textile leaders
+          </h2>
+        </div>
+
+        {count > 1 && (
+          <div className="flex items-center gap-5">
+            <span className="font-heading text-sm font-bold tabular-nums text-[#16291E]">
+              {String(idx + 1).padStart(2, "0")}{" "}
+              <span className="text-[#B6BEB9]">/ {String(count).padStart(2, "0")}</span>
+            </span>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => go(idx - 1)}
+                aria-label="Previous featured company"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-[#D8E0DB] text-[#16291E] transition-colors hover:border-[#2F7549] hover:text-[#2F7549]"
+              >
+                <ChevronLeft className="size-5" aria-hidden />
+              </button>
+              <button
+                type="button"
+                onClick={() => go(idx + 1)}
+                aria-label="Next featured company"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-[#D8E0DB] text-[#16291E] transition-colors hover:border-[#2F7549] hover:text-[#2F7549]"
+              >
+                <ChevronRight className="size-5" aria-hidden />
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Card — dark-green brand panel with dot texture */}
+      <div className="relative mt-8 overflow-hidden rounded-3xl bg-[#15402A] shadow-[0_30px_60px_-30px_rgba(8,19,13,0.55)]">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
+            backgroundSize: "48px 48px",
+          }}
+          aria-hidden
+        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={company.slug}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.35 }}
+            className="relative grid lg:grid-cols-[minmax(0,0.94fr)_1.06fr]"
+          >
+            {/* Left — textile image mosaic with name overlaid */}
+            <div className="relative min-h-[380px] overflow-hidden lg:min-h-[460px]">
+              {gallery.length > 0 ? (
+                <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-1.5 p-1.5">
+                  {gallery.slice(0, 5).map((src, i) => (
+                    <div
+                      key={src}
+                      className={cn("relative overflow-hidden rounded-lg", GALLERY_SPANS[i])}
+                    >
+                      <Image
+                        src={src}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 22vw, 50vw"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-[#15402A] to-[#2F7549]" />
+              )}
+
+              {/* legibility scrim */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#04130B] via-[#04130B]/45 to-[#04130B]/10" />
+
+              {/* overlay content */}
+              <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-7">
+                {sector && (
+                  <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/25 bg-black/25 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wide text-white backdrop-blur-sm">
+                    <sector.icon className="size-3.5" strokeWidth={2} aria-hidden />
+                    {sector.short}
+                  </span>
+                )}
+                <div>
+                  {company.logoUrl && !logoError ? (
+                    <span className="inline-flex h-16 w-fit items-center rounded-2xl bg-white px-5 shadow-[0_12px_30px_-12px_rgba(0,0,0,0.6)]">
+                      <Image
+                        src={company.logoUrl}
+                        alt={company.name}
+                        width={220}
+                        height={104}
+                        className="max-h-10 w-auto object-contain"
+                        onError={() => setLogoError(true)}
+                      />
+                    </span>
+                  ) : (
+                    <h3 className="font-heading text-2xl font-extrabold leading-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.7)] sm:text-[1.8rem]">
+                      {company.name}
+                    </h3>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Right — details on the dark-green field */}
+            <div className="relative flex flex-col p-7 lg:p-10">
+              <p className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-white/90">
+                <MapPin className="size-4 text-[#8FD3AE]" aria-hidden />
+                {company.location}
+              </p>
+              <Quote className="mt-6 size-8 text-[#8FD3AE]/40" aria-hidden />
+              <p className="mt-3 font-heading text-lg font-semibold leading-relaxed text-white sm:text-xl">
+                {company.description}
+              </p>
+
+              <p className="mt-7 text-xs font-bold uppercase tracking-[0.18em] text-[#8FD3AE]">
+                What they deliver
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {company.services.map((s) => (
+                  <span
+                    key={s}
+                    className="rounded-lg border border-white/15 bg-white/10 px-3 py-1.5 text-sm font-medium text-white/90"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-auto flex flex-col gap-5 pt-9 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-wrap items-center gap-3">
+                  {company.websiteUrl && (
+                    <a
+                      href={company.websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#15402A] transition-colors hover:bg-[#8FD3AE]"
+                    >
+                      Visit website
+                      <ExternalLink className="size-4" aria-hidden />
+                    </a>
+                  )}
+                  <Link
+                    href="/membership"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                  >
+                    Explore all members
+                    <ArrowRight className="size-4" aria-hidden />
+                  </Link>
+                </div>
+                {company.verified && (
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#8FD3AE]">
+                    <BadgeCheck className="size-4" aria-hidden />
+                    Verified Member
+                  </span>
+                )}
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Progress segments */}
+      {count > 1 && (
+        <div className="mt-5 flex items-center gap-2">
+          {companies.map((c, i) => (
+            <button
+              key={c.slug}
+              type="button"
+              onClick={() => go(i)}
+              aria-label={`Show ${c.name}`}
+              className={cn(
+                "h-1 rounded-full transition-all duration-300",
+                i === idx ? "w-10 bg-[#15402A]" : "w-5 bg-[#D8E0DB] hover:bg-[#B6BEB9]",
+              )}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   );
 }

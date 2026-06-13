@@ -462,7 +462,7 @@ export const products: ProductCategory[] = [
           ],
           images: [
             { src: "/image/textile/apparel/skirts-1.jpg", alt: "An elegant white dress styled by a vintage screen" },
-            { src: "/image/textile/apparel/skirts-2.jpg", alt: "A woman in a floral summer dress outdoors" },
+            { src: "/image/skirt-v1.jpg", alt: "A woman in a floral summer dress outdoors" },
             { src: "/image/textile/apparel/skirts-3.jpg", alt: "Two women in summer dresses" },
             { src: "/image/textile/apparel/skirts-4.jpg", alt: "Models in white tops and denim skirts" },
           ],

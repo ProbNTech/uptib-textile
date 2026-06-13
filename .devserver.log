@@ -1724,3 +1724,87 @@ https://nextjs.org/docs/messages/module-not-found
 ✓ Compiled in 1233ms
 ✓ Compiled in 1129ms
 ✓ Compiled in 1086ms
+ GET /membership/industries 200 in 121ms (compile: 15ms, render: 106ms)
+ GET /global-textile-market 200 in 1406ms (compile: 32ms, render: 1374ms)
+ GET /services/ecommerce-warehouse 200 in 216ms (compile: 73ms, generate-params: 43ms, render: 143ms)
+ GET /products/apparel-accessories 200 in 1732ms (compile: 1642ms, generate-params: 999ms, render: 91ms)
+✓ Compiled in 1177ms
+✓ Compiled in 975ms
+✓ Compiled in 1086ms
+✓ Compiled in 1018ms
+✓ Compiled in 1339ms
+✓ Compiled in 1104ms
+✓ Compiled in 828ms
+✓ Compiled in 621ms
+✓ Compiled in 2.2s
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:498:16)
+  496 |           <div className="bg-white">
+  497 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 498 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  499 |             </div>
+  500 |           </div>
+  501 |         )} {
+  digest: '272193455'
+}
+ GET /membership/industries 500 in 771ms (compile: 232ms, render: 538ms)
+✓ Compiled in 879ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:498:16)
+  496 |           <div className="bg-white">
+  497 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 498 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  499 |             </div>
+  500 |           </div>
+  501 |         )} {
+  digest: '1362238766'
+}
+ GET /membership/industries 500 in 941ms (compile: 227ms, render: 714ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 934ms
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:498:16)
+  496 |           <div className="bg-white">
+  497 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 498 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  499 |             </div>
+  500 |           </div>
+  501 |         )} {
+  digest: '1362238766'
+}
+ GET /membership/industries 500 in 933ms (compile: 207ms, render: 726ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 763ms
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:495:16)
+  493 |           <div className="bg-white">
+  494 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 495 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  496 |             </div>
+  497 |           </div>
+  498 |         )} {
+  digest: '272193455'
+}
+ GET /membership/industries 500 in 1101ms (compile: 293ms, render: 808ms)
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:495:16)
+  493 |           <div className="bg-white">
+  494 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 495 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  496 |             </div>
+  497 |           </div>
+  498 |         )} {
+  digest: '272193455'
+}
+ GET /membership/industries 500 in 732ms (compile: 20ms, render: 712ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 1751ms
+ GET /membership/industries 200 in 1018ms (compile: 303ms, render: 715ms)
