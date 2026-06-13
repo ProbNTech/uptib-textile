@@ -151,7 +151,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       {p.showcase ? (
         <ProductShowcase showcase={p.showcase} />
       ) : (
-        <section className="bg-[#F8FAF9] py-20 lg:py-28">
+        <section className="bg-white py-20 lg:py-28">
           <div className={PX}>
             <AnimatedSection>
               <SectionLabel
@@ -216,21 +216,30 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── THE FACTS ────────────────────────────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
-        <div className={PX}>
+      <section className="relative overflow-hidden bg-[#15402A] py-20 lg:py-28">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)",
+            backgroundSize: "48px 48px",
+          }}
+          aria-hidden
+        />
+        <div className={cn("relative", PX)}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-16">
               <div className="lg:sticky lg:top-28 lg:self-start lg:max-w-sm">
-                <SectionLabel label="The facts" title="The numbers behind the category" color="#2F7549" hideLine />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
-                <p className="text-[#5A5F72] text-base leading-relaxed mb-7">
+                <SectionLabel label="The facts" title="The numbers behind the category" color="#6FC79A" light hideLine />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#6FC79A] to-[#8FD3AE] -mt-3 mb-5" />
+                <p className="text-white/70 text-base leading-relaxed mb-7">
                   Verified strengths, demand and standards for {p.name.toLowerCase()} — so you can buy with confidence.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {p.certList.map((c) => (
                     <span
                       key={c}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-[#2F7549]/10 px-3 py-1.5 text-xs font-bold text-[#2F7549]"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-xs font-bold text-[#8FD3AE]"
                     >
                       <BadgeCheck className="size-3.5" aria-hidden /> {c}
                     </span>
@@ -238,12 +247,12 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-[#E5E7EB] overflow-hidden shadow-sm">
-                <dl className="divide-y divide-[#E5E7EB]">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.04] overflow-hidden shadow-sm backdrop-blur-sm">
+                <dl className="divide-y divide-white/10">
                   {factRows.map((row) => (
                     <div key={row.label} className="grid grid-cols-1 sm:grid-cols-3 gap-2 px-6 py-6">
-                      <dt className="font-heading font-bold text-[#2F7549] text-sm uppercase tracking-wide">{row.label}</dt>
-                      <dd className="sm:col-span-2 text-[#3D4152] leading-relaxed">{row.value}</dd>
+                      <dt className="font-heading font-bold text-[#8FD3AE] text-sm uppercase tracking-wide">{row.label}</dt>
+                      <dd className="sm:col-span-2 text-white/85 leading-relaxed">{row.value}</dd>
                     </div>
                   ))}
                 </dl>
@@ -294,7 +303,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── OTHER CATEGORIES ─────────────────────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
+      <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel

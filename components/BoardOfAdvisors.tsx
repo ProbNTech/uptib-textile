@@ -61,18 +61,18 @@ export default function BoardOfAdvisors({ dark = false }: { dark?: boolean }) {
       className="relative py-20 lg:py-28 overflow-hidden"
       style={{
         background: dark
-          ? "linear-gradient(135deg, #15402A 0%, #0B1410 100%)"
+          ? "#15402A"
           : "radial-gradient(1000px circle at 50% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 10% 100%, rgba(5,150,105,0.05), transparent 50%), radial-gradient(700px circle at 90% 100%, rgba(16,185,129,0.04), transparent 50%), #FFFFFF",
       }}
     >
       {/* Subtle dot-grid texture */}
       <div
-        className={dark ? "absolute inset-0 opacity-[0.06]" : "absolute inset-0 opacity-[0.03]"}
+        className={dark ? "absolute inset-0 opacity-[0.06] pointer-events-none" : "absolute inset-0 opacity-[0.03]"}
         style={{
           backgroundImage: dark
-            ? "radial-gradient(circle, #FFFFFF 0.5px, transparent 0.5px)"
+            ? "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)"
             : "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)",
-          backgroundSize: "24px 24px",
+          backgroundSize: dark ? "48px 48px" : "24px 24px",
         }}
       />
 

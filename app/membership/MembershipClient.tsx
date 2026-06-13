@@ -634,11 +634,7 @@ export default function MembershipClient() {
 
       {/* ── FAQs (home-page accordion design) ────────────────────── */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.06), transparent 50%), #FFFFFF",
-        }}
+        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
         aria-labelledby="membership-faq-heading"
       >
         <div className={cn("relative", PX)}>

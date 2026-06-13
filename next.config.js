@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
+// In development, images change under the same filename while we iterate, so the
+// aggressive "immutable, 1-year" cache makes the browser keep showing stale copies.
+// Relax it in dev; keep it aggressive (best for performance) in production.
+const isProd = process.env.NODE_ENV === 'production';
+const IMAGE_CACHE = isProd
+  ? 'public, max-age=31536000, immutable'
+  : 'no-store, must-revalidate';
+
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -23,7 +31,7 @@ const nextConfig = {
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
+    minimumCacheTTL: isProd ? 31536000 : 0,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
@@ -35,7 +43,7 @@ const nextConfig = {
     {
       source: '/image/:path*',
       headers: [
-        { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        { key: 'Cache-Control', value: IMAGE_CACHE },
       ],
     },
     {

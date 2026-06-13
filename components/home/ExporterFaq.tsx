@@ -6,29 +6,38 @@ import { Plus, HelpCircle, ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { homeExporterFaqs } from "@/data/faqs";
+import type { Faq } from "@/types";
 import { cn } from "@/lib/utils";
 
-// FAQ structured data — helps the section surface as rich results.
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: homeExporterFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+type ExporterFaqProps = {
+  faqs?: Faq[];
+  label?: string;
+  title?: string;
+  body?: string;
 };
 
-export default function ExporterFaq() {
+export default function ExporterFaq({
+  faqs = homeExporterFaqs,
+  label = "FAQs",
+  title = "Frequently asked questions",
+  body = "What Pakistani textile exporters ask us most about reaching buyers worldwide.",
+}: ExporterFaqProps = {}) {
   const [open, setOpen] = useState<number | null>(0);
+
+  // FAQ structured data — helps the section surface as rich results.
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
 
   return (
     <section
-      className="relative z-[1] py-20 lg:py-28 overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.06), transparent 50%), #F8FAFC",
-      }}
+      className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
       aria-labelledby="faq-heading"
     >
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -37,9 +46,9 @@ export default function ExporterFaq() {
             {/* Intro — sticky on desktop */}
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionLabel
-                label="FAQs"
-                title="Frequently asked questions"
-                body="What Pakistani textile exporters ask us most about reaching buyers worldwide."
+                label={label}
+                title={title}
+                body={body}
                 color="#2F7549"
               />
 
@@ -66,7 +75,7 @@ export default function ExporterFaq() {
 
             {/* Accordion */}
             <div className="flex flex-col gap-3">
-              {homeExporterFaqs.map((item, i) => {
+              {faqs.map((item, i) => {
                 const isOpen = open === i;
                 const panelId = `home-faq-panel-${i}`;
                 const buttonId = `home-faq-button-${i}`;

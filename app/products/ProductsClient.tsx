@@ -305,7 +305,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── SUSTAINABILITY & COMPLIANCE ──────────────────────────── */}
-      <section className="bg-[#F8FAF9] py-20 lg:py-28">
+      <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -428,11 +428,7 @@ export default function ProductsClient() {
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(900px circle at 0% 0%, rgba(4,120,87,0.07), transparent 50%), radial-gradient(800px circle at 100% 100%, rgba(16,185,129,0.06), transparent 50%), #F8FAFC",
-        }}
+        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
         aria-labelledby="products-faq-heading"
       >
         <div className={cn("relative", PX)}>

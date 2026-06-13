@@ -31,9 +31,9 @@
 
     /* Backgrounds — soft, light, gentle */
     --bg-default: #FFFFFF;
-    --bg-alt: #F4F8F5;     /* soft green-tinted section wash */
+    --bg-alt: #FFFFFF;     /* unified to white — no tinted section washes */
     --bg-white: #FFFFFF;
-    --bg-tint: #F4F8F5;    /* very light off-white section wash */
+    --bg-tint: #FFFFFF;    /* unified to white — no tinted section washes */
 
     /* Neutral text — soft green-charcoal headings, warm slate body */
     --text-primary: #16291E;   /* soft green-charcoal ink (not harsh black) */
