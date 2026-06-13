@@ -1854,3 +1854,4 @@ https://nextjs.org/docs/messages/module-not-found
 ✓ Compiled in 907ms
 ✓ Compiled in 992ms
 ✓ Compiled in 1186ms
+ GET /services/ecommerce-warehouse 200 in 217ms (compile: 82ms, generate-params: 46ms, render: 134ms)
