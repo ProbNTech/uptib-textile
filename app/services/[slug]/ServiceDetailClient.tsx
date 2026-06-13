@@ -55,7 +55,7 @@ const LIST_ICONS: LucideIcon[] = [CheckCircle2, Sparkles, Award, Globe2, ShieldC
 
 /* ── Flexible content blocks (carried over, now richer) ── */
 type Block =
-  | { type: "list"; title: string; intro?: string; items: string[]; icons?: LucideIcon[] }
+  | { type: "list"; title: string; intro?: string; items: string[]; icons?: LucideIcon[]; logos?: string[] }
   | { type: "steps"; title: string; intro?: string; items: { step: string; text: string }[]; icons?: LucideIcon[] }
   | { type: "callout"; variant: "qa" | "gsp"; title: string; text: string }
   | {
@@ -270,6 +270,27 @@ const detail: Record<string, ServiceDetail> = {
       },
       {
         type: "list",
+        title: "Sell across every major marketplace",
+        intro: "We don't stop at Amazon. We set you up and manage your presence across the channels UK and global shoppers actually buy from — so your products are wherever your customers are.",
+        logos: [
+          "/image/platforms/amazon.svg",
+          "/image/platforms/ebay.svg",
+          "/image/platforms/tiktok.svg",
+          "/image/platforms/etsy.svg",
+          "/image/platforms/shopify.svg",
+          "/image/platforms/google.svg",
+        ],
+        items: [
+          "Amazon UK & FBA — Sell to millions of Prime shoppers with fulfilment handled for you.",
+          "eBay UK — List and sell on one of Britain's largest online marketplaces.",
+          "TikTok Shop — Reach younger buyers and sell directly through social video.",
+          "Etsy — Showcase handmade, artisan and premium textile products to global buyers.",
+          "Shopify — Your own branded online store with UK payment-gateway integration.",
+          "Google Shopping — Put your products in front of shoppers searching on Google.",
+        ],
+      },
+      {
+        type: "list",
         title: "Warehousing & fulfilment",
         items: [
           "Secure warehousing and storage close to customers.",
@@ -286,7 +307,7 @@ const detail: Record<string, ServiceDetail> = {
           { step: "Market entry", text: "Business-setup guidance, Amazon seller registration, VAT and compliance support, and trademark / brand registration." },
           { step: "Warehousing", text: "Container receiving, inventory storage and stock management, inspection, labelling and pick-and-pack close to your customers." },
           { step: "Amazon programme", text: "Seller-account setup, Brand Store creation, listing optimisation, photography, SEO, PPC and review management — with FBA fulfilment." },
-          { step: "Direct e-commerce", text: "A dedicated Shopify store, payment-gateway integration, Google Shopping and social advertising to build your own brand." },
+          { step: "Direct e-commerce", text: "A dedicated Shopify store plus eBay UK, TikTok Shop and Etsy listings, payment-gateway integration, Google Shopping and social advertising to build your own brand." },
           { step: "Europe expansion", text: "Scale into Amazon Germany, France, Italy and Spain, plus B2B wholesale distribution." },
         ],
       },
@@ -729,14 +750,21 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                       <div className={cn("grid grid-cols-1 sm:grid-cols-2 gap-7", lgCols)}>
                         {block.items.map((item, i) => {
                           const Icon = listIcons[i % listIcons.length];
+                          const logo = block.logos?.[i];
                           const sep = item.indexOf(" — ");
                           const head = sep >= 0 ? item.slice(0, sep) : null;
                           const desc = sep >= 0 ? item.slice(sep + 3) : item;
                           return (
                             <div key={item} className="flex flex-col gap-2.5">
-                              <span className="inline-flex size-10 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-[#8FD3AE]">
-                                <Icon className="size-5" strokeWidth={1.6} aria-hidden />
-                              </span>
+                              {logo ? (
+                                <span className="inline-flex size-10 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-black/5">
+                                  <Image src={logo} alt={`${head ?? desc} logo`} width={22} height={22} className="size-[22px] object-contain" />
+                                </span>
+                              ) : (
+                                <span className="inline-flex size-10 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-[#8FD3AE]">
+                                  <Icon className="size-5" strokeWidth={1.6} aria-hidden />
+                                </span>
+                              )}
                               {head && (
                                 <p className="font-heading font-bold text-white text-[15px] leading-snug">{head}</p>
                               )}

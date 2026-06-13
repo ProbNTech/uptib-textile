@@ -1724,3 +1724,141 @@ https://nextjs.org/docs/messages/module-not-found
 ✓ Compiled in 1233ms
 ✓ Compiled in 1129ms
 ✓ Compiled in 1086ms
+ GET /membership/industries 200 in 121ms (compile: 15ms, render: 106ms)
+ GET /global-textile-market 200 in 1406ms (compile: 32ms, render: 1374ms)
+ GET /services/ecommerce-warehouse 200 in 216ms (compile: 73ms, generate-params: 43ms, render: 143ms)
+ GET /products/apparel-accessories 200 in 1732ms (compile: 1642ms, generate-params: 999ms, render: 91ms)
+✓ Compiled in 1177ms
+✓ Compiled in 975ms
+✓ Compiled in 1086ms
+✓ Compiled in 1018ms
+✓ Compiled in 1339ms
+✓ Compiled in 1104ms
+✓ Compiled in 828ms
+✓ Compiled in 621ms
+✓ Compiled in 2.2s
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:498:16)
+  496 |           <div className="bg-white">
+  497 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 498 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  499 |             </div>
+  500 |           </div>
+  501 |         )} {
+  digest: '272193455'
+}
+ GET /membership/industries 500 in 771ms (compile: 232ms, render: 538ms)
+✓ Compiled in 879ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:498:16)
+  496 |           <div className="bg-white">
+  497 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 498 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  499 |             </div>
+  500 |           </div>
+  501 |         )} {
+  digest: '1362238766'
+}
+ GET /membership/industries 500 in 941ms (compile: 227ms, render: 714ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 934ms
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:498:16)
+  496 |           <div className="bg-white">
+  497 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 498 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  499 |             </div>
+  500 |           </div>
+  501 |         )} {
+  digest: '1362238766'
+}
+ GET /membership/industries 500 in 933ms (compile: 207ms, render: 726ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 763ms
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:495:16)
+  493 |           <div className="bg-white">
+  494 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 495 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  496 |             </div>
+  497 |           </div>
+  498 |         )} {
+  digest: '272193455'
+}
+ GET /membership/industries 500 in 1101ms (compile: 293ms, render: 808ms)
+⨯ ReferenceError: FeaturedSpotlight is not defined
+    at IndustriesClient (app\membership\industries\IndustriesClient.tsx:495:16)
+  493 |           <div className="bg-white">
+  494 |             <div className={cn(PX, "pt-12 lg:pt-16")}>
+> 495 |               <FeaturedSpotlight companies={featuredCompanies} />
+      |                ^
+  496 |             </div>
+  497 |           </div>
+  498 |         )} {
+  digest: '272193455'
+}
+ GET /membership/industries 500 in 732ms (compile: 20ms, render: 712ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 1751ms
+ GET /membership/industries 200 in 1018ms (compile: 303ms, render: 715ms)
+✓ Compiled in 829ms
+ GET /membership/industries 200 in 2.2s (compile: 269ms, render: 1926ms)
+ GET /products/apparel-accessories 200 in 1761ms (compile: 212ms, generate-params: 11ms, render: 1549ms)
+ GET /services/ecommerce-warehouse 200 in 1761ms (compile: 577ms, generate-params: 10ms, render: 1184ms)
+ GET /membership/industries 200 in 1762ms (compile: 921ms, render: 841ms)
+ GET /membership/industries 200 in 927ms (compile: 11ms, render: 916ms)
+ GET /products/apparel-accessories 200 in 805ms (compile: 19ms, generate-params: 47µs, render: 787ms)
+ GET /services/ecommerce-warehouse 200 in 801ms (compile: 165ms, generate-params: 66µs, render: 636ms)
+ GET /services/ecommerce-warehouse 200 in 453ms (compile: 9ms, generate-params: 62µs, render: 444ms)
+ GET /products/apparel-accessories 200 in 223ms (compile: 22ms, generate-params: 15ms, render: 201ms)
+ GET /membership/industries 200 in 1281ms (compile: 18ms, render: 1263ms)
+✓ Compiled in 993ms
+✓ Compiled in 1195ms
+✓ Compiled in 1001ms
+✓ Compiled in 1308ms
+ GET /membership 200 in 532ms (compile: 431ms, render: 101ms)
+✓ Compiled in 530ms
+✓ Compiled in 560ms
+✓ Compiled in 659ms
+✓ Compiled in 631ms
+✓ Compiled in 1222ms
+✓ Compiled in 878ms
+✓ Compiled in 486ms
+ GET /membership/industries 200 in 1287ms (compile: 229ms, render: 1058ms)
+✓ Compiled in 730ms
+ GET /membership/industries 200 in 1579ms (compile: 295ms, render: 1285ms)
+ GET /membership/industries 200 in 635ms (compile: 10ms, render: 625ms)
+ GET /membership/industries 200 in 519ms (compile: 7ms, render: 512ms)
+ GET /membership/industries 200 in 861ms (compile: 16ms, render: 845ms)
+ GET /membership/industries 200 in 861ms (compile: 8ms, render: 853ms)
+✓ Compiled in 471ms
+✓ Compiled in 1055ms
+ GET /membership/industries 200 in 1380ms (compile: 276ms, render: 1104ms)
+✓ Compiled in 7ms
+✓ Compiled in 914ms
+✓ Compiled in 886ms
+✓ Compiled in 903ms
+ GET /membership/industries 200 in 1549ms (compile: 442ms, render: 1107ms)
+ GET /membership/industries 200 in 680ms (compile: 21ms, render: 659ms)
+ GET /membership/industries 200 in 692ms (compile: 17ms, render: 675ms)
+✓ Compiled in 595ms
+✓ Compiled in 477ms
+✓ Compiled in 1071ms
+✓ Compiled in 907ms
+✓ Compiled in 992ms
+✓ Compiled in 1186ms
+ GET /services/ecommerce-warehouse 200 in 217ms (compile: 82ms, generate-params: 46ms, render: 134ms)
+✓ Compiled in 606ms
+✓ Compiled in 688ms
+✓ Compiled in 536ms
+ GET /services/ecommerce-warehouse 200 in 1584ms (compile: 370ms, generate-params: 19ms, render: 1214ms)
+✓ Compiled in 568ms
+✓ Compiled in 582ms
+✓ Compiled in 886ms
