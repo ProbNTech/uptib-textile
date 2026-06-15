@@ -14,6 +14,8 @@ interface WhatWeDoItem {
   href: string;
   color: string;
   image?: string;
+  /** Full-width photo banner across the top of the card (membership-style). */
+  topImage?: string;
 }
 
 interface WhatWeDoCardsProps {
@@ -91,7 +93,7 @@ function Card({ item, index }: { item: WhatWeDoItem; index: number }) {
       {/* ── Card surface ── */}
       <div
         ref={surfaceRef}
-        className="relative h-full rounded-2xl overflow-hidden p-8 lg:p-10 transition-[transform,box-shadow,border-color] duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:-translate-y-1.5 [transform:translateZ(0)]"
+        className="relative h-full rounded-2xl overflow-hidden flex flex-col transition-[transform,box-shadow,border-color] duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:-translate-y-1.5 [transform:translateZ(0)]"
         style={{
           background: `linear-gradient(135deg, white 60%, ${item.color}08 100%)`,
           border: `1px solid ${item.color}15`,
@@ -119,6 +121,22 @@ function Card({ item, index }: { item: WhatWeDoItem; index: number }) {
           }}
         />
 
+        {/* ── Top photo banner (membership-style cards) ── */}
+        {item.topImage && (
+          <div className="relative h-44 w-full overflow-hidden">
+            <Image
+              src={item.topImage}
+              alt={item.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+            />
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
+          </div>
+        )}
+
+        {/* ── Body ── */}
+        <div className={`relative flex flex-1 flex-col ${item.topImage ? "p-8 lg:p-10 pt-7" : "p-8 lg:p-10"}`}>
         {/* ── Icon / Image ── */}
         <div className="relative mb-5">
           {item.image ? (
@@ -154,7 +172,7 @@ function Card({ item, index }: { item: WhatWeDoItem; index: number }) {
         {/* ── CTA link with animated underline ── */}
         <Link
           href={item.href}
-          className="group/link inline-flex items-center gap-2 font-bold text-[15px]"
+          className="group/link mt-auto inline-flex items-center gap-2 font-bold text-[15px] self-start"
           style={{ color: item.color }}
         >
           <span className="relative">
@@ -170,6 +188,7 @@ function Card({ item, index }: { item: WhatWeDoItem; index: number }) {
             className="transition-transform duration-200 ease-out group-hover/link:translate-x-1.5"
           />
         </Link>
+        </div>
       </div>
     </motion.div>
   );

@@ -35,7 +35,7 @@ export default function PakistanTopCompaniesShowcase() {
         <AnimatedSection animation="blur-in">
           <SectionHeader
             label="Showcase"
-            title="Pakistan's Vetted Textile Manufacturers"
+            title="Pakistan's top Textile Products Manufacturers & Exporter"
             subtitle="Real manufacturers, mills and sourcing partners in our network — across home & hospitality textiles, apparel, sportswear, healthcare textiles and yarn & fabric."
             color="green"
           />
@@ -73,7 +73,7 @@ export default function PakistanTopCompaniesShowcase() {
                 href="/membership"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-[#2F7549] hover:text-[#245C3A] transition-colors"
               >
-                Explore all manufacturers
+                Explore Manufacturers and Exporters
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
 
