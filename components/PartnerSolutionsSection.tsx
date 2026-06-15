@@ -14,16 +14,18 @@ const showcase = partnerSolutions
 
 /* Light per-industry accent for the category chip */
 const categoryAccent: Record<string, { chip: string; text: string; ring: string; dot: string }> = {
-  "Home & Hospitality Textiles": { chip: "#EEF6F0", text: "#245C3A", ring: "#C2E9CF", dot: "#2F7549" },
-  "Apparel & Knitwear":          { chip: "#EFF6FF", text: "#1E40AF", ring: "#BFDBFE", dot: "#2563EB" },
-  "Sportswear & Activewear":     { chip: "#F0FDFA", text: "#115E59", ring: "#99F6E4", dot: "#0D9488" },
-  "Healthcare Textiles":         { chip: "#ECFEFF", text: "#155E75", ring: "#A5F3FC", dot: "#0891B2" },
-  "Sourcing & Buying House":     { chip: "#FFFBEB", text: "#92400E", ring: "#FDE68A", dot: "#F59E0B" },
-  "Yarn & Fabric":               { chip: "#F0FDF4", text: "#166534", ring: "#BBF7D0", dot: "#16A34A" },
+  "Home Textile":                 { chip: "#EEF6F0", text: "#245C3A", ring: "#C2E9CF", dot: "#2F7549" },
+  "Hospitality Products":         { chip: "#ECFDF5", text: "#065F46", ring: "#A7F3D0", dot: "#059669" },
+  "Apparel - Denim":              { chip: "#EFF6FF", text: "#1E40AF", ring: "#BFDBFE", dot: "#2563EB" },
+  "Garments - Ladies & Children": { chip: "#FDF2F8", text: "#9D174D", ring: "#FBCFE8", dot: "#DB2777" },
+  "Knitwear - Private label":     { chip: "#EEF2FF", text: "#3730A3", ring: "#C7D2FE", dot: "#4F46E5" },
+  "Healthcare Products":          { chip: "#ECFEFF", text: "#155E75", ring: "#A5F3FC", dot: "#0891B2" },
+  "Sportswear & Activewear":      { chip: "#F0FDFA", text: "#115E59", ring: "#99F6E4", dot: "#0D9488" },
+  "Yarn & Fabric":                { chip: "#F0FDF4", text: "#166534", ring: "#BBF7D0", dot: "#16A34A" },
 };
 
 function getAccent(category: string) {
-  return categoryAccent[category] || categoryAccent["Home & Hospitality Textiles"];
+  return categoryAccent[category] || categoryAccent["Home Textile"];
 }
 
 /* ───────────────────────── Product card ─────────────────────────
