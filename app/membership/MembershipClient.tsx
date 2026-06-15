@@ -111,7 +111,7 @@ const tierValues = [
 
 /* ── Who can join ────────────────────────────────────────────────── */
 const whoCanJoin = [
-  { icon: Factory, title: "Manufacturers & mills", desc: "Bedding, apparel, sportswear, healthcare and home-textile producers ready to supply at scale." },
+  { icon: Factory, title: "Manufacturers and Exporters", desc: "Bedding, apparel, sportswear, healthcare and home-textile producers ready to supply at scale." },
   { icon: Building2, title: "Exporters & trading houses", desc: "Established exporters widening their buyer base and diversifying into new destinations." },
   { icon: Rocket, title: "First-time & SME exporters", desc: "Smaller producers needing a credible route, low-MOQ partners and hands-on support to go global." },
   { icon: Package, title: "Accessories & allied suppliers", desc: "Trims, packaging and service providers supporting the textile supply chain." },

@@ -100,7 +100,7 @@ export const aboutFaqs: Faq[] = [
   },
   {
     q: "How do I get started?",
-    a: "Buyers can send a brief or request a quote and we'll return suitable factories, samples and pricing. Manufacturers can apply for membership to get in front of global buyers. Either way, contact us and we'll guide you from first enquiry to final delivery.",
+    a: "Buyers can send a brief or request a quote and we'll return suitable factories, samples and pricing. Manufacturers and Exporters can apply for membership to get in front of global buyers. Either way, contact us and we'll guide you from first enquiry to final delivery.",
   },
 ];
 

@@ -60,7 +60,7 @@ const HERO_BG = "/image/hero-bg/global-textile-market.jpg";
 // ─── Hero trust-bar stats ────────────────────────────────────────────────────
 const heroStats = [
   { icon: Globe, eyebrow: "Global Reach", value: "100+", sub: "Countries" },
-  { icon: Users, eyebrow: "Trusted by", value: "1000+", sub: "Manufacturers" },
+  { icon: Users, eyebrow: "Trusted by", value: "1000+", sub: "Manufacturers and Exporters" },
   { icon: TrendingUp, eyebrow: "Driving Growth", value: "$17.9BN+", sub: "Textile Exports (FY2025)" },
   { icon: MapPin, eyebrow: "Strategic Hub", value: "London &", sub: "Lahore" },
 ];

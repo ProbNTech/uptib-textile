@@ -240,7 +240,7 @@ export default function MembershipSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 py-8">
               {[
                 {
-                  title: "Manufacturers & Mills",
+                  title: "Manufacturers and Exporters",
                   desc: "Pakistani textile manufacturers and mills across bedding, apparel, sportswear and healthcare textiles.",
                   image: "/image/manufacturing-mils.jpg",
                   icon: Factory,

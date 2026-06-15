@@ -63,7 +63,7 @@ const pakistanServicesData = [
 
 /* ─── Our Services — buyer-facing grid (International buyers → Pakistan supply) ─── */
 const internationalBuyersData = [
-  { id: 9, title: "Buying House (Outsourcing)", content: "Source the right Pakistani manufacturers for your order — vendor identification, sampling, price negotiation and production follow-up handled for you.", icon: Factory, topImage: "/image/buying-house.jpg", href: "/contact", color: "#2F7549" },
+  { id: 9, title: "Buying House (Outsourcing)", content: "Source the right Pakistani manufacturers and Exporters for your order — vendor identification, sampling, price negotiation and production follow-up handled for you.", icon: Factory, topImage: "/image/buying-house.jpg", href: "/contact", color: "#2F7549" },
   { id: 10, title: "Quality Control", content: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck, topImage: "/image/quality-control.jpg", href: "/contact", color: "#2F7549" },
   { id: 11, title: "Compliance & Logistics", content: "Ship with confidence — social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship, topImage: "/image/logistics-compliance.jpg", href: "/contact", color: "#2F7549" },
 ];
@@ -88,13 +88,10 @@ export default function Home() {
                 <SectionLabel label="Who we are" title="Bridging Pakistan's textile industry to the Global market via a UK-based platform." color="#2F7549" />
                 <div className="content-body">
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-5">
-                    Pakistan Textile Partners is the dedicated textile arm of the UK–Pakistan Trade &amp; Investment Board with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers/Exporter and the global marketplace.
-                  </p>
-                  <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-8">
-                    Pakistan is one of the world's top-ten textile exporters and a global leader in cotton and home textiles. We organise that supply, professionalise it, and connect Pakistani exporters to buyers in the EU, USA, Middle East, UK and beyond.
+<span className="font-semibold text-[#16291E]">Pakistan Textile Partners</span> is the dedicated textile arm of the <span className="font-semibold text-[#16291E]">UK–Pakistan Trade &amp; Investment Board</span> with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers and Exporters and the global marketplace.
                   </p>
                 </div>
-                <PillButton href="/global-textile-market">Pakistan's global position</PillButton>
+                <PillButton href="/global-textile-market" variant="blue">Pakistan's global position</PillButton>
               </div>
               <div className="relative">
                 <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(4,120,87,0.15)]">
@@ -129,7 +126,7 @@ export default function Home() {
             <SectionLabel
               label="Our Services"
               title="Grow your textile exports, worldwide"
-              body="Four services that help Pakistani textile manufacturers reach buyers across the world — marketing, e-commerce and warehousing, membership, and global market access."
+              body="Four services that help Pakistani textile manufacturers and Exporters reach buyers across the world — marketing, e-commerce and warehousing, membership, and global market access."
               color="#2F7549"
               align="center"
             />
@@ -181,7 +178,7 @@ export default function Home() {
                         <span aria-hidden="true" className="mt-3 block h-1 w-20 rounded-full bg-[#2F7549]" />
                       </div>
                       <p className="mt-6 text-white/80 text-base sm:text-lg leading-relaxed max-w-xl">
-                        We simplify global sourcing by connecting international buyers with Pakistan&apos;s top textile manufacturers. From product development to final delivery, we ensure complete{" "}
+                        We simplify global sourcing by connecting international buyers with Pakistan&apos;s top textile manufacturers and Exporters. From product development to final delivery, we ensure complete{" "}
                         <span className="text-[#6BCB93] font-medium">transparency</span>,{" "}
                         <span className="text-[#6BCB93] font-medium">strict compliance</span>, and{" "}
                         <span className="text-[#6BCB93] font-medium">on-time shipments</span>.
@@ -198,7 +195,7 @@ export default function Home() {
                       </div>
                       <ul className="divide-y divide-white/10">
                         {[
-                          { icon: ShieldCheck, title: "Verified & Reliable", desc: "We work only with pre-vetted manufacturers." },
+                          { icon: ShieldCheck, title: "Verified & Reliable", desc: "We work only with pre-vetted manufacturers and Exporters." },
                           { icon: Headphones, title: "End-to-End Support", desc: "From sampling to shipment — we handle it all." },
                           { icon: Award, title: "Quality Assured", desc: "Rigorous in-line & final inspections for every order." },
                           { icon: Leaf, title: "Compliant & Ethical", desc: "We follow global standards and ethical practices." },
@@ -264,7 +261,7 @@ export default function Home() {
                   <div className="mt-8 rounded-2xl border border-white/10 bg-[#0b231b]/85 backdrop-blur-md">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
                       {[
-                        { icon: Globe, title: "Global Network", desc: "Access to top Pakistani textile manufacturers" },
+                        { icon: Globe, title: "Global Network", desc: "Access to top Pakistani textile manufacturers and Exporters" },
                         { icon: ShieldCheck, title: "Secure & Transparent", desc: "Clear communication at every step" },
                         { icon: Clock, title: "On-Time Delivery", desc: "Reliable timelines, every time" },
                         { icon: UserRound, title: "Dedicated Support", desc: "Experienced team by your side" },
@@ -596,7 +593,7 @@ export default function Home() {
       <GlobalCTA
         label="Work with Pakistan Textile Partners"
         title="Ready to take your textiles to the world?"
-        subtitle="Grow your exports worldwide — Pakistan Textile Partners markets Pakistani textile manufacturers to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
+        subtitle="Grow your exports worldwide — Pakistan Textile Partners markets Pakistani textile manufacturers and Exporters to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
         primaryButtonText="Become a member"
         primaryButtonLink="/membership"
         secondaryButtonText="Talk to our team"
