@@ -1862,3 +1862,6 @@ https://nextjs.org/docs/messages/module-not-found
 ✓ Compiled in 568ms
 ✓ Compiled in 582ms
 ✓ Compiled in 886ms
+ GET /products/apparel-accessories 200 in 154ms (compile: 55ms, generate-params: 13ms, render: 99ms)
+ GET /services/ecommerce-warehouse 200 in 1874ms (compile: 403ms, generate-params: 14ms, render: 1471ms)
+ GET /membership/industries 200 in 1681ms (compile: 373ms, render: 1307ms)
