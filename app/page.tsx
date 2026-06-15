@@ -4,7 +4,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Factory, ClipboardCheck, Ship, Globe, ShieldCheck, Headphones, Award, Leaf, Clock, UserRound } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -58,7 +58,14 @@ const pakistanServicesData = [
   { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers — professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing-sales", color: "#3E8F5E" },
   { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/ecommerce-warehouse", color: "#3E8F5E" },
   { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/membership", color: "#3E8F5E" },
-  { id: 8, title: "Global market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#3E8F5E" },
+  { id: 8, title: "Worldwide market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#3E8F5E" },
+];
+
+/* ─── Our Services — buyer-facing grid (International buyers → Pakistan supply) ─── */
+const internationalBuyersData = [
+  { id: 9, title: "Buying House (Outsourcing)", content: "Source the right Pakistani manufacturers for your order — vendor identification, sampling, price negotiation and production follow-up handled for you.", icon: Factory, topImage: "/image/buying-house.jpg", href: "/contact", color: "#2F7549" },
+  { id: 10, title: "Quality Control", content: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck, topImage: "/image/quality-control.jpg", href: "/contact", color: "#2F7549" },
+  { id: 11, title: "Compliance & Logistics", content: "Ship with confidence — social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship, topImage: "/image/logistics-compliance.jpg", href: "/contact", color: "#2F7549" },
 ];
 
 export default function Home() {
@@ -78,10 +85,10 @@ export default function Home() {
           <AnimatedSection animation="blur-in">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div>
-                <SectionLabel label="Who we are" title="Pakistan's textiles, connected to the world — from a platform headquartered in London." color="#2F7549" />
+                <SectionLabel label="Who we are" title="Bridging Pakistan's textile industry to the Global market via a UK-based platform." color="#2F7549" />
                 <div className="content-body">
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-5">
-                    Pakistan Textile Partners is the textile arm of the UK–Pakistan Trades & Investment Board — a London-based platform, with a Lahore office, that helps Pakistani textile manufacturers reach global markets and runs the services that take them there: marketing, e-commerce, warehousing and global market access.
+                    Pakistan Textile Partners is the dedicated textile arm of the UK–Pakistan Trade &amp; Investment Board with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers/Exporter and the global marketplace.
                   </p>
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-8">
                     Pakistan is one of the world's top-ten textile exporters and a global leader in cotton and home textiles. We organise that supply, professionalise it, and connect Pakistani exporters to buyers in the EU, USA, Middle East, UK and beyond.
@@ -114,7 +121,7 @@ export default function Home() {
       {/* 5. OUR SERVICES — exporter-facing grid */}
       <section
         id="services"
-        className="relative z-[1] pt-10 lg:pt-12 pb-20 lg:pb-28 scroll-mt-24 overflow-hidden bg-white"
+        className="relative z-[1] pt-10 lg:pt-12 pb-0 scroll-mt-24 overflow-hidden bg-white"
         aria-labelledby="services-heading"
       >
         <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -136,6 +143,146 @@ export default function Home() {
                 context="Reaching global markets — marketing, e-commerce & warehousing, membership, and worldwide market access."
                 accentColor="#3E8F5E"
               />
+              <p className="mt-10 text-[#5A5F72] text-base sm:text-lg leading-relaxed max-w-7xl mx-auto text-center">
+                As a top ten global exporter and a powerhouse in cotton and home textiles, Pakistan possesses immense manufacturing capability. We unlock this potential for you. By professionalising your supply chain, optimising your digital commerce, and managing end-to-end logistics including targeted international marketing and strategic global warehousing. We provide Pakistani exporters seamless, frictionless access to major buyers across the UK, EU, USA, and the Middle East.
+              </p>
+            </div>
+
+            {/* For International buyers */}
+            <div id="for-international-buyers" className="scroll-mt-24 mt-20 lg:mt-24 relative overflow-hidden -mx-6 sm:-mx-10 lg:-mx-16 xl:-mx-20">
+              {/* Background world map + dark overlay */}
+              <div aria-hidden="true" className="absolute inset-0">
+                <Image
+                  src="/image/world-map-bg.jpg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-[#051a14]/92" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#04130f]/85 via-[#06231b]/80 to-[#020c0a]/92" />
+              </div>
+              <div className="relative z-10 px-6 sm:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 lg:py-24">
+                <div className="max-w-7xl mx-auto">
+                  {/* TOP — hero copy + trust panel */}
+                  <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-start">
+                    {/* Left: hero copy */}
+                    <div>
+                      <span className="inline-flex items-center gap-2 rounded-full border border-[#6BCB93]/35 bg-[#6BCB93]/10 px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#8FE3AD] backdrop-blur-sm">
+                        <Globe className="w-3.5 h-3.5" strokeWidth={2} />
+                        For International Buyers
+                      </span>
+                      <h3 className="mt-6 font-heading font-extrabold text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] tracking-tight text-white">
+                        Your Trusted Sourcing Partner from{" "}
+                        <span className="text-[#6BCB93]">Pakistan</span> to the World
+                      </h3>
+                      <div className="mt-5">
+                        <p className="text-white/85 text-lg sm:text-xl font-semibold">Transparent. Secure. Reliable.</p>
+                        <span aria-hidden="true" className="mt-3 block h-1 w-20 rounded-full bg-[#2F7549]" />
+                      </div>
+                      <p className="mt-6 text-white/80 text-base sm:text-lg leading-relaxed max-w-xl">
+                        We simplify global sourcing by connecting international buyers with Pakistan&apos;s top textile manufacturers. From product development to final delivery, we ensure complete{" "}
+                        <span className="text-[#6BCB93] font-medium">transparency</span>,{" "}
+                        <span className="text-[#6BCB93] font-medium">strict compliance</span>, and{" "}
+                        <span className="text-[#6BCB93] font-medium">on-time shipments</span>.
+                      </p>
+                    </div>
+
+                    {/* Right: Why Buyers Trust Us */}
+                    <div className="rounded-2xl border border-white/10 bg-[#0b231b]/85 backdrop-blur-md p-6 sm:p-8 shadow-xl shadow-black/30">
+                      <div className="flex items-center justify-between mb-5">
+                        <h4 className="font-heading font-bold text-lg sm:text-xl text-white">Why Buyers Trust Us</h4>
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#2F7549] shadow-md">
+                          <ShieldCheck className="w-5 h-5 text-white" />
+                        </span>
+                      </div>
+                      <ul className="divide-y divide-white/10">
+                        {[
+                          { icon: ShieldCheck, title: "Verified & Reliable", desc: "We work only with pre-vetted manufacturers." },
+                          { icon: Headphones, title: "End-to-End Support", desc: "From sampling to shipment — we handle it all." },
+                          { icon: Award, title: "Quality Assured", desc: "Rigorous in-line & final inspections for every order." },
+                          { icon: Leaf, title: "Compliant & Ethical", desc: "We follow global standards and ethical practices." },
+                        ].map(({ icon: TrustIcon, title, desc }) => (
+                          <li key={title} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
+                            <span className="mt-0.5 inline-flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#6BCB93]/15">
+                              <TrustIcon className="w-5 h-5 text-[#6BCB93]" strokeWidth={1.8} />
+                            </span>
+                            <div>
+                              <p className="font-bold text-white text-sm sm:text-base">{title}</p>
+                              <p className="text-white/65 text-[13px] sm:text-sm leading-relaxed">{desc}</p>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* MIDDLE — numbered cards */}
+                  <div className="mt-10 lg:mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {internationalBuyersData.map((item, i) => {
+                      const Icon = item.icon!;
+                      return (
+                        <Link
+                          key={item.id}
+                          href={item.href}
+                          className="group relative rounded-2xl overflow-hidden border border-white/10 bg-[#0b231b]/85 backdrop-blur-md shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#6BCB93]/40"
+                        >
+                          {/* number badge */}
+                          <span className="absolute top-4 left-4 z-20 inline-flex items-center justify-center w-9 h-9 rounded-lg bg-[#2F7549] text-white font-bold text-sm shadow-md">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          {/* image */}
+                          <div className="relative h-[190px] overflow-hidden">
+                            <Image
+                              src={item.topImage!}
+                              alt={item.title}
+                              fill
+                              className="object-cover transition-transform duration-700 group-hover:scale-105"
+                              sizes="(max-width: 768px) 100vw, 33vw"
+                            />
+                            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#0b231b] via-[#0b231b]/40 to-transparent" />
+                            {/* floating icon */}
+                            <span className="absolute -bottom-7 left-6 z-20 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#0b1a16] border border-white/10 shadow-lg">
+                              <Icon className="w-6 h-6 text-[#6BCB93]" strokeWidth={1.8} />
+                            </span>
+                          </div>
+                          {/* body */}
+                          <div className="px-6 pb-6 pt-10">
+                            <h4 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">{item.title}</h4>
+                            <p className="mt-2 text-white/70 text-sm leading-relaxed">{item.content}</p>
+                            <span className="mt-4 inline-flex items-center gap-1.5 font-bold text-sm text-[#6BCB93]">
+                              Learn more
+                              <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
+                            </span>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+
+                  {/* BOTTOM — feature bar */}
+                  <div className="mt-8 rounded-2xl border border-white/10 bg-[#0b231b]/85 backdrop-blur-md">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+                      {[
+                        { icon: Globe, title: "Global Network", desc: "Access to top Pakistani textile manufacturers" },
+                        { icon: ShieldCheck, title: "Secure & Transparent", desc: "Clear communication at every step" },
+                        { icon: Clock, title: "On-Time Delivery", desc: "Reliable timelines, every time" },
+                        { icon: UserRound, title: "Dedicated Support", desc: "Experienced team by your side" },
+                      ].map(({ icon: FeatIcon, title, desc }) => (
+                        <div key={title} className="flex items-center gap-3 p-5 lg:p-6">
+                          <span className="inline-flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#6BCB93]/15">
+                            <FeatIcon className="w-5 h-5 text-[#6BCB93]" strokeWidth={1.8} />
+                          </span>
+                          <div>
+                            <p className="font-bold text-white text-sm">{title}</p>
+                            <p className="text-white/60 text-xs leading-snug">{desc}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </AnimatedSection>
         </div>

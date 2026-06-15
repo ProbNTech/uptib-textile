@@ -25,7 +25,7 @@ export const partnerSolutions: PartnerSolution[] = [
     tagline: "Export-grade towels and institutional linen.",
     description:
       "Vertically integrated maker of ring-spun towels (400–700+ GSM), fitted & flat sheets, duvets and hotel & hospital linen — built for hundreds of industrial washes and supplied across the Gulf, Europe and North America.",
-    category: "Home & Hospitality Textiles",
+    category: "Home Textile",
     image: "/image/pexels-cottonbro-6466235.jpg",
     href: "https://pakistanfibres.com/",
     partnerName: "Pakistan Fibres",
@@ -41,7 +41,7 @@ export const partnerSolutions: PartnerSolution[] = [
     tagline: "OEM hoodies, shirts and uniforms — 100-pc MOQ.",
     description:
       "Custom clothing manufacturer with cutting, stitching, printing, embroidery and packaging in-house — 50+ premium fabrics, AQL quality control and a 100-piece-per-design MOQ, exporting to 30+ countries.",
-    category: "Apparel & Knitwear",
+    category: "Knitwear - Private label",
     image: "/image/pexels-gulsahaydgn-30263570.jpg",
     href: "https://lahoretextiles.com/",
     partnerName: "Lahore Textiles",
@@ -73,7 +73,7 @@ export const partnerSolutions: PartnerSolution[] = [
     tagline: "Healthcare and corporate uniforms.",
     description:
       "Custom uniform manufacturer specialising in scrubs, lab coats, nurse and doctor uniforms and patient gowns — breathable, durable fabrics with low MOQs for startups and bulk capacity, exporting worldwide.",
-    category: "Healthcare Textiles",
+    category: "Healthcare Products",
     image: "/image/pexels-karola-g-5207099.jpg",
     href: "https://albeezaapparel.com/",
     partnerName: "Albeeza Apparel",
@@ -89,7 +89,7 @@ export const partnerSolutions: PartnerSolution[] = [
     tagline: "Factory-direct sourcing & QA, 30+ countries.",
     description:
       "Faisalabad buying house with 22+ years' experience — factory-direct pricing, on-ground QC, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners across home, hospitality, medical and apparel textiles.",
-    category: "Sourcing & Buying House",
+    category: "Garments - Ladies & Children",
     image: "/image/pexels-cottonbro-6069087.jpg",
     href: "https://www.utexinternational.com/en",
     partnerName: "Utex International",
@@ -105,7 +105,7 @@ export const partnerSolutions: PartnerSolution[] = [
     tagline: "Single-point sourcing & QA to AQL.",
     description:
       "Sourcing and quality-assurance agency supplying hotel and hospital bed linen, towels and workwear to USA and European buyers through an ISO / OEKO-TEX-audited multi-factory network — one contact from sampling to export docs.",
-    category: "Home & Hospitality Textiles",
+    category: "Hospitality Products",
     image: "/image/pexels-artbovich-7746950.jpg",
     href: "https://texkoncept.com/",
     partnerName: "TexKoncept",
@@ -121,7 +121,7 @@ export const partnerSolutions: PartnerSolution[] = [
     tagline: "Jeans, chinos and workwear bottoms at scale.",
     description:
       "Pakistan is one of the world's largest denim producers — full-package jeans, chinos and woven bottoms with in-house washing, finishing and laundry effects, supplied to high-street and DTC brands worldwide.",
-    category: "Apparel & Knitwear",
+    category: "Apparel - Denim",
     image: "/image/pexels-cottonbro-6764132.jpg",
     href: "/products/apparel-accessories",
     partnerName: "",
