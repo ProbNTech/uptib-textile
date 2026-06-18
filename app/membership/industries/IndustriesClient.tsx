@@ -306,12 +306,14 @@ export default function IndustriesClient() {
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <PageHero
         label="Industries"
+        align="center"
+        shade="soft"
         minHeightClass="min-h-[540px] md:min-h-[580px] lg:min-h-[620px]"
         title="Leading industries inside Pakistan's textile"
         subtitle="From the cotton fields of Punjab to the sportswear hub of Sialkot — explore the sectors that make Pakistan a top-ten global textile exporter, and the companies operating across each one."
         image="/image/hero-bg/pexels-cottonbro-6580549.jpg"
       >
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <ShinyButton href="#directory">Browse the directory</ShinyButton>
           <Button href="/membership" variant="glass" size="lg">
             Explore membership

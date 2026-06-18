@@ -113,14 +113,14 @@ function MarketHero() {
         {/* Localized shade behind the text only (no full-hero overlay) */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-10 left-0 w-[min(50rem,92%)] rounded-[2.5rem]"
+          className="pointer-events-none absolute inset-y-10 left-1/2 -translate-x-1/2 w-[min(60rem,96%)] rounded-[2.5rem]"
           style={{
             background:
-              "radial-gradient(ellipse 78% 75% at 30% 50%, rgba(6,35,27,0.9) 0%, rgba(6,35,27,0.6) 45%, rgba(6,35,27,0.22) 75%, rgba(6,35,27,0) 100%)",
+              "radial-gradient(ellipse 80% 75% at 50% 50%, rgba(6,35,27,0.62) 0%, rgba(6,35,27,0.4) 45%, rgba(6,35,27,0.14) 75%, rgba(6,35,27,0) 100%)",
           }}
         />
         <motion.div
-          className="relative max-w-2xl"
+          className="relative max-w-2xl mx-auto text-center"
           initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
@@ -146,7 +146,7 @@ function MarketHero() {
           </motion.h1>
 
           <motion.p
-            className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-white/85"
+            className="mt-6 max-w-xl mx-auto text-base sm:text-lg leading-relaxed text-white/85"
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
@@ -157,7 +157,7 @@ function MarketHero() {
           </motion.p>
 
           <motion.div
-            className="mt-8 flex flex-col sm:flex-row gap-3"
+            className="mt-8 flex flex-col sm:flex-row sm:justify-center gap-3"
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}

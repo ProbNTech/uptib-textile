@@ -61,6 +61,8 @@ interface PageHeroProps {
   labelClassName?: string;
   /** Override the hero min-height (responsive Tailwind classes). */
   minHeightClass?: string;
+  /** Strength of the soft shade behind the text. "soft" lightens it for brighter images. */
+  shade?: "default" | "soft" | "none";
   image?: string;
   video?: string;
   videoSpeed?: number;
@@ -87,6 +89,7 @@ export function PageHero({
   label,
   labelClassName,
   minHeightClass = "min-h-[480px] md:min-h-[520px] lg:min-h-[560px]",
+  shade = "default",
   image,
   video,
   videoSpeed = 1,
@@ -302,16 +305,22 @@ export function PageHero({
       >
         <div className={`relative w-full ${align === "center" ? "max-w-3xl text-center" : "max-w-[55%] max-lg:max-w-full"}`}>
           {/* Localized soft shade behind text — pure colour, no blur, video stays sharp */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-6 -inset-y-6 sm:-inset-x-10 sm:-inset-y-8 rounded-[2.5rem]"
-            style={{
-              background:
-                align === "center"
-                  ? "radial-gradient(ellipse 85% 80% at 50% 50%, rgba(5,10,20,0.74) 0%, rgba(5,10,20,0.52) 45%, rgba(5,10,20,0.2) 75%, rgba(5,10,20,0) 100%)"
-                  : "radial-gradient(ellipse 80% 75% at 35% 50%, rgba(5,10,20,0.8) 0%, rgba(5,10,20,0.56) 45%, rgba(5,10,20,0.22) 75%, rgba(5,10,20,0) 100%)",
-            }}
-          />
+          {shade !== "none" && (
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-x-6 -inset-y-6 sm:-inset-x-10 sm:-inset-y-8 rounded-[2.5rem]"
+              style={{
+                background:
+                  align === "center"
+                    ? shade === "soft"
+                      ? "radial-gradient(ellipse 85% 80% at 50% 50%, rgba(5,10,20,0.5) 0%, rgba(5,10,20,0.34) 45%, rgba(5,10,20,0.12) 75%, rgba(5,10,20,0) 100%)"
+                      : "radial-gradient(ellipse 85% 80% at 50% 50%, rgba(5,10,20,0.74) 0%, rgba(5,10,20,0.52) 45%, rgba(5,10,20,0.2) 75%, rgba(5,10,20,0) 100%)"
+                    : shade === "soft"
+                      ? "radial-gradient(ellipse 80% 75% at 35% 50%, rgba(5,10,20,0.56) 0%, rgba(5,10,20,0.38) 45%, rgba(5,10,20,0.14) 75%, rgba(5,10,20,0) 100%)"
+                      : "radial-gradient(ellipse 80% 75% at 35% 50%, rgba(5,10,20,0.8) 0%, rgba(5,10,20,0.56) 45%, rgba(5,10,20,0.22) 75%, rgba(5,10,20,0) 100%)",
+              }}
+            />
+          )}
           <motion.div
             className="relative"
             initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
