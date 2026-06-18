@@ -135,12 +135,14 @@ export default function ProductsClient() {
       <PageHero
         label="Products"
         labelClassName="text-white"
+        align="center"
+        shade="soft"
         minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="The textiles Pakistan exports to the world"
         subtitle="Four categories where Pakistani manufacturing is strongest and global demand is highest — home textile, apparel, sportswear and healthcare textiles, sourced and delivered with one accountable partner."
         image="/image/hero-bg/pexels-cottonbro-6580549.jpg"
       >
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <ShinyButton href="/contact">Request a quote</ShinyButton>
           <Button href="#categories" variant="glass" size="lg">
             Explore the range

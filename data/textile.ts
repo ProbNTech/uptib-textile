@@ -161,24 +161,25 @@ export const products: ProductCategory[] = [
       },
       groups: [
         {
-          name: "Bed Linen & Bed Sets",
-          tagline: "Reactive-dyed, digitally printed & sateen",
+          name: "Bedroom",
+          layout: "tall-left",
+          tagline: "Bed linen, duvet sets & mattress protectors",
           desc:
-            "Long-staple cotton sheeting, duvet sets and comforters — woven, reactive-dyed and digitally printed to your colourway, then finished for a soft hand that survives wash after wash.",
+            "Everything that dresses the bed — long-staple cotton sheeting, duvet sets and comforters woven, reactive-dyed and digitally printed to your colourway, plus quilted mattress protectors and toppers finished for a soft hand that survives wash after wash.",
           items: [
             "Flat & fitted sheets, pillowcases",
             "Duvet covers & comforter sets",
-            "Dyed, printed & stripe-sateen ranges",
+            "Quilted mattress protectors & toppers",
             "200–1000 thread-count cotton",
           ],
           images: [
-            { src: "/image/textile/home/bed-linen-1.jpg", alt: "Crisp white stripe-sateen bed linen, close up" },
-            { src: "/image/textile/home/bed-linen-2.jpg", alt: "A styled bed dressed in soft white bedding and pillows" },
-            { src: "/image/textile/home/bed-linen-3.jpg", alt: "White bedding and pillows detail" },
+            { src: "/image/bedroom-1.jpg", alt: "A styled bedroom dressed in soft bed linen" },
+            { src: "/image/bedroom-2.jpg", alt: "Bed linen and pillows detail" },
+            { src: "/image/bedroom-3.jpg", alt: "A made-up bed with crisp bedding" },
           ],
         },
         {
-          name: "Premium Towels & Bath",
+          name: "Bathroom",
           tagline: "Egyptian & terry cotton, 400–700+ GSM",
           desc:
             "The category Pakistan is famous for. Ring-spun and combed terry towelling in every weight — from everyday bath towels to plush spa grades and bathrobes, with hotel-grade durability built in.",
@@ -193,22 +194,6 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/home/towels-4.jpg", alt: "A blush spa bathrobe styled with bath accessories" },
             { src: "/image/textile/home/towels-2.jpg", alt: "Rolled towels in a woven basket beside a pool" },
             { src: "/image/textile/home/towels-5.jpg", alt: "Rolled towels dressed with fresh flowers" },
-          ],
-        },
-        {
-          name: "Hotel & Hospitality Textiles",
-          tagline: "Contract-grade linen for hospitality",
-          desc:
-            "Bedding, bath and table linen engineered for repeated industrial laundering — the contract-grade textiles hotel groups, resorts and serviced-apartment operators specify worldwide.",
-          items: [
-            "Hotel bed linen & duvets",
-            "Bath linen & pool towels",
-            "Table & restaurant linen",
-            "Stripe-sateen & jacquard ranges",
-          ],
-          images: [
-            { src: "/image/textile/home/hotel-1.jpg", alt: "A luxury hotel bed made up with white linen and a tufted headboard" },
-            { src: "/image/textile/home/hotel-2.jpg", alt: "A hotel bed with a breakfast tray and fresh flowers" },
           ],
         },
         {
@@ -230,21 +215,19 @@ export const products: ProductCategory[] = [
           ],
         },
         {
-          name: "Mattress Protectors & Toppers",
-          layout: "top-wide",
-          tagline: "Quilted & water-repellent",
+          name: "Dining & Kitchen",
+          tagline: "Table linen, napkins & kitchen textiles",
           desc:
-            "Quilted protectors and toppers that guard the mattress and add a layer of comfort — with water-repellent and breathable finishes for homes, hotels and care settings alike.",
+            "Everyday and occasion table and kitchen linen in cotton and linen weaves — napkins, runners, placemats, tablecloths and aprons, dyed and finished to coordinate with the rest of the range.",
           items: [
-            "Quilted mattress protectors",
-            "Water-repellent & waterproof grades",
-            "Mattress toppers & pads",
-            "Fitted-skirt & strap fittings",
+            "Napkins & table runners",
+            "Placemats & tablecloths",
+            "Tea towels & kitchen linen",
+            "Aprons & oven textiles",
           ],
           images: [
-            { src: "/image/textile/home/mattress-1.jpg", alt: "A white quilted mattress protector" },
-            { src: "/image/textile/home/mattress-2.jpg", alt: "Hands fitting a quilted protector onto a mattress" },
-            { src: "/image/textile/home/mattress-3.jpg", alt: "A quilted mattress protector dressed on a bed" },
+            { src: "/image/kitchen-1.jpg", alt: "A neutral place setting with table linen and cutlery" },
+            { src: "/image/kitchen-2.jpg", alt: "Kitchen and table linen styled on a surface" },
           ],
         },
         {
@@ -260,26 +243,9 @@ export const products: ProductCategory[] = [
             "Seasonal colours & textures",
           ],
           images: [
-            { src: "/image/textile/home/cushions-1.jpg", alt: "A soft knitted throw with tasselled edges" },
-            { src: "/image/textile/home/cushions-2.jpg", alt: "Neutral cushions and a knitted throw on a bed" },
-            { src: "/image/textile/home/cushions-3.jpg", alt: "Soft grey cushions styled on a bed" },
-          ],
-        },
-        {
-          name: "Table & Kitchen Linen",
-          layout: "duo",
-          tagline: "Napkins, runners & aprons",
-          desc:
-            "Everyday and occasion table linen in cotton and linen weaves — napkins, runners, placemats and aprons, dyed and finished to coordinate with the rest of the range.",
-          items: [
-            "Napkins & table runners",
-            "Placemats & tablecloths",
-            "Tea towels & kitchen linen",
-            "Aprons & oven textiles",
-          ],
-          images: [
-            { src: "/image/textile/home/table-1.jpg", alt: "A neutral place setting with linen and cutlery" },
-            { src: "/image/textile/home/table-2.jpg", alt: "Crisp white folded napkins with cutlery" },
+            { src: "/image/cushions-1.jpg", alt: "A soft knitted throw with tasselled edges" },
+            { src: "/image/cushions-2.jpg", alt: "Neutral cushions and a knitted throw" },
+            { src: "/image/cushions-3.jpg", alt: "Soft cushions styled on a sofa" },
           ],
         },
       ],
@@ -408,10 +374,10 @@ export const products: ProductCategory[] = [
             "Polo, oxford & chino programmes",
           ],
           images: [
-            { src: "/image/textile/apparel/uniform-1.jpg", alt: "A minimalist rail of neutral garments" },
-            { src: "/image/textile/apparel/uniform-2.jpg", alt: "Grey garments hung on a clothing rail" },
-            { src: "/image/textile/apparel/uniform-3.jpg", alt: "A folded stack of uniform shirts" },
-            { src: "/image/textile/apparel/uniform-4.jpg", alt: "A clothing rail of neutral-toned apparel" },
+            { src: "/image/workwear-1.jpg", alt: "Workwear and uniform garments" },
+            { src: "/image/workwear-2.jpg", alt: "Industrial workwear detail" },
+            { src: "/image/workwear-3.jpg", alt: "A stack of uniform shirts" },
+            { src: "/image/workwear-4.jpg", alt: "Corporate uniform apparel" },
           ],
         },
         {
@@ -741,9 +707,9 @@ export const products: ProductCategory[] = [
             "Easy-wash, hard-wearing fabrics",
           ],
           images: [
-            { src: "/image/textile/healthcare/care-1.jpg", alt: "A smiling nurse in uniform" },
-            { src: "/image/textile/healthcare/care-2.jpg", alt: "Two care workers in medical uniforms" },
-            { src: "/image/textile/healthcare/care-3.jpg", alt: "A provider in navy uniform with a tablet" },
+            { src: "/image/patient-1.jpg", alt: "A patient in a hospital gown" },
+            { src: "/image/patient-2.jpg", alt: "Patient gown detail in a care setting" },
+            { src: "/image/patient-3.jpg", alt: "A patient gown styled in a clinical setting" },
             { src: "/image/textile/healthcare/care-4.jpg", alt: "Two nurses in teal scrubs" },
           ],
         },

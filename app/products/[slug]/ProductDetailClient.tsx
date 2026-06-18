@@ -32,10 +32,10 @@ const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 /* Provided high-quality category imagery (override the shared data images).
    -h = wide hero/CTA · -v1 = landscape feature · -p = portrait card */
 const detailImages: Record<string, { hero: string; feature: string }> = {
-  "bedding-linen": { hero: "/image/bedding-h.jpg", feature: "/image/bedding-v1.jpg" },
-  "apparel-accessories": { hero: "/image/apparel-h.jpg", feature: "/image/apparels-v1.jpg" },
+  "bedding-linen": { hero: "/image/home-textile-hero.webp", feature: "/image/home-textile-second-image.webp" },
+  "apparel-accessories": { hero: "/image/apparel-hero-image-2.jpg", feature: "/image/apparels-v1.jpg" },
   "sportswear-activewear": { hero: "/image/sportswear-h.jpg", feature: "/image/sportswear-second.jpg" },
-  "healthcare-textile": { hero: "/image/healthcare-h.jpg", feature: "/image/healthcare-v1.jpg" },
+  "healthcare-textile": { hero: "/image/healthcare-bg.jpg", feature: "/image/healthcare-second.jpg" },
 };
 
 const cardImages: Record<string, string> = {
@@ -70,8 +70,8 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
   return (
     <div>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <PageHero label={p.eyebrow} labelClassName="text-white" minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]" title={p.headline} subtitle={p.summary} image={imgs.hero}>
-        <div className="flex flex-wrap items-center gap-4">
+      <PageHero label={p.eyebrow} labelClassName="text-white" align="center" shade="soft" minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]" title={p.headline} subtitle={p.summary} image={imgs.hero}>
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <ShinyButton href="/contact">Source {p.name.toLowerCase()}</ShinyButton>
           <Button href="/products" variant="glass" size="lg">
             All products
@@ -263,7 +263,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── WHY PAKISTAN LEADS HERE ──────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white pt-20 lg:pt-28 pb-10 lg:pb-12">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
@@ -303,7 +303,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── OTHER CATEGORIES ─────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white pt-10 lg:pt-12 pb-20 lg:pb-28">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -348,6 +348,20 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* ── SECTION DIVIDER (decorative flower band, full-width) ──── */}
+      <div className="bg-white" aria-hidden>
+        <AnimatedSection animation="blur-in">
+          <Image
+            src="/image/flower-image.png"
+            alt=""
+            width={1920}
+            height={320}
+            sizes="100vw"
+            className="block w-full h-auto select-none"
+          />
+        </AnimatedSection>
+      </div>
 
       {/* ── BOTTOM CTA ───────────────────────────────────────────── */}
       <GlobalCTA

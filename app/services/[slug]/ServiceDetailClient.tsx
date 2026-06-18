@@ -648,8 +648,8 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
   return (
     <div>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <PageHero label={s.eyebrow} labelClassName="text-white" minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]" title={s.headline} subtitle={s.summary} image={d.hero}>
-        <div className="flex flex-wrap items-center gap-4">
+      <PageHero label={s.eyebrow} labelClassName="text-white" align="center" shade="soft" minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]" title={s.headline} subtitle={s.summary} image={d.hero}>
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <ShinyButton href={primaryCta.href}>{primaryCta.label}</ShinyButton>
           <Button href="/services" variant="glass" size="lg">
             All services

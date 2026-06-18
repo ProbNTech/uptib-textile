@@ -116,12 +116,14 @@ export default function ServicesClient() {
       <PageHero
         label="Services"
         labelClassName="text-white"
+        align="center"
+        shade="soft"
         minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="What we do"
         subtitle="Four services that cover both sourcing Pakistani textiles for buyers worldwide and helping Pakistani exporters reach global markets — marketing & sales, e-commerce & warehousing, a buying house and logistics, with one accountable partner for both."
         image="/image/services.jpg"
       >
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <ShinyButton href="/contact">Get a quote</ShinyButton>
           <Button href="#services" variant="glass" size="lg">
             Explore the services

@@ -180,12 +180,14 @@ export default function MembershipClient() {
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <PageHero
         label="Membership"
+        align="center"
+        shade="soft"
         minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="More than a listing — a route to real buyers"
         subtitle="Join the supplier pool global buyers source from. Build credibility, get matched to qualified demand, and grow your textile exports worldwide."
         image="/image/hero-bg/closeup-view-handshake-two-businessmen-suits-shaking-hands.jpg"
       >
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <ShinyButton href="#apply">Apply for membership</ShinyButton>
           <Button href="#benefits" variant="glass" size="lg">
             Explore benefits
