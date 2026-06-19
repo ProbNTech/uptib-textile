@@ -94,7 +94,7 @@ function MarketHero() {
   return (
     <section className="relative bg-white">
       {/* Dark hero region */}
-      <div className="relative isolate flex min-h-[540px] items-center overflow-hidden bg-[#161D27] lg:min-h-[640px]">
+      <div className="relative isolate flex min-h-[540px] items-center overflow-hidden bg-[#48608A] lg:min-h-[640px]">
         {/* Background image — globe + textile spools, biased to the right */}
         <div aria-hidden className="absolute inset-0">
           <Image
@@ -116,7 +116,7 @@ function MarketHero() {
           className="pointer-events-none absolute inset-y-10 left-1/2 -translate-x-1/2 w-[min(60rem,96%)] rounded-[2.5rem]"
           style={{
             background:
-              "radial-gradient(ellipse 80% 75% at 50% 50%, rgba(22, 29, 39,0.62) 0%, rgba(22, 29, 39,0.4) 45%, rgba(22, 29, 39,0.14) 75%, rgba(22, 29, 39,0) 100%)",
+              "radial-gradient(ellipse 80% 75% at 50% 50%, rgba(72, 96, 138,0.62) 0%, rgba(72, 96, 138,0.4) 45%, rgba(72, 96, 138,0.14) 75%, rgba(72, 96, 138,0) 100%)",
           }}
         />
         <motion.div
@@ -126,7 +126,7 @@ function MarketHero() {
           transition={{ duration: 0.3 }}
         >
           <motion.span
-            className="inline-flex items-center gap-2 rounded-md bg-[#1E2733]/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#B3AA98] ring-1 ring-[#1E2733]/30"
+            className="inline-flex items-center gap-2 rounded-md bg-[#78899B]/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#B3AA98] ring-1 ring-[#78899B]/30"
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
@@ -164,7 +164,7 @@ function MarketHero() {
           >
             <a
               href="/services"
-              className="group inline-flex items-center justify-center gap-2 rounded-md bg-[#1E2733] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#B3AA98]"
+              className="group inline-flex items-center justify-center gap-2 rounded-md bg-[#78899B] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#B3AA98]"
             >
               Explore Services
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -183,7 +183,7 @@ function MarketHero() {
 
       {/* Trust bar — contained card straddling the hero / section boundary */}
       <div className="relative z-20 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 lg:pb-16">
-        <div className="-mt-16 lg:-mt-20 overflow-hidden rounded-2xl bg-[#161D27] shadow-2xl shadow-black/30 ring-1 ring-white/10">
+        <div className="-mt-16 lg:-mt-20 overflow-hidden rounded-2xl bg-[#48608A] shadow-2xl shadow-black/30 ring-1 ring-white/10">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-y divide-white/10 lg:divide-y-0 lg:divide-x">
             {heroStats.map((stat, i) => (
               <motion.div
@@ -224,12 +224,12 @@ function ExportPotential() {
           {/* Left — narrative */}
           <AnimatedSection animation="slide-right">
             <div className="inline-flex items-center gap-2 mb-5">
-              <Sprout className="w-4 h-4 text-[#1E2733]" aria-hidden />
-              <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#1E2733]">
+              <Sprout className="w-4 h-4 text-[#394F73]" aria-hidden />
+              <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#394F73]">
                 Pakistan&apos;s Export Potential
               </span>
             </div>
-            <h2 className="font-heading font-extrabold text-[#161D27] text-3xl sm:text-4xl leading-[1.12] tracking-tight">
+            <h2 className="font-heading font-extrabold text-[#48608A] text-3xl sm:text-4xl leading-[1.12] tracking-tight">
               Among the world&apos;s leading textile &amp; apparel exporters
             </h2>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-[#3D4152]">
@@ -240,7 +240,7 @@ function ExportPotential() {
             </p>
             <a
               href="#regions"
-              className="group mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-[#1E2733] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#1E2733]"
+              className="group mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-[#78899B] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#78899B]"
             >
               See Full Potential
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -259,13 +259,13 @@ function ExportPotential() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <span className="mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#1E2733]/10 text-[#1E2733]">
+                    <span className="mx-auto mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#78899B]/10 text-[#394F73]">
                       <stat.icon className="w-5 h-5" strokeWidth={1.8} aria-hidden />
                     </span>
-                    <p className="font-heading font-extrabold text-2xl sm:text-3xl text-[#1E2733] leading-none">
+                    <p className="font-heading font-extrabold text-2xl sm:text-3xl text-[#394F73] leading-none">
                       ${isInView ? <CountUp end={stat.end} duration={2} decimals={1} /> : "0"}B
                     </p>
-                    <p className="mt-2 text-sm font-semibold text-[#161D27] leading-snug">
+                    <p className="mt-2 text-sm font-semibold text-[#48608A] leading-snug">
                       {stat.label}
                     </p>
                     <p className="text-xs text-[#9aa0a6]">{stat.year}</p>
@@ -320,11 +320,11 @@ function ExportFootprint() {
           {/* Left — intro */}
           <AnimatedSection animation="slide-right">
             <div className="inline-flex items-center gap-2 mb-5">
-              <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#1E2733]">
+              <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#394F73]">
                 Explore Data
               </span>
             </div>
-            <h2 className="font-heading font-extrabold text-[#161D27] text-3xl sm:text-4xl leading-[1.1] tracking-tight">
+            <h2 className="font-heading font-extrabold text-[#48608A] text-3xl sm:text-4xl leading-[1.1] tracking-tight">
               Pakistan&apos;s export footprint, country by country
             </h2>
             <p className="mt-5 text-base leading-relaxed text-[#3D4152]">
@@ -333,7 +333,7 @@ function ExportFootprint() {
             </p>
             <a
               href="#regions"
-              className="group mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-[#1E2733] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#141B24]"
+              className="group mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-[#78899B] px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#5E7088]"
             >
               View All Countries
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -368,30 +368,30 @@ function ExportFootprint() {
                             aria-pressed={isActive}
                             className={`group relative flex h-40 flex-col overflow-hidden rounded-2xl border bg-white p-5 text-left transition-all duration-300 ${
                               isActive
-                                ? "border-[#1E2733] ring-2 ring-[#1E2733]/25 shadow-xl -translate-y-0.5"
-                                : "border-[#e8e6e3] hover:border-[#1E2733]/50 hover:shadow-lg hover:-translate-y-0.5"
+                                ? "border-[#78899B] ring-2 ring-[#78899B]/25 shadow-xl -translate-y-0.5"
+                                : "border-[#e8e6e3] hover:border-[#78899B]/50 hover:shadow-lg hover:-translate-y-0.5"
                             }`}
                           >
                             {/* Accent bar on the active card */}
                             <span
                               aria-hidden
-                              className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#1E2733] to-[#1E2733] transition-opacity duration-300 ${
+                              className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#78899B] to-[#78899B] transition-opacity duration-300 ${
                                 isActive ? "opacity-100" : "opacity-0"
                               }`}
                             />
                             <div className="flex items-center gap-3">
                               <Flag code={c.flag} className="h-7 w-10 shrink-0 rounded-[3px] ring-1 ring-black/10 shadow-sm" />
                               <div className="min-w-0">
-                                <h3 className="truncate font-heading font-bold text-[#161D27] leading-tight">{c.country}</h3>
+                                <h3 className="truncate font-heading font-bold text-[#48608A] leading-tight">{c.country}</h3>
                                 <p className="text-xs text-[#9aa0a6]">Top Market</p>
                               </div>
                             </div>
-                            <p className="mt-auto font-heading font-extrabold text-2xl text-[#1E2733] leading-none">
+                            <p className="mt-auto font-heading font-extrabold text-2xl text-[#394F73] leading-none">
                               {stripVal(c.value)}
                             </p>
                             <p className="mt-1.5 flex items-center gap-1 text-xs text-[#9aa0a6]">
                               Exports (FY2024)
-                              {c.growth && <TrendingUp className="h-3 w-3 text-[#1E2733]" aria-hidden />}
+                              {c.growth && <TrendingUp className="h-3 w-3 text-[#394F73]" aria-hidden />}
                             </p>
                           </button>
                         );
@@ -407,7 +407,7 @@ function ExportFootprint() {
                 onClick={() => goToPage(page - 1)}
                 disabled={page === 0}
                 aria-label="Previous countries"
-                className="absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#161D27] shadow-lg ring-1 ring-black/5 transition hover:bg-[#1E2733] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-white disabled:hover:text-[#161D27]"
+                className="absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#48608A] shadow-lg ring-1 ring-black/5 transition hover:bg-[#78899B] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-white disabled:hover:text-[#48608A]"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
@@ -416,7 +416,7 @@ function ExportFootprint() {
                 onClick={() => goToPage(page + 1)}
                 disabled={page === pageCount - 1}
                 aria-label="Next countries"
-                className="absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#161D27] shadow-lg ring-1 ring-black/5 transition hover:bg-[#1E2733] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-white disabled:hover:text-[#161D27]"
+                className="absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#48608A] shadow-lg ring-1 ring-black/5 transition hover:bg-[#78899B] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-white disabled:hover:text-[#48608A]"
               >
                 <ChevronRight className="h-5 w-5" />
               </button>
@@ -432,7 +432,7 @@ function ExportFootprint() {
                       onClick={() => goToPage(i)}
                       aria-label={`Go to slide ${i + 1}`}
                       className={`h-2 rounded-full transition-all duration-300 ${
-                        i === page ? "w-6 bg-[#1E2733]" : "w-2 bg-[#cbd2cd] hover:bg-[#9aa0a6]"
+                        i === page ? "w-6 bg-[#78899B]" : "w-2 bg-[#cbd2cd] hover:bg-[#9aa0a6]"
                       }`}
                     />
                   ))}
@@ -455,7 +455,7 @@ function ExportFootprint() {
                       <div className="flex items-center gap-3">
                         <Flag code={activeCountry.flag} className="h-9 w-12 shrink-0 rounded-[3px] ring-1 ring-black/10 shadow-sm" />
                         <div>
-                          <h3 className="font-heading font-extrabold text-xl text-[#161D27] leading-tight">
+                          <h3 className="font-heading font-extrabold text-xl text-[#48608A] leading-tight">
                             {activeCountry.country}
                           </h3>
                           <p className="text-xs font-medium uppercase tracking-wide text-[#9aa0a6]">
@@ -464,19 +464,19 @@ function ExportFootprint() {
                         </div>
                       </div>
 
-                      <p className="mt-5 font-heading font-extrabold text-4xl text-[#1E2733] leading-none">
+                      <p className="mt-5 font-heading font-extrabold text-4xl text-[#394F73] leading-none">
                         {stripVal(activeCountry.value)}
                       </p>
 
                       <div className="mt-4 flex flex-wrap gap-2">
                         {activeCountry.growth && (
-                          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1E2733]/10 text-[#1E2733] text-xs font-semibold px-3 py-1">
+                          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#78899B]/10 text-[#394F73] text-xs font-semibold px-3 py-1">
                             <TrendingUp className="h-3.5 w-3.5" />
                             {activeCountry.growth}
                           </span>
                         )}
                         {activeCountry.textileShare && (
-                          <span className="inline-flex items-center rounded-full bg-[#0E1318]/[0.06] text-[#3D4152] text-xs font-medium px-3 py-1">
+                          <span className="inline-flex items-center rounded-full bg-[#394F73]/[0.06] text-[#3D4152] text-xs font-medium px-3 py-1">
                             {activeCountry.textileShare}
                           </span>
                         )}
@@ -489,15 +489,15 @@ function ExportFootprint() {
 
                     {/* Lead segments */}
                     <div className="bg-white p-6 lg:p-7">
-                      <h4 className="flex items-center gap-2 font-heading font-bold text-sm text-[#161D27]">
-                        <Sparkles className="h-4 w-4 text-[#1E2733]" />
+                      <h4 className="flex items-center gap-2 font-heading font-bold text-sm text-[#48608A]">
+                        <Sparkles className="h-4 w-4 text-[#394F73]" />
                         Lead export segments
                       </h4>
                       <dl className="mt-3 divide-y divide-[#f0efed]">
                         {activeCountry.segments.map((s) => (
                           <div key={s.label} className="flex items-center justify-between gap-4 py-2.5">
                             <dt className="text-sm text-[#3D4152]">{s.label}</dt>
-                            <dd className="shrink-0 font-heading font-bold text-sm text-[#1E2733]">{s.value}</dd>
+                            <dd className="shrink-0 font-heading font-bold text-sm text-[#394F73]">{s.value}</dd>
                           </div>
                         ))}
                       </dl>
@@ -525,11 +525,11 @@ function DestinationBanner() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="relative overflow-hidden rounded-2xl lg:rounded-[1.75rem] bg-[#161D27]">
+    <div className="relative overflow-hidden rounded-2xl lg:rounded-[1.75rem] bg-[#48608A]">
       {/* Faded garments on the right edge */}
       <div aria-hidden className="absolute inset-y-0 right-0 w-1/2 lg:w-2/5">
         <Image src="/image/apparel.jpg" alt="" fill className="object-cover opacity-25" sizes="40vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#161D27] via-[#161D27]/70 to-[#161D27]/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#48608A] via-[#48608A]/70 to-[#48608A]/20" />
       </div>
 
       <div className="relative grid lg:grid-cols-2 items-center gap-10 px-7 sm:px-10 lg:px-14 py-12 lg:py-16">
@@ -617,8 +617,8 @@ function RegionExplorer() {
               onClick={() => setActive(r.id)}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${
                 isActive
-                  ? "bg-[#1E2733] text-white border-[#1E2733] shadow-md"
-                  : "bg-white text-[#3D4152] border-[#e2e0dc] hover:border-[#1E2733] hover:text-[#1E2733]"
+                  ? "bg-[#78899B] text-white border-[#78899B] shadow-md"
+                  : "bg-white text-[#3D4152] border-[#e2e0dc] hover:border-[#78899B] hover:text-[#394F73]"
               }`}
             >
               <Flag code={r.flags[0]} className="h-3.5 w-5 rounded-[2px] ring-1 ring-black/10" />
@@ -641,7 +641,7 @@ function RegionExplorer() {
             {/* Image card */}
             <div className="lg:col-span-4 relative min-h-[230px] rounded-2xl overflow-hidden">
               <Image src={region.image} alt={region.name} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0E1318]/95 via-[#0E1318]/35 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#394F73]/95 via-[#394F73]/35 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
                 <div className="flex items-center gap-1.5 mb-3">
                   {region.flags.map((f) => (
@@ -667,10 +667,10 @@ function RegionExplorer() {
                     key={s.label}
                     className="flex flex-col rounded-xl border border-[#e2e0dc] bg-[#fafaf9] p-3.5 sm:p-4"
                   >
-                    <span className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#1E2733]/12 text-[#1E2733]">
+                    <span className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#78899B]/12 text-[#394F73]">
                       <Icon className="h-[18px] w-[18px]" strokeWidth={1.8} aria-hidden />
                     </span>
-                    <p className="font-heading font-extrabold text-xl sm:text-2xl text-[#1E2733] leading-none">{s.value}</p>
+                    <p className="font-heading font-extrabold text-xl sm:text-2xl text-[#394F73] leading-none">{s.value}</p>
                     <p className="mt-2 text-[11px] sm:text-xs text-[#6b7280] leading-snug">{s.label}</p>
                   </div>
                 );
@@ -686,7 +686,7 @@ function RegionExplorer() {
           <div className="hidden md:block overflow-x-auto rounded-xl border border-[#e2e0dc]">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-[#0E1318] text-white">
+                <tr className="bg-[#394F73] text-white">
                   {region.table.columns.map((c) => (
                     <th key={c} className="text-left px-5 py-3.5 font-semibold">{c}</th>
                   ))}
@@ -700,9 +700,9 @@ function RegionExplorer() {
                         key={ci}
                         className={`px-5 py-3.5 align-top ${
                           ci === 0
-                            ? "font-semibold text-[#0E1318]"
+                            ? "font-semibold text-[#394F73]"
                             : ci === row.cells.length - 1
-                            ? "text-[#1E2733] font-medium"
+                            ? "text-[#394F73] font-medium"
                             : "text-[#3D4152]"
                         }`}
                       >
@@ -726,7 +726,7 @@ function RegionExplorer() {
           <div className="md:hidden space-y-3">
             {region.table.rows.map((row) => (
               <div key={row.cells[0]} className="rounded-xl border border-[#e2e0dc] bg-white p-4">
-                <h4 className="font-semibold text-[#0E1318] mb-2 flex items-center gap-2">
+                <h4 className="font-semibold text-[#394F73] mb-2 flex items-center gap-2">
                   {row.flag && <Flag code={row.flag} className="h-4 w-6 rounded-[2px] ring-1 ring-black/10" />}
                   {row.cells[0]}
                 </h4>
@@ -734,7 +734,7 @@ function RegionExplorer() {
                   {row.cells.slice(1).map((cell, ci) => (
                     <div key={ci} className="flex justify-between gap-3">
                       <dt className="text-[#6b7280]">{region.table.columns[ci + 1]}</dt>
-                      <dd className={`text-right ${ci === row.cells.length - 2 ? "text-[#1E2733] font-medium" : "text-[#3D4152]"}`}>{cell}</dd>
+                      <dd className={`text-right ${ci === row.cells.length - 2 ? "text-[#394F73] font-medium" : "text-[#3D4152]"}`}>{cell}</dd>
                     </div>
                   ))}
                 </dl>
@@ -749,7 +749,7 @@ function RegionExplorer() {
               {region.extra && (
                 <div className="rounded-xl border border-[#e2e0dc] bg-[#fafaf9] overflow-hidden">
                   <div className="px-5 py-3.5 border-b border-[#e2e0dc]">
-                    <h4 className="font-heading font-bold text-[#0E1318] text-sm">{region.extra.title}</h4>
+                    <h4 className="font-heading font-bold text-[#394F73] text-sm">{region.extra.title}</h4>
                   </div>
                   <dl>
                     {region.extra.rows.map((r, i) => {
@@ -761,8 +761,8 @@ function RegionExplorer() {
                             isTotal ? "border-t border-[#d8d6d2] bg-[#f3f2ef]" : "border-t border-[#ececea] first:border-t-0"
                           }`}
                         >
-                          <dt className={`text-sm ${isTotal ? "font-semibold text-[#0E1318]" : "text-[#3D4152]"}`}>{r.label}</dt>
-                          <dd className="font-heading font-bold text-[#1E2733] text-sm">{r.value}</dd>
+                          <dt className={`text-sm ${isTotal ? "font-semibold text-[#394F73]" : "text-[#3D4152]"}`}>{r.label}</dt>
+                          <dd className="font-heading font-bold text-[#394F73] text-sm">{r.value}</dd>
                         </div>
                       );
                     })}
@@ -771,13 +771,13 @@ function RegionExplorer() {
               )}
 
               <div className="rounded-xl border border-[#e2e0dc] bg-white p-5">
-                <h4 className="font-heading font-bold text-[#0E1318] text-sm mb-4 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#1E2733]" /> Best opportunities for Pakistani exporters
+                <h4 className="font-heading font-bold text-[#394F73] text-sm mb-4 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#394F73]" /> Best opportunities for Pakistani exporters
                 </h4>
                 <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3">
                   {region.opportunities.map((o) => (
                     <li key={o} className="flex items-start gap-2 text-sm text-[#3D4152] leading-snug">
-                      <CheckCircle2 className="w-4 h-4 text-[#1E2733] mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#394F73] mt-0.5 flex-shrink-0" />
                       {o}
                     </li>
                   ))}
@@ -806,7 +806,7 @@ export default function GlobalTextileMarketClient() {
           <AnimatedSection>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-xl">
-                <span className="mb-5 inline-block rounded bg-[#1E2733]/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#1E2733]">
+                <span className="mb-5 inline-block rounded bg-[#78899B]/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#394F73]">
                   Our Services
                 </span>
                 <h2 className="font-heading text-3xl font-extrabold leading-[1.1] text-[#1a1f2e] sm:text-4xl lg:text-[2.6rem]">
@@ -835,7 +835,7 @@ export default function GlobalTextileMarketClient() {
                         sizes="(max-width: 1024px) 50vw, 25vw"
                       />
                     </div>
-                    <div className="absolute -bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#0E1318]">
+                    <div className="absolute -bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#394F73]">
                       <seg.icon className="h-5 w-5 text-white" />
                     </div>
                   </div>
@@ -847,11 +847,11 @@ export default function GlobalTextileMarketClient() {
                     </h3>
                     <ul className="space-y-2.5">
                       <li className="flex items-start gap-2 text-sm text-[#3D4152]">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#1E2733]" />
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#394F73]" />
                         <span>{seg.tags}</span>
                       </li>
                       <li className="flex items-start gap-2 text-sm text-[#6b7280]">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#1E2733]" />
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#394F73]" />
                         <span>{seg.desc}</span>
                       </li>
                     </ul>
@@ -881,7 +881,7 @@ export default function GlobalTextileMarketClient() {
       <ExportFootprint />
 
       {/* ── Competitive landscape ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#0E1318]">
+      <section className="relative overflow-hidden bg-[#394F73]">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -959,8 +959,8 @@ export default function GlobalTextileMarketClient() {
                   <AnimatedSection key={s.title} delay={(i % 3) * 0.08}>
                     <div>
                       <div className="flex items-center gap-2.5 mb-2.5">
-                        <Icon className="w-5 h-5 shrink-0 text-[#1E2733]" strokeWidth={1.7} aria-hidden />
-                        <h3 className="font-heading font-bold text-[#161D27] text-base leading-snug">
+                        <Icon className="w-5 h-5 shrink-0 text-[#394F73]" strokeWidth={1.7} aria-hidden />
+                        <h3 className="font-heading font-bold text-[#48608A] text-base leading-snug">
                           {s.title}
                         </h3>
                       </div>
@@ -974,18 +974,18 @@ export default function GlobalTextileMarketClient() {
             {/* Right — title block */}
             <AnimatedSection animation="slide-left" className="lg:col-span-4">
               <div className="inline-flex items-center gap-2 mb-5">
-                <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#1E2733]">
+                <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#394F73]">
                   Exporter Playbook
                 </span>
               </div>
-              <h2 className="font-heading font-extrabold text-[#161D27] text-3xl sm:text-4xl lg:text-[2.6rem] leading-[1.08] tracking-tight">
+              <h2 className="font-heading font-extrabold text-[#48608A] text-3xl sm:text-4xl lg:text-[2.6rem] leading-[1.08] tracking-tight">
                 How exporters win the next decade
               </h2>
               <p className="mt-5 text-base leading-relaxed text-[#3D4152]">
                 Our playbook helps Pakistani exporters scale with clarity, compliance, and confidence.
               </p>
               <p className="mt-7 flex items-start gap-2 text-sm text-[#9aa0a6]">
-                <Info className="h-4 w-4 shrink-0 mt-0.5 text-[#1E2733]" />
+                <Info className="h-4 w-4 shrink-0 mt-0.5 text-[#394F73]" />
                 <span>
                   <span className="font-semibold text-[#3D4152]">Source:</span> Pakistan Export
                   Market Report 2026–2030. Figures are indicative; refresh before final launch.

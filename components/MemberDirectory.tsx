@@ -32,7 +32,7 @@ function FilterDropdown({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-[#D8D5CF] bg-white text-base text-[#1A1A1A] hover:border-[#1E2733]/40 transition-colors w-full justify-between"
+        className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-[#D8D5CF] bg-white text-base text-[#1A1A1A] hover:border-[#78899B]/40 transition-colors w-full justify-between"
       >
         <span className={value ? "text-[#1A1A1A]" : "text-[#6B7280]"}>
           {value || label}
@@ -58,7 +58,7 @@ function FilterDropdown({
                 onClick={() => { onChange(opt); setOpen(false); }}
                 className={`w-full text-left px-4 py-2 text-base transition-colors ${
                   value === opt
-                    ? "bg-[#1E2733]/5 text-[#1E2733] font-medium"
+                    ? "bg-[#78899B]/5 text-[#394F73] font-medium"
                     : "text-[#1A1A1A] hover:bg-[#F3F4F6]"
                 }`}
               >
@@ -100,12 +100,12 @@ function MemberCard({ member }: { member: Member }) {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="font-heading font-bold text-[#1A1A1A] text-lg mb-1 group-hover:text-[#1E2733] transition-colors">
+        <h3 className="font-heading font-bold text-[#1A1A1A] text-lg mb-1 group-hover:text-[#394F73] transition-colors">
           {member.name}
         </h3>
 
         <div className="flex flex-wrap gap-1.5 mb-3">
-          <span className="inline-block px-2 py-0.5 rounded-full bg-[#1E2733]/8 text-[#1E2733] text-base font-semibold uppercase tracking-wide">
+          <span className="inline-block px-2 py-0.5 rounded-full bg-[#78899B]/8 text-[#394F73] text-base font-semibold uppercase tracking-wide">
             {member.companyType}
           </span>
         </div>
@@ -157,8 +157,8 @@ export function MemberDirectory() {
     <section className="py-8 lg:py-12" style={{ backgroundColor: "#EEECEA" }}>
       <div className="px-8 sm:px-12 lg:px-16 xl:px-20">
         {/* ── Section banner ─────────────────────────────── */}
-        <div className="relative overflow-hidden rounded mb-6 -mx-2 sm:-mx-4" style={{ background: "linear-gradient(135deg, #0E1318 0%, #0E1318 100%)" }}>
-          <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: "linear-gradient(to bottom, #2A3542, #0E1318)" }} />
+        <div className="relative overflow-hidden rounded mb-6 -mx-2 sm:-mx-4" style={{ background: "linear-gradient(135deg, #394F73 0%, #394F73 100%)" }}>
+          <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: "linear-gradient(to bottom, #647689, #394F73)" }} />
           <div className="absolute top-0 right-0 w-40 h-full opacity-[0.06]" style={{ background: "radial-gradient(circle at 80% 30%, white 0%, transparent 70%)" }} />
           <div className="py-5 px-7 sm:px-10 pl-8 sm:pl-12">
             <p className="text-base font-bold uppercase tracking-[0.2em] mb-1.5" style={{ color: "#B3AA98" }}>Member Directory</p>
@@ -179,7 +179,7 @@ export function MemberDirectory() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search members..."
-                className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[#D8D5CF] text-base text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#1E2733] transition-colors"
+                className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[#D8D5CF] text-base text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:border-[#78899B] transition-colors"
               />
             </div>
 
@@ -213,7 +213,7 @@ export function MemberDirectory() {
               {companyType && (
                 <button
                   onClick={() => setCompanyType("")}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#1E2733]/8 text-[#1E2733] text-base font-medium hover:bg-[#1E2733]/15 transition-colors"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#78899B]/8 text-[#394F73] text-base font-medium hover:bg-[#78899B]/15 transition-colors"
                 >
                   {companyType}
                   <X className="w-3 h-3" />
@@ -222,7 +222,7 @@ export function MemberDirectory() {
               {sector && (
                 <button
                   onClick={() => setSector("")}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#1E2733]/8 text-[#1E2733] text-base font-medium hover:bg-[#1E2733]/15 transition-colors"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#78899B]/8 text-[#394F73] text-base font-medium hover:bg-[#78899B]/15 transition-colors"
                 >
                   {sector}
                   <X className="w-3 h-3" />
@@ -231,7 +231,7 @@ export function MemberDirectory() {
               {technology && (
                 <button
                   onClick={() => setTechnology("")}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#1E2733]/8 text-[#1E2733] text-base font-medium hover:bg-[#1E2733]/15 transition-colors"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#78899B]/8 text-[#394F73] text-base font-medium hover:bg-[#78899B]/15 transition-colors"
                 >
                   {technology}
                   <X className="w-3 h-3" />
@@ -273,7 +273,7 @@ export function MemberDirectory() {
             </p>
             <button
               onClick={clearFilters}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1A1A1A] text-white text-base font-semibold hover:bg-[#1E2733] transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1A1A1A] text-white text-base font-semibold hover:bg-[#78899B] transition-colors"
             >
               Clear all filters
             </button>
@@ -292,7 +292,7 @@ export function MemberDirectory() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/membership"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#1A1A1A] text-white text-base font-semibold hover:bg-[#1E2733] transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#1A1A1A] text-white text-base font-semibold hover:bg-[#78899B] transition-colors duration-300"
             >
               Become a Member
             </Link>

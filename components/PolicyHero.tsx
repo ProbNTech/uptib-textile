@@ -36,12 +36,12 @@ export function PolicyHero({
       {/* Gradient base */}
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, #0E1318 0%, #1A1A1A 55%, #0E1318 100%)" }}
+        style={{ background: "linear-gradient(135deg, #394F73 0%, #1A1A1A 55%, #394F73 100%)" }}
       />
       {/* Radial brand glow */}
       <div
         className="absolute -top-32 right-[-12%] w-[520px] h-[520px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(30, 39, 51,0.22), transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(120, 137, 155,0.22), transparent 70%)" }}
       />
       {/* Subtle dot grid */}
       <div
@@ -73,7 +73,7 @@ export function PolicyHero({
 
           {/* Eyebrow chip */}
           {eyebrow && (
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#1E2733]/40 bg-[#1E2733]/10 px-4 py-1.5 mb-5 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#78899B]/40 bg-[#78899B]/10 px-4 py-1.5 mb-5 backdrop-blur-sm">
               {Icon && <Icon className="w-4 h-4 text-[#B3AA98]" strokeWidth={1.8} aria-hidden="true" />}
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#B3AA98]">
                 {eyebrow}
@@ -96,7 +96,7 @@ export function PolicyHero({
           {/* Last updated */}
           {updated && (
             <p className="mt-6 inline-flex items-center gap-2 text-sm text-white/55">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1E2733]" aria-hidden="true" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#78899B]" aria-hidden="true" />
               Last updated: {updated}
             </p>
           )}
@@ -107,7 +107,7 @@ export function PolicyHero({
       </div>
 
       {/* Bottom brand accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#78899B]" />
     </section>
   );
 }

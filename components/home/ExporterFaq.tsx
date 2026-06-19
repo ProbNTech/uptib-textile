@@ -49,13 +49,13 @@ export default function ExporterFaq({
                 label={label}
                 title={title}
                 body={body}
-                color="#1E2733"
+                color="#394F73"
               />
 
               {/* Support card */}
-              <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]">
+              <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(140, 154, 171,0.18)]">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733] text-white">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#78899B] text-white">
                     <HelpCircle className="size-5" aria-hidden />
                   </span>
                   <div>
@@ -65,7 +65,7 @@ export default function ExporterFaq({
                 </div>
                 <Link
                   href="/contact"
-                  className="group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733]"
+                  className="group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#394F73]"
                 >
                   Talk to our team
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
@@ -86,8 +86,8 @@ export default function ExporterFaq({
                     className={cn(
                       "rounded-2xl border transition-colors duration-200",
                       isOpen
-                        ? "border-[#1E2733]/25 bg-[#1E2733]/[0.04] shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]"
-                        : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.12)]",
+                        ? "border-[#78899B]/25 bg-[#78899B]/[0.04] shadow-[0_10px_30px_-12px_rgba(140, 154, 171,0.18)]"
+                        : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(140, 154, 171,0.12)]",
                     )}
                   >
                     <h3>
@@ -102,7 +102,7 @@ export default function ExporterFaq({
                         <span
                           className={cn(
                             "inline-flex size-9 shrink-0 items-center justify-center rounded-xl text-sm font-bold tabular-nums transition-colors",
-                            isOpen ? "bg-[#1E2733] text-white" : "bg-[#1E2733]/10 text-[#1E2733]",
+                            isOpen ? "bg-[#78899B] text-white" : "bg-[#78899B]/10 text-[#394F73]",
                           )}
                           aria-hidden
                         >
@@ -114,7 +114,7 @@ export default function ExporterFaq({
                         <span
                           className={cn(
                             "inline-flex size-8 shrink-0 items-center justify-center rounded-full transition-colors",
-                            isOpen ? "bg-[#1E2733] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
+                            isOpen ? "bg-[#78899B] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
                           )}
                           aria-hidden
                         >

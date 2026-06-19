@@ -56,7 +56,7 @@ const reasons = [
 export default function ContactPage() {
   return (
     <>
-      <section className="relative z-[2] w-full overflow-hidden bg-[#0E1318] min-h-[600px] md:min-h-[640px] lg:min-h-[700px] flex items-center">
+      <section className="relative z-[2] w-full overflow-hidden bg-[#394F73] min-h-[600px] md:min-h-[640px] lg:min-h-[700px] flex items-center">
         {/* Background image */}
         <Image
           src="/image/hero-bg/pexels-jan-van-der-wolf-11680885-29298932.jpg"
@@ -74,7 +74,7 @@ export default function ContactPage() {
           className="absolute inset-0 z-[1]"
           style={{
             background:
-              "linear-gradient(90deg, rgba(14, 19, 24,0.92) 0%, rgba(14, 19, 24,0.78) 38%, rgba(14, 19, 24,0.5) 68%, rgba(14, 19, 24,0.3) 100%)",
+              "linear-gradient(90deg, rgba(57, 81, 115,0.92) 0%, rgba(57, 81, 115,0.78) 38%, rgba(57, 81, 115,0.5) 68%, rgba(57, 81, 115,0.3) 100%)",
           }}
         />
 
@@ -86,16 +86,16 @@ export default function ContactPage() {
             className="pointer-events-none absolute inset-y-8 left-0 w-[min(48rem,92%)] rounded-[2.5rem]"
             style={{
               background:
-                "radial-gradient(ellipse 80% 78% at 32% 50%, rgba(14, 19, 24,0.84) 0%, rgba(14, 19, 24,0.56) 45%, rgba(14, 19, 24,0.2) 75%, rgba(14, 19, 24,0) 100%)",
+                "radial-gradient(ellipse 80% 78% at 32% 50%, rgba(57, 81, 115,0.84) 0%, rgba(57, 81, 115,0.56) 45%, rgba(57, 81, 115,0.2) 75%, rgba(57, 81, 115,0) 100%)",
             }}
           />
           <div className="relative max-w-2xl">
-            <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#1E2733] mb-4">
+            <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#394F73] mb-4">
               Contact
             </p>
             <h1 className="font-heading font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-5">
               Let&apos;s start a{" "}
-              <span className="text-[#1E2733]">conversation</span>
+              <span className="text-[#394F73]">conversation</span>
             </h1>
             <p className="text-white/95 text-base md:text-lg leading-relaxed max-w-md mb-10">
               Whether you have a question, need assistance, or want to explore opportunities — we&apos;re here to help.
@@ -110,8 +110,8 @@ export default function ContactPage() {
                     i > 0 ? "sm:pl-5 sm:ml-5 sm:border-l sm:border-white/15" : ""
                   }`}
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#1E2733]/15 border border-[#1E2733]/25 flex items-center justify-center flex-shrink-0">
-                    <b.icon className="w-5 h-5 text-[#1E2733]" />
+                  <div className="w-10 h-10 rounded-full bg-[#78899B]/15 border border-[#78899B]/25 flex items-center justify-center flex-shrink-0">
+                    <b.icon className="w-5 h-5 text-[#394F73]" />
                   </div>
                   <div>
                     <p className="font-heading font-bold text-white text-sm leading-tight">{b.title}</p>
@@ -124,7 +124,7 @@ export default function ContactPage() {
         </div>
 
         {/* Bottom accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[3px] z-20 bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] z-20 bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#78899B]" />
       </section>
 
       <Section variant="light" pattern>
@@ -156,18 +156,18 @@ export default function ContactPage() {
                 />
                 <div className="relative flex items-start gap-4">
                   <div className="w-11 h-11 rounded-full bg-[#F6F2EA] border border-[#ECE5D8] flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-[#1E2733]" />
+                    <MapPin className="w-5 h-5 text-[#394F73]" />
                   </div>
                   <div>
                     <p className="font-heading font-bold text-[#1A1A1A]">{o.label}</p>
                     <address className="not-italic text-[#3D4152] text-sm mt-1 leading-relaxed">
                       {o.lines.map((l) => (<span key={l} className="block">{l}</span>))}
                     </address>
-                    <a href={o.phoneHref} className="flex items-center gap-2 mt-3 text-sm font-medium text-[#3D4152] hover:text-[#1E2733] transition-colors">
-                      <Phone className="w-4 h-4 text-[#1E2733] flex-shrink-0" />
+                    <a href={o.phoneHref} className="flex items-center gap-2 mt-3 text-sm font-medium text-[#3D4152] hover:text-[#394F73] transition-colors">
+                      <Phone className="w-4 h-4 text-[#394F73] flex-shrink-0" />
                       {o.phone}
                     </a>
-                    <a href={o.map} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm font-semibold text-[#1E2733] hover:text-[#141B24]">
+                    <a href={o.map} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm font-semibold text-[#394F73] hover:text-[#394F73]">
                       View on map →
                     </a>
                   </div>
@@ -179,11 +179,11 @@ export default function ContactPage() {
             <div className="rounded-card border border-[#E5E7EB] p-6">
               <a href="mailto:info@ukpaktrade.org.uk" className="flex items-center gap-4 group">
                 <div className="w-11 h-11 rounded-full bg-[#F6F2EA] border border-[#ECE5D8] flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-[#1E2733]" />
+                  <Mail className="w-5 h-5 text-[#394F73]" />
                 </div>
                 <div>
                   <p className="text-[#6B7280] text-xs uppercase tracking-wide font-bold">Email</p>
-                  <p className="text-[#1A1A1A] font-medium group-hover:text-[#1E2733] transition-colors break-all">info@ukpaktrade.org.uk</p>
+                  <p className="text-[#1A1A1A] font-medium group-hover:text-[#394F73] transition-colors break-all">info@ukpaktrade.org.uk</p>
                 </div>
               </a>
             </div>
@@ -199,7 +199,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="w-10 h-10 rounded-full border border-[#E5E7EB] flex items-center justify-center text-[#1E2733] hover:bg-[#1E2733] hover:text-white hover:border-[#1E2733] transition-colors"
+                    className="w-10 h-10 rounded-full border border-[#E5E7EB] flex items-center justify-center text-[#394F73] hover:bg-[#78899B] hover:text-white hover:border-[#78899B] transition-colors"
                   >
                     <s.icon className="w-[18px] h-[18px]" />
                   </a>
@@ -212,7 +212,7 @@ export default function ContactPage() {
 
       {/* Why get in touch */}
       <Section variant="light">
-        <div className="rounded-card bg-gradient-to-br from-[#0E1318] to-[#0E1318] p-8 lg:p-12">
+        <div className="rounded-card bg-gradient-to-br from-[#394F73] to-[#394F73] p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Title + description */}
             <div className="lg:col-span-4">

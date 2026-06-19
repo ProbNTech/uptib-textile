@@ -33,7 +33,7 @@ export function PolicyDoc({
                     <li key={t.id}>
                       <a
                         href={`#${t.id}`}
-                        className="-ml-px block border-l-2 border-transparent py-1.5 pl-4 text-[13.5px] leading-snug text-[#5A5F72] transition-colors duration-150 hover:border-[#1E2733] hover:text-[#1A1A1A]"
+                        className="-ml-px block border-l-2 border-transparent py-1.5 pl-4 text-[13.5px] leading-snug text-[#5A5F72] transition-colors duration-150 hover:border-[#78899B] hover:text-[#1A1A1A]"
                       >
                         {t.label}
                       </a>
@@ -69,7 +69,7 @@ export function PolicySection({
     <section id={id} className="scroll-mt-28">
       <header className="mb-6">
         {eyebrow && (
-          <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-[#1E2733]">
+          <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-[#394F73]">
             {eyebrow}
           </p>
         )}
@@ -100,7 +100,7 @@ export function PolicyList({ items }: { items: ReactNode[] }) {
     <ul className="space-y-2.5">
       {items.map((it, i) => (
         <li key={i} className="flex gap-3">
-          <span className="mt-[0.7em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#1E2733]" aria-hidden="true" />
+          <span className="mt-[0.7em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#78899B]" aria-hidden="true" />
           <span>{it}</span>
         </li>
       ))}

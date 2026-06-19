@@ -34,7 +34,7 @@ import {
 
 /* ── Data ───────────────────────────────────────────────────────── */
 
-const brandColors = ["#1E2733", "#1E2733", "#1E2733"];
+const brandColors = ["#78899B", "#78899B", "#78899B"];
 
 const orgChart = [
   {
@@ -205,14 +205,14 @@ const operatingProcedures = [
 ];
 
 const levelColors: Record<string, string> = {
-  "Executive Leadership": "#1E2733",
-  "Senior Management": "#1E2733",
-  "Governance": "#1E2733",
-  Operations: "#1E2733",
-  "Regional Leadership": "#1E2733",
+  "Executive Leadership": "#78899B",
+  "Senior Management": "#78899B",
+  "Governance": "#78899B",
+  Operations: "#78899B",
+  "Regional Leadership": "#78899B",
 };
 
-const procedureColors = ["#1E2733", "#1E2733", "#1E2733", "#1E2733", "#1E2733", "#1E2733", "#1E2733", "#1E2733", "#1E2733"];
+const procedureColors = ["#78899B", "#78899B", "#78899B", "#78899B", "#78899B", "#78899B", "#78899B", "#78899B", "#78899B"];
 
 const governanceCards = [
   { id: "governance-structure", title: "Governance Structure", desc: "Our framework for accountability, transparency, and ethical oversight.", tags: ["Ethics", "Accountability"], colorIdx: 0 },
@@ -222,10 +222,10 @@ const governanceCards = [
 ];
 
 const stats = [
-  { value: "13", label: "Leadership Roles", color: "#1E2733" },
-  { value: "5", label: "Governance Levels", color: "#1E2733" },
-  { value: "9", label: "Operating Procedures", color: "#1E2733" },
-  { value: "100%", label: "Transparency", color: "#1E2733" },
+  { value: "13", label: "Leadership Roles", color: "#394F73" },
+  { value: "5", label: "Governance Levels", color: "#394F73" },
+  { value: "9", label: "Operating Procedures", color: "#394F73" },
+  { value: "100%", label: "Transparency", color: "#394F73" },
 ];
 
 /* ── Component ──────────────────────────────────────────────────── */
@@ -290,10 +290,10 @@ export default function ManagementTeamPage() {
               transition={{ duration: 0.5 }}
               className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 shadow-sm overflow-hidden"
             >
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E2733]/20 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#78899B]/20 to-transparent" />
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-[#1E2733]/10 border border-[#1E2733]/20 flex items-center justify-center">
-                  <Building2 className="w-5 h-5 text-[#1E2733]" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-xl bg-[#78899B]/10 border border-[#78899B]/20 flex items-center justify-center">
+                  <Building2 className="w-5 h-5 text-[#394F73]" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading font-bold text-lg text-[#1A1A1A]">Governance Model</h3>
               </div>
@@ -313,10 +313,10 @@ export default function ManagementTeamPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="relative bg-white border border-[#D8D5CF] rounded-2xl p-8 shadow-sm overflow-hidden"
             >
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E2733]/20 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#78899B]/20 to-transparent" />
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-[#1E2733]/10 border border-[#1E2733]/20 flex items-center justify-center">
-                  <Layers className="w-5 h-5 text-[#1E2733]" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-xl bg-[#78899B]/10 border border-[#78899B]/20 flex items-center justify-center">
+                  <Layers className="w-5 h-5 text-[#394F73]" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading font-bold text-lg text-[#1A1A1A]">Governance Levels</h3>
               </div>
@@ -372,7 +372,7 @@ export default function ManagementTeamPage() {
           <div className="grid md:grid-cols-2 gap-5">
             {orgChart.map((role, i) => {
               const Icon = role.icon;
-              const color = levelColors[role.level] || "#1E2733";
+              const color = levelColors[role.level] || "#78899B";
               return (
                 <motion.div
                   key={role.title}

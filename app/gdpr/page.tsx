@@ -67,7 +67,7 @@ export default function GDPRPage() {
             GDPR compliance requires data subjects to be granted certain rights. What follows is not an
             exhaustive list, but those rights that are relevant to the collection, processing, and storage
             of personal data on{" "}
-            <a href="https://www.ukpaktrade.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#1E2733] underline underline-offset-2">www.ukpaktrade.org.uk</a>.
+            <a href="https://www.ukpaktrade.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#394F73] underline underline-offset-2">www.ukpaktrade.org.uk</a>.
           </p>
           <div className="space-y-6 pt-2">
             {dataSubjectRights.map((r) => (
@@ -94,7 +94,7 @@ export default function GDPRPage() {
           </div>
           <p className="pt-2">
             If you want to exercise any of the above rights, please email us at{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">info@ukpaktrade.org.uk</a>{" "}
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">info@ukpaktrade.org.uk</a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
             further information and/or evidence of identity. We will endeavor to respond fully to all
             requests within 10 working days of your request, however if we are unable to do so we will
@@ -104,7 +104,7 @@ export default function GDPRPage() {
             Please note that exceptions apply to a number of these rights, and not all rights will be
             applicable in all circumstances. For more details we recommend you consult the guidance
             published by the UK’s Information Commissioner’s Office,{" "}
-            <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#1E2733] underline underline-offset-2">https://ico.org.uk</a>.
+            <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#394F73] underline underline-offset-2">https://ico.org.uk</a>.
           </p>
         </PolicySection>
 
@@ -155,7 +155,7 @@ export default function GDPRPage() {
           <p>
             For any questions about this policy or our treatment of your Personal Information, please
             contact{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">info@ukpaktrade.org.uk</a>.
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">info@ukpaktrade.org.uk</a>.
           </p>
         </PolicySection>
       </PolicyDoc>

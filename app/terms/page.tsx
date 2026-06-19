@@ -235,7 +235,7 @@ function Clause({ text }: { text: string }) {
   if (m) {
     return (
       <p>
-        <span className="font-semibold text-[#1E2733]">{m[1]}</span> {m[2]}
+        <span className="font-semibold text-[#394F73]">{m[1]}</span> {m[2]}
       </p>
     );
   }
@@ -275,7 +275,7 @@ export default function TermsPage() {
             ))}
 
             {"listItems" in section && section.listItems && (
-              <ol className="list-decimal space-y-2 pl-6 marker:font-semibold marker:text-[#1E2733]">
+              <ol className="list-decimal space-y-2 pl-6 marker:font-semibold marker:text-[#394F73]">
                 {section.listItems.map((item, i) => (
                   <li key={i} className="pl-1">
                     {item}

@@ -171,14 +171,14 @@ export function Hero() {
             onClick={() => setCurrentIndex(index)}
             aria-label={`Switch to slide ${index + 1}`}
             className={`h-2 rounded-full transition-all duration-500 ${
-              index === currentIndex ? "bg-[#1E2733] w-8" : "bg-white/40 w-2 hover:bg-white/60"
+              index === currentIndex ? "bg-[#78899B] w-8" : "bg-white/40 w-2 hover:bg-white/60"
             }`}
           />
         ))}
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30 bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#0E1318]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30 bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#394F73]" />
     </section>
   );
 }

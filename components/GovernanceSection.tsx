@@ -6,7 +6,7 @@ import { Section } from "@/components/Section";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
-const brandColors = ["#1E2733", "#1E2733", "#1E2733"];
+const brandColors = ["#78899B", "#78899B", "#78899B"];
 
 export function GovernanceSection({
   id,

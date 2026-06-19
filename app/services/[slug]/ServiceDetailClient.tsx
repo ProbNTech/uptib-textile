@@ -659,7 +659,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
 
       {/* ── FLOATING FACTS CARD ──────────────────────────────────── */}
       <div className={cn("relative z-[3] -mt-14 sm:-mt-16 lg:-mt-20", PX)}>
-        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(60, 74, 90,0.30)] p-6 sm:p-8">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(140, 154, 171,0.30)] p-6 sm:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
             {d.stats.map((f, i) => {
               const Icon = f.icon;
@@ -668,7 +668,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                   key={f.label}
                   className={cn("flex items-start gap-3.5", i > 0 && "lg:border-l lg:border-[#E5E7EB] lg:pl-6")}
                 >
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733]">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#78899B]/10 text-[#394F73]">
                     <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                   </span>
                   <div>
@@ -688,19 +688,19 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
           <AnimatedSection>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
               <div className="lg:col-span-5">
-                <SectionLabel label="What it is" title={s.name} color="#1E2733" hideLine />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] -mt-3 mb-6" />
+                <SectionLabel label="What it is" title={s.name} color="#394F73" hideLine />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-6" />
                 <p className="text-[#3D4152] text-lg leading-relaxed">{d.intro}</p>
 
                 <div className="mt-8">
-                  <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#1E2733] mb-4">
+                  <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#394F73] mb-4">
                     <Users className="size-4" aria-hidden /> {d.whoForLabel}
                   </p>
                   <div className="flex flex-wrap gap-2.5">
                     {d.whoFor.map((a) => (
                       <span
                         key={a}
-                        className="inline-flex items-center rounded-full border border-[#ECE5D8] bg-[#F6F2EA] px-3.5 py-1.5 text-sm font-medium text-[#1E2733]"
+                        className="inline-flex items-center rounded-full border border-[#ECE5D8] bg-[#F6F2EA] px-3.5 py-1.5 text-sm font-medium text-[#394F73]"
                       >
                         {a}
                       </span>
@@ -710,10 +710,10 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
               </div>
 
               <div className="lg:col-span-7">
-                <div className="relative aspect-[16/11] overflow-hidden rounded-2xl border border-[#E5E7EB] shadow-[0_28px_60px_-28px_rgba(60, 74, 90,0.35)]">
+                <div className="relative aspect-[16/11] overflow-hidden rounded-2xl border border-[#E5E7EB] shadow-[0_28px_60px_-28px_rgba(140, 154, 171,0.35)]">
                   <Image src={d.feature} alt={s.name} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                  <span className="absolute left-5 bottom-5 inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-1.5 text-sm font-bold text-[#1E2733]">
+                  <span className="absolute left-5 bottom-5 inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-1.5 text-sm font-bold text-[#394F73]">
                     <Sparkles className="size-4" aria-hidden /> {d.featureTag}
                   </span>
                 </div>
@@ -731,7 +731,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
               label={d.contentLabel.eyebrow}
               title={d.contentLabel.title}
               body={d.contentLabel.body}
-              color="#1E2733"
+              color="#394F73"
               hideLine
             />
             <div className="space-y-12">
@@ -742,7 +742,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                   const lgCols =
                     n >= 4 ? "lg:grid-cols-4" : n === 3 ? "lg:grid-cols-3" : n === 2 ? "lg:grid-cols-2" : "lg:grid-cols-1";
                   return (
-                    <div key={bi} className="rounded-2xl bg-gradient-to-br from-[#0E1318] to-[#0E1318] p-7 sm:p-9">
+                    <div key={bi} className="rounded-2xl bg-gradient-to-br from-[#394F73] to-[#394F73] p-7 sm:p-9">
                       <h3 className="font-heading font-extrabold text-white text-xl mb-1.5">{block.title}</h3>
                       {block.intro && (
                         <p className="text-white/70 text-sm leading-relaxed mb-7 max-w-2xl">{block.intro}</p>
@@ -798,7 +798,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                               {!isLast && (
                                 <motion.span
                                   aria-hidden
-                                  className="hidden lg:block absolute top-[17px] left-[2.6rem] right-0 h-[2px] origin-left rounded-full bg-gradient-to-r from-[#1E2733] to-[#ECE5D8]"
+                                  className="hidden lg:block absolute top-[17px] left-[2.6rem] right-0 h-[2px] origin-left rounded-full bg-gradient-to-r from-[#78899B] to-[#ECE5D8]"
                                   initial={shouldReduceMotion ? { scaleX: 1 } : { scaleX: 0 }}
                                   whileInView={{ scaleX: 1 }}
                                   viewport={{ once: true, margin: "-40px" }}
@@ -806,12 +806,12 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                                 />
                               )}
                               <div className="flex items-center mb-5">
-                                <span className="relative z-[1] flex size-9 shrink-0 items-center justify-center rounded-full bg-[#1E2733] text-white font-heading font-bold text-sm shadow-[0_6px_14px_-4px_rgba(30, 39, 51,0.6)] transition-transform duration-300 group-hover:scale-110">
+                                <span className="relative z-[1] flex size-9 shrink-0 items-center justify-center rounded-full bg-[#78899B] text-white font-heading font-bold text-sm shadow-[0_6px_14px_-4px_rgba(120, 137, 155,0.6)] transition-transform duration-300 group-hover:scale-110">
                                   {i + 1}
                                 </span>
                               </div>
                               <div className="lg:pr-6">
-                                <span className="inline-flex size-10 items-center justify-center rounded-xl border border-[#E5E7EB] bg-white text-[#1E2733] shadow-sm mb-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-[#1E2733]/50 group-hover:shadow-[0_12px_24px_-12px_rgba(60, 74, 90,0.45)]">
+                                <span className="inline-flex size-10 items-center justify-center rounded-xl border border-[#E5E7EB] bg-white text-[#394F73] shadow-sm mb-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-[#78899B]/50 group-hover:shadow-[0_12px_24px_-12px_rgba(140, 154, 171,0.45)]">
                                   <Icon className="size-5" strokeWidth={1.6} aria-hidden />
                                 </span>
                                 <p className="font-heading font-bold text-[#1A1A1A] leading-snug">{it.step}</p>
@@ -830,7 +830,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                   return (
                     <div
                       key={bi}
-                      className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden bg-gradient-to-br from-[#0E1318] to-[#0E1318] py-16 sm:py-20 lg:py-24"
+                      className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden bg-gradient-to-br from-[#394F73] to-[#394F73] py-16 sm:py-20 lg:py-24"
                     >
                       {/* decorative dot grid */}
                       <div
@@ -845,7 +845,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                       {/* soft glow */}
                       <motion.div
                         aria-hidden
-                        className="pointer-events-none absolute -top-24 right-[8%] h-72 w-72 rounded-full bg-[#1E2733]/25 blur-[110px]"
+                        className="pointer-events-none absolute -top-24 right-[8%] h-72 w-72 rounded-full bg-[#78899B]/25 blur-[110px]"
                         animate={shouldReduceMotion ? undefined : { opacity: [0.5, 0.85, 0.5] }}
                         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                       />
@@ -893,7 +893,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                       <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
                         <span
                           aria-hidden
-                          className="pointer-events-none absolute left-1/2 top-1/2 z-[2] hidden -translate-x-1/2 -translate-y-1/2 lg:flex size-12 items-center justify-center rounded-full bg-[#1E2733] text-white shadow-[0_10px_24px_-8px_rgba(30, 39, 51,0.6)] ring-4 ring-white"
+                          className="pointer-events-none absolute left-1/2 top-1/2 z-[2] hidden -translate-x-1/2 -translate-y-1/2 lg:flex size-12 items-center justify-center rounded-full bg-[#78899B] text-white shadow-[0_10px_24px_-8px_rgba(120, 137, 155,0.6)] ring-4 ring-white"
                         >
                           <motion.span
                             animate={shouldReduceMotion ? undefined : { x: [-3, 3, -3] }}
@@ -926,7 +926,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true, margin: "-40px" }}
                           transition={{ duration: 0.5, delay: 0.08 }}
-                          className="rounded-2xl border border-[#1E2733]/30 bg-gradient-to-br from-[#0E1318] to-[#0E1318] p-7 text-white shadow-[0_28px_60px_-30px_rgba(60, 74, 90,0.55)]"
+                          className="rounded-2xl border border-[#78899B]/30 bg-gradient-to-br from-[#394F73] to-[#394F73] p-7 text-white shadow-[0_28px_60px_-30px_rgba(140, 154, 171,0.55)]"
                         >
                           <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B3AA98] mb-5">{block.with.label}</p>
                           <ul className="space-y-4">
@@ -962,7 +962,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                               className={cn(
                                 "relative overflow-hidden rounded-2xl border p-6 sm:p-7",
                                 brand
-                                  ? "border-[#1E2733]/40 bg-gradient-to-br from-[#0E1318] to-[#0E1318] shadow-[0_28px_60px_-30px_rgba(60, 74, 90,0.55)]"
+                                  ? "border-[#78899B]/40 bg-gradient-to-br from-[#394F73] to-[#394F73] shadow-[0_28px_60px_-30px_rgba(140, 154, 171,0.55)]"
                                   : "border-[#E5E7EB] bg-[#F8FAFC]",
                               )}
                             >
@@ -1043,7 +1043,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                 }
                 const CIcon = block.variant === "gsp" ? BadgePercent : ShieldCheck;
                 return (
-                  <div key={bi} className="rounded-2xl bg-[#0E1318] text-white p-8 flex items-start gap-5">
+                  <div key={bi} className="rounded-2xl bg-[#394F73] text-white p-8 flex items-start gap-5">
                     <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
                       <CIcon className="w-6 h-6 text-[#B3AA98]" />
                     </div>
@@ -1084,13 +1084,13 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                   d.facts.factsImage ? "lg:col-span-4" : "lg:sticky lg:top-28 lg:self-start lg:max-w-sm",
                 )}
               >
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#1E2733] mb-4">
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#394F73] mb-4">
                   {d.facts.factsLabel.eyebrow}
                 </p>
                 <h2 className="font-heading font-extrabold text-3xl sm:text-[2.2rem] leading-[1.15] text-[#1A1A1A]">
                   {d.facts.factsLabel.title}
                 </h2>
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] mt-5 mb-5" />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] mt-5 mb-5" />
                 <p className="text-[#5A5F72] text-base leading-relaxed mb-7 max-w-sm">{d.facts.factsLabel.body}</p>
                 <ul className="space-y-3.5">
                   {d.facts.chips.map((c, i) => (
@@ -1102,7 +1102,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                       transition={{ duration: 0.4, delay: i * 0.07 }}
                       className="flex items-center gap-3"
                     >
-                      <CheckCircle2 className="size-5 shrink-0 text-[#1E2733]" aria-hidden />
+                      <CheckCircle2 className="size-5 shrink-0 text-[#394F73]" aria-hidden />
                       <span className="text-[15px] font-semibold text-[#1A1A1A]">{c}</span>
                     </motion.li>
                   ))}
@@ -1133,7 +1133,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
 
               {/* Right — labeled card */}
               <div className={cn(d.facts.factsImage && "lg:col-span-5")}>
-                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-2 shadow-[0_24px_60px_-34px_rgba(60, 74, 90,0.30)] sm:p-3">
+                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-2 shadow-[0_24px_60px_-34px_rgba(140, 154, 171,0.30)] sm:p-3">
                   <dl className="divide-y divide-[#EEF0F2]">
                     {d.facts.rows.map((row, i) => (
                       <motion.div
@@ -1144,7 +1144,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                         transition={{ duration: 0.4, delay: i * 0.08 }}
                         className="px-5 py-5 sm:px-6"
                       >
-                        <dt className="font-heading font-extrabold text-[#1E2733] text-sm uppercase tracking-[0.12em]">
+                        <dt className="font-heading font-extrabold text-[#394F73] text-sm uppercase tracking-[0.12em]">
                           {row.label}
                         </dt>
                         <dd className="mt-1.5 text-[15px] leading-relaxed text-[#5A5F72]">{row.value}</dd>
@@ -1164,15 +1164,15 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[0.8fr_2fr] lg:gap-16">
               <div className="lg:sticky lg:top-28 lg:self-start lg:max-w-sm">
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#1E2733] mb-4">{d.why.eyebrow}</p>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#394F73] mb-4">{d.why.eyebrow}</p>
                 <h2 className="font-heading font-extrabold text-3xl sm:text-[2.2rem] leading-[1.15] text-[#1A1A1A]">
                   {d.why.title}
                 </h2>
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] mt-5 mb-5" />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] mt-5 mb-5" />
                 <p className="text-[#5A5F72] text-base leading-relaxed">{d.why.body}</p>
                 {d.why.note && (
                   <div className="mt-7 flex items-start gap-3.5 rounded-2xl border border-[#ECE5D8] bg-[#F6F2EA] p-5">
-                    <Award className="size-5 shrink-0 text-[#1E2733] mt-0.5" aria-hidden />
+                    <Award className="size-5 shrink-0 text-[#394F73] mt-0.5" aria-hidden />
                     <p className="text-sm font-medium text-[#1A1A1A] leading-relaxed">{d.why.note}</p>
                   </div>
                 )}
@@ -1182,7 +1182,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-40px" }}
                     transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative mt-7 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_50px_-30px_rgba(60, 74, 90,0.35)]"
+                    className="relative mt-7 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_50px_-30px_rgba(140, 154, 171,0.35)]"
                   >
                     <Image
                       src={d.growth.secondary}
@@ -1191,7 +1191,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                       className="object-contain p-4"
                       sizes="(max-width: 1024px) 100vw, 24rem"
                     />
-                    <span className="absolute left-3 bottom-3 inline-flex items-center gap-1.5 rounded-full bg-[#F6F2EA] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1E2733]">
+                    <span className="absolute left-3 bottom-3 inline-flex items-center gap-1.5 rounded-full bg-[#F6F2EA] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#394F73]">
                       <TrendingUp className="size-3.5" aria-hidden /> Growth
                     </span>
                   </motion.div>
@@ -1215,7 +1215,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                       transition={{ duration: 0.45, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
                       className="group flex flex-col"
                     >
-                      <span className="inline-flex size-12 items-center justify-center rounded-full bg-[#0E1318] text-white mb-4 shadow-[0_10px_22px_-10px_rgba(60, 74, 90,0.6)] transition-transform duration-300 group-hover:scale-110">
+                      <span className="inline-flex size-12 items-center justify-center rounded-full bg-[#394F73] text-white mb-4 shadow-[0_10px_22px_-10px_rgba(140, 154, 171,0.6)] transition-transform duration-300 group-hover:scale-110">
                         <Icon className="size-[22px]" strokeWidth={1.8} aria-hidden />
                       </span>
                       <h3 className="font-heading font-bold text-lg text-[#1A1A1A] leading-snug">{b.title}</h3>
@@ -1233,7 +1233,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       <section className="bg-white py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
-            <SectionLabel label="Keep exploring" title="Our other services" color="#1E2733" hideLine />
+            <SectionLabel label="Keep exploring" title="Our other services" color="#394F73" hideLine />
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {others.map((o) => {
                 const Icon = o.icon ?? fallbackServiceIcon;
@@ -1241,7 +1241,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                   <Link
                     key={o.slug}
                     href={`/services/${o.slug}`}
-                    className="group flex flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#1E2733]/50 hover:shadow-[0_24px_50px_-24px_rgba(60, 74, 90,0.35)]"
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#78899B]/50 hover:shadow-[0_24px_50px_-24px_rgba(140, 154, 171,0.35)]"
                   >
                     <div className="relative aspect-[16/10] overflow-hidden">
                       <Image
@@ -1252,7 +1252,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                         sizes="(max-width: 640px) 100vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
-                      <span className="absolute left-3 top-3 inline-flex size-9 items-center justify-center rounded-lg bg-white/90 backdrop-blur text-[#1E2733]">
+                      <span className="absolute left-3 top-3 inline-flex size-9 items-center justify-center rounded-lg bg-white/90 backdrop-blur text-[#394F73]">
                         <Icon className="size-[18px]" strokeWidth={2} aria-hidden />
                       </span>
                       <span className="absolute left-3 bottom-3 text-[11px] font-bold uppercase tracking-[0.14em] text-white/85">
@@ -1262,7 +1262,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                     <div className="flex flex-1 flex-col p-5">
                       <h3 className="font-heading font-bold text-[#1A1A1A] text-lg mb-1.5">{o.name}</h3>
                       <p className="text-sm text-[#5A5F72] leading-relaxed flex-1">{o.short}</p>
-                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733] transition-all group-hover:gap-2.5">
+                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#394F73] transition-all group-hover:gap-2.5">
                         Explore <ArrowUpRight className="w-4 h-4" />
                       </span>
                     </div>

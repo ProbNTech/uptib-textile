@@ -101,18 +101,18 @@ function ShowcaseRow({ group, index }: { group: Group; index: number }) {
       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
         {/* Text column */}
         <div className={cn("max-w-xl", reverse && "lg:order-2 lg:justify-self-end")}>
-          <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#1E2733]">
+          <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
             {String(index + 1).padStart(2, "0")} — {group.tagline}
           </span>
           <h3 className={cn(SERIF, "mt-3 text-[1.9rem] leading-tight text-[#1E1A14] sm:text-4xl")}>
             {group.name}
           </h3>
-          <div className="mt-4 h-px w-16 bg-[#1E2733]" />
+          <div className="mt-4 h-px w-16 bg-[#78899B]" />
           <p className="mt-5 text-[15px] leading-relaxed text-[#544B3C] sm:text-base">{group.desc}</p>
           <ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2">
             {group.items.map((it) => (
               <li key={it} className="flex items-start gap-2.5 text-sm text-[#3F392E]">
-                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#1E2733]" aria-hidden />
+                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#394F73]" aria-hidden />
                 {it}
               </li>
             ))}

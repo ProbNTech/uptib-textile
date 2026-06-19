@@ -10,16 +10,16 @@ const PolicyIcon = ({ className, style }: { className?: string; style?: React.CS
   <svg className={className} style={style} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="pol1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#1E2733"/>
-        <stop offset="100%" stopColor="#141B24"/>
+        <stop offset="0%" stopColor="#394F73"/>
+        <stop offset="100%" stopColor="#394F73"/>
       </linearGradient>
       <linearGradient id="pol2" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="0%" stopColor="#B3AA98"/>
-        <stop offset="100%" stopColor="#1E2733"/>
+        <stop offset="100%" stopColor="#394F73"/>
       </linearGradient>
       <linearGradient id="pol3" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#B3AA98"/>
-        <stop offset="100%" stopColor="#1E2733"/>
+        <stop offset="100%" stopColor="#394F73"/>
       </linearGradient>
       <filter id="polGlow">
         <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -27,7 +27,7 @@ const PolicyIcon = ({ className, style }: { className?: string; style?: React.CS
       </filter>
     </defs>
     {/* Base platform - isometric */}
-    <path d="M60 100L20 78V72L60 94L100 72V78L60 100z" fill="#141B24" opacity="0.3"/>
+    <path d="M60 100L20 78V72L60 94L100 72V78L60 100z" fill="#5E7088" opacity="0.3"/>
     <path d="M60 94L20 72L60 50L100 72L60 94z" fill="url(#pol1)" opacity="0.15"/>
     {/* Building/pillar left */}
     <rect x="30" y="35" width="16" height="45" rx="2" fill="url(#pol2)" opacity="0.8"/>
@@ -43,18 +43,18 @@ const PolicyIcon = ({ className, style }: { className?: string; style?: React.CS
     <path d="M60 12L42 22v18c0 12 8 22 18 26 10-4 18-14 18-26V22L60 12z"
       fill="url(#pol1)" stroke="#B3AA98" strokeWidth="1.5" strokeLinejoin="round"/>
     <path d="M60 18L46 26v14c0 10 6.5 18 14 22 7.5-4 14-12 14-22V26L60 18z"
-      fill="#1E2733" fillOpacity="0.6" stroke="#B3AA98" strokeWidth="0.8"/>
+      fill="#78899B" fillOpacity="0.6" stroke="#B3AA98" strokeWidth="0.8"/>
     {/* Checkmark inside shield */}
     <path d="M52 36l6 6 12-12" stroke="#F6F2EA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" filter="url(#polGlow)"/>
     {/* Document pages floating */}
-    <rect x="48" y="62" width="24" height="18" rx="2" fill="#1E2733" stroke="#B3AA98" strokeWidth="0.8"/>
+    <rect x="48" y="62" width="24" height="18" rx="2" fill="#78899B" stroke="#B3AA98" strokeWidth="0.8"/>
     <line x1="52" y1="67" x2="68" y2="67" stroke="#B3AA98" strokeWidth="1.5" strokeLinecap="round"/>
     <line x1="52" y1="71" x2="64" y2="71" stroke="#B3AA98" strokeWidth="1.5" strokeLinecap="round" opacity="0.7"/>
     <line x1="52" y1="75" x2="60" y2="75" stroke="#B3AA98" strokeWidth="1.5" strokeLinecap="round" opacity="0.5"/>
     {/* Glowing dots */}
     <circle cx="26" cy="30" r="2" fill="#B3AA98" opacity="0.6"/>
     <circle cx="95" cy="38" r="1.5" fill="#B3AA98" opacity="0.5"/>
-    <circle cx="15" cy="55" r="1.5" fill="#1E2733" opacity="0.4"/>
+    <circle cx="15" cy="55" r="1.5" fill="#78899B" opacity="0.4"/>
     <circle cx="105" cy="60" r="2" fill="#B3AA98" opacity="0.4"/>
   </svg>
 );
@@ -63,12 +63,12 @@ const InnovationIcon = ({ className, style }: { className?: string; style?: Reac
   <svg className={className} style={style} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="inn1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#1E2733"/>
-        <stop offset="100%" stopColor="#1E2733"/>
+        <stop offset="0%" stopColor="#394F73"/>
+        <stop offset="100%" stopColor="#394F73"/>
       </linearGradient>
       <linearGradient id="inn2" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="0%" stopColor="#B3AA98"/>
-        <stop offset="100%" stopColor="#141B24"/>
+        <stop offset="100%" stopColor="#394F73"/>
       </linearGradient>
       <linearGradient id="inn3" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#B3AA98"/>
@@ -77,7 +77,7 @@ const InnovationIcon = ({ className, style }: { className?: string; style?: Reac
       </linearGradient>
       <radialGradient id="innGlow" cx="50%" cy="50%" r="50%">
         <stop offset="0%" stopColor="#B3AA98" stopOpacity="0.4"/>
-        <stop offset="100%" stopColor="#1E2733" stopOpacity="0"/>
+        <stop offset="100%" stopColor="#394F73" stopOpacity="0"/>
       </radialGradient>
       <filter id="innBlur">
         <feGaussianBlur stdDeviation="2.5" result="blur"/>
@@ -102,22 +102,22 @@ const InnovationIcon = ({ className, style }: { className?: string; style?: Reac
     <line x1="98" y1="42" x2="92" y2="42" stroke="#B3AA98" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
     {/* Bulb base */}
     <rect x="48" y="76" width="24" height="4" rx="1" fill="#B3AA98" opacity="0.8"/>
-    <rect x="50" y="80" width="20" height="3" rx="1" fill="#1E2733" opacity="0.7"/>
-    <rect x="52" y="83" width="16" height="3" rx="1" fill="#2A3542" opacity="0.6"/>
+    <rect x="50" y="80" width="20" height="3" rx="1" fill="#78899B" opacity="0.7"/>
+    <rect x="52" y="83" width="16" height="3" rx="1" fill="#647689" opacity="0.6"/>
     {/* Gear left */}
     <circle cx="22" cy="70" r="10" fill="url(#inn2)" fillOpacity="0.7" stroke="#B3AA98" strokeWidth="1"/>
-    <circle cx="22" cy="70" r="5" fill="#141B24" stroke="#B3AA98" strokeWidth="0.8"/>
-    <rect x="19" y="58" width="6" height="4" rx="1" fill="#1E2733"/>
-    <rect x="19" y="78" width="6" height="4" rx="1" fill="#1E2733"/>
-    <rect x="10" y="67" width="4" height="6" rx="1" fill="#1E2733"/>
-    <rect x="30" y="67" width="4" height="6" rx="1" fill="#1E2733"/>
+    <circle cx="22" cy="70" r="5" fill="#5E7088" stroke="#B3AA98" strokeWidth="0.8"/>
+    <rect x="19" y="58" width="6" height="4" rx="1" fill="#78899B"/>
+    <rect x="19" y="78" width="6" height="4" rx="1" fill="#78899B"/>
+    <rect x="10" y="67" width="4" height="6" rx="1" fill="#78899B"/>
+    <rect x="30" y="67" width="4" height="6" rx="1" fill="#78899B"/>
     {/* Gear right */}
     <circle cx="98" cy="72" r="8" fill="url(#inn2)" fillOpacity="0.6" stroke="#B3AA98" strokeWidth="1"/>
-    <circle cx="98" cy="72" r="4" fill="#1E2733" stroke="#B3AA98" strokeWidth="0.8"/>
-    <rect x="95.5" y="62.5" width="5" height="3.5" rx="1" fill="#1E2733"/>
-    <rect x="95.5" y="78" width="5" height="3.5" rx="1" fill="#1E2733"/>
-    <rect x="88.5" y="69.5" width="3.5" height="5" rx="1" fill="#1E2733"/>
-    <rect x="104" y="69.5" width="3.5" height="5" rx="1" fill="#1E2733"/>
+    <circle cx="98" cy="72" r="4" fill="#78899B" stroke="#B3AA98" strokeWidth="0.8"/>
+    <rect x="95.5" y="62.5" width="5" height="3.5" rx="1" fill="#78899B"/>
+    <rect x="95.5" y="78" width="5" height="3.5" rx="1" fill="#78899B"/>
+    <rect x="88.5" y="69.5" width="3.5" height="5" rx="1" fill="#78899B"/>
+    <rect x="104" y="69.5" width="3.5" height="5" rx="1" fill="#78899B"/>
     {/* Circuit/connection lines */}
     <path d="M34 70h12" stroke="#B3AA98" strokeWidth="1" strokeDasharray="3 2" opacity="0.5"/>
     <path d="M74 72h14" stroke="#B3AA98" strokeWidth="1" strokeDasharray="3 2" opacity="0.5"/>
@@ -135,20 +135,20 @@ const MarketsIcon = ({ className, style }: { className?: string; style?: React.C
   <svg className={className} style={style} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="mkt1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#2A3542"/>
-        <stop offset="100%" stopColor="#1E2733"/>
+        <stop offset="0%" stopColor="#394F73"/>
+        <stop offset="100%" stopColor="#394F73"/>
       </linearGradient>
       <linearGradient id="mkt2" x1="0%" y1="100%" x2="0%" y2="0%">
-        <stop offset="0%" stopColor="#1E2733"/>
+        <stop offset="0%" stopColor="#394F73"/>
         <stop offset="100%" stopColor="#B3AA98"/>
       </linearGradient>
       <linearGradient id="mkt3" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#B3AA98"/>
-        <stop offset="100%" stopColor="#1E2733"/>
+        <stop offset="100%" stopColor="#394F73"/>
       </linearGradient>
       <radialGradient id="mktGlow" cx="50%" cy="40%" r="50%">
         <stop offset="0%" stopColor="#B3AA98" stopOpacity="0.3"/>
-        <stop offset="100%" stopColor="#1E2733" stopOpacity="0"/>
+        <stop offset="100%" stopColor="#394F73" stopOpacity="0"/>
       </radialGradient>
       <filter id="mktBlur">
         <feGaussianBlur stdDeviation="2" result="blur"/>
@@ -158,19 +158,19 @@ const MarketsIcon = ({ className, style }: { className?: string; style?: React.C
     {/* Background glow */}
     <circle cx="60" cy="55" r="42" fill="url(#mktGlow)"/>
     {/* Globe */}
-    <circle cx="60" cy="50" r="32" fill="#0E1318" fillOpacity="0.4" stroke="url(#mkt1)" strokeWidth="2"/>
-    <ellipse cx="60" cy="50" rx="32" ry="12" stroke="#2A3542" strokeWidth="0.8" opacity="0.35"/>
-    <ellipse cx="60" cy="50" rx="12" ry="32" stroke="#2A3542" strokeWidth="0.8" opacity="0.35"/>
-    <ellipse cx="60" cy="50" rx="24" ry="32" stroke="#2A3542" strokeWidth="0.5" opacity="0.2"/>
+    <circle cx="60" cy="50" r="32" fill="#394F73" fillOpacity="0.4" stroke="url(#mkt1)" strokeWidth="2"/>
+    <ellipse cx="60" cy="50" rx="32" ry="12" stroke="#647689" strokeWidth="0.8" opacity="0.35"/>
+    <ellipse cx="60" cy="50" rx="12" ry="32" stroke="#647689" strokeWidth="0.8" opacity="0.35"/>
+    <ellipse cx="60" cy="50" rx="24" ry="32" stroke="#647689" strokeWidth="0.5" opacity="0.2"/>
     {/* Continent shapes (abstract) */}
     <path d="M42 38c4-2 8 0 12-1s6-4 10-2c2 1 4 4 2 6s-6 2-8 4-2 6-6 6-6-2-8-4-4-6-2-9z" fill="#B3AA98" opacity="0.2"/>
-    <path d="M62 55c3 0 6 2 10 1s6-3 8-1c1 2-1 5-3 6s-6 0-8 2-2 4-5 4-4-2-5-4 0-5 3-8z" fill="#2A3542" opacity="0.15"/>
+    <path d="M62 55c3 0 6 2 10 1s6-3 8-1c1 2-1 5-3 6s-6 0-8 2-2 4-5 4-4-2-5-4 0-5 3-8z" fill="#647689" opacity="0.15"/>
     {/* Rising chart bars */}
     <rect x="26" y="78" width="10" height="22" rx="2" fill="url(#mkt2)" opacity="0.7"/>
     <rect x="40" y="72" width="10" height="28" rx="2" fill="url(#mkt2)" opacity="0.8"/>
     <rect x="54" y="65" width="10" height="35" rx="2" fill="url(#mkt1)" opacity="0.85"/>
     <rect x="68" y="58" width="10" height="42" rx="2" fill="url(#mkt1)" opacity="0.9"/>
-    <rect x="82" y="50" width="10" height="50" rx="2" fill="#1E2733"/>
+    <rect x="82" y="50" width="10" height="50" rx="2" fill="#78899B"/>
     {/* Bar highlights */}
     <rect x="28" y="80" width="6" height="3" rx="1" fill="#ECE5D8" opacity="0.4"/>
     <rect x="42" y="74" width="6" height="3" rx="1" fill="#ECE5D8" opacity="0.4"/>
@@ -183,7 +183,7 @@ const MarketsIcon = ({ className, style }: { className?: string; style?: React.C
     <path d="M86 48l4 4 4-4" stroke="#B3AA98" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" transform="rotate(-45 90 48)"/>
     {/* Currency symbols floating */}
     <text x="18" y="42" fill="#B3AA98" fontSize="10" fontWeight="bold" opacity="0.6">$</text>
-    <text x="96" y="35" fill="#2A3542" fontSize="8" fontWeight="bold" opacity="0.5">€</text>
+    <text x="96" y="35" fill="#647689" fontSize="8" fontWeight="bold" opacity="0.5">€</text>
     <text x="105" y="70" fill="#B3AA98" fontSize="9" fontWeight="bold" opacity="0.5">£</text>
     {/* Sparkle dots */}
     <circle cx="20" cy="25" r="1.5" fill="#B3AA98" opacity="0.7"/>
@@ -244,28 +244,28 @@ export default function MembershipSection() {
                   desc: "Pakistani textile manufacturers and mills across bedding, apparel, sportswear and healthcare textiles.",
                   image: "/image/manufacturing-mils.jpg",
                   icon: Factory,
-                  color: "#1E2733",
+                  color: "#394F73",
                 },
                 {
                   title: "Exporters & Sellers",
                   desc: "Exporters seeking global reach, e-commerce and warehousing to sell directly to consumers worldwide.",
                   image: "/image/exporters-and-sellers.jpg",
                   icon: TrendingUp,
-                  color: "#1E2733",
+                  color: "#394F73",
                 },
                 {
                   title: "First-time Exporters",
                   desc: "Capable producers exporting for the first time — we make you visible, credible and ready for international buyers.",
                   image: "/image/first-time-exporter.jpg",
                   icon: TrendingUp,
-                  color: "#2A3542",
+                  color: "#394F73",
                 },
                 {
                   title: "Private-label & OEM",
                   desc: "Fashion, denim and OEM garment factories producing to spec for brands and retailers worldwide.",
                   image: "/image/private-label.jpg",
                   icon: Factory,
-                  color: "#1E2733",
+                  color: "#394F73",
                 },
               ].map((item) => {
                 const Icon = item.icon;
@@ -315,7 +315,7 @@ export function WhatDrivesUs() {
             {/* Left Side: Header */}
             <div className="lg:w-1/3 flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-4">
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#1E2733]">Our Focus</p>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#394F73]">Our Focus</p>
               </div>
               <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.8rem] leading-[1.1] text-[#1A1A1A]">
                 What Drives Us
@@ -348,7 +348,7 @@ export function WhatDrivesUs() {
                 return (
                   <div
                     key={card.title}
-                    className="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm p-6 hover:-translate-y-1 hover:shadow-xl hover:border-[#1E2733]/20 transition-all duration-300 text-center"
+                    className="group rounded-2xl bg-white border border-[#E5E7EB] shadow-sm p-6 hover:-translate-y-1 hover:shadow-xl hover:border-[#78899B]/20 transition-all duration-300 text-center"
                   >
                     <div aria-hidden className="flex justify-center group-hover:scale-110 transition-transform duration-500">
                       <CardIcon className="w-24 h-24 sm:w-28 sm:h-28 drop-shadow-2xl" />

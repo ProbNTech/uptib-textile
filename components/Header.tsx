@@ -35,8 +35,8 @@ type NavLink = {
 
 type NavItem = NavGroup | NavLink;
 
-const PRODUCT_GREEN = "#1E2733"; // green-700 — primary lead
-const SERVICE_GREEN = "#141B24"; // green-800 — deeper green for distinction
+const PRODUCT_GREEN = "#78899B"; // green-700 — primary lead
+const SERVICE_GREEN = "#5E7088"; // green-800 — deeper green for distinction
 
 const navItems: NavItem[] = [
   /* 1 — Product */
@@ -210,7 +210,7 @@ export function Header() {
                 href="/"
                 onMouseEnter={handleLeave}
                 className={`relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] transition-colors duration-150 ${
-                  isLinkActive("/") ? "text-[#1E2733]" : "text-[#0A0A0A] hover:text-[#1E2733]"
+                  isLinkActive("/") ? "text-[#394F73]" : "text-[#0A0A0A] hover:text-[#394F73]"
                 }`}
               >
                 HOME
@@ -224,7 +224,7 @@ export function Header() {
                       href={item.href}
                       onMouseEnter={handleLeave}
                       className={`relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] transition-colors duration-150 whitespace-nowrap ${
-                        isLinkActive(item.href) ? "text-[#1E2733]" : "text-[#0A0A0A] hover:text-[#1E2733]"
+                        isLinkActive(item.href) ? "text-[#394F73]" : "text-[#0A0A0A] hover:text-[#394F73]"
                       }`}
                     >
                       {(item.displayLabel ?? item.label).toUpperCase()}
@@ -247,8 +247,8 @@ export function Header() {
                       font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em]
                       transition-colors duration-150 cursor-default select-none whitespace-nowrap
                       ${highlight
-                        ? "text-[#1E2733]"
-                        : "text-[#0A0A0A] hover:text-[#1E2733]"}
+                        ? "text-[#394F73]"
+                        : "text-[#0A0A0A] hover:text-[#394F73]"}
                     `}
                   >
                     {(item.displayLabel ?? item.label).toUpperCase()}
@@ -263,7 +263,7 @@ export function Header() {
                     </svg>
                     <span
                       className={`
-                        absolute bottom-0 left-2 right-2 h-[2px] bg-[#1E2733]
+                        absolute bottom-0 left-2 right-2 h-[2px] bg-[#78899B]
                         transition-opacity duration-150
                         ${highlight ? "opacity-100" : "opacity-0"}
                       `}
@@ -278,7 +278,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onMouseEnter={handleLeave}
-                className="px-6 py-2.5 font-sansHeading font-bold text-base uppercase tracking-[0.12em] bg-[#1E2733] text-white hover:bg-[#141B24] transition-colors duration-200 whitespace-nowrap rounded"
+                className="px-6 py-2.5 font-sansHeading font-bold text-base uppercase tracking-[0.12em] bg-[#78899B] text-white hover:bg-[#5E7088] transition-colors duration-200 whitespace-nowrap rounded"
               >
                 Get a Quote
               </Link>
@@ -291,9 +291,9 @@ export function Header() {
               aria-label="Open menu"
               aria-expanded={isMobileOpen}
             >
-              <span className="block w-6 h-[1.5px] bg-[#0E1318]" />
-              <span className="block w-6 h-[1.5px] bg-[#0E1318]" />
-              <span className="block w-4 h-[1.5px] self-start bg-[#0E1318]" />
+              <span className="block w-6 h-[1.5px] bg-[#394F73]" />
+              <span className="block w-6 h-[1.5px] bg-[#394F73]" />
+              <span className="block w-4 h-[1.5px] self-start bg-[#394F73]" />
             </button>
           </div>
         </div>
@@ -586,7 +586,7 @@ export function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileOpen(false)}
-                  className="block text-center py-3 px-4 bg-[#1E2733] text-white font-sansHeading font-bold text-mobile-cta uppercase hover:bg-[#141B24] transition-colors duration-200 rounded"
+                  className="block text-center py-3 px-4 bg-[#78899B] text-white font-sansHeading font-bold text-mobile-cta uppercase hover:bg-[#5E7088] transition-colors duration-200 rounded"
                 >
                   Get a Quote
                 </Link>

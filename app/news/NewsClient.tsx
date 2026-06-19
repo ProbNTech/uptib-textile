@@ -80,7 +80,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
   return (
     <>
       {/* ============ HERO ============ */}
-      <section className="relative overflow-hidden bg-[#0E1318]">
+      <section className="relative overflow-hidden bg-[#394F73]">
         <Image
           src={HERO_IMAGE}
           alt=""
@@ -91,8 +91,8 @@ export function NewsClient({ articles }: { articles: Article[] }) {
           className="object-cover object-center"
         />
         {/* Emerald wash + left-weighted scrim for legible copy */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1E2733]/95 via-[#0E1318]/80 to-[#0E1318]/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1E2733] via-transparent to-[#1E2733]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#78899B]/95 via-[#394F73]/80 to-[#394F73]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#78899B] via-transparent to-[#78899B]/40" />
 
         <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-28 lg:pt-36 pb-0">
           <div className="max-w-2xl">
@@ -112,7 +112,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
             >
               Stay Informed.
               <br />
-              Stay Ahead<span className="text-[#1E2733]">.</span>
+              Stay Ahead<span className="text-[#394F73]">.</span>
             </motion.h1>
             <motion.p
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 16 }}
@@ -149,7 +149,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
               <button
                 type="submit"
                 aria-label="Search"
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1E2733] text-white hover:bg-[#141B24] transition-colors flex-shrink-0"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-[#78899B] text-white hover:bg-[#5E7088] transition-colors flex-shrink-0"
               >
                 <Search className="w-5 h-5" />
               </button>
@@ -163,7 +163,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-t-card overflow-hidden border border-white/10 bg-[#161D27]/70 backdrop-blur-md"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-t-card overflow-hidden border border-white/10 bg-[#48608A]/70 backdrop-blur-md"
           >
             {HIGHLIGHTS.map((h, i) => (
               <button
@@ -173,7 +173,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                   i < HIGHLIGHTS.length - 1 ? "lg:border-r border-white/10" : ""
                 }`}
               >
-                <span className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1E2733]/15 text-[#B3AA98] flex-shrink-0 group-hover:bg-[#1E2733]/25 transition-colors">
+                <span className="flex items-center justify-center w-12 h-12 rounded-full bg-[#78899B]/15 text-[#B3AA98] flex-shrink-0 group-hover:bg-[#78899B]/25 transition-colors">
                   <h.icon className="w-5 h-5" />
                 </span>
                 <span>
@@ -187,7 +187,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
           </motion.div>
         </div>
         {/* Bottom accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#78899B]" />
       </section>
 
       {/* ============ FEATURED STORY ============ */}
@@ -195,7 +195,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
         <section className="relative bg-white">
           <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-12 lg:py-16">
             <AnimatedSection>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1E2733] mb-6">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#394F73] mb-6">
                 Featured Story
               </p>
             </AnimatedSection>
@@ -204,7 +204,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
               <div className="rounded-card border border-[#E5E7EB] overflow-hidden shadow-sm">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   {/* Copy panel */}
-                  <div className="relative bg-[#0E1318] p-8 sm:p-10 lg:p-14 flex flex-col justify-center min-h-[300px]">
+                  <div className="relative bg-[#394F73] p-8 sm:p-10 lg:p-14 flex flex-col justify-center min-h-[300px]">
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={activeFeatured.slug}
@@ -224,7 +224,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                         </p>
                         <Link
                           href={`/news/${activeFeatured.slug}`}
-                          className="inline-flex items-center gap-2 rounded-full bg-[#1E2733] hover:bg-[#B3AA98] text-white font-semibold px-6 py-3 transition-colors w-fit"
+                          className="inline-flex items-center gap-2 rounded-full bg-[#78899B] hover:bg-[#B3AA98] text-white font-semibold px-6 py-3 transition-colors w-fit"
                         >
                           Read Full Story <ArrowRight className="w-4 h-4" />
                         </Link>
@@ -250,7 +250,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                           sizes="(max-width: 1024px) 100vw, 50vw"
                           className="object-cover"
                         />
-                        <div className="absolute inset-0 lg:bg-gradient-to-r lg:from-[#0E1318]/40 lg:to-transparent" />
+                        <div className="absolute inset-0 lg:bg-gradient-to-r lg:from-[#394F73]/40 lg:to-transparent" />
                       </motion.div>
                     </AnimatePresence>
                   </div>
@@ -263,14 +263,14 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                   <button
                     onClick={() => go(-1)}
                     aria-label="Previous story"
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-[#1E2733] text-white shadow-lg hover:bg-[#141B24] transition-colors z-10"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-[#78899B] text-white shadow-lg hover:bg-[#5E7088] transition-colors z-10"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => go(1)}
                     aria-label="Next story"
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-[#1E2733] text-white shadow-lg hover:bg-[#141B24] transition-colors z-10"
+                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-[#78899B] text-white shadow-lg hover:bg-[#5E7088] transition-colors z-10"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -287,7 +287,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                     onClick={() => setSlide(i)}
                     aria-label={`Go to story ${i + 1}`}
                     className={`h-2.5 rounded-full transition-all ${
-                      i === slide ? "w-7 bg-[#1E2733]" : "w-2.5 bg-[#D1D5DB] hover:bg-[#9CA3AF]"
+                      i === slide ? "w-7 bg-[#78899B]" : "w-2.5 bg-[#D1D5DB] hover:bg-[#9CA3AF]"
                     }`}
                   />
                 ))}
@@ -309,7 +309,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
         />
         <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-12 lg:py-16">
           <AnimatedSection>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1E2733] mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#394F73] mb-6">
               Latest News & Insights
             </p>
           </AnimatedSection>
@@ -322,8 +322,8 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                 onClick={() => setActiveCat(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
                   activeCat === cat
-                    ? "bg-[#1E2733] text-white shadow-sm"
-                    : "bg-white text-[#6B7280] border border-[#E5E7EB] hover:border-[#1E2733] hover:text-[#1E2733]"
+                    ? "bg-[#78899B] text-white shadow-sm"
+                    : "bg-white text-[#6B7280] border border-[#E5E7EB] hover:border-[#78899B] hover:text-[#394F73]"
                 }`}
               >
                 {cat}
@@ -343,7 +343,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                   setQuery("");
                   setActiveCat("All");
                 }}
-                className="mt-4 text-[#1E2733] font-semibold text-sm hover:underline"
+                className="mt-4 text-[#394F73] font-semibold text-sm hover:underline"
               >
                 Clear filters
               </button>
@@ -353,7 +353,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
               {filtered.map((a, i) => (
                 <AnimatedSection key={a.slug} delay={Math.min(i * 0.05, 0.25)}>
                   <Link href={`/news/${a.slug}`} className="group block h-full">
-                    <article className="flex h-full flex-col rounded-card border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-300 group-hover:border-[#1E2733] group-hover:shadow-xl group-hover:-translate-y-1">
+                    <article className="flex h-full flex-col rounded-card border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-300 group-hover:border-[#78899B] group-hover:shadow-xl group-hover:-translate-y-1">
                       <div className="relative h-48 overflow-hidden bg-[#F1F5F4]">
                         <Image
                           src={a.image}
@@ -362,7 +362,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
-                        <span className="absolute top-4 left-4 inline-block px-3 py-1 rounded-full bg-white/95 text-[#1E2733] text-[11px] font-bold uppercase tracking-wide shadow-sm">
+                        <span className="absolute top-4 left-4 inline-block px-3 py-1 rounded-full bg-white/95 text-[#394F73] text-[11px] font-bold uppercase tracking-wide shadow-sm">
                           {a.category}
                         </span>
                       </div>
@@ -375,13 +375,13 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                             <Clock className="w-3.5 h-3.5" /> {a.readTime}
                           </span>
                         </div>
-                        <h3 className="font-heading font-bold text-[#1A1A1A] text-lg leading-snug mb-3 group-hover:text-[#1E2733] transition-colors">
+                        <h3 className="font-heading font-bold text-[#1A1A1A] text-lg leading-snug mb-3 group-hover:text-[#394F73] transition-colors">
                           {a.title}
                         </h3>
                         <p className="text-[#6B7280] text-sm leading-relaxed flex-1 line-clamp-3">
                           {a.excerpt}
                         </p>
-                        <span className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-[#1E2733]">
+                        <span className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-[#394F73]">
                           Read More <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </span>
                       </div>
@@ -397,7 +397,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
       {/* ============ NEWSLETTER ============ */}
       <section className="bg-white pb-14 lg:pb-20">
         <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20">
-          <div className="relative overflow-hidden rounded-card bg-[#0E1318] px-6 sm:px-10 lg:px-14 py-10">
+          <div className="relative overflow-hidden rounded-card bg-[#394F73] px-6 sm:px-10 lg:px-14 py-10">
             <div
               className="absolute inset-0 opacity-[0.06] pointer-events-none"
               style={{
@@ -407,7 +407,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
             />
             <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
               <div className="flex items-start gap-5 max-w-xl">
-                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#1E2733] text-white flex-shrink-0">
+                <span className="flex items-center justify-center w-14 h-14 rounded-full bg-[#78899B] text-white flex-shrink-0">
                   <Mail className="w-6 h-6" />
                 </span>
                 <div>
@@ -438,11 +438,11 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                     required
                     placeholder="Your email address"
                     aria-label="Your email address"
-                    className="flex-1 lg:w-72 rounded-full px-5 py-3 bg-white text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#1E2733] text-sm"
+                    className="flex-1 lg:w-72 rounded-full px-5 py-3 bg-white text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#78899B] text-sm"
                   />
                   <button
                     type="submit"
-                    className="rounded-full bg-[#1E2733] hover:bg-[#B3AA98] text-white font-semibold px-7 py-3 transition-colors whitespace-nowrap"
+                    className="rounded-full bg-[#78899B] hover:bg-[#B3AA98] text-white font-semibold px-7 py-3 transition-colors whitespace-nowrap"
                   >
                     Subscribe
                   </button>

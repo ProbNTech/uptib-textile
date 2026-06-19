@@ -20,7 +20,7 @@ export function WorkShowcase({ poster, video, label = "Play the film" }: WorkSho
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="group relative aspect-[16/8] w-full overflow-hidden rounded-[1.75rem] shadow-[0_30px_70px_-30px_rgba(14, 19, 24,0.45)] ring-1 ring-[#1A1A1A]/10">
+    <div className="group relative aspect-[16/8] w-full overflow-hidden rounded-[1.75rem] shadow-[0_30px_70px_-30px_rgba(57, 81, 115,0.45)] ring-1 ring-[#1A1A1A]/10">
       {playing ? (
         <video
           src={video}
@@ -40,7 +40,7 @@ export function WorkShowcase({ poster, video, label = "Play the film" }: WorkSho
             sizes="(min-width: 1024px) 80vw, 100vw"
           />
           {/* Deep-green wash for contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0E1318]/55 via-[#0E1318]/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#394F73]/55 via-[#394F73]/10 to-transparent" />
 
           <button
             type="button"
@@ -48,9 +48,9 @@ export function WorkShowcase({ poster, video, label = "Play the film" }: WorkSho
             aria-label={label}
             className="absolute inset-0 flex items-center justify-center focus:outline-none"
           >
-            <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-[#1E2733] text-white shadow-lg transition-transform duration-300 group-hover:scale-110 sm:h-24 sm:w-24">
+            <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-[#78899B] text-white shadow-lg transition-transform duration-300 group-hover:scale-110 sm:h-24 sm:w-24">
               {/* Pulsing halo */}
-              <span className="absolute inset-0 animate-ping rounded-full bg-[#1E2733]/40" />
+              <span className="absolute inset-0 animate-ping rounded-full bg-[#78899B]/40" />
               <span className="absolute -inset-3 rounded-full border border-white/30" />
               <Play className="relative ml-1 h-8 w-8 fill-current" strokeWidth={1} />
             </span>

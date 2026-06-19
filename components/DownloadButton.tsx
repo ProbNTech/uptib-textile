@@ -26,7 +26,7 @@ const variantStyles = {
   glass:
     "bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 hover:border-white/30",
   solid:
-    "bg-[#1E2733] text-white border border-[#1E2733] hover:bg-[#141B24]",
+    "bg-[#78899B] text-white border border-[#78899B] hover:bg-[#5E7088]",
 };
 
 export function DownloadButton({
@@ -41,7 +41,7 @@ export function DownloadButton({
     <a
       href={href}
       download={filename ?? true}
-      className={`inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#1E2733] focus:ring-offset-2 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+      className={`inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#78899B] focus:ring-offset-2 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
     >
       <Download className={size === "sm" ? "w-3.5 h-3.5" : "w-4 h-4"} strokeWidth={2} />
       {children}

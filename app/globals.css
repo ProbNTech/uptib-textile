@@ -20,15 +20,15 @@
     --green-50:  #F6F2EA;  /* warm ivory tint — soft section washes, badges */
     --green-100: #ECE5D8;  /* warm greige tint */
     --green-200: #D8CDBA;  /* taupe */
-    --green-500: #3C4A5A;  /* slate — icons, highlights */
-    --green-600: #2A3542;  /* accent fill / large CTA */
-    --green-700: #1E2733;  /* ★ PRIMARY — links, key buttons (AA on ivory) */
-    --green-800: #141B24;  /* hover/active */
-    --green-900: #0E1318;  /* dark sections, footer, overlays */
+    --green-500: #8C9AAB;  /* slate — icons, highlights */
+    --green-600: #647689;  /* accent fill / large CTA */
+    --green-700: #78899B;  /* ★ PRIMARY — links, key buttons (AA on ivory) */
+    --green-800: #5E7088;  /* hover/active */
+    --green-900: #394F73;  /* dark sections, footer, overlays */
 
     /* Secondary slate — folds the old logo-blue accent into the charcoal scheme */
-    --blue-500: #3C4A5A;
-    --blue-700: #2A3542;
+    --blue-500: #8C9AAB;
+    --blue-700: #647689;
 
     /* Backgrounds — crisp white + warm ivory/cream section washes (editorial luxury) */
     /* Two co-equal base colours: white (--bg-default) and cream (--cream/--bg-alt). */
@@ -50,18 +50,18 @@
     --border-subtle: #EFEAE0;
 
     /* Brand colors — charcoal/navy primary */
-    --primary: #1E2733;          /* ink-700 */
-    --primary-hover: #141B24;    /* ink-800 */
+    --primary: #78899B;          /* ink-700 */
+    --primary-hover: #5E7088;    /* ink-800 */
     --primary-foreground: #FFFFFF;
-    --accent-green: #1E2733;     /* ink accent (name kept for compatibility) */
-    --accent-green-hover: #141B24;
+    --accent-green: #78899B;     /* ink accent (name kept for compatibility) */
+    --accent-green-hover: #5E7088;
 
-    /* Editorial accent label — charcoal ink */
-    --accent-label: #1E2733;
+    /* Editorial accent label — readable dark slate (eyebrow text) */
+    --accent-label: #394F73;
 
     /* Dark section background — deep ink */
-    --bg-dark: #0E1318;
-    --bg-dark-alt: #090C10;
+    --bg-dark: #394F73;
+    --bg-dark-alt: #2E4061;
 
     /* Layout */
     --container-width: 1200px;
@@ -81,8 +81,8 @@
     --shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
     --shadow-xl: 0 16px 40px rgba(0,0,0,0.12);
     --shadow-2xl: 0 25px 50px rgba(0,0,0,0.15);
-    --shadow-glow-primary: 0 0 24px rgba(30,39,51,0.15);
-    --shadow-glow-hover: 0 0 30px rgba(30,39,51,0.32);
+    --shadow-glow-primary: 0 0 24px rgba(120, 137, 155,0.15);
+    --shadow-glow-hover: 0 0 30px rgba(120, 137, 155,0.32);
 
     /* Spacing */
     --space-section: 5rem;
@@ -91,8 +91,8 @@
 
     /* ─── Editorial Navbar ─── */
     --editorial-ink: #1A1A1A;
-    --editorial-crimson: #1E2733; /* re-themed: charcoal/navy ink */
-    --editorial-nav-rule: #0E1318;
+    --editorial-crimson: #394F73; /* re-themed: readable dark slate-blue accent */
+    --editorial-nav-rule: #394F73;
   }
 
   * {
@@ -223,7 +223,7 @@
   }
 
   .text-gradient-brand {
-    background: linear-gradient(135deg, #1E2733, #3C4A5A);
+    background: linear-gradient(135deg, #78899B, #8C9AAB);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -236,7 +236,7 @@
   }
 
   .animate-gradient-border {
-    background: linear-gradient(90deg, #1E2733, #3C4A5A, #1E2733);
+    background: linear-gradient(90deg, #78899B, #8C9AAB, #78899B);
     background-size: 300% 100%;
     animation: gradient-shift 4s ease infinite;
   }
@@ -263,8 +263,8 @@
 
   /* Pulse glow for interactive elements */
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(30,39,51, 0); }
-    50% { box-shadow: 0 0 20px 4px rgba(30,39,51, 0.1); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(120, 137, 155, 0); }
+    50% { box-shadow: 0 0 20px 4px rgba(120, 137, 155, 0.1); }
   }
 
   .animate-pulse-glow {
@@ -290,7 +290,7 @@
   }
 
   ::selection {
-    background-color: rgba(30,39,51, 0.12);
+    background-color: rgba(120, 137, 155, 0.12);
     color: inherit;
   }
 }
@@ -338,10 +338,10 @@
 }
 
 .shiny-cta {
-  --shiny-cta-bg: #1E2733;
-  --shiny-cta-bg-subtle: #141B24;
+  --shiny-cta-bg: #78899B;
+  --shiny-cta-bg-subtle: #5E7088;
   --shiny-cta-fg: #ffffff;
-  --shiny-cta-highlight: #5C6B7E;
+  --shiny-cta-highlight: #A3AEBC;
   --shiny-cta-highlight-subtle: #C9CFD6;
   --animation: gradient-angle linear infinite;
   --duration: 3s;
@@ -504,7 +504,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
-  background: #1E2733;
+  background: #78899B;
   border-radius: 9999px;
   border: none;
   color: #ffffff;
@@ -534,13 +534,13 @@
   border-radius: 9999px;
   background: linear-gradient(
     45deg,
-    #1E2733,
-    #1E2733,
-    #3C4A5A,
-    #1E2733,
-    #1E2733,
-    #3C4A5A,
-    #1E2733
+    #78899B,
+    #78899B,
+    #8C9AAB,
+    #78899B,
+    #78899B,
+    #8C9AAB,
+    #78899B
   );
   background-size: 400%;
   width: calc(100% + 4px);

@@ -30,9 +30,9 @@ export function GlobalCTA({
   image = DEFAULT_CTA_IMAGE,
 }: GlobalCTAProps) {
   return (
-    <section className="relative overflow-hidden bg-[#0E1318]">
+    <section className="relative overflow-hidden bg-[#394F73]">
       {/* Top brand accent line */}
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733] z-10" />
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#78899B] z-10" />
 
       <div className="grid lg:grid-cols-2">
         {/* Left — copy */}
@@ -74,8 +74,8 @@ export function GlobalCTA({
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
           {/* Blend the photo into the emerald panel */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0E1318]/70 via-[#0E1318]/8 to-transparent" />
-          <div className="absolute inset-0 lg:hidden bg-[#0E1318]/12" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#394F73]/70 via-[#394F73]/8 to-transparent" />
+          <div className="absolute inset-0 lg:hidden bg-[#394F73]/12" />
         </div>
       </div>
     </section>

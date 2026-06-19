@@ -166,7 +166,7 @@ export function PageHero({
       {/* Floating gradient orbs */}
       <motion.div
         className="absolute right-[10%] top-[20%] w-[400px] h-[400px] rounded-full pointer-events-none z-[5]"
-        style={{ background: "radial-gradient(circle, rgba(60, 74, 90,0.12), transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(140, 154, 171,0.12), transparent 70%)" }}
         animate={shouldReduceMotion ? {} : { y: [0, -20, 0], x: [0, 10, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -210,7 +210,7 @@ export function PageHero({
           <div
             className="absolute right-[12%] top-[40%] -translate-y-1/2 w-[400px] h-[400px] rounded-full z-[5]"
             style={{
-              background: "radial-gradient(circle, rgba(60, 74, 90,0.08) 0%, rgba(138, 133, 124,0.04) 50%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(140, 154, 171,0.08) 0%, rgba(138, 133, 124,0.04) 50%, transparent 70%)",
               filter: "blur(60px)",
             }}
           />
@@ -290,7 +290,7 @@ export function PageHero({
           <div
             className="absolute right-[12%] top-[40%] -translate-y-1/2 w-[400px] h-[400px] rounded-full z-[5]"
             style={{
-              background: "radial-gradient(circle, rgba(60, 74, 90,0.08) 0%, rgba(138, 133, 124,0.04) 50%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(140, 154, 171,0.08) 0%, rgba(138, 133, 124,0.04) 50%, transparent 70%)",
               filter: "blur(60px)",
             }}
           />
@@ -330,7 +330,7 @@ export function PageHero({
             {/* Label */}
             {label && (
               <motion.p
-                className={`text-lg sm:text-xl font-extrabold uppercase tracking-[0.18em] mb-4 sm:mb-5 ${labelClassName || "text-[#1E2733]"}`}
+                className={`text-lg sm:text-xl font-extrabold uppercase tracking-[0.18em] mb-4 sm:mb-5 ${labelClassName || "text-[#394F73]"}`}
                 style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}
                 initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -347,7 +347,7 @@ export function PageHero({
                 style={{
                   lineHeight: 1.25,
                   textShadow: threeBg
-                    ? "0 0 10px rgba(60, 74, 90,0.9), 0 0 20px rgba(60, 74, 90,0.7), 0 0 40px rgba(60, 74, 90,0.5), 0 0 80px rgba(60, 74, 90,0.3)"
+                    ? "0 0 10px rgba(140, 154, 171,0.9), 0 0 20px rgba(140, 154, 171,0.7), 0 0 40px rgba(140, 154, 171,0.5), 0 0 80px rgba(140, 154, 171,0.3)"
                     : "0 2px 8px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.4)",
                 }}
               >
@@ -368,7 +368,7 @@ export function PageHero({
                 className={`font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-[3rem] text-white mb-5 sm:mb-6 ${threeBg ? "uppercase tracking-wider" : ""}`}
                 style={{
                   lineHeight: 1.25,
-                  ...(threeBg && { textShadow: "0 0 10px rgba(60, 74, 90,0.9), 0 0 20px rgba(60, 74, 90,0.7), 0 0 40px rgba(60, 74, 90,0.5), 0 0 80px rgba(60, 74, 90,0.3)" }),
+                  ...(threeBg && { textShadow: "0 0 10px rgba(140, 154, 171,0.9), 0 0 20px rgba(140, 154, 171,0.7), 0 0 40px rgba(140, 154, 171,0.5), 0 0 80px rgba(140, 154, 171,0.3)" }),
                 }}
                 initial={shouldReduceMotion ? {} : { opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -409,7 +409,7 @@ export function PageHero({
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30 bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[3px] z-30 bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#78899B]" />
     </section>
   );
 }

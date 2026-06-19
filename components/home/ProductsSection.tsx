@@ -21,9 +21,9 @@ const productTaglines: Record<string, string> = {
 
 /* Per-card accent — drives the bottom bar and icon colour */
 const productAccents: Record<string, string> = {
-  "bedding-linen": "#3C4A5A",
+  "bedding-linen": "#8C9AAB",
   "apparel-accessories": "#DC2626",
-  "sportswear-activewear": "#5C6B7E",
+  "sportswear-activewear": "#A3AEBC",
   "healthcare-textile": "#DC2626",
 };
 

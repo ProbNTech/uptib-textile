@@ -30,10 +30,10 @@ import { DownloadButton } from "@/components/DownloadButton";
 
 /* ââ Membership Overview Stats âââââââââââââââââââââââââââââââââââ */
 const overviewStats = [
-  { value: "Open", label: "To All Eligible Applicants", color: "#1E2733" },
-  { value: "Annual", label: "Membership Term", color: "#1E2733" },
-  { value: "UK Law", label: "Governed by England & Wales", color: "#1E2733" },
-  { value: "GDPR", label: "Data Protection Compliant", color: "#1E2733" },
+  { value: "Open", label: "To All Eligible Applicants", color: "#394F73" },
+  { value: "Annual", label: "Membership Term", color: "#394F73" },
+  { value: "UK Law", label: "Governed by England & Wales", color: "#394F73" },
+  { value: "GDPR", label: "Data Protection Compliant", color: "#394F73" },
 ];
 
 /* ââ Core Terms (Sections 1â5 from PDF) ââââââââââââââââââââââââââ */
@@ -42,7 +42,7 @@ const coreTerms = [
     number: "01",
     title: "Membership",
     icon: Users,
-    color: "#1E2733",
+    color: "#394F73",
     items: [
       "Membership is available to individuals or entities who meet Pakistan Textile Partners' membership criteria",
       "Pakistan Textile Partners offers different membership tiers, each with associated benefits",
@@ -55,7 +55,7 @@ const coreTerms = [
     number: "02",
     title: "Member Responsibilities",
     icon: ClipboardList,
-    color: "#1E2733",
+    color: "#394F73",
     items: [
       "Provide accurate and complete information during the application process",
       "Comply with Pakistan Textile Partners' policies, codes of conduct, and applicable UK law",
@@ -68,7 +68,7 @@ const coreTerms = [
     number: "03",
     title: "Pakistan Textile Partners Responsibilities",
     icon: Shield,
-    color: "#1E2733",
+    color: "#394F73",
     items: [
       "Provide the services and benefits associated with the Member's chosen membership tier",
       "Notify Members of any changes to services or policies",
@@ -79,7 +79,7 @@ const coreTerms = [
     number: "04",
     title: "Termination",
     icon: XCircle,
-    color: "#1E2733",
+    color: "#394F73",
     items: [
       "Pakistan Textile Partners may terminate membership if the Member breaches these Terms, misuses services, or violates applicable law",
       "Members may terminate their membership by giving written notice to Pakistan Textile Partners",
@@ -90,15 +90,15 @@ const coreTerms = [
 
 /* ââ Code of Conduct Principles ââââââââââââââââââââââââââââââââââ */
 const conductPrinciples = [
-  { title: "Integrity", description: "Consistently demonstrate honesty and ethical behaviour in all actions and decisions.", icon: Shield, color: "#1E2733" },
-  { title: "Respect & Equality", description: "Treat all members with dignity, equality, and cultural sensitivity, without discrimination.", icon: Heart, color: "#1E2733" },
-  { title: "Competence", description: "Accurately represent skills and experience; continuously strive to maintain professional competence.", icon: Target, color: "#1E2733" },
-  { title: "Loyalty", description: "Act with unwavering loyalty towards the Forum and maintain confidentiality of sensitive information.", icon: Lock, color: "#1E2733" },
-  { title: "Impartiality", description: "Provide objective advice; disclose any potential conflicts of interest promptly and transparently.", icon: Scale, color: "#1E2733" },
-  { title: "Ethical Conduct", description: "Do not pursue personal gain at the expense of the Forum; actively enhance its reputation.", icon: Award, color: "#1E2733" },
-  { title: "Non-discrimination", description: "Refrain from engaging in discriminatory practices in any professional activities.", icon: Ban, color: "#1E2733" },
-  { title: "Continuous Development", description: "Commit to lifelong learning and actively seek opportunities to develop skills and knowledge.", icon: RefreshCw, color: "#1E2733" },
-  { title: "Professionalism", description: "Adhere to recognised professional standards; offer services diligently within areas of expertise.", icon: BadgeCheck, color: "#1E2733" },
+  { title: "Integrity", description: "Consistently demonstrate honesty and ethical behaviour in all actions and decisions.", icon: Shield, color: "#394F73" },
+  { title: "Respect & Equality", description: "Treat all members with dignity, equality, and cultural sensitivity, without discrimination.", icon: Heart, color: "#394F73" },
+  { title: "Competence", description: "Accurately represent skills and experience; continuously strive to maintain professional competence.", icon: Target, color: "#394F73" },
+  { title: "Loyalty", description: "Act with unwavering loyalty towards the Forum and maintain confidentiality of sensitive information.", icon: Lock, color: "#394F73" },
+  { title: "Impartiality", description: "Provide objective advice; disclose any potential conflicts of interest promptly and transparently.", icon: Scale, color: "#394F73" },
+  { title: "Ethical Conduct", description: "Do not pursue personal gain at the expense of the Forum; actively enhance its reputation.", icon: Award, color: "#394F73" },
+  { title: "Non-discrimination", description: "Refrain from engaging in discriminatory practices in any professional activities.", icon: Ban, color: "#394F73" },
+  { title: "Continuous Development", description: "Commit to lifelong learning and actively seek opportunities to develop skills and knowledge.", icon: RefreshCw, color: "#394F73" },
+  { title: "Professionalism", description: "Adhere to recognised professional standards; offer services diligently within areas of expertise.", icon: BadgeCheck, color: "#394F73" },
 ];
 
 /* ââ Disciplinary Procedure Steps ââââââââââââââââââââââââââââââââ */
@@ -119,37 +119,37 @@ const legalProtections = [
     title: "Governing Law",
     description: "These Terms shall be governed by and construed in accordance with the laws of England and Wales.",
     icon: Scale,
-    color: "#1E2733",
+    color: "#394F73",
   },
   {
     title: "Limitation of Liability",
     description: "Pakistan Textile Partners shall not be liable for any indirect, incidental, or consequential losses arising from membership, to the maximum extent permitted by law.",
     icon: Shield,
-    color: "#1E2733",
+    color: "#394F73",
   },
   {
     title: "Intellectual Property",
     description: "All intellectual property related to the Pakistan Textile Partners website, branding, content, and services are owned by Pakistan Textile Partners or its licensors.",
     icon: Lock,
-    color: "#1E2733",
+    color: "#394F73",
   },
   {
     title: "Data Protection",
     description: "Personal data is processed in accordance with GDPR. Members have the right to access, update, or delete their personal data at any time.",
     icon: Eye,
-    color: "#1E2733",
+    color: "#394F73",
   },
   {
     title: "Dispute Resolution",
     description: "Disputes shall be resolved through the Pakistan Textile Partners Arbitration Framework or in the courts located within England and Wales.",
     icon: Globe2,
-    color: "#1E2733",
+    color: "#394F73",
   },
   {
     title: "Force Majeure",
     description: "Neither party shall be held responsible for any delay or failure to perform due to events beyond their reasonable control.",
     icon: AlertTriangle,
-    color: "#1E2733",
+    color: "#394F73",
   },
 ];
 
@@ -250,8 +250,8 @@ export default function MembershipTermsClient() {
             <div className="lg:col-span-2">
               <div className="rounded-2xl border border-[#D8D5CF] bg-white shadow-sm p-8 sticky top-8">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#1E273310", border: "1px solid #1E273320" }}>
-                    <FileText className="w-5 h-5 text-[#1E2733]" strokeWidth={1.5} />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#78899B10", border: "1px solid #78899B20" }}>
+                    <FileText className="w-5 h-5 text-[#394F73]" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-heading font-bold text-[#1A1A1A] text-lg">Key Points</h3>
                 </div>
@@ -265,7 +265,7 @@ export default function MembershipTermsClient() {
                     "Code of Conduct is binding on all members",
                   ].map((item, i) => (
                     <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#1E2733] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                      <CheckCircle2 className="w-4 h-4 text-[#394F73] mt-0.5 flex-shrink-0" strokeWidth={2} />
                       <span className="text-[#5A5F72] text-sm leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -356,10 +356,10 @@ export default function MembershipTermsClient() {
                 {disciplinarySteps.map((item, i) => (
                   <div key={item.step} className="flex items-center justify-between bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 px-4 py-3">
                     <div className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-[#1E2733]/10 flex items-center justify-center text-xs font-bold text-[#1E2733]">{i + 1}</span>
+                      <span className="w-6 h-6 rounded-full bg-[#78899B]/10 flex items-center justify-center text-xs font-bold text-[#394F73]">{i + 1}</span>
                       <span className="text-white text-sm font-medium">{item.step}</span>
                     </div>
-                    <span className="text-xs font-bold text-[#1E2733] bg-[#1E2733]/8 px-2.5 py-1 rounded-full whitespace-nowrap">{item.outcome}</span>
+                    <span className="text-xs font-bold text-[#394F73] bg-[#78899B]/8 px-2.5 py-1 rounded-full whitespace-nowrap">{item.outcome}</span>
                   </div>
                 ))}
               </div>
@@ -367,7 +367,7 @@ export default function MembershipTermsClient() {
 
             <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#1E273310", border: "1px solid #1E273320" }}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#78899B10", border: "1px solid #78899B20" }}>
                   <AlertTriangle className="w-5 h-5 text-[#B3AA98]" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading font-bold text-white text-lg">Disciplinary Actions</h3>
@@ -381,8 +381,8 @@ export default function MembershipTermsClient() {
                   { action: "Expulsion", desc: "Permanent removal from membership. Forum may inform members confidentially at its discretion." },
                 ].map((item, i) => (
                   <li key={item.action} className="flex items-start gap-3">
-                    <div className="w-4 h-4 rounded-full mt-0.5 flex-shrink-0 flex items-center justify-center" style={{ background: i < 2 ? "#EAB30820" : "#1E273320" }}>
-                      <div className="w-1.5 h-1.5 rounded-full" style={{ background: i < 2 ? "#B3AA98" : "#1E2733" }} />
+                    <div className="w-4 h-4 rounded-full mt-0.5 flex-shrink-0 flex items-center justify-center" style={{ background: i < 2 ? "#EAB30820" : "#78899B20" }}>
+                      <div className="w-1.5 h-1.5 rounded-full" style={{ background: i < 2 ? "#B3AA98" : "#78899B" }} />
                     </div>
                     <div>
                       <span className="font-semibold text-white text-sm">{item.action}</span>
@@ -448,7 +448,7 @@ export default function MembershipTermsClient() {
                   { label: "Survival", desc: "Provisions related to confidentiality, intellectual property, and indemnity survive termination of membership." },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-2.5">
-                    <BadgeCheck className="w-4 h-4 text-[#1E2733] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <BadgeCheck className="w-4 h-4 text-[#394F73] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <div>
                       <span className="font-semibold text-[#1A1A1A] text-sm">{item.label}</span>
                       <p className="text-[#5A5F72] text-xs mt-0.5">{item.desc}</p>
@@ -470,7 +470,7 @@ export default function MembershipTermsClient() {
                   { label: "Amendments", desc: "Pakistan Textile Partners may update these Terms from time to time. Members will be notified of material changes; continued use constitutes acceptance." },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-2.5">
-                    <BadgeCheck className="w-4 h-4 text-[#1E2733] mt-0.5 flex-shrink-0" strokeWidth={2} />
+                    <BadgeCheck className="w-4 h-4 text-[#394F73] mt-0.5 flex-shrink-0" strokeWidth={2} />
                     <div>
                       <span className="font-semibold text-[#1A1A1A] text-sm">{item.label}</span>
                       <p className="text-[#5A5F72] text-xs mt-0.5">{item.desc}</p>
@@ -509,9 +509,9 @@ export default function MembershipTermsClient() {
             </p>
             <p className="text-[#5A5F72] text-base leading-relaxed mb-8">
               These Terms and Conditions, along with our{" "}
-              <Link href="/privacy" className="text-[#1E2733] hover:underline">Privacy Policy</Link>{" "}
+              <Link href="/privacy" className="text-[#394F73] hover:underline">Privacy Policy</Link>{" "}
               and{" "}
-              <Link href="/terms" className="text-[#1E2733] hover:underline">Terms &amp; Conditions</Link>,
+              <Link href="/terms" className="text-[#394F73] hover:underline">Terms &amp; Conditions</Link>,
               constitute the entire agreement between you and Pakistan Textile Partners regarding your membership.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -534,7 +534,7 @@ export default function MembershipTermsClient() {
               134-136 Westbourne Terrace, London, W2 6QB, United Kingdom
               <br />
               For any questions about these Terms, please contact{" "}
-              <a href="mailto:info@ukpaktrade.org.uk" className="text-[#1E2733] hover:underline">info@ukpaktrade.org.uk</a>
+              <a href="mailto:info@ukpaktrade.org.uk" className="text-[#394F73] hover:underline">info@ukpaktrade.org.uk</a>
             </p>
           </div>
         </AnimatedSection>

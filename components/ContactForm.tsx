@@ -138,7 +138,7 @@ export function ContactForm() {
         >
           <div className="relative bg-white rounded-2xl border border-[#D8D5CF] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)]">
             {/* Animated gradient top bar */}
-            <div className="h-1.5 w-full bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733] animate-[shimmer_3s_ease-in-out_infinite]" />
+            <div className="h-1.5 w-full bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#78899B] animate-[shimmer_3s_ease-in-out_infinite]" />
 
             <div className="relative px-10 py-20 text-center">
               {/* Animated checkmark */}
@@ -155,7 +155,7 @@ export function ContactForm() {
                   className="absolute w-28 h-28 rounded-full"
                   style={{ background: "radial-gradient(circle, rgba(138, 133, 124,0.15) 0%, transparent 70%)" }}
                 />
-                <div className="relative w-18 h-18 w-[72px] h-[72px] rounded-2xl bg-gradient-to-br from-[#1E2733] to-[#2A3542] flex items-center justify-center shadow-[0_8px_32px_rgba(138, 133, 124,0.3)]">
+                <div className="relative w-18 h-18 w-[72px] h-[72px] rounded-2xl bg-gradient-to-br from-[#78899B] to-[#647689] flex items-center justify-center shadow-[0_8px_32px_rgba(138, 133, 124,0.3)]">
                   <CheckCircle2 className="w-9 h-9 text-white" strokeWidth={2} />
                 </div>
               </motion.div>
@@ -182,7 +182,7 @@ export function ContactForm() {
                 initial={{ opacity: 0, scaleX: 0 }}
                 animate={{ opacity: 1, scaleX: 1 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="mt-8 mx-auto w-20 h-px bg-gradient-to-r from-transparent via-[#1E2733]/40 to-transparent"
+                className="mt-8 mx-auto w-20 h-px bg-gradient-to-r from-transparent via-[#78899B]/40 to-transparent"
               />
             </div>
           </div>
@@ -230,7 +230,7 @@ export function ContactForm() {
         {/* Progress bar */}
         <div className="h-[2px] bg-[#F0EFED]">
           <motion.div
-            className="h-full bg-gradient-to-r from-[#1E2733] to-[#1E2733]"
+            className="h-full bg-gradient-to-r from-[#78899B] to-[#78899B]"
             initial={{ width: "0%" }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.4, ease: "easeOut" }}
@@ -262,8 +262,8 @@ export function ContactForm() {
         {/* ─── Personal Details ─── */}
         <div className="relative px-7 pt-8 pb-2">
           <motion.div variants={itemVariants} className="flex items-center gap-3 mb-7">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E2733]/15 to-[#1E2733]/5 border border-[#1E2733]/20 flex items-center justify-center shadow-[0_2px_8px_rgba(60, 74, 90,0.08)]">
-              <User className="w-4 h-4 text-[#1E2733]" />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#78899B]/15 to-[#78899B]/5 border border-[#78899B]/20 flex items-center justify-center shadow-[0_2px_8px_rgba(140, 154, 171,0.08)]">
+              <User className="w-4 h-4 text-[#394F73]" />
             </div>
             <div>
               <span className="text-xs font-bold tracking-[0.18em] uppercase text-[#7A7E8F]">
@@ -279,17 +279,17 @@ export function ContactForm() {
               <label
                 htmlFor="name"
                 className={`block text-[13px] font-bold tracking-[0.12em] uppercase mb-2 transition-colors duration-300 ${
-                  errors.name ? "text-[#DC2626]" : focusedField === "name" ? "text-[#1E2733]" : "text-[#3D4152]"
+                  errors.name ? "text-[#DC2626]" : focusedField === "name" ? "text-[#394F73]" : "text-[#3D4152]"
                 }`}
               >
                 Full Name <span className="text-[#DC2626]">*</span>
               </label>
               <div className="relative group">
                 <div className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${
-                  errors.name ? "bg-[#DC2626] opacity-100" : focusedField === "name" ? "bg-[#1E2733] opacity-100" : "bg-transparent opacity-0"
+                  errors.name ? "bg-[#DC2626] opacity-100" : focusedField === "name" ? "bg-[#78899B] opacity-100" : "bg-transparent opacity-0"
                 }`} />
                 <User className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] transition-colors duration-300 ${
-                  errors.name ? "text-[#DC2626]" : focusedField === "name" ? "text-[#1E2733]" : "text-[#9A9EAF]"
+                  errors.name ? "text-[#DC2626]" : focusedField === "name" ? "text-[#394F73]" : "text-[#9A9EAF]"
                 }`} />
                 <input
                   id="name"
@@ -304,7 +304,7 @@ export function ContactForm() {
                   className={`relative w-full bg-[#F8F8F7] border text-[#1A1A1A] placeholder-[#9A9EAF] text-[15px] pl-11 pr-4 py-3.5 rounded-xl transition-all duration-300 outline-none hover:border-[#B0B3BE] ${
                     errors.name
                       ? "border-[#DC2626] bg-[#DC2626]/[0.02] focus:border-[#DC2626]/60 focus:ring-2 focus:ring-[#DC2626]/10 focus:bg-white"
-                      : "border-[#D8D5CF] focus:border-[#1E2733]/40 focus:bg-white focus:ring-2 focus:ring-[#1E2733]/10"
+                      : "border-[#D8D5CF] focus:border-[#78899B]/40 focus:bg-white focus:ring-2 focus:ring-[#78899B]/10"
                   }`}
                 />
               </div>
@@ -328,17 +328,17 @@ export function ContactForm() {
               <label
                 htmlFor="email"
                 className={`block text-[13px] font-bold tracking-[0.12em] uppercase mb-2 transition-colors duration-300 ${
-                  errors.email ? "text-[#DC2626]" : focusedField === "email" ? "text-[#1E2733]" : "text-[#3D4152]"
+                  errors.email ? "text-[#DC2626]" : focusedField === "email" ? "text-[#394F73]" : "text-[#3D4152]"
                 }`}
               >
                 Email Address <span className="text-[#DC2626]">*</span>
               </label>
               <div className="relative group">
                 <div className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${
-                  errors.email ? "bg-[#DC2626] opacity-100" : focusedField === "email" ? "bg-[#1E2733] opacity-100" : "bg-transparent opacity-0"
+                  errors.email ? "bg-[#DC2626] opacity-100" : focusedField === "email" ? "bg-[#78899B] opacity-100" : "bg-transparent opacity-0"
                 }`} />
                 <Mail className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] transition-colors duration-300 ${
-                  errors.email ? "text-[#DC2626]" : focusedField === "email" ? "text-[#1E2733]" : "text-[#9A9EAF]"
+                  errors.email ? "text-[#DC2626]" : focusedField === "email" ? "text-[#394F73]" : "text-[#9A9EAF]"
                 }`} />
                 <input
                   id="email"
@@ -353,7 +353,7 @@ export function ContactForm() {
                   className={`relative w-full bg-[#F8F8F7] border text-[#1A1A1A] placeholder-[#9A9EAF] text-[15px] pl-11 pr-4 py-3.5 rounded-xl transition-all duration-300 outline-none hover:border-[#B0B3BE] ${
                     errors.email
                       ? "border-[#DC2626] bg-[#DC2626]/[0.02] focus:border-[#DC2626]/60 focus:ring-2 focus:ring-[#DC2626]/10 focus:bg-white"
-                      : "border-[#D8D5CF] focus:border-[#1E2733]/40 focus:bg-white focus:ring-2 focus:ring-[#1E2733]/10"
+                      : "border-[#D8D5CF] focus:border-[#78899B]/40 focus:bg-white focus:ring-2 focus:ring-[#78899B]/10"
                   }`}
                 />
               </div>
@@ -382,8 +382,8 @@ export function ContactForm() {
         {/* ─── Enquiry Details ─── */}
         <div className="relative px-7 pb-2">
           <motion.div variants={itemVariants} className="flex items-center gap-3 mb-7">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E2733]/15 to-[#1E2733]/5 border border-[#1E2733]/20 flex items-center justify-center shadow-[0_2px_8px_rgba(138, 133, 124,0.08)]">
-              <Sparkles className="w-4 h-4 text-[#1E2733]" />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#78899B]/15 to-[#78899B]/5 border border-[#78899B]/20 flex items-center justify-center shadow-[0_2px_8px_rgba(138, 133, 124,0.08)]">
+              <Sparkles className="w-4 h-4 text-[#394F73]" />
             </div>
             <div>
               <span className="text-xs font-bold tracking-[0.18em] uppercase text-[#7A7E8F]">
@@ -399,14 +399,14 @@ export function ContactForm() {
               <label
                 htmlFor="phone"
                 className={`block text-[13px] font-bold tracking-[0.12em] uppercase mb-2 transition-colors duration-300 ${
-                  focusedField === "phone" ? "text-[#1E2733]" : "text-[#3D4152]"
+                  focusedField === "phone" ? "text-[#394F73]" : "text-[#3D4152]"
                 }`}
               >
                 Phone <span className="text-[#9A9EAF] text-[11px] normal-case tracking-normal font-normal">(optional)</span>
               </label>
               <div className="relative group">
-                <div className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${focusedField === "phone" ? "bg-[#1E2733] opacity-100" : "bg-transparent opacity-0"}`} />
-                <Phone className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] transition-colors duration-300 ${focusedField === "phone" ? "text-[#1E2733]" : "text-[#9A9EAF]"}`} />
+                <div className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${focusedField === "phone" ? "bg-[#78899B] opacity-100" : "bg-transparent opacity-0"}`} />
+                <Phone className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] transition-colors duration-300 ${focusedField === "phone" ? "text-[#394F73]" : "text-[#9A9EAF]"}`} />
                 <input
                   id="phone"
                   name="phone"
@@ -416,7 +416,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   onFocus={() => setFocusedField("phone")}
                   onBlur={() => setFocusedField(null)}
-                  className="relative w-full bg-[#F8F8F7] border border-[#D8D5CF] text-[#1A1A1A] placeholder-[#9A9EAF] text-[15px] pl-11 pr-4 py-3.5 rounded-xl transition-all duration-300 outline-none hover:border-[#B0B3BE] focus:border-[#1E2733]/40 focus:bg-white focus:ring-2 focus:ring-[#1E2733]/10"
+                  className="relative w-full bg-[#F8F8F7] border border-[#D8D5CF] text-[#1A1A1A] placeholder-[#9A9EAF] text-[15px] pl-11 pr-4 py-3.5 rounded-xl transition-all duration-300 outline-none hover:border-[#B0B3BE] focus:border-[#78899B]/40 focus:bg-white focus:ring-2 focus:ring-[#78899B]/10"
                 />
               </div>
             </motion.div>
@@ -426,14 +426,14 @@ export function ContactForm() {
               <label
                 htmlFor="organisation"
                 className={`block text-[13px] font-bold tracking-[0.12em] uppercase mb-2 transition-colors duration-300 ${
-                  focusedField === "organisation" ? "text-[#1E2733]" : "text-[#3D4152]"
+                  focusedField === "organisation" ? "text-[#394F73]" : "text-[#3D4152]"
                 }`}
               >
                 Organisation <span className="text-[#9A9EAF] text-[11px] normal-case tracking-normal font-normal">(optional)</span>
               </label>
               <div className="relative group">
-                <div className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${focusedField === "organisation" ? "bg-[#1E2733] opacity-100" : "bg-transparent opacity-0"}`} />
-                <Building2 className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] transition-colors duration-300 ${focusedField === "organisation" ? "text-[#1E2733]" : "text-[#9A9EAF]"}`} />
+                <div className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${focusedField === "organisation" ? "bg-[#78899B] opacity-100" : "bg-transparent opacity-0"}`} />
+                <Building2 className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] transition-colors duration-300 ${focusedField === "organisation" ? "text-[#394F73]" : "text-[#9A9EAF]"}`} />
                 <input
                   id="organisation"
                   name="organisation"
@@ -443,7 +443,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   onFocus={() => setFocusedField("organisation")}
                   onBlur={() => setFocusedField(null)}
-                  className="relative w-full bg-[#F8F8F7] border border-[#D8D5CF] text-[#1A1A1A] placeholder-[#9A9EAF] text-[15px] pl-11 pr-4 py-3.5 rounded-xl transition-all duration-300 outline-none hover:border-[#B0B3BE] focus:border-[#1E2733]/40 focus:bg-white focus:ring-2 focus:ring-[#1E2733]/10"
+                  className="relative w-full bg-[#F8F8F7] border border-[#D8D5CF] text-[#1A1A1A] placeholder-[#9A9EAF] text-[15px] pl-11 pr-4 py-3.5 rounded-xl transition-all duration-300 outline-none hover:border-[#B0B3BE] focus:border-[#78899B]/40 focus:bg-white focus:ring-2 focus:ring-[#78899B]/10"
                 />
               </div>
             </motion.div>
@@ -453,20 +453,20 @@ export function ContactForm() {
               <label
                 htmlFor="enquiryType"
                 className={`block text-[13px] font-bold tracking-[0.12em] uppercase mb-2 transition-colors duration-300 ${
-                  errors.enquiryType ? "text-[#DC2626]" : focusedField === "enquiryType" ? "text-[#1E2733]" : "text-[#3D4152]"
+                  errors.enquiryType ? "text-[#DC2626]" : focusedField === "enquiryType" ? "text-[#394F73]" : "text-[#3D4152]"
                 }`}
               >
                 What do you need? <span className="text-[#DC2626]">*</span>
               </label>
               <div className="relative group">
                 <div className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${
-                  errors.enquiryType ? "bg-[#DC2626] opacity-100" : focusedField === "enquiryType" ? "bg-[#1E2733] opacity-100" : "bg-transparent opacity-0"
+                  errors.enquiryType ? "bg-[#DC2626] opacity-100" : focusedField === "enquiryType" ? "bg-[#78899B] opacity-100" : "bg-transparent opacity-0"
                 }`} />
                 <MessageSquare className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-[18px] h-[18px] transition-colors duration-300 ${
-                  errors.enquiryType ? "text-[#DC2626]" : focusedField === "enquiryType" ? "text-[#1E2733]" : "text-[#9A9EAF]"
+                  errors.enquiryType ? "text-[#DC2626]" : focusedField === "enquiryType" ? "text-[#394F73]" : "text-[#9A9EAF]"
                 }`} />
                 <ChevronDown className={`absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none transition-colors duration-300 ${
-                  errors.enquiryType ? "text-[#DC2626]" : focusedField === "enquiryType" ? "text-[#1E2733]" : "text-[#9A9EAF]"
+                  errors.enquiryType ? "text-[#DC2626]" : focusedField === "enquiryType" ? "text-[#394F73]" : "text-[#9A9EAF]"
                 }`} />
                 <select
                   id="enquiryType"
@@ -479,7 +479,7 @@ export function ContactForm() {
                   className={`relative w-full bg-[#F8F8F7] border text-[#1A1A1A] text-[15px] pl-11 pr-10 py-3.5 rounded-xl transition-all duration-300 outline-none appearance-none cursor-pointer hover:border-[#B0B3BE] [&>option]:bg-white [&>option]:text-[#1A1A1A] ${
                     errors.enquiryType
                       ? "border-[#DC2626] bg-[#DC2626]/[0.02] focus:border-[#DC2626]/60 focus:ring-2 focus:ring-[#DC2626]/10 focus:bg-white"
-                      : "border-[#D8D5CF] focus:border-[#1E2733]/40 focus:bg-white focus:ring-2 focus:ring-[#1E2733]/10"
+                      : "border-[#D8D5CF] focus:border-[#78899B]/40 focus:bg-white focus:ring-2 focus:ring-[#78899B]/10"
                   }`}
                 >
                   <option value="" disabled className="text-[#9A9EAF]">
@@ -517,8 +517,8 @@ export function ContactForm() {
         {/* ─── Message Section ─── */}
         <div className="relative px-7 pb-7">
           <motion.div variants={itemVariants} className="flex items-center gap-3 mb-7">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E2733]/15 to-[#1E2733]/5 border border-[#1E2733]/20 flex items-center justify-center shadow-[0_2px_8px_rgba(60, 74, 90,0.08)]">
-              <Send className="w-4 h-4 text-[#1E2733]" />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#78899B]/15 to-[#78899B]/5 border border-[#78899B]/20 flex items-center justify-center shadow-[0_2px_8px_rgba(140, 154, 171,0.08)]">
+              <Send className="w-4 h-4 text-[#394F73]" />
             </div>
             <div>
               <span className="text-xs font-bold tracking-[0.18em] uppercase text-[#7A7E8F]">
@@ -533,7 +533,7 @@ export function ContactForm() {
               <label
                 htmlFor="message"
                 className={`block text-[13px] font-bold tracking-[0.12em] uppercase transition-colors duration-300 ${
-                  errors.message ? "text-[#DC2626]" : focusedField === "message" ? "text-[#1E2733]" : "text-[#3D4152]"
+                  errors.message ? "text-[#DC2626]" : focusedField === "message" ? "text-[#394F73]" : "text-[#3D4152]"
                 }`}
               >
                 Message <span className="text-[#DC2626]">*</span>
@@ -544,10 +544,10 @@ export function ContactForm() {
             </div>
             <div className="relative group">
               <div className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${
-                errors.message ? "bg-[#DC2626] opacity-100" : focusedField === "message" ? "bg-[#1E2733] opacity-100" : "bg-transparent opacity-0"
+                errors.message ? "bg-[#DC2626] opacity-100" : focusedField === "message" ? "bg-[#78899B] opacity-100" : "bg-transparent opacity-0"
               }`} />
               <MessageSquare className={`absolute left-3.5 top-4 w-[18px] h-[18px] transition-colors duration-300 ${
-                errors.message ? "text-[#DC2626]" : focusedField === "message" ? "text-[#1E2733]" : "text-[#9A9EAF]"
+                errors.message ? "text-[#DC2626]" : focusedField === "message" ? "text-[#394F73]" : "text-[#9A9EAF]"
               }`} />
               <textarea
                 id="message"
@@ -562,7 +562,7 @@ export function ContactForm() {
                 className={`relative w-full bg-[#F8F8F7] border text-[#1A1A1A] placeholder-[#9A9EAF] text-[15px] pl-11 pr-4 py-3.5 rounded-xl transition-all duration-300 outline-none resize-none hover:border-[#B0B3BE] ${
                   errors.message
                     ? "border-[#DC2626] bg-[#DC2626]/[0.02] focus:border-[#DC2626]/60 focus:ring-2 focus:ring-[#DC2626]/10 focus:bg-white"
-                    : "border-[#D8D5CF] focus:border-[#1E2733]/40 focus:bg-white focus:ring-2 focus:ring-[#1E2733]/10"
+                    : "border-[#D8D5CF] focus:border-[#78899B]/40 focus:bg-white focus:ring-2 focus:ring-[#78899B]/10"
                 }`}
               />
             </div>
@@ -593,7 +593,7 @@ export function ContactForm() {
                 <div
                   key={i}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    i < filledFields ? "bg-[#1E2733] scale-100" : "bg-[#D8D5CF] scale-75"
+                    i < filledFields ? "bg-[#78899B] scale-100" : "bg-[#D8D5CF] scale-75"
                   }`}
                 />
               ))}
@@ -605,7 +605,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={state === "submitting"}
-            className="group relative shrink-0 inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl font-heading font-bold text-[15px] text-white bg-gradient-to-r from-[#1E2733] to-[#141B24] hover:from-[#2A3542] hover:to-[#1E2733] transition-all duration-300 shadow-[0_4px_20px_rgba(60, 74, 90,0.25)] hover:shadow-[0_8px_30px_rgba(60, 74, 90,0.35)] hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 overflow-hidden"
+            className="group relative shrink-0 inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl font-heading font-bold text-[15px] text-white bg-gradient-to-r from-[#78899B] to-[#5E7088] hover:from-[#647689] hover:to-[#78899B] transition-all duration-300 shadow-[0_4px_20px_rgba(140, 154, 171,0.25)] hover:shadow-[0_8px_30px_rgba(140, 154, 171,0.35)] hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 overflow-hidden"
           >
             {/* Shine effect */}
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />

@@ -18,22 +18,22 @@ export interface NewsCardProps {
 
 /* Brand-color mapping for category dots */
 const categoryColors: Record<string, string> = {
-  Policy: "#1E2733",
-  Events: "#1E2733",
-  Investment: "#1E2733",
+  Policy: "#78899B",
+  Events: "#78899B",
+  Investment: "#78899B",
   Leadership: "#1A1A1A",
-  Technology: "#1E2733",
+  Technology: "#78899B",
   Industry: "#B3AA98",
-  Innovation: "#1E2733",
-  Cybersecurity: "#1E2733",
+  Innovation: "#78899B",
+  Cybersecurity: "#78899B",
   Funding: "#B3AA98",
-  Research: "#1E2733",
+  Research: "#78899B",
   Awards: "#B3AA98",
-  Regulation: "#1E2733",
+  Regulation: "#78899B",
 };
 
 function getCategoryColor(category: string): string {
-  return categoryColors[category] || "#1E2733";
+  return categoryColors[category] || "#78899B";
 }
 
 export function NewsCard({ slug, title, category, date, image, excerpt, index = 0, light = false }: NewsCardProps) {
@@ -49,7 +49,7 @@ export function NewsCard({ slug, title, category, date, image, excerpt, index = 
       <Link
         href={`/news/${slug}`}
         className={`flex h-full flex-col gap-2 rounded-lg p-2 ${
-          light ? "bg-[#0E1318]/70 backdrop-blur-sm border border-white/10" : ""
+          light ? "bg-[#394F73]/70 backdrop-blur-sm border border-white/10" : ""
         }`}
       >
         <LazyImage

@@ -61,7 +61,7 @@ export function Hero({
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(55% 75% at 82% -5%, rgba(42, 53, 66,0.55), transparent 60%), radial-gradient(45% 60% at 98% 30%, rgba(60, 74, 90,0.30), transparent 60%), radial-gradient(40% 55% at 2% 100%, rgba(60, 74, 90,0.20), transparent 60%)",
+            "radial-gradient(55% 75% at 82% -5%, rgba(100, 118, 137,0.55), transparent 60%), radial-gradient(45% 60% at 98% 30%, rgba(140, 154, 171,0.30), transparent 60%), radial-gradient(40% 55% at 2% 100%, rgba(140, 154, 171,0.20), transparent 60%)",
         }}
       />
       {/* Fine grid texture */}

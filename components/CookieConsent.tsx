@@ -72,14 +72,14 @@ export function CookieConsent() {
             <div
               className="
                 w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11
-                rounded-full bg-[#1E2733]/10 flex items-center justify-center flex-shrink-0
+                rounded-full bg-[#78899B]/10 flex items-center justify-center flex-shrink-0
               "
             >
               <svg
                 className="w-5 h-5 sm:w-[22px] sm:h-[22px] lg:w-6 lg:h-6"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#1E2733"
+                stroke="#78899B"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -104,7 +104,7 @@ export function CookieConsent() {
             &ldquo;Accept All&rdquo;, you consent to our use of cookies.{" "}
             <Link
               href="/cookies"
-              className="text-[#1E2733] underline underline-offset-2 hover:text-[#141B24] transition-colors"
+              className="text-[#394F73] underline underline-offset-2 hover:text-[#394F73] transition-colors"
             >
               Learn more
             </Link>
@@ -118,9 +118,9 @@ export function CookieConsent() {
                 w-full sm:flex-1
                 py-2.5 sm:py-3 lg:py-3.5
                 px-5 sm:px-6
-                rounded-full bg-[#1E2733] text-white font-semibold
+                rounded-full bg-[#78899B] text-white font-semibold
                 text-xs sm:text-sm lg:text-[15px]
-                hover:bg-[#141B24] active:scale-[0.98] transition-all cursor-pointer
+                hover:bg-[#5E7088] active:scale-[0.98] transition-all cursor-pointer
               "
             >
               Accept All
@@ -134,7 +134,7 @@ export function CookieConsent() {
                 rounded-full bg-white text-[#1A1A1A] font-semibold
                 text-xs sm:text-sm lg:text-[15px]
                 border-2 border-[#D8D5CF]
-                hover:border-[#1E2733] hover:text-[#1E2733] active:scale-[0.98] transition-all cursor-pointer
+                hover:border-[#78899B] hover:text-[#394F73] active:scale-[0.98] transition-all cursor-pointer
               "
             >
               Reject All

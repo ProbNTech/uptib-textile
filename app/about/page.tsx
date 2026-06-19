@@ -99,7 +99,7 @@ const process = [
 /* ── Small reusable bits ─────────────────────────────────────────── */
 function Eyebrow({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) {
   return (
-    <p className={`mb-3 text-[12px] font-bold uppercase tracking-[0.2em] ${dark ? "text-[#B3AA98]" : "text-[#1E2733]"}`}>
+    <p className={`mb-3 text-[12px] font-bold uppercase tracking-[0.2em] ${dark ? "text-[#B3AA98]" : "text-[#394F73]"}`}>
       {children}
     </p>
   );
@@ -110,13 +110,13 @@ function Collage({ images }: { images: { src: string; alt: string }[] }) {
   return (
     <div className="relative aspect-[5/4] w-full">
       {/* Soft brand glow behind */}
-      <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-[#1E2733]/10 blur-2xl" />
+      <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-[#78899B]/10 blur-2xl" />
       {/* Back image */}
       <div className="absolute right-0 top-0 h-[72%] w-[68%] overflow-hidden rounded-[1.5rem] shadow-lg ring-1 ring-[#1A1A1A]/10">
         <Image src={images[0].src} alt={images[0].alt} fill className="object-cover" sizes="40vw" />
       </div>
       {/* Front image, overlapping lower-left */}
-      <div className="absolute bottom-0 left-0 h-[64%] w-[56%] overflow-hidden rounded-[1.5rem] border-4 border-white shadow-[0_24px_50px_-20px_rgba(14, 19, 24,0.5)]">
+      <div className="absolute bottom-0 left-0 h-[64%] w-[56%] overflow-hidden rounded-[1.5rem] border-4 border-white shadow-[0_24px_50px_-20px_rgba(57, 81, 115,0.5)]">
         <Image src={images[1].src} alt={images[1].alt} fill className="object-cover" sizes="32vw" />
       </div>
     </div>
@@ -132,9 +132,9 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Left — copy */}
             <AnimatedSection animation="slide-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#1E2733]/30 bg-[#1E2733]/10 px-4 py-1.5">
-                <Globe2 className="h-4 w-4 text-[#1E2733]" strokeWidth={1.8} />
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#1E2733]">About Us</span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#78899B]/30 bg-[#78899B]/10 px-4 py-1.5">
+                <Globe2 className="h-4 w-4 text-[#394F73]" strokeWidth={1.8} />
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#394F73]">About Us</span>
               </div>
               <h1 className="mt-5 font-heading text-[2.4rem] font-extrabold leading-[1.1] tracking-tight text-[#1A1A1A] sm:text-[3rem] lg:text-[3.4rem]">
                 Bridging Pakistan&rsquo;s textiles to the world
@@ -154,7 +154,7 @@ export default function AboutPage() {
             {/* Right — image with rotating seal */}
             <AnimatedSection animation="slide-right" delay={0.1}>
               <div className="relative mx-auto max-w-[420px]">
-                <div className="relative aspect-square overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(14, 19, 24,0.5)] ring-1 ring-[#1A1A1A]/10">
+                <div className="relative aspect-square overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(57, 81, 115,0.5)] ring-1 ring-[#1A1A1A]/10">
                   <Image
                     src="/image/about/hero-bedlinen.jpg"
                     alt="Premium bed linen styled with soft pillows and a draped duvet"
@@ -163,7 +163,7 @@ export default function AboutPage() {
                     className="object-cover"
                     sizes="(min-width: 1024px) 40vw, 90vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0E1318]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#394F73]/20 to-transparent" />
                 </div>
 
                 {/* Rotating brand seal */}
@@ -172,7 +172,7 @@ export default function AboutPage() {
                     <defs>
                       <path id="sealPath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
                     </defs>
-                    <text fill="#1E2733" fontSize="14.5" fontWeight="700" letterSpacing="3.5">
+                    <text fill="#78899B" fontSize="14.5" fontWeight="700" letterSpacing="3.5">
                       <textPath href="#sealPath" startOffset="0%">
                         PAKISTAN TEXTILE PARTNERS · TRUSTED ·
                       </textPath>
@@ -195,17 +195,17 @@ export default function AboutPage() {
             <Eyebrow>Who we are</Eyebrow>
             <p className="font-heading text-[1.6rem] font-bold leading-[1.45] text-[#1A1A1A] sm:text-[2rem] sm:leading-[1.4]">
               Pakistan is one of the world&rsquo;s top-ten textile exporters and a global leader in{" "}
-              <span className="text-[#1E2733]">cotton and home textiles</span>. We make that capability{" "}
-              <span className="text-[#1E2733]">visible, credible and reachable</span> &mdash; helping
+              <span className="text-[#394F73]">cotton and home textiles</span>. We make that capability{" "}
+              <span className="text-[#394F73]">visible, credible and reachable</span> &mdash; helping
               buyers source dependable product on-spec and on-time, and helping Pakistani exporters{" "}
-              <span className="text-[#1E2733]">reach markets worldwide</span>.
+              <span className="text-[#394F73]">reach markets worldwide</span>.
             </p>
           </AnimatedSection>
         </Container>
       </section>
 
       {/* ── 3. STATS BAND — primary deep green ─────────────────────── */}
-      <section className="relative overflow-hidden bg-[#0E1318]">
+      <section className="relative overflow-hidden bg-[#394F73]">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -243,7 +243,7 @@ export default function AboutPage() {
           <section
             key={p.id}
             id={p.id}
-            className={p.dark ? "relative overflow-hidden bg-[#0E1318]" : "bg-white"}
+            className={p.dark ? "relative overflow-hidden bg-[#394F73]" : "bg-white"}
           >
             {p.dark && (
               <div
@@ -274,10 +274,10 @@ export default function AboutPage() {
                   <div className="mb-5 flex items-center gap-3">
                     <span
                       className={`flex h-11 w-11 items-center justify-center rounded-xl ring-1 ${
-                        p.dark ? "bg-white/10 ring-white/20" : "bg-[#1E2733]/10 ring-[#1E2733]/20"
+                        p.dark ? "bg-white/10 ring-white/20" : "bg-[#78899B]/10 ring-[#78899B]/20"
                       }`}
                     >
-                      <Icon className={`h-5 w-5 ${p.dark ? "text-[#B3AA98]" : "text-[#1E2733]"}`} strokeWidth={1.7} />
+                      <Icon className={`h-5 w-5 ${p.dark ? "text-[#B3AA98]" : "text-[#394F73]"}`} strokeWidth={1.7} />
                     </span>
                     <Eyebrow dark={p.dark}>{p.eyebrow}</Eyebrow>
                   </div>
@@ -290,7 +290,7 @@ export default function AboutPage() {
                   <ul className="mt-7 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
                     {p.points.map((point) => (
                       <li key={point} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#1E2733]" strokeWidth={2} />
+                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#394F73]" strokeWidth={2} />
                         <span className={`text-[14.5px] leading-[1.6] ${p.dark ? "text-white/85" : "text-[#3D4152]"}`}>
                           {point}
                         </span>
@@ -331,7 +331,7 @@ export default function AboutPage() {
                 <AnimatedSection key={step.title} delay={i * 0.08} className="text-center">
                   <div className="relative mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1A1A1A] text-white shadow-lg">
                     <StepIcon className="h-6 w-6 text-[#B3AA98]" strokeWidth={1.6} />
-                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#1E2733] text-[11px] font-bold text-white">
+                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#78899B] text-[11px] font-bold text-white">
                       {i + 1}
                     </span>
                   </div>
@@ -363,16 +363,16 @@ export default function AboutPage() {
                 <div className="h-full rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
                   <div className="flex items-start gap-4">
                     <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#F6F2EA] ring-1 ring-[#ECE5D8]">
-                      <MapPin className="h-5 w-5 text-[#1E2733]" strokeWidth={1.7} />
+                      <MapPin className="h-5 w-5 text-[#394F73]" strokeWidth={1.7} />
                     </span>
                     <div>
                       <h3 className="font-heading text-[1.05rem] font-semibold text-[#1A1A1A]">{office.label}</h3>
                       <p className="mt-1.5 text-[14.5px] leading-[1.65] text-[#3D4152]">{office.address}</p>
                       <a
                         href={office.phoneHref}
-                        className="mt-3 inline-flex items-center gap-2 text-[14.5px] font-medium text-[#3D4152] transition-colors hover:text-[#1E2733]"
+                        className="mt-3 inline-flex items-center gap-2 text-[14.5px] font-medium text-[#3D4152] transition-colors hover:text-[#394F73]"
                       >
-                        <Phone className="h-4 w-4 flex-shrink-0 text-[#1E2733]" strokeWidth={1.7} />
+                        <Phone className="h-4 w-4 flex-shrink-0 text-[#394F73]" strokeWidth={1.7} />
                         {office.phone}
                       </a>
                     </div>

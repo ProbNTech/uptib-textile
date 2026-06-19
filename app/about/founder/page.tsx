@@ -10,7 +10,7 @@ import { Button } from "@/components/Button";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
-const brandColors = ["#1E2733", "#1E2733", "#1E2733"];
+const brandColors = ["#78899B", "#78899B", "#78899B"];
 
 export default function LeadershipPage() {
   const shouldReduceMotion = useReducedMotion();
@@ -72,8 +72,8 @@ export default function LeadershipPage() {
         <AnimatedSection>
           <SectionHeader label="From the President" title="A Message from Our President" color="green" />
           <div className="grid lg:grid-cols-[1fr_2fr] gap-8 items-start">
-            <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#1E2733]">
-              <div className="w-24 h-24 rounded-full overflow-hidden mb-5 ring-2 ring-[#1E2733]/20 ring-offset-2">
+            <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#78899B]">
+              <div className="w-24 h-24 rounded-full overflow-hidden mb-5 ring-2 ring-[#78899B]/20 ring-offset-2">
                 <Image
                   src="/image/ceo/khalil-choudhary-portrait.jpg"
                   alt="Khalil Choudhary — President, Pakistan Textile Partners"
@@ -83,7 +83,7 @@ export default function LeadershipPage() {
                 />
               </div>
               <h3 className="font-heading font-bold text-lg text-[#1A1A1A] mb-1">Khalil Choudhary</h3>
-              <p className="text-base text-[#1E2733] font-semibold mb-3">President, Pakistan Textile Partners</p>
+              <p className="text-base text-[#394F73] font-semibold mb-3">President, Pakistan Textile Partners</p>
               <div className="h-px bg-[#D8D5CF] mb-3" />
               <p className="text-base text-[#7A7E8F] leading-relaxed">
                 Visionary leader dedicated to strengthening the UK–Pakistan technology corridor through innovation, collaboration, and sustainable partnerships.

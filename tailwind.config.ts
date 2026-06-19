@@ -23,8 +23,8 @@ const config: Config = {
         input: "var(--border-default)",
         ring: "var(--primary)",
         primary: {
-          DEFAULT: "#1E2733",
-          hover: "#141B24",
+          DEFAULT: "#78899B",
+          hover: "#5E7088",
           foreground: "#FFFFFF",
         },
         secondary: {
@@ -34,8 +34,8 @@ const config: Config = {
         accent: {
           DEFAULT: "var(--bg-alt)",
           foreground: "var(--text-primary)",
-          green: "#1E2733",
-          "green-hover": "#141B24",
+          green: "#78899B",
+          "green-hover": "#5E7088",
         },
         /* Ink scale — deep charcoal/navy PRIMARY (Peter Reed inspired). */
         /* Key kept as `green` so existing utility classes resolve to new colors. */
@@ -43,16 +43,16 @@ const config: Config = {
           50: "#F6F2EA",
           100: "#ECE5D8",
           200: "#D8CDBA",
-          500: "#3C4A5A",
-          600: "#2A3542",
-          700: "#1E2733",
-          800: "#141B24",
-          900: "#0E1318",
+          500: "#8C9AAB",
+          600: "#647689",
+          700: "#78899B",
+          800: "#5E7088",
+          900: "#394F73",
         },
         /* Secondary slate — old logo-blue accent folded into the charcoal scheme */
         blue: {
-          500: "#3C4A5A",
-          700: "#2A3542",
+          500: "#8C9AAB",
+          700: "#647689",
         },
         destructive: {
           DEFAULT: "#DC2626",
@@ -135,8 +135,8 @@ const config: Config = {
           "50%": { transform: "translateY(-12px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(30, 39, 51, 0)" },
-          "50%": { boxShadow: "0 0 20px 4px rgba(30, 39, 51, 0.1)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(120, 137, 155, 0)" },
+          "50%": { boxShadow: "0 0 20px 4px rgba(120, 137, 155, 0.1)" },
         },
         rainbow: {
           "0%": { "background-position": "0%" },
