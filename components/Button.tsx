@@ -19,7 +19,7 @@ export function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  const baseStyles = "relative overflow-hidden inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#2F7549] focus:ring-offset-2 rounded-full group";
+  const baseStyles = "relative overflow-hidden inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#1E2733] focus:ring-offset-2 rounded-full group";
 
   const sizes = {
     sm: "px-5 py-2 text-base",
@@ -28,10 +28,10 @@ export function Button({
   };
 
   const variants = {
-    primary: "bg-[#16291E] text-white hover:bg-[#2F7549]",
-    secondary: "border border-[#16291E] text-[#16291E] hover:bg-[#16291E] hover:text-white hover:shadow-glow-primary",
-    ghost: "text-[#16291E] underline underline-offset-4 hover:text-[#2F7549]",
-    glass: "border border-white text-white hover:bg-white hover:text-[#16291E]",
+    primary: "bg-[#1A1A1A] text-white hover:bg-[#1E2733]",
+    secondary: "border border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white hover:shadow-glow-primary",
+    ghost: "text-[#1A1A1A] underline underline-offset-4 hover:text-[#1E2733]",
+    glass: "border border-white text-white hover:bg-white hover:text-[#1A1A1A]",
   };
 
   const classes = `${baseStyles} ${sizes[size]} ${variants[variant]} ${className}`;

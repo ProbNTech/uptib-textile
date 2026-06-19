@@ -27,7 +27,7 @@ const markets: TextileMarket[] = [
     valueLabel: "Pakistan textile exports / yr (2025)",
     note: "Pakistan ranks among the top-10 US textile suppliers — anchored in home textiles, knitwear and apparel.",
     categories: ["Home textiles", "Knitwear", "Apparel"],
-    accent: "#2563EB",
+    accent: "#3C4A5A",
   },
   {
     name: "United Kingdom",
@@ -37,7 +37,7 @@ const markets: TextileMarket[] = [
     valueLabel: "Pakistan textile exports / yr",
     note: "One of Pakistan's most important destinations — strong in apparel, bedwear, towels and activewear.",
     categories: ["Apparel", "Bedwear", "Activewear"],
-    accent: "#0D9488",
+    accent: "#5C6B7E",
   },
   {
     name: "Spain",
@@ -47,7 +47,7 @@ const markets: TextileMarket[] = [
     valueLabel: "Pakistan textile exports / yr",
     note: "Pakistan's third-largest EU partner — textiles are 85%+ of exports, led by house linens and menswear.",
     categories: ["House linens", "Menswear", "Knitwear"],
-    accent: "#2F7549",
+    accent: "#1E2733",
   },
   {
     name: "Italy",
@@ -57,7 +57,7 @@ const markets: TextileMarket[] = [
     valueLabel: "Pakistan textile exports / yr",
     note: "Bed linens and trousers anchor the trade, with $311M of untapped potential still to capture.",
     categories: ["Bed linens", "Trousers", "Hosiery"],
-    accent: "#16A34A",
+    accent: "#5C6B7E",
   },
   {
     name: "Poland",
@@ -67,7 +67,7 @@ const markets: TextileMarket[] = [
     valueLabel: "Pakistan textile exports / yr",
     note: "One of Europe's fastest-growing corridors — textiles make up ~90% of all Pakistani exports to Poland.",
     categories: ["Linens", "Denim", "Jersey"],
-    accent: "#0891B2",
+    accent: "#5C6B7E",
   },
   {
     name: "Germany",
@@ -77,7 +77,7 @@ const markets: TextileMarket[] = [
     valueLabel: "apparel importer in Europe",
     note: "Europe's largest textile market (~20% share) and top destination for certified, sustainable goods.",
     categories: ["Knitwear", "Denim", "Technical"],
-    accent: "#3C8F5E",
+    accent: "#2A3542",
   },
   {
     name: "Saudi Arabia",
@@ -87,7 +87,7 @@ const markets: TextileMarket[] = [
     valueLabel: "apparel market size",
     note: "The biggest single GCC opportunity — population growth and healthcare investment drive textile demand.",
     categories: ["Apparel", "Hospitality", "Medical"],
-    accent: "#15803D",
+    accent: "#3C4A5A",
   },
   {
     name: "United Arab Emirates",
@@ -97,7 +97,7 @@ const markets: TextileMarket[] = [
     valueLabel: "apparel market size",
     note: "A consumer market and regional re-export hub with rising home, hospitality and sportswear demand.",
     categories: ["Hotel linen", "Sportswear", "Re-export"],
-    accent: "#0E7490",
+    accent: "#3C4A5A",
   },
 ];
 
@@ -106,7 +106,7 @@ function MarketCard({ market }: { market: TextileMarket }) {
     <Link href="/global-textile-market" className="group block h-full w-[340px] flex-shrink-0">
       <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
         {/* Header */}
-        <div className="relative z-0 min-h-[112px] overflow-hidden px-5 pt-5 pb-8" style={{ background: `linear-gradient(135deg, ${market.accent} 0%, #15402A 100%)` }}>
+        <div className="relative z-0 min-h-[112px] overflow-hidden px-5 pt-5 pb-8" style={{ background: `linear-gradient(135deg, ${market.accent} 0%, #0E1318 100%)` }}>
           <div className="flex items-start justify-between gap-3">
             <div>
               <h3 className="font-heading text-lg font-bold text-white">{market.name}</h3>
@@ -138,12 +138,12 @@ function MarketCard({ market }: { market: TextileMarket }) {
           <p className="text-[13px] leading-relaxed text-[#5A5F72]">{market.note}</p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {market.categories.map((c) => (
-              <span key={c} className="rounded-full border border-[#2F7549]/10 bg-[#F0FDF4] px-2.5 py-1 text-[11px] font-semibold text-[#2F7549]">
+              <span key={c} className="rounded-full border border-[#1E2733]/10 bg-[#FFFFFF] px-2.5 py-1 text-[11px] font-semibold text-[#1E2733]">
                 {c}
               </span>
             ))}
           </div>
-          <div className="mt-auto flex items-center gap-1.5 border-t border-gray-100 pt-3 text-sm font-semibold text-[#2F7549] transition-all group-hover:gap-2.5">
+          <div className="mt-auto flex items-center gap-1.5 border-t border-gray-100 pt-3 text-sm font-semibold text-[#1E2733] transition-all group-hover:gap-2.5">
             Explore market
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </div>

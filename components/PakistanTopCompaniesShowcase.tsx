@@ -20,7 +20,7 @@ export default function PakistanTopCompaniesShowcase() {
 
   return (
     <section
-      className="relative z-[1] py-16 lg:py-20 overflow-hidden bg-white"
+      className="relative z-[1] py-16 lg:py-20 overflow-hidden bg-[#F6F2EA]"
     >
       {/* Pakistan map — section background watermark */}
       <Image
@@ -71,7 +71,7 @@ export default function PakistanTopCompaniesShowcase() {
             <div className="flex items-center justify-between mt-6">
               <Link
                 href="/membership"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-[#2F7549] hover:text-[#245C3A] transition-colors"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-[#1E2733] hover:text-[#141B24] transition-colors"
               >
                 Explore Manufacturers and Exporters
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -80,11 +80,11 @@ export default function PakistanTopCompaniesShowcase() {
               <div className="flex gap-2.5">
                 <button
                   aria-label="Previous companies"
-                  className="pak-companies-prev group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#2F7549]/30 transition-all duration-300"
+                  className="pak-companies-prev group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#1E2733]/30 transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-[#6B7280] transition-all duration-300 group-hover:text-[#2F7549] group-hover:-translate-x-0.5"
+                    className="w-4 h-4 text-[#6B7280] transition-all duration-300 group-hover:text-[#1E2733] group-hover:-translate-x-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -95,11 +95,11 @@ export default function PakistanTopCompaniesShowcase() {
                 </button>
                 <button
                   aria-label="Next companies"
-                  className="pak-companies-next group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#2F7549]/30 transition-all duration-300"
+                  className="pak-companies-next group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#1E2733]/30 transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-[#6B7280] transition-all duration-300 group-hover:text-[#2F7549] group-hover:translate-x-0.5"
+                    className="w-4 h-4 text-[#6B7280] transition-all duration-300 group-hover:text-[#1E2733] group-hover:translate-x-0.5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

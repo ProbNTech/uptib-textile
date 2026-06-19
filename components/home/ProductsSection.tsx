@@ -21,9 +21,9 @@ const productTaglines: Record<string, string> = {
 
 /* Per-card accent — drives the bottom bar and icon colour */
 const productAccents: Record<string, string> = {
-  "bedding-linen": "#2563EB",
+  "bedding-linen": "#3C4A5A",
   "apparel-accessories": "#DC2626",
-  "sportswear-activewear": "#16A34A",
+  "sportswear-activewear": "#5C6B7E",
   "healthcare-textile": "#DC2626",
 };
 
@@ -31,10 +31,10 @@ export default function ProductsSection() {
   return (
     <section
       id="products"
-      className="relative z-[1] pt-20 lg:pt-28 pb-10 lg:pb-12 scroll-mt-24 overflow-hidden bg-white"
+      className="relative z-[1] pt-20 lg:pt-28 pb-10 lg:pb-12 scroll-mt-24 overflow-hidden bg-[#F6F2EA]"
       aria-labelledby="products-heading"
     >
-      <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
+      <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">
           <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-12">
@@ -43,7 +43,7 @@ export default function ProductsSection() {
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#5A5F72]">
                 Our Products
               </p>
-              <h2 id="products-heading" className="font-heading text-3xl font-bold leading-[1.15] text-[#16291E] sm:text-4xl">
+              <h2 id="products-heading" className="font-heading text-3xl font-bold leading-[1.15] text-[#1A1A1A] sm:text-4xl">
                 The textiles<br className="hidden lg:block" /> we trade
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[#5A5F72]">

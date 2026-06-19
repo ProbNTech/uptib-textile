@@ -197,7 +197,7 @@ export default function MembershipClient() {
 
       {/* ── FLOATING FACTS CARD (overlaps hero) ──────────────────── */}
       <div className={cn("relative z-[3] -mt-14 sm:-mt-16 lg:-mt-20", PX)}>
-        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(4,120,87,0.30)] p-6 sm:p-8">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(60, 74, 90,0.30)] p-6 sm:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
             {overviewFacts.map((f, i) => {
               const Icon = f.icon;
@@ -209,11 +209,11 @@ export default function MembershipClient() {
                     i > 0 && "lg:border-l lg:border-[#E5E7EB] lg:pl-6",
                   )}
                 >
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549]">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733]">
                     <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                   </span>
                   <div>
-                    <p className="font-heading font-extrabold text-lg text-[#16291E] leading-tight">{f.value}</p>
+                    <p className="font-heading font-extrabold text-lg text-[#1A1A1A] leading-tight">{f.value}</p>
                     <p className="text-[13px] text-[#5A5F72] leading-snug mt-0.5">{f.label}</p>
                   </div>
                 </div>
@@ -232,10 +232,10 @@ export default function MembershipClient() {
                 <SectionLabel
                   label="Why membership matters"
                   title="Why membership beats a directory listing"
-                  color="#2F7549"
+                  color="#1E2733"
                   hideLine
                 />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
                   Standing out in global markets takes more than being found — it takes being trusted. Pakistan Textile Partners membership
                   gives you the credibility, tools and connections to grow with confidence, because we run the
@@ -255,10 +255,10 @@ export default function MembershipClient() {
                       transition={{ duration: 0.45, delay: index * 0.05 }}
                     >
                       <div className="flex items-center gap-2.5 mb-2">
-                        <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#2F7549]/10 text-[#2F7549]">
+                        <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#1E2733]/10 text-[#1E2733]">
                           <Icon className="size-[18px]" strokeWidth={1.75} aria-hidden />
                         </span>
-                        <h3 className="font-heading font-bold text-[15px] text-[#16291E] leading-snug">{b.title}</h3>
+                        <h3 className="font-heading font-bold text-[15px] text-[#1A1A1A] leading-snug">{b.title}</h3>
                       </div>
                       <p className="text-sm text-[#5A5F72] leading-relaxed">{b.desc}</p>
                     </motion.div>
@@ -271,14 +271,14 @@ export default function MembershipClient() {
       </section>
 
       {/* ── MEMBERSHIP TIERS ─────────────────────────────────────── */}
-      <section id="tiers" className="bg-white py-20 lg:py-28 scroll-mt-24">
+      <section id="tiers" className="bg-[#F6F2EA] py-20 lg:py-28 scroll-mt-24">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
               label="Membership tiers"
               title="Choose the level of support you need"
               body="Flexible plans. Real impact. Designed for exporters at every stage — pricing on request."
-              color="#2F7549"
+              color="#1E2733"
               hideLine
             />
           </AnimatedSection>
@@ -294,12 +294,12 @@ export default function MembershipClient() {
                     className={cn(
                       "relative flex flex-col rounded-2xl border p-7",
                       tier.featured
-                        ? "border-[#3E8F5E] text-white bg-gradient-to-b from-[#053827] to-[#0B6E51] ring-1 ring-[#3E8F5E]/40 shadow-[0_28px_70px_-24px_rgba(16,185,129,0.7)] lg:-mt-3 lg:mb-3"
+                        ? "border-[#1E2733] text-white bg-gradient-to-b from-[#1E2733] to-[#3C4A5A] ring-1 ring-[#1E2733]/40 shadow-[0_28px_70px_-24px_rgba(138, 133, 124,0.7)] lg:-mt-3 lg:mb-3"
                         : "border-[#E5E7EB] bg-white shadow-sm",
                     )}
                   >
                     {tier.featured && (
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#3E8F5E] text-white text-[11px] font-bold tracking-wide">
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1E2733] text-white text-[11px] font-bold tracking-wide">
                         <Star className="w-3.5 h-3.5" /> Most Popular
                       </span>
                     )}
@@ -308,12 +308,12 @@ export default function MembershipClient() {
                       <span
                         className={cn(
                           "inline-flex size-11 shrink-0 items-center justify-center rounded-xl",
-                          tier.featured ? "bg-white/10 text-[#8FD3AE]" : "bg-[#2F7549]/10 text-[#2F7549]",
+                          tier.featured ? "bg-white/10 text-[#B3AA98]" : "bg-[#1E2733]/10 text-[#1E2733]",
                         )}
                       >
                         <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                       </span>
-                      <h3 className={cn("font-heading font-bold text-xl", tier.featured ? "text-white" : "text-[#16291E]")}>
+                      <h3 className={cn("font-heading font-bold text-xl", tier.featured ? "text-white" : "text-[#1A1A1A]")}>
                         {tier.name}
                       </h3>
                     </div>
@@ -328,7 +328,7 @@ export default function MembershipClient() {
                     <p
                       className={cn(
                         "font-heading font-extrabold text-lg mt-4 pb-4 border-b",
-                        tier.featured ? "text-[#8FD3AE] border-white/15" : "text-[#2F7549] border-[#E5E7EB]",
+                        tier.featured ? "text-[#B3AA98] border-white/15" : "text-[#1E2733] border-[#E5E7EB]",
                       )}
                     >
                       Pricing on request
@@ -337,7 +337,7 @@ export default function MembershipClient() {
                       {tier.features.map((f) => (
                         <li key={f} className="flex items-start gap-2.5 text-sm">
                           <Check
-                            className={cn("w-4 h-4 flex-shrink-0 mt-0.5", tier.featured ? "text-[#8FD3AE]" : "text-[#3E8F5E]")}
+                            className={cn("w-4 h-4 flex-shrink-0 mt-0.5", tier.featured ? "text-[#B3AA98]" : "text-[#1E2733]")}
                           />
                           <span className={tier.featured ? "text-white/90" : "text-[#3D4152]"}>{f}</span>
                         </li>
@@ -352,11 +352,11 @@ export default function MembershipClient() {
             <ul className="space-y-6 lg:pt-4">
               {tierValues.map((v) => (
                 <li key={v.title} className="flex items-start gap-3.5">
-                  <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-[#2F7549] text-white mt-0.5">
+                  <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-[#1E2733] text-white mt-0.5">
                     <Check className="size-4" strokeWidth={3} aria-hidden />
                   </span>
                   <div>
-                    <p className="font-heading font-bold text-[15px] text-[#16291E]">{v.title}</p>
+                    <p className="font-heading font-bold text-[15px] text-[#1A1A1A]">{v.title}</p>
                     <p className="text-sm text-[#5A5F72] leading-relaxed mt-0.5">{v.desc}</p>
                   </div>
                 </li>
@@ -374,7 +374,7 @@ export default function MembershipClient() {
               label="Criteria"
               title="Membership is built for textile suppliers"
               body="From large mills to first-time exporters — if you supply textiles, there is a route in."
-              color="#2F7549"
+              color="#1E2733"
               hideLine
             />
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -387,12 +387,12 @@ export default function MembershipClient() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.45, delay: index * 0.08 }}
-                    className="rounded-2xl border border-[#E5E7EB] bg-white p-7 shadow-sm hover:shadow-[0_18px_40px_-18px_rgba(4,120,87,0.25)] hover:-translate-y-1 transition-all duration-300"
+                    className="rounded-2xl border border-[#E5E7EB] bg-white p-7 shadow-sm hover:shadow-[0_18px_40px_-18px_rgba(60, 74, 90,0.25)] hover:-translate-y-1 transition-all duration-300"
                   >
-                    <span className="inline-flex size-12 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549] mb-5">
+                    <span className="inline-flex size-12 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733] mb-5">
                       <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                     </span>
-                    <h3 className="font-heading font-bold text-[16px] text-[#16291E] mb-2 leading-snug">{item.title}</h3>
+                    <h3 className="font-heading font-bold text-[16px] text-[#1A1A1A] mb-2 leading-snug">{item.title}</h3>
                     <p className="text-sm text-[#5A5F72] leading-relaxed">{item.desc}</p>
                   </motion.div>
                 );
@@ -403,7 +403,7 @@ export default function MembershipClient() {
       </section>
 
       {/* ── GLOBAL REACH (dark stats band) ───────────────────────── */}
-      <section className="relative overflow-hidden bg-[#15402A] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#0E1318] py-20 lg:py-28">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -420,7 +420,7 @@ export default function MembershipClient() {
                   label="One membership. Global demand."
                   title="One membership, demand worldwide"
                   body="Pakistan Textile Partners connects Pakistani manufacturers with retailers, importers, hotel groups and brands across the markets where Pakistani textiles are in demand."
-                  color="#8FD3AE"
+                  color="#B3AA98"
                   light
                   hideLine
                   bodyClassName="!text-white/90"
@@ -433,7 +433,7 @@ export default function MembershipClient() {
               <div>
                 <div className="grid grid-cols-2 gap-x-8 gap-y-10">
                   {homeStats.map((stat) => (
-                    <div key={stat.label} className="border-l-2 border-[#3E8F5E]/40 pl-5">
+                    <div key={stat.label} className="border-l-2 border-[#1E2733]/40 pl-5">
                       <p className="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-none mb-2">
                         {stat.value}
                       </p>
@@ -447,7 +447,7 @@ export default function MembershipClient() {
                       key={m.name}
                       className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13px] text-white/90"
                     >
-                      <Globe2 className="size-3.5 text-[#8FD3AE]" aria-hidden />
+                      <Globe2 className="size-3.5 text-[#B3AA98]" aria-hidden />
                       {m.name}
                     </span>
                   ))}
@@ -459,18 +459,18 @@ export default function MembershipClient() {
       </section>
 
       {/* ── JOURNEY / HOW IT WORKS ───────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-[#F6F2EA] py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <div className="text-center mb-12">
               <SectionLabel
                 label="Your journey with Pakistan Textile Partners"
                 title="From application to your first introductions"
-                color="#2F7549"
+                color="#1E2733"
                 align="center"
                 hideLine
               />
-              <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] mx-auto -mt-4" />
+              <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] mx-auto -mt-4" />
             </div>
 
             <div className="flex flex-col md:flex-row md:items-start md:justify-center gap-8 md:gap-2 max-w-5xl mx-auto">
@@ -479,17 +479,17 @@ export default function MembershipClient() {
                 return (
                   <Fragment key={s.title}>
                     <div className="flex-1 text-center md:max-w-[200px]">
-                      <div className="relative mx-auto w-16 h-16 rounded-full border-2 border-[#2F7549]/20 bg-white flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6 text-[#2F7549]" strokeWidth={1.75} aria-hidden />
-                        <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-[#15402A] text-white text-[11px] font-bold flex items-center justify-center">
+                      <div className="relative mx-auto w-16 h-16 rounded-full border-2 border-[#1E2733]/20 bg-white flex items-center justify-center mb-4">
+                        <Icon className="w-6 h-6 text-[#1E2733]" strokeWidth={1.75} aria-hidden />
+                        <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-[#0E1318] text-white text-[11px] font-bold flex items-center justify-center">
                           {i + 1}
                         </span>
                       </div>
-                      <h3 className="font-heading font-bold text-[15px] text-[#16291E] mb-1">{s.title}</h3>
+                      <h3 className="font-heading font-bold text-[15px] text-[#1A1A1A] mb-1">{s.title}</h3>
                       <p className="text-sm text-[#5A5F72] leading-relaxed">{s.desc}</p>
                     </div>
                     {i < steps.length - 1 && (
-                      <ArrowRight className="hidden md:block w-5 h-5 text-[#2F7549]/40 shrink-0 mt-5" aria-hidden />
+                      <ArrowRight className="hidden md:block w-5 h-5 text-[#1E2733]/40 shrink-0 mt-5" aria-hidden />
                     )}
                   </Fragment>
                 );
@@ -506,7 +506,7 @@ export default function MembershipClient() {
       {/* ── APPLY (membership form) ──────────────────────────────── */}
       <section
         id="apply"
-        className="relative overflow-hidden bg-[#15402A] py-20 lg:py-28 scroll-mt-24"
+        className="relative overflow-hidden bg-[#0E1318] py-20 lg:py-28 scroll-mt-24"
       >
         {/* Dot texture (matches the dark green stats band) */}
         <div
@@ -526,7 +526,7 @@ export default function MembershipClient() {
               <div className="flex flex-col gap-5">
                 {/* Heading */}
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#8FD3AE] mb-3">Ready to join?</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#B3AA98] mb-3">Ready to join?</p>
                   <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-[1.1]">
                     Apply for membership
                   </h2>
@@ -537,11 +537,11 @@ export default function MembershipClient() {
                 </div>
 
                 {/* Card — Stats */}
-                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_50px_-30px_rgba(4,120,87,0.25)]">
+                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_50px_-30px_rgba(60, 74, 90,0.25)]">
                   <div className="grid grid-cols-2 gap-x-5 gap-y-5">
                     {homeStats.map((stat) => (
-                      <div key={stat.label} className="border-l-2 border-[#2F7549]/30 pl-3.5">
-                        <p className="font-heading font-extrabold text-2xl text-[#16291E] leading-none">{stat.value}</p>
+                      <div key={stat.label} className="border-l-2 border-[#1E2733]/30 pl-3.5">
+                        <p className="font-heading font-extrabold text-2xl text-[#1A1A1A] leading-none">{stat.value}</p>
                         <p className="text-[12px] text-[#5A5F72] leading-snug mt-1.5">{stat.label}</p>
                       </div>
                     ))}
@@ -549,8 +549,8 @@ export default function MembershipClient() {
                 </div>
 
                 {/* Card — Why members join (dark green) */}
-                <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1b4d33] to-[#0a1f17] p-6">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#8FD3AE] mb-4">Why members join</p>
+                <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#2A3542] to-[#0E1318] p-6">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#B3AA98] mb-4">Why members join</p>
                   <ul className="space-y-3">
                     {[
                       "A place in the supplier pool buyers source from",
@@ -559,7 +559,7 @@ export default function MembershipClient() {
                       "International representation for your products",
                     ].map((point) => (
                       <li key={point} className="flex items-start gap-2.5 text-[14px] leading-snug text-white/90">
-                        <CheckCircle2 className="size-[18px] shrink-0 text-[#8FD3AE]" strokeWidth={2} aria-hidden />
+                        <CheckCircle2 className="size-[18px] shrink-0 text-[#B3AA98]" strokeWidth={2} aria-hidden />
                         {point}
                       </li>
                     ))}
@@ -567,24 +567,24 @@ export default function MembershipClient() {
                 </div>
 
                 {/* Card — What happens next */}
-                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_50px_-30px_rgba(4,120,87,0.25)]">
+                <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_50px_-30px_rgba(60, 74, 90,0.25)]">
                   <div className="flex items-center gap-2.5 mb-5">
-                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-[#2F7549]/10 text-[#2F7549]">
+                    <span className="inline-flex size-8 items-center justify-center rounded-lg bg-[#1E2733]/10 text-[#1E2733]">
                       <ClipboardCheck className="size-4" strokeWidth={1.9} aria-hidden />
                     </span>
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F7549]">What happens next</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#1E2733]">What happens next</p>
                   </div>
                   <ol className="relative space-y-5">
-                    <span className="absolute left-[19px] top-2 bottom-2 w-px bg-[#2F7549]/15" aria-hidden />
+                    <span className="absolute left-[19px] top-2 bottom-2 w-px bg-[#1E2733]/15" aria-hidden />
                     {applyChips.map((c, i) => {
                       const Icon = c.icon;
                       return (
                         <li key={c.label} className="relative flex items-center gap-4">
-                          <span className="relative z-[1] inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549] ring-4 ring-white">
+                          <span className="relative z-[1] inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733] ring-4 ring-white">
                             <Icon className="size-[18px]" strokeWidth={1.75} aria-hidden />
                           </span>
-                          <span className="flex-1 text-[14px] font-semibold text-[#16291E]">{c.label}</span>
-                          <span className="text-xs font-bold tabular-nums text-[#2F7549]/35">
+                          <span className="flex-1 text-[14px] font-semibold text-[#1A1A1A]">{c.label}</span>
+                          <span className="text-xs font-bold tabular-nums text-[#1E2733]/35">
                             {String(i + 1).padStart(2, "0")}
                           </span>
                         </li>
@@ -594,9 +594,9 @@ export default function MembershipClient() {
                 </div>
 
                 {/* Card — Help / consultation (dark green) */}
-                <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#1b4d33] to-[#0a1f17] p-5">
+                <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#2A3542] to-[#0E1318] p-5">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-white/10 border border-white/20 text-[#8FD3AE]">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-white/10 border border-white/20 text-[#B3AA98]">
                       <HelpCircle className="size-5" aria-hidden />
                     </span>
                     <div>
@@ -606,7 +606,7 @@ export default function MembershipClient() {
                   </div>
                   <Link
                     href="/contact"
-                    className="group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#8FD3AE]"
+                    className="group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#B3AA98]"
                   >
                     Book a consultation
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
@@ -647,28 +647,28 @@ export default function MembershipClient() {
                   label="FAQs"
                   title="Membership questions, answered"
                   body="What Pakistani textile exporters ask us most about joining Pakistan Textile Partners and reaching buyers worldwide."
-                  color="#2F7549"
+                  color="#1E2733"
                   as="h2"
                   hideLine
                 />
-                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]">
+                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549] text-white">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733] text-white">
                       <HelpCircle className="size-5" aria-hidden />
                     </span>
                     <div>
-                      <p className="text-sm font-bold text-[#16291E]">Still have questions?</p>
+                      <p className="text-sm font-bold text-[#1A1A1A]">Still have questions?</p>
                       <p className="text-xs text-[#5A5F72]">Read the full terms or talk to our team.</p>
                     </div>
                   </div>
                   <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
-                    <Link href="/contact" className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549]">
+                    <Link href="/contact" className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733]">
                       Talk to our team
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
                     </Link>
                     <Link
                       href="/membership/terms"
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5A5F72] hover:text-[#16291E]"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5A5F72] hover:text-[#1A1A1A]"
                     >
                       Membership terms
                     </Link>
@@ -688,8 +688,8 @@ export default function MembershipClient() {
                       className={cn(
                         "rounded-2xl border transition-colors duration-200",
                         isOpen
-                          ? "border-[#2F7549]/25 bg-[#2F7549]/[0.04] shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]"
-                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(4,120,87,0.12)]",
+                          ? "border-[#1E2733]/25 bg-[#1E2733]/[0.04] shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]"
+                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.12)]",
                       )}
                     >
                       <h3>
@@ -704,19 +704,19 @@ export default function MembershipClient() {
                           <span
                             className={cn(
                               "inline-flex size-9 shrink-0 items-center justify-center rounded-xl text-sm font-bold tabular-nums transition-colors",
-                              isOpen ? "bg-[#2F7549] text-white" : "bg-[#2F7549]/10 text-[#2F7549]",
+                              isOpen ? "bg-[#1E2733] text-white" : "bg-[#1E2733]/10 text-[#1E2733]",
                             )}
                             aria-hidden
                           >
                             {String(i + 1).padStart(2, "0")}
                           </span>
 
-                          <span className="flex-1 text-sm font-medium text-[#16291E]">{item.q}</span>
+                          <span className="flex-1 text-sm font-medium text-[#1A1A1A]">{item.q}</span>
 
                           <span
                             className={cn(
                               "inline-flex size-8 shrink-0 items-center justify-center rounded-full transition-colors",
-                              isOpen ? "bg-[#2F7549] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
+                              isOpen ? "bg-[#1E2733] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
                             )}
                             aria-hidden
                           >

@@ -235,12 +235,12 @@ function Clause({ text }: { text: string }) {
   if (m) {
     return (
       <p>
-        <span className="font-semibold text-[#2F7549]">{m[1]}</span> {m[2]}
+        <span className="font-semibold text-[#1E2733]">{m[1]}</span> {m[2]}
       </p>
     );
   }
   if (text === "You may:") {
-    return <p className="font-semibold text-[#16291E]">{text}</p>;
+    return <p className="font-semibold text-[#1A1A1A]">{text}</p>;
   }
   return <p>{text}</p>;
 }
@@ -275,7 +275,7 @@ export default function TermsPage() {
             ))}
 
             {"listItems" in section && section.listItems && (
-              <ol className="list-decimal space-y-2 pl-6 marker:font-semibold marker:text-[#3E8F5E]">
+              <ol className="list-decimal space-y-2 pl-6 marker:font-semibold marker:text-[#1E2733]">
                 {section.listItems.map((item, i) => (
                   <li key={i} className="pl-1">
                     {item}

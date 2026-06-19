@@ -52,13 +52,13 @@ export function CompanyCard({ company }: CompanyCardProps) {
           <div className="flex items-start justify-between gap-2">
             <h3
               id={`company-${company.id}-title`}
-              className="font-heading font-bold text-[#15402A] text-xl leading-tight truncate"
+              className="font-heading font-bold text-[#0E1318] text-xl leading-tight truncate"
             >
               {company.name}
             </h3>
             {company.verified && company.source !== "Member" && (
               <span
-                className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#D7EADD] px-2 py-0.5 text-[11px] font-semibold text-[#245C3A]"
+                className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#ECE5D8] px-2 py-0.5 text-[11px] font-semibold text-[#141B24]"
                 title="Verified by source"
               >
                 <BadgeCheck className="w-3 h-3" /> Verified
@@ -77,7 +77,7 @@ export function CompanyCard({ company }: CompanyCardProps) {
             {typeof company.rating === "number" ? (
               <RatingStars rating={company.rating} reviewCount={company.reviewCount} />
             ) : (
-              <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#2F7549]">
+              <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#1E2733]">
                 <BadgeCheck className="w-3 h-3" /> Verified member
               </span>
             )}

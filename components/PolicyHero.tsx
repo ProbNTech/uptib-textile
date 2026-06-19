@@ -32,16 +32,16 @@ export function PolicyHero({
   children,
 }: PolicyHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[#16291E]">
+    <section className="relative overflow-hidden bg-[#1A1A1A]">
       {/* Gradient base */}
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, #0B1410 0%, #16291E 55%, #0B1410 100%)" }}
+        style={{ background: "linear-gradient(135deg, #0E1318 0%, #1A1A1A 55%, #0E1318 100%)" }}
       />
       {/* Radial brand glow */}
       <div
         className="absolute -top-32 right-[-12%] w-[520px] h-[520px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(62,143,94,0.22), transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(30, 39, 51,0.22), transparent 70%)" }}
       />
       {/* Subtle dot grid */}
       <div
@@ -64,7 +64,7 @@ export function PolicyHero({
         <div className="max-w-3xl">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-white/45 mb-6">
-            <Link href="/" className="hover:text-[#8FD3AE] transition-colors duration-200">
+            <Link href="/" className="hover:text-[#B3AA98] transition-colors duration-200">
               Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
@@ -73,9 +73,9 @@ export function PolicyHero({
 
           {/* Eyebrow chip */}
           {eyebrow && (
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3E8F5E]/40 bg-[#3E8F5E]/10 px-4 py-1.5 mb-5 backdrop-blur-sm">
-              {Icon && <Icon className="w-4 h-4 text-[#8FD3AE]" strokeWidth={1.8} aria-hidden="true" />}
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8FD3AE]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#1E2733]/40 bg-[#1E2733]/10 px-4 py-1.5 mb-5 backdrop-blur-sm">
+              {Icon && <Icon className="w-4 h-4 text-[#B3AA98]" strokeWidth={1.8} aria-hidden="true" />}
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#B3AA98]">
                 {eyebrow}
               </span>
             </div>
@@ -96,7 +96,7 @@ export function PolicyHero({
           {/* Last updated */}
           {updated && (
             <p className="mt-6 inline-flex items-center gap-2 text-sm text-white/55">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3E8F5E]" aria-hidden="true" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1E2733]" aria-hidden="true" />
               Last updated: {updated}
             </p>
           )}
@@ -107,7 +107,7 @@ export function PolicyHero({
       </div>
 
       {/* Bottom brand accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2F7549] via-[#3E8F5E] to-[#2F7549]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733]" />
     </section>
   );
 }

@@ -93,13 +93,13 @@ export default function FAQsPage() {
                   setOpen(null);
                 }}
                 placeholder="Search questions…"
-                className="w-full rounded-full border border-[#E2E2DC] bg-white py-3 pl-11 pr-10 text-[15px] text-[#16291E] outline-none transition-colors duration-150 placeholder:text-[#9AA0AC] focus:border-[#2F7549]"
+                className="w-full rounded-full border border-[#E2E2DC] bg-white py-3 pl-11 pr-10 text-[15px] text-[#1A1A1A] outline-none transition-colors duration-150 placeholder:text-[#9AA0AC] focus:border-[#1E2733]"
               />
               {query && (
                 <button
                   onClick={() => setQuery("")}
                   aria-label="Clear search"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[#9AA0AC] hover:text-[#16291E]"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[#9AA0AC] hover:text-[#1A1A1A]"
                 >
                   <X className="h-4 w-4" />
                 </button>
@@ -113,10 +113,10 @@ export default function FAQsPage() {
             ) : (
               filtered.map((cat) => (
                 <section key={cat.category} className="mb-14 last:mb-0">
-                  <h2 className="font-heading text-[1.4rem] font-bold leading-tight text-[#16291E]">
+                  <h2 className="font-heading text-[1.4rem] font-bold leading-tight text-[#1A1A1A]">
                     {cat.category}
                   </h2>
-                  <div className="mt-3 mb-5 h-px w-12 bg-[#3E8F5E]" />
+                  <div className="mt-3 mb-5 h-px w-12 bg-[#1E2733]" />
                   <div className="border-t border-[#ECECE6]">
                     {cat.faqs.map((f, i) => {
                       const key = `${cat.category}-${i}`;
@@ -128,11 +128,11 @@ export default function FAQsPage() {
                             aria-expanded={isOpen}
                             className="flex w-full items-center justify-between gap-4 py-5 text-left"
                           >
-                            <span className="font-heading text-[1.02rem] font-semibold text-[#16291E]">
+                            <span className="font-heading text-[1.02rem] font-semibold text-[#1A1A1A]">
                               {f.question}
                             </span>
                             <ChevronDown
-                              className={`h-5 w-5 flex-shrink-0 text-[#2F7549] transition-transform duration-200 ${
+                              className={`h-5 w-5 flex-shrink-0 text-[#1E2733] transition-transform duration-200 ${
                                 isOpen ? "rotate-180" : ""
                               }`}
                             />

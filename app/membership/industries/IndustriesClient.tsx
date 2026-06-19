@@ -202,9 +202,9 @@ function CompanyCard({ company }: { company: DirectoryCompany }) {
   const sector = sectorOf(company.category);
 
   return (
-    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#E8ECEA] bg-white p-6 shadow-[0_2px_12px_-8px_rgba(8,19,13,0.18)] transition-colors duration-200 hover:border-[#2F7549]/35">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#E8ECEA] bg-white p-6 shadow-[0_2px_12px_-8px_rgba(14, 19, 24,0.18)] transition-colors duration-200 hover:border-[#1E2733]/35">
       {/* brand accent line */}
-      <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#15402A] to-[#2F7549]" aria-hidden />
+      <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0E1318] to-[#1E2733]" aria-hidden />
 
       <div className="flex items-start gap-3.5">
         {company.logoUrl && !imgError ? (
@@ -219,24 +219,24 @@ function CompanyCard({ company }: { company: DirectoryCompany }) {
             />
           </span>
         ) : (
-          <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 font-heading text-sm font-extrabold text-[#2F7549]">
+          <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#1E2733]/10 font-heading text-sm font-extrabold text-[#1E2733]">
             {initialsOf(company.name)}
           </span>
         )}
         <div className="min-w-0">
-          <h4 className="font-heading text-[15px] font-bold leading-snug text-[#16291E]">
+          <h4 className="font-heading text-[15px] font-bold leading-snug text-[#1A1A1A]">
             {company.name}
           </h4>
           <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1">
             {sector && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-[#2F7549]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#2F7549]">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#1E2733]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E2733]">
                 <sector.icon className="size-3" strokeWidth={2} aria-hidden />
                 {sector.short}
               </span>
             )}
             {company.verified && (
               <span className="inline-flex items-center gap-1 text-[11px] font-medium text-[#6B7280]">
-                <BadgeCheck className="size-3.5 text-[#2F7549]" aria-hidden />
+                <BadgeCheck className="size-3.5 text-[#1E2733]" aria-hidden />
                 Verified member
               </span>
             )}
@@ -272,7 +272,7 @@ function CompanyCard({ company }: { company: DirectoryCompany }) {
             href={company.websiteUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549]"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733]"
           >
             Visit website
             <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden />
@@ -280,7 +280,7 @@ function CompanyCard({ company }: { company: DirectoryCompany }) {
         ) : (
           <span />
         )}
-        <span className="text-[10px] font-semibold uppercase tracking-wide text-[#B6BEB9]">
+        <span className="text-[10px] font-semibold uppercase tracking-wide text-[#B3AA98]">
           Verified Member
         </span>
       </div>
@@ -326,30 +326,30 @@ export default function IndustriesClient() {
         <div className={PX}>
           <AnimatedSection>
             <div className="mx-auto max-w-2xl text-center">
-              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549]">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#1E2733]">
                 Fibre to freight
               </p>
-              <h2 className="mt-3 font-heading text-2xl font-extrabold leading-tight text-[#16291E] sm:text-3xl">
+              <h2 className="mt-3 font-heading text-2xl font-extrabold leading-tight text-[#1A1A1A] sm:text-3xl">
                 One of the world&apos;s most complete textile value chains
               </h2>
             </div>
 
             <div className="relative mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-5">
               <div
-                className="absolute left-[10%] right-[10%] top-7 hidden h-px bg-gradient-to-r from-transparent via-[#2F7549]/30 to-transparent md:block"
+                className="absolute left-[10%] right-[10%] top-7 hidden h-px bg-gradient-to-r from-transparent via-[#1E2733]/30 to-transparent md:block"
                 aria-hidden
               />
               {valueChain.map((step, i) => {
                 const Icon = step.icon;
                 return (
                   <div key={step.title} className="relative flex flex-col items-center text-center">
-                    <span className="relative z-[1] inline-flex size-14 items-center justify-center rounded-2xl border border-[#2F7549]/15 bg-white text-[#2F7549] shadow-[0_10px_30px_-12px_rgba(4,120,87,0.4)]">
+                    <span className="relative z-[1] inline-flex size-14 items-center justify-center rounded-2xl border border-[#1E2733]/15 bg-white text-[#1E2733] shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.4)]">
                       <Icon className="size-6" strokeWidth={1.6} aria-hidden />
-                      <span className="absolute -right-1.5 -top-1.5 inline-flex size-5 items-center justify-center rounded-full bg-[#15402A] text-[10px] font-bold text-white">
+                      <span className="absolute -right-1.5 -top-1.5 inline-flex size-5 items-center justify-center rounded-full bg-[#0E1318] text-[10px] font-bold text-white">
                         {i + 1}
                       </span>
                     </span>
-                    <h3 className="mt-4 font-heading text-[15px] font-bold text-[#16291E]">{step.title}</h3>
+                    <h3 className="mt-4 font-heading text-[15px] font-bold text-[#1A1A1A]">{step.title}</h3>
                     <p className="mt-1 text-xs leading-snug text-[#6B7280]">{step.desc}</p>
                   </div>
                 );
@@ -367,7 +367,7 @@ export default function IndustriesClient() {
               label="The textile landscape"
               title="Five sectors, one supply chain"
               body="Pakistan's textile industry spans the full value chain — from yarn and fabric to finished home textiles, apparel, sportswear and healthcare garments — supplying buyers worldwide."
-              color="#2F7549"
+              color="#1E2733"
               hideLine
             />
           </AnimatedSection>
@@ -386,7 +386,7 @@ export default function IndustriesClient() {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: i * 0.06 }}
                   className={cn(
-                    "group relative h-[260px] overflow-hidden rounded-2xl shadow-[0_16px_36px_-18px_rgba(8,19,13,0.45)] sm:h-[280px]",
+                    "group relative h-[260px] overflow-hidden rounded-2xl shadow-[0_16px_36px_-18px_rgba(14, 19, 24,0.45)] sm:h-[280px]",
                     s.span,
                   )}
                 >
@@ -398,8 +398,8 @@ export default function IndustriesClient() {
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   />
                   {/* Gradient + brand tint — darker at the base for text legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#05100A] via-[#05100A]/70 to-[#05100A]/15" />
-                  <div className="absolute inset-0 bg-[#0A1F16]/25 transition-colors duration-300 group-hover:bg-[#0A1F16]/10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090C10] via-[#090C10]/70 to-[#090C10]/15" />
+                  <div className="absolute inset-0 bg-[#0E1318]/25 transition-colors duration-300 group-hover:bg-[#0E1318]/10" />
 
                   {/* Top row: icon + count */}
                   <div className="absolute inset-x-0 top-0 flex items-center justify-between p-5">
@@ -421,7 +421,7 @@ export default function IndustriesClient() {
                     <p className="mt-2 max-w-md text-sm leading-relaxed text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]">
                       {s.tagline}
                     </p>
-                    <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[#8FD3AE]">
+                    <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[#B3AA98]">
                       Explore sector
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
                     </span>
@@ -434,7 +434,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* ── STATS BAND ───────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#15402A] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#0E1318] py-20 lg:py-28">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
@@ -452,7 +452,7 @@ export default function IndustriesClient() {
                   label="A global supplier"
                   title="An industry built for the world's buyers"
                   body="Pakistan supplies retailers, importers, hotel groups and brands across the markets where its textiles are in demand — backed by scale, certifications and the GSP+ duty advantage into the EU."
-                  color="#8FD3AE"
+                  color="#B3AA98"
                   light
                   hideLine
                   bodyClassName="!text-white/90"
@@ -465,7 +465,7 @@ export default function IndustriesClient() {
               <div>
                 <div className="grid grid-cols-2 gap-x-8 gap-y-10">
                   {homeStats.map((stat) => (
-                    <div key={stat.label} className="border-l-2 border-[#3E8F5E]/40 pl-5">
+                    <div key={stat.label} className="border-l-2 border-[#1E2733]/40 pl-5">
                       <p className="mb-2 font-heading text-3xl font-extrabold leading-none text-white sm:text-4xl">
                         {stat.value}
                       </p>
@@ -479,7 +479,7 @@ export default function IndustriesClient() {
                       key={m.name}
                       className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13px] text-white/90"
                     >
-                      <Globe2 className="size-3.5 text-[#8FD3AE]" aria-hidden />
+                      <Globe2 className="size-3.5 text-[#B3AA98]" aria-hidden />
                       {m.name}
                     </span>
                   ))}
@@ -506,10 +506,10 @@ export default function IndustriesClient() {
           </div>
           <div className={cn("relative", PX, "py-16 lg:py-20")}>
             <div className="max-w-xl">
-              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549]">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#1E2733]">
                 Industry Directory
               </p>
-              <h2 className="mt-3 font-heading text-3xl font-extrabold leading-[1.1] text-[#16291E] sm:text-4xl lg:text-[2.8rem]">
+              <h2 className="mt-3 font-heading text-3xl font-extrabold leading-[1.1] text-[#1A1A1A] sm:text-4xl lg:text-[2.8rem]">
                 Companies across the value chain
               </h2>
               <p className="mt-5 max-w-md text-base leading-relaxed text-[#5A5F72]">
@@ -575,7 +575,7 @@ export default function IndustriesClient() {
         {/* Closing band */}
         <div className="bg-white">
           <div className={cn(PX, "pt-2 pb-12 lg:pb-16")}>
-            <div className="relative overflow-hidden rounded-2xl bg-[#15402A] px-7 py-8 sm:px-10">
+            <div className="relative overflow-hidden rounded-2xl bg-[#0E1318] px-7 py-8 sm:px-10">
               <div
                 className="pointer-events-none absolute -right-6 top-1/2 hidden -translate-y-1/2 opacity-[0.18] sm:block"
                 aria-hidden
@@ -592,7 +592,7 @@ export default function IndustriesClient() {
               </div>
               <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="flex items-center gap-5">
-                  <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[#2F7549] shadow-sm">
+                  <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[#1E2733] shadow-sm">
                     <Network className="size-7" strokeWidth={1.6} aria-hidden />
                   </span>
                   <h3 className="font-heading text-xl font-extrabold leading-tight text-white sm:text-2xl">
@@ -627,31 +627,31 @@ export default function IndustriesClient() {
                   label="FAQs"
                   title="About Pakistan's textile industry"
                   body="Common questions about the sectors, standards and companies that make up Pakistan's textile landscape."
-                  color="#2F7549"
+                  color="#1E2733"
                   as="h2"
                   hideLine
                 />
-                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]">
+                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549] text-white">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733] text-white">
                       <HelpCircle className="size-5" aria-hidden />
                     </span>
                     <div>
-                      <p className="text-sm font-bold text-[#16291E]">Still have questions?</p>
+                      <p className="text-sm font-bold text-[#1A1A1A]">Still have questions?</p>
                       <p className="text-xs text-[#5A5F72]">Talk to our team or explore membership.</p>
                     </div>
                   </div>
                   <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
                     <Link
                       href="/contact"
-                      className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549]"
+                      className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733]"
                     >
                       Talk to our team
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
                     </Link>
                     <Link
                       href="/membership"
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5A5F72] hover:text-[#16291E]"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5A5F72] hover:text-[#1A1A1A]"
                     >
                       Explore membership
                     </Link>
@@ -671,8 +671,8 @@ export default function IndustriesClient() {
                       className={cn(
                         "rounded-2xl border transition-colors duration-200",
                         isOpen
-                          ? "border-[#2F7549]/25 bg-[#2F7549]/[0.04] shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]"
-                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(4,120,87,0.12)]",
+                          ? "border-[#1E2733]/25 bg-[#1E2733]/[0.04] shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]"
+                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.12)]",
                       )}
                     >
                       <h3>
@@ -687,19 +687,19 @@ export default function IndustriesClient() {
                           <span
                             className={cn(
                               "inline-flex size-9 shrink-0 items-center justify-center rounded-xl text-sm font-bold tabular-nums transition-colors",
-                              isOpen ? "bg-[#2F7549] text-white" : "bg-[#2F7549]/10 text-[#2F7549]",
+                              isOpen ? "bg-[#1E2733] text-white" : "bg-[#1E2733]/10 text-[#1E2733]",
                             )}
                             aria-hidden
                           >
                             {String(i + 1).padStart(2, "0")}
                           </span>
 
-                          <span className="flex-1 text-sm font-medium text-[#16291E]">{item.q}</span>
+                          <span className="flex-1 text-sm font-medium text-[#1A1A1A]">{item.q}</span>
 
                           <span
                             className={cn(
                               "inline-flex size-8 shrink-0 items-center justify-center rounded-full transition-colors",
-                              isOpen ? "bg-[#2F7549] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
+                              isOpen ? "bg-[#1E2733] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
                             )}
                             aria-hidden
                           >
@@ -749,8 +749,8 @@ function FilterTab({
       className={cn(
         "rounded-full border px-5 py-2 text-sm font-semibold transition-all duration-200",
         active
-          ? "border-[#15402A] bg-[#15402A] text-white shadow-sm"
-          : "border-[#D8E0DB] bg-white text-[#16291E] hover:border-[#2F7549]/50 hover:text-[#2F7549]",
+          ? "border-[#0E1318] bg-[#0E1318] text-white shadow-sm"
+          : "border-[#ECE5D8] bg-white text-[#1A1A1A] hover:border-[#1E2733]/50 hover:text-[#1E2733]",
       )}
     >
       {label}
@@ -777,27 +777,27 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
       {/* Header row */}
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#2F7549]/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#2F7549]">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1E2733]/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#1E2733]">
             <Star className="size-3.5 fill-current" aria-hidden />
             {count} Featured {count === 1 ? "Company" : "Companies"}
           </span>
-          <h2 className="mt-4 font-heading text-2xl font-extrabold leading-tight text-[#16291E] sm:text-3xl lg:text-[2.3rem]">
+          <h2 className="mt-4 font-heading text-2xl font-extrabold leading-tight text-[#1A1A1A] sm:text-3xl lg:text-[2.3rem]">
             Editorial picks — Pakistan&apos;s textile leaders
           </h2>
         </div>
 
         {count > 1 && (
           <div className="flex items-center gap-5">
-            <span className="font-heading text-sm font-bold tabular-nums text-[#16291E]">
+            <span className="font-heading text-sm font-bold tabular-nums text-[#1A1A1A]">
               {String(idx + 1).padStart(2, "0")}{" "}
-              <span className="text-[#B6BEB9]">/ {String(count).padStart(2, "0")}</span>
+              <span className="text-[#B3AA98]">/ {String(count).padStart(2, "0")}</span>
             </span>
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => go(idx - 1)}
                 aria-label="Previous featured company"
-                className="inline-flex size-11 items-center justify-center rounded-full border border-[#D8E0DB] text-[#16291E] transition-colors hover:border-[#2F7549] hover:text-[#2F7549]"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-[#ECE5D8] text-[#1A1A1A] transition-colors hover:border-[#1E2733] hover:text-[#1E2733]"
               >
                 <ChevronLeft className="size-5" aria-hidden />
               </button>
@@ -805,7 +805,7 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
                 type="button"
                 onClick={() => go(idx + 1)}
                 aria-label="Next featured company"
-                className="inline-flex size-11 items-center justify-center rounded-full border border-[#D8E0DB] text-[#16291E] transition-colors hover:border-[#2F7549] hover:text-[#2F7549]"
+                className="inline-flex size-11 items-center justify-center rounded-full border border-[#ECE5D8] text-[#1A1A1A] transition-colors hover:border-[#1E2733] hover:text-[#1E2733]"
               >
                 <ChevronRight className="size-5" aria-hidden />
               </button>
@@ -815,7 +815,7 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
       </div>
 
       {/* Card — dark-green brand panel with dot texture */}
-      <div className="relative mt-8 overflow-hidden rounded-3xl bg-[#15402A] shadow-[0_30px_60px_-30px_rgba(8,19,13,0.55)]">
+      <div className="relative mt-8 overflow-hidden rounded-3xl bg-[#0E1318] shadow-[0_30px_60px_-30px_rgba(14, 19, 24,0.55)]">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
@@ -854,11 +854,11 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
                   ))}
                 </div>
               ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-[#15402A] to-[#2F7549]" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0E1318] to-[#1E2733]" />
               )}
 
               {/* legibility scrim */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#04130B] via-[#04130B]/45 to-[#04130B]/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090C10] via-[#090C10]/45 to-[#090C10]/10" />
 
               {/* overlay content */}
               <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-7">
@@ -892,15 +892,15 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
             {/* Right — details on the dark-green field */}
             <div className="relative flex flex-col p-7 lg:p-10">
               <p className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-white/90">
-                <MapPin className="size-4 text-[#8FD3AE]" aria-hidden />
+                <MapPin className="size-4 text-[#B3AA98]" aria-hidden />
                 {company.location}
               </p>
-              <Quote className="mt-6 size-8 text-[#8FD3AE]/40" aria-hidden />
+              <Quote className="mt-6 size-8 text-[#B3AA98]/40" aria-hidden />
               <p className="mt-3 font-heading text-lg font-semibold leading-relaxed text-white sm:text-xl">
                 {company.description}
               </p>
 
-              <p className="mt-7 text-xs font-bold uppercase tracking-[0.18em] text-[#8FD3AE]">
+              <p className="mt-7 text-xs font-bold uppercase tracking-[0.18em] text-[#B3AA98]">
                 What they deliver
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -921,7 +921,7 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
                       href={company.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#15402A] transition-colors hover:bg-[#8FD3AE]"
+                      className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#0E1318] transition-colors hover:bg-[#B3AA98]"
                     >
                       Visit website
                       <ExternalLink className="size-4" aria-hidden />
@@ -936,7 +936,7 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
                   </Link>
                 </div>
                 {company.verified && (
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#8FD3AE]">
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#B3AA98]">
                     <BadgeCheck className="size-4" aria-hidden />
                     Verified Member
                   </span>
@@ -958,7 +958,7 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
               aria-label={`Show ${c.name}`}
               className={cn(
                 "h-1 rounded-full transition-all duration-300",
-                i === idx ? "w-10 bg-[#15402A]" : "w-5 bg-[#D8E0DB] hover:bg-[#B6BEB9]",
+                i === idx ? "w-10 bg-[#0E1318]" : "w-5 bg-[#ECE5D8] hover:bg-[#B3AA98]",
               )}
             />
           ))}

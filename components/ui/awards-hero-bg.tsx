@@ -35,7 +35,7 @@ export function AwardsHeroBg() {
       <motion.div
         className="absolute top-[10%] right-[15%] w-[500px] h-[500px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(234,179,8,0.08) 0%, transparent 60%)",
+          background: "radial-gradient(circle, rgba(179, 170, 152,0.08) 0%, transparent 60%)",
           filter: "blur(60px)",
         }}
         {...(shouldReduceMotion ? {} : {
@@ -46,7 +46,7 @@ export function AwardsHeroBg() {
       <motion.div
         className="absolute bottom-[5%] left-[20%] w-[400px] h-[400px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(4,120,87,0.06) 0%, transparent 60%)",
+          background: "radial-gradient(circle, rgba(60, 74, 90,0.06) 0%, transparent 60%)",
           filter: "blur(50px)",
         }}
         {...(shouldReduceMotion ? {} : {
@@ -110,7 +110,7 @@ export function AwardsHeroBg() {
                     cy={y + 20}
                     rx="18"
                     ry="10"
-                    fill="#3E8F5E"
+                    fill="#1E2733"
                     opacity="0.15"
                     transform={`rotate(${-30 + i * 8} ${80 - curve} ${y + 20})`}
                   />
@@ -119,7 +119,7 @@ export function AwardsHeroBg() {
                     cy={y + 20}
                     rx="14"
                     ry="7"
-                    fill="#3E8F5E"
+                    fill="#1E2733"
                     opacity="0.08"
                     transform={`rotate(${-25 + i * 8} ${80 - curve + 5} ${y + 20})`}
                   />
@@ -130,7 +130,7 @@ export function AwardsHeroBg() {
             <path
               d="M80 20 Q50 180 80 340"
               fill="none"
-              stroke="#3E8F5E"
+              stroke="#1E2733"
               strokeWidth="2"
               opacity="0.12"
             />
@@ -150,7 +150,7 @@ export function AwardsHeroBg() {
                     cy={y + 20}
                     rx="18"
                     ry="10"
-                    fill="#3E8F5E"
+                    fill="#1E2733"
                     opacity="0.15"
                     transform={`rotate(${30 - i * 8} ${20 + curve} ${y + 20})`}
                   />
@@ -159,7 +159,7 @@ export function AwardsHeroBg() {
                     cy={y + 20}
                     rx="14"
                     ry="7"
-                    fill="#3E8F5E"
+                    fill="#1E2733"
                     opacity="0.08"
                     transform={`rotate(${25 - i * 8} ${20 + curve - 5} ${y + 20})`}
                   />
@@ -169,7 +169,7 @@ export function AwardsHeroBg() {
             <path
               d="M20 20 Q50 180 20 340"
               fill="none"
-              stroke="#3E8F5E"
+              stroke="#1E2733"
               strokeWidth="2"
               opacity="0.12"
             />
@@ -178,18 +178,18 @@ export function AwardsHeroBg() {
 
         {/* ── Scattered stars ── */}
         {[
-          { x: 200, y: 80, size: 14, delay: 0, color: "#EAB308" },
-          { x: 1300, y: 100, size: 12, delay: 0.5, color: "#EAB308" },
-          { x: 400, y: 500, size: 10, delay: 1, color: "#2F7549" },
-          { x: 1100, y: 480, size: 12, delay: 1.5, color: "#EAB308" },
-          { x: 680, y: 60, size: 8, delay: 0.8, color: "#2F7549" },
-          { x: 300, y: 300, size: 10, delay: 2, color: "#2F7549" },
-          { x: 1250, y: 340, size: 8, delay: 1.2, color: "#3E8F5E" },
-          { x: 550, y: 520, size: 10, delay: 0.3, color: "#EAB308" },
-          { x: 150, y: 450, size: 6, delay: 1.8, color: "#2F7549" },
-          { x: 1350, y: 200, size: 8, delay: 0.6, color: "#EAB308" },
-          { x: 750, y: 540, size: 7, delay: 2.2, color: "#2F7549" },
-          { x: 480, y: 120, size: 6, delay: 1.6, color: "#3E8F5E" },
+          { x: 200, y: 80, size: 14, delay: 0, color: "#B3AA98" },
+          { x: 1300, y: 100, size: 12, delay: 0.5, color: "#B3AA98" },
+          { x: 400, y: 500, size: 10, delay: 1, color: "#1E2733" },
+          { x: 1100, y: 480, size: 12, delay: 1.5, color: "#B3AA98" },
+          { x: 680, y: 60, size: 8, delay: 0.8, color: "#1E2733" },
+          { x: 300, y: 300, size: 10, delay: 2, color: "#1E2733" },
+          { x: 1250, y: 340, size: 8, delay: 1.2, color: "#1E2733" },
+          { x: 550, y: 520, size: 10, delay: 0.3, color: "#B3AA98" },
+          { x: 150, y: 450, size: 6, delay: 1.8, color: "#1E2733" },
+          { x: 1350, y: 200, size: 8, delay: 0.6, color: "#B3AA98" },
+          { x: 750, y: 540, size: 7, delay: 2.2, color: "#1E2733" },
+          { x: 480, y: 120, size: 6, delay: 1.6, color: "#1E2733" },
         ].map((star, i) => {
           const s = star.size;
           const path = `M${star.x} ${star.y - s} L${star.x + s * 0.38} ${star.y - s * 0.3} L${star.x + s} ${star.y - s * 0.2} L${star.x + s * 0.5} ${star.y + s * 0.2} L${star.x + s * 0.62} ${star.y + s} L${star.x} ${star.y + s * 0.55} L${star.x - s * 0.62} ${star.y + s} L${star.x - s * 0.5} ${star.y + s * 0.2} L${star.x - s} ${star.y - s * 0.2} L${star.x - s * 0.38} ${star.y - s * 0.3} Z`;
@@ -204,31 +204,31 @@ export function AwardsHeroBg() {
         })}
 
         {/* ── Diagonal ribbon lines ── */}
-        <motion.line x1="0" y1="0" x2="300" y2="600" stroke="#EAB308" strokeWidth="1" opacity="0.04" {...shimmer(0.5, 5)} />
-        <motion.line x1="50" y1="0" x2="350" y2="600" stroke="#EAB308" strokeWidth="0.5" opacity="0.03" {...shimmer(1, 5)} />
-        <motion.line x1="1440" y1="0" x2="1140" y2="600" stroke="#EAB308" strokeWidth="1" opacity="0.04" {...shimmer(1.5, 5)} />
-        <motion.line x1="1390" y1="0" x2="1090" y2="600" stroke="#EAB308" strokeWidth="0.5" opacity="0.03" {...shimmer(2, 5)} />
+        <motion.line x1="0" y1="0" x2="300" y2="600" stroke="#B3AA98" strokeWidth="1" opacity="0.04" {...shimmer(0.5, 5)} />
+        <motion.line x1="50" y1="0" x2="350" y2="600" stroke="#B3AA98" strokeWidth="0.5" opacity="0.03" {...shimmer(1, 5)} />
+        <motion.line x1="1440" y1="0" x2="1140" y2="600" stroke="#B3AA98" strokeWidth="1" opacity="0.04" {...shimmer(1.5, 5)} />
+        <motion.line x1="1390" y1="0" x2="1090" y2="600" stroke="#B3AA98" strokeWidth="0.5" opacity="0.03" {...shimmer(2, 5)} />
 
         {/* ── Medal circles ── */}
         <motion.g {...float(1, 5)}>
-          <circle cx="200" cy="180" r="35" fill="none" stroke="#EAB308" strokeWidth="1.5" opacity="0.08" />
-          <circle cx="200" cy="180" r="28" fill="none" stroke="#EAB308" strokeWidth="1" opacity="0.06" />
+          <circle cx="200" cy="180" r="35" fill="none" stroke="#B3AA98" strokeWidth="1.5" opacity="0.08" />
+          <circle cx="200" cy="180" r="28" fill="none" stroke="#B3AA98" strokeWidth="1" opacity="0.06" />
           {/* Ribbon */}
-          <path d="M180 148 L175 120 M220 148 L225 120" stroke="#2F7549" strokeWidth="1.5" opacity="0.08" />
+          <path d="M180 148 L175 120 M220 148 L225 120" stroke="#1E2733" strokeWidth="1.5" opacity="0.08" />
         </motion.g>
 
         <motion.g {...float(2, 5.5)}>
-          <circle cx="1280" cy="420" r="30" fill="none" stroke="#EAB308" strokeWidth="1.5" opacity="0.08" />
-          <circle cx="1280" cy="420" r="24" fill="none" stroke="#EAB308" strokeWidth="1" opacity="0.06" />
-          <path d="M1262 394 L1258 370 M1298 394 L1302 370" stroke="#2F7549" strokeWidth="1.5" opacity="0.08" />
+          <circle cx="1280" cy="420" r="30" fill="none" stroke="#B3AA98" strokeWidth="1.5" opacity="0.08" />
+          <circle cx="1280" cy="420" r="24" fill="none" stroke="#B3AA98" strokeWidth="1" opacity="0.06" />
+          <path d="M1262 394 L1258 370 M1298 394 L1302 370" stroke="#1E2733" strokeWidth="1.5" opacity="0.08" />
         </motion.g>
 
         {/* Gradient definitions */}
         <defs>
           <linearGradient id="trophyGold" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#EAB308" />
-            <stop offset="50%" stopColor="#F59E0B" />
-            <stop offset="100%" stopColor="#D97706" />
+            <stop offset="0%" stopColor="#B3AA98" />
+            <stop offset="50%" stopColor="#8A857C" />
+            <stop offset="100%" stopColor="#5C6B7E" />
           </linearGradient>
         </defs>
       </svg>

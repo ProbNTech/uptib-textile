@@ -99,7 +99,7 @@ const process = [
 /* ── Small reusable bits ─────────────────────────────────────────── */
 function Eyebrow({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) {
   return (
-    <p className={`mb-3 text-[12px] font-bold uppercase tracking-[0.2em] ${dark ? "text-[#8FD3AE]" : "text-[#2F7549]"}`}>
+    <p className={`mb-3 text-[12px] font-bold uppercase tracking-[0.2em] ${dark ? "text-[#B3AA98]" : "text-[#1E2733]"}`}>
       {children}
     </p>
   );
@@ -110,13 +110,13 @@ function Collage({ images }: { images: { src: string; alt: string }[] }) {
   return (
     <div className="relative aspect-[5/4] w-full">
       {/* Soft brand glow behind */}
-      <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-[#3E8F5E]/10 blur-2xl" />
+      <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-[#1E2733]/10 blur-2xl" />
       {/* Back image */}
-      <div className="absolute right-0 top-0 h-[72%] w-[68%] overflow-hidden rounded-[1.5rem] shadow-lg ring-1 ring-[#16291E]/10">
+      <div className="absolute right-0 top-0 h-[72%] w-[68%] overflow-hidden rounded-[1.5rem] shadow-lg ring-1 ring-[#1A1A1A]/10">
         <Image src={images[0].src} alt={images[0].alt} fill className="object-cover" sizes="40vw" />
       </div>
       {/* Front image, overlapping lower-left */}
-      <div className="absolute bottom-0 left-0 h-[64%] w-[56%] overflow-hidden rounded-[1.5rem] border-4 border-white shadow-[0_24px_50px_-20px_rgba(11,20,16,0.5)]">
+      <div className="absolute bottom-0 left-0 h-[64%] w-[56%] overflow-hidden rounded-[1.5rem] border-4 border-white shadow-[0_24px_50px_-20px_rgba(14, 19, 24,0.5)]">
         <Image src={images[1].src} alt={images[1].alt} fill className="object-cover" sizes="32vw" />
       </div>
     </div>
@@ -132,11 +132,11 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Left — copy */}
             <AnimatedSection animation="slide-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3E8F5E]/30 bg-[#3E8F5E]/10 px-4 py-1.5">
-                <Globe2 className="h-4 w-4 text-[#2F7549]" strokeWidth={1.8} />
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#2F7549]">About Us</span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#1E2733]/30 bg-[#1E2733]/10 px-4 py-1.5">
+                <Globe2 className="h-4 w-4 text-[#1E2733]" strokeWidth={1.8} />
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#1E2733]">About Us</span>
               </div>
-              <h1 className="mt-5 font-heading text-[2.4rem] font-extrabold leading-[1.1] tracking-tight text-[#16291E] sm:text-[3rem] lg:text-[3.4rem]">
+              <h1 className="mt-5 font-heading text-[2.4rem] font-extrabold leading-[1.1] tracking-tight text-[#1A1A1A] sm:text-[3rem] lg:text-[3.4rem]">
                 Bridging Pakistan&rsquo;s textiles to the world
               </h1>
               <p className="mt-6 max-w-xl text-[16px] leading-[1.85] text-[#4B5563]">
@@ -154,7 +154,7 @@ export default function AboutPage() {
             {/* Right — image with rotating seal */}
             <AnimatedSection animation="slide-right" delay={0.1}>
               <div className="relative mx-auto max-w-[420px]">
-                <div className="relative aspect-square overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(11,20,16,0.5)] ring-1 ring-[#16291E]/10">
+                <div className="relative aspect-square overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(14, 19, 24,0.5)] ring-1 ring-[#1A1A1A]/10">
                   <Image
                     src="/image/about/hero-bedlinen.jpg"
                     alt="Premium bed linen styled with soft pillows and a draped duvet"
@@ -163,23 +163,23 @@ export default function AboutPage() {
                     className="object-cover"
                     sizes="(min-width: 1024px) 40vw, 90vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1410]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0E1318]/20 to-transparent" />
                 </div>
 
                 {/* Rotating brand seal */}
-                <div className="absolute -bottom-7 -left-7 flex h-32 w-32 items-center justify-center rounded-full bg-white shadow-xl ring-1 ring-[#16291E]/10 sm:h-36 sm:w-36">
+                <div className="absolute -bottom-7 -left-7 flex h-32 w-32 items-center justify-center rounded-full bg-white shadow-xl ring-1 ring-[#1A1A1A]/10 sm:h-36 sm:w-36">
                   <svg viewBox="0 0 200 200" className="h-full w-full animate-spin [animation-duration:22s]">
                     <defs>
                       <path id="sealPath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
                     </defs>
-                    <text fill="#2F7549" fontSize="14.5" fontWeight="700" letterSpacing="3.5">
+                    <text fill="#1E2733" fontSize="14.5" fontWeight="700" letterSpacing="3.5">
                       <textPath href="#sealPath" startOffset="0%">
                         PAKISTAN TEXTILE PARTNERS · TRUSTED ·
                       </textPath>
                     </text>
                   </svg>
-                  <div className="absolute flex h-14 w-14 items-center justify-center rounded-full bg-[#16291E] sm:h-16 sm:w-16">
-                    <Globe2 className="h-7 w-7 text-[#8FD3AE]" strokeWidth={1.6} />
+                  <div className="absolute flex h-14 w-14 items-center justify-center rounded-full bg-[#1A1A1A] sm:h-16 sm:w-16">
+                    <Globe2 className="h-7 w-7 text-[#B3AA98]" strokeWidth={1.6} />
                   </div>
                 </div>
               </div>
@@ -189,23 +189,23 @@ export default function AboutPage() {
       </section>
 
       {/* ── 2. CENTERED STATEMENT ──────────────────────────────────── */}
-      <section className="bg-white">
+      <section className="bg-[#F6F2EA]">
         <Container className="py-16 lg:py-24">
           <AnimatedSection className="mx-auto max-w-4xl text-center">
             <Eyebrow>Who we are</Eyebrow>
-            <p className="font-heading text-[1.6rem] font-bold leading-[1.45] text-[#16291E] sm:text-[2rem] sm:leading-[1.4]">
+            <p className="font-heading text-[1.6rem] font-bold leading-[1.45] text-[#1A1A1A] sm:text-[2rem] sm:leading-[1.4]">
               Pakistan is one of the world&rsquo;s top-ten textile exporters and a global leader in{" "}
-              <span className="text-[#2F7549]">cotton and home textiles</span>. We make that capability{" "}
-              <span className="text-[#3E8F5E]">visible, credible and reachable</span> &mdash; helping
+              <span className="text-[#1E2733]">cotton and home textiles</span>. We make that capability{" "}
+              <span className="text-[#1E2733]">visible, credible and reachable</span> &mdash; helping
               buyers source dependable product on-spec and on-time, and helping Pakistani exporters{" "}
-              <span className="text-[#2F7549]">reach markets worldwide</span>.
+              <span className="text-[#1E2733]">reach markets worldwide</span>.
             </p>
           </AnimatedSection>
         </Container>
       </section>
 
       {/* ── 3. STATS BAND — primary deep green ─────────────────────── */}
-      <section className="relative overflow-hidden bg-[#15402A]">
+      <section className="relative overflow-hidden bg-[#0E1318]">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -223,7 +223,7 @@ export default function AboutPage() {
                 delay={i * 0.08}
                 className={`px-4 text-center ${i !== 0 ? "lg:border-l lg:border-white/15" : ""}`}
               >
-                <p className="font-heading text-3xl font-extrabold text-[#8FD3AE] sm:text-[2.6rem] sm:leading-tight">
+                <p className="font-heading text-3xl font-extrabold text-[#B3AA98] sm:text-[2.6rem] sm:leading-tight">
                   {stat.value}
                 </p>
                 <p className="mx-auto mt-3 max-w-[15rem] text-[13.5px] leading-[1.6] text-white/70">
@@ -243,7 +243,7 @@ export default function AboutPage() {
           <section
             key={p.id}
             id={p.id}
-            className={p.dark ? "relative overflow-hidden bg-[#15402A]" : "bg-white"}
+            className={p.dark ? "relative overflow-hidden bg-[#0E1318]" : "bg-white"}
           >
             {p.dark && (
               <div
@@ -274,14 +274,14 @@ export default function AboutPage() {
                   <div className="mb-5 flex items-center gap-3">
                     <span
                       className={`flex h-11 w-11 items-center justify-center rounded-xl ring-1 ${
-                        p.dark ? "bg-white/10 ring-white/20" : "bg-[#2F7549]/10 ring-[#2F7549]/20"
+                        p.dark ? "bg-white/10 ring-white/20" : "bg-[#1E2733]/10 ring-[#1E2733]/20"
                       }`}
                     >
-                      <Icon className={`h-5 w-5 ${p.dark ? "text-[#8FD3AE]" : "text-[#2F7549]"}`} strokeWidth={1.7} />
+                      <Icon className={`h-5 w-5 ${p.dark ? "text-[#B3AA98]" : "text-[#1E2733]"}`} strokeWidth={1.7} />
                     </span>
                     <Eyebrow dark={p.dark}>{p.eyebrow}</Eyebrow>
                   </div>
-                  <h2 className={`font-heading text-[1.7rem] font-bold leading-[1.25] sm:text-[2rem] ${p.dark ? "text-white" : "text-[#16291E]"}`}>
+                  <h2 className={`font-heading text-[1.7rem] font-bold leading-[1.25] sm:text-[2rem] ${p.dark ? "text-white" : "text-[#1A1A1A]"}`}>
                     {p.title}
                   </h2>
                   <p className={`mt-5 text-[15.5px] leading-[1.85] ${p.dark ? "text-white/75" : "text-[#4B5563]"}`}>
@@ -290,7 +290,7 @@ export default function AboutPage() {
                   <ul className="mt-7 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
                     {p.points.map((point) => (
                       <li key={point} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#3E8F5E]" strokeWidth={2} />
+                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#1E2733]" strokeWidth={2} />
                         <span className={`text-[14.5px] leading-[1.6] ${p.dark ? "text-white/85" : "text-[#3D4152]"}`}>
                           {point}
                         </span>
@@ -309,7 +309,7 @@ export default function AboutPage() {
         <Container className="py-16 lg:py-24">
           <AnimatedSection className="mx-auto mb-12 max-w-2xl text-center">
             <Eyebrow>How we work</Eyebrow>
-            <h2 className="font-heading text-[1.9rem] font-bold leading-[1.2] text-[#16291E] sm:text-[2.4rem]">
+            <h2 className="font-heading text-[1.9rem] font-bold leading-[1.2] text-[#1A1A1A] sm:text-[2.4rem]">
               One accountable partner, from mill to door
             </h2>
             <p className="mt-4 text-[15.5px] leading-[1.8] text-[#5A5F72]">
@@ -329,13 +329,13 @@ export default function AboutPage() {
               const StepIcon = step.icon;
               return (
                 <AnimatedSection key={step.title} delay={i * 0.08} className="text-center">
-                  <div className="relative mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#16291E] text-white shadow-lg">
-                    <StepIcon className="h-6 w-6 text-[#8FD3AE]" strokeWidth={1.6} />
-                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#2F7549] text-[11px] font-bold text-white">
+                  <div className="relative mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1A1A1A] text-white shadow-lg">
+                    <StepIcon className="h-6 w-6 text-[#B3AA98]" strokeWidth={1.6} />
+                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#1E2733] text-[11px] font-bold text-white">
                       {i + 1}
                     </span>
                   </div>
-                  <h3 className="font-heading text-[1.05rem] font-semibold text-[#16291E]">{step.title}</h3>
+                  <h3 className="font-heading text-[1.05rem] font-semibold text-[#1A1A1A]">{step.title}</h3>
                   <p className="mx-auto mt-2 max-w-[14rem] text-[14px] leading-[1.6] text-[#5A5F72]">
                     {step.desc}
                   </p>
@@ -349,11 +349,11 @@ export default function AboutPage() {
       {/* ── 8. BOARD OF ADVISORS (shared with home) + offices ──────── */}
       <BoardOfAdvisors dark />
 
-      <section className="bg-white pt-16 pb-16 lg:pt-24 lg:pb-24">
+      <section className="bg-[#F6F2EA] pt-16 pb-16 lg:pt-24 lg:pb-24">
         <Container>
           <AnimatedSection className="mx-auto mb-10 max-w-2xl text-center">
             <Eyebrow>Where we are</Eyebrow>
-            <h2 className="font-heading text-[1.6rem] font-bold leading-[1.2] text-[#16291E] sm:text-[2rem]">
+            <h2 className="font-heading text-[1.6rem] font-bold leading-[1.2] text-[#1A1A1A] sm:text-[2rem]">
               Offices in the UK and Pakistan
             </h2>
           </AnimatedSection>
@@ -362,17 +362,17 @@ export default function AboutPage() {
               <AnimatedSection key={office.label} delay={i * 0.08}>
                 <div className="h-full rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
                   <div className="flex items-start gap-4">
-                    <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#EEF6F0] ring-1 ring-[#D7EADD]">
-                      <MapPin className="h-5 w-5 text-[#2F7549]" strokeWidth={1.7} />
+                    <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#F6F2EA] ring-1 ring-[#ECE5D8]">
+                      <MapPin className="h-5 w-5 text-[#1E2733]" strokeWidth={1.7} />
                     </span>
                     <div>
-                      <h3 className="font-heading text-[1.05rem] font-semibold text-[#16291E]">{office.label}</h3>
+                      <h3 className="font-heading text-[1.05rem] font-semibold text-[#1A1A1A]">{office.label}</h3>
                       <p className="mt-1.5 text-[14.5px] leading-[1.65] text-[#3D4152]">{office.address}</p>
                       <a
                         href={office.phoneHref}
-                        className="mt-3 inline-flex items-center gap-2 text-[14.5px] font-medium text-[#3D4152] transition-colors hover:text-[#2F7549]"
+                        className="mt-3 inline-flex items-center gap-2 text-[14.5px] font-medium text-[#3D4152] transition-colors hover:text-[#1E2733]"
                       >
-                        <Phone className="h-4 w-4 flex-shrink-0 text-[#2F7549]" strokeWidth={1.7} />
+                        <Phone className="h-4 w-4 flex-shrink-0 text-[#1E2733]" strokeWidth={1.7} />
                         {office.phone}
                       </a>
                     </div>

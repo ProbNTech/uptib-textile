@@ -4,9 +4,9 @@ import { ReactNode, useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 
 const bannerThemes = {
-  blue: { bg: "linear-gradient(135deg, #15402A 0%, #15402A 100%)", accent: "#3C8F5E", accentTo: "#15402A", label: "#8FD3AE" },
-  red: { bg: "linear-gradient(135deg, #2F7549 0%, #8b1525 100%)", accent: "#E74C5E", accentTo: "#2F7549", label: "#F9A8B4" },
-  green: { bg: "linear-gradient(135deg, #15803d 0%, #3E8F5E 100%)", accent: "#22c55e", accentTo: "#15803d", label: "#86efac" },
+  blue: { bg: "linear-gradient(135deg, #0E1318 0%, #0E1318 100%)", accent: "#2A3542", accentTo: "#0E1318", label: "#B3AA98" },
+  red: { bg: "linear-gradient(135deg, #1E2733 0%, #1E2733 100%)", accent: "#3C4A5A", accentTo: "#1E2733", label: "#B3AA98" },
+  green: { bg: "linear-gradient(135deg, #3C4A5A 0%, #1E2733 100%)", accent: "#8A857C", accentTo: "#3C4A5A", label: "#D8CDBA" },
 };
 
 interface SectionHeaderProps {

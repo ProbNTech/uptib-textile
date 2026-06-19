@@ -14,51 +14,54 @@
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
 
-    /* ─── Pakistan Textile Partners palette — natural green primary, soft & professional ─── */
-    /* GREEN — PRIMARY brand scale (from logo waves), natural & soft */
-    --green-50:  #EEF6F0;
-    --green-100: #D7EADD;
-    --green-200: #B3D7C0;
-    --green-500: #4FA873;  /* bright accent — icons, highlights */
-    --green-600: #3C8F5E;  /* accent fill / large CTA */
-    --green-700: #2F7549;  /* ★ PRIMARY — links, key buttons (AA on white) */
-    --green-800: #245C3A;  /* hover/active */
-    --green-900: #15402A;  /* dark sections, footer, overlays */
+    /* ─── Pakistan Textile Partners palette — heritage editorial (Peter Reed inspired) ─── */
+    /* INK — PRIMARY scale: deep charcoal/navy on warm ivory. Variable names kept as */
+    /* --green-* / --blue-* for backwards compatibility; values are now the ink scale. */
+    --green-50:  #F6F2EA;  /* warm ivory tint — soft section washes, badges */
+    --green-100: #ECE5D8;  /* warm greige tint */
+    --green-200: #D8CDBA;  /* taupe */
+    --green-500: #3C4A5A;  /* slate — icons, highlights */
+    --green-600: #2A3542;  /* accent fill / large CTA */
+    --green-700: #1E2733;  /* ★ PRIMARY — links, key buttons (AA on ivory) */
+    --green-800: #141B24;  /* hover/active */
+    --green-900: #0E1318;  /* dark sections, footer, overlays */
 
-    /* BLUE — minor accent only (from logo emblem); never the lead */
-    --blue-500: #3A6BA5;
-    --blue-700: #2A5689;
+    /* Secondary slate — folds the old logo-blue accent into the charcoal scheme */
+    --blue-500: #3C4A5A;
+    --blue-700: #2A3542;
 
-    /* Backgrounds — soft, light, gentle */
+    /* Backgrounds — crisp white + warm ivory/cream section washes (editorial luxury) */
+    /* Two co-equal base colours: white (--bg-default) and cream (--cream/--bg-alt). */
     --bg-default: #FFFFFF;
-    --bg-alt: #FFFFFF;     /* unified to white — no tinted section washes */
+    --cream: #F6F2EA;      /* ★ SECOND base — soft ivory cream (alternating sections) */
+    --bg-alt: #F6F2EA;     /* alternating section wash = cream */
     --bg-white: #FFFFFF;
-    --bg-tint: #FFFFFF;    /* unified to white — no tinted section washes */
+    --bg-tint: #F2EDE3;    /* deeper cream tint — cards, callouts */
 
-    /* Neutral text — soft green-charcoal headings, warm slate body */
-    --text-primary: #16291E;   /* soft green-charcoal ink (not harsh black) */
-    --text-secondary: #46554D;
-    --text-muted: #79857C;
+    /* Neutral text — charcoal ink headings, warm slate body */
+    --text-primary: #1A1A1A;   /* charcoal ink */
+    --text-secondary: #4A4A46; /* warm slate body */
+    --text-muted: #8A857C;     /* warm taupe-grey */
     --text-on-dark: #FFFFFF;
 
-    /* Divider / rule color — soft warm grey */
-    --rule-color: #DCE2DC;
-    --border-default: #E6ECE7;
-    --border-subtle: #E6ECE7;
+    /* Divider / rule color — warm greige */
+    --rule-color: #E5DFD3;
+    --border-default: #E8E2D6;
+    --border-subtle: #EFEAE0;
 
-    /* Brand colors — green primary + green accent */
-    --primary: #2F7549;          /* green-700 */
-    --primary-hover: #245C3A;    /* green-800 */
+    /* Brand colors — charcoal/navy primary */
+    --primary: #1E2733;          /* ink-700 */
+    --primary-hover: #141B24;    /* ink-800 */
     --primary-foreground: #FFFFFF;
-    --accent-green: #3E8F5E;     /* green accent */
-    --accent-green-hover: #2F7549; /* green-700 */
+    --accent-green: #1E2733;     /* ink accent (name kept for compatibility) */
+    --accent-green-hover: #141B24;
 
-    /* Editorial accent label — brand green */
-    --accent-label: #2F7549;
+    /* Editorial accent label — charcoal ink */
+    --accent-label: #1E2733;
 
-    /* Dark section background — deep green */
-    --bg-dark: #15402A;
-    --bg-dark-alt: #0E2E1E;
+    /* Dark section background — deep ink */
+    --bg-dark: #0E1318;
+    --bg-dark-alt: #090C10;
 
     /* Layout */
     --container-width: 1200px;
@@ -78,8 +81,8 @@
     --shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
     --shadow-xl: 0 16px 40px rgba(0,0,0,0.12);
     --shadow-2xl: 0 25px 50px rgba(0,0,0,0.15);
-    --shadow-glow-primary: 0 0 24px rgba(47,117,73,0.15);
-    --shadow-glow-hover: 0 0 30px rgba(47,117,73,0.32);
+    --shadow-glow-primary: 0 0 24px rgba(30,39,51,0.15);
+    --shadow-glow-hover: 0 0 30px rgba(30,39,51,0.32);
 
     /* Spacing */
     --space-section: 5rem;
@@ -87,9 +90,9 @@
     --space-section-xl: 7rem;
 
     /* ─── Editorial Navbar ─── */
-    --editorial-ink: #16291E;
-    --editorial-crimson: #2F7549; /* re-themed: brand green */
-    --editorial-nav-rule: #15402A;
+    --editorial-ink: #1A1A1A;
+    --editorial-crimson: #1E2733; /* re-themed: charcoal/navy ink */
+    --editorial-nav-rule: #0E1318;
   }
 
   * {
@@ -99,7 +102,7 @@
   html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: #C2D2C5 #EDF3EE;
+    scrollbar-color: #CFC7B7 #F0EDE5;
     overflow-x: hidden;
   }
 
@@ -115,16 +118,16 @@
 
   h1, h2 {
     @apply font-heading;
-    letter-spacing: -0.025em;
-    font-weight: 800;
+    letter-spacing: -0.01em;
+    font-weight: 600;
     color: var(--text-primary);
     line-height: 1.1;
   }
 
   h3, h4, h5, h6 {
     @apply font-heading;
-    letter-spacing: -0.02em;
-    font-weight: 700;
+    letter-spacing: -0.005em;
+    font-weight: 600;
     color: var(--text-primary);
   }
 
@@ -182,6 +185,12 @@
     color: var(--text-primary);
   }
 
+  /* Cream — the second base colour, for alternating section washes */
+  .bg-cream {
+    background-color: var(--cream);
+    color: var(--text-primary);
+  }
+
   .bg-grid-pattern {
     background-image:
       linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
@@ -214,7 +223,7 @@
   }
 
   .text-gradient-brand {
-    background: linear-gradient(135deg, #2F7549, #4FA873);
+    background: linear-gradient(135deg, #1E2733, #3C4A5A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -227,7 +236,7 @@
   }
 
   .animate-gradient-border {
-    background: linear-gradient(90deg, #2F7549, #4FA873, #2F7549);
+    background: linear-gradient(90deg, #1E2733, #3C4A5A, #1E2733);
     background-size: 300% 100%;
     animation: gradient-shift 4s ease infinite;
   }
@@ -254,8 +263,8 @@
 
   /* Pulse glow for interactive elements */
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(47,117,73, 0); }
-    50% { box-shadow: 0 0 20px 4px rgba(47,117,73, 0.1); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(30,39,51, 0); }
+    50% { box-shadow: 0 0 20px 4px rgba(30,39,51, 0.1); }
   }
 
   .animate-pulse-glow {
@@ -268,20 +277,20 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #EDF3EE;
+    background: #F0EDE5;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #C2D2C5;
+    background: #CFC7B7;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #9DB5A2;
+    background: #B3AA98;
   }
 
   ::selection {
-    background-color: rgba(47,117,73, 0.14);
+    background-color: rgba(30,39,51, 0.12);
     color: inherit;
   }
 }
@@ -329,11 +338,11 @@
 }
 
 .shiny-cta {
-  --shiny-cta-bg: #1B4D31;
-  --shiny-cta-bg-subtle: #245C3A;
+  --shiny-cta-bg: #1E2733;
+  --shiny-cta-bg-subtle: #141B24;
   --shiny-cta-fg: #ffffff;
-  --shiny-cta-highlight: #4FA873;
-  --shiny-cta-highlight-subtle: #A9E3C4;
+  --shiny-cta-highlight: #5C6B7E;
+  --shiny-cta-highlight-subtle: #C9CFD6;
   --animation: gradient-angle linear infinite;
   --duration: 3s;
   --shadow-size: 2px;
@@ -495,7 +504,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
-  background: #1B4D31;
+  background: #1E2733;
   border-radius: 9999px;
   border: none;
   color: #ffffff;
@@ -525,13 +534,13 @@
   border-radius: 9999px;
   background: linear-gradient(
     45deg,
-    #2F7549,
-    #2F7549,
-    #4FA873,
-    #2F7549,
-    #2F7549,
-    #4FA873,
-    #2F7549
+    #1E2733,
+    #1E2733,
+    #3C4A5A,
+    #1E2733,
+    #1E2733,
+    #3C4A5A,
+    #1E2733
   );
   background-size: 400%;
   width: calc(100% + 4px);

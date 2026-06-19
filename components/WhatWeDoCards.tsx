@@ -160,7 +160,7 @@ function Card({ item, index }: { item: WhatWeDoItem; index: number }) {
         </div>
 
         {/* ── Title ── */}
-        <h4 className="text-[22px] font-extrabold mb-3 text-[#16291E] tracking-tight leading-tight">
+        <h4 className="text-[22px] font-extrabold mb-3 text-[#1A1A1A] tracking-tight leading-tight">
           {item.title}
         </h4>
 
@@ -222,7 +222,7 @@ export default function WhatWeDoCards({
             </div>
           )}
           {audience && (
-            <h3 className={`font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] leading-[1.15] tracking-tight ${light ? "text-white" : "text-[#16291E]"}`}>
+            <h3 className={`font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] leading-[1.15] tracking-tight ${light ? "text-white" : "text-[#1A1A1A]"}`}>
               For{" "}
               <span style={{ color: accentColor }}>{audience}</span>
             </h3>

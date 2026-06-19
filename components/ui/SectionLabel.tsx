@@ -14,14 +14,14 @@ interface SectionLabelProps {
   bodyClassName?: string;
 }
 
-export function SectionLabel({ label, title, body, color = "#2F7549", align = "left", light = false, as: Tag = "h2", hideLine = false, bodyClassName = "" }: SectionLabelProps) {
+export function SectionLabel({ label, title, body, color = "#1E2733", align = "left", light = false, as: Tag = "h2", hideLine = false, bodyClassName = "" }: SectionLabelProps) {
   const alignClass = align === "center" ? "text-center" : "";
   return (
     <div className={`mb-8 lg:mb-10 ${alignClass}`}>
       <div className="flex items-center gap-3 mb-4" style={align === "center" ? { justifyContent: "center" } : {}}>
         <p className="text-sm font-bold uppercase tracking-[0.22em]" style={{ color }}>{label}</p>
       </div>
-      <Tag className={`font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.8rem] leading-[1.3] ${light ? "text-white" : "text-[#16291E]"}`}>
+      <Tag className={`font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.8rem] leading-[1.3] ${light ? "text-white" : "text-[#1A1A1A]"}`}>
         {title}
       </Tag>
       {body && (

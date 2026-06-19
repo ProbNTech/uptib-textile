@@ -67,12 +67,12 @@ export default function GDPRPage() {
             GDPR compliance requires data subjects to be granted certain rights. What follows is not an
             exhaustive list, but those rights that are relevant to the collection, processing, and storage
             of personal data on{" "}
-            <a href="https://www.ukpaktrade.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#2F7549] underline underline-offset-2">www.ukpaktrade.org.uk</a>.
+            <a href="https://www.ukpaktrade.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#1E2733] underline underline-offset-2">www.ukpaktrade.org.uk</a>.
           </p>
           <div className="space-y-6 pt-2">
             {dataSubjectRights.map((r) => (
               <div key={r.title}>
-                <h3 className="font-heading text-[1.05rem] font-semibold text-[#16291E]">{r.title}</h3>
+                <h3 className="font-heading text-[1.05rem] font-semibold text-[#1A1A1A]">{r.title}</h3>
                 <p className="mt-1.5">{r.desc}</p>
               </div>
             ))}
@@ -87,14 +87,14 @@ export default function GDPRPage() {
           <div className="space-y-6 pt-2">
             {yourRights.map((r) => (
               <div key={r.title}>
-                <h3 className="font-heading text-[1.05rem] font-semibold text-[#16291E]">{r.title}</h3>
+                <h3 className="font-heading text-[1.05rem] font-semibold text-[#1A1A1A]">{r.title}</h3>
                 <p className="mt-1.5">{r.desc}</p>
               </div>
             ))}
           </div>
           <p className="pt-2">
             If you want to exercise any of the above rights, please email us at{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#2F7549] underline underline-offset-2">info@ukpaktrade.org.uk</a>{" "}
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">info@ukpaktrade.org.uk</a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
             further information and/or evidence of identity. We will endeavor to respond fully to all
             requests within 10 working days of your request, however if we are unable to do so we will
@@ -104,7 +104,7 @@ export default function GDPRPage() {
             Please note that exceptions apply to a number of these rights, and not all rights will be
             applicable in all circumstances. For more details we recommend you consult the guidance
             published by the UK’s Information Commissioner’s Office,{" "}
-            <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#2F7549] underline underline-offset-2">https://ico.org.uk</a>.
+            <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#1E2733] underline underline-offset-2">https://ico.org.uk</a>.
           </p>
         </PolicySection>
 
@@ -116,7 +116,7 @@ export default function GDPRPage() {
           <div className="space-y-6 pt-2">
             {lawfulBases.map((b) => (
               <div key={b.title}>
-                <h3 className="font-heading text-[1.05rem] font-semibold text-[#16291E]">{b.title}</h3>
+                <h3 className="font-heading text-[1.05rem] font-semibold text-[#1A1A1A]">{b.title}</h3>
                 <p className="mt-1.5">{b.desc}</p>
               </div>
             ))}
@@ -132,7 +132,7 @@ export default function GDPRPage() {
           <dl className="mt-2 divide-y divide-[#ECECE6] border-y border-[#ECECE6]">
             {retention.map((r) => (
               <div key={r.category} className="grid gap-1 py-4 sm:grid-cols-[230px_minmax(0,1fr)] sm:gap-6">
-                <dt className="font-semibold text-[#16291E]">{r.category}</dt>
+                <dt className="font-semibold text-[#1A1A1A]">{r.category}</dt>
                 <dd>{r.period}</dd>
               </div>
             ))}
@@ -155,7 +155,7 @@ export default function GDPRPage() {
           <p>
             For any questions about this policy or our treatment of your Personal Information, please
             contact{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#2F7549] underline underline-offset-2">info@ukpaktrade.org.uk</a>.
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">info@ukpaktrade.org.uk</a>.
           </p>
         </PolicySection>
       </PolicyDoc>

@@ -187,7 +187,7 @@ export default function PrivacyPage() {
           <dl className="mt-2 divide-y divide-[#ECECE6] border-y border-[#ECECE6]">
             {retention.map((r) => (
               <div key={r.category} className="grid gap-1 py-4 sm:grid-cols-[230px_minmax(0,1fr)] sm:gap-6">
-                <dt className="font-semibold text-[#16291E]">{r.category}</dt>
+                <dt className="font-semibold text-[#1A1A1A]">{r.category}</dt>
                 <dd>{r.period}</dd>
               </div>
             ))}
@@ -229,7 +229,7 @@ export default function PrivacyPage() {
                   "invite you to event(s), trade delegations or exhibitions that we may think are relevant to you in your professional capacity.",
                 ]}
               />
-              <p className="border-l-2 border-[#3E8F5E]/40 pl-5 text-[#5A5F72]">
+              <p className="border-l-2 border-[#1E2733]/40 pl-5 text-[#5A5F72]">
                 When we legitimately process your personal information in this way, we consider and
                 balance any potential impact on you (both positive and negative), and your rights under
                 data protection laws. We will not use your personal information where our interests are
@@ -289,14 +289,14 @@ export default function PrivacyPage() {
           <div className="space-y-6 pt-2">
             {rights.map((r) => (
               <div key={r.title}>
-                <h3 className="font-heading text-[1.05rem] font-semibold text-[#16291E]">{r.title}</h3>
+                <h3 className="font-heading text-[1.05rem] font-semibold text-[#1A1A1A]">{r.title}</h3>
                 <p className="mt-1.5">{r.desc}</p>
               </div>
             ))}
           </div>
           <p className="pt-2">
             If you want to exercise any of the above rights, please email us at{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#2F7549] underline underline-offset-2">
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">
               info@ukpaktrade.org.uk
             </a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
@@ -312,7 +312,7 @@ export default function PrivacyPage() {
               href="https://ico.org.uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-[#2F7549] underline underline-offset-2"
+              className="font-medium text-[#1E2733] underline underline-offset-2"
             >
               https://ico.org.uk
             </a>
@@ -365,7 +365,7 @@ export default function PrivacyPage() {
           <p>
             For any questions about this Privacy Policy or our treatment of your Personal Information,
             please contact{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#2F7549] underline underline-offset-2">
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">
               info@ukpaktrade.org.uk
             </a>
             .

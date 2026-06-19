@@ -13,7 +13,7 @@ const stats = [
     suffix: "%",
     percent: 7,
     description: "Pakistan textile & apparel export growth in FY2025 (~US$17.9bn, up ~7.4% YoY) (Pakistan Bureau of Statistics, 2025).",
-    color: "#FBBF24",
+    color: "#B3AA98",
   },
   {
     label: "Textiles' share of Pakistan exports",
@@ -21,7 +21,7 @@ const stats = [
     suffix: "%",
     percent: 60,
     description: "Textiles make up an estimated 55–60% of Pakistan's total exports — the backbone of its export economy (industry reporting, 2025).",
-    color: "#FB7185",
+    color: "#8A857C",
   },
   {
     label: "Asia-Pacific share of global market",
@@ -29,7 +29,7 @@ const stats = [
     suffix: "%",
     percent: 50,
     description: "Asia-Pacific accounts for roughly half of the ~US$1.2–1.3 trillion global textile market (Precedence Research, 2025).",
-    color: "#38BDF8",
+    color: "#8A857C",
   },
   {
     label: "Cotton's share of raw-material demand",
@@ -37,7 +37,7 @@ const stats = [
     suffix: "%",
     percent: 39,
     description: "Cotton makes up about 39% of global textile raw-material demand — a fibre where Pakistan is a world-leading producer (industry estimates, 2025).",
-    color: "#A78BFA",
+    color: "#8A857C",
   },
 ];
 
