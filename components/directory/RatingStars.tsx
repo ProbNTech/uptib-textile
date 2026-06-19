@@ -42,7 +42,7 @@ export function RatingStars({
                   className="absolute inset-0 overflow-hidden"
                   style={{ width: half ? "50%" : "100%" }}
                 >
-                  <Star className={`${starSize} text-[#F59E0B]`} fill="currentColor" />
+                  <Star className={`${starSize} text-[#8A857C]`} fill="currentColor" />
                 </span>
               )}
             </span>
@@ -50,7 +50,7 @@ export function RatingStars({
         })}
       </div>
       {showValue && (
-        <span className={`font-heading font-bold text-[#16291E] ${textSize}`}>
+        <span className={`font-heading font-bold text-[#1A1A1A] ${textSize}`}>
           {clamped.toFixed(1)}
         </span>
       )}

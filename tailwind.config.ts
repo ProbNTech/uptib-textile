@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--bg-default)",
+        cream: "var(--cream)",
         foreground: "var(--text-primary)",
         card: "var(--bg-white)",
         "card-foreground": "var(--text-primary)",
@@ -22,8 +23,8 @@ const config: Config = {
         input: "var(--border-default)",
         ring: "var(--primary)",
         primary: {
-          DEFAULT: "#2F7549",
-          hover: "#245C3A",
+          DEFAULT: "#1E2733",
+          hover: "#141B24",
           foreground: "#FFFFFF",
         },
         secondary: {
@@ -33,35 +34,36 @@ const config: Config = {
         accent: {
           DEFAULT: "var(--bg-alt)",
           foreground: "var(--text-primary)",
-          green: "#3E8F5E",
-          "green-hover": "#2F7549",
+          green: "#1E2733",
+          "green-hover": "#141B24",
         },
-        /* Natural green brand scale (from logo waves) — PRIMARY lead */
+        /* Ink scale — deep charcoal/navy PRIMARY (Peter Reed inspired). */
+        /* Key kept as `green` so existing utility classes resolve to new colors. */
         green: {
-          50: "#EEF6F0",
-          100: "#D7EADD",
-          200: "#B3D7C0",
-          500: "#4FA873",
-          600: "#3C8F5E",
-          700: "#2F7549",
-          800: "#245C3A",
-          900: "#15402A",
+          50: "#F6F2EA",
+          100: "#ECE5D8",
+          200: "#D8CDBA",
+          500: "#3C4A5A",
+          600: "#2A3542",
+          700: "#1E2733",
+          800: "#141B24",
+          900: "#0E1318",
         },
-        /* Muted blue — minor accent only (from logo emblem); never the lead */
+        /* Secondary slate — old logo-blue accent folded into the charcoal scheme */
         blue: {
-          500: "#3A6BA5",
-          700: "#2A5689",
+          500: "#3C4A5A",
+          700: "#2A3542",
         },
         destructive: {
           DEFAULT: "#DC2626",
           foreground: "#FFFFFF",
         },
-        /* Editorial palette tokens — soft green-tinted neutrals */
+        /* Editorial palette tokens — warm ivory/greige neutrals + charcoal ink */
         editorial: {
-          bg: "#F1F5F1",
-          "bg-alt": "#E8EFE9",
-          rule: "#DCE2DC",
-          dark: "#16291E",
+          bg: "#F7F4ED",
+          "bg-alt": "#EFEAE0",
+          rule: "#E5DFD3",
+          dark: "#1A1A1A",
         },
         "color-1": "hsl(var(--color-1))",
         "color-2": "hsl(var(--color-2))",
@@ -71,7 +73,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-montserrat)", "system-ui", "sans-serif"],
-        heading: ["var(--font-lato)", "system-ui", "sans-serif"],
+        heading: ["var(--font-playfair)", "Georgia", "serif"],
+        sansHeading: ["var(--font-lato)", "system-ui", "sans-serif"],
       },
       fontSize: {
         // ─── Header / Navigation ───────────────────────────────────
@@ -132,8 +135,8 @@ const config: Config = {
           "50%": { transform: "translateY(-12px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(47, 117, 73, 0)" },
-          "50%": { boxShadow: "0 0 20px 4px rgba(47, 117, 73, 0.1)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(30, 39, 51, 0)" },
+          "50%": { boxShadow: "0 0 20px 4px rgba(30, 39, 51, 0.1)" },
         },
         rainbow: {
           "0%": { "background-position": "0%" },

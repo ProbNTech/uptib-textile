@@ -7,14 +7,14 @@ interface CompanyLogoProps {
   className?: string;
 }
 
-/** Stable, soft pastel blue/cyan palette keyed off the name. */
+/** Stable warm ivory/greige tonal palette keyed off the name. */
 const palette = [
-  { bg: "#D7EADD", fg: "#245C3A" }, // emerald-100 / emerald-700
-  { bg: "#CFFAFE", fg: "#0E7490" }, // cyan-100 / cyan-700
-  { bg: "#E0E7FF", fg: "#4338CA" }, // emerald-100 / emerald-700
-  { bg: "#DCFCE7", fg: "#15803D" }, // green-100 / green-700
-  { bg: "#FCE7F3", fg: "#9D174D" }, // pink-100 / pink-700
-  { bg: "#FEF3C7", fg: "#B45309" }, // amber-100 / amber-700
+  { bg: "#ECE5D8", fg: "#141B24" },
+  { bg: "#F6F2EA", fg: "#3C4A5A" },
+  { bg: "#E8E2D6", fg: "#2A3542" },
+  { bg: "#EFEAE0", fg: "#3C4A5A" },
+  { bg: "#F2EDE3", fg: "#1E2733" },
+  { bg: "#E5DFD3", fg: "#3C4A5A" },
 ];
 
 function hash(name: string): number {

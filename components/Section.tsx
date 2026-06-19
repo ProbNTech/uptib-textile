@@ -11,9 +11,9 @@ interface SectionProps {
 
 export function Section({ children, variant = "light", className = "", id, pattern = false }: SectionProps) {
   const variantMap = {
-    light: "bg-white text-[#16291E]",
-    alt: "bg-white text-[#16291E]",
-    dark: "bg-[#16291E] text-white",
+    light: "bg-white text-[#1A1A1A]",
+    alt: "bg-white text-[#1A1A1A]",
+    dark: "bg-[#1A1A1A] text-white",
   };
   const bgClass = variantMap[variant];
 

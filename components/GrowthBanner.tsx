@@ -33,7 +33,7 @@ export function GrowthBanner({ image, label = "Built for your growth", title, bo
         aria-hidden="true"
         style={{
           background:
-            "linear-gradient(90deg, rgba(11,33,22,0.92) 0%, rgba(21,64,42,0.78) 42%, rgba(21,64,42,0.32) 70%, rgba(21,64,42,0.12) 100%)",
+            "linear-gradient(90deg, rgba(14, 19, 24,0.92) 0%, rgba(14, 19, 24,0.78) 42%, rgba(14, 19, 24,0.32) 70%, rgba(14, 19, 24,0.12) 100%)",
         }}
       />
       <div
@@ -44,7 +44,7 @@ export function GrowthBanner({ image, label = "Built for your growth", title, bo
       <div className="relative w-full px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">
           <div className="max-w-2xl">
-            <SectionLabel label={label} title={title} color="#8FD3AE" light />
+            <SectionLabel label={label} title={title} color="#B3AA98" light />
             {body && <p className="text-white/85 text-base sm:text-lg leading-relaxed">{body}</p>}
             {chips && chips.length > 0 && (
               <div className="mt-8 flex flex-wrap gap-3">

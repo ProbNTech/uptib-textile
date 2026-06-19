@@ -133,7 +133,7 @@ export default function ServicesClient() {
 
       {/* ── FLOATING FACTS CARD ──────────────────────────────────── */}
       <div className={cn("relative z-[3] -mt-14 sm:-mt-16 lg:-mt-20", PX)}>
-        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(4,120,87,0.30)] p-6 sm:p-8">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(60, 74, 90,0.30)] p-6 sm:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
             {heroFacts.map((f, i) => {
               const Icon = f.icon;
@@ -142,11 +142,11 @@ export default function ServicesClient() {
                   key={f.value}
                   className={cn("flex items-start gap-3.5", i > 0 && "lg:border-l lg:border-[#E5E7EB] lg:pl-6")}
                 >
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549]">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733]">
                     <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                   </span>
                   <div>
-                    <p className="font-heading font-extrabold text-lg text-[#16291E] leading-tight">{f.value}</p>
+                    <p className="font-heading font-extrabold text-lg text-[#1A1A1A] leading-tight">{f.value}</p>
                     <p className="text-[13px] text-[#5A5F72] leading-snug mt-0.5">{f.label}</p>
                   </div>
                 </div>
@@ -163,11 +163,11 @@ export default function ServicesClient() {
             {/* Left — heading + world map */}
             <AnimatedSection animation="blur-in">
               <div className="lg:sticky lg:top-28">
-                <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-[#2F7549]">Our core services</p>
-                <h2 className="font-heading font-extrabold text-4xl sm:text-5xl leading-[1.08] text-[#16291E]">
+                <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-[#1E2733]">Our core services</p>
+                <h2 className="font-heading font-extrabold text-4xl sm:text-5xl leading-[1.08] text-[#1A1A1A]">
                   Source the supply,<br className="hidden sm:block" /> or grow your exports
                 </h2>
-                <div className="mt-6 mb-6 h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E]" />
+                <div className="mt-6 mb-6 h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733]" />
                 <p className="max-w-md text-[#5A5F72] text-base leading-relaxed">
                   Whether you&apos;re an international buyer looking for reliable supply or a Pakistani exporter ready to
                   grow, we provide the services, network, and infrastructure to help you succeed.
@@ -198,7 +198,7 @@ export default function ServicesClient() {
                   >
                     <Link
                       href={`/services/${s.slug}`}
-                      className="group flex h-full flex-col rounded-2xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#3E8F5E]/50 hover:shadow-[0_24px_50px_-24px_rgba(4,120,87,0.35)]"
+                      className="group flex h-full flex-col rounded-2xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#1E2733]/50 hover:shadow-[0_24px_50px_-24px_rgba(60, 74, 90,0.35)]"
                     >
                       <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl">
                         <Image
@@ -208,19 +208,19 @@ export default function ServicesClient() {
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                           sizes="(max-width: 640px) 100vw, 50vw"
                         />
-                        <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-white/95 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#2F7549] shadow-sm backdrop-blur">
+                        <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-white/95 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#1E2733] shadow-sm backdrop-blur">
                           {s.name}
                         </span>
                       </div>
                       <div className="relative flex flex-1 flex-col px-6 pb-6">
-                        <span className="absolute -top-6 left-5 inline-flex size-12 items-center justify-center rounded-full bg-[#2F7549] text-white shadow-[0_10px_24px_-8px_rgba(4,120,87,0.55)] ring-4 ring-white">
+                        <span className="absolute -top-6 left-5 inline-flex size-12 items-center justify-center rounded-full bg-[#1E2733] text-white shadow-[0_10px_24px_-8px_rgba(60, 74, 90,0.55)] ring-4 ring-white">
                           <Icon className="size-5" strokeWidth={1.9} aria-hidden />
                         </span>
-                        <h3 className="mt-9 mb-2 font-heading font-bold text-xl leading-snug text-[#16291E]">
+                        <h3 className="mt-9 mb-2 font-heading font-bold text-xl leading-snug text-[#1A1A1A]">
                           {s.headline}
                         </h3>
                         <p className="mb-5 flex-1 text-sm text-[#5A5F72] leading-relaxed">{s.summary}</p>
-                        <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549] transition-all group-hover:gap-2.5">
+                        <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733] transition-all group-hover:gap-2.5">
                           Explore {s.name} <ArrowUpRight className="size-4" />
                         </span>
                       </div>
@@ -234,14 +234,14 @@ export default function ServicesClient() {
       </section>
 
       {/* ── WE SERVE BOTH ENDS OF THE TRADE ──────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-[#F6F2EA] py-20 lg:py-28">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
               label="Two sides, one partner"
               title="We serve both ends of the trade"
               body="Every manufacturer we market becomes a vetted supplier we can source from; every order we win gives our exporters real, paying demand. Holding both views makes us a sharper partner to each side."
-              color="#2F7549"
+              color="#1E2733"
               hideLine
             />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -258,12 +258,12 @@ export default function ServicesClient() {
                     className="flex flex-col rounded-2xl border border-[#E5E7EB] bg-white p-8 shadow-sm"
                   >
                     <div className="flex items-center gap-4 mb-5">
-                      <span className="inline-flex size-14 items-center justify-center rounded-xl bg-[#2F7549]/10 text-[#2F7549]">
+                      <span className="inline-flex size-14 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733]">
                         <Icon className="size-7" strokeWidth={1.6} aria-hidden />
                       </span>
                       <div>
                         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#6B7280]">{side.eyebrow}</p>
-                        <h3 className="font-heading font-extrabold text-[#16291E] text-2xl leading-tight">{side.title}</h3>
+                        <h3 className="font-heading font-extrabold text-[#1A1A1A] text-2xl leading-tight">{side.title}</h3>
                       </div>
                     </div>
                     <p className="text-[#5A5F72] leading-relaxed mb-6">{side.body}</p>
@@ -274,16 +274,16 @@ export default function ServicesClient() {
                           <Link
                             key={s.slug}
                             href={`/services/${s.slug}`}
-                            className="group flex items-center gap-4 rounded-xl border border-[#E5E7EB] bg-[#F8FAF9] p-4 transition-colors hover:border-[#3E8F5E]/50 hover:bg-white"
+                            className="group flex items-center gap-4 rounded-xl border border-[#E5E7EB] bg-[#F8FAF9] p-4 transition-colors hover:border-[#1E2733]/50 hover:bg-white"
                           >
-                            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-white text-[#2F7549] border border-[#E5E7EB]">
+                            <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-white text-[#1E2733] border border-[#E5E7EB]">
                               <SIcon className="size-5" strokeWidth={1.7} aria-hidden />
                             </span>
                             <div className="flex-1 min-w-0">
-                              <p className="font-heading font-bold text-[#16291E]">{s.name}</p>
+                              <p className="font-heading font-bold text-[#1A1A1A]">{s.name}</p>
                               <p className="text-[13px] text-[#5A5F72] leading-snug truncate">{s.short}</p>
                             </div>
-                            <ArrowRight className="size-4 text-[#2F7549] transition-transform group-hover:translate-x-1" aria-hidden />
+                            <ArrowRight className="size-4 text-[#1E2733] transition-transform group-hover:translate-x-1" aria-hidden />
                           </Link>
                         );
                       })}
@@ -310,7 +310,7 @@ export default function ServicesClient() {
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.55fr] lg:gap-16 xl:gap-20">
               <div>
-                <span className="mb-5 inline-flex size-16 items-center justify-center rounded-2xl bg-[#EEF6F0] ring-1 ring-[#D7EADD] shadow-[0_18px_40px_-22px_rgba(4,120,87,0.5)]">
+                <span className="mb-5 inline-flex size-16 items-center justify-center rounded-2xl bg-[#F6F2EA] ring-1 ring-[#ECE5D8] shadow-[0_18px_40px_-22px_rgba(60, 74, 90,0.5)]">
                   <Image
                     src="/image/growth/krzysztof-m-graph-7128344_1920.png"
                     alt="Upward growth trend"
@@ -319,8 +319,8 @@ export default function ServicesClient() {
                     className="size-11 object-contain"
                   />
                 </span>
-                <SectionLabel label="Why Pakistan Textile Partners" title="One partner, accountable on both sides" color="#2F7549" hideLine />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#2F7549] to-[#3E8F5E] -mt-3 mb-5" />
+                <SectionLabel label="Why Pakistan Textile Partners" title="One partner, accountable on both sides" color="#1E2733" hideLine />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
                   We market the supply and source the demand — so buyers get dependable product and exporters get real
                   orders, with quality controlled on the ground in Pakistan.
@@ -351,11 +351,11 @@ export default function ServicesClient() {
                       transition={{ duration: 0.45, delay: index * 0.06 }}
                       className="rounded-2xl border border-[#E5E7EB] bg-white p-7 shadow-sm"
                     >
-                      <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#2F7549]/10 text-[#2F7549] mb-6">
+                      <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#1E2733]/10 text-[#1E2733] mb-6">
                         <Icon className="size-6" strokeWidth={1.75} aria-hidden />
                       </span>
-                      <h3 className="font-heading font-bold text-lg text-[#16291E] leading-snug">{b.title}</h3>
-                      <div className="mt-2.5 mb-4 h-0.5 w-8 rounded-full bg-[#2F7549]" />
+                      <h3 className="font-heading font-bold text-lg text-[#1A1A1A] leading-snug">{b.title}</h3>
+                      <div className="mt-2.5 mb-4 h-0.5 w-8 rounded-full bg-[#1E2733]" />
                       <p className="text-sm text-[#5A5F72] leading-relaxed">{b.desc}</p>
                     </motion.div>
                   );
@@ -367,7 +367,7 @@ export default function ServicesClient() {
       </section>
 
       {/* ── THE NUMBERS (dark band) ──────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#15402A] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#0E1318] py-20 lg:py-28">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -392,7 +392,7 @@ export default function ServicesClient() {
                   label="The trade we move"
                   title="Pakistani product, delivered worldwide"
                   body="From the EU and the Americas to the Middle East, our services connect Pakistan's manufacturing strength to buyers wherever there is demand."
-                  color="#8FD3AE"
+                  color="#B3AA98"
                   light
                   hideLine
                 />
@@ -420,9 +420,9 @@ export default function ServicesClient() {
                   {markets.map((m) => (
                     <span
                       key={m.name}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[13px] font-medium text-white/85 transition-colors hover:border-[#8FD3AE]/50 hover:bg-white/[0.08]"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[13px] font-medium text-white/85 transition-colors hover:border-[#B3AA98]/50 hover:bg-white/[0.08]"
                     >
-                      <Globe2 className="size-3.5 text-[#8FD3AE]" aria-hidden />
+                      <Globe2 className="size-3.5 text-[#B3AA98]" aria-hidden />
                       {m.name}
                     </span>
                   ))}
@@ -435,7 +435,7 @@ export default function ServicesClient() {
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
+        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-[#F6F2EA]"
         aria-labelledby="services-faq-heading"
       >
         <div className={cn("relative", PX)}>
@@ -446,22 +446,22 @@ export default function ServicesClient() {
                   label="FAQs"
                   title="Questions from both sides"
                   body="What buyers and exporters ask us most about working with Pakistan Textile Partners."
-                  color="#2F7549"
+                  color="#1E2733"
                   as="h2"
                   hideLine
                 />
-                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]">
+                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#2F7549] text-white">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733] text-white">
                       <HelpCircle className="size-5" aria-hidden />
                     </span>
                     <div>
-                      <p className="text-sm font-bold text-[#16291E]">Not sure where to start?</p>
+                      <p className="text-sm font-bold text-[#1A1A1A]">Not sure where to start?</p>
                       <p className="text-xs text-[#5A5F72]">Tell us what you need and we'll point you to the right service.</p>
                     </div>
                   </div>
                   <div className="mt-4">
-                    <Link href="/contact" className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F7549]">
+                    <Link href="/contact" className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733]">
                       Talk to our team
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
                     </Link>
@@ -480,8 +480,8 @@ export default function ServicesClient() {
                       className={cn(
                         "rounded-2xl border transition-colors duration-200",
                         isOpen
-                          ? "border-[#2F7549]/25 bg-[#2F7549]/[0.04] shadow-[0_10px_30px_-12px_rgba(4,120,87,0.18)]"
-                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(4,120,87,0.12)]",
+                          ? "border-[#1E2733]/25 bg-[#1E2733]/[0.04] shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]"
+                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.12)]",
                       )}
                     >
                       <h3>
@@ -496,17 +496,17 @@ export default function ServicesClient() {
                           <span
                             className={cn(
                               "inline-flex shrink-0 items-center justify-center rounded-lg px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide transition-colors",
-                              isOpen ? "bg-[#2F7549] text-white" : "bg-[#2F7549]/10 text-[#2F7549]",
+                              isOpen ? "bg-[#1E2733] text-white" : "bg-[#1E2733]/10 text-[#1E2733]",
                             )}
                             aria-hidden
                           >
                             {item.tag}
                           </span>
-                          <span className="flex-1 text-sm font-medium text-[#16291E]">{item.q}</span>
+                          <span className="flex-1 text-sm font-medium text-[#1A1A1A]">{item.q}</span>
                           <span
                             className={cn(
                               "inline-flex size-8 shrink-0 items-center justify-center rounded-full transition-colors",
-                              isOpen ? "bg-[#2F7549] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
+                              isOpen ? "bg-[#1E2733] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
                             )}
                             aria-hidden
                           >

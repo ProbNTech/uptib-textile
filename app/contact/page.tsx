@@ -56,7 +56,7 @@ const reasons = [
 export default function ContactPage() {
   return (
     <>
-      <section className="relative z-[2] w-full overflow-hidden bg-[#0a1410] min-h-[600px] md:min-h-[640px] lg:min-h-[700px] flex items-center">
+      <section className="relative z-[2] w-full overflow-hidden bg-[#0E1318] min-h-[600px] md:min-h-[640px] lg:min-h-[700px] flex items-center">
         {/* Background image */}
         <Image
           src="/image/hero-bg/pexels-jan-van-der-wolf-11680885-29298932.jpg"
@@ -74,7 +74,7 @@ export default function ContactPage() {
           className="absolute inset-0 z-[1]"
           style={{
             background:
-              "linear-gradient(90deg, rgba(8,20,16,0.92) 0%, rgba(8,20,16,0.78) 38%, rgba(8,20,16,0.5) 68%, rgba(8,20,16,0.3) 100%)",
+              "linear-gradient(90deg, rgba(14, 19, 24,0.92) 0%, rgba(14, 19, 24,0.78) 38%, rgba(14, 19, 24,0.5) 68%, rgba(14, 19, 24,0.3) 100%)",
           }}
         />
 
@@ -86,16 +86,16 @@ export default function ContactPage() {
             className="pointer-events-none absolute inset-y-8 left-0 w-[min(48rem,92%)] rounded-[2.5rem]"
             style={{
               background:
-                "radial-gradient(ellipse 80% 78% at 32% 50%, rgba(8,20,16,0.84) 0%, rgba(8,20,16,0.56) 45%, rgba(8,20,16,0.2) 75%, rgba(8,20,16,0) 100%)",
+                "radial-gradient(ellipse 80% 78% at 32% 50%, rgba(14, 19, 24,0.84) 0%, rgba(14, 19, 24,0.56) 45%, rgba(14, 19, 24,0.2) 75%, rgba(14, 19, 24,0) 100%)",
             }}
           />
           <div className="relative max-w-2xl">
-            <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#3E8F5E] mb-4">
+            <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#1E2733] mb-4">
               Contact
             </p>
             <h1 className="font-heading font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-5">
               Let&apos;s start a{" "}
-              <span className="text-[#3E8F5E]">conversation</span>
+              <span className="text-[#1E2733]">conversation</span>
             </h1>
             <p className="text-white/95 text-base md:text-lg leading-relaxed max-w-md mb-10">
               Whether you have a question, need assistance, or want to explore opportunities — we&apos;re here to help.
@@ -110,8 +110,8 @@ export default function ContactPage() {
                     i > 0 ? "sm:pl-5 sm:ml-5 sm:border-l sm:border-white/15" : ""
                   }`}
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#3E8F5E]/15 border border-[#3E8F5E]/25 flex items-center justify-center flex-shrink-0">
-                    <b.icon className="w-5 h-5 text-[#3E8F5E]" />
+                  <div className="w-10 h-10 rounded-full bg-[#1E2733]/15 border border-[#1E2733]/25 flex items-center justify-center flex-shrink-0">
+                    <b.icon className="w-5 h-5 text-[#1E2733]" />
                   </div>
                   <div>
                     <p className="font-heading font-bold text-white text-sm leading-tight">{b.title}</p>
@@ -124,14 +124,14 @@ export default function ContactPage() {
         </div>
 
         {/* Bottom accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[3px] z-20 bg-gradient-to-r from-[#2F7549] via-[#3E8F5E] to-[#2F7549]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] z-20 bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733]" />
       </section>
 
       <Section variant="light" pattern>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Form */}
           <div className="lg:col-span-7">
-            <h2 className="font-heading font-extrabold text-[#16291E] text-2xl mb-1">Send us a message</h2>
+            <h2 className="font-heading font-extrabold text-[#1A1A1A] text-2xl mb-1">Send us a message</h2>
             <p className="text-[#6B7280] text-sm mb-6">Fill out the form and our team will get back to you.</p>
             <ContactForm />
           </div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
           {/* Offices + contact */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <h2 className="font-heading font-extrabold text-[#16291E] text-2xl mb-1">Our offices</h2>
+              <h2 className="font-heading font-extrabold text-[#1A1A1A] text-2xl mb-1">Our offices</h2>
               <p className="text-[#6B7280] text-sm">We&apos;re on the ground to support you better.</p>
             </div>
             {offices.map((o) => (
@@ -155,19 +155,19 @@ export default function ContactPage() {
                   className="pointer-events-none absolute right-2 bottom-0 h-[92%] w-auto object-contain object-bottom"
                 />
                 <div className="relative flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-full bg-[#EEF6F0] border border-[#D7EADD] flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-[#2F7549]" />
+                  <div className="w-11 h-11 rounded-full bg-[#F6F2EA] border border-[#ECE5D8] flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-[#1E2733]" />
                   </div>
                   <div>
-                    <p className="font-heading font-bold text-[#16291E]">{o.label}</p>
+                    <p className="font-heading font-bold text-[#1A1A1A]">{o.label}</p>
                     <address className="not-italic text-[#3D4152] text-sm mt-1 leading-relaxed">
                       {o.lines.map((l) => (<span key={l} className="block">{l}</span>))}
                     </address>
-                    <a href={o.phoneHref} className="flex items-center gap-2 mt-3 text-sm font-medium text-[#3D4152] hover:text-[#2F7549] transition-colors">
-                      <Phone className="w-4 h-4 text-[#2F7549] flex-shrink-0" />
+                    <a href={o.phoneHref} className="flex items-center gap-2 mt-3 text-sm font-medium text-[#3D4152] hover:text-[#1E2733] transition-colors">
+                      <Phone className="w-4 h-4 text-[#1E2733] flex-shrink-0" />
                       {o.phone}
                     </a>
-                    <a href={o.map} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm font-semibold text-[#2F7549] hover:text-[#245C3A]">
+                    <a href={o.map} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm font-semibold text-[#1E2733] hover:text-[#141B24]">
                       View on map →
                     </a>
                   </div>
@@ -178,19 +178,19 @@ export default function ContactPage() {
             {/* Email */}
             <div className="rounded-card border border-[#E5E7EB] p-6">
               <a href="mailto:info@ukpaktrade.org.uk" className="flex items-center gap-4 group">
-                <div className="w-11 h-11 rounded-full bg-[#EEF6F0] border border-[#D7EADD] flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-[#2F7549]" />
+                <div className="w-11 h-11 rounded-full bg-[#F6F2EA] border border-[#ECE5D8] flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-[#1E2733]" />
                 </div>
                 <div>
                   <p className="text-[#6B7280] text-xs uppercase tracking-wide font-bold">Email</p>
-                  <p className="text-[#16291E] font-medium group-hover:text-[#2F7549] transition-colors break-all">info@ukpaktrade.org.uk</p>
+                  <p className="text-[#1A1A1A] font-medium group-hover:text-[#1E2733] transition-colors break-all">info@ukpaktrade.org.uk</p>
                 </div>
               </a>
             </div>
 
             {/* Socials */}
             <div className="rounded-card border border-[#E5E7EB] p-6 flex items-center justify-between gap-4">
-              <p className="font-heading font-bold text-[#16291E]">Connect with us</p>
+              <p className="font-heading font-bold text-[#1A1A1A]">Connect with us</p>
               <div className="flex items-center gap-3">
                 {socials.map((s) => (
                   <a
@@ -199,7 +199,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="w-10 h-10 rounded-full border border-[#E5E7EB] flex items-center justify-center text-[#2F7549] hover:bg-[#2F7549] hover:text-white hover:border-[#2F7549] transition-colors"
+                    className="w-10 h-10 rounded-full border border-[#E5E7EB] flex items-center justify-center text-[#1E2733] hover:bg-[#1E2733] hover:text-white hover:border-[#1E2733] transition-colors"
                   >
                     <s.icon className="w-[18px] h-[18px]" />
                   </a>
@@ -212,11 +212,11 @@ export default function ContactPage() {
 
       {/* Why get in touch */}
       <Section variant="light">
-        <div className="rounded-card bg-gradient-to-br from-[#15402A] to-[#0a1f17] p-8 lg:p-12">
+        <div className="rounded-card bg-gradient-to-br from-[#0E1318] to-[#0E1318] p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Title + description */}
             <div className="lg:col-span-4">
-              <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#8FD3AE] mb-3">Why get in touch?</p>
+              <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#B3AA98] mb-3">Why get in touch?</p>
               <h2 className="font-heading font-extrabold text-white text-2xl lg:text-3xl leading-tight mb-4">
                 We&apos;re here to support your global growth
               </h2>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     }
                   >
                     <div className="w-11 h-11 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mb-3">
-                      <r.icon className="w-5 h-5 text-[#8FD3AE]" />
+                      <r.icon className="w-5 h-5 text-[#B3AA98]" />
                     </div>
                     <p className="font-heading font-bold text-white mb-1.5">{r.title}</p>
                     <p className="text-white/70 text-sm leading-relaxed">{r.desc}</p>

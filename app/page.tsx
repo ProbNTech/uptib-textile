@@ -55,17 +55,17 @@ const sponsorCarouselLogos = sponsorLogos.map((logo, i) => ({
 
 /* ─── Our Services — exporter-facing grid (Pakistani exporters → global markets) ─── */
 const pakistanServicesData = [
-  { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers — professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing-sales", color: "#3E8F5E" },
-  { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/ecommerce-warehouse", color: "#3E8F5E" },
-  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/membership", color: "#3E8F5E" },
-  { id: 8, title: "Worldwide market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#3E8F5E" },
+  { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers — professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing-sales", color: "#1E2733" },
+  { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/ecommerce-warehouse", color: "#1E2733" },
+  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/membership", color: "#1E2733" },
+  { id: 8, title: "Worldwide market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#1E2733" },
 ];
 
 /* ─── Our Services — buyer-facing grid (International buyers → Pakistan supply) ─── */
 const internationalBuyersData = [
-  { id: 9, title: "Buying House (Outsourcing)", content: "Source the right Pakistani manufacturers and Exporters for your order — vendor identification, sampling, price negotiation and production follow-up handled for you.", icon: Factory, topImage: "/image/buying-house.jpg", href: "/contact", color: "#2F7549" },
-  { id: 10, title: "Quality Control", content: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck, topImage: "/image/quality-control.jpg", href: "/contact", color: "#2F7549" },
-  { id: 11, title: "Compliance & Logistics", content: "Ship with confidence — social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship, topImage: "/image/logistics-compliance.jpg", href: "/contact", color: "#2F7549" },
+  { id: 9, title: "Buying House (Outsourcing)", content: "Source the right Pakistani manufacturers and Exporters for your order — vendor identification, sampling, price negotiation and production follow-up handled for you.", icon: Factory, topImage: "/image/buying-house.jpg", href: "/contact", color: "#1E2733" },
+  { id: 10, title: "Quality Control", content: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck, topImage: "/image/quality-control.jpg", href: "/contact", color: "#1E2733" },
+  { id: 11, title: "Compliance & Logistics", content: "Ship with confidence — social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship, topImage: "/image/logistics-compliance.jpg", href: "/contact", color: "#1E2733" },
 ];
 
 export default function Home() {
@@ -80,29 +80,29 @@ export default function Home() {
         className="relative py-20 lg:py-28 overflow-hidden bg-white"
         aria-labelledby="about-heading"
       >
-        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
+        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div>
-                <SectionLabel label="Who we are" title="Bridging Pakistan's textile industry to the Global market via a UK-based platform." color="#2F7549" />
+                <SectionLabel label="Who we are" title="Bridging Pakistan's textile industry to the Global market via a UK-based platform." color="#1E2733" />
                 <div className="content-body">
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-5">
-<span className="font-semibold text-[#16291E]">Pakistan Textile Partners</span> is the dedicated textile arm of the <span className="font-semibold text-[#16291E]">UK–Pakistan Trade &amp; Investment Board</span> with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers and Exporters and the global marketplace.
+<span className="font-semibold text-[#1A1A1A]">Pakistan Textile Partners</span> is the dedicated textile arm of the <span className="font-semibold text-[#1A1A1A]">UK–Pakistan Trade &amp; Investment Board</span> with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers and Exporters and the global marketplace.
                   </p>
                 </div>
                 <PillButton href="/global-textile-market" variant="blue">Pakistan's global position</PillButton>
               </div>
               <div className="relative">
-                <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(4,120,87,0.15)]">
+                <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(60, 74, 90,0.15)]">
                   <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export — Pakistan Textile Partners" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/60">
-                    <p className="font-heading font-extrabold text-[#2F7549] text-lg leading-none">~$17.9bn</p>
+                    <p className="font-heading font-extrabold text-[#1E2733] text-lg leading-none">~$17.9bn</p>
                     <p className="text-[#5A5F72] text-xs mt-0.5">Pakistan textile exports, FY2025</p>
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-28 h-28 rounded-xl bg-[#2F7549]/20 z-0" aria-hidden="true" />
-                <div className="absolute -top-4 -right-4 w-36 h-36 rounded-full bg-[#3E8F5E]/20 z-0" aria-hidden="true" />
+                <div className="absolute -bottom-4 -left-4 w-28 h-28 rounded-xl bg-[#1E2733]/20 z-0" aria-hidden="true" />
+                <div className="absolute -top-4 -right-4 w-36 h-36 rounded-full bg-[#1E2733]/20 z-0" aria-hidden="true" />
               </div>
             </div>
           </AnimatedSection>
@@ -127,7 +127,7 @@ export default function Home() {
               label="Our Services"
               title="Grow your textile exports, worldwide"
               body="Four services that help Pakistani textile manufacturers and Exporters reach buyers across the world — marketing, e-commerce and warehousing, membership, and global market access."
-              color="#2F7549"
+              color="#1E2733"
               align="center"
             />
 
@@ -138,7 +138,7 @@ export default function Home() {
                 eyebrow="Services"
                 audience="Pakistani exporters"
                 context="Reaching global markets — marketing, e-commerce & warehousing, membership, and worldwide market access."
-                accentColor="#3E8F5E"
+                accentColor="#1E2733"
               />
               <p className="mt-10 text-[#5A5F72] text-base sm:text-lg leading-relaxed max-w-7xl mx-auto text-center">
                 As a top ten global exporter and a powerhouse in cotton and home textiles, Pakistan possesses immense manufacturing capability. We unlock this potential for you. By professionalising your supply chain, optimising your digital commerce, and managing end-to-end logistics including targeted international marketing and strategic global warehousing. We provide Pakistani exporters seamless, frictionless access to major buyers across the UK, EU, USA, and the Middle East.
@@ -156,8 +156,8 @@ export default function Home() {
                   className="object-cover"
                   sizes="100vw"
                 />
-                <div className="absolute inset-0 bg-[#051a14]/92" />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#04130f]/85 via-[#06231b]/80 to-[#020c0a]/92" />
+                <div className="absolute inset-0 bg-[#0E1318]/92" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0E1318]/85 via-[#161D27]/80 to-[#090C10]/92" />
               </div>
               <div className="relative z-10 px-6 sm:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 lg:py-24">
                 <div className="max-w-7xl mx-auto">
@@ -165,31 +165,31 @@ export default function Home() {
                   <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-start">
                     {/* Left: hero copy */}
                     <div>
-                      <span className="inline-flex items-center gap-2 rounded-full border border-[#6BCB93]/35 bg-[#6BCB93]/10 px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#8FE3AD] backdrop-blur-sm">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-[#B3AA98]/35 bg-[#B3AA98]/10 px-4 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#D8CDBA] backdrop-blur-sm">
                         <Globe className="w-3.5 h-3.5" strokeWidth={2} />
                         For International Buyers
                       </span>
                       <h3 className="mt-6 font-heading font-extrabold text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.05] tracking-tight text-white">
                         Your Trusted Sourcing Partner from{" "}
-                        <span className="text-[#6BCB93]">Pakistan</span> to the World
+                        <span className="text-[#B3AA98]">Pakistan</span> to the World
                       </h3>
                       <div className="mt-5">
                         <p className="text-white/85 text-lg sm:text-xl font-semibold">Transparent. Secure. Reliable.</p>
-                        <span aria-hidden="true" className="mt-3 block h-1 w-20 rounded-full bg-[#2F7549]" />
+                        <span aria-hidden="true" className="mt-3 block h-1 w-20 rounded-full bg-[#1E2733]" />
                       </div>
                       <p className="mt-6 text-white/80 text-base sm:text-lg leading-relaxed max-w-xl">
                         We simplify global sourcing by connecting international buyers with Pakistan&apos;s top textile manufacturers and Exporters. From product development to final delivery, we ensure complete{" "}
-                        <span className="text-[#6BCB93] font-medium">transparency</span>,{" "}
-                        <span className="text-[#6BCB93] font-medium">strict compliance</span>, and{" "}
-                        <span className="text-[#6BCB93] font-medium">on-time shipments</span>.
+                        <span className="text-[#B3AA98] font-medium">transparency</span>,{" "}
+                        <span className="text-[#B3AA98] font-medium">strict compliance</span>, and{" "}
+                        <span className="text-[#B3AA98] font-medium">on-time shipments</span>.
                       </p>
                     </div>
 
                     {/* Right: Why Buyers Trust Us */}
-                    <div className="rounded-2xl border border-white/10 bg-[#0b231b]/85 backdrop-blur-md p-6 sm:p-8 shadow-xl shadow-black/30">
+                    <div className="rounded-2xl border border-white/10 bg-[#161D27]/85 backdrop-blur-md p-6 sm:p-8 shadow-xl shadow-black/30">
                       <div className="flex items-center justify-between mb-5">
                         <h4 className="font-heading font-bold text-lg sm:text-xl text-white">Why Buyers Trust Us</h4>
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#2F7549] shadow-md">
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#1E2733] shadow-md">
                           <ShieldCheck className="w-5 h-5 text-white" />
                         </span>
                       </div>
@@ -201,8 +201,8 @@ export default function Home() {
                           { icon: Leaf, title: "Compliant & Ethical", desc: "We follow global standards and ethical practices." },
                         ].map(({ icon: TrustIcon, title, desc }) => (
                           <li key={title} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
-                            <span className="mt-0.5 inline-flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#6BCB93]/15">
-                              <TrustIcon className="w-5 h-5 text-[#6BCB93]" strokeWidth={1.8} />
+                            <span className="mt-0.5 inline-flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#B3AA98]/15">
+                              <TrustIcon className="w-5 h-5 text-[#B3AA98]" strokeWidth={1.8} />
                             </span>
                             <div>
                               <p className="font-bold text-white text-sm sm:text-base">{title}</p>
@@ -222,10 +222,10 @@ export default function Home() {
                         <Link
                           key={item.id}
                           href={item.href}
-                          className="group relative rounded-2xl overflow-hidden border border-white/10 bg-[#0b231b]/85 backdrop-blur-md shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#6BCB93]/40"
+                          className="group relative rounded-2xl overflow-hidden border border-white/10 bg-[#161D27]/85 backdrop-blur-md shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#B3AA98]/40"
                         >
                           {/* number badge */}
-                          <span className="absolute top-4 left-4 z-20 inline-flex items-center justify-center w-9 h-9 rounded-lg bg-[#2F7549] text-white font-bold text-sm shadow-md">
+                          <span className="absolute top-4 left-4 z-20 inline-flex items-center justify-center w-9 h-9 rounded-lg bg-[#1E2733] text-white font-bold text-sm shadow-md">
                             {String(i + 1).padStart(2, "0")}
                           </span>
                           {/* image */}
@@ -237,17 +237,17 @@ export default function Home() {
                               className="object-cover transition-transform duration-700 group-hover:scale-105"
                               sizes="(max-width: 768px) 100vw, 33vw"
                             />
-                            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#0b231b] via-[#0b231b]/40 to-transparent" />
+                            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#161D27] via-[#161D27]/40 to-transparent" />
                             {/* floating icon */}
-                            <span className="absolute -bottom-7 left-6 z-20 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#0b1a16] border border-white/10 shadow-lg">
-                              <Icon className="w-6 h-6 text-[#6BCB93]" strokeWidth={1.8} />
+                            <span className="absolute -bottom-7 left-6 z-20 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#0E1318] border border-white/10 shadow-lg">
+                              <Icon className="w-6 h-6 text-[#B3AA98]" strokeWidth={1.8} />
                             </span>
                           </div>
                           {/* body */}
                           <div className="px-6 pb-6 pt-10">
                             <h4 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">{item.title}</h4>
                             <p className="mt-2 text-white/70 text-sm leading-relaxed">{item.content}</p>
-                            <span className="mt-4 inline-flex items-center gap-1.5 font-bold text-sm text-[#6BCB93]">
+                            <span className="mt-4 inline-flex items-center gap-1.5 font-bold text-sm text-[#B3AA98]">
                               Learn more
                               <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
                             </span>
@@ -258,7 +258,7 @@ export default function Home() {
                   </div>
 
                   {/* BOTTOM — feature bar */}
-                  <div className="mt-8 rounded-2xl border border-white/10 bg-[#0b231b]/85 backdrop-blur-md">
+                  <div className="mt-8 rounded-2xl border border-white/10 bg-[#161D27]/85 backdrop-blur-md">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
                       {[
                         { icon: Globe, title: "Global Network", desc: "Access to top Pakistani textile manufacturers and Exporters" },
@@ -267,8 +267,8 @@ export default function Home() {
                         { icon: UserRound, title: "Dedicated Support", desc: "Experienced team by your side" },
                       ].map(({ icon: FeatIcon, title, desc }) => (
                         <div key={title} className="flex items-center gap-3 p-5 lg:p-6">
-                          <span className="inline-flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#6BCB93]/15">
-                            <FeatIcon className="w-5 h-5 text-[#6BCB93]" strokeWidth={1.8} />
+                          <span className="inline-flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#B3AA98]/15">
+                            <FeatIcon className="w-5 h-5 text-[#B3AA98]" strokeWidth={1.8} />
                           </span>
                           <div>
                             <p className="font-bold text-white text-sm">{title}</p>
@@ -290,22 +290,22 @@ export default function Home() {
         className="relative z-[1] py-20 lg:py-28 overflow-hidden"
         style={{
           background:
-            "radial-gradient(1100px circle at 0% 0%, rgba(4,120,87,0.22), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(16,185,129,0.15), transparent 50%), radial-gradient(700px circle at 50% 50%, rgba(5,150,105,0.08), transparent 70%), #15402A",
+            "radial-gradient(1100px circle at 0% 0%, rgba(60, 74, 90,0.22), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(138, 133, 124,0.15), transparent 50%), radial-gradient(700px circle at 50% 50%, rgba(92, 107, 126,0.08), transparent 70%), #0E1318",
         }}
         aria-labelledby="more-heading"
       >
         <Image src="/image/hero-bg/pexels-wasifmehmood997-15817294.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
-        <div className="absolute inset-0 bg-[#15402A]/65" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[#0E1318]/65" aria-hidden="true" />
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#86efac" align="center" light />
+            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#D8CDBA" align="center" light />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { href: "/products", icon: ProductsIcon, color: "#2F7549", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles — the four categories we trade." },
-                { href: "/global-textile-market", icon: MentorshipIcon, color: "#3E8F5E", title: "Global Textile Market", desc: "The size of the global textile opportunity, and Pakistan's place in it — with the key figures." },
-                { href: "/membership", icon: MeetingSpaceIcon, color: "#3C8F5E", title: "Membership", desc: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers." },
-                { href: "/news", icon: StructureIcon, color: "#245C3A", title: "News & Insights", desc: "Export guides and market insight for Pakistani textile exporters reaching global buyers." },
+                { href: "/products", icon: ProductsIcon, color: "#1E2733", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles — the four categories we trade." },
+                { href: "/global-textile-market", icon: MentorshipIcon, color: "#1E2733", title: "Global Textile Market", desc: "The size of the global textile opportunity, and Pakistan's place in it — with the key figures." },
+                { href: "/membership", icon: MeetingSpaceIcon, color: "#2A3542", title: "Membership", desc: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers." },
+                { href: "/news", icon: StructureIcon, color: "#141B24", title: "News & Insights", desc: "Export guides and market insight for Pakistani textile exporters reaching global buyers." },
               ].map((card, index) => {
                 const CardIcon = card.icon;
                 return (
@@ -321,7 +321,7 @@ export default function Home() {
                     href={card.href}
                     className="relative flex h-full flex-col rounded-2xl p-6 lg:p-7 overflow-hidden [transform:translateZ(0)]"
                     style={{
-                      background: "linear-gradient(180deg, rgba(21,64,42,0.72) 0%, rgba(21,64,42,0.58) 100%)",
+                      background: "linear-gradient(180deg, rgba(14, 19, 24,0.72) 0%, rgba(14, 19, 24,0.58) 100%)",
                       border: "1px solid rgba(255,255,255,0.12)",
                       backdropFilter: "blur(12px)",
                       WebkitBackdropFilter: "blur(12px)",
@@ -386,7 +386,7 @@ export default function Home() {
           aria-hidden="true"
           style={{
             background:
-              "linear-gradient(90deg, rgba(11,33,22,0.92) 0%, rgba(21,64,42,0.78) 42%, rgba(21,64,42,0.32) 70%, rgba(21,64,42,0.12) 100%)",
+              "linear-gradient(90deg, rgba(14, 19, 24,0.92) 0%, rgba(14, 19, 24,0.78) 42%, rgba(14, 19, 24,0.32) 70%, rgba(14, 19, 24,0.12) 100%)",
           }}
         />
         <div className="absolute inset-0 -z-10 opacity-[0.05]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #fff 0.5px, transparent 0.5px)", backgroundSize: "32px 32px" }} />
@@ -396,7 +396,7 @@ export default function Home() {
               <SectionLabel
                 label="Raw material"
                 title="It starts in the cotton field"
-                color="#8FD3AE"
+                color="#B3AA98"
                 light
               />
               <p className="text-white/85 text-base sm:text-lg leading-relaxed">
@@ -434,14 +434,14 @@ export default function Home() {
         className="relative z-[1] py-20 lg:py-24 overflow-hidden"
         style={{
           background:
-            "radial-gradient(1000px circle at 100% 0%, rgba(16,185,129,0.20), transparent 50%), radial-gradient(900px circle at 0% 100%, rgba(16,185,129,0.13), transparent 50%), #15402A",
+            "radial-gradient(1000px circle at 100% 0%, rgba(138, 133, 124,0.20), transparent 50%), radial-gradient(900px circle at 0% 100%, rgba(138, 133, 124,0.13), transparent 50%), #0E1318",
         }}
         aria-labelledby="impact-heading"
       >
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pakistan Textile Partners' work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#8FD3AE" align="center" light />
+            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pakistan Textile Partners' work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#B3AA98" align="center" light />
             <ImpactStats />
           </AnimatedSection>
         </div>
@@ -456,16 +456,16 @@ export default function Home() {
         <Image src="/image/globe.png" alt="" aria-hidden width={520} height={520} className="pointer-events-none select-none absolute -right-16 -top-10 w-[300px] lg:w-[440px] h-auto opacity-25 z-0" />
         <div className="relative z-[1] px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Market Intelligence" title="The global textile market — and Pakistan's place in it" color="#2F7549" />
+            <SectionLabel label="Market Intelligence" title="The global textile market — and Pakistan's place in it" color="#1E2733" />
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-2">
                 <div className="grid grid-cols-2 gap-6">
                   {[
-                    { value: 359, label: "US apparel market — the world's largest (2024)", color: "#2F7549", prefix: "$", suffix: "B" },
-                    { value: 4.3, decimals: 1, label: "Pakistan's textile exports to the US (2025)", color: "#3E8F5E", prefix: "$", suffix: "B+" },
-                    { value: 63.6, decimals: 1, label: "UK textile & apparel market (2025)", color: "#245C3A", prefix: "$", suffix: "B" },
-                    { value: 62.7, decimals: 1, label: "European sportswear market (2025)", color: "#245C3A", prefix: "$", suffix: "B" },
+                    { value: 359, label: "US apparel market — the world's largest (2024)", color: "#1E2733", prefix: "$", suffix: "B" },
+                    { value: 4.3, decimals: 1, label: "Pakistan's textile exports to the US (2025)", color: "#1E2733", prefix: "$", suffix: "B+" },
+                    { value: 63.6, decimals: 1, label: "UK textile & apparel market (2025)", color: "#141B24", prefix: "$", suffix: "B" },
+                    { value: 62.7, decimals: 1, label: "European sportswear market (2025)", color: "#141B24", prefix: "$", suffix: "B" },
                   ].map((stat, index) => (
                     <motion.div
                       key={stat.label}
@@ -502,7 +502,7 @@ export default function Home() {
             </div>
 
             <AnimatedSection animation="fade-up">
-              <div className="mt-10 relative overflow-hidden rounded-xl bg-gradient-to-r from-[#15402A] to-[#2F7549]">
+              <div className="mt-10 relative overflow-hidden rounded-xl bg-gradient-to-r from-[#0E1318] to-[#1E2733]">
                 <div className="absolute inset-0 opacity-[0.05]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 0%, transparent 50%), radial-gradient(circle at 80% 50%, white 0%, transparent 50%)" }} />
                 <div className="relative px-8 sm:px-10 py-8">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
@@ -510,7 +510,7 @@ export default function Home() {
                       <h3 className="font-heading font-bold text-white text-xl sm:text-2xl leading-snug mb-2">Explore the global textile market in full</h3>
                       <p className="text-white/80 text-sm sm:text-base leading-relaxed">Market sizing, Pakistan's global position, key export markets, and category strengths — with cited figures.</p>
                     </div>
-                    <Link href="/global-textile-market" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-white text-[#15402A] text-sm font-bold hover:bg-[#3E8F5E] hover:text-white transition-colors duration-300 shadow-lg whitespace-nowrap">
+                    <Link href="/global-textile-market" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-white text-[#0E1318] text-sm font-bold hover:bg-[#1E2733] hover:text-white transition-colors duration-300 shadow-lg whitespace-nowrap">
                       Explore the market <ArrowUpRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -522,10 +522,10 @@ export default function Home() {
       </section>
 
       {/* PAKISTAN'S TEXTILE & TRADE INSTITUTIONS — horizontal auto-scrolling marquee */}
-      <section className="relative z-[1] py-14 lg:py-20 overflow-hidden bg-white" aria-labelledby="network-heading">
-        <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #16291E 0.5px, transparent 0.5px)", backgroundSize: "28px 28px" }} />
+      <section className="relative z-[1] py-14 lg:py-20 overflow-hidden bg-[#F6F2EA]" aria-labelledby="network-heading">
+        <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "28px 28px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
-          <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#2F7549" align="center" />
+          <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#1E2733" align="center" />
           <div
             className="group relative mt-10 overflow-hidden"
             style={{
@@ -558,7 +558,7 @@ export default function Home() {
         className="relative z-[1] py-20 lg:py-28 overflow-hidden"
         style={{
           background:
-            "radial-gradient(1000px circle at 0% 0%, rgba(134,239,172,0.13), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(4,120,87,0.18), transparent 50%), #15402A",
+            "radial-gradient(1000px circle at 0% 0%, rgba(216, 205, 186,0.13), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(60, 74, 90,0.18), transparent 50%), #0E1318",
         }}
         aria-labelledby="news-heading"
       >
@@ -569,7 +569,7 @@ export default function Home() {
           <AnimatedSection animation="blur-in">
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-4 flex flex-col justify-center">
-                <SectionLabel label="Stay Informed" title="News & Insights" color="#86efac" light />
+                <SectionLabel label="Stay Informed" title="News & Insights" color="#D8CDBA" light />
                 <p className="text-white/85 text-sm sm:text-base leading-relaxed">
                   Export guides, global market trends, and insight for Pakistani textile exporters reaching buyers worldwide.
                 </p>
