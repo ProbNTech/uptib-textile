@@ -116,7 +116,7 @@ function FeatureChips({ slug }: { slug: string }) {
       {chips.map((c) => (
         <span
           key={c}
-          className="inline-flex items-center rounded-full bg-[#F6F2EA] px-2.5 py-1 text-[11px] font-medium text-[#1E2733]"
+          className="inline-flex items-center rounded-full bg-[#F6F2EA] px-2.5 py-1 text-[11px] font-medium text-[#394F73]"
         >
           {c}
         </span>
@@ -152,7 +152,7 @@ export default function ProductsClient() {
 
       {/* ── FLOATING FACTS CARD ──────────────────────────────────── */}
       <div className={cn("relative z-[3] -mt-14 sm:-mt-16 lg:-mt-20", PX)}>
-        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(60, 74, 90,0.30)] p-6 sm:p-8">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(140, 154, 171,0.30)] p-6 sm:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
             {heroFacts.map((f, i) => {
               const Icon = f.icon;
@@ -161,7 +161,7 @@ export default function ProductsClient() {
                   key={f.value}
                   className={cn("flex items-start gap-3.5", i > 0 && "lg:border-l lg:border-[#E5E7EB] lg:pl-6")}
                 >
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733]">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#78899B]/10 text-[#394F73]">
                     <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                   </span>
                   <div>
@@ -182,8 +182,8 @@ export default function ProductsClient() {
           <AnimatedSection animation="blur-in">
             <div className="mb-10 max-w-2xl lg:mb-12">
               <div className="mb-4 flex items-center gap-3">
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#1E2733]">The four categories</p>
-                <span className="h-px w-10 bg-[#1E2733]/40" aria-hidden />
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#394F73]">The four categories</p>
+                <span className="h-px w-10 bg-[#78899B]/40" aria-hidden />
               </div>
               <h2 className="mb-4 font-heading font-extrabold text-4xl sm:text-5xl leading-[1.1] text-[#1A1A1A]">
                 What&apos;s in the range
@@ -222,8 +222,8 @@ export default function ProductsClient() {
                       />
                       {/* icon · number · name pill */}
                       <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur px-2.5 py-1.5 shadow-sm">
-                        <Icon className="size-3.5 text-[#1E2733]" strokeWidth={2} aria-hidden />
-                        <span className="text-[10px] font-extrabold tabular-nums text-[#1E2733]">
+                        <Icon className="size-3.5 text-[#394F73]" strokeWidth={2} aria-hidden />
+                        <span className="text-[10px] font-extrabold tabular-nums text-[#394F73]">
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         <span className="text-[10px] font-bold uppercase tracking-wide text-[#1A1A1A]">{p.name}</span>
@@ -234,7 +234,7 @@ export default function ProductsClient() {
                       <h3 className="mb-2 font-heading font-bold text-lg leading-snug text-[#1A1A1A]">{p.headline}</h3>
                       <p className="mb-4 text-sm text-[#5A5F72] leading-relaxed">{p.short}</p>
                       <FeatureChips slug={p.slug} />
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733]">
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#394F73]">
                         Explore {p.name} <ArrowUpRight className="size-4" />
                       </span>
                     </div>
@@ -256,10 +256,10 @@ export default function ProductsClient() {
                 <SectionLabel
                   label="Why Pakistan Textile Partners"
                   title="Product is only half the story"
-                  color="#1E2733"
+                  color="#394F73"
                   hideLine
                 />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] -mt-3 mb-5" />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
                   Great textiles still need a partner who can vouch for the factory, guarantee the quality and get the
                   goods to your market. That is what we do — across all four categories.
@@ -291,11 +291,11 @@ export default function ProductsClient() {
                       transition={{ duration: 0.45, delay: index * 0.06 }}
                       className="rounded-2xl border border-[#E5E7EB] bg-white p-7 shadow-sm"
                     >
-                      <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#1E2733]/10 text-[#1E2733] mb-6">
+                      <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#78899B]/10 text-[#394F73] mb-6">
                         <Icon className="size-6" strokeWidth={1.75} aria-hidden />
                       </span>
                       <h3 className="font-heading font-bold text-lg text-[#1A1A1A] leading-snug">{b.title}</h3>
-                      <div className="mt-2.5 mb-4 h-0.5 w-8 rounded-full bg-[#1E2733]" />
+                      <div className="mt-2.5 mb-4 h-0.5 w-8 rounded-full bg-[#78899B]" />
                       <p className="text-sm text-[#5A5F72] leading-relaxed">{b.desc}</p>
                     </motion.div>
                   );
@@ -315,23 +315,23 @@ export default function ProductsClient() {
                 <SectionLabel
                   label="Responsible by default"
                   title="Sustainability runs through all of it"
-                  color="#1E2733"
+                  color="#394F73"
                   hideLine
                 />
-                <div className="-mt-4 mb-6 h-1 w-16 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733]" />
+                <div className="-mt-4 mb-6 h-1 w-16 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B]" />
                 <p className="mb-7 max-w-md text-base sm:text-lg leading-relaxed text-[#5A5F72]">
                   Across every category we work with factories carrying the certifications global
                   buyers increasingly require — and can prioritise organic cotton, recycled materials
                   and full traceability on request.
                 </p>
                 <div className="flex flex-col items-start gap-3">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#F6F2EA] px-4 py-2 text-sm font-semibold text-[#1E2733]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#F6F2EA] px-4 py-2 text-sm font-semibold text-[#394F73]">
                     <Leaf className="size-4" aria-hidden /> Organic cotton
                   </span>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#F6F2EA] px-4 py-2 text-sm font-semibold text-[#1E2733]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#F6F2EA] px-4 py-2 text-sm font-semibold text-[#394F73]">
                     <Recycle className="size-4" aria-hidden /> Recycled materials
                   </span>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#F6F2EA] px-4 py-2 text-sm font-semibold text-[#1E2733]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#F6F2EA] px-4 py-2 text-sm font-semibold text-[#394F73]">
                     <ShieldCheck className="size-4" aria-hidden /> Audited supply chains
                   </span>
                 </div>
@@ -345,7 +345,7 @@ export default function ProductsClient() {
                       key={c.code}
                       className="flex flex-col items-center rounded-2xl border border-[#E5E7EB] bg-white px-4 py-7 text-center shadow-sm"
                     >
-                      <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#1E2733]/10 text-[#1E2733]">
+                      <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#78899B]/10 text-[#394F73]">
                         <Icon className="size-6" strokeWidth={1.75} aria-hidden />
                       </span>
                       <p className="mt-5 font-heading font-extrabold text-[#1A1A1A] text-lg leading-none">
@@ -362,7 +362,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── MARKETS (dark band) ──────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#0E1318] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#394F73] py-20 lg:py-28">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -441,13 +441,13 @@ export default function ProductsClient() {
                   label="FAQs"
                   title="Sourcing questions, answered"
                   body="What buyers ask us most about sourcing textiles from Pakistan."
-                  color="#1E2733"
+                  color="#394F73"
                   as="h2"
                   hideLine
                 />
-                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]">
+                <div className="mt-2 max-w-sm rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-[0_10px_30px_-12px_rgba(140, 154, 171,0.18)]">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733] text-white">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#78899B] text-white">
                       <HelpCircle className="size-5" aria-hidden />
                     </span>
                     <div>
@@ -456,7 +456,7 @@ export default function ProductsClient() {
                     </div>
                   </div>
                   <div className="mt-4">
-                    <Link href="/contact" className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733]">
+                    <Link href="/contact" className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#394F73]">
                       Talk to our team
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
                     </Link>
@@ -475,8 +475,8 @@ export default function ProductsClient() {
                       className={cn(
                         "rounded-2xl border transition-colors duration-200",
                         isOpen
-                          ? "border-[#1E2733]/25 bg-[#1E2733]/[0.04] shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.18)]"
-                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(60, 74, 90,0.12)]",
+                          ? "border-[#78899B]/25 bg-[#78899B]/[0.04] shadow-[0_10px_30px_-12px_rgba(140, 154, 171,0.18)]"
+                          : "border-[#E5E7EB] bg-white hover:border-[#D1D5DB] hover:shadow-[0_10px_30px_-12px_rgba(140, 154, 171,0.12)]",
                       )}
                     >
                       <h3>
@@ -491,7 +491,7 @@ export default function ProductsClient() {
                           <span
                             className={cn(
                               "inline-flex size-9 shrink-0 items-center justify-center rounded-xl text-sm font-bold tabular-nums transition-colors",
-                              isOpen ? "bg-[#1E2733] text-white" : "bg-[#1E2733]/10 text-[#1E2733]",
+                              isOpen ? "bg-[#78899B] text-white" : "bg-[#78899B]/10 text-[#394F73]",
                             )}
                             aria-hidden
                           >
@@ -501,7 +501,7 @@ export default function ProductsClient() {
                           <span
                             className={cn(
                               "inline-flex size-8 shrink-0 items-center justify-center rounded-full transition-colors",
-                              isOpen ? "bg-[#1E2733] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
+                              isOpen ? "bg-[#78899B] text-white" : "bg-[#F8FAFC] text-[#5A5F72]",
                             )}
                             aria-hidden
                           >

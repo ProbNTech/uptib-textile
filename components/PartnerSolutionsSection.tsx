@@ -14,14 +14,14 @@ const showcase = partnerSolutions
 
 /* Light per-industry accent for the category chip */
 const categoryAccent: Record<string, { chip: string; text: string; ring: string; dot: string }> = {
-  "Home Textile":                 { chip: "#F6F2EA", text: "#141B24", ring: "#ECE5D8", dot: "#1E2733" },
-  "Hospitality Products":         { chip: "#FFFFFF", text: "#2A3542", ring: "#ECE5D8", dot: "#5C6B7E" },
-  "Apparel - Denim":              { chip: "#EFF6FF", text: "#2A3542", ring: "#D8CDBA", dot: "#3C4A5A" },
-  "Garments - Ladies & Children": { chip: "#FDF2F8", text: "#1E2733", ring: "#D8CDBA", dot: "#2A3542" },
-  "Knitwear - Private label":     { chip: "#EEF2FF", text: "#1E2733", ring: "#D8CDBA", dot: "#2A3542" },
-  "Healthcare Products":          { chip: "#ECFEFF", text: "#2A3542", ring: "#ECE5D8", dot: "#5C6B7E" },
-  "Sportswear & Activewear":      { chip: "#FFFFFF", text: "#2A3542", ring: "#ECE5D8", dot: "#5C6B7E" },
-  "Yarn & Fabric":                { chip: "#FFFFFF", text: "#2A3542", ring: "#ECE5D8", dot: "#5C6B7E" },
+  "Home Textile":                 { chip: "#F6F2EA", text: "#5E7088", ring: "#ECE5D8", dot: "#78899B" },
+  "Hospitality Products":         { chip: "#FFFFFF", text: "#647689", ring: "#ECE5D8", dot: "#A3AEBC" },
+  "Apparel - Denim":              { chip: "#EFF6FF", text: "#647689", ring: "#D8CDBA", dot: "#8C9AAB" },
+  "Garments - Ladies & Children": { chip: "#FDF2F8", text: "#78899B", ring: "#D8CDBA", dot: "#647689" },
+  "Knitwear - Private label":     { chip: "#EEF2FF", text: "#78899B", ring: "#D8CDBA", dot: "#647689" },
+  "Healthcare Products":          { chip: "#ECFEFF", text: "#647689", ring: "#ECE5D8", dot: "#A3AEBC" },
+  "Sportswear & Activewear":      { chip: "#FFFFFF", text: "#647689", ring: "#ECE5D8", dot: "#A3AEBC" },
+  "Yarn & Fabric":                { chip: "#FFFFFF", text: "#647689", ring: "#ECE5D8", dot: "#A3AEBC" },
 };
 
 function getAccent(category: string) {
@@ -41,7 +41,7 @@ function ProductCard({ item, index }: { item: PartnerSolution; index: number }) 
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.55, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative aspect-[4/5] overflow-hidden rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_45px_-22px_rgba(60, 74, 90,0.50)]"
+      className="group relative aspect-[4/5] overflow-hidden rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_45px_-22px_rgba(140, 154, 171,0.50)]"
     >
       {/* Full-bleed vertical product photo */}
       <Image
@@ -113,7 +113,7 @@ export default function PartnerSolutionsSection() {
           <div className="mt-10">
             <Link
               href="/products"
-              className="group inline-flex items-center gap-2 text-sm font-semibold text-[#1E2733] hover:text-[#141B24] transition-colors"
+              className="group inline-flex items-center gap-2 text-sm font-semibold text-[#394F73] hover:text-[#394F73] transition-colors"
             >
               Explore all products
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

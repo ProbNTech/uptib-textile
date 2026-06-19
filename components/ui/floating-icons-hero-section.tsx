@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 
 /* Brand color palette for icon glow */
 const BRAND_COLORS = [
-  { color: "#1E2733", glow: "rgba(60, 74, 90,0.4)", bg: "rgba(60, 74, 90,0.15)", border: "rgba(60, 74, 90,0.30)" },
-  { color: "#1E2733", glow: "rgba(138, 133, 124,0.4)", bg: "rgba(138, 133, 124,0.15)", border: "rgba(138, 133, 124,0.30)" },
-  { color: "#1E2733", glow: "rgba(60, 74, 90,0.4)", bg: "rgba(60, 74, 90,0.15)", border: "rgba(60, 74, 90,0.30)" },
+  { color: "#394F73", glow: "rgba(140, 154, 171,0.4)", bg: "rgba(140, 154, 171,0.15)", border: "rgba(140, 154, 171,0.30)" },
+  { color: "#394F73", glow: "rgba(138, 133, 124,0.4)", bg: "rgba(138, 133, 124,0.15)", border: "rgba(138, 133, 124,0.30)" },
+  { color: "#394F73", glow: "rgba(140, 154, 171,0.4)", bg: "rgba(140, 154, 171,0.15)", border: "rgba(140, 154, 171,0.30)" },
   { color: "#B3AA98", glow: "rgba(179, 170, 152,0.35)", bg: "rgba(179, 170, 152,0.12)", border: "rgba(179, 170, 152,0.25)" },
 ];
 

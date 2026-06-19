@@ -229,7 +229,7 @@ export default function PrivacyPage() {
                   "invite you to event(s), trade delegations or exhibitions that we may think are relevant to you in your professional capacity.",
                 ]}
               />
-              <p className="border-l-2 border-[#1E2733]/40 pl-5 text-[#5A5F72]">
+              <p className="border-l-2 border-[#78899B]/40 pl-5 text-[#5A5F72]">
                 When we legitimately process your personal information in this way, we consider and
                 balance any potential impact on you (both positive and negative), and your rights under
                 data protection laws. We will not use your personal information where our interests are
@@ -296,7 +296,7 @@ export default function PrivacyPage() {
           </div>
           <p className="pt-2">
             If you want to exercise any of the above rights, please email us at{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">
               info@ukpaktrade.org.uk
             </a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
@@ -312,7 +312,7 @@ export default function PrivacyPage() {
               href="https://ico.org.uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-[#1E2733] underline underline-offset-2"
+              className="font-medium text-[#394F73] underline underline-offset-2"
             >
               https://ico.org.uk
             </a>
@@ -365,7 +365,7 @@ export default function PrivacyPage() {
           <p>
             For any questions about this Privacy Policy or our treatment of your Personal Information,
             please contact{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">
               info@ukpaktrade.org.uk
             </a>
             .

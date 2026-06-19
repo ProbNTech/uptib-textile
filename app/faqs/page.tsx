@@ -93,7 +93,7 @@ export default function FAQsPage() {
                   setOpen(null);
                 }}
                 placeholder="Search questions…"
-                className="w-full rounded-full border border-[#E2E2DC] bg-white py-3 pl-11 pr-10 text-[15px] text-[#1A1A1A] outline-none transition-colors duration-150 placeholder:text-[#9AA0AC] focus:border-[#1E2733]"
+                className="w-full rounded-full border border-[#E2E2DC] bg-white py-3 pl-11 pr-10 text-[15px] text-[#1A1A1A] outline-none transition-colors duration-150 placeholder:text-[#9AA0AC] focus:border-[#78899B]"
               />
               {query && (
                 <button
@@ -116,7 +116,7 @@ export default function FAQsPage() {
                   <h2 className="font-heading text-[1.4rem] font-bold leading-tight text-[#1A1A1A]">
                     {cat.category}
                   </h2>
-                  <div className="mt-3 mb-5 h-px w-12 bg-[#1E2733]" />
+                  <div className="mt-3 mb-5 h-px w-12 bg-[#78899B]" />
                   <div className="border-t border-[#ECECE6]">
                     {cat.faqs.map((f, i) => {
                       const key = `${cat.category}-${i}`;
@@ -132,7 +132,7 @@ export default function FAQsPage() {
                               {f.question}
                             </span>
                             <ChevronDown
-                              className={`h-5 w-5 flex-shrink-0 text-[#1E2733] transition-transform duration-200 ${
+                              className={`h-5 w-5 flex-shrink-0 text-[#394F73] transition-transform duration-200 ${
                                 isOpen ? "rotate-180" : ""
                               }`}
                             />

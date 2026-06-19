@@ -9,7 +9,7 @@ const advisors = [
     role: "President",
     bio: "Leading global trade partnerships, buyer engagement, and operational strategy across export markets.",
     photo: "/image/ceo/khalil-choudhary-headshot.jpg",
-    accent: "#1E2733",
+    accent: "#78899B",
     delay: 0,
   },
   {
@@ -17,7 +17,7 @@ const advisors = [
     role: "Director - Trade & Exports",
     bio: "Driving export programmes, supplier development, and market-access strategy across global markets.",
     photo: "/image/board/director.jpg",
-    accent: "#1E2733",
+    accent: "#78899B",
     delay: 0.15,
   },
   {
@@ -25,7 +25,7 @@ const advisors = [
     role: "Director Marketing UK",
     bio: "Leading marketing strategy, brand positioning, and stakeholder engagement across the UK.",
     photo: "/image/board/mehrouz.jpeg",
-    accent: "#1E2733",
+    accent: "#78899B",
     delay: 0.15,
   },
 ];
@@ -61,8 +61,8 @@ export default function BoardOfAdvisors({ dark = false }: { dark?: boolean }) {
       className="relative py-20 lg:py-28 overflow-hidden"
       style={{
         background: dark
-          ? "#0E1318"
-          : "radial-gradient(1000px circle at 50% 0%, rgba(60, 74, 90,0.07), transparent 50%), radial-gradient(800px circle at 10% 100%, rgba(92, 107, 126,0.05), transparent 50%), radial-gradient(700px circle at 90% 100%, rgba(138, 133, 124,0.04), transparent 50%), #FFFFFF",
+          ? "#394F73"
+          : "radial-gradient(1000px circle at 50% 0%, rgba(140, 154, 171,0.07), transparent 50%), radial-gradient(800px circle at 10% 100%, rgba(163, 174, 188,0.05), transparent 50%), radial-gradient(700px circle at 90% 100%, rgba(138, 133, 124,0.04), transparent 50%), #FFFFFF",
       }}
     >
       {/* Subtle dot-grid texture */}
@@ -87,7 +87,7 @@ export default function BoardOfAdvisors({ dark = false }: { dark?: boolean }) {
           className="text-center mb-14 lg:mb-16"
         >
           <div className="flex items-center gap-3 mb-4 justify-center">
-            <p className={`text-sm font-bold uppercase tracking-[0.22em] ${dark ? "text-[#B3AA98]" : "text-[#1E2733]"}`}>
+            <p className={`text-sm font-bold uppercase tracking-[0.22em] ${dark ? "text-[#B3AA98]" : "text-[#394F73]"}`}>
               Leadership
             </p>
           </div>
@@ -126,11 +126,11 @@ export default function BoardOfAdvisors({ dark = false }: { dark?: boolean }) {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-14 lg:mt-16 flex items-center justify-center gap-3"
         >
-          <div className={`h-px flex-1 max-w-[140px] bg-gradient-to-r from-transparent ${dark ? "to-white/30" : "to-[#1E2733]/30"}`} />
+          <div className={`h-px flex-1 max-w-[140px] bg-gradient-to-r from-transparent ${dark ? "to-white/30" : "to-[#78899B]/30"}`} />
           <p className={`text-xs sm:text-sm uppercase tracking-[0.2em] font-medium text-center ${dark ? "text-white/70" : "text-[#5A5F72]"}`}>
             More advisors joining soon
           </p>
-          <div className={`h-px flex-1 max-w-[140px] bg-gradient-to-l from-transparent ${dark ? "to-white/30" : "to-[#1E2733]/30"}`} />
+          <div className={`h-px flex-1 max-w-[140px] bg-gradient-to-l from-transparent ${dark ? "to-white/30" : "to-[#78899B]/30"}`} />
         </motion.div>
       </div>
     </section>
@@ -149,7 +149,7 @@ function AdvisorCard({
     <div className="group relative flex flex-col items-center text-center rounded-xl overflow-hidden h-full">
       {/* Card background — white with subtle border */}
       <div
-        className="absolute inset-0 rounded-xl transition-all duration-500 bg-[#f7f8fa] border border-[#E5E7EB] group-hover:shadow-xl group-hover:border-[#1E2733]/20"
+        className="absolute inset-0 rounded-xl transition-all duration-500 bg-[#f7f8fa] border border-[#E5E7EB] group-hover:shadow-xl group-hover:border-[#78899B]/20"
       />
 
       {/* Card content */}

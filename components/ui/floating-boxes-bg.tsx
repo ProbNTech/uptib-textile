@@ -4,11 +4,11 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 const BRAND = [
-  { r: 37 / 255, g: 99 / 255, b: 235 / 255 },  // Blue #1E2733
-  { r: 34 / 255, g: 197 / 255, b: 94 / 255 },   // Green #1E2733
-  { r: 196 / 255, g: 30 / 255, b: 58 / 255 },    // Red #1E2733
+  { r: 37 / 255, g: 99 / 255, b: 235 / 255 },  // Blue #78899B
+  { r: 34 / 255, g: 197 / 255, b: 94 / 255 },   // Green #78899B
+  { r: 196 / 255, g: 30 / 255, b: 58 / 255 },    // Red #78899B
   { r: 234 / 255, g: 179 / 255, b: 8 / 255 },    // Yellow #B3AA98
-  { r: 26 / 255, g: 43 / 255, b: 94 / 255 },     // Navy #0E1318
+  { r: 26 / 255, g: 43 / 255, b: 94 / 255 },     // Navy #394F73
 ];
 
 interface BoxData {

@@ -84,9 +84,9 @@ export default function CookiesPage() {
             Cookies are text files placed on your computer to collect standard internet log information
             and visitor behavior information. This information is used to track visitor use of the website
             and to compile statistical reports on website activity. For further information visit{" "}
-            <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" className="font-medium text-[#1E2733] underline underline-offset-2">www.aboutcookies.org</a>{" "}
+            <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" className="font-medium text-[#394F73] underline underline-offset-2">www.aboutcookies.org</a>{" "}
             or{" "}
-            <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener noreferrer" className="font-medium text-[#1E2733] underline underline-offset-2">www.allaboutcookies.org</a>.
+            <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener noreferrer" className="font-medium text-[#394F73] underline underline-offset-2">www.allaboutcookies.org</a>.
           </p>
           <p>
             You can set your browser not to accept cookies, and the above websites tell you how to remove
@@ -144,7 +144,7 @@ export default function CookiesPage() {
             should browse the site using your browser’s anonymous usage setting (called “Incognito” in
             Chrome, “InPrivate” for Internet Explorer, “Private Browsing” in Firefox and Safari). For more
             help,{" "}
-            <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" className="font-medium text-[#1E2733] underline underline-offset-2">www.aboutcookies.org</a>{" "}
+            <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" className="font-medium text-[#394F73] underline underline-offset-2">www.aboutcookies.org</a>{" "}
             contains information on how to do this on a wide variety of desktop browsers.
           </p>
         </PolicySection>
@@ -154,7 +154,7 @@ export default function CookiesPage() {
             GDPR compliance requires data subjects to be granted certain rights. What follows is not an
             exhaustive list, but those rights that are relevant to the collection, processing, and storage
             of personal data on{" "}
-            <a href="https://www.ukpaktrade.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#1E2733] underline underline-offset-2">www.ukpaktrade.org.uk</a>.
+            <a href="https://www.ukpaktrade.org.uk" target="_blank" rel="noopener noreferrer" className="font-medium text-[#394F73] underline underline-offset-2">www.ukpaktrade.org.uk</a>.
           </p>
           <div className="space-y-6 pt-2">
             {rights.map((r) => (
@@ -193,7 +193,7 @@ export default function CookiesPage() {
           <p>
             For any questions about this Cookies Policy or our treatment of your Personal Information,
             please contact{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#1E2733] underline underline-offset-2">info@ukpaktrade.org.uk</a>.
+            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">info@ukpaktrade.org.uk</a>.
           </p>
         </PolicySection>
       </PolicyDoc>

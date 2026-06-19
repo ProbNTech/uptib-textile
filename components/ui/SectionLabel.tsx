@@ -14,7 +14,7 @@ interface SectionLabelProps {
   bodyClassName?: string;
 }
 
-export function SectionLabel({ label, title, body, color = "#1E2733", align = "left", light = false, as: Tag = "h2", hideLine = false, bodyClassName = "" }: SectionLabelProps) {
+export function SectionLabel({ label, title, body, color = "#394F73", align = "left", light = false, as: Tag = "h2", hideLine = false, bodyClassName = "" }: SectionLabelProps) {
   const alignClass = align === "center" ? "text-center" : "";
   return (
     <div className={`mb-8 lg:mb-10 ${alignClass}`}>

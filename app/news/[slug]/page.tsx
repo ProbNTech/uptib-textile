@@ -54,7 +54,7 @@ export default async function ArticlePage({ params }: Props) {
       />
 
       <Section variant="light" pattern>
-        <Link href="/news" className="inline-flex items-center gap-2 text-[#1E2733] text-sm font-semibold mb-8 hover:text-[#141B24] transition-colors">
+        <Link href="/news" className="inline-flex items-center gap-2 text-[#394F73] text-sm font-semibold mb-8 hover:text-[#394F73] transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to News
         </Link>
         <article className="max-w-3xl mx-auto content-body">
@@ -79,7 +79,7 @@ export default async function ArticlePage({ params }: Props) {
                 <ul className="space-y-2 mt-4">
                   {section.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#1E2733] flex-shrink-0" />
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#78899B] flex-shrink-0" />
                       <span className="text-[#3D4152]">{b}</span>
                     </li>
                   ))}
@@ -94,9 +94,9 @@ export default async function ArticlePage({ params }: Props) {
           <h2 className="font-heading font-extrabold text-[#1A1A1A] text-2xl mb-6">Read next</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {readNext.map((n) => (
-              <Link key={n.slug} href={`/news/${n.slug}`} className="group flex flex-col rounded-card border border-[#E5E7EB] bg-white p-6 hover:border-[#1E2733] hover:shadow-lg transition-all duration-300">
-                <span className="text-xs font-bold uppercase tracking-wide text-[#1E2733] mb-2">{n.category}</span>
-                <h3 className="font-heading font-bold text-[#1A1A1A] text-base leading-snug mb-2 group-hover:text-[#1E2733] transition-colors">{n.title}</h3>
+              <Link key={n.slug} href={`/news/${n.slug}`} className="group flex flex-col rounded-card border border-[#E5E7EB] bg-white p-6 hover:border-[#78899B] hover:shadow-lg transition-all duration-300">
+                <span className="text-xs font-bold uppercase tracking-wide text-[#394F73] mb-2">{n.category}</span>
+                <h3 className="font-heading font-bold text-[#1A1A1A] text-base leading-snug mb-2 group-hover:text-[#394F73] transition-colors">{n.title}</h3>
                 <p className="text-[#6B7280] text-sm leading-relaxed flex-1">{n.excerpt}</p>
                 <span className="text-xs text-[#9CA3AF] mt-4">{n.displayDate} · {n.readTime}</span>
               </Link>

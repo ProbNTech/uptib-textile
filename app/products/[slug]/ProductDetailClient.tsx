@@ -81,7 +81,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
 
       {/* ── FLOATING FACTS CARD ──────────────────────────────────── */}
       <div className={cn("relative z-[3] -mt-14 sm:-mt-16 lg:-mt-20", PX)}>
-        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(60, 74, 90,0.30)] p-6 sm:p-8">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_24px_60px_-24px_rgba(140, 154, 171,0.30)] p-6 sm:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
             {heroFacts.map((f, i) => {
               const Icon = f.icon;
@@ -90,7 +90,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                   key={f.label}
                   className={cn("flex items-start gap-3.5", i > 0 && "lg:border-l lg:border-[#E5E7EB] lg:pl-6")}
                 >
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733]">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#78899B]/10 text-[#394F73]">
                     <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                   </span>
                   <div>
@@ -110,19 +110,19 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
           <AnimatedSection>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
               <div className="lg:col-span-5">
-                <SectionLabel label="Overview" title="Why Pakistan, for this" color="#1E2733" hideLine />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] -mt-3 mb-6" />
+                <SectionLabel label="Overview" title="Why Pakistan, for this" color="#394F73" hideLine />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-6" />
                 <p className="text-[#3D4152] text-lg leading-relaxed">{p.intro}</p>
 
                 <div className="mt-8">
-                  <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#1E2733] mb-4">
+                  <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#394F73] mb-4">
                     <Users className="size-4" aria-hidden /> Who sources this
                   </p>
                   <div className="flex flex-wrap gap-2.5">
                     {p.applications.map((a) => (
                       <span
                         key={a}
-                        className="inline-flex items-center rounded-full border border-[#ECE5D8] bg-[#F6F2EA] px-3.5 py-1.5 text-sm font-medium text-[#1E2733]"
+                        className="inline-flex items-center rounded-full border border-[#ECE5D8] bg-[#F6F2EA] px-3.5 py-1.5 text-sm font-medium text-[#394F73]"
                       >
                         {a}
                       </span>
@@ -132,10 +132,10 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
               </div>
 
               <div className="lg:col-span-7">
-                <div className="relative aspect-[16/11] overflow-hidden rounded-2xl border border-[#E5E7EB] shadow-[0_28px_60px_-28px_rgba(60, 74, 90,0.35)]">
+                <div className="relative aspect-[16/11] overflow-hidden rounded-2xl border border-[#E5E7EB] shadow-[0_28px_60px_-28px_rgba(140, 154, 171,0.35)]">
                   <Image src={imgs.feature} alt={p.name} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                  <span className="absolute left-5 bottom-5 inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-1.5 text-sm font-bold text-[#1E2733]">
+                  <span className="absolute left-5 bottom-5 inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-1.5 text-sm font-bold text-[#394F73]">
                     <Sparkles className="size-4" aria-hidden /> Made in Pakistan
                   </span>
                 </div>
@@ -158,7 +158,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                 label="The range"
                 title="What's included"
                 body="The product lines we source and supply within this category — built to your spec and certifications."
-                color="#1E2733"
+                color="#394F73"
                 hideLine
               />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -171,7 +171,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     className="flex items-start gap-3.5 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-[#1E2733] flex-shrink-0 mt-0.5" aria-hidden />
+                    <CheckCircle2 className="w-5 h-5 text-[#394F73] flex-shrink-0 mt-0.5" aria-hidden />
                     <span className="text-[#3D4152] leading-relaxed">{item}</span>
                   </motion.div>
                 ))}
@@ -189,7 +189,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
               label="Market outlook"
               title="What's driving demand"
               body={`The trends pulling global buyers toward ${p.name.toLowerCase()} — and where the opportunity is growing.`}
-              color="#1E2733"
+              color="#394F73"
               hideLine
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -202,11 +202,11 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                   transition={{ duration: 0.45, delay: index * 0.06 }}
                   className="flex h-full flex-col rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm"
                 >
-                  <span className="inline-flex size-12 items-center justify-center rounded-xl bg-[#1E2733]/10 text-[#1E2733] mb-5">
+                  <span className="inline-flex size-12 items-center justify-center rounded-xl bg-[#78899B]/10 text-[#394F73] mb-5">
                     <TrendingUp className="size-5" strokeWidth={1.75} aria-hidden />
                   </span>
                   <h3 className="font-heading font-bold text-[#1A1A1A] text-base leading-snug">{d.title}</h3>
-                  <div className="mt-2.5 mb-3 h-0.5 w-8 rounded-full bg-[#1E2733]" />
+                  <div className="mt-2.5 mb-3 h-0.5 w-8 rounded-full bg-[#78899B]" />
                   <p className="text-sm text-[#5A5F72] leading-relaxed">{d.desc}</p>
                 </motion.div>
               ))}
@@ -216,7 +216,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── THE FACTS ────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#0E1318] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#394F73] py-20 lg:py-28">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -268,15 +268,15 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
               <div className="lg:sticky lg:top-28 lg:self-start lg:max-w-sm">
-                <SectionLabel label="The advantage" title="Why Pakistan leads here" color="#1E2733" hideLine />
-                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#1E2733] to-[#1E2733] -mt-3 mb-5" />
+                <SectionLabel label="The advantage" title="Why Pakistan leads here" color="#394F73" hideLine />
+                <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base leading-relaxed">
                   The manufacturing strengths that make Pakistan a dependable origin for {p.name.toLowerCase()} — at
                   the quality, scale and price global buyers need.
                 </p>
                 {p.strengthsNote && (
                   <div className="mt-7 flex items-start gap-3.5 rounded-2xl border border-[#ECE5D8] bg-[#F6F2EA] p-5">
-                    <Award className="size-5 shrink-0 text-[#1E2733] mt-0.5" aria-hidden />
+                    <Award className="size-5 shrink-0 text-[#394F73] mt-0.5" aria-hidden />
                     <p className="text-sm font-medium text-[#1A1A1A] leading-relaxed">{p.strengthsNote}</p>
                   </div>
                 )}
@@ -292,7 +292,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     className="flex items-start gap-3.5 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-[#1E2733] flex-shrink-0 mt-0.5" aria-hidden />
+                    <CheckCircle2 className="w-5 h-5 text-[#394F73] flex-shrink-0 mt-0.5" aria-hidden />
                     <span className="text-[#3D4152] leading-relaxed">{s}</span>
                   </motion.div>
                 ))}
@@ -309,7 +309,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
             <SectionLabel
               label="Keep exploring"
               title="Other categories we trade"
-              color="#1E2733"
+              color="#394F73"
               hideLine
             />
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -319,7 +319,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                   <Link
                     key={o.slug}
                     href={`/products/${o.slug}`}
-                    className="group flex flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#1E2733]/50 hover:shadow-[0_24px_50px_-24px_rgba(60, 74, 90,0.35)]"
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#78899B]/50 hover:shadow-[0_24px_50px_-24px_rgba(140, 154, 171,0.35)]"
                   >
                     <div className="relative aspect-[16/10] overflow-hidden">
                       <Image
@@ -330,14 +330,14 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                         sizes="(max-width: 640px) 100vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
-                      <span className="absolute left-3 top-3 inline-flex size-9 items-center justify-center rounded-lg bg-white/90 backdrop-blur text-[#1E2733]">
+                      <span className="absolute left-3 top-3 inline-flex size-9 items-center justify-center rounded-lg bg-white/90 backdrop-blur text-[#394F73]">
                         <Icon className="size-[18px]" strokeWidth={2} aria-hidden />
                       </span>
                     </div>
                     <div className="flex flex-1 flex-col p-5">
                       <h3 className="font-heading font-bold text-[#1A1A1A] text-lg mb-1.5">{o.name}</h3>
                       <p className="text-sm text-[#5A5F72] leading-relaxed flex-1">{o.short}</p>
-                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E2733] transition-all group-hover:gap-2.5">
+                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#394F73] transition-all group-hover:gap-2.5">
                         Explore <ArrowUpRight className="w-4 h-4" />
                       </span>
                     </div>

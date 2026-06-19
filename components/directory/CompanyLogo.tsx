@@ -9,12 +9,12 @@ interface CompanyLogoProps {
 
 /** Stable warm ivory/greige tonal palette keyed off the name. */
 const palette = [
-  { bg: "#ECE5D8", fg: "#141B24" },
-  { bg: "#F6F2EA", fg: "#3C4A5A" },
-  { bg: "#E8E2D6", fg: "#2A3542" },
-  { bg: "#EFEAE0", fg: "#3C4A5A" },
-  { bg: "#F2EDE3", fg: "#1E2733" },
-  { bg: "#E5DFD3", fg: "#3C4A5A" },
+  { bg: "#ECE5D8", fg: "#5E7088" },
+  { bg: "#F6F2EA", fg: "#8C9AAB" },
+  { bg: "#E8E2D6", fg: "#647689" },
+  { bg: "#EFEAE0", fg: "#8C9AAB" },
+  { bg: "#F2EDE3", fg: "#78899B" },
+  { bg: "#E5DFD3", fg: "#8C9AAB" },
 ];
 
 function hash(name: string): number {

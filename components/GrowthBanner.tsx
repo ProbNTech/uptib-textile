@@ -33,7 +33,7 @@ export function GrowthBanner({ image, label = "Built for your growth", title, bo
         aria-hidden="true"
         style={{
           background:
-            "linear-gradient(90deg, rgba(14, 19, 24,0.92) 0%, rgba(14, 19, 24,0.78) 42%, rgba(14, 19, 24,0.32) 70%, rgba(14, 19, 24,0.12) 100%)",
+            "linear-gradient(90deg, rgba(57, 81, 115,0.92) 0%, rgba(57, 81, 115,0.78) 42%, rgba(57, 81, 115,0.32) 70%, rgba(57, 81, 115,0.12) 100%)",
         }}
       />
       <div

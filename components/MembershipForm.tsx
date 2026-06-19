@@ -140,13 +140,13 @@ function Field({
   rows?: number;
   children?: React.ReactNode;
 }) {
-  const accent = error ? "text-[#DC2626]" : focused ? "text-[#1E2733]" : "text-[#9A9EAF]";
+  const accent = error ? "text-[#DC2626]" : focused ? "text-[#394F73]" : "text-[#9A9EAF]";
   const fieldClass = `relative w-full bg-[#FBFBFA] border text-[#1A1A1A] placeholder-[#A8ACB8] text-[14px] py-2.5 rounded-lg transition-all duration-300 outline-none hover:border-[#D1D5DB] ${
     as === "select" ? "pl-10 pr-9 appearance-none cursor-pointer [&>option]:bg-white [&>option]:text-[#1A1A1A]" : "pl-10 pr-4"
   } ${as === "textarea" ? "resize-none" : ""} ${
     error
       ? "border-[#DC2626] bg-[#DC2626]/[0.02] focus:border-[#DC2626]/60 focus:ring-2 focus:ring-[#DC2626]/10 focus:bg-white"
-      : "border-[#EBEBE9] focus:border-[#1E2733]/40 focus:bg-white focus:ring-2 focus:ring-[#1E2733]/10"
+      : "border-[#EBEBE9] focus:border-[#78899B]/40 focus:bg-white focus:ring-2 focus:ring-[#78899B]/10"
   }`;
 
   return (
@@ -154,7 +154,7 @@ function Field({
       <label
         htmlFor={id}
         className={`block text-[12px] font-bold tracking-[0.1em] uppercase mb-1.5 transition-colors duration-300 ${
-          error ? "text-[#DC2626]" : focused ? "text-[#1E2733]" : "text-[#3D4152]"
+          error ? "text-[#DC2626]" : focused ? "text-[#394F73]" : "text-[#3D4152]"
         }`}
       >
         {label}{" "}
@@ -167,7 +167,7 @@ function Field({
       <div className="relative group">
         <div
           className={`absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-300 ${
-            error ? "bg-[#DC2626] opacity-100" : focused ? "bg-[#1E2733] opacity-100" : "bg-transparent opacity-0"
+            error ? "bg-[#DC2626] opacity-100" : focused ? "bg-[#78899B] opacity-100" : "bg-transparent opacity-0"
           }`}
         />
         <Icon
@@ -239,8 +239,8 @@ function Field({
 function SectionHead({ step, title, icon: Icon }: { step: string; title: string; icon: React.ComponentType<{ className?: string }> }) {
   return (
     <motion.div variants={itemVariants} className="flex items-center gap-2.5 mb-5">
-      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1E2733]/15 to-[#1E2733]/5 border border-[#1E2733]/20 flex items-center justify-center shadow-[0_2px_8px_rgba(60, 74, 90,0.08)]">
-        <Icon className="w-3.5 h-3.5 text-[#1E2733]" />
+      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#78899B]/15 to-[#78899B]/5 border border-[#78899B]/20 flex items-center justify-center shadow-[0_2px_8px_rgba(140, 154, 171,0.08)]">
+        <Icon className="w-3.5 h-3.5 text-[#394F73]" />
       </div>
       <div>
         <span className="text-[11px] font-bold tracking-[0.16em] uppercase text-[#7A7E8F]">{step}</span>
@@ -360,7 +360,7 @@ export function MembershipForm() {
         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="relative bg-white rounded-2xl border border-[#D8D5CF] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.06)]"
       >
-        <div className="h-1.5 w-full bg-gradient-to-r from-[#1E2733] via-[#1E2733] to-[#1E2733]" />
+        <div className="h-1.5 w-full bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#78899B]" />
         <div className="relative px-10 py-20 text-center">
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
@@ -368,7 +368,7 @@ export function MembershipForm() {
             transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 200, damping: 15 }}
             className="relative inline-flex items-center justify-center mb-8"
           >
-            <div className="relative w-[72px] h-[72px] rounded-2xl bg-gradient-to-br from-[#1E2733] to-[#2A3542] flex items-center justify-center shadow-[0_8px_32px_rgba(138, 133, 124,0.3)]">
+            <div className="relative w-[72px] h-[72px] rounded-2xl bg-gradient-to-br from-[#78899B] to-[#647689] flex items-center justify-center shadow-[0_8px_32px_rgba(138, 133, 124,0.3)]">
               <CheckCircle2 className="w-9 h-9 text-white" strokeWidth={2} />
             </div>
           </motion.div>
@@ -513,13 +513,13 @@ export function MembershipForm() {
                     aria-pressed={checked}
                     className={`flex items-center gap-2.5 rounded-lg border px-3.5 py-2.5 text-left text-[14px] transition-all duration-200 ${
                       checked
-                        ? "border-[#1E2733]/50 bg-[#1E2733]/[0.06] text-[#1A1A1A]"
+                        ? "border-[#78899B]/50 bg-[#78899B]/[0.06] text-[#1A1A1A]"
                         : "border-[#EBEBE9] bg-[#FBFBFA] text-[#3D4152] hover:border-[#D1D5DB]"
                     }`}
                   >
                     <span
                       className={`inline-flex size-5 shrink-0 items-center justify-center rounded-md border transition-colors ${
-                        checked ? "bg-[#1E2733] border-[#1E2733] text-white" : "border-[#B0B3BE] bg-white"
+                        checked ? "bg-[#78899B] border-[#78899B] text-white" : "border-[#B0B3BE] bg-white"
                       }`}
                     >
                       {checked && <Check className="size-3.5" strokeWidth={3} />}
@@ -578,7 +578,7 @@ export function MembershipForm() {
                   node: (
                     <>
                       I accept the{" "}
-                      <Link href="/terms" target="_blank" className="font-semibold text-[#1E2733] underline underline-offset-2">
+                      <Link href="/terms" target="_blank" className="font-semibold text-[#394F73] underline underline-offset-2">
                         Terms &amp; Conditions
                       </Link>
                       .
@@ -590,7 +590,7 @@ export function MembershipForm() {
                   node: (
                     <>
                       I accept the{" "}
-                      <Link href="/membership/terms" target="_blank" className="font-semibold text-[#1E2733] underline underline-offset-2">
+                      <Link href="/membership/terms" target="_blank" className="font-semibold text-[#394F73] underline underline-offset-2">
                         Membership Terms
                       </Link>
                       .
@@ -608,7 +608,7 @@ export function MembershipForm() {
                     hasErr
                       ? "border-[#DC2626] bg-[#DC2626]/[0.02]"
                       : checked
-                      ? "border-[#1E2733]/40 bg-[#1E2733]/[0.04]"
+                      ? "border-[#78899B]/40 bg-[#78899B]/[0.04]"
                       : "border-[#EBEBE9] bg-[#FBFBFA] hover:border-[#D1D5DB]"
                   }`}
                 >
@@ -621,7 +621,7 @@ export function MembershipForm() {
                   />
                   <span
                     className={`mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-md border transition-colors ${
-                      checked ? "bg-[#1E2733] border-[#1E2733] text-white" : hasErr ? "border-[#DC2626] bg-white" : "border-[#B0B3BE] bg-white"
+                      checked ? "bg-[#78899B] border-[#78899B] text-white" : hasErr ? "border-[#DC2626] bg-white" : "border-[#B0B3BE] bg-white"
                     }`}
                   >
                     {checked && <Check className="size-3.5" strokeWidth={3} />}
@@ -646,7 +646,7 @@ export function MembershipForm() {
           <button
             type="submit"
             disabled={state === "submitting"}
-            className="group relative shrink-0 inline-flex items-center gap-2.5 px-7 py-3 rounded-lg font-heading font-bold text-[14px] text-white bg-gradient-to-r from-[#1E2733] to-[#141B24] hover:from-[#2A3542] hover:to-[#1E2733] transition-all duration-300 shadow-[0_4px_20px_rgba(60, 74, 90,0.25)] hover:shadow-[0_8px_30px_rgba(60, 74, 90,0.35)] hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 overflow-hidden"
+            className="group relative shrink-0 inline-flex items-center gap-2.5 px-7 py-3 rounded-lg font-heading font-bold text-[14px] text-white bg-gradient-to-r from-[#78899B] to-[#5E7088] hover:from-[#647689] hover:to-[#78899B] transition-all duration-300 shadow-[0_4px_20px_rgba(140, 154, 171,0.25)] hover:shadow-[0_8px_30px_rgba(140, 154, 171,0.35)] hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 overflow-hidden"
           >
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             {state === "submitting" ? (
