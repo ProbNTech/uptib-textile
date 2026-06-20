@@ -149,7 +149,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
           Categories with a `showcase` render the image-rich editorial
           collection; the rest fall back to the plain "What's included" list. */}
       {p.showcase ? (
-        <ProductShowcase showcase={p.showcase} />
+        <ProductShowcase showcase={p.showcase} categorySlug={p.slug} />
       ) : (
         <section className="bg-white py-20 lg:py-28">
           <div className={PX}>

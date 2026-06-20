@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ArrowUpRight } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import type { ProductCategory } from "@/data/textile";
 import { cn } from "@/lib/utils";
@@ -94,8 +95,14 @@ function Mosaic({ images, layout, priority = false }: { images: Group["images"];
   }
 }
 
-function ShowcaseRow({ group, index }: { group: Group; index: number }) {
+function ShowcaseRow({ group, index, categorySlug }: { group: Group; index: number; categorySlug?: string }) {
   const reverse = index % 2 === 1;
+  const href = categorySlug ? `/products/${categorySlug}/${group.slug}` : undefined;
+  const Heading = (
+    <h3 className={cn(SERIF, "text-[1.9rem] leading-tight text-[#1E1A14] sm:text-4xl")}>
+      {group.name}
+    </h3>
+  );
   return (
     <AnimatedSection animation={reverse ? "slide-left" : "slide-right"}>
       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
@@ -104,9 +111,15 @@ function ShowcaseRow({ group, index }: { group: Group; index: number }) {
           <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
             {String(index + 1).padStart(2, "0")} — {group.tagline}
           </span>
-          <h3 className={cn(SERIF, "mt-3 text-[1.9rem] leading-tight text-[#1E1A14] sm:text-4xl")}>
-            {group.name}
-          </h3>
+          <div className="mt-3">
+            {href ? (
+              <Link href={href} className="group/title inline-block transition-colors hover:text-[#394F73]">
+                {Heading}
+              </Link>
+            ) : (
+              Heading
+            )}
+          </div>
           <div className="mt-4 h-px w-16 bg-[#78899B]" />
           <p className="mt-5 text-[15px] leading-relaxed text-[#544B3C] sm:text-base">{group.desc}</p>
           <ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2">
@@ -117,18 +130,33 @@ function ShowcaseRow({ group, index }: { group: Group; index: number }) {
               </li>
             ))}
           </ul>
+          {href && (
+            <Link
+              href={href}
+              className="group/cta mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#394F73]"
+            >
+              View the {group.name.toLowerCase()} collection
+              <ArrowUpRight className="size-4 transition-transform group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" aria-hidden />
+            </Link>
+          )}
         </div>
 
         {/* Image mosaic */}
         <div className={cn(reverse && "lg:order-1")}>
-          <Mosaic images={group.images} layout={group.layout} priority={index === 0} />
+          {href ? (
+            <Link href={href} aria-label={`View the ${group.name} collection`} className="block">
+              <Mosaic images={group.images} layout={group.layout} priority={index === 0} />
+            </Link>
+          ) : (
+            <Mosaic images={group.images} layout={group.layout} priority={index === 0} />
+          )}
         </div>
       </div>
     </AnimatedSection>
   );
 }
 
-export function ProductShowcase({ showcase }: { showcase: Showcase }) {
+export function ProductShowcase({ showcase, categorySlug }: { showcase: Showcase; categorySlug?: string }) {
   const shouldReduceMotion = useReducedMotion();
   return (
     <section className="relative overflow-hidden bg-[#F7F3EA]">
@@ -184,7 +212,7 @@ export function ProductShowcase({ showcase }: { showcase: Showcase }) {
       <div className={cn("relative pb-20 sm:pb-28", PX)}>
         <div className="mx-auto flex max-w-7xl flex-col gap-20 sm:gap-28">
           {showcase.groups.map((group, i) => (
-            <ShowcaseRow key={group.name} group={group} index={i} />
+            <ShowcaseRow key={group.name} group={group} index={i} categorySlug={categorySlug} />
           ))}
         </div>
       </div>

@@ -16,10 +16,18 @@ import {
    (Used to render image-rich category pages — see ProductShowcase.) */
 export type ShowcaseGroup = {
   name: string;            // line name, e.g. "Premium Towels & Bath"
+  slug: string;            // URL segment for the dedicated sub-category page
   tagline: string;         // short italic kicker, e.g. "Egyptian & terry cotton"
   desc: string;            // one short editorial paragraph
+  /* Longer editorial lead shown on the dedicated sub-category page.
+     Falls back to `desc` when omitted. */
+  pageIntro?: string;
   items: string[];         // bulleted product list for this line
-  images: { src: string; alt: string }[]; // 2-4 photos for the mosaic
+  images: { src: string; alt: string }[]; // 2-4 photos for the showcase-row mosaic
+  /* Rich photo set (10-16) for the dedicated sub-category page. Falls back to
+     `images` when omitted, so every sub-page renders. `span` biases a tile to a
+     wide/tall slot in the editorial mosaic (see SubCategoryGallery). */
+  gallery?: { src: string; alt: string; span?: "wide" | "tall" }[];
   /* Mosaic composition. Image count must match:
        quad      → 4 (even 2×2)
        stack     → 4 (wide · two squares · wide)
@@ -102,6 +110,18 @@ export const whyUptib: { title: string; desc: string; icon: LucideIcon }[] = [
   { title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles, built into your landed price.", icon: BadgePercent },
 ];
 
+/* Build a numbered gallery (01.jpg … NN.jpg) for a Home Textile sub-category.
+   `alts` supplies descriptive alt text per image (cycled if shorter than count). */
+const homeGallery = (
+  sub: string,
+  count: number,
+  alts: string[],
+): { src: string; alt: string }[] =>
+  Array.from({ length: count }, (_, i) => ({
+    src: `/image/textile/home/${sub}/${String(i + 1).padStart(2, "0")}.jpg`,
+    alt: alts[i % alts.length],
+  }));
+
 /* ── Products ── */
 export const products: ProductCategory[] = [
   {
@@ -162,32 +182,66 @@ export const products: ProductCategory[] = [
       groups: [
         {
           name: "Bedroom",
+          slug: "bedroom",
           layout: "tall-left",
           tagline: "Bed linen, duvet sets & mattress protectors",
           desc:
             "Everything that dresses the bed — long-staple cotton sheeting, duvet sets and comforters woven, reactive-dyed and digitally printed to your colourway, plus quilted mattress protectors and toppers finished for a soft hand that survives wash after wash.",
+          pageIntro:
+            "The bedroom is where Pakistan's long-staple cotton shows best. From crisp percale and silken sateen sheeting to Oxford and housewife pillowcases, duvet sets, comforters, bedspreads and coverlets, plush blankets and throws, pillows and duvet inners, and quilted mattress protectors and toppers — every piece is woven, reactive-dyed and finished for a soft hand that holds up to wash after wash, at the thread counts, weaves and colourways you brief.",
           items: [
-            "Flat & fitted sheets, pillowcases",
-            "Duvet covers & comforter sets",
-            "Quilted mattress protectors & toppers",
-            "200–1000 thread-count cotton",
+            "Flat & fitted sheets; Oxford & housewife pillowcases",
+            "Duvet covers, comforter sets & duvet inners",
+            "Bedspreads, coverlets, quilts, blankets & throws",
+            "Mattress protectors & toppers; valances & bolsters",
+            "Percale, sateen & linen — 200–1000 thread-count",
           ],
           images: [
             { src: "/image/bedroom-1.jpg", alt: "A styled bedroom dressed in soft bed linen" },
             { src: "/image/bedroom-2.jpg", alt: "Bed linen and pillows detail" },
             { src: "/image/bedroom-3.jpg", alt: "A made-up bed with crisp bedding" },
           ],
+          gallery: homeGallery("bedroom", 24, [
+            "A made-up bed dressed in soft white cotton bed linen",
+            "A stack of white and taupe pillowcases on pale floorboards",
+            "Crisp white sheeting and pillows folded on a bed",
+            "Detail of a natural taupe cotton pillowcase",
+            "Soft taupe pillowcases layered on a made-up bed",
+            "A white bed layered with a soft grey throw and tray",
+            "A made-up bed against a dark headboard in calm tones",
+            "A bed in white and natural shades with a grey throw",
+            "A neat stack of crisp white bed sheets",
+            "Charcoal cotton sheeting dressed on a bed",
+            "A white striped duvet cover on a freshly made bed",
+            "Detail of a softly textured white duvet cover",
+            "A taupe duvet set styled in soft daylight",
+            "A white bed with a bedside lamp in a calm bedroom",
+            "Natural-toned pillowcases on layered bedding",
+            "Folded bed sheets stacked on a wooden stool",
+            "A bed made up in soft, natural stone tones",
+            "A pillow stack on crisp white hotel-grade linen",
+            "Plump white pillows on a smoothly dressed bed",
+            "A pillow stack in long-staple white cotton",
+            "A bed dressed in fine white percale sheeting",
+            "Detail of woven white cotton sheeting",
+            "Folded white bed linen on a wooden bench",
+            "A quilted bedspread in warm natural tones",
+          ]),
         },
         {
           name: "Bathroom",
+          slug: "bathroom",
           tagline: "Egyptian & terry cotton, 400–700+ GSM",
           desc:
             "The category Pakistan is famous for. Ring-spun and combed terry towelling in every weight — from everyday bath towels to plush spa grades and bathrobes, with hotel-grade durability built in.",
+          pageIntro:
+            "Towelling is the line Pakistan is best known for the world over. Ring-spun and combed terry in every weight — from bath sheets, bath, hand and face towels to plush 700+ GSM spa grades, bath mats, flannels, gym and sports towels, and terry, waffle or velour robes and matching sets — woven absorbent, dried soft and finished with dobby borders or your own logo, built to survive industrial laundering.",
           items: [
-            "Bath, hand, face & guest towels",
-            "Spa, pool & beach towels",
-            "Bathrobes & towelling sets",
-            "Dobby borders & custom logos",
+            "Bath sheets, bath, hand, face & guest towels",
+            "Bath mats, face cloths & flannels",
+            "Robes — terry, waffle & velour; towelling sets",
+            "Gym, sports, spa, pool & beach towels",
+            "400–700+ GSM combed & ring-spun cotton",
           ],
           images: [
             { src: "/image/textile/home/towels-1.jpg", alt: "A folded stack of towels in soft neutral colours" },
@@ -195,12 +249,37 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/home/towels-2.jpg", alt: "Rolled towels in a woven basket beside a pool" },
             { src: "/image/textile/home/towels-5.jpg", alt: "Rolled towels dressed with fresh flowers" },
           ],
+          gallery: homeGallery("bathroom", 20, [
+            "A folded white bath towel beside dried reeds",
+            "White bath and hand towels on a wooden rail",
+            "A folded white towel set on a wooden stool",
+            "A neat stack of white bath towels on a bench",
+            "White bath towels folded on a wooden bench",
+            "Close detail of soft white waffle towelling",
+            "A stack of soft stone bath towels",
+            "Stone-toned towels folded on a wooden rail",
+            "A folded white bath towel in soft daylight",
+            "A plush white bath towel, neatly folded",
+            "A folded grey towel with a fine woven border",
+            "Detail of an absorbent beige waffle-weave towel",
+            "A soft white cotton bathrobe hung on a door",
+            "A white towelling robe hung beside a rail",
+            "Monogrammed white towels on a heated rail",
+            "A neat stack of crisp white bath towels",
+            "A monogrammed white bath towel by a grey vanity",
+            "A folded white towel set stacked on wood",
+            "Soft white bath towels rolled on a bench",
+            "A stack of folded stone bath towels on a stool",
+          ]),
         },
         {
           name: "Curtains & Drapery",
+          slug: "curtains-drapery",
           tagline: "Sheer, dim-out & blackout",
           desc:
             "Made-to-measure window treatments in every weight and weave — from airy sheers to full blackout — in fabrics and colourways coordinated to the rest of the room.",
+          pageIntro:
+            "Window treatments to dress the whole room — airy linen sheers and voiles that filter daylight, through dim-out weaves, to full blackout linings for bedrooms and hospitality. Made to measure in coordinated fabrics and colourways, with eyelet, pencil-pleat and tab-top headings to your specification.",
           items: [
             "Sheer & voile curtains",
             "Dim-out & blackout drapery",
@@ -213,33 +292,76 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/home/curtains-2.jpg", alt: "Warm sheer curtains filtering daylight" },
             { src: "/image/textile/home/curtains-4.jpg", alt: "Deep blue curtains framing a window" },
           ],
+          gallery: homeGallery("curtains-drapery", 16, [
+            "Soft linen curtains framing a sunlit window",
+            "Sheer drapery filtering gentle daylight",
+            "Floor-length curtains in a calm, neutral room",
+            "Detail of a natural-weave curtain fabric",
+            "Airy voile curtains drawn back at a window",
+            "Light drapery softening a bright interior",
+            "Pleated curtains in soft neutral tones",
+            "A window dressed in flowing sheer fabric",
+          ]),
         },
         {
           name: "Dining & Kitchen",
+          slug: "dining-kitchen",
           tagline: "Table linen, napkins & kitchen textiles",
           desc:
             "Everyday and occasion table and kitchen linen in cotton and linen weaves — napkins, runners, placemats, tablecloths and aprons, dyed and finished to coordinate with the rest of the range.",
+          pageIntro:
+            "The textiles that set the table. Cotton and linen tablecloths in round and rectangular sizes, bistro and café cloths, napkins, table runners and placemats in soft neutral palettes — alongside tea towels, glass cloths, aprons and kitchen linen, woven, hemmed and finished to coordinate across everyday and occasion ranges for retail and hospitality.",
           items: [
-            "Napkins & table runners",
-            "Placemats & tablecloths",
-            "Tea towels & kitchen linen",
-            "Aprons & oven textiles",
+            "Round & rectangular tablecloths; bistro & café cloths",
+            "Napkins, table runners & placemats",
+            "Tea towels, glass cloths & kitchen linen",
+            "Aprons, oven gloves & pot holders",
+            "Cotton & linen weaves",
           ],
           images: [
             { src: "/image/kitchen-1.jpg", alt: "A neutral place setting with table linen and cutlery" },
             { src: "/image/kitchen-2.jpg", alt: "Kitchen and table linen styled on a surface" },
           ],
+          gallery: homeGallery("dining-kitchen", 22, [
+            "A table dressed in crisp white linen with place settings",
+            "A white tablecloth laid on a table in a bright room",
+            "A white table cloth draped over a dining table",
+            "A table set with an ivory damask cloth",
+            "A banquet table laid in crisp white linen",
+            "A white place setting with a folded napkin and cutlery",
+            "A round banquet table dressed in white linen",
+            "A neutral place setting on a wooden table",
+            "A bright white place setting with plates and glasses",
+            "Banquet tables dressed in white linen with glassware",
+            "A round table laid in white linen for an occasion",
+            "Detail of a folded ivory linen napkin",
+            "A folded white napkin on a place setting",
+            "Crisp white linen napkins, neatly folded",
+            "A rolled white napkin at a place setting",
+            "A white napkin folded in a glass on a set table",
+            "A folded white linen napkin in soft light",
+            "A neatly folded white linen napkin",
+            "A white place setting with glassware on linen",
+            "A crisp white tablecloth on a dining table",
+            "A white place setting with a runner and glassware",
+            "A white tablecloth place setting with cutlery",
+          ]),
         },
         {
           name: "Cushions & Throws",
+          slug: "cushions-throws",
           layout: "top-wide",
           tagline: "Decorative & accent textiles",
           desc:
             "The finishing layer — woven and knitted cushions, throws and blankets in seasonal colourways and textures that pull a room together, for retail and hospitality alike.",
+          pageIntro:
+            "The finishing layer that pulls a room together — filled and cover-only cushions, knitted and woven throws, blankets and bedspreads. Produced in seasonal colourways and textures, from chunky knits to fine woven weaves, to accent the rest of the home collection across retail and hospitality.",
           items: [
-            "Cushion covers & filled cushions",
+            "Filled & cover-only cushions",
+            "Bolster & scatter cushions",
             "Knitted & woven throws",
             "Blankets & bedspreads",
+            "Faux-fur & bouclé throws",
             "Seasonal colours & textures",
           ],
           images: [
@@ -247,6 +369,30 @@ export const products: ProductCategory[] = [
             { src: "/image/cushions-2.jpg", alt: "Neutral cushions and a knitted throw" },
             { src: "/image/cushions-3.jpg", alt: "Soft cushions styled on a sofa" },
           ],
+          gallery: homeGallery("cushions-throws", 22, [
+            "A cream woven throw draped over a chair",
+            "A cream knitted throw over an armchair",
+            "A tan waffle-weave throw on a chair",
+            "A white textured throw draped on a chair",
+            "A soft white throw layered over an armchair",
+            "A tan diamond-quilted throw on a made-up bed",
+            "A tan waffle bedspread layered on a bed",
+            "White cushions and pillows on a dressed bed",
+            "White cushions with a soft embroidered detail",
+            "Plump white cushions in calm, neutral tones",
+            "Grey textured cushions styled on a chair",
+            "A white cable-knit cushion in soft daylight",
+            "A white cable-knit throw, softly textured",
+            "A white ruffled cushion against a brick wall",
+            "A white and grey cushion on layered bedding",
+            "A grey faux-fur cushion in soft light",
+            "Grey diamond-quilted cushions on a bedspread",
+            "A grey quilted bedspread in calm tones",
+            "A white bed with a grey quilted runner",
+            "A faux-fur throw in soft natural tones",
+            "Stone-grey quilted cushions on a bed",
+            "An oatmeal bouclé throw, neatly folded",
+          ]),
         },
       ],
     },
@@ -310,6 +456,7 @@ export const products: ProductCategory[] = [
       groups: [
         {
           name: "Fashion Basics & Loungewear",
+          slug: "fashion-basics-loungewear",
           tagline: "T-shirts, polos, hoodies & fleece",
           desc:
             "The everyday staples brands sell in volume — ring-spun cotton tees, polos, hoodies and loungewear, cut and finished to a clean, consistent standard run after run.",
@@ -328,6 +475,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Knitwear & Sweaters",
+          slug: "knitwear-sweaters",
           tagline: "Jersey, ribbed & cable knit",
           desc:
             "Fine- and chunky-gauge knitwear in cotton, wool and blended yarns — from roll-necks and crews to cardigans, knitted to a soft hand and held shape.",
@@ -346,6 +494,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Denim & Woven",
+          slug: "denim-woven",
           tagline: "Jeans, jackets & shirting",
           desc:
             "Woven garments built around Pakistan's deep denim base — five-pocket jeans, jackets, shirts and chinos, in the washes, fades and finishes your range calls for.",
@@ -364,6 +513,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Uniforms & Workwear",
+          slug: "uniforms-workwear",
           tagline: "Corporate, school & industrial",
           desc:
             "Programme-run uniforms and workwear — corporate, hospitality, school and industrial — produced to a fixed spec for reliable repeat ordering at scale.",
@@ -382,6 +532,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Children's & Baby Wear",
+          slug: "childrens-baby-wear",
           layout: "tall-left",
           tagline: "Soft, safe everyday kids' clothing",
           desc:
@@ -400,6 +551,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Accessories",
+          slug: "accessories",
           layout: "duo",
           tagline: "Socks, beanies, scarves & bags",
           desc:
@@ -417,6 +569,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Skirts & Dresses",
+          slug: "skirts-dresses",
           tagline: "Skirts, midi & maxi dresses",
           desc:
             "Woven and jersey skirts and dresses — A-line, pleated and midi silhouettes in soft solids, prints and linens, cut and finished to your seasonal range.",
@@ -435,6 +588,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Leather Jackets & Goods",
+          slug: "leather-jackets-goods",
           layout: "tall-left",
           tagline: "Jackets, bags & accessories",
           desc:
@@ -513,6 +667,7 @@ export const products: ProductCategory[] = [
       groups: [
         {
           name: "Gymwear & Activewear",
+          slug: "gymwear-activewear",
           tagline: "Leggings, sports bras & sets",
           desc:
             "The fastest-growing segment — leggings, sports bras and matching co-ords in seamless and sculpting fits, with the stretch and recovery that everyday activewear demands.",
@@ -532,6 +687,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Performance & Training",
+          slug: "performance-training",
           tagline: "Tees, tracksuits & hoodies",
           desc:
             "Training-day essentials — performance tees, tracksuits, hoodies and shorts in moisture-wicking knits, built to move and to survive heavy rotation.",
@@ -550,6 +706,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Teamwear & Custom Kit",
+          slug: "teamwear-custom-kit",
           tagline: "Sublimated club & team kit",
           desc:
             "Fully sublimated club and team kit with low minimums and full custom branding — jerseys, shorts and warm-up wear for clubs, academies and brands.",
@@ -567,6 +724,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Technical Fabrics",
+          slug: "technical-fabrics",
           tagline: "Moisture-wicking & 4-way stretch",
           desc:
             "The engineering behind the kit — moisture-wicking knits, four-way stretch, compression and mesh ventilation, with recycled-polyester options on request.",
@@ -585,6 +743,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Outerwear & Layers",
+          slug: "outerwear-layers",
           layout: "tall-left",
           tagline: "Jackets, windbreakers & vests",
           desc:
@@ -603,6 +762,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Sports Accessories",
+          slug: "sports-accessories",
           layout: "duo",
           tagline: "Caps, bags, socks & support",
           desc:
@@ -679,6 +839,7 @@ export const products: ProductCategory[] = [
       groups: [
         {
           name: "Scrubs & Medical Uniforms",
+          slug: "scrubs-medical-uniforms",
           tagline: "Scrubs, tunics & lab coats",
           desc:
             "Hard-wearing scrubs, tunics and uniforms in poly-cotton blends that hold colour and shape through repeated high-temperature laundering — with antimicrobial finishes on request.",
@@ -697,6 +858,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Patient Gowns & Provider Wear",
+          slug: "patient-gowns-provider-wear",
           tagline: "Gowns & care-setting uniforms",
           desc:
             "Patient gowns and care-setting uniforms in easy-wash, hard-wearing fabrics — available in reusable and single-use grades for hospitals, clinics and care homes.",
@@ -715,6 +877,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Hospital Bed Linen & Draw Sheets",
+          slug: "hospital-bed-linen-draw-sheets",
           tagline: "Sheets, draw sheets & blankets",
           desc:
             "High-temperature-washable bed linen, draw sheets and blankets carried over from Pakistan's hotel and hospitality expertise — durable, hygienic and built for institutional laundries.",
@@ -733,6 +896,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Surgical Drapes & Theatre Linen",
+          slug: "surgical-drapes-theatre-linen",
           tagline: "CE/AAMI-aware theatre textiles",
           desc:
             "Theatre textiles produced with surgical-barrier capability in mind — drapes, gowns and wraps, with CE / AAMI / ISO 13485-aware manufacturing for export health systems.",
@@ -750,6 +914,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Antimicrobial & Care-Home Textiles",
+          slug: "antimicrobial-care-home-textiles",
           layout: "top-wide",
           tagline: "Infection-control fabrics",
           desc:
@@ -768,6 +933,7 @@ export const products: ProductCategory[] = [
         },
         {
           name: "Towels & Wipes",
+          slug: "towels-wipes",
           layout: "duo",
           tagline: "Huck towels, cloths & wipes",
           desc:
@@ -840,3 +1006,17 @@ export const services: Service[] = [
 
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
+
+/* ── Sub-categories (the showcase groups, addressable as their own pages) ── */
+export const getSubCategory = (catSlug: string, subSlug: string) => {
+  const category = getProduct(catSlug);
+  const group = category?.showcase?.groups.find((g) => g.slug === subSlug);
+  if (!category || !group) return undefined;
+  return { category, group };
+};
+
+/* Every category × sub-category pair, for static generation. */
+export const subCategoryParams = (): { slug: string; sub: string }[] =>
+  products.flatMap((p) =>
+    (p.showcase?.groups ?? []).map((g) => ({ slug: p.slug, sub: g.slug })),
+  );
