@@ -21,7 +21,7 @@ const ImpactStats = dynamic(() =>
   { loading: () => <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" aria-busy="true">{Array.from({ length: 4 }).map((_, i) => <div key={i} className="h-[360px] bg-white/[0.06] rounded-xl animate-pulse" />)}</div> }
 );
 import { GlobalCTA } from "@/components/GlobalCTA";
-import BoardOfAdvisors from "@/components/BoardOfAdvisors";
+// import BoardOfAdvisors from "@/components/BoardOfAdvisors"; // hidden for now
 import { TextileMarketsCarousel } from "@/components/home/TextileMarketsCarousel";
 import StatsCounter from "@/components/tech-market/StatsCounter";
 import MembershipSection, { WhatDrivesUs } from "@/components/tech-market/MembershipSection";
@@ -97,7 +97,7 @@ export default function Home() {
                 <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(140, 154, 171,0.15)]">
                   <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export — Pakistan Textile Partners" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/60">
-                    <p className="font-heading font-extrabold text-[#394F73] text-lg leading-none">~$17.9bn</p>
+                    <p className="font-heading font-extrabold text-[#394F73] text-lg leading-none">$17.9bn</p>
                     <p className="text-[#5A5F72] text-xs mt-0.5">Pakistan textile exports, FY2025</p>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ export default function Home() {
                         <Link
                           key={item.id}
                           href={item.href}
-                          className="group relative rounded-2xl overflow-hidden border border-white/10 bg-[#48608A]/85 backdrop-blur-md shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#B3AA98]/40"
+                          className="group relative rounded-2xl overflow-hidden border border-white/10 bg-[#48608A]/85 backdrop-blur-md shadow-lg shadow-black/30"
                         >
                           {/* number badge */}
                           <span className="absolute top-4 left-4 z-20 inline-flex items-center justify-center w-9 h-9 rounded-lg bg-[#78899B] text-white font-bold text-sm shadow-md">
@@ -234,22 +234,22 @@ export default function Home() {
                               src={item.topImage!}
                               alt={item.title}
                               fill
-                              className="object-cover transition-transform duration-700 group-hover:scale-105"
+                              className="object-cover"
                               sizes="(max-width: 768px) 100vw, 33vw"
                             />
                             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#48608A] via-[#48608A]/40 to-transparent" />
-                            {/* floating icon */}
-                            <span className="absolute -bottom-7 left-6 z-20 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#394F73] border border-white/10 shadow-lg">
-                              <Icon className="w-6 h-6 text-[#B3AA98]" strokeWidth={1.8} />
-                            </span>
                           </div>
+                          {/* floating icon — outside image so it isn't clipped by overflow-hidden */}
+                          <span className="absolute top-[190px] -translate-y-1/2 left-6 z-20 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#394F73] border border-white/10 shadow-lg">
+                            <Icon className="w-6 h-6 text-[#B3AA98]" strokeWidth={1.8} />
+                          </span>
                           {/* body */}
                           <div className="px-6 pb-6 pt-10">
                             <h4 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">{item.title}</h4>
                             <p className="mt-2 text-white/70 text-sm leading-relaxed">{item.content}</p>
                             <span className="mt-4 inline-flex items-center gap-1.5 font-bold text-sm text-[#B3AA98]">
                               Learn more
-                              <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
+                              <ArrowRight size={16} />
                             </span>
                           </div>
                         </Link>
@@ -294,12 +294,11 @@ export default function Home() {
         }}
         aria-labelledby="more-heading"
       >
-        <Image src="/image/hero-bg/pexels-wasifmehmood997-15817294.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
-        <div className="absolute inset-0 bg-[#394F73]/65" aria-hidden="true" />
+        <Image src="/image/textile/home/cushions-throws-collection/12.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#D8CDBA" align="center" light />
+            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#D8CDBA" align="center" light bodyClassName="text-white" />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { href: "/products", icon: ProductsIcon, color: "#9DA9B8", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles — the four categories we trade." },
@@ -550,8 +549,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 11. BOARD OF ADVISORS */}
-      <BoardOfAdvisors dark />
+      {/* 11. BOARD OF ADVISORS — hidden for now */}
+      {/* <BoardOfAdvisors dark /> */}
 
       {/* 12. NEWS & INSIGHTS */}
       <section
@@ -594,8 +593,8 @@ export default function Home() {
         label="Work with Pakistan Textile Partners"
         title="Ready to take your textiles to the world?"
         subtitle="Grow your exports worldwide — Pakistan Textile Partners markets Pakistani textile manufacturers and Exporters to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
-        primaryButtonText="Become a member"
-        primaryButtonLink="/membership"
+        primaryButtonText="About us"
+        primaryButtonLink="/about"
         secondaryButtonText="Talk to our team"
         secondaryButtonLink="/contact"
         image="/image/bedding.jpg"
