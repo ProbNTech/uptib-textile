@@ -44,7 +44,7 @@ export default function ProductsSection() {
                 Our Products
               </p>
               <h2 id="products-heading" className="font-heading text-3xl font-bold leading-[1.15] text-[#1A1A1A] sm:text-4xl">
-                The textiles<br className="hidden lg:block" /> we trade
+                The textiles<br className="hidden lg:block" /> we present
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[#5A5F72]">
                 From yarn to fashion, we supply quality you can trust.

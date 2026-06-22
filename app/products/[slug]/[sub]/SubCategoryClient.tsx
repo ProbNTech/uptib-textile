@@ -10,6 +10,8 @@ import { Button } from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlobalCTA } from "@/components/GlobalCTA";
 import { SubCategoryGallery, type GalleryImage } from "@/components/products/SubCategoryGallery";
+import { LookbookGallery } from "@/components/products/LookbookGallery";
+import { LookbookMasonry } from "@/components/products/LookbookMasonry";
 import { getSubCategory } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
@@ -24,7 +26,8 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
 
   /* Rich image set for this sub-category (falls back to the showcase mosaic set). */
   const gallery: GalleryImage[] = group.gallery ?? group.images;
-  const heroImage = gallery[0]?.src ?? category.image;
+  const heroImage = group.heroImage?.src ?? gallery[0]?.src ?? category.image;
+  const heroAlt = group.heroImage?.alt ?? gallery[0]?.alt ?? group.name;
   const intro = group.pageIntro ?? group.desc;
 
   /* Sibling sub-categories within the same parent category. */
@@ -34,7 +37,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
     <div className="bg-[#F7F3EA]">
       {/* ── HERO — full-bleed lifestyle photo, editorial caption (light/soft) ── */}
       <section className="relative h-[64vh] min-h-[480px] w-full overflow-hidden">
-        <Image src={heroImage} alt={gallery[0]?.alt ?? group.name} fill priority className="object-cover" sizes="100vw" />
+        <Image src={heroImage} alt={heroAlt} fill priority className="object-cover" sizes="100vw" />
         {/* soft bottom scrim only — keeps the top of the image bright and airy */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1A140E]/75 via-[#1A140E]/15 to-[#1A140E]/10" />
 
@@ -139,7 +142,18 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
               </span>
             </div>
           </AnimatedSection>
-          <SubCategoryGallery images={gallery} />
+          {group.lookbook ? (
+            group.lookbookLayout === "masonry" ? (
+              <LookbookMasonry items={group.lookbook} />
+            ) : (
+              <LookbookGallery
+                items={group.lookbook}
+                aspect={group.lookbookLayout === "portrait" ? "portrait" : "square"}
+              />
+            )
+          ) : (
+            <SubCategoryGallery images={gallery} />
+          )}
         </div>
       </section>
 
@@ -160,7 +174,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
 
               <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
                 {siblings.map((g, i) => {
-                  const img = g.gallery?.[0]?.src ?? g.images[0]?.src ?? category.image;
+                  const img = g.lookbook?.[0]?.src ?? g.gallery?.[0]?.src ?? g.images[0]?.src ?? category.image;
                   return (
                     <motion.div
                       key={g.slug}
