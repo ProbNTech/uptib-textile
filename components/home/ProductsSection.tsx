@@ -5,10 +5,19 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { products } from "@/data/textile";
 
 const productImages: Record<string, string> = {
-  "bedding-linen": "/image/bedding-v1.jpg",
+  "bedding-linen": "/image/textile/home/hotel-1.jpg",
   "apparel-accessories": "/image/apparels-v1.jpg",
-  "sportswear-activewear": "/image/sprtswear-v1.jpg",
-  "healthcare-textile": "/image/healthcare-v1.jpg",
+  "sportswear-activewear": "/image/sportswear-home-product-image.jpg",
+  "healthcare-textile": "/image/healthcare-home-product-image.jpg",
+};
+
+/* Bento placement per category (lg+). Home Textile = wide top-left,
+   Apparel = tall card on the right, Sportswear + Healthcare below Home Textile. */
+const cardLayout: Record<string, string> = {
+  "bedding-linen": "lg:col-start-1 lg:row-start-1 lg:col-span-2",
+  "apparel-accessories": "lg:col-start-3 lg:row-start-1 lg:row-span-2",
+  "sportswear-activewear": "lg:col-start-1 lg:row-start-2",
+  "healthcare-textile": "lg:col-start-2 lg:row-start-2",
 };
 
 /* Short card taglines — concise, matching the showcase layout */
@@ -37,14 +46,14 @@ export default function ProductsSection() {
       <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-12">
-            {/* ── Left: intro column ── */}
-            <div className="flex shrink-0 flex-col justify-center lg:w-[200px] xl:w-[220px]">
+          <div className="flex flex-col items-center gap-10 lg:gap-12">
+            {/* ── Top: intro, centred above the cards ── */}
+            <div className="flex max-w-2xl flex-col items-center text-center">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#5A5F72]">
                 Our Products
               </p>
               <h2 id="products-heading" className="font-heading text-3xl font-bold leading-[1.15] text-[#1A1A1A] sm:text-4xl">
-                The textiles<br className="hidden lg:block" /> we present
+                The textiles we present
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[#5A5F72]">
                 From yarn to fashion, we supply quality you can trust.
@@ -58,8 +67,8 @@ export default function ProductsSection() {
               </Link>
             </div>
 
-            {/* ── Right: product cards ── */}
-            <div className="grid flex-1 grid-cols-2 gap-[2px] lg:grid-cols-4">
+            {/* ── Below: product cards (bento), centred ── */}
+            <div className="grid w-full max-w-6xl mx-auto grid-cols-1 auto-rows-[220px] gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[250px] lg:gap-4">
               {products.map((p) => {
                 const Icon = p.icon;
                 const accent = productAccents[p.slug];
@@ -67,14 +76,14 @@ export default function ProductsSection() {
                   <Link
                     key={p.slug}
                     href={`/products/${p.slug}`}
-                    className="group relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
+                    className={`group relative h-full overflow-hidden rounded-2xl shadow-md ${cardLayout[p.slug] ?? ""}`}
                   >
                     <Image
                       src={productImages[p.slug]}
                       alt={p.name}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 22vw"
+                      className="object-cover transition-transform duration-[2500ms] ease-out group-hover:scale-110"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     {/* darkening overlay — light, just enough for legibility */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -96,12 +105,6 @@ export default function ProductsSection() {
                       </p>
                     </div>
 
-                    {/* accent bar */}
-                    <div
-                      className="absolute inset-x-0 bottom-0 h-1.5"
-                      style={{ backgroundColor: accent }}
-                      aria-hidden
-                    />
                   </Link>
                 );
               })}

@@ -7,21 +7,17 @@ import { WHATSAPP_HREF, WHATSAPP_DISPLAY } from "./ui/WhatsAppButton";
 export function Footer() {
   return (
     <footer className="relative overflow-hidden text-white">
-      {/* Top accent line */}
-    <div className="relative z-20 h-[3px] bg-gradient-to-r from-[#78899B] via-[#78899B] to-[#394F73] rounded-full" />
-
       {/* Main Footer */}
       <div className="relative">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/image/container-ship-unloading-commercial-dock-dusk-generated-by-ai.jpg.jpeg"
-            alt="Container ship unloading at a commercial dock at dusk"
+            src="/image/exporters-sellers.jpg"
+            alt="Pakistani textile exporters and sellers"
             fill
             className="object-cover object-center"
             sizes="100vw"
             quality={85}
-            priority
           />
           {/* Dark overlay for text visibility */}
           <div className="absolute inset-0 bg-black/60" />
@@ -41,7 +37,7 @@ export function Footer() {
                       alt="Pakistan Textile Partners logo"
                       width={200}
                       height={100}
-                      className="h-[80px] sm:h-[100px] lg:h-[150px] w-auto object-contain"
+                      className="h-[72px] sm:h-[88px] lg:h-[120px] w-auto object-contain"
                     />
                   </span>
                 </Link>
@@ -101,7 +97,7 @@ export function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-white hover:text-[#394F73] transition-colors duration-300 inline-flex items-center gap-1.5 text-base drop-shadow-md"
+                        className="text-white hover:text-[#D8CDBA] transition-colors duration-300 inline-flex items-center gap-1.5 text-base drop-shadow-md"
                       >
                         <ChevronRight className="w-3 h-3" />
                         {link.label}
@@ -128,7 +124,7 @@ export function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-white hover:text-[#394F73] transition-colors duration-300 inline-flex items-center gap-1.5 text-base drop-shadow-md"
+                        className="text-white hover:text-[#D8CDBA] transition-colors duration-300 inline-flex items-center gap-1.5 text-base drop-shadow-md"
                       >
                         <ChevronRight className="w-3 h-3" />
                         {link.label}
@@ -230,13 +226,13 @@ export function Footer() {
                   Trades &amp; Investment Board. All rights reserved.
                 </p>
                 <div className="flex flex-wrap gap-4 text-base">
-                  <Link href="/privacy" className="text-white hover:text-[#394F73] transition-colors duration-300">Privacy Policy</Link>
+                  <Link href="/privacy" className="text-white hover:text-[#D8CDBA] transition-colors duration-300">Privacy Policy</Link>
                   <span className="text-white/40">|</span>
-                  <Link href="/terms" className="text-white hover:text-[#394F73] transition-colors duration-300">Terms</Link>
+                  <Link href="/terms" className="text-white hover:text-[#D8CDBA] transition-colors duration-300">Terms</Link>
                   <span className="text-white/40">|</span>
-                  <Link href="/cookies" className="text-white hover:text-[#394F73] transition-colors duration-300">Cookies</Link>
+                  <Link href="/cookies" className="text-white hover:text-[#D8CDBA] transition-colors duration-300">Cookies</Link>
                   <span className="text-white/40">|</span>
-                  <Link href="/gdpr" className="text-white hover:text-[#394F73] transition-colors duration-300">GDPR</Link>
+                  <Link href="/gdpr" className="text-white hover:text-[#D8CDBA] transition-colors duration-300">GDPR</Link>
                 </div>
               </div>
             </div>

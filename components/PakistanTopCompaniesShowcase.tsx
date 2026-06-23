@@ -70,7 +70,7 @@ export default function PakistanTopCompaniesShowcase() {
 
             <div className="flex items-center justify-between mt-6">
               <Link
-                href="/membership"
+                href="/contact"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-[#394F73] hover:text-[#394F73] transition-colors"
               >
                 Explore Manufacturers and Exporters

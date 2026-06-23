@@ -29,9 +29,6 @@ import NewsCarousel from "@/components/NewsCarousel";
 const PakistanTopCompaniesShowcase = dynamic(() => import("@/components/PakistanTopCompaniesShowcase"), {
   loading: () => <div className="py-20 bg-white" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="h-48 bg-[#f7f8fa] rounded-xl animate-pulse" /></div></div>,
 });
-const PartnerSolutionsSection = dynamic(() => import("@/components/PartnerSolutionsSection"), {
-  loading: () => <div className="py-20 bg-white" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: 3 }).map((_, i) => <div key={i} className="h-96 bg-white rounded-2xl animate-pulse" />)}</div></div></div>,
-});
 import ExporterFaq from "@/components/home/ExporterFaq";
 import ProductsSection from "@/components/home/ProductsSection";
 import { ScrollProgressBar } from "@/components/ui/ScrollProgressBar";
@@ -57,7 +54,7 @@ const sponsorCarouselLogos = sponsorLogos.map((logo, i) => ({
 const pakistanServicesData = [
   { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers — professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing-sales", color: "#394F73" },
   { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/ecommerce-warehouse", color: "#394F73" },
-  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/membership", color: "#394F73" },
+  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/contact", color: "#394F73" },
   { id: 8, title: "Worldwide market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#394F73" },
 ];
 
@@ -147,17 +144,16 @@ export default function Home() {
 
             {/* For International buyers */}
             <div id="for-international-buyers" className="scroll-mt-24 mt-20 lg:mt-24 relative overflow-hidden -mx-6 sm:-mx-10 lg:-mx-16 xl:-mx-20">
-              {/* Background world map + dark overlay */}
-              <div aria-hidden="true" className="absolute inset-0">
-                <Image
+              {/* Background — solid blue (image removed for now) */}
+              <div aria-hidden="true" className="absolute inset-0 bg-[#394F73]">
+                {/* <Image
                   src="/image/world-map-bg.jpg"
                   alt=""
                   fill
                   className="object-cover"
                   sizes="100vw"
-                />
-                <div className="absolute inset-0 bg-[#394F73]/92" />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#394F73]/85 via-[#48608A]/80 to-[#2E4061]/92" />
+                /> */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#394F73] via-[#48608A] to-[#2E4061]" />
               </div>
               <div className="relative z-10 px-6 sm:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 lg:py-24">
                 <div className="max-w-7xl mx-auto">
@@ -237,7 +233,6 @@ export default function Home() {
                               className="object-cover"
                               sizes="(max-width: 768px) 100vw, 33vw"
                             />
-                            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#48608A] via-[#48608A]/40 to-transparent" />
                           </div>
                           {/* floating icon — outside image so it isn't clipped by overflow-hidden */}
                           <span className="absolute top-[190px] -translate-y-1/2 left-6 z-20 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#394F73] border border-white/10 shadow-lg">
@@ -287,23 +282,19 @@ export default function Home() {
 
       {/* 5. MORE FROM Pakistan Textile Partners */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden"
-        style={{
-          background:
-            "radial-gradient(1100px circle at 0% 0%, rgba(140, 154, 171,0.22), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(138, 133, 124,0.15), transparent 50%), radial-gradient(700px circle at 50% 50%, rgba(163, 174, 188,0.08), transparent 70%), #394F73",
-        }}
+        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
         aria-labelledby="more-heading"
       >
-        <Image src="/image/textile/home/cushions-throws-collection/12.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
+        {/* <Image src="/image/textile/home/cushions-throws-collection/12.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" /> */}
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#D8CDBA" align="center" light bodyClassName="text-white" />
+            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#394F73" align="center" />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { href: "/products", icon: ProductsIcon, color: "#9DA9B8", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles — the four categories we trade." },
                 { href: "/global-textile-market", icon: MentorshipIcon, color: "#9DA9B8", title: "Global Textile Market", desc: "The size of the global textile opportunity, and Pakistan's place in it — with the key figures." },
-                { href: "/membership", icon: MeetingSpaceIcon, color: "#9DA9B8", title: "Membership", desc: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers." },
+                { href: "/contact", icon: MeetingSpaceIcon, color: "#9DA9B8", title: "Membership", desc: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers." },
                 { href: "/news", icon: StructureIcon, color: "#9DA9B8", title: "News & Insights", desc: "Export guides and market insight for Pakistani textile exporters reaching global buyers." },
               ].map((card, index) => {
                 const CardIcon = card.icon;
@@ -422,9 +413,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. PARTNER SOLUTIONS */}
-      <PartnerSolutionsSection />
-
       {/* 8. WHAT DRIVES US */}
       <WhatDrivesUs />
 
@@ -440,7 +428,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pakistan Textile Partners' work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#B3AA98" align="center" light />
+            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pakistan Textile Partners' work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#D8CDBA" align="center" light />
             <ImpactStats />
           </AnimatedSection>
         </div>
@@ -561,7 +549,7 @@ export default function Home() {
         }}
         aria-labelledby="news-heading"
       >
-        <Image src="/image/pak-map.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
+        <Image src="/image/news-bg-2.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" />
         <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">

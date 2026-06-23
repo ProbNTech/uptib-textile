@@ -6,12 +6,21 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { TopTicker } from "@/components/TopTicker";
+import { products } from "@/data/textile";
 import {
   BedDouble, Shirt, Dumbbell, Stethoscope,
   ShoppingCart, Megaphone, Warehouse, Truck,
-  Compass, ClipboardList, Factory,
+  Compass, ClipboardList, Factory, ClipboardCheck, Ship,
   type LucideIcon,
 } from "lucide-react";
+
+/* Sub-category links for a product category, derived from the central content
+   model so the nav stays in sync with the showcase groups (the lookbook pages). */
+const subLinks = (catSlug: string): { label: string; href: string }[] =>
+  (products.find((p) => p.slug === catSlug)?.showcase?.groups ?? []).map((g) => ({
+    label: g.name,
+    href: `/products/${catSlug}/${g.slug}`,
+  }));
 
 /* ─────────────────────────────────────────────────────────────────
    Navigation types & data
@@ -23,7 +32,7 @@ type NavGroup = {
   tagline: string;
   color: string;
   editorial: { headline: string; body: string; cta: { label: string; href: string } };
-  items: { label: string; href: string; desc: string; icon: LucideIcon }[];
+  items: { label: string; href: string; desc: string; icon: LucideIcon; section?: string; children?: { label: string; href: string }[] }[];
 };
 
 type NavLink = {
@@ -51,10 +60,10 @@ const navItems: NavItem[] = [
       cta: { label: "View all products →", href: "/products" },
     },
     items: [
-      { label: "Home Textile", href: "/products/bedding-linen", desc: "Bed linen, towels, hotel textiles, curtains & mattress protectors — Pakistan's strongest category.", icon: BedDouble },
-      { label: "Apparel & Accessories", href: "/products/apparel-accessories", desc: "Private-label fashion, denim, knitwear, uniforms and accessories.", icon: Shirt },
-      { label: "Sportswear & Activewear", href: "/products/sportswear-activewear", desc: "Gymwear, teamwear and performance kit from the Sialkot hub.", icon: Dumbbell },
-      { label: "Healthcare Textile", href: "/products/healthcare-textile", desc: "Scrubs, gowns, hospital linen and antimicrobial textiles.", icon: Stethoscope },
+      { label: "Home Textile", href: "/products/bedding-linen", desc: "Bed linen, towels, hotel textiles, curtains & mattress protectors — Pakistan's strongest category.", icon: BedDouble, children: subLinks("bedding-linen") },
+      { label: "Apparel & Accessories", href: "/products/apparel-accessories", desc: "Private-label fashion, denim, knitwear, uniforms and accessories.", icon: Shirt, children: subLinks("apparel-accessories") },
+      { label: "Sportswear & Activewear", href: "/products/sportswear-activewear", desc: "Gymwear, teamwear and performance kit from the Sialkot hub.", icon: Dumbbell, children: subLinks("sportswear-activewear") },
+      { label: "Healthcare Textile", href: "/products/healthcare-textile", desc: "Scrubs, gowns, hospital linen and antimicrobial textiles.", icon: Stethoscope, children: subLinks("healthcare-textile") },
     ],
   },
   /* 2 — Service */
@@ -65,14 +74,17 @@ const navItems: NavItem[] = [
     color: SERVICE_GREEN,
     editorial: {
       headline: "Source it. Sell it.\nShip it. Scale it.",
-      body: "Four services that connect Pakistani manufacturing to global buyers — and help Pakistani exporters reach markets worldwide.",
+      body: "Services for both sides of the trade — helping Pakistani exporters reach markets worldwide, and helping international importers source from Pakistan.",
       cta: { label: "View all services →", href: "/services" },
     },
     items: [
-      { label: "Marketing & Sales", href: "/services/marketing-sales", desc: "Visibility, B2B matchmaking and market intelligence for exporters going global.", icon: Megaphone },
-      { label: "E-commerce & Warehouse", href: "/services/ecommerce-warehouse", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse },
-      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL and delivery.", icon: ShoppingCart },
-      { label: "Logistics", href: "/services/logistics", desc: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.", icon: Truck },
+      { label: "Marketing & Sales", href: "/services/marketing-sales", desc: "Visibility, B2B matchmaking and market intelligence for exporters going global.", icon: Megaphone, section: "For Pakistani Exporters" },
+      { label: "E-commerce & Warehouse", href: "/services/ecommerce-warehouse", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse, section: "For Pakistani Exporters" },
+      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL and delivery.", icon: ShoppingCart, section: "For Pakistani Exporters" },
+      { label: "Logistics", href: "/services/logistics", desc: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.", icon: Truck, section: "For Pakistani Exporters" },
+      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Source the right Pakistani manufacturers for your order — vendor identification, sampling, price negotiation and production follow-up.", icon: Factory, section: "For International Importers / Buyers" },
+      { label: "Quality Control", href: "/#for-international-buyers", desc: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck, section: "For International Importers / Buyers" },
+      { label: "Compliance & Logistics", href: "/#for-international-buyers", desc: "Social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship, section: "For International Importers / Buyers" },
     ],
   },
   /* 3 — Global Textile Market */
@@ -111,6 +123,7 @@ const HOVER_CLOSE_DELAY = 180;
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const [panelCat, setPanelCat] = useState<string | null>(null);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const openTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -138,7 +151,14 @@ export function Header() {
 
   const handleGroupEnter = useCallback((label: string) => {
     clearTimers();
-    openTimerRef.current = setTimeout(() => setOpenGroup(label), HOVER_OPEN_DELAY);
+    setPanelCat(null);
+    setOpenGroup((prev) => {
+      // A menu is already open — switch to the hovered group instantly so the
+      // previous group's panel can't linger (and re-pin via the panel hover).
+      if (prev !== null) return label;
+      openTimerRef.current = setTimeout(() => setOpenGroup(label), HOVER_OPEN_DELAY);
+      return prev;
+    });
   }, [clearTimers]);
 
   const handlePanelEnter = useCallback((label: string) => {
@@ -152,6 +172,19 @@ export function Header() {
   }, [clearTimers]);
 
   const activeGroup = navGroups.find((g) => g.label === openGroup) ?? null;
+  /* Two-pane menus (categories + sub-categories) — used when a group's items
+     carry sub-category children. `activeCatItem` is the category whose
+     sub-categories show on the right; it defaults to the first category. */
+  const panelHasSubcats = (activeGroup?.items ?? []).some((i) => (i.children?.length ?? 0) > 0);
+  const activeCatItem =
+    activeGroup ? (activeGroup.items.find((i) => i.href === panelCat) ?? activeGroup.items[0]) : null;
+  /* Audience sections (e.g. exporters vs. importers) — render side-by-side columns. */
+  const panelSections = activeGroup
+    ? (Array.from(new Set(activeGroup.items.map((i) => i.section).filter(Boolean))) as string[])
+    : [];
+
+  /* Reset the right-pane selection to the first category each time a menu opens. */
+  useEffect(() => { setPanelCat(null); }, [openGroup]);
 
   return (
     <>
@@ -189,7 +222,7 @@ export function Header() {
                 alt="Pakistan Textile Partners logo"
                 width={250}
                 height={258}
-                className="h-[52px] sm:h-[60px] lg:h-[72px] w-auto object-contain"
+                className="h-[44px] sm:h-[52px] lg:h-[60px] w-auto object-contain"
                 priority
               />
               <Image
@@ -340,52 +373,184 @@ export function Header() {
                     </p>
                   </div>
 
-                  {/* ── CENTRE: Items list ──────────────────────── */}
-                  <div className="py-10 px-10">
-                    <p className="font-sans text-panel-eyebrow uppercase text-[#6B6B6B] mb-4 pb-3 border-b border-[#E4E1DC]">
-                      Section index
-                    </p>
-                    <ul className="space-y-0">
-                      {activeGroup.items.map((item) => {
-                        const ItemIcon = item.icon;
-                        return (
-                          <li key={item.href}>
-                            <Link
-                              href={item.href}
-                              onClick={() => setOpenGroup(null)}
-                              className="
-                                group/item flex items-start gap-4 py-4
-                                border-b border-[#E4E1DC] last:border-0
-                                hover:bg-[#FAFAFA] -mx-4 px-4
-                                transition-colors duration-150
-                              "
-                            >
-                              <div
-                                className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 transition-all duration-200 group-hover/item:scale-110"
-                                style={{ backgroundColor: `${activeGroup.color}12`, border: `1px solid ${activeGroup.color}20` }}
+                  {/* ── CENTRE: categories + sub-categories ─────── */}
+                  {panelHasSubcats ? (
+                    /* Two-pane: categories on the left, the hovered category's
+                       sub-categories on the right (defaults to the first). */
+                    <div className="grid grid-cols-[minmax(180px,0.9fr)_1.1fr]">
+                      <ul className="py-8 pr-5 border-r border-[#E4E1DC]">
+                        {activeGroup.items.map((item) => {
+                          const ItemIcon = item.icon;
+                          const isActive = activeCatItem?.href === item.href;
+                          return (
+                            <li key={item.href}>
+                              <Link
+                                href={item.href}
+                                onMouseEnter={() => setPanelCat(item.href)}
+                                onFocus={() => setPanelCat(item.href)}
+                                onClick={() => setOpenGroup(null)}
+                                className={`flex items-center gap-3 py-3 pl-3 pr-2 rounded-lg transition-colors duration-150 ${isActive ? "bg-[#FAFAFA]" : "hover:bg-[#FAFAFA]"}`}
                               >
-                                <ItemIcon className="w-5 h-5" style={{ color: activeGroup.color }} strokeWidth={1.5} />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <span className="block font-heading font-semibold text-panel-item text-[#0A0A0A] transition-colors duration-150 leading-snug mb-1">
+                                <div
+                                  className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+                                  style={{ backgroundColor: `${activeGroup.color}12`, border: `1px solid ${activeGroup.color}20` }}
+                                >
+                                  <ItemIcon className="w-[18px] h-[18px]" style={{ color: activeGroup.color }} strokeWidth={1.5} />
+                                </div>
+                                <span
+                                  className="flex-1 font-heading font-semibold text-panel-item leading-snug"
+                                  style={{ color: isActive ? activeGroup.color : "#0A0A0A" }}
+                                >
                                   {item.label}
                                 </span>
-                                <span className="block font-sans text-panel-desc text-[#6B6B6B]">
-                                  {item.desc}
+                                <span
+                                  className="font-sans text-panel-desc transition-opacity duration-150"
+                                  style={{ color: activeGroup.color, opacity: isActive ? 1 : 0 }}
+                                >
+                                  →
                                 </span>
-                              </div>
-                              <span
-                                className="flex-shrink-0 font-sans text-panel-desc opacity-0 group-hover/item:opacity-100 transition-all duration-150 mt-0.5 group-hover/item:translate-x-0.5"
-                                style={{ color: activeGroup.color }}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+
+                      {activeCatItem && (
+                        <div className="py-8 pl-8">
+                          <p className="font-sans text-panel-eyebrow uppercase text-[#6B6B6B] mb-1">
+                            In this category
+                          </p>
+                          <Link
+                            href={activeCatItem.href}
+                            onClick={() => setOpenGroup(null)}
+                            className="inline-block font-heading font-bold text-panel-item text-[#0A0A0A] hover:text-[#394F73] transition-colors duration-150"
+                          >
+                            {activeCatItem.label}
+                          </Link>
+                          <p className="mt-1.5 font-sans text-panel-desc text-[#6B6B6B] line-clamp-1">
+                            {activeCatItem.desc}
+                          </p>
+                          {activeCatItem.children && activeCatItem.children.length > 0 ? (
+                            <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-0">
+                              {activeCatItem.children.map((child) => (
+                                <li key={child.href}>
+                                  <Link
+                                    href={child.href}
+                                    onClick={() => setOpenGroup(null)}
+                                    className="group/sub flex items-center justify-between gap-2 py-2 border-b border-[#EDEBE7] transition-colors duration-150"
+                                  >
+                                    <span className="font-sans text-panel-item text-[#3F3F3F] group-hover/sub:text-[#394F73] transition-colors duration-150">
+                                      {child.label}
+                                    </span>
+                                    <span
+                                      className="font-sans text-panel-desc opacity-0 group-hover/sub:opacity-100 transition-opacity duration-150"
+                                      style={{ color: activeGroup.color }}
+                                    >
+                                      →
+                                    </span>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    panelSections.length > 0 ? (
+                    /* Audience columns — each section side by side, labels only (no descriptions). */
+                    <div className="py-10 px-10">
+                      <div className={`grid gap-x-10 ${panelSections.length >= 2 ? "grid-cols-2 divide-x divide-[#E4E1DC]" : "grid-cols-1"}`}>
+                        {panelSections.map((section, sIdx) => (
+                          <div key={section} className={sIdx > 0 ? "pl-10" : ""}>
+                            <p
+                              className="font-sans text-panel-eyebrow uppercase tracking-wide mb-3 pb-3 border-b border-[#E4E1DC]"
+                              style={{ color: activeGroup.color }}
+                            >
+                              {section}
+                            </p>
+                            <ul className="space-y-0">
+                              {activeGroup.items
+                                .filter((i) => i.section === section)
+                                .map((item) => {
+                                  const ItemIcon = item.icon;
+                                  return (
+                                    <li key={`${section}-${item.href}`} className="border-b border-[#EDEBE7] last:border-0">
+                                      <Link
+                                        href={item.href}
+                                        onClick={() => setOpenGroup(null)}
+                                        className="group/item flex items-center gap-3 py-3.5 hover:bg-[#FAFAFA] -mx-3 px-3 transition-colors duration-150"
+                                      >
+                                        <div
+                                          className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-200 group-hover/item:scale-110"
+                                          style={{ backgroundColor: `${activeGroup.color}12`, border: `1px solid ${activeGroup.color}20` }}
+                                        >
+                                          <ItemIcon className="w-[18px] h-[18px]" style={{ color: activeGroup.color }} strokeWidth={1.5} />
+                                        </div>
+                                        <span className="flex-1 font-heading font-semibold text-panel-item text-[#0A0A0A] leading-snug">
+                                          {item.label}
+                                        </span>
+                                        <span
+                                          className="flex-shrink-0 font-sans text-panel-desc opacity-0 group-hover/item:opacity-100 transition-all duration-150 group-hover/item:translate-x-0.5"
+                                          style={{ color: activeGroup.color }}
+                                        >
+                                          →
+                                        </span>
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="py-10 px-10">
+                      <p className="font-sans text-panel-eyebrow uppercase text-[#6B6B6B] mb-4 pb-3 border-b border-[#E4E1DC]">
+                        Section index
+                      </p>
+                      <ul className="space-y-0">
+                        {activeGroup.items.map((item) => {
+                          const ItemIcon = item.icon;
+                          return (
+                            <li key={item.href} className="border-b border-[#E4E1DC] last:border-0">
+                              <Link
+                                href={item.href}
+                                onClick={() => setOpenGroup(null)}
+                                className="
+                                  group/item flex items-start gap-4 py-4
+                                  hover:bg-[#FAFAFA] -mx-4 px-4
+                                  transition-colors duration-150
+                                "
                               >
-                                →
-                              </span>
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
+                                <div
+                                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 transition-all duration-200 group-hover/item:scale-110"
+                                  style={{ backgroundColor: `${activeGroup.color}12`, border: `1px solid ${activeGroup.color}20` }}
+                                >
+                                  <ItemIcon className="w-5 h-5" style={{ color: activeGroup.color }} strokeWidth={1.5} />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <span className="block font-heading font-semibold text-panel-item text-[#0A0A0A] transition-colors duration-150 leading-snug mb-1">
+                                    {item.label}
+                                  </span>
+                                  <span className="block font-sans text-panel-desc text-[#6B6B6B]">
+                                    {item.desc}
+                                  </span>
+                                </div>
+                                <span
+                                  className="flex-shrink-0 font-sans text-panel-desc opacity-0 group-hover/item:opacity-100 transition-all duration-150 mt-0.5 group-hover/item:translate-x-0.5"
+                                  style={{ color: activeGroup.color }}
+                                >
+                                  →
+                                </span>
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  ))}
 
                   {/* ── RIGHT: Editorial feature panel ─────────── */}
                   <div className="py-10 pl-10 flex flex-col justify-between">
@@ -460,7 +625,7 @@ export function Header() {
                     alt="Pakistan Textile Partners logo"
                     width={320}
                     height={226}
-                    className="h-[44px] w-auto object-contain"
+                    className="h-[40px] w-auto object-contain"
                   />
                   <Image
                     src="/image/wordmark.png"
@@ -546,10 +711,19 @@ export function Header() {
                             transition={{ duration: 0.2 }}
                             className="overflow-hidden"
                           >
-                            {item.items.map((subItem) => {
+                            {item.items.map((subItem, subIdx) => {
                               const SubIcon = subItem.icon;
+                              const showSection = !!subItem.section && subItem.section !== item.items[subIdx - 1]?.section;
                               return (
-                                <li key={subItem.href} className="border-t border-[#E4E1DC]">
+                                <li key={`${subItem.section ?? ""}-${subItem.href}`} className="border-t border-[#E4E1DC]">
+                                  {showSection && (
+                                    <p
+                                      className="px-6 pt-3 pb-1 font-sans text-mobile-desc uppercase tracking-wide font-semibold"
+                                      style={{ color: item.color }}
+                                    >
+                                      {subItem.section}
+                                    </p>
+                                  )}
                                   <Link
                                     href={subItem.href}
                                     onClick={() => setIsMobileOpen(false)}
@@ -565,11 +739,28 @@ export function Header() {
                                       <span className="block font-sans text-mobile-item font-medium text-[#0A0A0A] transition-colors duration-150 mb-0.5">
                                         {subItem.label}
                                       </span>
-                                      <span className="block font-sans text-mobile-desc text-[#6B6B6B]">
-                                        {subItem.desc}
-                                      </span>
+                                      {!subItem.section && (
+                                        <span className="block font-sans text-mobile-desc text-[#6B6B6B]">
+                                          {subItem.desc}
+                                        </span>
+                                      )}
                                     </div>
                                   </Link>
+                                  {subItem.children && subItem.children.length > 0 && (
+                                    <ul className="pb-2.5">
+                                      {subItem.children.map((child) => (
+                                        <li key={child.href}>
+                                          <Link
+                                            href={child.href}
+                                            onClick={() => setIsMobileOpen(false)}
+                                            className="block pl-[60px] pr-6 py-2 font-sans text-mobile-desc text-[#6B6B6B] hover:text-[#394F73] transition-colors duration-150"
+                                          >
+                                            {child.label}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
                                 </li>
                               );
                             })}
