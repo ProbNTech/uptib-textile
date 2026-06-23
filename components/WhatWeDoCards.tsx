@@ -30,6 +30,8 @@ interface WhatWeDoCardsProps {
   accentColor?: string;
   /** When true, the header text uses light colors for use on dark backgrounds. */
   light?: boolean;
+  /** When true, the header (eyebrow, heading, context) is centred. */
+  centered?: boolean;
 }
 
 /* ────────────────────────────────────────────
@@ -204,31 +206,22 @@ export default function WhatWeDoCards({
   context,
   accentColor,
   light = false,
+  centered = false,
 }: WhatWeDoCardsProps) {
   const hasHeader = Boolean((eyebrow || audience) && accentColor);
 
   return (
     <div>
       {hasHeader && (
-        <div className="mb-8 lg:mb-10">
-          {eyebrow && (
-            <div className="flex items-center gap-3 mb-3">
-              <p
-                className="text-xs sm:text-sm font-bold uppercase tracking-[0.22em]"
-                style={{ color: accentColor }}
-              >
-                {eyebrow}
-              </p>
-            </div>
-          )}
-          {audience && (
+        <div className={`mb-8 lg:mb-10 ${centered ? "text-center" : ""}`}>
+          {(eyebrow || audience) && (
             <h3 className={`font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] leading-[1.15] tracking-tight ${light ? "text-white" : "text-[#1A1A1A]"}`}>
-              For{" "}
+              {eyebrow && `${eyebrow} `}For{" "}
               <span style={{ color: accentColor }}>{audience}</span>
             </h3>
           )}
           {context && (
-            <p className={`mt-3 text-base sm:text-lg leading-relaxed max-w-2xl ${light ? "text-gray-300" : "text-[#5A5F72]"}`}>
+            <p className={`mt-3 text-base sm:text-lg leading-relaxed max-w-2xl ${centered ? "mx-auto" : ""} ${light ? "text-gray-300" : "text-[#5A5F72]"}`}>
               {context}
             </p>
           )}

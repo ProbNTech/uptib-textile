@@ -66,25 +66,39 @@ const navItems: NavItem[] = [
       { label: "Healthcare Textile", href: "/products/healthcare-textile", desc: "Scrubs, gowns, hospital linen and antimicrobial textiles.", icon: Stethoscope, children: subLinks("healthcare-textile") },
     ],
   },
-  /* 2 — Service */
+  /* 2 — Export Services (for Pakistani exporters) */
   {
     kind: "group",
-    label: "Service",
-    tagline: "What we do for you",
+    label: "Export Services",
+    tagline: "For Pakistani exporters",
     color: SERVICE_GREEN,
     editorial: {
-      headline: "Source it. Sell it.\nShip it. Scale it.",
-      body: "Services for both sides of the trade — helping Pakistani exporters reach markets worldwide, and helping international importers source from Pakistan.",
+      headline: "Sell it. Ship it.\nScale it.",
+      body: "Services that help Pakistani textile manufacturers and exporters reach buyers across the world.",
       cta: { label: "View all services →", href: "/services" },
     },
     items: [
-      { label: "Marketing & Sales", href: "/services/marketing-sales", desc: "Visibility, B2B matchmaking and market intelligence for exporters going global.", icon: Megaphone, section: "For Pakistani Exporters" },
-      { label: "E-commerce & Warehouse", href: "/services/ecommerce-warehouse", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse, section: "For Pakistani Exporters" },
-      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL and delivery.", icon: ShoppingCart, section: "For Pakistani Exporters" },
-      { label: "Logistics", href: "/services/logistics", desc: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.", icon: Truck, section: "For Pakistani Exporters" },
-      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Source the right Pakistani manufacturers for your order — vendor identification, sampling, price negotiation and production follow-up.", icon: Factory, section: "For International Importers / Buyers" },
-      { label: "Quality Control", href: "/#for-international-buyers", desc: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck, section: "For International Importers / Buyers" },
-      { label: "Compliance & Logistics", href: "/#for-international-buyers", desc: "Social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship, section: "For International Importers / Buyers" },
+      { label: "Marketing & Sales", href: "/services/marketing-sales", desc: "Visibility, B2B matchmaking and market intelligence for exporters going global.", icon: Megaphone },
+      { label: "E-commerce & Warehouse", href: "/services/ecommerce-warehouse", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse },
+      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL and delivery.", icon: ShoppingCart },
+      { label: "Logistics", href: "/services/logistics", desc: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.", icon: Truck },
+    ],
+  },
+  /* 3 — Import Services (for international buyers) */
+  {
+    kind: "group",
+    label: "Import Services",
+    tagline: "For international buyers",
+    color: SERVICE_GREEN,
+    editorial: {
+      headline: "Source it.\nCheck it. Land it.",
+      body: "Source from Pakistan with confidence — vendor vetting, quality control and end-to-end logistics handled for you.",
+      cta: { label: "For international buyers →", href: "/#for-international-buyers" },
+    },
+    items: [
+      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Source the right Pakistani manufacturers for your order — vendor identification, sampling, price negotiation and production follow-up.", icon: Factory },
+      { label: "Quality Control", href: "/#for-international-buyers", desc: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck },
+      { label: "Compliance & Logistics", href: "/#for-international-buyers", desc: "Social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship },
     ],
   },
   /* 3 — Global Textile Market */
@@ -209,7 +223,7 @@ export function Header() {
 
         {/* ── Single nav bar: logo + nav + CTA ───────────────── */}
         <div className="px-5 sm:px-8 lg:px-12 xl:px-8 2xl:px-16">
-          <div className="flex items-center justify-between gap-6 h-[70px] sm:h-[80px] lg:h-[90px]">
+          <div className="flex items-center justify-between gap-3 xl:gap-2 2xl:gap-4 h-[70px] sm:h-[80px] lg:h-[90px]">
 
             {/* ── Left: Logo + wordmark ────────────────────────── */}
             <Link
@@ -230,7 +244,7 @@ export function Header() {
                 alt="Pakistan Textile Partners"
                 width={1499}
                 height={328}
-                className="hidden sm:block h-[26px] lg:h-[32px] w-auto object-contain"
+                className="hidden sm:block xl:hidden 2xl:block h-[26px] lg:h-[32px] w-auto object-contain"
               />
             </Link>
 
@@ -242,7 +256,7 @@ export function Header() {
               <Link
                 href="/"
                 onMouseEnter={handleLeave}
-                className={`relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] transition-colors duration-150 ${
+                className={`relative h-full px-1.5 2xl:px-2.5 flex items-center font-sans text-[11px] 2xl:text-[12.5px] font-semibold tracking-[0.02em] transition-colors duration-150 ${
                   isLinkActive("/") ? "text-[#394F73]" : "text-[#0A0A0A] hover:text-[#394F73]"
                 }`}
               >
@@ -256,7 +270,7 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       onMouseEnter={handleLeave}
-                      className={`relative h-full px-2 2xl:px-3.5 flex items-center font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em] transition-colors duration-150 whitespace-nowrap ${
+                      className={`relative h-full px-1.5 2xl:px-2.5 flex items-center font-sans text-[11px] 2xl:text-[12.5px] font-semibold tracking-[0.02em] transition-colors duration-150 whitespace-nowrap ${
                         isLinkActive(item.href) ? "text-[#394F73]" : "text-[#0A0A0A] hover:text-[#394F73]"
                       }`}
                     >
@@ -276,8 +290,8 @@ export function Header() {
                     aria-haspopup="true"
                     onMouseEnter={() => handleGroupEnter(item.label)}
                     className={`
-                      relative h-full px-2 2xl:px-3.5 flex items-center gap-1
-                      font-sans text-[12px] 2xl:text-[14px] font-semibold tracking-[0.04em]
+                      relative h-full px-1.5 2xl:px-2.5 flex items-center gap-1
+                      font-sans text-[11px] 2xl:text-[12.5px] font-semibold tracking-[0.02em]
                       transition-colors duration-150 cursor-default select-none whitespace-nowrap
                       ${highlight
                         ? "text-[#394F73]"
@@ -311,7 +325,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onMouseEnter={handleLeave}
-                className="px-6 py-2.5 font-sansHeading font-bold text-base uppercase tracking-[0.12em] bg-[#78899B] text-white hover:bg-[#5E7088] transition-colors duration-200 whitespace-nowrap rounded"
+                className="px-3.5 2xl:px-5 py-2 font-sansHeading font-bold text-[12.5px] 2xl:text-sm uppercase tracking-[0.08em] bg-[#78899B] text-white hover:bg-[#5E7088] transition-colors duration-200 whitespace-nowrap rounded"
               >
                 Get a Quote
               </Link>
@@ -337,14 +351,30 @@ export function Header() {
         <AnimatePresence>
           {activeGroup && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.15 }}
+              initial={{ opacity: 0, y: shouldReduceMotion ? 0 : -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -8 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
               onMouseEnter={() => handlePanelEnter(activeGroup.label)}
               className="hidden xl:block absolute left-0 right-0 top-full border-b-[2px] border-[#0A0A0A] bg-white shadow-xl"
             >
-              <div className="px-6 sm:px-10 lg:px-14 xl:px-18">
+              {/* Stays mounted while switching groups — only the inner content
+                  cross-fades, and the panel height morphs, so moving between
+                  nav items feels like one continuous surface. */}
+              <motion.div
+                layout
+                transition={{ layout: { duration: 0.32, ease: [0.22, 1, 0.36, 1] } }}
+                className="relative overflow-hidden"
+              >
+                <AnimatePresence mode="popLayout" initial={false}>
+                  <motion.div
+                    key={activeGroup.label}
+                    initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -8 }}
+                    transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                    className="px-6 sm:px-10 lg:px-14 xl:px-18"
+                  >
                 <div className="grid grid-cols-[200px_1fr_260px] gap-0 divide-x divide-[#E4E1DC]">
 
                   {/* ── LEFT: Section identity ──────────────────── */}
@@ -583,7 +613,9 @@ export function Header() {
                     </Link>
                   </div>
                 </div>
-              </div>
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
