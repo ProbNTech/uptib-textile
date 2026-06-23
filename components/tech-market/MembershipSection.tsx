@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-import { Factory, TrendingUp } from "lucide-react";
-
 /* ── Premium 3D-style isometric SVG illustrations for "Our Focus" section ── */
 const PolicyIcon = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
   <svg className={className} style={style} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -216,86 +214,100 @@ export default function MembershipSection() {
         {/* Content */}
         <div className="relative z-20 flex flex-col justify-center items-start h-full px-6 sm:px-10 lg:px-16 xl:px-20">
           <motion.div
-            className="grid lg:grid-cols-2 gap-10 items-start w-full"
+            className="w-full py-12 lg:py-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
           >
-            {/* Left Side */}
-            <div className="flex flex-col justify-center h-full">
-              <div className="relative z-10 flex flex-col justify-center h-full max-w-5xl mx-auto py-8">
-                <span className="text-sm sm:text-xl font-bold text-white inline-block w-fit mb-3">
-                  Membership
-                </span>
-                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white inline-block">
-                  Who can join?
-                </h2>
-                <p className="mt-5 text-white text-base sm:text-lg lg:text-xl max-w-3xl leading-relaxed">
-                  Membership connects Pakistani textile manufacturers and exporters with buyers worldwide — from first-time exporters to established mills ready to scale globally.
-                </p>
-              </div>
+            {/* Heading */}
+            <div className="max-w-3xl mx-auto text-center mb-8 lg:mb-12">
+              <span className="text-sm sm:text-xl font-bold text-white inline-block w-fit mb-3">
+                Membership
+              </span>
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+                Who can join?
+              </h2>
+              <p className="mt-5 text-white text-base sm:text-lg lg:text-xl leading-relaxed">
+                Membership connects Pakistani textile manufacturers and exporters with buyers worldwide — from first-time exporters to established mills ready to scale globally.
+              </p>
             </div>
 
-            {/* Right Side Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 py-8">
+            {/* Cards — 4 per row, two rows */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
               {[
                 {
-                  title: "Manufacturers and Exporters",
-                  desc: "Pakistani textile manufacturers and mills across bedding, apparel, sportswear and healthcare textiles.",
-                  image: "/image/manufacturing-mils.jpg",
-                  icon: Factory,
-                  color: "#394F73",
+                  title: "Towels, bed & hotel linen",
+                  desc: "Export-grade ring-spun towels, fitted & flat sheets, duvets and hotel & hospital linen — built for hundreds of industrial washes.",
+                  image: "/image/textile/home/bedroom-collection/01.jpg",
+                  w: 1920, h: 1280,
                 },
                 {
-                  title: "Exporters & Sellers",
-                  desc: "Exporters seeking global reach, e-commerce and warehousing to sell directly to consumers worldwide.",
-                  image: "/image/exporters-and-sellers.jpg",
-                  icon: TrendingUp,
-                  color: "#394F73",
+                  title: "Private-label apparel",
+                  desc: "OEM hoodies, shirts and uniforms with cutting, stitching, printing and embroidery in-house — 100-piece-per-design MOQ.",
+                  image: "/image/textile/apparel/skirts-1.jpg",
+                  w: 1067, h: 1600,
                 },
                 {
-                  title: "First-time Exporters",
-                  desc: "Capable producers exporting for the first time — we make you visible, credible and ready for international buyers.",
-                  image: "/image/first-time-exporter.jpg",
-                  icon: TrendingUp,
-                  color: "#394F73",
+                  title: "Custom & sublimated sportswear",
+                  desc: "Gymwear, sublimated kits and teamwear with full in-house design-to-dispatch and one of the industry's lowest MOQs.",
+                  image: "/image/textile/sportswear/perf-3.jpg",
+                  w: 1200, h: 1500,
                 },
                 {
-                  title: "Private-label & OEM",
-                  desc: "Fashion, denim and OEM garment factories producing to spec for brands and retailers worldwide.",
-                  image: "/image/private-label.jpg",
-                  icon: Factory,
-                  color: "#394F73",
+                  title: "Medical scrubs & uniforms",
+                  desc: "Scrubs, lab coats, nurse and doctor uniforms and patient gowns — breathable, durable fabrics with low MOQs and bulk capacity.",
+                  image: "/image/textile/healthcare/medical-uniform.jpg",
+                  w: 800, h: 1200,
                 },
-              ].map((item) => {
-                const Icon = item.icon;
-                return (
-                  <Link
-                    key={item.title}
-                    href="/membership"
-                    className="block rounded-xl overflow-hidden bg-black/30 backdrop-blur-md border border-white/[0.12] shadow-lg shadow-black/20"
-                  >
-                    <div className="relative h-[180px] overflow-hidden rounded-t-xl">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    </div>
-                    <div className="p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Icon className="w-7 h-7 shrink-0" style={{ color: item.color }} strokeWidth={1.8} />
-                        <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">
-                          {item.title}
-                        </h3>
-                      </div>
-                      <p className="text-white/90 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </Link>
-                );
-              })}
+                {
+                  title: "Fiber-to-garment sourcing",
+                  desc: "Factory-direct pricing, on-ground QC, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners.",
+                  image: "/image/textile/apparel/skirts-dresses/01.jpg",
+                  w: 1200, h: 1800,
+                },
+                {
+                  title: "Hotel & hospital linen sourcing",
+                  desc: "Single-point sourcing and QA for hotel and hospital bed linen, towels and workwear through an ISO / OEKO-TEX-audited network.",
+                  image: "/image/textile/healthcare/linen-1.jpg",
+                  w: 1400, h: 1050,
+                },
+                {
+                  title: "Denim & woven bottoms",
+                  desc: "Full-package jeans, chinos and woven bottoms with in-house washing, finishing and laundry effects, supplied to brands worldwide.",
+                  image: "/image/textile/apparel/denim-woven/denim-home.jpg",
+                  w: 636, h: 919,
+                },
+                {
+                  title: "Cotton yarn & greige fabric",
+                  desc: "Ring-spun, carded and combed yarns plus woven base cloth feeding mills and converters across Asia, Europe and the Americas.",
+                  image: "/image/textile/home/dining-kitchen-collection/tablecloth-05.jpg",
+                  w: 700, h: 700,
+                },
+              ].map((item) => (
+                <Link
+                  key={item.title}
+                  href="/contact"
+                  className="group relative block aspect-[4/5] overflow-hidden rounded-xl shadow-lg shadow-black/20"
+                >
+                  {/* Image fills a fixed-shape tile so every card in the row matches */}
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* gradient so the overlaid text stays legible */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+                  {/* title + description overlaid at the bottom */}
+                  <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                    <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-white/85">{item.desc}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </motion.div>
         </div>
