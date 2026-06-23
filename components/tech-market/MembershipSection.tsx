@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { BedDouble, Shirt, Dumbbell, Stethoscope, Scissors, Building2, Layers } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
 /* ── Premium 3D-style isometric SVG illustrations for "Our Focus" section ── */
@@ -193,23 +194,9 @@ const MarketsIcon = ({ className, style }: { className?: string; style?: React.C
 export default function MembershipSection() {
   return (
     <div className="relative w-full">
-      <section className="relative w-full min-h-screen lg:min-h-[700px] overflow-hidden z-10">
-        {/* Background Image */}
-        <Image
-          aria-hidden="true"
-          src="/image/hero-bg/pexels-denis-komarov-195926247-11537258.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        />
-
-        {/* Dark overlay for content legibility */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/65 to-black/50"
-        />
+      <section className="relative w-full overflow-hidden z-10 bg-[#F6F2EA]">
+        {/* subtle dot texture */}
+        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
 
         {/* Content */}
         <div className="relative z-20 flex flex-col justify-center items-start h-full px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -221,93 +208,121 @@ export default function MembershipSection() {
           >
             {/* Heading */}
             <div className="max-w-3xl mx-auto text-center mb-8 lg:mb-12">
-              <span className="text-sm sm:text-xl font-bold text-white inline-block w-fit mb-3">
-                Membership
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#394F73] inline-block w-fit mb-3">
+                Made in Pakistan
               </span>
-              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
-                Who can join?
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#1A1A1A]">
+                Pakistani industries &amp; their best products
               </h2>
-              <p className="mt-5 text-white text-base sm:text-lg lg:text-xl leading-relaxed">
-                Membership connects Pakistani textile manufacturers and exporters with buyers worldwide — from first-time exporters to established mills ready to scale globally.
+              <p className="mt-5 text-[#5A5F72] text-base sm:text-lg lg:text-xl leading-relaxed">
+                A snapshot of what Pakistan&apos;s textile industries do best — from export-grade towelling and private-label apparel to performance sportswear, medical uniforms and full-service sourcing.
               </p>
             </div>
 
-            {/* Cards — 4 per row, two rows */}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
+            {/* Cards — bento mosaic (mixed sizes), 8 tiles */}
+            <div className="grid grid-cols-1 auto-rows-[220px] gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[250px] lg:gap-4">
               {[
                 {
                   title: "Towels, bed & hotel linen",
-                  desc: "Export-grade ring-spun towels, fitted & flat sheets, duvets and hotel & hospital linen — built for hundreds of industrial washes.",
+                  tagline: "Towels, sheets, duvets & hotel linen",
                   image: "/image/textile/home/bedroom-collection/01.jpg",
-                  w: 1920, h: 1280,
+                  icon: BedDouble,
+                  accent: "#8C9AAB",
+                  layout: "lg:col-start-1 lg:row-start-1 lg:col-span-2",
                 },
                 {
                   title: "Private-label apparel",
-                  desc: "OEM hoodies, shirts and uniforms with cutting, stitching, printing and embroidery in-house — 100-piece-per-design MOQ.",
+                  tagline: "OEM hoodies, shirts & uniforms",
                   image: "/image/textile/apparel/skirts-1.jpg",
-                  w: 1067, h: 1600,
+                  icon: Shirt,
+                  accent: "#DC2626",
+                  layout: "lg:col-start-3 lg:row-start-1 lg:row-span-2",
                 },
                 {
                   title: "Custom & sublimated sportswear",
-                  desc: "Gymwear, sublimated kits and teamwear with full in-house design-to-dispatch and one of the industry's lowest MOQs.",
+                  tagline: "Gymwear, kits & teamwear",
                   image: "/image/textile/sportswear/perf-3.jpg",
-                  w: 1200, h: 1500,
+                  icon: Dumbbell,
+                  accent: "#A3AEBC",
+                  layout: "lg:col-start-1 lg:row-start-2",
                 },
                 {
                   title: "Medical scrubs & uniforms",
-                  desc: "Scrubs, lab coats, nurse and doctor uniforms and patient gowns — breathable, durable fabrics with low MOQs and bulk capacity.",
+                  tagline: "Scrubs, lab coats & patient gowns",
                   image: "/image/textile/healthcare/medical-uniform.jpg",
-                  w: 800, h: 1200,
+                  icon: Stethoscope,
+                  accent: "#DC2626",
+                  layout: "lg:col-start-2 lg:row-start-2",
                 },
                 {
                   title: "Fiber-to-garment sourcing",
-                  desc: "Factory-direct pricing, on-ground QC, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners.",
+                  tagline: "Factory-direct sourcing & QC",
                   image: "/image/textile/apparel/skirts-dresses/01.jpg",
-                  w: 1200, h: 1800,
+                  icon: Scissors,
+                  accent: "#8C9AAB",
+                  layout: "lg:col-start-1 lg:row-start-3 lg:row-span-2",
                 },
                 {
                   title: "Hotel & hospital linen sourcing",
-                  desc: "Single-point sourcing and QA for hotel and hospital bed linen, towels and workwear through an ISO / OEKO-TEX-audited network.",
+                  tagline: "Hotel & hospital linen, single source",
                   image: "/image/textile/healthcare/linen-1.jpg",
-                  w: 1400, h: 1050,
+                  icon: Building2,
+                  accent: "#A3AEBC",
+                  layout: "lg:col-start-2 lg:row-start-3 lg:col-span-2",
                 },
                 {
                   title: "Denim & woven bottoms",
-                  desc: "Full-package jeans, chinos and woven bottoms with in-house washing, finishing and laundry effects, supplied to brands worldwide.",
+                  tagline: "Jeans, chinos & woven bottoms",
                   image: "/image/textile/apparel/denim-woven/denim-home.jpg",
-                  w: 636, h: 919,
+                  icon: Shirt,
+                  accent: "#8C9AAB",
+                  layout: "lg:col-start-2 lg:row-start-4",
                 },
                 {
                   title: "Cotton yarn & greige fabric",
-                  desc: "Ring-spun, carded and combed yarns plus woven base cloth feeding mills and converters across Asia, Europe and the Americas.",
+                  tagline: "Ring-spun yarns & greige cloth",
                   image: "/image/textile/home/dining-kitchen-collection/tablecloth-05.jpg",
-                  w: 700, h: 700,
+                  icon: Layers,
+                  accent: "#A3AEBC",
+                  layout: "lg:col-start-3 lg:row-start-4",
                 },
-              ].map((item) => (
-                <Link
-                  key={item.title}
-                  href="/contact"
-                  className="group relative block aspect-[4/5] overflow-hidden rounded-xl shadow-lg shadow-black/20"
-                >
-                  {/* Image fills a fixed-shape tile so every card in the row matches */}
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* gradient so the overlaid text stays legible */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
-                  {/* title + description overlaid at the bottom */}
-                  <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                    <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-white/85">{item.desc}</p>
-                  </div>
-                </Link>
-              ))}
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.title}
+                    href="/contact"
+                    className={`group relative h-full overflow-hidden rounded-2xl shadow-md ${item.layout}`}
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-[2500ms] ease-out group-hover:scale-110"
+                    />
+                    {/* darkening overlay — light, just enough for legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                    {/* subtle bottom shade behind the text */}
+                    <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/45 to-transparent" />
+
+                    {/* centred icon badge */}
+                    <div className="absolute left-1/2 top-[44%] flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg">
+                      <Icon className="size-6" strokeWidth={1.8} style={{ color: item.accent }} aria-hidden />
+                    </div>
+
+                    {/* bottom copy */}
+                    <div className="absolute inset-x-0 bottom-0 p-5 pb-6">
+                      <h3 className="font-heading text-lg font-bold leading-tight text-white">
+                        {item.title}
+                      </h3>
+                      <p className="mt-1.5 text-[0.8rem] leading-snug text-white/80">
+                        {item.tagline}
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         </div>

@@ -11,15 +11,6 @@ const productImages: Record<string, string> = {
   "healthcare-textile": "/image/healthcare-home-product-image.jpg",
 };
 
-/* Bento placement per category (lg+). Home Textile = wide top-left,
-   Apparel = tall card on the right, Sportswear + Healthcare below Home Textile. */
-const cardLayout: Record<string, string> = {
-  "bedding-linen": "lg:col-start-1 lg:row-start-1 lg:col-span-2",
-  "apparel-accessories": "lg:col-start-3 lg:row-start-1 lg:row-span-2",
-  "sportswear-activewear": "lg:col-start-1 lg:row-start-2",
-  "healthcare-textile": "lg:col-start-2 lg:row-start-2",
-};
-
 /* Short card taglines — concise, matching the showcase layout */
 const productTaglines: Record<string, string> = {
   "bedding-linen": "Bed linen, towels, bath linen & more",
@@ -40,35 +31,35 @@ export default function ProductsSection() {
   return (
     <section
       id="products"
-      className="relative z-[1] pt-20 lg:pt-28 pb-10 lg:pb-12 scroll-mt-24 overflow-hidden bg-[#F6F2EA]"
+      className="relative z-[1] pt-20 lg:pt-28 pb-10 lg:pb-12 scroll-mt-24 overflow-hidden bg-[#394F73]"
       aria-labelledby="products-heading"
     >
-      <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
+      <div className="absolute inset-0 opacity-[0.05]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #FFFFFF 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">
-          <div className="flex flex-col items-center gap-10 lg:gap-12">
-            {/* ── Top: intro, centred above the cards ── */}
-            <div className="flex max-w-2xl flex-col items-center text-center">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#5A5F72]">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-12">
+            {/* ── Left: intro column ── */}
+            <div className="flex shrink-0 flex-col justify-center lg:w-[200px] xl:w-[220px]">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#D8CDBA]">
                 Our Products
               </p>
-              <h2 id="products-heading" className="font-heading text-3xl font-bold leading-[1.15] text-[#1A1A1A] sm:text-4xl">
-                The textiles we present
+              <h2 id="products-heading" className="font-heading text-3xl font-bold leading-[1.15] text-white sm:text-4xl">
+                The textiles<br className="hidden lg:block" /> we present
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-[#5A5F72]">
+              <p className="mt-4 text-base leading-relaxed text-white/85">
                 From yarn to fashion, we supply quality you can trust.
               </p>
               <Link
                 href="/products"
-                className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#DC2626] transition-all hover:gap-2.5"
+                className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#D8CDBA] transition-all hover:gap-2.5"
               >
                 View all products
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
 
-            {/* ── Below: product cards (bento), centred ── */}
-            <div className="grid w-full max-w-6xl mx-auto grid-cols-1 auto-rows-[220px] gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[250px] lg:gap-4">
+            {/* ── Right: product cards ── */}
+            <div className="grid flex-1 grid-cols-2 gap-[2px] lg:grid-cols-4">
               {products.map((p) => {
                 const Icon = p.icon;
                 const accent = productAccents[p.slug];
@@ -76,14 +67,14 @@ export default function ProductsSection() {
                   <Link
                     key={p.slug}
                     href={`/products/${p.slug}`}
-                    className={`group relative h-full overflow-hidden rounded-2xl shadow-md ${cardLayout[p.slug] ?? ""}`}
+                    className="group relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md"
                   >
                     <Image
                       src={productImages[p.slug]}
                       alt={p.name}
                       fill
                       className="object-cover transition-transform duration-[2500ms] ease-out group-hover:scale-110"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 22vw"
                     />
                     {/* darkening overlay — light, just enough for legibility */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />

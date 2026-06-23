@@ -4,7 +4,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, ArrowRight, Factory, ClipboardCheck, Ship, Globe, ShieldCheck, Headphones, Award, Leaf, Clock, UserRound } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Factory, ClipboardCheck, Ship, Globe, ShieldCheck, Headphones, Award, Leaf, Clock, UserRound, Sprout, Cog, RotateCw, Grid3x3, ChevronRight, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -56,6 +56,15 @@ const pakistanServicesData = [
   { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/ecommerce-warehouse", color: "#394F73" },
   { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/contact", color: "#394F73" },
   { id: 8, title: "Worldwide market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#394F73" },
+];
+
+/* ─── From field to fabric — cotton-to-textile production value chain ─── */
+const processChain = [
+  { title: "Cotton Growing", desc: "It all begins in the field — Pakistan is among the world's leading cotton producers.", image: "/image/cotton-growing.jpg", icon: Sprout },
+  { title: "Ginning", desc: "Raw cotton is cleaned and separated from its seed, ready to be spun.", image: "/image/ginning.png", icon: Cog },
+  { title: "Spinning", desc: "Cleaned fibre is drawn and twisted into strong, consistent yarn.", image: "/image/spinning.png", icon: RotateCw },
+  { title: "Weaving Mills", desc: "Yarn is woven at scale into greige fabric on industrial looms.", image: "/image/weaving-mills.png", icon: Factory },
+  { title: "Hand Looms", desc: "Skilled artisans craft specialty and heritage textiles by hand.", image: "/image/hand-looms.png", icon: Grid3x3 },
 ];
 
 /* ─── Our Services — buyer-facing grid (International buyers → Pakistan supply) ─── */
@@ -115,7 +124,7 @@ export default function Home() {
       {/* 5. OUR SERVICES — exporter-facing grid */}
       <section
         id="services"
-        className="relative z-[1] pt-10 lg:pt-12 pb-0 scroll-mt-24 overflow-hidden bg-white"
+        className="relative z-[1] pt-10 lg:pt-12 pb-0 scroll-mt-24 overflow-hidden bg-[#F6F2EA]"
         aria-labelledby="services-heading"
       >
         <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -136,6 +145,7 @@ export default function Home() {
                 audience="Pakistani exporters"
                 context="Reaching global markets — marketing, e-commerce & warehousing, membership, and worldwide market access."
                 accentColor="#394F73"
+                centered
               />
               <p className="mt-10 text-[#5A5F72] text-base sm:text-lg leading-relaxed max-w-7xl mx-auto text-center">
                 As a top ten global exporter and a powerhouse in cotton and home textiles, Pakistan possesses immense manufacturing capability. We unlock this potential for you. By professionalising your supply chain, optimising your digital commerce, and managing end-to-end logistics including targeted international marketing and strategic global warehousing. We provide Pakistani exporters seamless, frictionless access to major buyers across the UK, EU, USA, and the Middle East.
@@ -156,7 +166,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-b from-[#394F73] via-[#48608A] to-[#2E4061]" />
               </div>
               <div className="relative z-10 px-6 sm:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 lg:py-24">
-                <div className="max-w-7xl mx-auto">
+                <div>
                   {/* TOP — hero copy + trust panel */}
                   <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-start">
                     {/* Left: hero copy */}
@@ -329,7 +339,7 @@ export default function Home() {
                         <div
                           className="rounded-xl p-2.5"
                           style={{
-                            backgroundColor: `${card.color}22`,
+                            backgroundColor: "var(--cream)",
                             boxShadow: `0 0 0 1px ${card.color}33 inset`,
                           }}
                         >
@@ -405,6 +415,114 @@ export default function Home() {
                   >
                     <span className="font-heading font-extrabold text-white text-lg leading-none">{chip.value}</span>
                     <span className="text-white/75 text-xs sm:text-sm">{chip.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* 6c. FROM FIELD TO FABRIC — production value chain */}
+      <section
+        className="relative z-[1] pt-24 lg:pt-32 pb-12 lg:pb-16 overflow-hidden bg-[var(--cream)]"
+        aria-labelledby="process-heading"
+      >
+        {/* decorative cotton illustration — top left */}
+        <Image
+          src="/image/flower-image.png"
+          alt=""
+          aria-hidden="true"
+          width={360}
+          height={360}
+          className="pointer-events-none select-none absolute -left-12 -top-8 w-52 lg:w-72 h-auto opacity-[0.14]"
+        />
+        {/* soft silk highlight — top right */}
+        <div className="pointer-events-none absolute -right-24 -top-24 w-[460px] h-[460px] rounded-full bg-white/55 blur-3xl" aria-hidden="true" />
+
+        <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
+          <AnimatedSection animation="blur-in">
+            <SectionLabel
+              label="From field to fabric"
+              title="How Pakistani cotton becomes finished textiles"
+              body="Every order we handle runs through this chain — from the cotton field to the loom. We stay across each stage, so quality is built in, not inspected in at the end."
+              color="#B08D4C"
+              align="center"
+            />
+
+            <div className="relative mt-16">
+              {/* connecting rail + chevrons (desktop) */}
+              <div className="hidden lg:block absolute left-[10%] right-[10%] top-[46px] h-px bg-[#D8C8A8]/70" aria-hidden="true" />
+              {[20, 40, 60, 80].map((pos) => (
+                <div
+                  key={pos}
+                  aria-hidden="true"
+                  className="hidden lg:flex items-center justify-center absolute w-7 h-7 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white ring-1 ring-[#E4D9C4] shadow-sm"
+                  style={{ left: `${pos}%`, top: "46px" }}
+                >
+                  <ChevronRight className="w-4 h-4 text-[#B08D4C]" strokeWidth={2} />
+                </div>
+              ))}
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-14 gap-x-6 lg:gap-x-5">
+                {processChain.map((step, i) => {
+                  const Icon = step.icon;
+                  return (
+                    <motion.div
+                      key={step.title}
+                      className="group relative flex flex-col items-center text-center"
+                      initial={{ opacity: 0, y: 28 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-40px" }}
+                      transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      {/* icon node on the rail */}
+                      <div className="relative z-10 mb-8 rounded-full p-1.5 bg-white/40">
+                        <span className="flex items-center justify-center w-[68px] h-[68px] rounded-full bg-white ring-1 ring-[#E4D9C4] shadow-[0_6px_22px_-8px_rgba(176,141,76,0.35)] transition-transform duration-300 group-hover:scale-105">
+                          <Icon className="w-8 h-8 text-[#B08D4C]" strokeWidth={1.5} />
+                        </span>
+                      </div>
+
+                      {/* image card */}
+                      <div className="relative w-full overflow-hidden rounded-2xl shadow-[0_14px_34px_-14px_rgba(45,64,97,0.30)]">
+                        <div className="relative aspect-[4/3]">
+                          <Image
+                            src={step.image}
+                            alt={step.title}
+                            fill
+                            className="object-cover transition-transform duration-[600ms] group-hover:scale-105"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                          />
+                          <span className="absolute top-3 left-3 inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#1F3A5F] text-white font-bold text-sm shadow-md">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* caption */}
+                      <h3 className="mt-5 font-heading font-bold text-[#1A1A1A] text-xl leading-tight">{step.title}</h3>
+                      <span aria-hidden="true" className="mx-auto mt-2.5 mb-3 block h-0.5 w-10 rounded-full bg-[#B08D4C] transition-all duration-300 group-hover:w-14" />
+                      <p className="text-[#6B7280] text-sm leading-relaxed px-2">{step.desc}</p>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* feature bar */}
+            <div className="mt-16 mx-auto max-w-5xl rounded-2xl border border-[#E7DCC6] bg-white/60 backdrop-blur-sm shadow-[0_10px_30px_-18px_rgba(45,64,97,0.25)]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#E7DCC6]">
+                {[
+                  { icon: Leaf, l1: "Sustainable", l2: "at every step" },
+                  { icon: ShieldCheck, l1: "Quality built in,", l2: "not inspected" },
+                  { icon: Users, l1: "Skilled hands.", l2: "Trusted process" },
+                  { icon: Globe, l1: "From Pakistan", l2: "to the world" },
+                ].map(({ icon: FeatIcon, l1, l2 }) => (
+                  <div key={l1} className="flex items-center justify-center gap-3 px-5 py-5">
+                    <FeatIcon className="w-6 h-6 shrink-0 text-[#B08D4C]" strokeWidth={1.6} />
+                    <p className="text-[#4B5563] text-sm leading-snug">
+                      {l1}<br />{l2}
+                    </p>
                   </div>
                 ))}
               </div>
