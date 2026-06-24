@@ -38,6 +38,12 @@ export type ShowcaseGroup = {
      square; "masonry" keeps each photo's native ratio in a balanced column
      masonry (no crop, no overlap) — use when the set mixes tall/wide/square. */
   lookbookLayout?: "grid" | "masonry" | "portrait";
+  /* Editorial "catalogue" mosaic for the dedicated sub-category page — a
+     bento grid of mixed-size image cards (echoes the home-page showcase the
+     client liked). Each tile declares its `tile` shape and the image is
+     delivered at exactly that ratio, so nothing is ever cropped. `wide` tiles
+     span two columns (2:1); `square` tiles span one (1:1). */
+  mosaic?: { src: string; alt: string; name: string; type: string; tile: "wide" | "square" }[];
   /* Full-bleed hero photo for the dedicated sub-category page. Falls back to the
      first gallery image, then the parent category image, when omitted. */
   heroImage?: { src: string; alt: string };
@@ -218,6 +224,20 @@ export const products: ProductCategory[] = [
             src: "/image/textile/home/bedroom-collection/bedroom-hero-2.jpg",
             alt: "A bright, airy bedroom dressed in soft white bed linen",
           },
+          mosaic: [
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-01.jpg", alt: "A bed dressed in crisp soft white hotel bed linen", name: "Hotel-White Bed Linen", type: "Percale Bedding", tile: "wide" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-02.jpg", alt: "Detail of silken white sateen sheeting", name: "Silken Sateen", type: "Sheeting", tile: "square" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-03.jpg", alt: "Soft white and taupe stonewashed linen folds", name: "Stonewashed Linen", type: "Duvet Sets", tile: "square" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-04.jpg", alt: "A neatly folded stack of crisp white bed linen", name: "Folded Linen Stack", type: "Sheet Sets", tile: "square" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-05.jpg", alt: "A calm neutral bedroom styled with soft muslin pillows", name: "Calm Neutral Bedroom", type: "Styled Bedding", tile: "wide" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-06.jpg", alt: "Soft white cotton flat sheet draped in gentle light", name: "Soft Draped Cotton", type: "Flat Sheets", tile: "square" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-10.jpg", alt: "A made-up bed dressed in soft white bedding in a bright styled bedroom", name: "Dressed Bedroom", type: "Made-Up Beds", tile: "wide" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-11.jpg", alt: "A white iron-frame bed made up with soft cream pillows and linen", name: "Iron-Frame Bed", type: "Bed Linen Sets", tile: "square" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-07.jpg", alt: "Warm white cotton folds on a made-up bed", name: "Warm White Folds", type: "Comforters", tile: "square" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-08.jpg", alt: "Pintuck-detailed white pillows on layered bedding", name: "Pintuck Pillows", type: "Oxford Pillowcases", tile: "square" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-12.jpg", alt: "A bed made up with a white duvet and soft beige pillow beside a wooden nightstand", name: "Duvet & Pillow Set", type: "Duvet Covers", tile: "square" },
+            { src: "/image/textile/home/bedroom-collection/mosaic/m-09.jpg", alt: "Sunlit white sheeting with soft natural shadows", name: "Sunlit Sheeting", type: "Bed Linen", tile: "wide" },
+          ],
           gallery: homeGallery("bedroom", 24, [
             "A made-up bed dressed in soft white cotton bed linen",
             "A stack of white and taupe pillowcases on pale floorboards",
@@ -300,6 +320,20 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/home/towels-2.jpg", alt: "Rolled towels in a woven basket beside a pool" },
             { src: "/image/textile/home/towels-5.jpg", alt: "Rolled towels dressed with fresh flowers" },
           ],
+          mosaic: [
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-01.jpg", alt: "Soft, plush white terry towelling in close detail", name: "Soft White Terry", type: "Towelling", tile: "wide" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-02.jpg", alt: "Three rolled white bath towels in a soft ivory chair", name: "Rolled White Towels", type: "Bath Towels", tile: "square" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-03.jpg", alt: "A neatly folded stack of soft white spa towels", name: "Folded Spa Towels", type: "Towel Sets", tile: "square" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-04.jpg", alt: "A folded stack of stone-neutral cotton bath towels on a white stool", name: "Stone Cotton Towels", type: "Bath Towels", tile: "square" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-05.jpg", alt: "White rolled towels on a bamboo tray in a bright airy bathroom", name: "Spa Tray Towels", type: "Hotel Towelling", tile: "wide" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-06.jpg", alt: "Rolled and ring-hung white hotel towels by a mirror", name: "Hotel Towel Display", type: "Bath Linen", tile: "square" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-07.jpg", alt: "Crisp white towels on a heated rail in a bright clean bathroom", name: "Towels on Rail", type: "Bath Towels", tile: "wide" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-08.jpg", alt: "Soft white towels styled on a rail against a light wall", name: "Rail-Styled Towels", type: "Bath Linen", tile: "square" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-09.jpg", alt: "A white waffle-weave hand towel against bright white tiles", name: "Waffle Hand Towel", type: "Waffle Weave", tile: "square" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-10.jpg", alt: "A neatly folded white towelling bathrobe with matching bath towels", name: "Towelling Robe Set", type: "Bathrobes", tile: "square" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-11.jpg", alt: "Two crisp white bath towels with a subtle grey border, neatly folded", name: "Bordered White Towels", type: "Bath Towels", tile: "square" },
+            { src: "/image/textile/home/bathroom-collection/mosaic/m-12.jpg", alt: "A soft stack of folded stone-ivory bath towels against a bright wall", name: "Folded Stone Towels", type: "Towel Sets", tile: "wide" },
+          ],
           gallery: homeGallery("bathroom", 20, [
             "A folded white bath towel beside dried reeds",
             "White bath and hand towels on a wooden rail",
@@ -368,6 +402,20 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/home/curtains-3.jpg", alt: "Elegant terracotta floor-length drapes" },
             { src: "/image/textile/home/curtains-2.jpg", alt: "Warm sheer curtains filtering daylight" },
             { src: "/image/textile/home/curtains-4.jpg", alt: "Deep blue curtains framing a window" },
+          ],
+          mosaic: [
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-01.jpg", alt: "An airy room wrapped in floor-to-ceiling white sheer voile curtains", name: "Floor-to-Ceiling Sheers", type: "Sheer Voile", tile: "wide" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-02.jpg", alt: "A light ivory linen-weave sheer curtain panel softly lit", name: "Linen-Weave Sheer", type: "Sheer Panel", tile: "square" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-03.jpg", alt: "Folds of white sheer voile drapery filtering soft daylight", name: "Voile Drapery", type: "Sheer Voile", tile: "square" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-04.jpg", alt: "A floor-length white sheer curtain at a sunlit window", name: "Sunlit Sheer", type: "Sheer Panel", tile: "square" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-05.jpg", alt: "A serene room with tall white sheers and soft layered drapery", name: "Layered Drapery", type: "Drapery Sets", tile: "wide" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-06.jpg", alt: "A white voile curtain at a bright window in soft daylight", name: "Bright Voile", type: "Voile Curtain", tile: "square" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-07.jpg", alt: "Floor-length white and ivory sheers framing French doors", name: "French-Door Sheers", type: "Sheer Drapery", tile: "wide" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-08.jpg", alt: "A crisp white sheer curtain with a delicate dotted weave", name: "Dotted Sheer", type: "Sheer Panel", tile: "square" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-09.jpg", alt: "Sleek white sheer drapery at a hotel-style window", name: "Hotel Sheer", type: "Drapery Fabric", tile: "square" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-10.jpg", alt: "Soft folds of smooth white drapery fabric", name: "Soft White Folds", type: "Drapery Fabric", tile: "square" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-11.jpg", alt: "Close-up of pale ivory satin drapery fabric in soft folds", name: "Ivory Satin Drape", type: "Drapery Fabric", tile: "square" },
+            { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-12.jpg", alt: "Elegant white sheers tied back at a bright sunlit window", name: "Tied-Back Sheers", type: "Sheer Voile", tile: "wide" },
           ],
           gallery: homeGallery("curtains-drapery", 16, [
             "Soft linen curtains framing a sunlit window",
@@ -445,6 +493,20 @@ export const products: ProductCategory[] = [
             src: "/image/textile/home/dining-kitchen-collection/dining-kitchen-hero.jpg",
             alt: "A table dressed in crisp white linen with folded napkins and soft white florals",
           },
+          mosaic: [
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-01.jpg", alt: "A crisp white banquet table laid with white plates and crystal glasses", name: "White Banquet Table", type: "Table Linen", tile: "wide" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-02.jpg", alt: "A crisp white napkin folded beside a crystal glass on a white plate", name: "Folded White Napkin", type: "Napkins", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-03.jpg", alt: "A pure white linen napkin cinched in a silver napkin ring", name: "Linen Napkin Ring", type: "Napkins", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-04.jpg", alt: "A bright white round banquet table with neat place settings", name: "Round Banquet Setting", type: "Table Linen", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-05.jpg", alt: "A long white-linen table dressed with glassware and greenery", name: "Dressed Long Table", type: "Banquet Linen", tile: "wide" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-06.jpg", alt: "Stacked white porcelain plates and polished silverware on white linen", name: "Place Setting Stack", type: "Table Linen", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-07.jpg", alt: "A bright dining room with white-draped chairs and crisp white table linen", name: "Draped-Chair Dining", type: "Banquet Linen", tile: "wide" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-08.jpg", alt: "Soft draped crisp white linen tablecloth fabric", name: "Draped White Linen", type: "Tablecloths", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-09.jpg", alt: "Close-up of white damask-edged linen showing crisp woven texture", name: "Damask-Edged Linen", type: "Table Linen", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-10.jpg", alt: "A crisp linen dinner napkin fan-folded on a white plate with silverware", name: "Fan-Folded Napkin", type: "Napkins", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-11.jpg", alt: "An ivory linen tablecloth draped over a table corner", name: "Ivory Tablecloth", type: "Tablecloths", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-12.jpg", alt: "A white-linen restaurant table set with a folded napkin and crystal glasses", name: "Restaurant Setting", type: "Table Linen", tile: "wide" },
+          ],
           gallery: homeGallery("dining-kitchen", 22, [
             "A table dressed in crisp white linen with place settings",
             "A white tablecloth laid on a table in a bright room",
@@ -525,6 +587,20 @@ export const products: ProductCategory[] = [
             { src: "/image/cushions-1.jpg", alt: "A soft knitted throw with tasselled edges" },
             { src: "/image/cushions-2.jpg", alt: "Neutral cushions and a knitted throw" },
             { src: "/image/cushions-3.jpg", alt: "Soft cushions styled on a sofa" },
+          ],
+          mosaic: [
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-01.jpg", alt: "White and stone linen cushions layered on a bright airy bed", name: "Layered Linen Cushions", type: "Cushions", tile: "wide" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-02.jpg", alt: "Cream and soft-grey textured cushions on a white sofa", name: "Textured Cushions", type: "Scatter Cushions", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-03.jpg", alt: "A minimal white sofa in a bright, light-filled room", name: "White Sofa Styling", type: "Soft Furnishings", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-04.jpg", alt: "A soft ivory throw draped in plush folds", name: "Ivory Draped Throw", type: "Throws", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-05.jpg", alt: "Cream and grey woven cushions arranged on an ivory bouclé sofa", name: "Woven Cushion Set", type: "Cushions", tile: "wide" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-06.jpg", alt: "A cream tufted and fringed throw folded over neutral linen", name: "Tufted Fringe Throw", type: "Throws", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-07.jpg", alt: "A round cream bouclé cushion on a sleek ivory lounge sofa", name: "Bouclé Round Cushion", type: "Accent Cushions", tile: "wide" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-08.jpg", alt: "A soft cream throw texture detail", name: "Soft Throw Texture", type: "Throws", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-09.jpg", alt: "Cream linen cushions and bedding in a soft neutral palette", name: "Neutral Linen Cushions", type: "Cushions", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-10.jpg", alt: "A soft cream cushion against a bright white wall", name: "Cream Accent Cushion", type: "Scatter Cushions", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-11.jpg", alt: "A bright, airy white bed styled with soft cushions", name: "Styled Soft Cushions", type: "Cushions", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-12.jpg", alt: "Soft grey-blue cushions against a calm cream wall", name: "Soft Grey-Blue Cushions", type: "Accent Cushions", tile: "wide" },
           ],
           gallery: homeGallery("cushions-throws", 22, [
             "A cream woven throw draped over a chair",
@@ -652,6 +728,20 @@ export const products: ProductCategory[] = [
         {
           name: "Fashion Basics & Loungewear",
           slug: "fashion-basics-loungewear",
+          mosaic: [
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-01.jpg", alt: "A folded stack of cream and oatmeal cotton basics", name: "Folded Basics", type: "Cotton Basics", tile: "wide" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-02.jpg", alt: "A small stack of folded knit basics in tan and cream", name: "Folded Knit Basics", type: "Knit Basics", tile: "square" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-03.jpg", alt: "Close-up of folded tan and ivory knit basics", name: "Folded Knits", type: "Knit Basics", tile: "square" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-04.jpg", alt: "Soft light-grey marled jersey fabric", name: "Jersey Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-05.jpg", alt: "Neatly folded tees stacked on shelves", name: "Folded Tees", type: "Tees", tile: "wide" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-06.jpg", alt: "Woman in a cream oversized sweatshirt", name: "Oversized Sweat", type: "Loungewear", tile: "square" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-07.jpg", alt: "Soft ivory and taupe corduroy fabric", name: "Corduroy Fabric", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-08.jpg", alt: "Heathered grey jersey fabric texture", name: "Jersey Texture", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-09.jpg", alt: "Woman in an oatmeal ribbed turtleneck", name: "Ribbed Turtleneck", type: "Knit Basics", tile: "square" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-10.jpg", alt: "Soft mid-grey jersey fleece fabric", name: "Fleece Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-11.jpg", alt: "Folded black and ivory cotton tees", name: "Folded Tees", type: "Tees", tile: "square" },
+            { src: "/image/textile/apparel/fashion-basics-loungewear/mosaic/m-12.jpg", alt: "Folded grey, charcoal and black joggers in a row", name: "Folded Joggers", type: "Joggers", tile: "wide" },
+          ],
           tagline: "T-shirts, polos, hoodies & fleece",
           desc:
             "The everyday staples brands sell in volume — ring-spun cotton tees, polos, hoodies and loungewear, cut and finished to a clean, consistent standard run after run.",
@@ -710,6 +800,20 @@ export const products: ProductCategory[] = [
         {
           name: "Knitwear & Sweaters",
           slug: "knitwear-sweaters",
+          mosaic: [
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-01.jpg", alt: "Folded camel and oatmeal ribbed knit sweaters", name: "Folded Knits", type: "Sweaters", tile: "wide" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-02.jpg", alt: "A single folded cream knit sweater", name: "Folded Sweater", type: "Sweaters", tile: "square" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-03.jpg", alt: "Oatmeal cable-knit fabric texture", name: "Cable-Knit Texture", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-04.jpg", alt: "A rolled camel knit jumper", name: "Rolled Knit", type: "Sweaters", tile: "square" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-05.jpg", alt: "Camel and oatmeal ribbed sweaters folded in a row", name: "Folded Sweaters", type: "Sweaters", tile: "wide" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-06.jpg", alt: "Model in a soft taupe ribbed turtleneck", name: "Taupe Ribbed Knit", type: "Sweaters", tile: "square" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-07.jpg", alt: "A folded stack of knit sweaters in grey and charcoal", name: "Folded Knits", type: "Sweaters", tile: "wide" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-08.jpg", alt: "Folded cream and camel knitwear", name: "Folded Knits", type: "Sweaters", tile: "square" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-09.jpg", alt: "Woman in a cream cable-knit turtleneck and felt hat", name: "Cable-Knit", type: "Sweaters", tile: "square" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-10.jpg", alt: "Beige ribbed knit fabric texture", name: "Ribbed Knit", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-11.jpg", alt: "A folded stack of cream and camel sweaters", name: "Folded Sweaters", type: "Sweaters", tile: "square" },
+            { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-12.jpg", alt: "Beige, cream and grey ribbed knits laid out", name: "Knit Sweaters", type: "Sweaters", tile: "wide" },
+          ],
           lookbookLayout: "portrait",
           tagline: "Jersey, ribbed & cable knit",
           desc:
@@ -768,6 +872,20 @@ export const products: ProductCategory[] = [
         {
           name: "Denim & Woven",
           slug: "denim-woven",
+          mosaic: [
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-01.jpg", alt: "Rows of folded jeans from light to dark wash", name: "Folded Jeans", type: "Denim", tile: "wide" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-02.jpg", alt: "A stack of folded indigo jeans", name: "Folded Jeans", type: "Denim", tile: "square" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-03.jpg", alt: "Folded denim in varied indigo washes", name: "Folded Denim", type: "Denim", tile: "square" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-04.jpg", alt: "Folded denim jackets with metal buttons", name: "Denim Jackets", type: "Denim", tile: "square" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-05.jpg", alt: "A row of folded mid-indigo jeans", name: "Folded Jeans", type: "Denim", tile: "wide" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-06.jpg", alt: "Man in a blue chambray shirt and light-wash jeans", name: "Chambray Shirt", type: "Woven Shirting", tile: "square" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-07.jpg", alt: "Mid-blue denim fabric and weave in close detail", name: "Denim Weave", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-08.jpg", alt: "Folded indigo denim showing the weave", name: "Denim Detail", type: "Denim", tile: "square" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-09.jpg", alt: "Woman in a mid-wash denim jacket over a striped top", name: "Denim Jacket", type: "Denim", tile: "square" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-10.jpg", alt: "A small stack of folded light-wash denim", name: "Folded Denim", type: "Denim", tile: "square" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-11.jpg", alt: "A stack of folded jeans in light and mid washes", name: "Folded Jeans", type: "Denim", tile: "square" },
+            { src: "/image/textile/apparel/denim-woven/mosaic/m-12.jpg", alt: "Light and dark denim fabric panels", name: "Denim Fabric", type: "Fabric", tile: "wide" },
+          ],
           tagline: "Jeans, jackets & shirting",
           desc:
             "Woven garments built around Pakistan's deep denim base — five-pocket jeans, jackets, shirts and chinos, in the washes, fades and finishes your range calls for.",
@@ -822,6 +940,20 @@ export const products: ProductCategory[] = [
         {
           name: "Uniforms & Workwear",
           slug: "uniforms-workwear",
+          mosaic: [
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-01.jpg", alt: "A rail of pressed uniform shirts in muted tones", name: "Shirt Rail", type: "Shirting", tile: "wide" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-02.jpg", alt: "A folded stack of charcoal, grey and white garments", name: "Folded Workwear", type: "Workwear", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-03.jpg", alt: "Crisp white cotton shirting fabric in close detail", name: "White Shirting", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-04.jpg", alt: "Folded olive linen fabric in close detail", name: "Linen Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-05.jpg", alt: "Neatly folded shirts arranged on shelves", name: "Folded Shirts", type: "Shirting", tile: "wide" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-06.jpg", alt: "Man in a tailored white dress shirt", name: "Dress Shirt", type: "Corporate", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-07.jpg", alt: "Uniform shirts on hangers in navy, grey and sage", name: "Shirts on Hangers", type: "Shirting", tile: "wide" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-08.jpg", alt: "A folded set of garments in stone and cream", name: "Folded Garments", type: "Workwear", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-09.jpg", alt: "Healthcare worker in green V-neck scrubs", name: "Green Scrubs", type: "Medical Uniforms", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-10.jpg", alt: "Soft pale-blue shirting fabric in close detail", name: "Blue Shirting", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-11.jpg", alt: "Folded corduroy garments in neutral tones", name: "Folded Corduroy", type: "Workwear", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-12.jpg", alt: "A tall stack of folded work shirts", name: "Folded Work Shirts", type: "Workwear", tile: "wide" },
+          ],
           lookbookLayout: "portrait",
           heroImage: {
             src: "/image/textile/apparel/uniforms-collection/uniforms-hero.jpg",
@@ -884,6 +1016,20 @@ export const products: ProductCategory[] = [
         {
           name: "Children's & Baby Wear",
           slug: "childrens-baby-wear",
+          mosaic: [
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-01.jpg", alt: "A flat-lay of knitted baby hats, booties and blankets", name: "Baby Knit Flat-Lay", type: "Babywear", tile: "wide" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-02.jpg", alt: "A flat-lay of folded neutral baby clothes and booties", name: "Baby Clothes", type: "Babywear", tile: "square" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-03.jpg", alt: "Folded cream pointelle-knit baby garments", name: "Pointelle Baby Knit", type: "Babywear", tile: "square" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-04.jpg", alt: "A beige ribbed-knit baby romper on a wooden hanger", name: "Baby Romper", type: "Babywear", tile: "square" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-05.jpg", alt: "Baby bodysuits and bibs laid out on a soft bedspread", name: "Baby Bodysuits", type: "Babywear", tile: "wide" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-06.jpg", alt: "Baby in a cream knit vest over an ivory tee", name: "Knit Vest", type: "Babywear", tile: "square" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-07.jpg", alt: "Knitted baby booties on a stack of folded baby knits", name: "Baby Knits", type: "Babywear", tile: "wide" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-08.jpg", alt: "Folded camel and cream knit baby cardigans with wooden buttons", name: "Baby Cardigans", type: "Babywear", tile: "square" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-09.jpg", alt: "Baby in a white hooded top", name: "Hooded Top", type: "Babywear", tile: "square" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-10.jpg", alt: "Folded baby leggings in soft blue, navy and cream", name: "Baby Leggings", type: "Babywear", tile: "square" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-11.jpg", alt: "Folded cream and camel baby knits", name: "Baby Knits", type: "Babywear", tile: "square" },
+            { src: "/image/textile/apparel/childrens-baby-wear/mosaic/m-12.jpg", alt: "A rack of hung baby clothes in soft neutral tones", name: "Baby Clothing Rack", type: "Babywear", tile: "wide" },
+          ],
           layout: "tall-left",
           tagline: "Soft, safe everyday kids' clothing",
           desc:
@@ -942,6 +1088,20 @@ export const products: ProductCategory[] = [
         {
           name: "Accessories",
           slug: "accessories",
+          mosaic: [
+            { src: "/image/textile/apparel/accessories/mosaic/m-01.jpg", alt: "A folded chunky knit scarf in camel and charcoal", name: "Knit Scarf", type: "Scarves", tile: "wide" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-02.jpg", alt: "Black and grey knit beanies in a flat-lay", name: "Knit Beanies", type: "Hats", tile: "square" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-03.jpg", alt: "Rolled knit socks in a woven basket", name: "Knit Socks", type: "Socks", tile: "square" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-04.jpg", alt: "White lace-knit gloves on white linen", name: "Knit Gloves", type: "Gloves", tile: "square" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-05.jpg", alt: "A stack of folded ribbed knit scarves with yarn", name: "Folded Scarves", type: "Scarves", tile: "wide" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-06.jpg", alt: "Hands wearing cream knit gloves", name: "Knit Gloves", type: "Gloves", tile: "square" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-07.jpg", alt: "Neatly folded corduroy fabrics in ivory and camel", name: "Corduroy Fabric", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-08.jpg", alt: "Beige cable-knit wool texture", name: "Cable-Knit", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-09.jpg", alt: "Model in a light grey wrap scarf", name: "Grey Wrap", type: "Scarves", tile: "square" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-10.jpg", alt: "Cream chunky knit fabric texture", name: "Chunky Knit", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-11.jpg", alt: "Soft grey chunky garter-stitch knit texture", name: "Knit Texture", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/accessories/mosaic/m-12.jpg", alt: "Oatmeal woven wool texture in close detail", name: "Woven Wool", type: "Fabric", tile: "wide" },
+          ],
           layout: "duo",
           tagline: "Socks, beanies, scarves & bags",
           desc:
@@ -1003,6 +1163,20 @@ export const products: ProductCategory[] = [
         {
           name: "Skirts & Dresses",
           slug: "skirts-dresses",
+          mosaic: [
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-01.jpg", alt: "A rail of neutral dresses on cream velvet hangers", name: "Dress Rail", type: "Dresses", tile: "wide" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-02.jpg", alt: "Soft neutral garments on white hangers", name: "Hung Garments", type: "Dresses", tile: "square" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-03.jpg", alt: "A styled rack of muted dresses beside dried palm", name: "Dress Rack", type: "Dresses", tile: "square" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-04.jpg", alt: "Cream textured fabric in soft folds", name: "Dress Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-05.jpg", alt: "Ivory champagne satin fabric in close detail", name: "Satin Fabric", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-06.jpg", alt: "Woman in a champagne satin slip dress in soft outdoor light", name: "Satin Slip", type: "Dresses", tile: "square" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-07.jpg", alt: "Soft sage-green fabric draped in gentle folds", name: "Draped Fabric", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-08.jpg", alt: "Warm ivory satin fabric in soft folds", name: "Satin Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-09.jpg", alt: "Model in a stone textured bodycon dress", name: "Bodycon Dress", type: "Dresses", tile: "square" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-10.jpg", alt: "A folded blush linen co-ord set", name: "Linen Co-ord", type: "Skirts", tile: "square" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-11.jpg", alt: "A styled rack with a cream knit, hat and pampas", name: "Styled Rack", type: "Dresses", tile: "square" },
+            { src: "/image/textile/apparel/skirts-dresses/mosaic/m-12.jpg", alt: "A wide rail of neutral dresses in stone and blush", name: "Dress Rail", type: "Dresses", tile: "wide" },
+          ],
           heroImage: {
             src: "/image/textile/apparel/skirts-dresses/hero.jpg",
             alt: "A model in a soft natural linen dress with a back-tie bow",
@@ -1061,6 +1235,20 @@ export const products: ProductCategory[] = [
         {
           name: "Leather Jackets & Goods",
           slug: "leather-jackets-goods",
+          mosaic: [
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-01.jpg", alt: "A close-up of premium tan leather grain", name: "Tan Leather Grain", type: "Leather", tile: "wide" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-02.jpg", alt: "Black and cognac leather tote bags side by side", name: "Leather Totes", type: "Leather Goods", tile: "square" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-03.jpg", alt: "A stone-grey leather tote on a pedestal", name: "Leather Tote", type: "Leather Goods", tile: "square" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-04.jpg", alt: "A tan leather handbag on a clean surface", name: "Leather Handbag", type: "Leather Goods", tile: "square" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-05.jpg", alt: "A row of leather jackets in tan, cognac and black", name: "Hanging Jackets", type: "Leather Jackets", tile: "wide" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-06.jpg", alt: "Man in a black leather moto jacket", name: "Moto Jacket", type: "Leather Jackets", tile: "square" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-07.jpg", alt: "Brown pebbled leather grain with a stitched seam", name: "Leather Grain", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-08.jpg", alt: "A cognac leather buckle clutch bag", name: "Leather Clutch", type: "Leather Goods", tile: "square" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-09.jpg", alt: "Portrait of a man in a black leather moto jacket", name: "Moto Jacket", type: "Leather Jackets", tile: "square" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-10.jpg", alt: "A dark brown leather handbag with strap", name: "Leather Handbag", type: "Leather Goods", tile: "square" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-11.jpg", alt: "Premium leather texture in brown and stone tones", name: "Leather Texture", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/leather-jackets-goods/mosaic/m-12.jpg", alt: "Rich cognac-brown leather grain in close detail", name: "Leather Grain", type: "Fabric", tile: "wide" },
+          ],
           layout: "tall-left",
           tagline: "Jackets, bags & accessories",
           desc:
@@ -1175,6 +1363,20 @@ export const products: ProductCategory[] = [
         {
           name: "Gymwear & Activewear",
           slug: "gymwear-activewear",
+          mosaic: [
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-01.jpg", alt: "Folded grey, brown and black joggers", name: "Folded Joggers", type: "Joggers", tile: "wide" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-02.jpg", alt: "White perforated technical mesh fabric", name: "Mesh Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-03.jpg", alt: "A folded stack of neutral knit activewear", name: "Folded Activewear", type: "Activewear", tile: "square" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-04.jpg", alt: "Navy technical twill activewear fabric", name: "Technical Twill", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-05.jpg", alt: "A rail of hung activewear and training tops", name: "Activewear Rail", type: "Activewear", tile: "wide" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-06.jpg", alt: "Athletic model in a heather-grey set in a lunge", name: "Heather Grey Set", type: "Gym Sets", tile: "square" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-07.jpg", alt: "Grey heather technical knit fabric", name: "Technical Knit", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-08.jpg", alt: "Neatly folded gym co-ords stacked", name: "Folded Gym Sets", type: "Gym Sets", tile: "square" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-09.jpg", alt: "Model in a stone long-sleeve top and matching leggings", name: "Stone Set", type: "Activewear", tile: "square" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-10.jpg", alt: "Black technical pin-dot performance fabric", name: "Performance Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-11.jpg", alt: "Rolled leggings in muted grey-blue tones", name: "Rolled Leggings", type: "Leggings", tile: "square" },
+            { src: "/image/textile/sportswear/gymwear-activewear/mosaic/m-12.jpg", alt: "A flat-lay of a sports bra and folded leggings", name: "Activewear Flat-Lay", type: "Activewear", tile: "wide" },
+          ],
           heroImage: {
             src: "/image/textile/sportswear/gymwear-collection/hero.jpg",
             alt: "A model in a pink sports bra and navy leggings in a yoga pose against marble",
@@ -1233,6 +1435,20 @@ export const products: ProductCategory[] = [
         {
           name: "Performance & Training",
           slug: "performance-training",
+          mosaic: [
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-01.jpg", alt: "Grey honeycomb performance mesh fabric", name: "Performance Mesh", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-02.jpg", alt: "White moisture-wicking perforated mesh fabric", name: "Mesh Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-03.jpg", alt: "Grey cotton rib-knit fabric", name: "Rib-Knit", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-04.jpg", alt: "White perforated performance mesh", name: "Performance Mesh", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-05.jpg", alt: "A stack of folded training tops in marl and charcoal", name: "Folded Training Tops", type: "Training", tile: "wide" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-06.jpg", alt: "Model in a charcoal marl zip training jacket", name: "Zip Training Jacket", type: "Training", tile: "square" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-07.jpg", alt: "A folded cream tee beside ribbed performance fabric", name: "Folded Tee", type: "Tees", tile: "wide" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-08.jpg", alt: "Charcoal waffle-knit training fabric", name: "Waffle Knit", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-09.jpg", alt: "Athlete in a grey performance long-sleeve", name: "Performance Long-Sleeve", type: "Training", tile: "square" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-10.jpg", alt: "Light grey rib-knit performance fabric", name: "Rib-Knit", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-11.jpg", alt: "Grey woven marl textile texture", name: "Marl Texture", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/performance-training/mosaic/m-12.jpg", alt: "Grey marl performance jersey fabric", name: "Marl Jersey", type: "Fabric", tile: "wide" },
+          ],
           lookbookLayout: "portrait",
           tagline: "Tees, tracksuits & hoodies",
           desc:
@@ -1291,6 +1507,20 @@ export const products: ProductCategory[] = [
         {
           name: "Teamwear & Custom Kit",
           slug: "teamwear-custom-kit",
+          mosaic: [
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-01.jpg", alt: "Folded stacks of team shirts on a bench", name: "Folded Kit", type: "Teamwear", tile: "wide" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-02.jpg", alt: "A plain black jersey on a hanger", name: "Jersey on Hanger", type: "Jerseys", tile: "square" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-03.jpg", alt: "A blank white jersey laid flat", name: "Blank Jersey", type: "Jerseys", tile: "square" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-04.jpg", alt: "A white sublimated jersey hung on a rail", name: "Sublimated Jersey", type: "Custom Kit", tile: "square" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-05.jpg", alt: "A stack of folded jerseys in blue, grey and purple", name: "Folded Jerseys", type: "Jerseys", tile: "wide" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-06.jpg", alt: "Young player in a teal-and-yellow custom football kit", name: "Custom Football Kit", type: "Football Kit", tile: "square" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-07.jpg", alt: "Three folded athletic tees laid flat", name: "Folded Tees", type: "Teamwear", tile: "wide" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-08.jpg", alt: "A black jersey neckline on a hanger", name: "Jersey Detail", type: "Jerseys", tile: "square" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-09.jpg", alt: "Player from behind in a red custom team shirt with printed name", name: "Custom Team Shirt", type: "Custom Kit", tile: "square" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-10.jpg", alt: "Rolls of sports jersey mesh fabric in team colours", name: "Jersey Mesh", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-11.jpg", alt: "A red number kit with cap and glove hung up", name: "Team Kit", type: "Teamwear", tile: "square" },
+            { src: "/image/textile/sportswear/teamwear-custom-kit/mosaic/m-12.jpg", alt: "Neatly folded jerseys with size tags", name: "Folded Jerseys", type: "Jerseys", tile: "wide" },
+          ],
           lookbookLayout: "portrait",
           heroImage: {
             src: "/image/textile/sportswear/teamwear-collection/teamwear-hero.jpg",
@@ -1352,6 +1582,20 @@ export const products: ProductCategory[] = [
         {
           name: "Technical Fabrics",
           slug: "technical-fabrics",
+          mosaic: [
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-01.jpg", alt: "Charcoal technical performance jersey folded in pleats", name: "Performance Jersey", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-02.jpg", alt: "White open-cell spacer mesh fabric", name: "Spacer Mesh", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-03.jpg", alt: "Grey moisture-wicking honeycomb knit mesh", name: "Honeycomb Mesh", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-04.jpg", alt: "Charcoal waffle-knit technical mesh", name: "Waffle Mesh", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-05.jpg", alt: "Dark charcoal stretch knit jersey in soft folds", name: "Stretch Jersey", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-06.jpg", alt: "Detail of black high-waist technical leggings with bonded panels", name: "Bonded Leggings", type: "Technical Leggings", tile: "square" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-07.jpg", alt: "Technical woven fabric swatches in slate and stone", name: "Fabric Swatches", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-08.jpg", alt: "Black-and-white woven technical fabric", name: "Woven Technical", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-09.jpg", alt: "Seated model in a stone seamless tank and leggings", name: "Seamless Tank", type: "Seamless", tile: "square" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-10.jpg", alt: "Muted slate-blue technical woven fabric", name: "Woven Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-11.jpg", alt: "Light stone-grey heather performance knit", name: "Heather Knit", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/technical-fabrics/mosaic/m-12.jpg", alt: "Smooth charcoal-grey performance jersey in soft waves", name: "Performance Jersey", type: "Fabric", tile: "wide" },
+          ],
           heroImage: {
             src: "/image/textile/sportswear/technical-fabrics-collection/hero.jpg",
             alt: "An athlete in a compression base layer at the start of a sprint",
@@ -1410,6 +1654,20 @@ export const products: ProductCategory[] = [
         {
           name: "Outerwear & Layers",
           slug: "outerwear-layers",
+          mosaic: [
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-01.jpg", alt: "Black padded puffer jackets on a rail", name: "Puffer Rail", type: "Puffer Jackets", tile: "wide" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-02.jpg", alt: "A single black puffer jacket on a rail", name: "Puffer Jacket", type: "Puffer Jackets", tile: "square" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-03.jpg", alt: "A sage hooded sport pullover on a rail", name: "Hooded Pullover", type: "Hoodies", tile: "square" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-04.jpg", alt: "Stone and sage hoodies on wooden hangers", name: "Hooded Layers", type: "Hoodies", tile: "square" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-05.jpg", alt: "A padded puffer and fleece base-layer with open zips", name: "Puffer & Fleece", type: "Layers", tile: "wide" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-06.jpg", alt: "Man in a light-grey zip hoodie and matching joggers", name: "Zip Hoodie", type: "Hoodies", tile: "square" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-07.jpg", alt: "Stone and sage athletic hooded pullovers on a rail", name: "Athletic Hoodies", type: "Hoodies", tile: "wide" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-08.jpg", alt: "A sage athletic sweatshirt on a wooden hanger", name: "Athletic Sweatshirt", type: "Hoodies", tile: "square" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-09.jpg", alt: "Man in a charcoal quarter-zip knit pullover", name: "Quarter-Zip Knit", type: "Quarter Zips", tile: "square" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-10.jpg", alt: "Soft cream sherpa fleece fabric in close detail", name: "Sherpa Fleece", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-11.jpg", alt: "Navy technical shell jacket fabric", name: "Shell Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/sportswear/outerwear-layers/mosaic/m-12.jpg", alt: "Sage and stone hooded pullovers on a minimalist rail", name: "Hooded Pullovers", type: "Hoodies", tile: "wide" },
+          ],
           layout: "tall-left",
           tagline: "Jackets, windbreakers & vests",
           desc:
@@ -1468,6 +1726,20 @@ export const products: ProductCategory[] = [
         {
           name: "Sports Accessories",
           slug: "sports-accessories",
+          mosaic: [
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-01.jpg", alt: "A bright flat-lay of gym training kit on a white surface", name: "Gym Flat-Lay", type: "Gym Kit", tile: "wide" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-02.jpg", alt: "Rolled white gym towels in a woven tray", name: "Gym Towels", type: "Towels", tile: "square" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-03.jpg", alt: "A bright flat-lay of a rolled gym mat and training kit", name: "Training Kit", type: "Gym Kit", tile: "square" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-04.jpg", alt: "Black training gloves beside dumbbells", name: "Training Gloves", type: "Gloves", tile: "square" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-05.jpg", alt: "A flat-lay of folded sports socks", name: "Sports Socks", type: "Socks", tile: "wide" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-06.jpg", alt: "An athlete wearing a black sports cap", name: "Sports Cap", type: "Caps", tile: "square" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-07.jpg", alt: "A row of folded crew socks", name: "Crew Socks", type: "Socks", tile: "wide" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-08.jpg", alt: "A cotton drawstring gym sack", name: "Drawstring Bag", type: "Bags", tile: "square" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-09.jpg", alt: "An athlete in a black beanie", name: "Beanie", type: "Beanies", tile: "square" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-10.jpg", alt: "Rolled white gym towels on a tray", name: "Gym Towels", type: "Towels", tile: "square" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-11.jpg", alt: "Rolled sports socks in a woven basket", name: "Rolled Socks", type: "Socks", tile: "square" },
+            { src: "/image/textile/sportswear/sports-accessories/mosaic/m-12.jpg", alt: "A holdall gym bag", name: "Gym Holdall", type: "Bags", tile: "wide" },
+          ],
           layout: "duo",
           tagline: "Caps, bags, socks & support",
           desc:
@@ -1571,6 +1843,20 @@ export const products: ProductCategory[] = [
         {
           name: "Scrubs & Medical Uniforms",
           slug: "scrubs-medical-uniforms",
+          mosaic: [
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-01.jpg", alt: "Blue ribbed scrub fabric in close detail", name: "Scrub Fabric", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-02.jpg", alt: "Folded heather-teal scrub fabric", name: "Teal Scrub Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-03.jpg", alt: "Soft powder-blue scrub fabric folds", name: "Ceil Scrub Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-04.jpg", alt: "Grey woven cotton scrub fabric", name: "Cotton Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-05.jpg", alt: "White medical garments on a steel rail", name: "Garments on Rail", type: "Uniforms", tile: "wide" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-06.jpg", alt: "A clinician in green scrubs with a stethoscope", name: "Green Scrubs", type: "Scrubs", tile: "square" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-07.jpg", alt: "Ceil-blue scrub jersey fabric spread wide", name: "Scrub Jersey", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-08.jpg", alt: "Teal medical fabric in soft folds", name: "Teal Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-09.jpg", alt: "A nurse in ceil-blue scrubs with a stethoscope", name: "Ceil Scrubs", type: "Scrubs", tile: "square" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-10.jpg", alt: "Sage-green scrub fabric in soft folds", name: "Sage Scrub Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-11.jpg", alt: "Muted green crinkled scrub fabric", name: "Green Scrub Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/scrubs-medical-uniforms/mosaic/m-12.jpg", alt: "Teal scrub fabric spread wide", name: "Teal Fabric", type: "Fabric", tile: "wide" },
+          ],
           lookbookLayout: "portrait",
           heroImage: {
             src: "/image/textile/healthcare/scrubs-collection/scrubs-hero.jpg",
@@ -1633,6 +1919,20 @@ export const products: ProductCategory[] = [
         {
           name: "Patient Gowns & Provider Wear",
           slug: "patient-gowns-provider-wear",
+          mosaic: [
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-01.jpg", alt: "Folded ice-grey and beige gown fabric", name: "Gown Fabric", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-02.jpg", alt: "A soft blue patient gown with a back-tie detail", name: "Patient Gown", type: "Gowns", tile: "square" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-03.jpg", alt: "Soft blue gown fabric with gentle creases", name: "Gown Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-04.jpg", alt: "Smooth beige tunic fabric in soft folds", name: "Tunic Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-05.jpg", alt: "Natural beige linen gown fabric spread wide", name: "Linen Gown Fabric", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-06.jpg", alt: "A patient in a soft blue hospital gown", name: "Patient Gown", type: "Gowns", tile: "square" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-07.jpg", alt: "White gown fabric with a soft blue tint", name: "Gown Fabric", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-08.jpg", alt: "Crisp white cotton gown fabric", name: "Cotton Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-09.jpg", alt: "A healthcare provider in an ice-green tunic", name: "Provider Tunic", type: "Provider Wear", tile: "square" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-10.jpg", alt: "Pale ice-blue gauze gown fabric", name: "Gauze Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-11.jpg", alt: "Natural beige cotton tunic fabric", name: "Tunic Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/patient-gowns-provider-wear/mosaic/m-12.jpg", alt: "Warm beige provider tunic fabric spread wide", name: "Tunic Fabric", type: "Fabric", tile: "wide" },
+          ],
           tagline: "Gowns & care-setting uniforms",
           desc:
             "Patient gowns and care-setting uniforms in easy-wash, hard-wearing fabrics — available in reusable and single-use grades for hospitals, clinics and care homes.",
@@ -1691,6 +1991,20 @@ export const products: ProductCategory[] = [
         {
           name: "Hospital Bed Linen & Draw Sheets",
           slug: "hospital-bed-linen-draw-sheets",
+          mosaic: [
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-01.jpg", alt: "Crisp white hospital bed linen spread wide", name: "White Bed Linen", type: "Bed Linen", tile: "wide" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-02.jpg", alt: "A neatly folded stack of crisp white sheets", name: "Folded Sheets", type: "Bed Linen", tile: "square" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-03.jpg", alt: "A stack of folded soft white linen", name: "Folded Linen", type: "Bed Linen", tile: "square" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-04.jpg", alt: "White woven cotton fabric in soft folds", name: "Cotton Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-05.jpg", alt: "A stack of crisp white pillows", name: "White Pillows", type: "Bed Linen", tile: "wide" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-06.jpg", alt: "Smoothing crisp white hospital bed linen", name: "Made Bed", type: "Bed Linen", tile: "square" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-07.jpg", alt: "A neatly made bed in crisp white linen", name: "Made Bed", type: "Bed Linen", tile: "wide" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-08.jpg", alt: "Smooth white cotton sheet close-up", name: "White Sheet", type: "Bed Linen", tile: "square" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-09.jpg", alt: "A carer smoothing a white sheet on a made bed", name: "Made Bed", type: "Bed Linen", tile: "square" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-10.jpg", alt: "Draped white linen in soft folds", name: "White Linen", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-11.jpg", alt: "Soft white-ivory folded cotton linen", name: "Folded Linen", type: "Bed Linen", tile: "square" },
+            { src: "/image/textile/healthcare/hospital-bed-linen-draw-sheets/mosaic/m-12.jpg", alt: "White cotton linen fabric spread wide", name: "Linen Fabric", type: "Fabric", tile: "wide" },
+          ],
           lookbookLayout: "portrait",
           heroImage: {
             src: "/image/textile/healthcare/hospital-bed-linen-collection/hero.jpg",
@@ -1745,6 +2059,20 @@ export const products: ProductCategory[] = [
         {
           name: "Surgical Drapes & Theatre Linen",
           slug: "surgical-drapes-theatre-linen",
+          mosaic: [
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-01.jpg", alt: "Sage-green surgical drape in clean folds", name: "Surgical Drape", type: "Drapes", tile: "wide" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-02.jpg", alt: "Sage-green theatre linen in smooth folds", name: "Theatre Linen", type: "Drapes", tile: "square" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-03.jpg", alt: "Muted sage surgical drape fabric", name: "Drape Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-04.jpg", alt: "Surgical-green fabric in clean folds", name: "Surgical Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-05.jpg", alt: "Teal surgical twill fabric spread wide", name: "Surgical Twill", type: "Fabric", tile: "wide" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-06.jpg", alt: "A theatre nurse in surgical-green scrubs and cap", name: "Theatre Scrubs", type: "Theatre Wear", tile: "square" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-07.jpg", alt: "A clean blue draped sterile table with instruments", name: "Sterile Drape", type: "Drapes", tile: "wide" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-08.jpg", alt: "A neat stack of folded white theatre linen", name: "Theatre Linen", type: "Drapes", tile: "square" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-09.jpg", alt: "A surgeon in a ceil-blue scrub cap", name: "Scrub Cap", type: "Theatre Wear", tile: "square" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-10.jpg", alt: "A surgical-green drape in clean vertical folds", name: "Surgical Drape", type: "Drapes", tile: "square" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-11.jpg", alt: "Surgical-green drape fabric in soft folds", name: "Drape Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/healthcare/surgical-drapes-theatre-linen/mosaic/m-12.jpg", alt: "Teal surgical fabric with a diagonal weave", name: "Surgical Weave", type: "Fabric", tile: "wide" },
+          ],
           lookbookLayout: "portrait",
           heroImage: {
             src: "/image/textile/healthcare/surgical-drapes-collection/surgical-drapes-hero.jpg",
@@ -1794,6 +2122,20 @@ export const products: ProductCategory[] = [
         {
           name: "Towels & Wipes",
           slug: "towels-wipes",
+          mosaic: [
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-01.jpg", alt: "Soft white and grey folded towelling", name: "Folded Towels", type: "Towels", tile: "wide" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-02.jpg", alt: "Folded white towels with a fine grey border", name: "Bordered Towels", type: "Towels", tile: "square" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-03.jpg", alt: "A single rolled stone-grey towel", name: "Rolled Towel", type: "Towels", tile: "square" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-04.jpg", alt: "Three rolled white towels on a caddy", name: "Rolled Towels", type: "Towels", tile: "square" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-05.jpg", alt: "A stack of folded stone-neutral towels", name: "Folded Towels", type: "Towels", tile: "wide" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-06.jpg", alt: "A carer carrying folded white towels", name: "Folded Towels", type: "Towels", tile: "square" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-07.jpg", alt: "A folded white cloth with a grey woven border", name: "Bordered Cloth", type: "Wipes", tile: "wide" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-08.jpg", alt: "A white waffle towelling cloth", name: "Waffle Cloth", type: "Wipes", tile: "square" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-09.jpg", alt: "A carer carrying clean folded white towels", name: "Folded Towels", type: "Towels", tile: "square" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-10.jpg", alt: "A white waffle-weave towel", name: "Waffle Towel", type: "Towels", tile: "square" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-11.jpg", alt: "A white waffle towel on a hook", name: "Waffle Towel", type: "Towels", tile: "square" },
+            { src: "/image/textile/healthcare/towels-wipes/mosaic/m-12.jpg", alt: "A folded stack of stone-neutral towels", name: "Folded Towels", type: "Towels", tile: "wide" },
+          ],
           layout: "duo",
           lookbookLayout: "portrait",
           heroImage: {

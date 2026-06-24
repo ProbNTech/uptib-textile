@@ -12,6 +12,7 @@ import { GlobalCTA } from "@/components/GlobalCTA";
 import { SubCategoryGallery, type GalleryImage } from "@/components/products/SubCategoryGallery";
 import { LookbookGallery } from "@/components/products/LookbookGallery";
 import { LookbookMasonry } from "@/components/products/LookbookMasonry";
+import { MosaicGallery } from "@/components/products/MosaicGallery";
 import { getSubCategory } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
@@ -124,9 +125,37 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
             </div>
           </AnimatedSection>
         </div>
+      </section>
 
-        {/* ── THE GALLERY (centrepiece) ─────────────────────────────── */}
-        <div className="mx-auto mt-14 max-w-7xl sm:mt-20">
+      {/* ── THE CATALOGUE — bento mosaic (echoes the home-page showcase) ── */}
+      {group.mosaic && group.mosaic.length > 0 && (
+        <section className="bg-white py-16 sm:py-20 lg:py-24">
+          <div className={PX}>
+            <div className="mx-auto max-w-7xl">
+              <AnimatedSection animation="blur-in">
+                <div className="mb-8 flex items-end justify-between gap-6 sm:mb-10">
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
+                      The catalogue
+                    </span>
+                    <h2 className={cn(SERIF, "mt-3 text-[1.8rem] leading-tight text-[#1E1A14] sm:text-[2.3rem]")}>
+                      Styled in soft, premium cotton
+                    </h2>
+                  </div>
+                  <span className="hidden shrink-0 items-center gap-2 text-sm font-medium text-[#7A715F] sm:inline-flex">
+                    <Sparkles className="size-4 text-[#B3AA98]" aria-hidden /> Made in Pakistan
+                  </span>
+                </div>
+              </AnimatedSection>
+              <MosaicGallery items={group.mosaic} />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── THE LOOKBOOK (centrepiece) ──────────────────────────────── */}
+      <section className={cn("pb-16 pt-4 sm:pb-20 lg:pb-24", PX)}>
+        <div className="mx-auto max-w-7xl">
           <AnimatedSection animation="blur-in">
             <div className="mb-8 flex items-end justify-between gap-6">
               <div>
