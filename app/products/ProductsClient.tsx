@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
-  ArrowUpRight,
   Globe2,
   ShieldCheck,
   Leaf,
@@ -92,38 +91,40 @@ const heroFacts = [
   { icon: Award, value: "Certified", label: "GOTS · OEKO-TEX · WRAP · ISO" },
 ];
 
-/* Product card images for the products page (override the shared data images) */
+/* Catalog card images — portrait crops sized to the 3/4 card ratio
+   (shared with the home page's product showcase) */
 const productImages: Record<string, string> = {
-  "bedding-linen": "/image/bedding-p.jpg",
-  "apparel-accessories": "/image/apparel-p.jpg",
-  "sportswear-activewear": "/image/sportswear-p.jpg",
-  "healthcare-textile": "/image/healthcare-p.jpg",
+  "bedding-linen": "/image/textile/home/hotel-1.jpg",
+  "apparel-accessories": "/image/apparels-v1.jpg",
+  "sportswear-activewear": "/image/sportswear-home-product-image.jpg",
+  "healthcare-textile": "/image/healthcare-home-product-image.jpg",
 };
 
-/* Category chips (presentation-only — distinct from data `applications`) */
-const categoryChips: Record<string, string[]> = {
-  "bedding-linen": ["Hotels & hospitality", "White & dyed textiles", "Cotton & blends"],
-  "apparel-accessories": ["Tops & bottoms", "High-street fashion", "Workwear & uniforms"],
-  "sportswear-activewear": ["Sports & fitnesswear", "Team uniforms", "Active & lifestyle"],
-  "healthcare-textile": ["Patient & provider apparel", "Care textiles & linens", "Medical textiles"],
+/* Short card taglines — concise, matching the catalog layout */
+const productTaglines: Record<string, string> = {
+  "bedding-linen": "Bed linen, towels, hotel textiles & more",
+  "apparel-accessories": "Fashion, denim, knitwear & uniforms",
+  "sportswear-activewear": "Performance kit & activewear",
+  "healthcare-textile": "Scrubs, gowns & medical textiles",
 };
 
-/* Small text-chip row used across the category cards */
-function FeatureChips({ slug }: { slug: string }) {
-  const chips = categoryChips[slug] ?? [];
-  return (
-    <div className="flex flex-wrap gap-2">
-      {chips.map((c) => (
-        <span
-          key={c}
-          className="inline-flex items-center rounded-full bg-[#F6F2EA] px-2.5 py-1 text-[11px] font-medium text-[#394F73]"
-        >
-          {c}
-        </span>
-      ))}
-    </div>
-  );
-}
+/* Per-card accent — drives the icon badge colour */
+const productAccents: Record<string, string> = {
+  "bedding-linen": "#8C9AAB",
+  "apparel-accessories": "#DC2626",
+  "sportswear-activewear": "#A3AEBC",
+  "healthcare-textile": "#DC2626",
+};
+
+/* Bento mosaic placement (lg+) — mixed-size tiles, same style as the
+   home page's "Made in Pakistan" section. Mobile/tablet fall back to a
+   simple stacked / 2-up grid. */
+const productLayouts: Record<string, string> = {
+  "bedding-linen": "lg:col-start-1 lg:row-start-1 lg:col-span-2 lg:row-span-2",
+  "apparel-accessories": "lg:col-start-3 lg:row-start-1 lg:col-span-2",
+  "sportswear-activewear": "lg:col-start-3 lg:row-start-2",
+  "healthcare-textile": "lg:col-start-4 lg:row-start-2",
+};
 
 export default function ProductsClient() {
   const shouldReduceMotion = useReducedMotion();
@@ -195,13 +196,15 @@ export default function ProductsClient() {
             </div>
           </AnimatedSection>
 
-          {/* 4-column card grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Bento mosaic — mixed-size catalog tiles */}
+          <div className="grid grid-cols-1 auto-rows-[240px] gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[260px] lg:gap-4">
             {products.map((p, index) => {
               const Icon = p.icon;
+              const accent = productAccents[p.slug];
               return (
                 <motion.div
                   key={p.slug}
+                  className={cn("h-full", productLayouts[p.slug])}
                   initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -209,34 +212,37 @@ export default function ProductsClient() {
                 >
                   <Link
                     href={`/products/${p.slug}`}
-                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm"
+                    className="group relative block h-full overflow-hidden rounded-2xl shadow-md"
                   >
-                    {/* image */}
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <Image
-                        src={productImages[p.slug] ?? p.image}
-                        alt={p.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      />
-                      {/* icon · number · name pill */}
-                      <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur px-2.5 py-1.5 shadow-sm">
-                        <Icon className="size-3.5 text-[#394F73]" strokeWidth={2} aria-hidden />
-                        <span className="text-[10px] font-extrabold tabular-nums text-[#394F73]">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <span className="text-[10px] font-bold uppercase tracking-wide text-[#1A1A1A]">{p.name}</span>
+                    <Image
+                      src={productImages[p.slug] ?? p.image}
+                      alt={p.name}
+                      fill
+                      className="object-cover transition-transform duration-[2500ms] ease-out group-hover:scale-110"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 22vw"
+                    />
+                    {/* darkening overlays — legibility for the overlaid copy */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/45 to-transparent" />
+
+                    {/* number pill (top-left) */}
+                    <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 shadow-sm backdrop-blur">
+                      <span className="text-[10px] font-extrabold tabular-nums text-[#394F73]">
+                        {String(index + 1).padStart(2, "0")}
                       </span>
+                    </span>
+
+                    {/* centred icon badge */}
+                    <div className="absolute left-1/2 top-[44%] flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg">
+                      <Icon className="size-6" strokeWidth={1.8} style={{ color: accent }} aria-hidden />
                     </div>
-                    {/* body */}
-                    <div className="flex flex-1 flex-col p-5">
-                      <h3 className="mb-2 font-heading font-bold text-lg leading-snug text-[#1A1A1A]">{p.headline}</h3>
-                      <p className="mb-4 text-sm text-[#5A5F72] leading-relaxed">{p.short}</p>
-                      <FeatureChips slug={p.slug} />
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#394F73]">
-                        Explore {p.name} <ArrowUpRight className="size-4" />
-                      </span>
+
+                    {/* bottom copy */}
+                    <div className="absolute inset-x-0 bottom-0 p-5 pb-6">
+                      <h3 className="font-heading text-lg font-bold leading-tight text-white">{p.name}</h3>
+                      <p className="mt-1.5 text-[0.8rem] leading-snug text-white/80">
+                        {productTaglines[p.slug]}
+                      </p>
                     </div>
                   </Link>
                 </motion.div>

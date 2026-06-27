@@ -24,7 +24,8 @@ import { Button } from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlobalCTA } from "@/components/GlobalCTA";
 import { ProductShowcase } from "@/components/products/ProductShowcase";
-import { products, getProduct } from "@/data/textile";
+import { MosaicGallery } from "@/components/products/MosaicGallery";
+import { products, getProduct, categoryMosaics } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
@@ -144,6 +145,26 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* ── THE CATALOGUE — product mosaic (mirrors the sub-category pages) ── */}
+      {categoryMosaics[p.slug] && (
+        <section className="bg-white pb-20 lg:pb-28">
+          <div className={PX}>
+            <AnimatedSection>
+              <SectionLabel
+                label="The catalogue"
+                title={`Inside our ${p.name.toLowerCase()} range`}
+                body={`A closer look at the ${p.name.toLowerCase()} we source and supply — spanning every line in the category.`}
+                color="#394F73"
+                hideLine
+              />
+              <div className="mt-10">
+                <MosaicGallery items={categoryMosaics[p.slug]} />
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+      )}
 
       {/* ── THE RANGE ────────────────────────────────────────────────
           Categories with a `showcase` render the image-rich editorial

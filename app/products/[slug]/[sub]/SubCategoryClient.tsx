@@ -12,7 +12,8 @@ import { GlobalCTA } from "@/components/GlobalCTA";
 import { SubCategoryGallery, type GalleryImage } from "@/components/products/SubCategoryGallery";
 import { LookbookGallery } from "@/components/products/LookbookGallery";
 import { LookbookMasonry } from "@/components/products/LookbookMasonry";
-import { getSubCategory } from "@/data/textile";
+import { MosaicGallery } from "@/components/products/MosaicGallery";
+import { getSubCategory, subCategoryIcons } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
@@ -124,9 +125,37 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
             </div>
           </AnimatedSection>
         </div>
+      </section>
 
-        {/* ── THE GALLERY (centrepiece) ─────────────────────────────── */}
-        <div className="mx-auto mt-14 max-w-7xl sm:mt-20">
+      {/* ── THE CATALOGUE — bento mosaic (echoes the home-page showcase) ── */}
+      {group.mosaic && group.mosaic.length > 0 && (
+        <section className="bg-white py-16 sm:py-20 lg:py-24">
+          <div className={PX}>
+            <div className="mx-auto max-w-7xl">
+              <AnimatedSection animation="blur-in">
+                <div className="mb-8 flex items-end justify-between gap-6 sm:mb-10">
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
+                      The catalogue
+                    </span>
+                    <h2 className={cn(SERIF, "mt-3 text-[1.8rem] leading-tight text-[#1E1A14] sm:text-[2.3rem]")}>
+                      Styled in soft, premium cotton
+                    </h2>
+                  </div>
+                  <span className="hidden shrink-0 items-center gap-2 text-sm font-medium text-[#7A715F] sm:inline-flex">
+                    <Sparkles className="size-4 text-[#B3AA98]" aria-hidden /> Made in Pakistan
+                  </span>
+                </div>
+              </AnimatedSection>
+              <MosaicGallery items={group.mosaic} />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── THE LOOKBOOK (centrepiece) ──────────────────────────────── */}
+      <section className={cn("pb-16 pt-4 sm:pb-20 lg:pb-24", PX)}>
+        <div className="mx-auto max-w-7xl">
           <AnimatedSection animation="blur-in">
             <div className="mb-8 flex items-end justify-between gap-6">
               <div>
@@ -175,6 +204,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
               <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
                 {siblings.map((g, i) => {
                   const img = g.lookbook?.[0]?.src ?? g.gallery?.[0]?.src ?? g.images[0]?.src ?? category.image;
+                  const SubIcon = subCategoryIcons[g.slug];
                   return (
                     <motion.div
                       key={g.slug}
@@ -196,6 +226,11 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
                             sizes="(max-width:640px) 50vw, 25vw"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                          {SubIcon && (
+                            <span className="absolute left-3 top-3 inline-flex size-9 items-center justify-center rounded-lg bg-white/90 text-[#394F73] backdrop-blur">
+                              <SubIcon className="size-[18px]" strokeWidth={2} aria-hidden />
+                            </span>
+                          )}
                         </div>
                         <div className="flex flex-1 flex-col p-4 sm:p-5">
                           <h3 className="font-heading font-bold leading-snug text-[#1E1A14]">{g.name}</h3>

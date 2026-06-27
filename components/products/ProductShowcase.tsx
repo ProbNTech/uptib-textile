@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { CheckCircle2, ArrowUpRight } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import type { ProductCategory } from "@/data/textile";
+import { subCategoryIcons, type ProductCategory } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
@@ -98,6 +98,7 @@ function Mosaic({ images, layout, priority = false }: { images: Group["images"];
 function ShowcaseRow({ group, index, categorySlug }: { group: Group; index: number; categorySlug?: string }) {
   const reverse = index % 2 === 1;
   const href = categorySlug ? `/products/${categorySlug}/${group.slug}` : undefined;
+  const Icon = subCategoryIcons[group.slug];
   const Heading = (
     <h3 className={cn(SERIF, "text-[1.9rem] leading-tight text-[#1E1A14] sm:text-4xl")}>
       {group.name}
@@ -108,7 +109,12 @@ function ShowcaseRow({ group, index, categorySlug }: { group: Group; index: numb
       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
         {/* Text column */}
         <div className={cn("max-w-xl", reverse && "lg:order-2 lg:justify-self-end")}>
-          <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
+          {Icon && (
+            <span className="mb-4 inline-flex size-12 items-center justify-center rounded-xl bg-[#78899B]/12 text-[#394F73] ring-1 ring-[#78899B]/15">
+              <Icon className="size-[22px]" strokeWidth={1.75} aria-hidden />
+            </span>
+          )}
+          <span className="block text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
             {String(index + 1).padStart(2, "0")} — {group.tagline}
           </span>
           <div className="mt-3">

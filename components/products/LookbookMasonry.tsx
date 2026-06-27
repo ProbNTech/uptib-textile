@@ -23,7 +23,7 @@ export function LookbookMasonry({ items }: { items: LookbookItem[] }) {
           className="group mb-6 break-inside-avoid sm:mb-8"
         >
           {/* Image — natural ratio, never cropped */}
-          <div className="overflow-hidden rounded-2xl bg-[#F4EFE5] shadow-[0_18px_40px_-26px_rgba(40,30,15,0.4)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_26px_52px_-28px_rgba(40,30,15,0.5)]">
+          <div className="overflow-hidden rounded-2xl bg-[#F4EFE5] shadow-[0_18px_40px_-26px_rgba(40,30,15,0.4)]">
             <Image
               src={it.src}
               alt={it.alt}
