@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { TopTicker } from "@/components/TopTicker";
-import { products } from "@/data/textile";
+import { products, subCategoryIcons } from "@/data/textile";
 import {
   BedDouble, Shirt, Dumbbell, Stethoscope,
   ShoppingCart, Megaphone, Warehouse, Truck,
@@ -16,10 +16,11 @@ import {
 
 /* Sub-category links for a product category, derived from the central content
    model so the nav stays in sync with the showcase groups (the lookbook pages). */
-const subLinks = (catSlug: string): { label: string; href: string }[] =>
+const subLinks = (catSlug: string): { label: string; href: string; icon?: LucideIcon }[] =>
   (products.find((p) => p.slug === catSlug)?.showcase?.groups ?? []).map((g) => ({
     label: g.name,
     href: `/products/${catSlug}/${g.slug}`,
+    icon: subCategoryIcons[g.slug],
   }));
 
 /* ─────────────────────────────────────────────────────────────────
@@ -32,7 +33,7 @@ type NavGroup = {
   tagline: string;
   color: string;
   editorial: { headline: string; body: string; cta: { label: string; href: string } };
-  items: { label: string; href: string; desc: string; icon: LucideIcon; section?: string; children?: { label: string; href: string }[] }[];
+  items: { label: string; href: string; desc: string; icon: LucideIcon; section?: string; children?: { label: string; href: string; icon?: LucideIcon }[] }[];
 };
 
 type NavLink = {
@@ -462,14 +463,21 @@ export function Header() {
                           </p>
                           {activeCatItem.children && activeCatItem.children.length > 0 ? (
                             <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-0">
-                              {activeCatItem.children.map((child) => (
+                              {activeCatItem.children.map((child) => {
+                                const ChildIcon = child.icon;
+                                return (
                                 <li key={child.href}>
                                   <Link
                                     href={child.href}
                                     onClick={() => setOpenGroup(null)}
                                     className="group/sub flex items-center justify-between gap-2 py-2 border-b border-[#EDEBE7] transition-colors duration-150"
                                   >
-                                    <span className="font-sans text-panel-item text-[#3F3F3F] group-hover/sub:text-[#394F73] transition-colors duration-150">
+                                    <span className="flex items-center gap-2.5 font-sans text-panel-item text-[#3F3F3F] group-hover/sub:text-[#394F73] transition-colors duration-150">
+                                      {ChildIcon && (
+                                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-lg bg-[#78899B]/10 text-[#394F73]">
+                                          <ChildIcon className="size-[15px]" strokeWidth={1.75} aria-hidden />
+                                        </span>
+                                      )}
                                       {child.label}
                                     </span>
                                     <span
@@ -480,7 +488,8 @@ export function Header() {
                                     </span>
                                   </Link>
                                 </li>
-                              ))}
+                                );
+                              })}
                             </ul>
                           ) : null}
                         </div>
@@ -780,17 +789,25 @@ export function Header() {
                                   </Link>
                                   {subItem.children && subItem.children.length > 0 && (
                                     <ul className="pb-2.5">
-                                      {subItem.children.map((child) => (
+                                      {subItem.children.map((child) => {
+                                        const ChildIcon = child.icon;
+                                        return (
                                         <li key={child.href}>
                                           <Link
                                             href={child.href}
                                             onClick={() => setIsMobileOpen(false)}
-                                            className="block pl-[60px] pr-6 py-2 font-sans text-mobile-desc text-[#6B6B6B] hover:text-[#394F73] transition-colors duration-150"
+                                            className="flex items-center gap-2.5 pl-[60px] pr-6 py-2 font-sans text-mobile-desc text-[#6B6B6B] hover:text-[#394F73] transition-colors duration-150"
                                           >
+                                            {ChildIcon && (
+                                              <span className="inline-flex size-6 shrink-0 items-center justify-center rounded-md bg-[#78899B]/10 text-[#394F73]">
+                                                <ChildIcon className="size-[14px]" strokeWidth={1.75} aria-hidden />
+                                              </span>
+                                            )}
                                             {child.label}
                                           </Link>
                                         </li>
-                                      ))}
+                                        );
+                                      })}
                                     </ul>
                                   )}
                                 </li>

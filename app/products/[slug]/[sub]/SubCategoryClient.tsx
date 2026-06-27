@@ -13,7 +13,7 @@ import { SubCategoryGallery, type GalleryImage } from "@/components/products/Sub
 import { LookbookGallery } from "@/components/products/LookbookGallery";
 import { LookbookMasonry } from "@/components/products/LookbookMasonry";
 import { MosaicGallery } from "@/components/products/MosaicGallery";
-import { getSubCategory } from "@/data/textile";
+import { getSubCategory, subCategoryIcons } from "@/data/textile";
 import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
@@ -204,6 +204,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
               <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
                 {siblings.map((g, i) => {
                   const img = g.lookbook?.[0]?.src ?? g.gallery?.[0]?.src ?? g.images[0]?.src ?? category.image;
+                  const SubIcon = subCategoryIcons[g.slug];
                   return (
                     <motion.div
                       key={g.slug}
@@ -225,6 +226,11 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
                             sizes="(max-width:640px) 50vw, 25vw"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                          {SubIcon && (
+                            <span className="absolute left-3 top-3 inline-flex size-9 items-center justify-center rounded-lg bg-white/90 text-[#394F73] backdrop-blur">
+                              <SubIcon className="size-[18px]" strokeWidth={2} aria-hidden />
+                            </span>
+                          )}
                         </div>
                         <div className="flex flex-1 flex-col p-4 sm:p-5">
                           <h3 className="font-heading font-bold leading-snug text-[#1E1A14]">{g.name}</h3>
