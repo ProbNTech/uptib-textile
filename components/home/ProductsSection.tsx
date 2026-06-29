@@ -7,7 +7,7 @@ import { products } from "@/data/textile";
 const productImages: Record<string, string> = {
   "bedding-linen": "/image/textile/home/hotel-1.jpg",
   "apparel-accessories": "/image/apparels-v1.jpg",
-  "sportswear-activewear": "/image/sportswear-home-product-image.jpg",
+  "sportswear-activewear": "/image/sportswear-activewear-new.jpg",
   "healthcare-textile": "/image/healthcare-home-product-image.jpg",
 };
 
