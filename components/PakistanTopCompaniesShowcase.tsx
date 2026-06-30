@@ -20,7 +20,7 @@ export default function PakistanTopCompaniesShowcase() {
 
   return (
     <section
-      className="relative z-[1] py-16 lg:py-20 overflow-hidden bg-[#F6F2EA]"
+      className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-[#F6F2EA]"
     >
       {/* Pakistan map — section background watermark */}
       <Image
@@ -36,7 +36,7 @@ export default function PakistanTopCompaniesShowcase() {
           <SectionHeader
             label="Showcase"
             title="Pakistan's top Textile Products Manufacturers & Exporter"
-            subtitle="Real manufacturers, mills and sourcing partners in our network — across home & hospitality textiles, apparel, sportswear, healthcare textiles and yarn & fabric."
+            subtitle="Real manufacturers, mills and sourcing partners in our network, across home & hospitality textiles, apparel, sportswear, healthcare textiles and yarn & fabric."
             color="green"
           />
 

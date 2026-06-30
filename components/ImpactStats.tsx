@@ -20,7 +20,7 @@ const stats = [
     value: 60,
     suffix: "%",
     percent: 60,
-    description: "Textiles make up an estimated 55–60% of Pakistan's total exports — the backbone of its export economy (industry reporting, 2025).",
+    description: "Textiles make up an estimated 55 to 60% of Pakistan's total exports, the backbone of its export economy (industry reporting, 2025).",
     color: "#D8CDBA",
   },
   {
@@ -28,7 +28,7 @@ const stats = [
     value: 50,
     suffix: "%",
     percent: 50,
-    description: "Asia-Pacific accounts for roughly half of the ~US$1.2–1.3 trillion global textile market (Precedence Research, 2025).",
+    description: "Asia-Pacific accounts for roughly half of the ~US$1.2 to 1.3 trillion global textile market (Precedence Research, 2025).",
     color: "#D8CDBA",
   },
   {
@@ -36,7 +36,7 @@ const stats = [
     value: 39,
     suffix: "%",
     percent: 39,
-    description: "Cotton makes up about 39% of global textile raw-material demand — a fibre where Pakistan is a world-leading producer (industry estimates, 2025).",
+    description: "Cotton makes up about 39% of global textile raw-material demand, a fibre where Pakistan is a world-leading producer (industry estimates, 2025).",
     color: "#D8CDBA",
   },
 ];

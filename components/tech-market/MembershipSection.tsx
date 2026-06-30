@@ -201,7 +201,7 @@ export default function MembershipSection() {
         {/* Content */}
         <div className="relative z-20 flex flex-col justify-center items-start h-full px-6 sm:px-10 lg:px-16 xl:px-20">
           <motion.div
-            className="w-full py-12 lg:py-16"
+            className="w-full py-8 lg:py-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
@@ -215,7 +215,7 @@ export default function MembershipSection() {
                 Pakistani industries &amp; their best products
               </h2>
               <p className="mt-5 text-[#5A5F72] text-base sm:text-lg lg:text-xl leading-relaxed">
-                A snapshot of what Pakistan&apos;s textile industries do best — from export-grade towelling and private-label apparel to performance sportswear, medical uniforms and full-service sourcing.
+                A snapshot of what Pakistan&apos;s textile industries do best, from export-grade towelling and private-label apparel to performance sportswear, medical uniforms and full-service sourcing.
               </p>
             </div>
 
@@ -223,12 +223,12 @@ export default function MembershipSection() {
             <div className="grid grid-cols-1 auto-rows-[220px] gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[250px] lg:gap-4">
               {[
                 {
-                  title: "Towels, bed & hotel linen",
-                  tagline: "Towels, sheets, duvets & hotel linen",
+                  title: "Hotel, towels & bed linen",
+                  tagline: "Hotel linen, towels, sheets & duvets",
                   image: "/image/textile/home/bedroom-collection/01.jpg",
                   icon: BedDouble,
                   accent: "#8C9AAB",
-                  layout: "lg:col-start-1 lg:row-start-1 lg:col-span-2",
+                  layout: "lg:col-start-3 lg:row-start-1 lg:row-span-2",
                 },
                 {
                   title: "Private-label apparel",
@@ -236,7 +236,7 @@ export default function MembershipSection() {
                   image: "/image/textile/apparel/skirts-1.jpg",
                   icon: Shirt,
                   accent: "#DC2626",
-                  layout: "lg:col-start-3 lg:row-start-1 lg:row-span-2",
+                  layout: "lg:col-start-1 lg:row-start-1 lg:col-span-2",
                 },
                 {
                   title: "Custom & sublimated sportswear",
@@ -260,11 +260,11 @@ export default function MembershipSection() {
                   image: "/image/textile/apparel/skirts-dresses/01.jpg",
                   icon: Scissors,
                   accent: "#8C9AAB",
-                  layout: "lg:col-start-1 lg:row-start-3 lg:row-span-2",
+                  layout: "lg:col-start-2 lg:row-start-4",
                 },
                 {
-                  title: "Hotel & hospital linen sourcing",
-                  tagline: "Hotel & hospital linen, single source",
+                  title: "Hospital linen sourcing",
+                  tagline: "Hospital linen, single source",
                   image: "/image/textile/healthcare/linen-1.jpg",
                   icon: Building2,
                   accent: "#A3AEBC",
@@ -276,7 +276,7 @@ export default function MembershipSection() {
                   image: "/image/textile/apparel/denim-woven/denim-home.jpg",
                   icon: Shirt,
                   accent: "#8C9AAB",
-                  layout: "lg:col-start-2 lg:row-start-4",
+                  layout: "lg:col-start-1 lg:row-start-3 lg:row-span-2",
                 },
                 {
                   title: "Cotton yarn & greige fabric",
@@ -334,7 +334,7 @@ export default function MembershipSection() {
 /* ───────────── WHAT DRIVES US — Separate exported component ───────────── */
 export function WhatDrivesUs() {
   return (
-    <section className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-[#F6F2EA]">
+    <section className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-[#F6F2EA]">
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">
@@ -348,7 +348,7 @@ export function WhatDrivesUs() {
                 What Drives Us
               </h2>
               <p className="mt-4 text-base sm:text-lg leading-relaxed text-[#5A5F72]">
-                Three operating pillars sit beneath Pakistan Textile Partners&apos; work — quality assurance, global market access, and a vertically-integrated supplier network connecting Pakistan to the world.
+                Three operating pillars sit beneath Pakistan Textile Partners&apos; work: quality assurance, global market access, and a vertically-integrated supplier network connecting Pakistan to the world.
               </p>
             </div>
 
@@ -358,17 +358,17 @@ export function WhatDrivesUs() {
                 {
                   icon: PolicyIcon,
                   title: "Quality & Compliance",
-                  desc: "We help exporters meet the certifications and standards global buyers require — GOTS, OEKO-TEX, BCI, Sedex, WRAP and ISO — so Pakistani product is export-ready and trusted worldwide.",
+                  desc: "We help exporters meet the certifications and standards global buyers require, including GOTS, OEKO-TEX, BCI, Sedex, WRAP and ISO, so Pakistani product is export-ready and trusted worldwide.",
                 },
                 {
                   icon: InnovationIcon,
                   title: "Global Market Access",
-                  desc: "We connect Pakistani supply to buyers worldwide — the EU (with GSP+ duty-free access), the USA, the Middle East, the UK and beyond — through marketing, matchmaking, e-commerce and warehousing.",
+                  desc: "We connect Pakistani supply to buyers worldwide, including the EU (with GSP+ duty-free access), the USA, the Middle East, the UK and beyond, through marketing, matchmaking, e-commerce and warehousing.",
                 },
                 {
                   icon: MarketsIcon,
                   title: "Vertical Integration",
-                  desc: "A vetted network spanning cotton, spinning, weaving, knitting, dyeing, finishing and garmenting — so a single accountable partner manages every stage from yarn to your door.",
+                  desc: "A vetted network spanning cotton, spinning, weaving, knitting, dyeing, finishing and garmenting, so a single accountable partner manages every stage from yarn to your door.",
                 },
               ].map((card) => {
                 const CardIcon = card.icon;

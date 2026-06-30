@@ -34,7 +34,7 @@ const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 /* Why source through Pakistan Textile Partners */
 const whyUptib = [
   { icon: Globe2, title: "A vetted global network", desc: "Pre-vetted Pakistani manufacturers across every category, matched to buyers worldwide." },
-  { icon: ShieldCheck, title: "Quality at every step", desc: "Independent, multi-stage inspection on your agreed AQL — not just at the factory gate." },
+  { icon: ShieldCheck, title: "Quality at every step", desc: "Independent, multi-stage inspection on your agreed AQL, not just at the factory gate." },
   { icon: Users, title: "One accountable partner", desc: "A single point of contact from first sample to final delivery, anywhere in the world." },
   { icon: Award, title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles. Built into your price." },
 ];
@@ -53,7 +53,7 @@ const certifications: { code: string; note: string; icon: LucideIcon }[] = [
 const faqs = [
   {
     q: "Can you produce to our own designs and specifications?",
-    a: "Yes. Across apparel, sportswear and home textiles our network offers OEM and private-label production — you keep the branding in-house and we manufacture to your tech pack, with sampling and design support where needed.",
+    a: "Yes. Across apparel, sportswear and home textiles our network offers OEM and private-label production: you keep the branding in-house and we manufacture to your tech pack, with sampling and design support where needed.",
   },
   {
     q: "What are typical minimum order quantities?",
@@ -61,15 +61,15 @@ const faqs = [
   },
   {
     q: "Which certifications can you supply against?",
-    a: "Depending on the category, our network holds GOTS, OEKO-TEX, BCI, Sedex, WRAP, ISO and — for medical textiles — CE, AAMI and ISO 13485. We can prioritise organic cotton, recycled materials and audited, transparent supply chains.",
+    a: "Depending on the category, our network holds GOTS, OEKO-TEX, BCI, Sedex, WRAP, ISO and, for medical textiles, CE, AAMI and ISO 13485. We can prioritise organic cotton, recycled materials and audited, transparent supply chains.",
   },
   {
     q: "Do you handle quality control and shipping?",
-    a: "Yes. We run independent, multi-stage inspection to your agreed AQL and manage export documentation, shipping and customs — so product arrives on-spec and on-time in your market.",
+    a: "Yes. We run independent, multi-stage inspection to your agreed AQL and manage export documentation, shipping and customs, so product arrives on-spec and on-time in your market.",
   },
   {
     q: "Which markets do you currently export to?",
-    a: "Pakistani textiles ship worldwide — the European Union (with GSP+ duty-free access), the United States, the United Kingdom, the Middle East, Africa and Latin America. Wherever there is demand, we can deliver.",
+    a: "Pakistani textiles ship worldwide: the European Union (with GSP+ duty-free access), the United States, the United Kingdom, the Middle East, Africa and Latin America. Wherever there is demand, we can deliver.",
   },
 ];
 
@@ -140,7 +140,7 @@ export default function ProductsClient() {
         shade="soft"
         minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="The textiles Pakistan exports to the world"
-        subtitle="Four categories where Pakistani manufacturing is strongest and global demand is highest — home textile, apparel, sportswear and healthcare textiles, sourced and delivered with one accountable partner."
+        subtitle="Four categories where Pakistani manufacturing is strongest and global demand is highest: home textile, apparel, sportswear and healthcare textiles, sourced and delivered with one accountable partner."
         image="/image/hero-bg/pexels-cottonbro-6580549.jpg"
       >
         <div className="flex flex-wrap items-center justify-center gap-4">
@@ -177,7 +177,7 @@ export default function ProductsClient() {
       </div>
 
       {/* ── CATEGORIES ───────────────────────────────────────────── */}
-      <section id="categories" className="bg-white py-20 lg:py-28 scroll-mt-24">
+      <section id="categories" className="bg-white py-8 lg:py-10 scroll-mt-24">
         <div className={PX}>
           {/* Header */}
           <AnimatedSection animation="blur-in">
@@ -253,7 +253,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── WHY SOURCE THROUGH Pakistan Textile Partners ─────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.55fr] lg:gap-16 xl:gap-20">
@@ -268,7 +268,7 @@ export default function ProductsClient() {
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
                   Great textiles still need a partner who can vouch for the factory, guarantee the quality and get the
-                  goods to your market. That is what we do — across all four categories.
+                  goods to your market. That is what we do, across all four categories.
                 </p>
 
                 <div className="relative mt-10 hidden lg:block">
@@ -313,7 +313,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── SUSTAINABILITY & COMPLIANCE ──────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -327,7 +327,7 @@ export default function ProductsClient() {
                 <div className="-mt-4 mb-6 h-1 w-16 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B]" />
                 <p className="mb-7 max-w-md text-base sm:text-lg leading-relaxed text-[#5A5F72]">
                   Across every category we work with factories carrying the certifications global
-                  buyers increasingly require — and can prioritise organic cotton, recycled materials
+                  buyers increasingly require, and can prioritise organic cotton, recycled materials
                   and full traceability on request.
                 </p>
                 <div className="flex flex-col items-start gap-3">
@@ -368,7 +368,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── MARKETS (dark band) ──────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -436,7 +436,7 @@ export default function ProductsClient() {
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
+        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
         aria-labelledby="products-faq-heading"
       >
         <div className={cn("relative", PX)}>
@@ -539,7 +539,7 @@ export default function ProductsClient() {
       <GlobalCTA
         label="Source from Pakistan"
         title="Ready to source from Pakistan?"
-        subtitle="Tell us what you need and we'll match it to the right vetted manufacturer — quality-checked and delivered to your market, anywhere in the world."
+        subtitle="Tell us what you need and we'll match it to the right vetted manufacturer, quality-checked and delivered to your market, anywhere in the world."
         primaryButtonText="Request a quote"
         primaryButtonLink="/contact"
         secondaryButtonText="Global textile market"

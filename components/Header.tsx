@@ -61,7 +61,7 @@ const navItems: NavItem[] = [
       cta: { label: "View all products →", href: "/products" },
     },
     items: [
-      { label: "Home Textile", href: "/products/bedding-linen", desc: "Bed linen, towels, hotel textiles, curtains & mattress protectors — Pakistan's strongest category.", icon: BedDouble, children: subLinks("bedding-linen") },
+      { label: "Home Textile", href: "/products/bedding-linen", desc: "Bed linen, towels, hotel textiles, curtains & mattress protectors, Pakistan's strongest category.", icon: BedDouble, children: subLinks("bedding-linen") },
       { label: "Apparel & Accessories", href: "/products/apparel-accessories", desc: "Private-label fashion, denim, knitwear, uniforms and accessories.", icon: Shirt, children: subLinks("apparel-accessories") },
       { label: "Sportswear & Activewear", href: "/products/sportswear-activewear", desc: "Gymwear, teamwear and performance kit from the Sialkot hub.", icon: Dumbbell, children: subLinks("sportswear-activewear") },
       { label: "Healthcare Textile", href: "/products/healthcare-textile", desc: "Scrubs, gowns, hospital linen and antimicrobial textiles.", icon: Stethoscope, children: subLinks("healthcare-textile") },
@@ -80,7 +80,7 @@ const navItems: NavItem[] = [
     },
     items: [
       { label: "Marketing & Sales", href: "/services/marketing-sales", desc: "Visibility, B2B matchmaking and market intelligence for exporters going global.", icon: Megaphone },
-      { label: "E-commerce & Warehouse", href: "/services/ecommerce-warehouse", desc: "Warehousing, e-commerce and Amazon market access — sell direct to global consumers.", icon: Warehouse },
+      { label: "E-commerce & Warehouse", href: "/services/ecommerce-warehouse", desc: "Warehousing, e-commerce and Amazon market access; sell direct to global consumers.", icon: Warehouse },
       { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Your outsourced Pakistan procurement house: vetted factories, QA to AQL and delivery.", icon: ShoppingCart },
       { label: "Logistics", href: "/services/logistics", desc: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.", icon: Truck },
     ],
@@ -93,12 +93,12 @@ const navItems: NavItem[] = [
     color: SERVICE_GREEN,
     editorial: {
       headline: "Source it.\nCheck it. Land it.",
-      body: "Source from Pakistan with confidence — vendor vetting, quality control and end-to-end logistics handled for you.",
+      body: "Source from Pakistan with confidence: vendor vetting, quality control and end-to-end logistics handled for you.",
       cta: { label: "For international buyers →", href: "/#for-international-buyers" },
     },
     items: [
-      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Source the right Pakistani manufacturers for your order — vendor identification, sampling, price negotiation and production follow-up.", icon: Factory },
-      { label: "Quality Control", href: "/#for-international-buyers", desc: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck },
+      { label: "Buying House (Outsourcing)", href: "/services/buying-house", desc: "Source the right Pakistani manufacturers for your order: vendor identification, sampling, price negotiation and production follow-up.", icon: Factory },
+      { label: "Quality Control", href: "/#for-international-buyers", desc: "Protect your brand with rigorous inspection: pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck },
       { label: "Compliance & Logistics", href: "/#for-international-buyers", desc: "Social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship },
     ],
   },
@@ -111,12 +111,12 @@ const navItems: NavItem[] = [
     tagline: "Join the supplier pool",
     color: PRODUCT_GREEN,
     editorial: {
-      headline: "More than a listing —\na route to real buyers.",
+      headline: "More than a listing,\na route to real buyers.",
       body: "Join the supplier pool global buyers source from. Build credibility, get matched to qualified demand, and grow your textile exports worldwide.",
       cta: { label: "Membership overview →", href: "/membership" },
     },
     items: [
-      { label: "Overview", href: "/membership", desc: "Why membership beats a listing — benefits, the three tiers and who can join.", icon: Compass },
+      { label: "Overview", href: "/membership", desc: "Why membership beats a listing: benefits, the three tiers and who can join.", icon: Compass },
       { label: "Become a Member", href: "/membership#apply", desc: "Complete the application and join the supplier pool buyers source from.", icon: ClipboardList },
       { label: "Industry Directory", href: "/membership/industries", desc: "Explore Pakistan's textile sectors and the companies driving each one.", icon: Factory },
     ],
@@ -230,7 +230,7 @@ export function Header() {
             <Link
               href="/"
               className="flex items-center gap-2 sm:gap-3 lg:gap-2.5 flex-shrink-0 group"
-              aria-label="Pakistan Textile Partners — Home"
+              aria-label="Pakistan Textile Partners, Home"
             >
               <Image
                 src="/image/main-logo-v1.png"

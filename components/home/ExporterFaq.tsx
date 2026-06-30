@@ -37,7 +37,7 @@ export default function ExporterFaq({
 
   return (
     <section
-      className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
+      className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
       aria-labelledby="faq-heading"
     >
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">

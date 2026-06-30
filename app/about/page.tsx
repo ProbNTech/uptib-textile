@@ -19,7 +19,7 @@ import { aboutFaqs } from "@/data/faqs";
 export const metadata: Metadata = {
   title: "About Pakistan Textile Partners",
   description:
-    "The trusted bridge for UK–Pakistan textile trade — connecting Pakistan's manufacturers and exporters with buyers worldwide.",
+    "The trusted bridge for UK-Pakistan textile trade, connecting Pakistan's manufacturers and exporters with buyers worldwide.",
   alternates: { canonical: "/about" },
 };
 
@@ -33,7 +33,7 @@ const pillars = [
     dark: false,
     title: "Connecting Pakistan's textile makers to the world",
     body:
-      "To connect Pakistan's textile manufacturing to buyers around the world — marketing the supply, sourcing the demand, and giving both sides a single accountable partner from first enquiry to final delivery.",
+      "To connect Pakistan's textile manufacturing to buyers around the world by marketing the supply, sourcing the demand, and giving both sides a single accountable partner from first enquiry to final delivery.",
     points: [
       "Marketing the supply to global buyers",
       "Sourcing the demand for Pakistani mills",
@@ -51,14 +51,14 @@ const pillars = [
     eyebrow: "Our Vision",
     icon: Eye,
     dark: true,
-    title: "Pakistan's textiles — visible, credible, reachable",
+    title: "Pakistan's textiles: visible, credible, reachable",
     body:
-      "To be the trusted bridge for UK–Pakistan textile trade — making Pakistan's world-class cotton, home textiles, apparel and institutional textiles visible, credible and reachable to buyers everywhere, while helping Pakistani exporters grow into global markets.",
+      "To be the trusted bridge for UK-Pakistan textile trade, making Pakistan's world-class cotton, home textiles, apparel and institutional textiles visible, credible and reachable to buyers everywhere, while helping Pakistani exporters grow into global markets.",
     points: [
       "World-class cotton and home textiles, made visible",
       "Growth into the EU, Americas, Middle East & beyond",
       "Certified, traceable, sustainable supply",
-      "The trusted bridge for UK–Pakistan trade",
+      "The trusted bridge for UK-Pakistan trade",
     ],
     images: [
       { src: "/image/about/vision-bedroom.jpg", alt: "An elegant bedroom styled with home textiles in brand-green tones" },
@@ -73,9 +73,9 @@ const pillars = [
     dark: false,
     title: "The textile division of UPTIB",
     body:
-      "Pakistan Textile Partners is a London-based platform for UK–Pakistan textile trade and the textile division of the UK–Pakistan Trade and Investment Board (UPTIB). We act as a trusted bridge between Pakistani manufacturing and global demand — marketing the supply, sourcing the demand, and standing as one accountable partner to both.",
+      "Pakistan Textile Partners is a London-based platform for UK-Pakistan textile trade and the textile division of the UK-Pakistan Trade and Investment Board (UPTIB). We act as a trusted bridge between Pakistani manufacturing and global demand, marketing the supply, sourcing the demand, and standing as one accountable partner to both.",
     points: [
-      "Born from the UK–Pakistan Trade & Investment Board",
+      "Born from the UK-Pakistan Trade & Investment Board",
       "Offices in London and Lahore",
       "A vetted network across every textile category",
       "Built on accountability to both sides",
@@ -128,7 +128,7 @@ export default function AboutPage() {
     <div>
       {/* ── 1. HERO — split, light, with rotating brand seal ───────── */}
       <section className="relative overflow-hidden bg-white">
-        <Container className="relative py-14 lg:py-20">
+        <Container className="relative py-8 lg:py-10">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Left — copy */}
             <AnimatedSection animation="slide-left">
@@ -140,8 +140,8 @@ export default function AboutPage() {
                 Bridging Pakistan&rsquo;s textiles to the world
               </h1>
               <p className="mt-6 max-w-xl text-[16px] leading-[1.85] text-[#4B5563]">
-                Pakistan Textile Partners is the trusted bridge for UK&ndash;Pakistan textile
-                trade &mdash; connecting Pakistan&rsquo;s manufacturers and exporters with buyers
+                Pakistan Textile Partners is the trusted bridge for UK-Pakistan textile
+                trade, connecting Pakistan&rsquo;s manufacturers and exporters with buyers
                 worldwide. We market the supply, source the demand, and stand as one accountable
                 partner to both.
               </p>
@@ -190,13 +190,13 @@ export default function AboutPage() {
 
       {/* ── 2. CENTERED STATEMENT ──────────────────────────────────── */}
       <section className="bg-[#F6F2EA]">
-        <Container className="py-16 lg:py-24">
+        <Container className="py-8 lg:py-10">
           <AnimatedSection className="mx-auto max-w-4xl text-center">
             <Eyebrow>Who we are</Eyebrow>
             <p className="font-heading text-[1.6rem] font-bold leading-[1.45] text-[#1A1A1A] sm:text-[2rem] sm:leading-[1.4]">
               Pakistan is one of the world&rsquo;s top-ten textile exporters and a global leader in{" "}
               <span className="text-[#394F73]">cotton and home textiles</span>. We make that capability{" "}
-              <span className="text-[#394F73]">visible, credible and reachable</span> &mdash; helping
+              <span className="text-[#394F73]">visible, credible and reachable</span>, helping
               buyers source dependable product on-spec and on-time, and helping Pakistani exporters{" "}
               <span className="text-[#394F73]">reach markets worldwide</span>.
             </p>
@@ -215,7 +215,7 @@ export default function AboutPage() {
           }}
           aria-hidden
         />
-        <Container className="relative py-16 lg:py-20">
+        <Container className="relative py-8 lg:py-10">
           <div className="grid grid-cols-2 gap-y-12 lg:grid-cols-4">
             {homeStats.map((stat, i) => (
               <AnimatedSection
@@ -256,7 +256,7 @@ export default function AboutPage() {
                 aria-hidden
               />
             )}
-            <Container className="relative py-16 lg:py-24">
+            <Container className="relative py-8 lg:py-10">
               <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                 {/* Image collage */}
                 <AnimatedSection
@@ -306,14 +306,14 @@ export default function AboutPage() {
 
       {/* ── 7. HOW WE WORK ─────────────────────────────────────────── */}
       <section className="bg-white">
-        <Container className="py-16 lg:py-24">
+        <Container className="py-8 lg:py-10">
           <AnimatedSection className="mx-auto mb-12 max-w-2xl text-center">
             <Eyebrow>How we work</Eyebrow>
             <h2 className="font-heading text-[1.9rem] font-bold leading-[1.2] text-[#1A1A1A] sm:text-[2.4rem]">
               One accountable partner, from mill to door
             </h2>
             <p className="mt-4 text-[15.5px] leading-[1.8] text-[#5A5F72]">
-              We follow a transparent, end-to-end process &mdash; marketing the supply, sourcing the
+              We follow a transparent, end-to-end process, marketing the supply, sourcing the
               demand, controlling quality on the ground and moving the goods, so a low-cost origin
               becomes a low-hassle one.
             </p>
@@ -349,7 +349,7 @@ export default function AboutPage() {
       {/* ── 8. BOARD OF ADVISORS (shared with home) + offices ──────── */}
       <BoardOfAdvisors dark />
 
-      <section className="bg-[#F6F2EA] pt-16 pb-16 lg:pt-24 lg:pb-24">
+      <section className="bg-[#F6F2EA] pt-8 pb-8 lg:pt-10 lg:pb-10">
         <Container>
           <AnimatedSection className="mx-auto mb-10 max-w-2xl text-center">
             <Eyebrow>Where we are</Eyebrow>
@@ -388,13 +388,13 @@ export default function AboutPage() {
       <ExporterFaq
         faqs={aboutFaqs}
         label="FAQs"
-        title="About Pakistan Textile Partners — your questions answered"
+        title="About Pakistan Textile Partners: your questions answered"
         body="The questions buyers and manufacturers ask us most about who we are and how we work."
       />
 
       <GlobalCTA
         label="Join Us"
-        title="Ready to Be Part of UK–Pakistan Textile Trade?"
+        title="Ready to Be Part of UK-Pakistan Textile Trade?"
         subtitle="Join Pakistan Textile Partners and connect with the manufacturers, exporters and buyers driving textile trade between Pakistan and the world."
         primaryButtonText="Apply for Membership"
         primaryButtonLink="/membership#apply"

@@ -2,25 +2,25 @@ export const site = {
   name: "Pakistan Textile Partners",
   legalName: "UK Pakistan Trade & Investment Board",
   shortName: "Pakistan Textile Partners",
-  parentName: "UK–Pakistan Trades & Investment Board",
+  parentName: "UK-Pakistan Trades & Investment Board",
   parentShortName: "UPTIB",
-  tagline: "The trusted bridge for UK–Pakistan textile trade.",
+  tagline: "The trusted bridge for UK-Pakistan textile trade.",
   positioning:
-    "Pakistan's finest textiles — sourced and sold for the UK. Marketing the supply. Sourcing the demand. Trusted by both.",
+    "Pakistan's finest textiles, sourced and sold for the UK. Marketing the supply. Sourcing the demand. Trusted by both.",
   description:
-    "Pakistan Textile Partners trades quality Pakistani textiles and runs the services that move them — marketing, e-commerce, sourcing and logistics. A London-based platform for UK–Pakistan textile trade.",
+    "Pakistan Textile Partners trades quality Pakistani textiles and runs the services that move them: marketing, e-commerce, sourcing and logistics. A London-based platform for UK-Pakistan textile trade.",
   url: "https://textile.ukpaktrade.org.uk",
   parentUrl: "https://ukpaktrade.org.uk",
   offices: [
     {
       label: "UK Office",
-      address: "134–136 Westbourne Terrace, London W2 6QB",
+      address: "134-136 Westbourne Terrace, London W2 6QB",
       phone: "0207 402 4071",
       phoneHref: "tel:+442074024071",
     },
     {
       label: "Pakistan Office",
-      address: "Office 108–110 Urooj Center, Farid Court Road, Lahore",
+      address: "Office 108-110 Urooj Center, Farid Court Road, Lahore",
       phone: "0092 42 37235280",
       phoneHref: "tel:+924237235280",
     },

@@ -23,7 +23,7 @@ export const articles: Article[] = [
     slug: "textile-apparel-sourcing-from-pakistan-2026",
     title: "Textile & Apparel Sourcing from Pakistan: Complete Guide 2026",
     excerpt:
-      "Why Pakistan is one of the world's most competitive textile origins — and how international buyers source bedding, apparel, sportswear and healthcare textiles with quality guaranteed.",
+      "Why Pakistan is one of the world's most competitive textile origins, and how international buyers source bedding, apparel, sportswear and healthcare textiles with quality guaranteed.",
     date: "2026-01-15",
     displayDate: "15 January 2026",
     author: "Pakistan Textile Partners",
@@ -35,7 +35,7 @@ export const articles: Article[] = [
       {
         heading: "Why source textiles from Pakistan",
         paragraphs: [
-          "Pakistan is one of the world's top-ten textile and apparel exporters and a global leader in cotton-based products and home textiles. In FY2025 (July 2024–June 2025) the country exported roughly US$17.9 billion of textiles and apparel — up about 7.4% year-on-year — and textiles make up 55–60% of all Pakistani exports.",
+          "Pakistan is one of the world's top-ten textile and apparel exporters and a global leader in cotton-based products and home textiles. In FY2025 (July 2024 to June 2025) the country exported roughly US$17.9 billion of textiles and apparel, up about 7.4% year-on-year, and textiles make up 55 to 60% of all Pakistani exports.",
           "For buyers in the EU, USA, Middle East, UK and beyond, that scale means competitive pricing, deep capacity and genuine specialism: globally recognised cotton quality, world-class terry-towel manufacturing, and one of the leading hubs for sportswear in Sialkot.",
         ],
       },
@@ -43,22 +43,22 @@ export const articles: Article[] = [
         heading: "What Pakistan makes best",
         paragraphs: ["Four categories stand out for international buyers:"],
         bullets: [
-          "Bedding & linen — bed sheets, duvet covers, towels and hotel/bath textiles; Pakistan's strongest category and a world-leading origin for home textiles.",
-          "Apparel & accessories — OEM and private-label woven and knit, denim, knitwear, uniforms and workwear, with strong demand for low-MOQ partners.",
-          "Sportswear & activewear — gymwear, teamwear and sublimated custom kit from the Sialkot hub, with low minimum orders.",
-          "Healthcare textile — scrubs, gowns, hospital linen and antimicrobial textiles built for industrial laundering, with CE/AAMI-aware capability.",
+          "Bedding & linen: bed sheets, duvet covers, towels and hotel/bath textiles; Pakistan's strongest category and a world-leading origin for home textiles.",
+          "Apparel & accessories: OEM and private-label woven and knit, denim, knitwear, uniforms and workwear, with strong demand for low-MOQ partners.",
+          "Sportswear & activewear: gymwear, teamwear and sublimated custom kit from the Sialkot hub, with low minimum orders.",
+          "Healthcare textile: scrubs, gowns, hospital linen and antimicrobial textiles built for industrial laundering, with CE/AAMI-aware capability.",
         ],
       },
       {
         heading: "The GSP+ advantage",
         paragraphs: [
-          "Pakistan's GSP+ status gives qualifying textiles duty-free access into the European Union — a recurring cost advantage that has helped lift textile shipments to the EU by around 108% since 2014. For buyers landing product in the EU, that preferential access is built directly into the delivered price.",
+          "Pakistan's GSP+ status gives qualifying textiles duty-free access into the European Union, a recurring cost advantage that has helped lift textile shipments to the EU by around 108% since 2014. For buyers landing product in the EU, that preferential access is built directly into the delivered price.",
         ],
       },
       {
         heading: "How buyers de-risk sourcing",
         paragraphs: [
-          "The risk in offshore sourcing isn't price — it's whether what arrives matches what was ordered. A buying house model removes that risk by putting an accountable partner between the buyer and the factory:",
+          "The risk in offshore sourcing isn't price. It's whether what arrives matches what was ordered. A buying house model removes that risk by putting an accountable partner between the buyer and the factory:",
         ],
         bullets: [
           "A full brief captures specs, certifications, target price, packaging and delivery date.",
@@ -70,13 +70,13 @@ export const articles: Article[] = [
       {
         heading: "Certifications global buyers look for",
         paragraphs: [
-          "Across categories, Pakistani factories increasingly carry the certifications international buyers require — GOTS, OEKO-TEX, BCI, Sedex, WRAP and ISO, plus CE/AAMI/ISO 13485 for medical textiles. Organic cotton, recycled materials and transparent supply chains are available through the network.",
+          "Across categories, Pakistani factories increasingly carry the certifications international buyers require: GOTS, OEKO-TEX, BCI, Sedex, WRAP and ISO, plus CE/AAMI/ISO 13485 for medical textiles. Organic cotton, recycled materials and transparent supply chains are available through the network.",
         ],
       },
       {
         heading: "Getting started",
         paragraphs: [
-          "Whether you're testing Pakistan on a single trial order or building an ongoing procurement programme, the route is the same: send a brief, review samples and pricing, and let an accountable partner manage quality and delivery to your market. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
+          "Whether you're testing Pakistan on a single trial order or building an ongoing procurement programme, the route is the same: send a brief, review samples and pricing, and let an accountable partner manage quality and delivery to your market. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time, anywhere in the world.",
         ],
       },
     ],
@@ -85,7 +85,7 @@ export const articles: Article[] = [
     slug: "uk-dcts-garment-rules-2026",
     title: "UK Eases Garment Rules for Pakistani Exporters from January 2026",
     excerpt:
-      "From 1 January 2026 the UK's Developing Countries Trading Scheme has dropped the \"double transformation\" rule for clothing — a real, recurring advantage for Pakistani garment exporters selling into Britain.",
+      "From 1 January 2026 the UK's Developing Countries Trading Scheme has dropped the \"double transformation\" rule for clothing, a real, recurring advantage for Pakistani garment exporters selling into Britain.",
     date: "2026-01-20",
     displayDate: "20 January 2026",
     author: "Pakistan Textile Partners",
@@ -97,21 +97,21 @@ export const articles: Article[] = [
       {
         heading: "What changed on 1 January 2026",
         paragraphs: [
-          "The UK's Developing Countries Trading Scheme (DCTS) — which replaced the UK's Generalised Scheme of Preferences on 19 June 2023 — has just become more generous for clothing. From 1 January 2026 the UK liberalised the product-specific rules of origin for apparel (HS chapters 61 and 62), removing the \"double transformation\" requirement that previously obliged two significant manufacturing processes to take place inside the exporting country.",
-          "Under the new rules, Enhanced Preference countries — Pakistan among them — now receive the same treatment as the top Comprehensive Preference tier, and can source between 47.5% and 100% of a garment's inputs from another qualifying country for further manufacture. In practice, more Pakistani-made clothing qualifies for duty-free entry into the UK, with less restrictive paperwork.",
+          "The UK's Developing Countries Trading Scheme (DCTS), which replaced the UK's Generalised Scheme of Preferences on 19 June 2023, has just become more generous for clothing. From 1 January 2026 the UK liberalised the product-specific rules of origin for apparel (HS chapters 61 and 62), removing the \"double transformation\" requirement that previously obliged two significant manufacturing processes to take place inside the exporting country.",
+          "Under the new rules, Enhanced Preference countries, Pakistan among them, now receive the same treatment as the top Comprehensive Preference tier, and can source between 47.5% and 100% of a garment's inputs from another qualifying country for further manufacture. In practice, more Pakistani-made clothing qualifies for duty-free entry into the UK, with less restrictive paperwork.",
         ],
       },
       {
         heading: "Why it matters for Pakistan",
         paragraphs: [
           "Pakistan is one of the largest beneficiaries of the DCTS, accounting for roughly 11.8% of all UK imports made under the scheme. It sits in both the Enhanced Preferences tier and the 18-country Asia Regional Cumulation Group, which lets exporters combine inputs from across the region and still qualify.",
-          "The reform also cuts the rules-of-origin restrictiveness for textiles — by one published measure, from 5.92 under the old GSP to around 3.02 under the DCTS, close to a 50% reduction. For UK buyers, that preferential, duty-free access is a recurring cost saving that lands directly in the delivered price.",
+          "The reform also cuts the rules-of-origin restrictiveness for textiles. By one published measure, it falls from 5.92 under the old GSP to around 3.02 under the DCTS, close to a 50% reduction. For UK buyers, that preferential, duty-free access is a recurring cost saving that lands directly in the delivered price.",
         ],
       },
       {
-        heading: "The UK–Pakistan trade backdrop",
+        heading: "The UK-Pakistan trade backdrop",
         paragraphs: [
-          "The change lands as the trading relationship deepens. Total UK–Pakistan trade reached roughly £5.5 billion by November 2025, and the two governments held their first formal UK–Pakistan Trade Dialogue in 2025 — agreeing to fast-track a trade mechanism and work through non-tariff barriers. Textiles and apparel remain the backbone of that relationship.",
+          "The change lands as the trading relationship deepens. Total UK-Pakistan trade reached roughly £5.5 billion by November 2025, and the two governments held their first formal UK-Pakistan Trade Dialogue in 2025, agreeing to fast-track a trade mechanism and work through non-tariff barriers. Textiles and apparel remain the backbone of that relationship.",
         ],
       },
       {
@@ -120,10 +120,10 @@ export const articles: Article[] = [
           "Preferential access still depends on getting the documentation and origin right. Before relying on the new rules, check the essentials:",
         ],
         bullets: [
-          "Proof of origin — that the supplier can issue valid documentation under the UK's registered exporter (REX) system.",
-          "HS code eligibility — that the specific garment's tariff code is covered.",
-          "Regional cumulation — make use of the Asia group rules where inputs are sourced across multiple countries.",
-          "Compliance standing — that the supplier upholds the labour and environmental standards the scheme is built around.",
+          "Proof of origin: that the supplier can issue valid documentation under the UK's registered exporter (REX) system.",
+          "HS code eligibility: that the specific garment's tariff code is covered.",
+          "Regional cumulation: make use of the Asia group rules where inputs are sourced across multiple countries.",
+          "Compliance standing: that the supplier upholds the labour and environmental standards the scheme is built around.",
         ],
       },
       {
@@ -138,7 +138,7 @@ export const articles: Article[] = [
     slug: "pakistan-textile-exports-fy2025-record",
     title: "Pakistan Textile Exports Hit a Record $17.88 Billion in FY2025",
     excerpt:
-      "Pakistan closed FY2025 with a record US$17.88 billion in textile and apparel exports — up 7.39% — and value-added categories are still leading the way into FY2026.",
+      "Pakistan closed FY2025 with a record US$17.88 billion in textile and apparel exports, up 7.39%, and value-added categories are still leading the way into FY2026.",
     date: "2026-05-20",
     displayDate: "20 May 2026",
     author: "Pakistan Textile Partners",
@@ -150,30 +150,30 @@ export const articles: Article[] = [
       {
         heading: "A record year",
         paragraphs: [
-          "In FY2025 (July 2024–June 2025), Pakistan's textile and apparel exports rose 7.39% to US$17.88 billion, up from US$16.65 billion the year before, according to the Pakistan Bureau of Statistics. Textiles accounted for nearly 55% of the country's total exports — underlining how central the sector is to the wider economy. June 2025 alone brought in US$1.52 billion, 7.59% higher than June 2024.",
+          "In FY2025 (July 2024 to June 2025), Pakistan's textile and apparel exports rose 7.39% to US$17.88 billion, up from US$16.65 billion the year before, according to the Pakistan Bureau of Statistics. Textiles accounted for nearly 55% of the country's total exports, underlining how central the sector is to the wider economy. June 2025 alone brought in US$1.52 billion, 7.59% higher than June 2024.",
         ],
       },
       {
         heading: "Value-added led the growth",
         paragraphs: [
-          "The gains were concentrated in finished, higher-margin products rather than raw yarn or grey fabric — exactly the categories international buyers source for private-label and contract production:",
+          "The gains were concentrated in finished, higher-margin products rather than raw yarn or grey fabric, exactly the categories international buyers source for private-label and contract production:",
         ],
         bullets: [
-          "Knitwear — up 13.68% to US$5.01 billion.",
-          "Readymade garments — up 15.85% to US$4.13 billion.",
-          "Bedwear — up 11.1% to US$3.11 billion.",
+          "Knitwear: up 13.68% to US$5.01 billion.",
+          "Readymade garments: up 15.85% to US$4.13 billion.",
+          "Bedwear: up 11.1% to US$3.11 billion.",
         ],
       },
       {
         heading: "FY2026 so far",
         paragraphs: [
-          "Growth has cooled but stayed positive into the current year. Textile exports reached about US$10.9 billion in the first seven months of FY2026 (July 2025–January 2026), up 1.25% year-on-year, and roughly US$15.07 billion across the first ten months to April 2026, up about 1.48%. Analysts describe the FY2026 outlook as cautious amid stiff global competition — but value-added segments are proving the most resilient.",
+          "Growth has cooled but stayed positive into the current year. Textile exports reached about US$10.9 billion in the first seven months of FY2026 (July 2025 to January 2026), up 1.25% year-on-year, and roughly US$15.07 billion across the first ten months to April 2026, up about 1.48%. Analysts describe the FY2026 outlook as cautious amid stiff global competition, but value-added segments are proving the most resilient.",
         ],
       },
       {
         heading: "What it means for buyers",
         paragraphs: [
-          "Pakistan remains one of the world's top-ten textile exporters, with deep, vertically integrated capacity from cotton through to finished product. For buyers, steady growth in value-added categories signals a mature, dependable supplier base for bedding, knitwear and garments — best accessed through an accountable partner who manages specifications, samples, quality and delivery. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time.",
+          "Pakistan remains one of the world's top-ten textile exporters, with deep, vertically integrated capacity from cotton through to finished product. For buyers, steady growth in value-added categories signals a mature, dependable supplier base for bedding, knitwear and garments, best accessed through an accountable partner who manages specifications, samples, quality and delivery. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time.",
         ],
       },
     ],
@@ -194,12 +194,12 @@ export const articles: Article[] = [
       {
         heading: "Three origins, three strengths",
         paragraphs: [
-          "Choosing a sourcing origin is one of the most consequential decisions a buyer makes. Pakistan, India and Bangladesh each offer distinct strengths — and meaningful trade-offs. Picking well starts with being honest about what each country is genuinely best at:",
+          "Choosing a sourcing origin is one of the most consequential decisions a buyer makes. Pakistan, India and Bangladesh each offer distinct strengths, and meaningful trade-offs. Picking well starts with being honest about what each country is genuinely best at:",
         ],
         bullets: [
-          "Pakistan — cotton-rich vertical integration; strongest in home textiles, denim, knitwear and workwear. Best for cotton-intensive categories and EU buyers using GSP+.",
-          "India — vast product diversity; strong in fashion fabrics, handlooms, embroidery and apparel design. Best for diversity, craft and sustainability credentials.",
-          "Bangladesh — a volume-led fast-fashion powerhouse; dominant in basic knit and woven garments at high scale. Best for mass volume of fast-fashion basics.",
+          "Pakistan: cotton-rich vertical integration; strongest in home textiles, denim, knitwear and workwear. Best for cotton-intensive categories and EU buyers using GSP+.",
+          "India: vast product diversity; strong in fashion fabrics, handlooms, embroidery and apparel design. Best for diversity, craft and sustainability credentials.",
+          "Bangladesh: a volume-led fast-fashion powerhouse; dominant in basic knit and woven garments at high scale. Best for mass volume of fast-fashion basics.",
         ],
       },
       {
@@ -208,24 +208,24 @@ export const articles: Article[] = [
           "Look past the headline labour rate and the picture gets more nuanced. A few of the comparisons that matter most to buyers:",
         ],
         bullets: [
-          "Cotton & integration — Pakistan grows its own cotton (a top-three global producer) and runs fibre-to-garment integration; Bangladesh imports most of its fabric.",
-          "Trade access — Pakistan holds GSP+ duty preferences into the EU and Enhanced Preferences under the UK's DCTS; Bangladesh has graduated from LDC status, reducing some EU access.",
-          "Minimum orders — Pakistan typically runs 500–5,000 pcs, India is the most flexible at 200–3,000 pcs, and Bangladesh skews higher at 3,000–10,000 pcs.",
-          "Lead times — Pakistani woven production runs roughly 45–75 days, competitive with both neighbours.",
-          "Home textiles — Pakistan is the world's leading exporter of bed and bath textiles by volume, where Bangladesh has minimal presence.",
+          "Cotton & integration: Pakistan grows its own cotton (a top-three global producer) and runs fibre-to-garment integration; Bangladesh imports most of its fabric.",
+          "Trade access: Pakistan holds GSP+ duty preferences into the EU and Enhanced Preferences under the UK's DCTS; Bangladesh has graduated from LDC status, reducing some EU access.",
+          "Minimum orders: Pakistan typically runs 500 to 5,000 pcs, India is the most flexible at 200 to 3,000 pcs, and Bangladesh skews higher at 3,000 to 10,000 pcs.",
+          "Lead times: Pakistani woven production runs roughly 45 to 75 days, competitive with both neighbours.",
+          "Home textiles: Pakistan is the world's leading exporter of bed and bath textiles by volume, where Bangladesh has minimal presence.",
         ],
       },
       {
         heading: "When to choose Pakistan",
         paragraphs: [
-          "Pakistan is the clear pick when you need cotton-intensive categories — denim, bed linen, towels and knitwear — when you sell into the EU and want the GSP+ advantage, or when you want strong vertical integration with competitive pricing at mid-to-large volumes. Its top-tier export factories rival any origin on quality infrastructure, with in-house labs, AQL inspection as standard, and compliance to major Western retailer codes.",
+          "Pakistan is the clear pick when you need cotton-intensive categories such as denim, bed linen, towels and knitwear, when you sell into the EU and want the GSP+ advantage, or when you want strong vertical integration with competitive pricing at mid-to-large volumes. Its top-tier export factories rival any origin on quality infrastructure, with in-house labs, AQL inspection as standard, and compliance to major Western retailer codes.",
         ],
       },
       {
         heading: "A portfolio approach often wins",
         paragraphs: [
-          "Many experienced global buyers do not choose a single origin at all — they build a portfolio, routing cotton-heavy categories to Pakistan, craft and design-led product to India, and high-volume basics to Bangladesh. Understanding each origin's genuine strengths is what lets buyers extract maximum value from each.",
-          "Wherever Pakistan fits in your strategy, the route in is the same: send a clear brief, approve samples in writing, and let an accountable partner manage quality and delivery. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
+          "Many experienced global buyers do not choose a single origin at all. They build a portfolio, routing cotton-heavy categories to Pakistan, craft and design-led product to India, and high-volume basics to Bangladesh. Understanding each origin's genuine strengths is what lets buyers extract maximum value from each.",
+          "Wherever Pakistan fits in your strategy, the route in is the same: send a clear brief, approve samples in writing, and let an accountable partner manage quality and delivery. Pakistan Textile Partners sources from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time, anywhere in the world.",
         ],
       },
     ],
@@ -246,33 +246,33 @@ export const articles: Article[] = [
       {
         heading: "The global picture",
         paragraphs: [
-          "The global textile and apparel market is on a steady path toward the US$2 trillion mark, driven by a growing world population, the continued shift of fashion and home retail online, and rising demand for technical and performance textiles. After several volatile years, buyers in 2026 are prioritising supply-chain resilience and predictable lead times alongside price — and that is reshaping where the world's textiles are made.",
+          "The global textile and apparel market is on a steady path toward the US$2 trillion mark, driven by a growing world population, the continued shift of fashion and home retail online, and rising demand for technical and performance textiles. After several volatile years, buyers in 2026 are prioritising supply-chain resilience and predictable lead times alongside price, and that is reshaping where the world's textiles are made.",
           "Three structural trends define the year: a continued diversification away from single-country sourcing, tighter expectations on sustainability and traceability, and the steady growth of low-MOQ private-label demand from online-first brands. Each of these plays to the strengths of established, vertically integrated origins like Pakistan.",
         ],
       },
       {
         heading: "Where Pakistan fits",
         paragraphs: [
-          "Pakistan is one of the world's top-ten textile and apparel exporters and a global leader in cotton-based products and home textiles. In FY2025 (July 2024–June 2025) the country exported roughly US$17.9 billion of textiles and apparel — up about 7.4% year-on-year — and textiles make up 55–60% of all Pakistani exports.",
+          "Pakistan is one of the world's top-ten textile and apparel exporters and a global leader in cotton-based products and home textiles. In FY2025 (July 2024 to June 2025) the country exported roughly US$17.9 billion of textiles and apparel, up about 7.4% year-on-year, and textiles make up 55 to 60% of all Pakistani exports.",
           "What sets Pakistan apart in a crowded field is vertical integration: many mills run cotton spinning, weaving, processing and garment manufacturing under coordinated ownership, which shortens lead times and gives buyers tighter control over quality from yarn to finished product.",
         ],
       },
       {
         heading: "The China+1 reshuffle",
         paragraphs: [
-          "As international buyers continue to diversify beyond a single dominant supplier, sourcing volume is redistributing across South and Southeast Asia. Pakistan is a clear beneficiary of this 'China+1' strategy, particularly for cotton-rich categories where it has decades of specialism — home textiles, terry towels, denim and knitwear.",
+          "As international buyers continue to diversify beyond a single dominant supplier, sourcing volume is redistributing across South and Southeast Asia. Pakistan is a clear beneficiary of this 'China+1' strategy, particularly for cotton-rich categories where it has decades of specialism: home textiles, terry towels, denim and knitwear.",
         ],
         bullets: [
-          "Sustainability & traceability — OEKO-TEX, GOTS, BCI and recycled-content lines are increasingly a condition of doing business, not a premium add-on.",
-          "Near-shoring & lead times — buyers are paying closer attention to delivery reliability, not just unit cost.",
-          "Low-MOQ private label — online-first home and apparel brands want smaller, faster runs that established Pakistani partners can accommodate.",
-          "Technical & healthcare textiles — performance, antimicrobial and medical textiles are among the fastest-growing segments.",
+          "Sustainability & traceability: OEKO-TEX, GOTS, BCI and recycled-content lines are increasingly a condition of doing business, not a premium add-on.",
+          "Near-shoring & lead times: buyers are paying closer attention to delivery reliability, not just unit cost.",
+          "Low-MOQ private label: online-first home and apparel brands want smaller, faster runs that established Pakistani partners can accommodate.",
+          "Technical & healthcare textiles: performance, antimicrobial and medical textiles are among the fastest-growing segments.",
         ],
       },
       {
         heading: "Outlook for buyers",
         paragraphs: [
-          "For buyers across the EU, USA, Middle East and UK, 2026 is a year to lock in resilient, accountable sourcing relationships rather than chase the lowest quoted price. Pakistan's combination of scale, cotton quality, vertical integration and — for EU-landed product — GSP+ duty-free access makes it a structurally competitive origin as global demand climbs toward US$2 trillion.",
+          "For buyers across the EU, USA, Middle East and UK, 2026 is a year to lock in resilient, accountable sourcing relationships rather than chase the lowest quoted price. Pakistan's combination of scale, cotton quality, vertical integration and (for EU-landed product) GSP+ duty-free access makes it a structurally competitive origin as global demand climbs toward US$2 trillion.",
           "The practical route in is unchanged: send a clear brief, approve samples in writing, and let an accountable partner manage quality and delivery to your market.",
         ],
       },
@@ -294,7 +294,7 @@ export const articles: Article[] = [
       {
         heading: "What GSP+ is",
         paragraphs: [
-          "GSP+ is the European Union's Generalised Scheme of Preferences Plus — a special incentive arrangement that grants duty-free or reduced-tariff access to the EU market for vulnerable developing economies. In exchange for that access, beneficiary countries commit to ratifying and effectively implementing 27 international conventions covering human rights, labour standards, environmental protection and good governance.",
+          "GSP+ is the European Union's Generalised Scheme of Preferences Plus, a special incentive arrangement that grants duty-free or reduced-tariff access to the EU market for vulnerable developing economies. In exchange for that access, beneficiary countries commit to ratifying and effectively implementing 27 international conventions covering human rights, labour standards, environmental protection and good governance.",
           "Pakistan has been a GSP+ beneficiary since 2014, and the status has become one of the most important structural advantages for its textile sector. For products landing in the EU, the preferential tariff is a recurring cost saving built directly into the delivered price.",
         ],
       },
@@ -304,15 +304,15 @@ export const articles: Article[] = [
           "The majority of Pakistan's textile and apparel export lines fall within GSP+ coverage, which is why the scheme matters so much to this sector specifically. Qualifying categories include:",
         ],
         bullets: [
-          "Woven and knit apparel — including denim, knitwear, uniforms and workwear.",
-          "Home textiles and made-ups — bed linen, duvet covers, towels and bath textiles.",
+          "Woven and knit apparel: including denim, knitwear, uniforms and workwear.",
+          "Home textiles and made-ups: bed linen, duvet covers, towels and bath textiles.",
           "Cotton-based fabrics and yarns used in downstream manufacturing.",
         ],
       },
       {
         heading: "The cost advantage",
         paragraphs: [
-          "The impact is measurable: preferential access has helped lift Pakistani textile shipments to the EU by around 108% since GSP+ was granted in 2014. For a buyer landing product in the EU, removing or reducing the import duty can be the difference between a marginal and a clearly competitive landed cost — without any compromise on quality or compliance.",
+          "The impact is measurable: preferential access has helped lift Pakistani textile shipments to the EU by around 108% since GSP+ was granted in 2014. For a buyer landing product in the EU, removing or reducing the import duty can be the difference between a marginal and a clearly competitive landed cost, without any compromise on quality or compliance.",
           "Because the benefit is realised at import into the EU, it applies to the buyer's delivered price rather than the factory-gate price. That makes GSP+ a genuine commercial lever for EU-based brands, retailers and hotel groups sourcing from Pakistan.",
         ],
       },
@@ -322,16 +322,16 @@ export const articles: Article[] = [
           "GSP+ benefits depend on correct documentation and rules of origin. Before relying on preferential access, buyers should confirm a few essentials:",
         ],
         bullets: [
-          "Proof of origin — that the supplier can provide valid origin documentation under the EU's registered exporter (REX) system.",
-          "HS code eligibility — that the specific product's tariff code is covered by the scheme.",
-          "Rules of origin — that the product meets the origin criteria, particularly where inputs are imported.",
-          "Compliance standing — that the supplier upholds the labour, environmental and certification standards the scheme is built around.",
+          "Proof of origin: that the supplier can provide valid origin documentation under the EU's registered exporter (REX) system.",
+          "HS code eligibility: that the specific product's tariff code is covered by the scheme.",
+          "Rules of origin: that the product meets the origin criteria, particularly where inputs are imported.",
+          "Compliance standing: that the supplier upholds the labour, environmental and certification standards the scheme is built around.",
         ],
       },
       {
         heading: "Beyond the EU",
         paragraphs: [
-          "GSP+ is EU-specific, but it is not the only preferential pathway. The UK operates its own Developing Countries Trading Scheme (DCTS) with comparable benefits for many Pakistani textile lines. Buyers in other markets should check whether equivalent preferential arrangements apply — an accountable sourcing partner can confirm eligibility and handle the documentation end-to-end.",
+          "GSP+ is EU-specific, but it is not the only preferential pathway. The UK operates its own Developing Countries Trading Scheme (DCTS) with comparable benefits for many Pakistani textile lines. Buyers in other markets should check whether equivalent preferential arrangements apply, as an accountable sourcing partner can confirm eligibility and handle the documentation end-to-end.",
         ],
       },
     ],
@@ -340,7 +340,7 @@ export const articles: Article[] = [
     slug: "pakistan-home-textile-leadership",
     title: "Pakistan's Home-Textile Leadership",
     excerpt:
-      "Why Pakistan is a world-leading origin for bed linen and towels — and what that means for hotel groups and online home brands worldwide.",
+      "Why Pakistan is a world-leading origin for bed linen and towels, and what that means for hotel groups and online home brands worldwide.",
     date: "2026-03-01",
     displayDate: "1 March 2026",
     author: "Pakistan Textile Partners",
@@ -352,13 +352,13 @@ export const articles: Article[] = [
       {
         heading: "A world-leading origin",
         paragraphs: [
-          "Home textiles are Pakistan's strongest category and the foundation of its global reputation. The country is one of the world's leading origins for bed linen, duvet covers and — above all — terry towels, where Pakistani manufacturing is genuinely world-class. For buyers, that means deep capacity, mature quality systems and a supplier base that has been making these products for international markets for decades.",
+          "Home textiles are Pakistan's strongest category and the foundation of its global reputation. The country is one of the world's leading origins for bed linen, duvet covers and, above all, terry towels, where Pakistani manufacturing is genuinely world-class. For buyers, that means deep capacity, mature quality systems and a supplier base that has been making these products for international markets for decades.",
         ],
       },
       {
         heading: "Why the quality",
         paragraphs: [
-          "The strength comes from the full supply chain, not just the final stitch. Pakistan grows its own cotton and runs large-scale spinning, weaving, dyeing and finishing operations, often within vertically integrated groups. That control over every stage — from fibre to finished towel — is what produces the consistency in absorbency, GSM, hand-feel and colourfastness that home-textile buyers depend on.",
+          "The strength comes from the full supply chain, not just the final stitch. Pakistan grows its own cotton and runs large-scale spinning, weaving, dyeing and finishing operations, often within vertically integrated groups. That control over every stage, from fibre to finished towel, is what produces the consistency in absorbency, GSM, hand-feel and colourfastness that home-textile buyers depend on.",
         ],
       },
       {
@@ -367,9 +367,9 @@ export const articles: Article[] = [
           "Home textiles from Pakistan reach a broad spread of international buyers, each with different priorities:",
         ],
         bullets: [
-          "Hotel and hospitality groups — durable bath and bed linen built to survive industrial laundering.",
-          "Retailers and department stores — large, repeatable volumes to consistent specifications.",
-          "Online home brands — smaller, faster private-label runs with on-trend finishes and packaging.",
+          "Hotel and hospitality groups: durable bath and bed linen built to survive industrial laundering.",
+          "Retailers and department stores: large, repeatable volumes to consistent specifications.",
+          "Online home brands: smaller, faster private-label runs with on-trend finishes and packaging.",
         ],
       },
       {
@@ -378,16 +378,16 @@ export const articles: Article[] = [
           "Home textiles are specification-driven, so the brief matters. Buyers get the best results when they lock down the technical detail up front and verify it before bulk:",
         ],
         bullets: [
-          "Specify clearly — GSM for towels, thread count and weave for linen, plus shrinkage and colourfastness tolerances.",
-          "Ask for certifications — OEKO-TEX, GOTS, BCI and recycled-content options are widely available.",
-          "Approve samples in writing — sign off the physical sample before production begins.",
-          "Inspect to an AQL — independent mid-run and pre-shipment QA against an agreed quality level.",
+          "Specify clearly: GSM for towels, thread count and weave for linen, plus shrinkage and colourfastness tolerances.",
+          "Ask for certifications: OEKO-TEX, GOTS, BCI and recycled-content options are widely available.",
+          "Approve samples in writing: sign off the physical sample before production begins.",
+          "Inspect to an AQL: independent mid-run and pre-shipment QA against an agreed quality level.",
         ],
       },
       {
         heading: "Getting started",
         paragraphs: [
-          "Whether you're a hotel group placing a recurring bath-linen order or an online brand testing a first private-label range, the route is the same: send a brief with your specs and target price, review samples, and let an accountable partner manage quality and delivery to your market. Pakistan Textile Partners sources home textiles from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time — anywhere in the world.",
+          "Whether you're a hotel group placing a recurring bath-linen order or an online brand testing a first private-label range, the route is the same: send a brief with your specs and target price, review samples, and let an accountable partner manage quality and delivery to your market. Pakistan Textile Partners sources home textiles from a vetted network of Pakistani manufacturers and delivers landed, on-spec and on-time, anywhere in the world.",
         ],
       },
     ],

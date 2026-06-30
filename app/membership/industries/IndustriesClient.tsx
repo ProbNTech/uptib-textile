@@ -107,11 +107,11 @@ const valueChain: { icon: LucideIcon; title: string; desc: string }[] = [
 const faqs = [
   {
     q: "What does Pakistan's textile industry produce?",
-    a: "Pakistan spans the full textile value chain — from cotton, yarn and fabric through to finished home textiles, apparel and knitwear, sportswear, healthcare garments, and the sourcing houses that connect factories to buyers worldwide.",
+    a: "Pakistan spans the full textile value chain, from cotton, yarn and fabric through to finished home textiles, apparel and knitwear, sportswear, healthcare garments, and the sourcing houses that connect factories to buyers worldwide.",
   },
   {
     q: "Which sectors is Pakistan strongest in?",
-    a: "Home and hospitality textiles — bed linen, terry towels and hotel & hospital linen — are Pakistan's flagship export category, built on a large cotton, yarn and fabric base. Apparel, sportswear (centred on the Sialkot hub) and healthcare textiles are fast-growing.",
+    a: "Home and hospitality textiles, such as bed linen, terry towels and hotel & hospital linen, are Pakistan's flagship export category, built on a large cotton, yarn and fabric base. Apparel, sportswear (centred on the Sialkot hub) and healthcare textiles are fast-growing.",
   },
   {
     q: "Are the companies listed here members of Pakistan Textile Partners?",
@@ -119,7 +119,7 @@ const faqs = [
   },
   {
     q: "What is the GSP+ advantage?",
-    a: "GSP+ is the European Union's preferential trade scheme that grants Pakistan duty-free access on a wide range of textile products into the EU — a meaningful price advantage for buyers sourcing from Pakistan.",
+    a: "GSP+ is the European Union's preferential trade scheme that grants Pakistan duty-free access on a wide range of textile products into the EU, a meaningful price advantage for buyers sourcing from Pakistan.",
   },
   {
     q: "Do Pakistani manufacturers hold international certifications?",
@@ -310,7 +310,7 @@ export default function IndustriesClient() {
         shade="soft"
         minHeightClass="min-h-[540px] md:min-h-[580px] lg:min-h-[620px]"
         title="Leading industries inside Pakistan's textile"
-        subtitle="From the cotton fields of Punjab to the sportswear hub of Sialkot — explore the sectors that make Pakistan a top-ten global textile exporter, and the companies operating across each one."
+        subtitle="From the cotton fields of Punjab to the sportswear hub of Sialkot, explore the sectors that make Pakistan a top-ten global textile exporter, and the companies operating across each one."
         image="/image/hero-bg/pexels-cottonbro-6580549.jpg"
       >
         <div className="flex flex-wrap items-center justify-center gap-4">
@@ -322,7 +322,7 @@ export default function IndustriesClient() {
       </PageHero>
 
       {/* ── VALUE-CHAIN RIBBON ───────────────────────────────────── */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="mx-auto max-w-2xl text-center">
@@ -360,13 +360,13 @@ export default function IndustriesClient() {
       </section>
 
       {/* ── SECTOR MOSAIC ────────────────────────────────────────── */}
-      <section id="sectors" className="scroll-mt-24 bg-white pb-16 lg:pb-24">
+      <section id="sectors" className="scroll-mt-24 bg-white pb-8 lg:pb-10">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
               label="The textile landscape"
               title="Five sectors, one supply chain"
-              body="Pakistan's textile industry spans the full value chain — from yarn and fabric to finished home textiles, apparel, sportswear and healthcare garments — supplying buyers worldwide."
+              body="Pakistan's textile industry spans the full value chain, from yarn and fabric to finished home textiles, apparel, sportswear and healthcare garments, supplying buyers worldwide."
               color="#394F73"
               hideLine
             />
@@ -434,7 +434,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* ── STATS BAND ───────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
@@ -451,7 +451,7 @@ export default function IndustriesClient() {
                 <SectionLabel
                   label="A global supplier"
                   title="An industry built for the world's buyers"
-                  body="Pakistan supplies retailers, importers, hotel groups and brands across the markets where its textiles are in demand — backed by scale, certifications and the GSP+ duty advantage into the EU."
+                  body="Pakistan supplies retailers, importers, hotel groups and brands across the markets where its textiles are in demand, backed by scale, certifications and the GSP+ duty advantage into the EU."
                   color="#B3AA98"
                   light
                   hideLine
@@ -504,7 +504,7 @@ export default function IndustriesClient() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/55 to-transparent" />
           </div>
-          <div className={cn("relative", PX, "py-16 lg:py-20")}>
+          <div className={cn("relative", PX, "py-8 lg:py-10")}>
             <div className="max-w-xl">
               <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#394F73]">
                 Industry Directory
@@ -514,7 +514,7 @@ export default function IndustriesClient() {
               </h2>
               <p className="mt-5 max-w-md text-base leading-relaxed text-[#5A5F72]">
                 A snapshot of the manufacturers and mills operating across every stage of
-                Pakistan&apos;s textile industry — the kind of producers that supply buyers
+                Pakistan&apos;s textile industry, the kind of producers that supply buyers
                 worldwide.
               </p>
             </div>
@@ -618,7 +618,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
-      <section className="relative z-[1] overflow-hidden bg-white py-20 lg:py-28">
+      <section className="relative z-[1] overflow-hidden bg-white py-8 lg:py-10">
         <div className={cn("relative", PX)}>
           <AnimatedSection animation="blur-in">
             <div className="grid gap-12 lg:grid-cols-[0.85fr_1.6fr] lg:gap-16">
@@ -782,7 +782,7 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
             {count} Featured {count === 1 ? "Company" : "Companies"}
           </span>
           <h2 className="mt-4 font-heading text-2xl font-extrabold leading-tight text-[#1A1A1A] sm:text-3xl lg:text-[2.3rem]">
-            Editorial picks — Pakistan&apos;s textile leaders
+            Editorial picks: Pakistan&apos;s textile leaders
           </h2>
         </div>
 

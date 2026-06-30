@@ -7,7 +7,7 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { LazyVideo } from "@/components/LazyVideo";
 
-const BANNER_VIDEO = "/videos/textile-hero-video.mp4";
+const BANNER_VIDEO = "/videos/hero-video.mp4";
 const BANNER_POSTER = "/videos/banner-poster.jpg";
 
 const slides = [

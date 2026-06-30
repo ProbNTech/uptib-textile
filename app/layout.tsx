@@ -37,11 +37,11 @@ const BASE_URL = "https://www.ukpaktrade.org.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Pakistan Textile Partners — Pakistan textile exports, worldwide",
+    default: "Pakistan Textile Partners: Pakistan textile exports, worldwide",
     template: "%s | Pakistan Textile Partners",
   },
   description:
-    "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets — home textile, apparel, sportswear and healthcare textiles, with sourcing, outsourcing, marketing and warehousing services.",
+    "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets: home textile, apparel, sportswear and healthcare textiles, with sourcing, outsourcing, marketing and warehousing services.",
   keywords: [
     "Pakistan textile export",
     "textile sourcing Pakistan",
@@ -52,27 +52,27 @@ export const metadata: Metadata = {
     "sportswear Sialkot",
     "GSP+ textiles",
   ],
-  authors: [{ name: "UK–Pakistan Trades & Investment Board" }],
+  authors: [{ name: "UK-Pakistan Trades & Investment Board" }],
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: BASE_URL,
     siteName: "Pakistan Textile Partners",
-    title: "Pakistan Textile Partners — Pakistan textile exports, worldwide",
+    title: "Pakistan Textile Partners: Pakistan textile exports, worldwide",
     description:
-      "Made in Pakistan. Sold across the world. Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers — with sourcing, outsourcing, marketing and warehousing services.",
+      "Made in Pakistan. Sold across the world. Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers, with sourcing, outsourcing, marketing and warehousing services.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pakistan Textile Partners — Pakistan textile exports, worldwide",
+        alt: "Pakistan Textile Partners: Pakistan textile exports, worldwide",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pakistan Textile Partners — Pakistan textile exports, worldwide",
+    title: "Pakistan Textile Partners: Pakistan textile exports, worldwide",
     description:
       "Made in Pakistan. Sold across the world. Pakistan's textile manufacturing, connected to global buyers and markets.",
     images: ["/og-image.png"],
@@ -91,18 +91,18 @@ const jsonLd = {
   name: "Pakistan Textile Partners",
   parentOrganization: {
     "@type": "Organization",
-    name: "UK–Pakistan Trades & Investment Board",
+    name: "UK-Pakistan Trades & Investment Board",
     alternateName: "UPTIB",
   },
   url: BASE_URL,
   logo: `${BASE_URL}/image/main-logo-v1.png`,
   description:
-    "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets — with sourcing, outsourcing, marketing and warehousing services.",
+    "Pakistan Textile Partners connects Pakistan's textile manufacturing to global buyers and markets, with sourcing, outsourcing, marketing and warehousing services.",
   foundingDate: "2024",
   areaServed: { "@type": "Place", name: "Worldwide" },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "134–136 Westbourne Terrace",
+    streetAddress: "134-136 Westbourne Terrace",
     addressLocality: "London",
     postalCode: "W2 6QB",
     addressCountry: "GB",

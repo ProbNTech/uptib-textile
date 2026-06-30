@@ -5,7 +5,7 @@
 
 // ─── Global opportunity headline stats ──────────────────────────────────────
 export const globalStats = [
-  { end: 359, prefix: "$", suffix: "B", decimals: 0, label: "US apparel market (2024) — the world's largest" },
+  { end: 359, prefix: "$", suffix: "B", decimals: 0, label: "US apparel market (2024), the world's largest" },
   { end: 252, prefix: "$", suffix: "B", decimals: 0, label: "US textile market (2022), projected >$320B by 2030" },
   { end: 63.6, prefix: "$", suffix: "B", decimals: 1, label: "UK textile & apparel market (2025)" },
   { end: 62.7, prefix: "$", suffix: "B", decimals: 1, label: "European sportswear market (2025)" },
@@ -32,7 +32,7 @@ export const segments: Segment[] = [
     tags: "Bed linen, Towels, Terry",
     desc: "Pakistan's #1 export across Europe",
     blurb:
-      "A world-leading origin for bed linen, towels, terry and hospitality textiles — and Pakistan's single largest export across most European markets.",
+      "A world-leading origin for bed linen, towels, terry and hospitality textiles, and Pakistan's single largest export across most European markets.",
     points: ["Bed & bath linen", "Terry towels", "Hotel & hospitality linens", "Kitchen & table linens"],
   },
   {
@@ -52,7 +52,7 @@ export const segments: Segment[] = [
     tags: "Performance, Gym, Teamwear",
     desc: "Fast-growing OEM & private-label capability",
     blurb:
-      "Strong OEM and private-label capability in performance garments, teamwear and compression wear — one of the fastest-growing export opportunities.",
+      "Strong OEM and private-label capability in performance garments, teamwear and compression wear, one of the fastest-growing export opportunities.",
     points: ["Performance knitwear", "Gym & activewear", "Compression garments", "Team & club kit"],
   },
   {
@@ -62,7 +62,7 @@ export const segments: Segment[] = [
     tags: "Surgical, PPE, Nonwovens",
     desc: "Emerging, higher-margin technical frontier",
     blurb:
-      "An emerging, higher-margin frontier: surgical gowns, hospital linens, PPE and nonwovens — the fastest-growing technical-textile application worldwide.",
+      "An emerging, higher-margin frontier: surgical gowns, hospital linens, PPE and nonwovens, the fastest-growing technical-textile application worldwide.",
     points: ["Surgical gowns & scrubs", "Hospital bedding", "PPE & infection control", "Nonwoven medical fabrics"],
   },
 ];
@@ -94,22 +94,22 @@ export const regions: Region[] = [
     short: "North America",
     flags: ["us", "ca"],
     image: "/image/north-america.jpg",
-    tagline: "The largest apparel market on earth — plus a maturing Canadian opening",
+    tagline: "The largest apparel market on earth, plus a maturing Canadian opening",
     overview:
-      "The United States is the world's largest apparel market, where Pakistan already ranks among the top-10 textile suppliers. Canada offers an attractive, less-contested opening — it imports most of its textiles and apparel and rewards reliable home-textile, denim and sportswear partners.",
+      "The United States is the world's largest apparel market, where Pakistan already ranks among the top-10 textile suppliers. Canada offers an attractive, less-contested opening: it imports most of its textiles and apparel and rewards reliable home-textile, denim and sportswear partners.",
     stats: [
       { value: "$4.3B+", label: "Pakistan textile-related exports to the US (2025)" },
       { value: "Top 10", label: "Pakistan's rank among US textile suppliers" },
-      { value: "$2–4B", label: "Canada's home-textile import market" },
+      { value: "$2 to 4B", label: "Canada's home-textile import market" },
     ],
     table: {
       columns: ["Sector", "Market size", "Pakistan's exports", "Opportunity"],
       rows: [
-        { flag: "us", cells: ["United States — Textiles (all)", "$252B (2022) → >$320B by 2030", ">$4.3B / yr (2025)", "Among top-10 US suppliers"] },
-        { flag: "us", cells: ["United States — Apparel", "$359B (2024), world's largest", "Knit $1.42B · Woven $1.14B (2025)", "9th–10th largest US supplier"] },
-        { flag: "us", cells: ["United States — Sportswear", "$52.3B (2025)", "$300–500M+ within apparel", "Strong in performance & teamwear"] },
-        { flag: "us", cells: ["United States — Medical textiles", "Fastest-growing textile segment", "≈$141–143M (2024–25)", "Small but rapidly growing"] },
-        { flag: "ca", cells: ["Canada — Textile & Apparel", "$35–45B combined", "$400–700M / yr (all categories)", "High — less competition than US"] },
+        { flag: "us", cells: ["United States: Textiles (all)", "$252B (2022) → >$320B by 2030", ">$4.3B / yr (2025)", "Among top-10 US suppliers"] },
+        { flag: "us", cells: ["United States: Apparel", "$359B (2024), world's largest", "Knit $1.42B · Woven $1.14B (2025)", "9th to 10th largest US supplier"] },
+        { flag: "us", cells: ["United States: Sportswear", "$52.3B (2025)", "$300 to 500M+ within apparel", "Strong in performance & teamwear"] },
+        { flag: "us", cells: ["United States: Medical textiles", "Fastest-growing textile segment", "≈$141 to 143M (2024 to 25)", "Small but rapidly growing"] },
+        { flag: "ca", cells: ["Canada: Textile & Apparel", "$35 to 45B combined", "$400 to 700M / yr (all categories)", "High, less competition than US"] },
       ],
     },
     extra: {
@@ -122,10 +122,10 @@ export const regions: Region[] = [
       ],
     },
     opportunities: [
-      "Premium home textiles — bed linen, towels and hotel linens",
+      "Premium home textiles: bed linen, towels and hotel linens",
       "Sustainable & organic-cotton apparel for US retailers",
       "Sportswear & athleisure via OEM / private label",
-      "Medical textiles & PPE — the fastest-growing US segment",
+      "Medical textiles & PPE, the fastest-growing US segment",
       "Canada: knit & woven garments, denim, socks and workwear",
     ],
   },
@@ -137,25 +137,25 @@ export const regions: Region[] = [
     image: "/image/uk.jpg",
     tagline: "A long-standing, relationship-rich destination across every category",
     overview:
-      "The UK remains one of Pakistan's most important export destinations, built on preferential access and decades-old sourcing relationships. Demand is strong across apparel, home textiles, sportswear and healthcare textiles — with sustainability and ethical sourcing now central purchasing criteria.",
+      "The UK remains one of Pakistan's most important export destinations, built on preferential access and decades-old sourcing relationships. Demand is strong across apparel, home textiles, sportswear and healthcare textiles, with sustainability and ethical sourcing now central purchasing criteria.",
     stats: [
-      { value: "£1.5–2.0B", label: "Pakistan's annual textile exports to the UK" },
+      { value: "£1.5 to 2.0B", label: "Pakistan's annual textile exports to the UK" },
       { value: "$85.9B", label: "UK apparel market (2024)" },
       { value: "15%", label: "UK share of the European textile market" },
     ],
     table: {
       columns: ["Sector", "UK market size", "Pakistan's position", "Opportunity"],
       rows: [
-        { flag: "gb", cells: ["Textile & Apparel (combined)", "$63.6B (2025)", "£1.5–2.0B / yr combined", "£800M – £1.2B"] },
-        { flag: "gb", cells: ["Apparel", "$85.9B (2024)", "Largest export category to the UK", "£500M – £800M"] },
-        { flag: "gb", cells: ["Sportswear", "$6.8B (2025)", "Growing — activewear & teamwear", "£100M – £250M"] },
-        { flag: "gb", cells: ["Medical textiles", "$1.8B projected", "Small but expanding", "£30M – £100M"] },
+        { flag: "gb", cells: ["Textile & Apparel (combined)", "$63.6B (2025)", "£1.5 to 2.0B / yr combined", "£800M to £1.2B"] },
+        { flag: "gb", cells: ["Apparel", "$85.9B (2024)", "Largest export category to the UK", "£500M to £800M"] },
+        { flag: "gb", cells: ["Sportswear", "$6.8B (2025)", "Growing, activewear & teamwear", "£100M to £250M"] },
+        { flag: "gb", cells: ["Medical textiles", "$1.8B projected", "Small but expanding", "£30M to £100M"] },
       ],
     },
     opportunities: [
       "Private-label & value-priced fashion for major UK retailers",
       "Sustainable cotton garments and school uniforms / workwear",
-      "Home textiles — bed linen, towels and knitwear",
+      "Home textiles: bed linen, towels and knitwear",
       "Activewear, gym wear, compression and football / cricket kit",
       "Medical garments, hospital linens and infection-control textiles",
     ],
@@ -168,10 +168,10 @@ export const regions: Region[] = [
     image: "/image/europe.jpg",
     tagline: "Germany, France, Italy, Spain, the Netherlands and Poland anchor the demand",
     overview:
-      "For Pakistani exporters, Europe's largest opportunities concentrate in Germany, France, Italy, Spain, the Netherlands and Poland — together accounting for the majority of European textile and apparel imports. The European sportswear market alone was valued at ~$62.7B in 2025 and is forecast to grow rapidly. GSP+ duty-free access into the EU is a genuine competitive edge.",
+      "For Pakistani exporters, Europe's largest opportunities concentrate in Germany, France, Italy, Spain, the Netherlands and Poland, together accounting for the majority of European textile and apparel imports. The European sportswear market alone was valued at ~$62.7B in 2025 and is forecast to grow rapidly. GSP+ duty-free access into the EU is a genuine competitive edge.",
     stats: [
       { value: "$62.7B", label: "European sportswear market (2025)" },
-      { value: "20%", label: "Germany's share — Europe's largest textile market" },
+      { value: "20%", label: "Germany's share, Europe's largest textile market" },
       { value: "6", label: "Core EU markets driving most imports" },
     ],
     table: {
@@ -188,11 +188,11 @@ export const regions: Region[] = [
       ],
     },
     opportunities: [
-      "Germany — knitwear, denim, workwear, technical & medical textiles; Europe's top market for certified, sustainable goods",
-      "France — fashion apparel, premium & sustainable cotton, home textiles, medical nonwovens",
-      "Italy — cotton garments, denim, private-label and sustainable fashion for a premium market",
-      "Spain — fast-fashion sourcing with competitive pricing and a growing sportswear segment",
-      "Netherlands — the gateway hub: apparel, sportswear, medical products and e-commerce fulfilment",
+      "Germany: knitwear, denim, workwear, technical & medical textiles; Europe's top market for certified, sustainable goods",
+      "France: fashion apparel, premium & sustainable cotton, home textiles, medical nonwovens",
+      "Italy: cotton garments, denim, private-label and sustainable fashion for a premium market",
+      "Spain: fast-fashion sourcing with competitive pricing and a growing sportswear segment",
+      "Netherlands, the gateway hub: apparel, sportswear, medical products and e-commerce fulfilment",
     ],
   },
   {
@@ -203,21 +203,21 @@ export const regions: Region[] = [
     image: "/image/middle-east.jpg",
     tagline: "Import-led Gulf markets, with Saudi Arabia and the UAE in the lead",
     overview:
-      "The GCC imports a large share of its textiles, apparel, sportswear and healthcare products. The UAE serves as both a consumer market and a re-export hub, while Saudi Arabia offers the largest single GCC opportunity — driven by population growth, healthcare investment and retail expansion.",
+      "The GCC imports a large share of its textiles, apparel, sportswear and healthcare products. The UAE serves as both a consumer market and a re-export hub, while Saudi Arabia offers the largest single GCC opportunity, driven by population growth, healthcare investment and retail expansion.",
     stats: [
-      { value: "$18–22B", label: "Saudi Arabia — the largest GCC apparel market" },
+      { value: "$18 to 22B", label: "Saudi Arabia, the largest GCC apparel market" },
       { value: "Re-export", label: "UAE doubles as a consumer market and regional hub" },
       { value: "6", label: "GCC markets actively importing textiles" },
     ],
     table: {
       columns: ["Country", "Apparel market", "Sportswear demand", "Healthcare demand"],
       rows: [
-        { flag: "sa", cells: ["Saudi Arabia", "$18–22B", "Very High", "Very High"] },
-        { flag: "ae", cells: ["United Arab Emirates", "$12–15B", "Very High", "High"] },
-        { flag: "qa", cells: ["Qatar", "$2–3B", "High", "High"] },
-        { flag: "kw", cells: ["Kuwait", "$2–3B", "High", "High"] },
-        { flag: "om", cells: ["Oman", "$1–2B", "Medium", "Medium"] },
-        { flag: "bh", cells: ["Bahrain", "$0.8–1.2B", "Medium", "Medium"] },
+        { flag: "sa", cells: ["Saudi Arabia", "$18 to 22B", "Very High", "Very High"] },
+        { flag: "ae", cells: ["United Arab Emirates", "$12 to 15B", "Very High", "High"] },
+        { flag: "qa", cells: ["Qatar", "$2 to 3B", "High", "High"] },
+        { flag: "kw", cells: ["Kuwait", "$2 to 3B", "High", "High"] },
+        { flag: "om", cells: ["Oman", "$1 to 2B", "Medium", "Medium"] },
+        { flag: "bh", cells: ["Bahrain", "$0.8 to 1.2B", "Medium", "Medium"] },
       ],
     },
     opportunities: [
@@ -244,7 +244,7 @@ export interface CountryFootprint {
 export const europeFootprints: CountryFootprint[] = [
   {
     country: "Italy", flag: "it", value: "$1.1B / yr", growth: "$311M untapped → target >$2B", textileShare: "Anchor of bilateral trade",
-    note: "Textiles & apparel generated €153M in Q2 2025 alone — the absolute anchor of a relationship pushing past $2B.",
+    note: "Textiles & apparel generated €153M in Q2 2025 alone, the absolute anchor of a relationship pushing past $2B.",
     segments: [
       { label: "House & bed linens", value: "$204M" },
       { label: "Men's & boys' trousers", value: "$98.2M" },
@@ -264,7 +264,7 @@ export const europeFootprints: CountryFootprint[] = [
   },
   {
     country: "Poland", flag: "pl", value: ">$1B / yr", growth: "+16.1% 5-yr CAGR", textileShare: "~90% of exports",
-    note: "Poland has crossed the $1B milestone — one of the fastest-growing European corridors for Pakistani textiles.",
+    note: "Poland has crossed the $1B milestone, one of the fastest-growing European corridors for Pakistani textiles.",
     segments: [
       { label: "House linens (bed & bath)", value: "$162M" },
       { label: "Men's non-knit suits & trousers", value: "$130M" },
@@ -273,8 +273,8 @@ export const europeFootprints: CountryFootprint[] = [
     ],
   },
   {
-    country: "Czech Republic", flag: "cz", value: "$150–180M / yr", growth: "+8.82% 5-yr CAGR", textileShare: "55%+ of exports",
-    note: "Anchors total bilateral trade of $302–410M, serving domestic hospitality and commercial laundry networks.",
+    country: "Czech Republic", flag: "cz", value: "$150 to 180M / yr", growth: "+8.82% 5-yr CAGR", textileShare: "55%+ of exports",
+    note: "Anchors total bilateral trade of $302 to 410M, serving domestic hospitality and commercial laundry networks.",
     segments: [
       { label: "House linens", value: "$54.6M" },
       { label: "Men's non-knit suits & trousers", value: "$53.4M" },
@@ -293,7 +293,7 @@ export const europeFootprints: CountryFootprint[] = [
     ],
   },
   {
-    country: "Greece", flag: "gr", value: "$128–151M / yr", textileShare: "~70% of exports",
+    country: "Greece", flag: "gr", value: "$128 to 151M / yr", textileShare: "~70% of exports",
     note: "Greece's world-famous tourism and hospitality sectors sustain non-stop demand for durable commercial linens.",
     segments: [
       { label: "House linens (bed, bath & kitchen)", value: "$47.3M" },
@@ -314,7 +314,7 @@ export const europeFootprints: CountryFootprint[] = [
   },
   {
     country: "Slovakia", flag: "sk", value: "$50M / yr", growth: "+83.5% YoY surge", textileShare: "Automotive corridor",
-    note: "Monthly exports surged 83.5% in early 2026 — driven by denim workwear and uniforms for the automotive sector.",
+    note: "Monthly exports surged 83.5% in early 2026, driven by denim workwear and uniforms for the automotive sector.",
     segments: [
       { label: "Men's non-knit suits & trousers", value: "$20M" },
       { label: "House linens (bed & bath)", value: "$18M" },
@@ -333,7 +333,7 @@ export const europeFootprints: CountryFootprint[] = [
     ],
   },
   {
-    country: "Romania", flag: "ro", value: "$40–50M / yr", textileShare: "Trade scaling to $500M",
+    country: "Romania", flag: "ro", value: "$40 to 50M / yr", textileShare: "Trade scaling to $500M",
     note: "Expanding rapidly within a broader bilateral partnership scaling toward $500M in total trade.",
     segments: [
       { label: "House linens (bed, bath & kitchen)", value: "$17.3M" },
@@ -383,19 +383,19 @@ export const competitors = [
 ];
 
 export const advantages = [
-  { title: "Cotton at the Source", desc: "One of the world's largest cotton producers — raw material on the doorstep, not on a ship." },
+  { title: "Cotton at the Source", desc: "One of the world's largest cotton producers, with raw material on the doorstep, not on a ship." },
   { title: "Vertical Integration", desc: "Cotton to finished garment under one roof, from spinning and weaving to dyeing and stitching." },
   { title: "Manufacturing Depth", desc: "Decades of scale in knit, woven, denim and home textiles, with ~40 million people across the value chain." },
   { title: "Preferential Access", desc: "GSP+ duty-free access to the EU and long-standing UK sourcing relationships lower the landed cost." },
   { title: "Competitive Pricing", desc: "A structural cost edge over European and many Asian rivals on high-volume, value-tier production." },
-  { title: "Higher Value per $", desc: "Fast-growing capability in sportswear, technical and medical textiles — the higher-margin frontier." },
+  { title: "Higher Value per $", desc: "Fast-growing capability in sportswear, technical and medical textiles, the higher-margin frontier." },
 ];
 
 // ─── Market-entry playbook ─────────────────────────────────────────────────────
 // `image` renders as a faint photo at the foot of each playbook column.
 export const entrySteps = [
   { title: "Certification Compliance", desc: "GOTS, BCI, OEKO-TEX and social-compliance audits to clear European and North American buyer gates.", image: "/image/textile/products/healthcare-textile.jpg" },
-  { title: "Sustainability & Ethics", desc: "Organic and recycled cotton, transparent supply chains and ethical sourcing — now decisive purchasing criteria.", image: "/image/textile/products/bedding-linen.jpg" },
+  { title: "Sustainability & Ethics", desc: "Organic and recycled cotton, transparent supply chains and ethical sourcing, now decisive purchasing criteria.", image: "/image/textile/products/bedding-linen.jpg" },
   { title: "Product Innovation", desc: "Move up the value curve into performance, technical and medical textiles where margins are strongest.", image: "/image/textile/products/sportswear-activewear.jpg" },
   { title: "Digital Marketing", desc: "Direct buyer outreach, B2B marketplaces and e-commerce fulfilment, including warehousing in EU hubs.", image: "/image/textile/products/apparel-accessories.jpg" },
   { title: "Buyer Diversification", desc: "Spread risk across the US, UK, EU and GCC rather than concentrating on any single destination.", image: "/image/textile/manufacturers.jpg" },

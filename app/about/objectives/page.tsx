@@ -55,7 +55,7 @@ export default function ObjectivesPage() {
               <ul className="space-y-3">
                 {[
                   "Pursuit of excellence in the IT profession",
-                  "Commitment to traditional Pakistan values — ownership of responsibility and duty to the profession, fellow professionals, family and humanity",
+                  "Commitment to traditional Pakistan values: ownership of responsibility and duty to the profession, fellow professionals, family and humanity",
                   "Commitment to serve the community",
                   "Mutual respect and responsibility",
                   "Practice of highest ethics",
@@ -80,11 +80,11 @@ export default function ObjectivesPage() {
                   "Quarterly Cultural Events",
                   "Annual Gala Dinner & Award Program",
                   "Interacting with Policy Makers on issues pertaining to Pakistan IT Professionals",
-                  "Professional Development & Skill Growth — Enable network members to participate in Tech development, management, maintenance, and support. Create income opportunities through revenue sharing, royalties, and the Innovative Collective Startup Model.",
-                  "Collective Startups & AI Platform Development — Develop AI-driven Tech platforms, systems, and tools for organizations, sector-specific collectives, and governments. Ensure access to AI Tech and support services across all economic sectors.",
-                  "IT/AI Pakistani Services Companies — Establish Pakistani professional-owned IT/AI services companies in every country. Provide stable jobs and income opportunities for IT professionals and Tech service providers.",
-                  "Local Community IT Support & Co-working Spaces — Develop Tech Centers with co-working spaces. Facilitate IT support services to local communities through Pakistan Textile Partners.",
-                  "STEM Careers Promotion — Promote careers in Science, Technology, Engineering and Mathematics to inspire the next generation of tech leaders.",
+                  "Professional Development & Skill Growth: Enable network members to participate in Tech development, management, maintenance, and support. Create income opportunities through revenue sharing, royalties, and the Innovative Collective Startup Model.",
+                  "Collective Startups & AI Platform Development: Develop AI-driven Tech platforms, systems, and tools for organizations, sector-specific collectives, and governments. Ensure access to AI Tech and support services across all economic sectors.",
+                  "IT/AI Pakistani Services Companies: Establish Pakistani professional-owned IT/AI services companies in every country. Provide stable jobs and income opportunities for IT professionals and Tech service providers.",
+                  "Local Community IT Support & Co-working Spaces: Develop Tech Centers with co-working spaces. Facilitate IT support services to local communities through Pakistan Textile Partners.",
+                  "STEM Careers Promotion: Promote careers in Science, Technology, Engineering and Mathematics to inspire the next generation of tech leaders.",
                   "Mentorship Programs & Knowledge Sharing",
                   "Conferences & Seminars on latest tech trends",
                 ].map((act) => (

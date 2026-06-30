@@ -141,7 +141,7 @@ function MarketHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           >
-            The Global Textile Market —<br className="hidden sm:block" /> and{" "}
+            The Global Textile Market,<br className="hidden sm:block" /> and{" "}
             <span className="text-[#B3AA98]">Pakistan&apos;s</span> place in it
           </motion.h1>
 
@@ -151,7 +151,7 @@ function MarketHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            Pakistan Textile Partners is the textile arm of the UK–Pakistan Trades &amp; Investment Board — a London-based
+            Pakistan Textile Partners is the textile arm of the UK-Pakistan Trades &amp; Investment Board, a London-based
             platform, with a Lahore office, that helps Pakistani textile
             manufacturers reach global markets.
           </motion.p>
@@ -182,7 +182,7 @@ function MarketHero() {
       </div>
 
       {/* Trust bar — contained card straddling the hero / section boundary */}
-      <div className="relative z-20 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 lg:pb-16">
+      <div className="relative z-20 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-8 lg:pb-10">
         <div className="-mt-16 lg:-mt-20 overflow-hidden rounded-2xl bg-[#48608A] shadow-2xl shadow-black/30 ring-1 ring-white/10">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-y divide-white/10 lg:divide-y-0 lg:divide-x">
             {heroStats.map((stat, i) => (
@@ -219,7 +219,7 @@ function ExportPotential() {
 
   return (
     <section className="relative bg-white">
-      <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+      <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
         <div ref={ref} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left — narrative */}
           <AnimatedSection animation="slide-right">
@@ -315,7 +315,7 @@ function ExportFootprint() {
         height={520}
         className="pointer-events-none select-none absolute -left-28 -bottom-20 z-0 hidden h-auto w-[440px] opacity-100 lg:block"
       />
-      <div className="relative z-[1] px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+      <div className="relative z-[1] px-8 sm:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
         <div className="grid lg:grid-cols-[300px_1fr] gap-10 lg:gap-12 items-start">
           {/* Left — intro */}
           <AnimatedSection animation="slide-right">
@@ -532,7 +532,7 @@ function DestinationBanner() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#48608A] via-[#48608A]/70 to-[#48608A]/20" />
       </div>
 
-      <div className="relative grid lg:grid-cols-2 items-center gap-10 px-7 sm:px-10 lg:px-14 py-12 lg:py-16">
+      <div className="relative grid lg:grid-cols-2 items-center gap-10 px-7 sm:px-10 lg:px-14 py-8 lg:py-10">
         {/* Copy */}
         <div className="max-w-xl">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.22em] text-[#B3AA98]">
@@ -802,7 +802,7 @@ export default function GlobalTextileMarketClient() {
 
       {/* ── Product segments / Our services ───────────────────────────── */}
       <section className="relative bg-white">
-        <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+        <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
           <AnimatedSection>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-xl">
@@ -814,7 +814,7 @@ export default function GlobalTextileMarketClient() {
                 </h2>
               </div>
               <p className="max-w-md text-[15px] leading-relaxed text-[#6b7280] lg:text-right">
-                From raw cotton to readymade, our focus is clear — we support
+                From raw cotton to readymade, our focus is clear. We support
                 Pakistan&apos;s top textile &amp; apparel categories to become global leaders.
               </p>
             </div>
@@ -865,7 +865,7 @@ export default function GlobalTextileMarketClient() {
 
       {/* ── Region explorer ───────────────────────────────────────────── */}
       <section id="regions" className="relative bg-[#F6F2EA] scroll-mt-24">
-        <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+        <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
           <AnimatedSection>
             <DestinationBanner />
           </AnimatedSection>
@@ -890,7 +890,7 @@ export default function GlobalTextileMarketClient() {
             backgroundSize: "48px 48px",
           }}
         />
-        <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+        <div className="relative px-8 sm:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left — title block */}
             <AnimatedSection animation="slide-right" className="lg:col-span-4">
@@ -949,7 +949,7 @@ export default function GlobalTextileMarketClient() {
 
       {/* ── Market-entry playbook ─────────────────────────────────────── */}
       <section className="relative bg-white">
-        <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-14 lg:py-20">
+        <div className="px-8 sm:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left — playbook points */}
             <div className="lg:col-span-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
@@ -988,7 +988,7 @@ export default function GlobalTextileMarketClient() {
                 <Info className="h-4 w-4 shrink-0 mt-0.5 text-[#394F73]" />
                 <span>
                   <span className="font-semibold text-[#3D4152]">Source:</span> Pakistan Export
-                  Market Report 2026–2030. Figures are indicative; refresh before final launch.
+                  Market Report 2026 to 2030. Figures are indicative; refresh before final launch.
                 </span>
               </p>
             </AnimatedSection>
@@ -999,7 +999,7 @@ export default function GlobalTextileMarketClient() {
       <GlobalCTA
         label="Work with Pakistan Textile Partners"
         title="Source from Pakistan, or grow your exports"
-        subtitle="Tap into one of the world's leading textile origins — for buyers seeking dependable supply, and for manufacturers seeking global demand."
+        subtitle="Tap into one of the world's leading textile origins, for buyers seeking dependable supply, and for manufacturers seeking global demand."
         primaryButtonText="Source from Pakistan"
         primaryButtonLink="/contact"
         secondaryButtonText="Grow your exports"

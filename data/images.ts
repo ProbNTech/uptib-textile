@@ -30,7 +30,7 @@ export const images = {
   lahore: img("lahore.jpg", "Badshahi Mosque, Lahore, Pakistan"),
   londonSkyline: img(
     "london-skyline-bg.png",
-    "Houses of Parliament and Big Ben — London skyline",
+    "Houses of Parliament and Big Ben, London skyline",
   ),
   minarePakistan: img(
     "minarepakistan.png",

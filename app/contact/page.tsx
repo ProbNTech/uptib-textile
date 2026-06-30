@@ -9,9 +9,9 @@ import { Section } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — let's talk",
+  title: "Contact: let's talk",
   description:
-    "Tell us what you need — source products from Pakistan, sell globally, a service, or a quote — and we'll route you to the right person. Offices in London and Lahore.",
+    "Tell us what you need, whether to source products from Pakistan, sell globally, a service, or a quote, and we'll route you to the right person. Offices in London and Lahore.",
   alternates: { canonical: "/contact" },
 };
 
@@ -24,7 +24,7 @@ const heroBadges = [
 const offices = [
   {
     label: "UK Office",
-    lines: ["134–136 Westbourne Terrace", "London W2 6QB", "United Kingdom"],
+    lines: ["134 to 136 Westbourne Terrace", "London W2 6QB", "United Kingdom"],
     phone: "0207 402 4071",
     phoneHref: "tel:+442074024071",
     map: "https://www.google.com/maps/search/?api=1&query=136+Westbourne+Terrace,+London+W2+6QB",
@@ -32,7 +32,7 @@ const offices = [
   },
   {
     label: "Pakistan Office",
-    lines: ["Office 108–110 Urooj Center", "Farid Court Road, Lahore", "Pakistan"],
+    lines: ["Office 108 to 110 Urooj Center", "Farid Court Road, Lahore", "Pakistan"],
     phone: "0092 42 37235280",
     phoneHref: "tel:+924237235280",
     map: "https://www.google.com/maps/search/?api=1&query=Urooj+Center+Farid+Court+Road+Lahore",
@@ -98,7 +98,7 @@ export default function ContactPage() {
               <span className="text-[#394F73]">conversation</span>
             </h1>
             <p className="text-white/95 text-base md:text-lg leading-relaxed max-w-md mb-10">
-              Whether you have a question, need assistance, or want to explore opportunities — we&apos;re here to help.
+              Whether you have a question, need assistance, or want to explore opportunities, we&apos;re here to help.
             </p>
 
             {/* Trust badges — single row */}

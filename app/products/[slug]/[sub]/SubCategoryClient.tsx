@@ -84,7 +84,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
       </section>
 
       {/* ── INTRO + WHAT'S IN THE LINE ──────────────────────────────── */}
-      <section className={cn("py-16 sm:py-20 lg:py-24", PX)}>
+      <section className={cn("py-8 lg:py-10", PX)}>
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
           <AnimatedSection animation="blur-in">
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
@@ -129,7 +129,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
 
       {/* ── THE CATALOGUE — bento mosaic (echoes the home-page showcase) ── */}
       {group.mosaic && group.mosaic.length > 0 && (
-        <section className="bg-white py-16 sm:py-20 lg:py-24">
+        <section className="bg-white py-8 lg:py-10">
           <div className={PX}>
             <div className="mx-auto max-w-7xl">
               <AnimatedSection animation="blur-in">
@@ -154,7 +154,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
       )}
 
       {/* ── THE LOOKBOOK (centrepiece) ──────────────────────────────── */}
-      <section className={cn("pb-16 pt-4 sm:pb-20 lg:pb-24", PX)}>
+      <section className={cn("pb-8 pt-4 lg:pb-10", PX)}>
         <div className="mx-auto max-w-7xl">
           <AnimatedSection animation="blur-in">
             <div className="mb-8 flex items-end justify-between gap-6">
@@ -188,7 +188,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
 
       {/* ── MORE IN THIS CATEGORY ───────────────────────────────────── */}
       {siblings.length > 0 && (
-        <section className="bg-white py-16 sm:py-20 lg:py-24">
+        <section className="bg-white py-8 lg:py-10">
           <div className={PX}>
             <div className="mx-auto max-w-7xl">
               <AnimatedSection animation="blur-in">
@@ -253,7 +253,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
       <GlobalCTA
         label={`Source ${group.name}`}
         title={`Ready to source ${group.name.toLowerCase()}?`}
-        subtitle={`Tell us your spec — colourways, fabrics, quantities — and we'll match it to the right vetted Pakistani manufacturer, quality-checked and delivered to your market anywhere in the world.`}
+        subtitle={`Tell us your spec, including colourways, fabrics and quantities, and we'll match it to the right vetted Pakistani manufacturer, quality-checked and delivered to your market anywhere in the world.`}
         primaryButtonText="Request a quote"
         primaryButtonLink="/contact"
         secondaryButtonText={`All ${category.name.toLowerCase()}`}

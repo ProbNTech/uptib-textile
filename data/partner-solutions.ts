@@ -21,10 +21,10 @@ export const partnerSolutions: PartnerSolution[] = [
   {
     id: 1,
     slug: "pakistan-fibres-home-linen",
-    name: "Towels, bed & hotel linen",
+    name: "Hotel, towels & bed linen",
     tagline: "Export-grade towels and institutional linen.",
     description:
-      "Vertically integrated maker of ring-spun towels (400–700+ GSM), fitted & flat sheets, duvets and hotel & hospital linen — built for hundreds of industrial washes and supplied across the Gulf, Europe and North America.",
+      "Vertically integrated maker of ring-spun towels (400 to 700+ GSM), fitted & flat sheets, duvets and hotel & hospital linen, built for hundreds of industrial washes and supplied across the Gulf, Europe and North America.",
     category: "Home Textile",
     image: "/image/pexels-cottonbro-6466235.jpg",
     href: "https://pakistanfibres.com/",
@@ -38,9 +38,9 @@ export const partnerSolutions: PartnerSolution[] = [
     id: 2,
     slug: "lahore-textiles-private-label",
     name: "Private-label apparel",
-    tagline: "OEM hoodies, shirts and uniforms — 100-pc MOQ.",
+    tagline: "OEM hoodies, shirts and uniforms, 100-pc MOQ.",
     description:
-      "Custom clothing manufacturer with cutting, stitching, printing, embroidery and packaging in-house — 50+ premium fabrics, AQL quality control and a 100-piece-per-design MOQ, exporting to 30+ countries.",
+      "Custom clothing manufacturer with cutting, stitching, printing, embroidery and packaging in-house, offering 50+ premium fabrics, AQL quality control and a 100-piece-per-design MOQ, exporting to 30+ countries.",
     category: "Knitwear - Private label",
     image: "/image/pexels-gulsahaydgn-30263570.jpg",
     href: "https://lahoretextiles.com/",
@@ -56,7 +56,7 @@ export const partnerSolutions: PartnerSolution[] = [
     name: "Custom & sublimated sportswear",
     tagline: "Teamwear and activewear from 50 pieces.",
     description:
-      "Sialkot OEM sportswear maker for 3,000+ brands — gymwear, sublimated kits and teamwear with full in-house design-to-dispatch and one of the industry's lowest MOQs at 50 pieces per colour and design.",
+      "Sialkot OEM sportswear maker for 3,000+ brands, offering gymwear, sublimated kits and teamwear with full in-house design-to-dispatch and one of the industry's lowest MOQs at 50 pieces per colour and design.",
     category: "Sportswear & Activewear",
     image: "/image/pexels-laura-rincon-318039951-14792843.jpg",
     href: "https://xsportswears.com/",
@@ -72,7 +72,7 @@ export const partnerSolutions: PartnerSolution[] = [
     name: "Medical scrubs & uniforms",
     tagline: "Healthcare and corporate uniforms.",
     description:
-      "Custom uniform manufacturer specialising in scrubs, lab coats, nurse and doctor uniforms and patient gowns — breathable, durable fabrics with low MOQs for startups and bulk capacity, exporting worldwide.",
+      "Custom uniform manufacturer specialising in scrubs, lab coats, nurse and doctor uniforms and patient gowns, using breathable, durable fabrics with low MOQs for startups and bulk capacity, exporting worldwide.",
     category: "Healthcare Products",
     image: "/image/pexels-karola-g-5207099.jpg",
     href: "https://albeezaapparel.com/",
@@ -88,7 +88,7 @@ export const partnerSolutions: PartnerSolution[] = [
     name: "Fiber-to-garment sourcing",
     tagline: "Factory-direct sourcing & QA, 30+ countries.",
     description:
-      "Faisalabad buying house with 22+ years' experience — factory-direct pricing, on-ground QC, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners across home, hospitality, medical and apparel textiles.",
+      "Faisalabad buying house with 22+ years' experience, offering factory-direct pricing, on-ground QC, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners across home, hospitality, medical and apparel textiles.",
     category: "Garments - Ladies & Children",
     image: "/image/pexels-cottonbro-6069087.jpg",
     href: "https://www.utexinternational.com/en",
@@ -104,7 +104,7 @@ export const partnerSolutions: PartnerSolution[] = [
     name: "Hotel & hospital linen sourcing",
     tagline: "Single-point sourcing & QA to AQL.",
     description:
-      "Sourcing and quality-assurance agency supplying hotel and hospital bed linen, towels and workwear to USA and European buyers through an ISO / OEKO-TEX-audited multi-factory network — one contact from sampling to export docs.",
+      "Sourcing and quality-assurance agency supplying hotel and hospital bed linen, towels and workwear to USA and European buyers through an ISO / OEKO-TEX-audited multi-factory network, with one contact from sampling to export docs.",
     category: "Hospitality Products",
     image: "/image/pexels-artbovich-7746950.jpg",
     href: "https://texkoncept.com/",
@@ -120,7 +120,7 @@ export const partnerSolutions: PartnerSolution[] = [
     name: "Denim & woven bottoms",
     tagline: "Jeans, chinos and workwear bottoms at scale.",
     description:
-      "Pakistan is one of the world's largest denim producers — full-package jeans, chinos and woven bottoms with in-house washing, finishing and laundry effects, supplied to high-street and DTC brands worldwide.",
+      "Pakistan is one of the world's largest denim producers, offering full-package jeans, chinos and woven bottoms with in-house washing, finishing and laundry effects, supplied to high-street and DTC brands worldwide.",
     category: "Apparel - Denim",
     image: "/image/pexels-cottonbro-6764132.jpg",
     href: "/products/apparel-accessories",
@@ -135,7 +135,7 @@ export const partnerSolutions: PartnerSolution[] = [
     name: "Cotton yarn & greige fabric",
     tagline: "Ring-spun yarns and woven base cloth.",
     description:
-      "A leading origin for cotton and blended yarns and greige fabric — ring-spun, carded and combed counts plus woven base cloth feeding mills and converters across Asia, Europe and the Americas.",
+      "A leading origin for cotton and blended yarns and greige fabric: ring-spun, carded and combed counts plus woven base cloth feeding mills and converters across Asia, Europe and the Americas.",
     category: "Yarn & Fabric",
     image: "/image/pexels-pavel-danilyuk-5788367.jpg",
     href: "/products",

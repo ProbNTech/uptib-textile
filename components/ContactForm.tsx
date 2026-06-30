@@ -175,7 +175,7 @@ export function ContactForm() {
                 transition={{ delay: 0.45, duration: 0.4 }}
                 className="text-[#5A5F72] text-base leading-relaxed max-w-md mx-auto"
               >
-                Thank you for reaching out. A member of our team will be in touch within 2–3 business days.
+                Thank you for reaching out. A member of our team will be in touch within 2 to 3 business days.
               </motion.p>
 
               <motion.div

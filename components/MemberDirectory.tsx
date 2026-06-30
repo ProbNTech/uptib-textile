@@ -287,7 +287,7 @@ export function MemberDirectory() {
           </h2>
           <p className="text-[#4B5563] text-base leading-relaxed mx-auto mb-6">
             Join our growing network of technology companies, investors, and
-            professionals driving UK–Pakistan bilateral growth.
+            professionals driving UK-Pakistan bilateral growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

@@ -111,7 +111,7 @@ export type Service = {
 export const homeStats: { value: string; label: string }[] = [
   { value: "~US$17.9bn", label: "Pakistan textile & apparel exports, FY2025 (PBS)" },
   { value: "Top 10", label: "Global textile & apparel exporter" },
-  { value: "55–60%", label: "Of Pakistan's total exports are textiles" },
+  { value: "55-60%", label: "Of Pakistan's total exports are textiles" },
   { value: "GSP+", label: "EU duty-free access advantage" },
 ];
 
@@ -128,7 +128,7 @@ export const markets: { name: string; note: string }[] = [
 /* ── Why Pakistan Textile Partners ── */
 export const whyUptib: { title: string; desc: string; icon: LucideIcon }[] = [
   { title: "A vetted global supplier network", desc: "Profiled Pakistani manufacturers across every category, matched to buyers worldwide.", icon: Globe2 },
-  { title: "Quality control on the ground", desc: "Independent, multi-stage inspection to your agreed AQL — not just the factory's word.", icon: ShieldCheck },
+  { title: "Quality control on the ground", desc: "Independent, multi-stage inspection to your agreed AQL, not just the factory's word.", icon: ShieldCheck },
   { title: "One accountable partner", desc: "A single point of accountability from first enquiry to final delivery, anywhere in the world.", icon: Handshake },
   { title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles, built into your landed price.", icon: BadgePercent },
 ];
@@ -151,19 +151,19 @@ export const products: ProductCategory[] = [
     slug: "bedding-linen",
     name: "Home Textile",
     eyebrow: "Products · Home Textile",
-    short: "Bed linen, towels, hotel textiles, curtains & mattress protectors — Pakistan's strongest category.",
+    short: "Bed linen, towels, hotel textiles, curtains & mattress protectors, Pakistan's strongest category.",
     headline: "The complete home textile range, made in Pakistan",
-    summary: "Our largest category — globally recognised cotton quality and terry-towel manufacturing.",
+    summary: "Our largest category, with globally recognised cotton quality and terry-towel manufacturing.",
     icon: BedDouble,
     image: "/image/textile/products/bedding-linen.jpg",
     intro:
-      "Bedding and bath is the category where Pakistan is most competitive — globally recognised cotton quality and large-scale terry-towel capacity at competitive prices. Retailers, hotel groups, property developers and online home brands across the EU, the Americas, the Middle East and the UK rely on it.",
+      "Bedding and bath is the category where Pakistan is most competitive, with globally recognised cotton quality and large-scale terry-towel capacity at competitive prices. Retailers, hotel groups, property developers and online home brands across the EU, the Americas, the Middle East and the UK rely on it.",
     included: [
-      "Bed linen — flat & fitted sheets, duvet covers, comforters.",
+      "Bed linen: flat & fitted sheets, duvet covers, comforters.",
       "Pillows, mattress protectors and toppers.",
-      "Towels & bath linen — bath, hand, face, spa and pool towels, bathrobes.",
-      "Hotel linen — contract-grade bedding and bath for hospitality.",
-      "Table & kitchen linen — napkins, runners, aprons.",
+      "Towels & bath linen: bath, hand, face, spa and pool towels, bathrobes.",
+      "Hotel linen: contract-grade bedding and bath for hospitality.",
+      "Table & kitchen linen: napkins, runners, aprons.",
     ],
     applications: [
       "Hotels & hospitality groups",
@@ -175,7 +175,7 @@ export const products: ProductCategory[] = [
     certList: ["GOTS", "OEKO-TEX", "BCI", "ISO 9001"],
     facts: {
       strength: "Globally recognised cotton quality and terry-towel manufacturing, with large-scale capacity and competitive pricing.",
-      globalDemand: "Retailers, hotel groups, hospitality operators, property developers and online home brands worldwide — from the EU and USA to the Middle East and UK.",
+      globalDemand: "Retailers, hotel groups, hospitality operators, property developers and online home brands worldwide, from the EU and USA to the Middle East and UK.",
       marketSize: "Pakistan is a world-leading origin for home textiles; the global home-textile market runs into the hundreds of billions of dollars.",
       certifications: "GOTS, OEKO-TEX and ISO available through our network.",
     },
@@ -188,7 +188,7 @@ export const products: ProductCategory[] = [
     strengths: [
       "Globally recognised cotton and yarn quality, including long-staple varieties.",
       "World-class terry-towel manufacturing, from everyday to high-GSM spa grades.",
-      "Vertically integrated mills — spinning, weaving, dyeing and finishing under one roof.",
+      "Vertically integrated mills: spinning, weaving, dyeing and finishing under one roof.",
       "Large-scale capacity that scales from boutique runs to full container volumes.",
       "Hotel and contract-grade finishing built for repeated industrial laundering.",
       "GOTS, OEKO-TEX, BCI and ISO 9001 certified production available.",
@@ -197,7 +197,7 @@ export const products: ProductCategory[] = [
       eyebrow: "The collection",
       title: "Everything for the modern home",
       intro:
-        "From the bedroom to the bath to the window, Pakistan's mills produce the full home textile range under one roof — woven, dyed, printed and finished to the standards the world's leading retailers and hotel groups demand.",
+        "From the bedroom to the bath to the window, Pakistan's mills produce the full home textile range under one roof, woven, dyed, printed and finished to the standards the world's leading retailers and hotel groups demand.",
       heroImage: {
         src: "/image/textile/home/hotel-1.jpg",
         alt: "A made-up hotel bed with crisp white bed linen and a tufted headboard",
@@ -209,15 +209,15 @@ export const products: ProductCategory[] = [
           layout: "tall-left",
           tagline: "Bed linen, duvet sets & mattress protectors",
           desc:
-            "Everything that dresses the bed — long-staple cotton sheeting, duvet sets and comforters woven, reactive-dyed and digitally printed to your colourway, plus quilted mattress protectors and toppers finished for a soft hand that survives wash after wash.",
+            "Everything that dresses the bed: long-staple cotton sheeting, duvet sets and comforters woven, reactive-dyed and digitally printed to your colourway, plus quilted mattress protectors and toppers finished for a soft hand that survives wash after wash.",
           pageIntro:
-            "The bedroom is where Pakistan's long-staple cotton shows best. From crisp percale and silken sateen sheeting to Oxford and housewife pillowcases, duvet sets, comforters, bedspreads and coverlets, plush blankets and throws, pillows and duvet inners, and quilted mattress protectors and toppers — every piece is woven, reactive-dyed and finished for a soft hand that holds up to wash after wash, at the thread counts, weaves and colourways you brief.",
+            "The bedroom is where Pakistan's long-staple cotton shows best. From crisp percale and silken sateen sheeting to Oxford and housewife pillowcases, duvet sets, comforters, bedspreads and coverlets, plush blankets and throws, pillows and duvet inners, and quilted mattress protectors and toppers, every piece is woven, reactive-dyed and finished for a soft hand that holds up to wash after wash, at the thread counts, weaves and colourways you brief.",
           items: [
             "Flat & fitted sheets; Oxford & housewife pillowcases",
             "Duvet covers, comforter sets & duvet inners",
             "Bedspreads, coverlets, quilts, blankets & throws",
             "Mattress protectors & toppers; valances & bolsters",
-            "Percale, sateen & linen — 200–1000 thread-count",
+            "Percale, sateen & linen, 200 to 1000 thread-count",
           ],
           images: [
             { src: "/image/bedroom-1.jpg", alt: "A styled bedroom dressed in soft bed linen" },
@@ -306,17 +306,17 @@ export const products: ProductCategory[] = [
             src: "/image/textile/home/bathroom-collection/bathroom-hero.jpg",
             alt: "A soft, light spa bathroom with a freestanding tub and blossom branch",
           },
-          tagline: "Egyptian & terry cotton, 400–700+ GSM",
+          tagline: "Egyptian & terry cotton, 400 to 700+ GSM",
           desc:
-            "The category Pakistan is famous for. Ring-spun and combed terry towelling in every weight — from everyday bath towels to plush spa grades and bathrobes, with hotel-grade durability built in.",
+            "The category Pakistan is famous for. Ring-spun and combed terry towelling in every weight, from everyday bath towels to plush spa grades and bathrobes, with hotel-grade durability built in.",
           pageIntro:
-            "Towelling is the line Pakistan is best known for the world over. Ring-spun and combed terry in every weight — from bath sheets, bath, hand and face towels to plush 700+ GSM spa grades, bath mats, flannels, gym and sports towels, and terry, waffle or velour robes and matching sets — woven absorbent, dried soft and finished with dobby borders or your own logo, built to survive industrial laundering.",
+            "Towelling is the line Pakistan is best known for the world over. Ring-spun and combed terry in every weight, from bath sheets, bath, hand and face towels to plush 700+ GSM spa grades, bath mats, flannels, gym and sports towels, and terry, waffle or velour robes and matching sets, woven absorbent, dried soft and finished with dobby borders or your own logo, built to survive industrial laundering.",
           items: [
             "Bath sheets, bath, hand, face & guest towels",
             "Bath mats, face cloths & flannels",
-            "Robes — terry, waffle & velour; towelling sets",
+            "Robes: terry, waffle & velour; towelling sets",
             "Gym, sports, spa, pool & beach towels",
-            "400–700+ GSM combed & ring-spun cotton",
+            "400 to 700+ GSM combed & ring-spun cotton",
           ],
           images: [
             { src: "/image/textile/home/towels-1.jpg", alt: "A folded stack of towels in soft neutral colours" },
@@ -392,9 +392,9 @@ export const products: ProductCategory[] = [
           slug: "curtains-drapery",
           tagline: "Sheer, dim-out & blackout",
           desc:
-            "Made-to-measure window treatments in every weight and weave — from airy sheers to full blackout — in fabrics and colourways coordinated to the rest of the room.",
+            "Made-to-measure window treatments in every weight and weave, from airy sheers to full blackout, in fabrics and colourways coordinated to the rest of the room.",
           pageIntro:
-            "Window treatments to dress the whole room — airy linen sheers and voiles that filter daylight, through dim-out weaves, to full blackout linings for bedrooms and hospitality. Made to measure in coordinated fabrics and colourways, with eyelet, pencil-pleat and tab-top headings to your specification.",
+            "Window treatments to dress the whole room: airy linen sheers and voiles that filter daylight, through dim-out weaves, to full blackout linings for bedrooms and hospitality. Made to measure in coordinated fabrics and colourways, with eyelet, pencil-pleat and tab-top headings to your specification.",
           items: [
             "Sheer & voile curtains",
             "Dim-out & blackout drapery",
@@ -479,9 +479,9 @@ export const products: ProductCategory[] = [
           slug: "dining-kitchen",
           tagline: "Table linen, napkins & kitchen textiles",
           desc:
-            "Everyday and occasion table and kitchen linen in cotton and linen weaves — napkins, runners, placemats, tablecloths and aprons, dyed and finished to coordinate with the rest of the range.",
+            "Everyday and occasion table and kitchen linen in cotton and linen weaves: napkins, runners, placemats, tablecloths and aprons, dyed and finished to coordinate with the rest of the range.",
           pageIntro:
-            "The textiles that set the table. Cotton and linen tablecloths in round and rectangular sizes, bistro and café cloths, napkins, table runners and placemats in soft neutral palettes — alongside tea towels, glass cloths, aprons and kitchen linen, woven, hemmed and finished to coordinate across everyday and occasion ranges for retail and hospitality.",
+            "The textiles that set the table. Cotton and linen tablecloths in round and rectangular sizes, bistro and café cloths, napkins, table runners and placemats in soft neutral palettes, alongside tea towels, glass cloths, aprons and kitchen linen, woven, hemmed and finished to coordinate across everyday and occasion ranges for retail and hospitality.",
           items: [
             "Round & rectangular tablecloths; bistro & café cloths",
             "Napkins, table runners & placemats",
@@ -576,9 +576,9 @@ export const products: ProductCategory[] = [
           },
           tagline: "Decorative & accent textiles",
           desc:
-            "The finishing layer — woven and knitted cushions, throws and blankets in seasonal colourways and textures that pull a room together, for retail and hospitality alike.",
+            "The finishing layer: woven and knitted cushions, throws and blankets in seasonal colourways and textures that pull a room together, for retail and hospitality alike.",
           pageIntro:
-            "The finishing layer that pulls a room together — filled and cover-only cushions, knitted and woven throws, blankets and bedspreads. Produced in seasonal colourways and textures, from chunky knits to fine woven weaves, to accent the rest of the home collection across retail and hospitality.",
+            "The finishing layer that pulls a room together: filled and cover-only cushions, knitted and woven throws, blankets and bedspreads. Produced in seasonal colourways and textures, from chunky knits to fine woven weaves, to accent the rest of the home collection across retail and hospitality.",
           items: [
             "Filled & cover-only cushions",
             "Bolster & scatter cushions",
@@ -682,14 +682,14 @@ export const products: ProductCategory[] = [
     icon: Shirt,
     image: "/image/textile/products/apparel-accessories.jpg",
     intro:
-      "Pakistan offers OEM and private-label capability across woven and knit — with design support, small runs and fast turnaround for brands that keep branding in-house. Brands and retailers worldwide outsource production here, with strong demand for low-MOQ partners.",
+      "Pakistan offers OEM and private-label capability across woven and knit, with design support, small runs and fast turnaround for brands that keep branding in-house. Brands and retailers worldwide outsource production here, with strong demand for low-MOQ partners.",
     included: [
-      "Fashion basics — t-shirts, polos, hoodies, fleece, loungewear.",
+      "Fashion basics: t-shirts, polos, hoodies, fleece, loungewear.",
       "Children's wear.",
       "Denim and woven garments.",
       "Knitwear and jersey.",
-      "Uniforms & workwear — corporate, industrial, school and security.",
-      "Accessories — socks, bags and more.",
+      "Uniforms & workwear: corporate, industrial, school and security.",
+      "Accessories: socks, bags and more.",
     ],
     applications: [
       "Fashion & lifestyle brands",
@@ -714,7 +714,7 @@ export const products: ProductCategory[] = [
     strengths: [
       "OEM and private-label capability across both woven and knit.",
       "In-house design, sampling and tech-pack support.",
-      "Deep knitwear and readymade-garment base — among Pakistan's largest export categories.",
+      "Deep knitwear and readymade-garment base, among Pakistan's largest export categories.",
       "Flexible volumes, from low-MOQ runs to bulk production programmes.",
       "Fast turnaround with packaging and finishing handled in-house.",
       "OEKO-TEX, BCI, WRAP and Sedex certified options.",
@@ -723,7 +723,7 @@ export const products: ProductCategory[] = [
       eyebrow: "The collection",
       title: "Private label, made to your spec",
       intro:
-        "From everyday basics to denim, knitwear and workwear, Pakistan's vertically integrated factories produce OEM and private-label apparel across woven and knit — with design support, sampling and the finishing to carry your own brand.",
+        "From everyday basics to denim, knitwear and workwear, Pakistan's vertically integrated factories produce OEM and private-label apparel across woven and knit, with design support, sampling and the finishing to carry your own brand.",
       heroImage: {
         src: "/image/textile/apparel/knit-1.jpg",
         alt: "A model in a soft, neutral-toned knitted sweater",
@@ -748,7 +748,7 @@ export const products: ProductCategory[] = [
           ],
           tagline: "T-shirts, polos, hoodies & fleece",
           desc:
-            "The everyday staples brands sell in volume — ring-spun cotton tees, polos, hoodies and loungewear, cut and finished to a clean, consistent standard run after run.",
+            "The everyday staples brands sell in volume: ring-spun cotton tees, polos, hoodies and loungewear, cut and finished to a clean, consistent standard run after run.",
           items: [
             "T-shirts, polos & long-sleeves",
             "Hoodies, fleece & sweatshirts",
@@ -821,7 +821,7 @@ export const products: ProductCategory[] = [
           lookbookLayout: "portrait",
           tagline: "Jersey, ribbed & cable knit",
           desc:
-            "Fine- and chunky-gauge knitwear in cotton, wool and blended yarns — from roll-necks and crews to cardigans, knitted to a soft hand and held shape.",
+            "Fine- and chunky-gauge knitwear in cotton, wool and blended yarns, from roll-necks and crews to cardigans, knitted to a soft hand and held shape.",
           items: [
             "Crew, V & roll-neck knits",
             "Cardigans & cable knit",
@@ -892,7 +892,7 @@ export const products: ProductCategory[] = [
           ],
           tagline: "Jeans, jackets & shirting",
           desc:
-            "Woven garments built around Pakistan's deep denim base — five-pocket jeans, jackets, shirts and chinos, in the washes, fades and finishes your range calls for.",
+            "Woven garments built around Pakistan's deep denim base: five-pocket jeans, jackets, shirts and chinos, in the washes, fades and finishes your range calls for.",
           items: [
             "Five-pocket jeans & jackets",
             "Woven shirts & chinos",
@@ -965,7 +965,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "Corporate, school & industrial",
           desc:
-            "Programme-run uniforms and workwear — corporate, hospitality, school and industrial — produced to a fixed spec for reliable repeat ordering at scale.",
+            "Programme-run uniforms and workwear, spanning corporate, hospitality, school and industrial, produced to a fixed spec for reliable repeat ordering at scale.",
           items: [
             "Corporate & hospitality uniforms",
             "School & academic wear",
@@ -1037,7 +1037,7 @@ export const products: ProductCategory[] = [
           layout: "tall-left",
           tagline: "Soft, safe everyday kids' clothing",
           desc:
-            "Gentle-on-skin children's and baby clothing in soft cottons and certified, low-irritant finishes — bodysuits, sets and everyday basics, made to the safety standards retailers require.",
+            "Gentle-on-skin children's and baby clothing in soft cottons and certified, low-irritant finishes: bodysuits, sets and everyday basics, made to the safety standards retailers require.",
           items: [
             "Bodysuits, rompers & sleepsuits",
             "Tops, leggings & sets",
@@ -1109,7 +1109,7 @@ export const products: ProductCategory[] = [
           layout: "duo",
           tagline: "Socks, beanies, scarves & bags",
           desc:
-            "The add-on lines that round out an order — knitted socks, beanies, scarves and bags, produced to the same spec and finish as the main collection.",
+            "The add-on lines that round out an order: knitted socks, beanies, scarves and bags, produced to the same spec and finish as the main collection.",
           items: [
             "Socks & hosiery",
             "Beanies, scarves & gloves",
@@ -1187,7 +1187,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "Skirts, midi & maxi dresses",
           desc:
-            "Woven and jersey skirts and dresses — A-line, pleated and midi silhouettes in soft solids, prints and linens, cut and finished to your seasonal range.",
+            "Woven and jersey skirts and dresses: A-line, pleated and midi silhouettes in soft solids, prints and linens, cut and finished to your seasonal range.",
           items: [
             "A-line, pleated & denim skirts",
             "Midi & maxi dresses",
@@ -1256,7 +1256,7 @@ export const products: ProductCategory[] = [
           layout: "tall-left",
           tagline: "Jackets, bags & accessories",
           desc:
-            "Genuine and faux-leather jackets and goods drawing on Sialkot's leather heritage — biker, bomber and blazer styles, plus bags and accessories, in rich tans and classic black.",
+            "Genuine and faux-leather jackets and goods drawing on Sialkot's leather heritage: biker, bomber and blazer styles, plus bags and accessories, in rich tans and classic black.",
           items: [
             "Leather & faux-leather jackets",
             "Biker, bomber & blazer styles",
@@ -1317,7 +1317,7 @@ export const products: ProductCategory[] = [
     icon: Dumbbell,
     image: "/image/textile/products/sportswear-activewear.jpg",
     intro:
-      "Sialkot is one of the world's leading hubs for sportswear, teamwear and customised athletic apparel — with sublimation printing and low minimum orders. It serves a fast-growing global market driven by fitness, athleisure and e-commerce fitness brands.",
+      "Sialkot is one of the world's leading hubs for sportswear, teamwear and customised athletic apparel, with sublimation printing and low minimum orders. It serves a fast-growing global market driven by fitness, athleisure and e-commerce fitness brands.",
     included: [
       "Gymwear and leggings; sports bras.",
       "Performance tees, tracksuits and hoodies.",
@@ -1339,26 +1339,26 @@ export const products: ProductCategory[] = [
       certifications: "OEKO-TEX and recycled-material options available.",
     },
     demandDrivers: [
-      { title: "Athleisure everywhere", desc: "Activewear is now everyday wear — one of the fastest-growing apparel segments across global retail." },
-      { title: "Women's activewear", desc: "The largest, fastest-growing segment — leggings, sports bras, matching sets and inclusive sizing." },
+      { title: "Athleisure everywhere", desc: "Activewear is now everyday wear, one of the fastest-growing apparel segments across global retail." },
+      { title: "Women's activewear", desc: "The largest, fastest-growing segment: leggings, sports bras, matching sets and inclusive sizing." },
       { title: "Sustainable performance", desc: "Brands increasingly require recycled-polyester and eco-friendly performance fabrics." },
       { title: "Low-MOQ private label", desc: "E-commerce and DTC fitness brands outsource production while they focus on marketing and community." },
     ],
     strengths: [
-      "Sialkot — one of the world's leading hubs for sportswear and teamwear.",
+      "Sialkot, one of the world's leading hubs for sportswear and teamwear.",
       "Advanced sublimation printing for custom kit and club merchandise.",
-      "Performance-fabric expertise — moisture-wicking, four-way stretch, compression.",
+      "Performance-fabric expertise: moisture-wicking, four-way stretch, compression.",
       "Low minimum orders with full custom branding.",
       "Proven private-label production for international brands.",
       "OEKO-TEX and recycled / GRS material options.",
     ],
     strengthsNote:
-      "Pakistani sourcing networks have supplied major international sportswear names — including Adidas, Puma, Hummel, Hugo Boss and Kempa.",
+      "Pakistani sourcing networks have supplied major international sportswear names, including Adidas, Puma, Hummel, Hugo Boss and Kempa.",
     showcase: {
       eyebrow: "The collection",
       title: "Performance kit, from the Sialkot hub",
       intro:
-        "Sialkot is one of the world's leading hubs for sportswear and teamwear — pairing sublimation printing and low minimums with genuine performance-fabric expertise, across gymwear, training and custom club kit.",
+        "Sialkot is one of the world's leading hubs for sportswear and teamwear, pairing sublimation printing and low minimums with genuine performance-fabric expertise, across gymwear, training and custom club kit.",
       heroImage: {
         src: "/image/textile/sportswear/gym-1-v4.jpg",
         alt: "A woman in a white activewear jacket and leggings against a light backdrop",
@@ -1387,7 +1387,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "Leggings, sports bras & sets",
           desc:
-            "The fastest-growing segment — leggings, sports bras and matching co-ords in seamless and sculpting fits, with the stretch and recovery that everyday activewear demands.",
+            "The fastest-growing segment: leggings, sports bras and matching co-ords in seamless and sculpting fits, with the stretch and recovery that everyday activewear demands.",
           items: [
             "Leggings & cycling shorts",
             "Sports bras & crop tops",
@@ -1456,7 +1456,7 @@ export const products: ProductCategory[] = [
           lookbookLayout: "portrait",
           tagline: "Tees, tracksuits & hoodies",
           desc:
-            "Training-day essentials — performance tees, tracksuits, hoodies and shorts in moisture-wicking knits, built to move and to survive heavy rotation.",
+            "Training-day essentials: performance tees, tracksuits, hoodies and shorts in moisture-wicking knits, built to move and to survive heavy rotation.",
           items: [
             "Performance tees & tanks",
             "Tracksuits & joggers",
@@ -1532,7 +1532,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "Sublimated club & team kit",
           desc:
-            "Fully sublimated club and team kit with low minimums and full custom branding — jerseys, shorts and warm-up wear for clubs, academies and brands.",
+            "Fully sublimated club and team kit with low minimums and full custom branding: jerseys, shorts and warm-up wear for clubs, academies and brands.",
           items: [
             "Sublimated jerseys & shorts",
             "Football, rugby & cricket kit",
@@ -1606,7 +1606,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "Moisture-wicking & 4-way stretch",
           desc:
-            "The engineering behind the kit — moisture-wicking knits, four-way stretch, compression and mesh ventilation, with recycled-polyester options on request.",
+            "The engineering behind the kit: moisture-wicking knits, four-way stretch, compression and mesh ventilation, with recycled-polyester options on request.",
           items: [
             "Moisture-wicking knits",
             "Four-way stretch & compression",
@@ -1675,7 +1675,7 @@ export const products: ProductCategory[] = [
           layout: "tall-left",
           tagline: "Jackets, windbreakers & vests",
           desc:
-            "Train-through-the-seasons layers — windbreakers, track jackets, gilets and mid-layers in water-resistant and breathable fabrics, finished for the gym, the trail and the everyday.",
+            "Train-through-the-seasons layers: windbreakers, track jackets, gilets and mid-layers in water-resistant and breathable fabrics, finished for the gym, the trail and the everyday.",
           items: [
             "Windbreakers & track jackets",
             "Gilets & mid-layers",
@@ -1747,7 +1747,7 @@ export const products: ProductCategory[] = [
           layout: "duo",
           tagline: "Caps, bags, socks & support",
           desc:
-            "The kit around the kit — performance socks, caps, bags and training accessories, branded to match and produced alongside the main programme.",
+            "The kit around the kit: performance socks, caps, bags and training accessories, branded to match and produced alongside the main programme.",
           items: [
             "Performance & compression socks",
             "Caps, headbands & gloves",
@@ -1816,7 +1816,7 @@ export const products: ProductCategory[] = [
     certList: ["CE", "AAMI", "ISO 13485", "OEKO-TEX"],
     facts: {
       strength: "Institutional linen and uniform manufacturing, with CE/AAMI-aware surgical and antimicrobial capability.",
-      globalDemand: "Public and private hospitals, care homes, clinics and laboratories worldwide — including the NHS in the UK and large public health systems across the EU and Middle East.",
+      globalDemand: "Public and private hospitals, care homes, clinics and laboratories worldwide, including the NHS in the UK and large public health systems across the EU and Middle East.",
       marketSize: "The global medical-textile market is multi-billion dollar and growing steadily as healthcare capacity expands.",
       certifications: "CE / AAMI / ISO 13485, OEKO-TEX available through our network.",
     },
@@ -1824,7 +1824,7 @@ export const products: ProductCategory[] = [
       { title: "Continuous institutional demand", desc: "Hospitals, care homes and clinics worldwide need a constant, high-volume supply of linen and uniforms." },
       { title: "Infection control", desc: "Stricter hygiene standards drive demand for antimicrobial, high-temperature-washable textiles." },
       { title: "Antimicrobial textiles", desc: "The global antimicrobial hospital-textile sector exceeded US$8.5bn in 2024 and is growing fast." },
-      { title: "Outsourced procurement", desc: "Health systems increasingly source through linen-management and procurement contractors — an opening for overseas manufacturers." },
+      { title: "Outsourced procurement", desc: "Health systems increasingly source through linen-management and procurement contractors, an opening for overseas manufacturers." },
     ],
     strengths: [
       "Large-scale institutional linen and uniform manufacturing.",
@@ -1838,7 +1838,7 @@ export const products: ProductCategory[] = [
       eyebrow: "The collection",
       title: "Institutional textiles, built to last",
       intro:
-        "Built for durability, hygiene and frequent industrial laundering — scrubs, gowns, hospital linen and surgical textiles for health systems, care homes and clinics worldwide, with CE/AAMI-aware capability.",
+        "Built for durability, hygiene and frequent industrial laundering: scrubs, gowns, hospital linen and surgical textiles for health systems, care homes and clinics worldwide, with CE/AAMI-aware capability.",
       heroImage: {
         src: "/image/textile/healthcare/linen-2.jpg",
         alt: "Soft white hospital-grade bed linen in daylight",
@@ -1868,7 +1868,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "Scrubs, tunics & lab coats",
           desc:
-            "Hard-wearing scrubs, tunics and uniforms in poly-cotton blends that hold colour and shape through repeated high-temperature laundering — with antimicrobial finishes on request.",
+            "Hard-wearing scrubs, tunics and uniforms in poly-cotton blends that hold colour and shape through repeated high-temperature laundering, with antimicrobial finishes on request.",
           items: [
             "Medical scrubs & tunics",
             "Nurse & doctor uniforms",
@@ -1939,7 +1939,7 @@ export const products: ProductCategory[] = [
           ],
           tagline: "Gowns & care-setting uniforms",
           desc:
-            "Patient gowns and care-setting uniforms in easy-wash, hard-wearing fabrics — available in reusable and single-use grades for hospitals, clinics and care homes.",
+            "Patient gowns and care-setting uniforms in easy-wash, hard-wearing fabrics, available in reusable and single-use grades for hospitals, clinics and care homes.",
           items: [
             "Patient & examination gowns",
             "Care-home uniforms",
@@ -1958,8 +1958,8 @@ export const products: ProductCategory[] = [
           },
           lookbookLayout: "portrait",
           lookbook: [
-            { src: "/image/textile/healthcare/patient-provider-collection/01.jpg", alt: "Beige printed hospital patient gown", name: "Patient Gown — Beige", type: "Patient Gown" },
-            { src: "/image/textile/healthcare/patient-provider-collection/02.jpg", alt: "Ice green hospital patient gown", name: "Patient Gown — Ice Green", type: "Patient Gown" },
+            { src: "/image/textile/healthcare/patient-provider-collection/01.jpg", alt: "Beige printed hospital patient gown", name: "Patient Gown, Beige", type: "Patient Gown" },
+            { src: "/image/textile/healthcare/patient-provider-collection/02.jpg", alt: "Ice green hospital patient gown", name: "Patient Gown, Ice Green", type: "Patient Gown" },
             { src: "/image/textile/healthcare/patient-provider-collection/03.jpg", alt: "Chest-port access blouse for treatment", name: "Port Access Blouse", type: "Adaptive Wear" },
             { src: "/image/textile/healthcare/patient-provider-collection/04.jpg", alt: "Blue stripe chest-port access shirt", name: "Port Access Shirt", type: "Adaptive Wear" },
             { src: "/image/textile/healthcare/patient-provider-collection/05.jpg", alt: "Navy mens v-neck scrub top", name: "Navy V-Neck Scrub", type: "Scrub Top" },
@@ -2016,7 +2016,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "Sheets, draw sheets & blankets",
           desc:
-            "High-temperature-washable bed linen, draw sheets and blankets carried over from Pakistan's hotel and hospitality expertise — durable, hygienic and built for institutional laundries.",
+            "High-temperature-washable bed linen, draw sheets and blankets carried over from Pakistan's hotel and hospitality expertise: durable, hygienic and built for institutional laundries.",
           items: [
             "Bed sheets & pillowcases",
             "Draw sheets & under-pads",
@@ -2084,7 +2084,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "CE/AAMI-aware theatre textiles",
           desc:
-            "Theatre textiles produced with surgical-barrier capability in mind — drapes, gowns and wraps, with CE / AAMI / ISO 13485-aware manufacturing for export health systems.",
+            "Theatre textiles produced with surgical-barrier capability in mind: drapes, gowns and wraps, with CE / AAMI / ISO 13485-aware manufacturing for export health systems.",
           items: [
             "Surgical drapes & gowns",
             "Theatre linen & wraps",
@@ -2148,7 +2148,7 @@ export const products: ProductCategory[] = [
           },
           tagline: "Huck towels, cloths & wipes",
           desc:
-            "The high-turnover essentials every facility runs through — huck towels, washcloths and reusable cloths in absorbent cotton, built for repeated high-temperature laundering.",
+            "The high-turnover essentials every facility runs through: huck towels, washcloths and reusable cloths in absorbent cotton, built for repeated high-temperature laundering.",
           items: [
             "Huck & surgical towels",
             "Washcloths & flannels",
@@ -2204,9 +2204,9 @@ export const services: Service[] = [
     name: "Marketing & Sales",
     audience: "For Pakistani exporters",
     eyebrow: "Services · Marketing & Sales",
-    short: "Visibility, B2B matchmaking and market intelligence — get your products in front of global buyers.",
+    short: "Visibility, B2B matchmaking and market intelligence: get your products in front of global buyers.",
     headline: "Reach global buyers and grow your exports",
-    summary: "We make Pakistani manufacturers visible, credible and reachable to buyers worldwide — and generate the demand that turns into orders.",
+    summary: "We make Pakistani manufacturers visible, credible and reachable to buyers worldwide, and generate the demand that turns into orders.",
     icon: Megaphone,
     primaryCta: { label: "Become a member", href: "/membership" },
   },
@@ -2215,8 +2215,8 @@ export const services: Service[] = [
     name: "E-commerce & Warehouse",
     audience: "For exporters & sellers",
     eyebrow: "Services · E-commerce & Warehouse",
-    short: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing and fulfilment.",
-    headline: "Sell online — and store close to your customers",
+    short: "Sell on Amazon and store close to customers: account setup, listings, FBA prep, warehousing and fulfilment.",
+    headline: "Sell online, and store close to your customers",
     summary: "Reach shoppers directly on Amazon and online marketplaces, with the warehousing and fulfilment to back it up.",
     icon: Warehouse,
     primaryCta: { label: "Start selling on Amazon", href: "/contact" },
@@ -2226,8 +2226,8 @@ export const services: Service[] = [
     name: "Buying House (Outsourcing)",
     audience: "For international buyers",
     eyebrow: "Services · Buying House (Outsourcing)",
-    short: "Your outsourced Pakistan procurement house — source, sample, inspect and deliver, de-risked.",
-    headline: "Source textiles from Pakistan — without the risk",
+    short: "Your outsourced Pakistan procurement house: source, sample, inspect and deliver, de-risked.",
+    headline: "Source textiles from Pakistan, without the risk",
     summary: "Your outsourced Pakistan procurement department: we find the factory, control the quality, handle the paperwork and deliver.",
     icon: ShoppingCart,
     primaryCta: { label: "Request a quote", href: "/contact" },
@@ -2239,7 +2239,7 @@ export const services: Service[] = [
     eyebrow: "Services · Logistics",
     short: "Freight, customs clearance, export documentation and Importer/Exporter of Record setup.",
     headline: "From a Pakistani factory to your door",
-    summary: "We move the goods and handle the paperwork — so a low-cost origin becomes a low-hassle one.",
+    summary: "We move the goods and handle the paperwork, so a low-cost origin becomes a low-hassle one.",
     icon: Truck,
     primaryCta: { label: "Talk to us about logistics", href: "/contact" },
   },

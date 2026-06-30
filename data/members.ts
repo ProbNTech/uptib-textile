@@ -47,7 +47,7 @@ export const members: Member[] = [
     logo: "/image/members/letTechLogo.png",
     website: "https://lettech.pk",
     description:
-      "Peshawar-based problem-first technology company building AI-powered SaaS products for Pakistan's most underserved industries — starting with LetPsyc, the country's first practitioner-focused mental health assessment platform.",
+      "Peshawar-based problem-first technology company building AI-powered SaaS products for Pakistan's most underserved industries, starting with LetPsyc, the country's first practitioner-focused mental health assessment platform.",
     companyType: "SaaS / Platform",
     sectors: ["Artificial Intelligence", "HealthTech", "EdTech"],
     technologies: ["AI & Machine Learning", "Custom Software", "Automation"],

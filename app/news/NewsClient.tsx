@@ -193,7 +193,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
       {/* ============ FEATURED STORY ============ */}
       {activeFeatured && (
         <section className="relative bg-white">
-          <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-12 lg:py-16">
+          <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
             <AnimatedSection>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#394F73] mb-6">
                 Featured Story
@@ -307,7 +307,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
             backgroundSize: "20px 20px",
           }}
         />
-        <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-12 lg:py-16">
+        <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
           <AnimatedSection>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#394F73] mb-6">
               Latest News & Insights
@@ -395,7 +395,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
       </section>
 
       {/* ============ NEWSLETTER ============ */}
-      <section className="bg-white pb-14 lg:pb-20">
+      <section className="bg-white pb-8 lg:pb-10">
         <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="relative overflow-hidden rounded-card bg-[#394F73] px-6 sm:px-10 lg:px-14 py-10">
             <div
@@ -423,7 +423,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
 
               {subscribed ? (
                 <div className="flex items-center gap-3 text-[#B3AA98] font-semibold">
-                  <CheckCircle2 className="w-6 h-6" /> Thanks — you&apos;re subscribed.
+                  <CheckCircle2 className="w-6 h-6" /> Thanks, you&apos;re subscribed.
                 </div>
               ) : (
                 <form

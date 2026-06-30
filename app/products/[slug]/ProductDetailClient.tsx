@@ -106,7 +106,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </div>
 
       {/* ── OVERVIEW + WHO SOURCES IT ────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -148,13 +148,13 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
 
       {/* ── THE CATALOGUE — product mosaic (mirrors the sub-category pages) ── */}
       {categoryMosaics[p.slug] && (
-        <section className="bg-white pb-20 lg:pb-28">
+        <section className="bg-white pb-8 lg:pb-10">
           <div className={PX}>
             <AnimatedSection>
               <SectionLabel
                 label="The catalogue"
                 title={`Inside our ${p.name.toLowerCase()} range`}
-                body={`A closer look at the ${p.name.toLowerCase()} we source and supply — spanning every line in the category.`}
+                body={`A closer look at the ${p.name.toLowerCase()} we source and supply, spanning every line in the category.`}
                 color="#394F73"
                 hideLine
               />
@@ -172,13 +172,13 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       {p.showcase ? (
         <ProductShowcase showcase={p.showcase} categorySlug={p.slug} />
       ) : (
-        <section className="bg-white py-20 lg:py-28">
+        <section className="bg-white py-8 lg:py-10">
           <div className={PX}>
             <AnimatedSection>
               <SectionLabel
                 label="The range"
                 title="What's included"
-                body="The product lines we source and supply within this category — built to your spec and certifications."
+                body="The product lines we source and supply within this category, built to your spec and certifications."
                 color="#394F73"
                 hideLine
               />
@@ -203,13 +203,13 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       )}
 
       {/* ── WHAT'S DRIVING DEMAND ────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
               label="Market outlook"
               title="What's driving demand"
-              body={`The trends pulling global buyers toward ${p.name.toLowerCase()} — and where the opportunity is growing.`}
+              body={`The trends pulling global buyers toward ${p.name.toLowerCase()}, and where the opportunity is growing.`}
               color="#394F73"
               hideLine
             />
@@ -237,7 +237,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── THE FACTS ────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -254,7 +254,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                 <SectionLabel label="The facts" title="The numbers behind the category" color="#B3AA98" light hideLine />
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#B3AA98] to-[#B3AA98] -mt-3 mb-5" />
                 <p className="text-white/70 text-base leading-relaxed mb-7">
-                  Verified strengths, demand and standards for {p.name.toLowerCase()} — so you can buy with confidence.
+                  Verified strengths, demand and standards for {p.name.toLowerCase()}, so you can buy with confidence.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {p.certList.map((c) => (
@@ -284,7 +284,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── WHY PAKISTAN LEADS HERE ──────────────────────────────── */}
-      <section className="bg-white pt-20 lg:pt-28 pb-10 lg:pb-12">
+      <section className="bg-white pt-8 lg:pt-10 pb-8 lg:pb-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
@@ -292,7 +292,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                 <SectionLabel label="The advantage" title="Why Pakistan leads here" color="#394F73" hideLine />
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base leading-relaxed">
-                  The manufacturing strengths that make Pakistan a dependable origin for {p.name.toLowerCase()} — at
+                  The manufacturing strengths that make Pakistan a dependable origin for {p.name.toLowerCase()}, at
                   the quality, scale and price global buyers need.
                 </p>
                 {p.strengthsNote && (
@@ -324,7 +324,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── OTHER CATEGORIES ─────────────────────────────────────── */}
-      <section className="bg-white pt-10 lg:pt-12 pb-20 lg:pb-28">
+      <section className="bg-white pt-8 lg:pt-10 pb-8 lg:pb-10">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -388,7 +388,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       <GlobalCTA
         label={`Source ${p.name}`}
         title={`Ready to source ${p.name.toLowerCase()}?`}
-        subtitle="Tell us your spec and we'll match it to the right vetted Pakistani manufacturer — quality-checked and delivered to your market, anywhere in the world."
+        subtitle="Tell us your spec and we'll match it to the right vetted Pakistani manufacturer, quality-checked and delivered to your market, anywhere in the world."
         primaryButtonText="Request a quote"
         primaryButtonLink="/contact"
         secondaryButtonText="See all products"

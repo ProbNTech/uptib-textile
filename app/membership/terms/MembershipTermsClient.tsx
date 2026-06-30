@@ -237,7 +237,7 @@ export default function MembershipTermsClient() {
             <div className="lg:col-span-3">
               <SectionHeader label="Introduction" title="Scope & Purpose" color="blue" />
               <p className="text-[#3D4152] text-lg leading-relaxed mb-5">
-                These Terms and Conditions govern your membership with the UK–Pakistan Trades & Investment Board (UPTIB). By using this website and/or applying to register as a member, you agree to abide by these Conditions.
+                These Terms and Conditions govern your membership with the UK-Pakistan Trades & Investment Board (UPTIB). By using this website and/or applying to register as a member, you agree to abide by these Conditions.
               </p>
               <p className="text-[#5A5F72] text-lg leading-relaxed mb-5">
                 These Conditions apply to all membership tiers, services, and benefits provided by Pakistan Textile Partners. If you do not agree to these Conditions, you must not use the website or apply for membership.
@@ -529,7 +529,7 @@ export default function MembershipTermsClient() {
         <AnimatedSection>
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-[#5A5F72] text-sm leading-relaxed">
-              <span className="font-semibold text-[#1A1A1A]">UK–Pakistan Trades & Investment Board (UPTIB)</span>
+              <span className="font-semibold text-[#1A1A1A]">UK-Pakistan Trades & Investment Board (UPTIB)</span>
               <br />
               134-136 Westbourne Terrace, London, W2 6QB, United Kingdom
               <br />

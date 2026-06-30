@@ -26,7 +26,7 @@ import { motion, AnimatePresence } from "framer-motion";
 type FormState = "idle" | "submitting" | "success" | "error";
 
 /* ── Option lists ──────────────────────────────────────────────── */
-const employeeBands = ["1–10", "11–50", "51–200", "201–500", "500+"];
+const employeeBands = ["1 to 10", "11 to 50", "51 to 200", "201 to 500", "500+"];
 
 const countries = [
   { value: "pakistan", label: "Pakistan" },
@@ -377,7 +377,7 @@ export function MembershipForm() {
           </h3>
           <p className="text-[#5A5F72] text-base leading-relaxed max-w-md mx-auto">
             Thank you for applying to Pakistan Textile Partners. Our membership team will review your
-            details and be in touch within 2–3 business days.
+            details and be in touch within 2 to 3 business days.
           </p>
         </div>
       </motion.div>

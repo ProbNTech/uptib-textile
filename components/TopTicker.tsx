@@ -3,12 +3,12 @@
 import Link from "next/link";
 
 const items = [
-  { text: "Pakistan Textile Partners — Made in Pakistan, sold across the world", href: "/products" },
-  { text: "~US$17.9bn in Pakistani textile exports — a global top-10 exporter", href: "/global-textile-market" },
+  { text: "Pakistan Textile Partners: Made in Pakistan, sold across the world", href: "/products" },
+  { text: "~US$17.9bn in Pakistani textile exports: a global top-10 exporter", href: "/global-textile-market" },
   { text: "World-leading origin for cotton and home textiles", href: "/products/bedding-linen" },
   { text: "GSP+ duty-free access into the EU", href: "/global-textile-market" },
   { text: "Source from Pakistan, quality guaranteed", href: "/services/buying-house" },
-  { text: "Grow your exports — become a member", href: "/membership" },
+  { text: "Grow your exports, become a member", href: "/membership" },
 ];
 
 export function TopTicker() {

@@ -115,7 +115,7 @@ function ShowcaseRow({ group, index, categorySlug }: { group: Group; index: numb
             </span>
           )}
           <span className="block text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
-            {String(index + 1).padStart(2, "0")} — {group.tagline}
+            {String(index + 1).padStart(2, "0")}: {group.tagline}
           </span>
           <div className="mt-3">
             {href ? (
@@ -215,7 +215,7 @@ export function ProductShowcase({ showcase, categorySlug }: { showcase: Showcase
       </div>
 
       {/* ── Editorial rows ── */}
-      <div className={cn("relative pb-20 sm:pb-28", PX)}>
+      <div className={cn("relative pb-8 lg:pb-10", PX)}>
         <div className="mx-auto flex max-w-7xl flex-col gap-20 sm:gap-28">
           {showcase.groups.map((group, i) => (
             <ShowcaseRow key={group.name} group={group} index={i} categorySlug={categorySlug} />

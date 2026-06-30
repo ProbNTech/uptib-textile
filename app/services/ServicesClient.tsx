@@ -50,14 +50,14 @@ const sides = [
     icon: ShoppingBag,
     eyebrow: "For international buyers",
     title: "Source the supply",
-    body: "Source dependable Pakistani product, delivered on-spec and on-time — with one accountable partner running the buying house and the logistics behind it.",
+    body: "Source dependable Pakistani product, delivered on-spec and on-time, with one accountable partner running the buying house and the logistics behind it.",
     slugs: ["buying-house", "logistics"],
   },
   {
     icon: Megaphone,
     eyebrow: "For Pakistani exporters",
     title: "Grow your exports",
-    body: "Get visible to buyers worldwide, win real demand, and sell directly online — from a profile to a fully managed market presence.",
+    body: "Get visible to buyers worldwide, win real demand, and sell directly online, from a profile to a fully managed market presence.",
     slugs: ["marketing-sales", "ecommerce-warehouse"],
   },
 ];
@@ -67,31 +67,31 @@ const faqs = [
   {
     tag: "Buyers",
     q: "How do I start sourcing from Pakistan?",
-    a: "Send a brief or request a quote and we return suitable factories, samples and pricing. From there we manage sampling, quality control, documentation and delivery — you deal with one accountable partner.",
+    a: "Send a brief or request a quote and we return suitable factories, samples and pricing. From there we manage sampling, quality control, documentation and delivery, so you deal with one accountable partner.",
   },
   {
     tag: "Buyers",
     q: "What are typical minimum order quantities?",
-    a: "From 50–100 pieces with specialist makers to several hundred per size and colour for bulk bedding and towelling. Tell us your quantity and we match you to the right manufacturer.",
+    a: "From 50 to 100 pieces with specialist makers to several hundred per size and colour for bulk bedding and towelling. Tell us your quantity and we match you to the right manufacturer.",
   },
   {
     tag: "Buyers",
     q: "How is quality guaranteed?",
-    a: "Independent inspection on the ground in Pakistan against your approved sample — in-line, mid-production and final pre-shipment to your agreed AQL. Nothing ships until it passes.",
+    a: "Independent inspection on the ground in Pakistan against your approved sample, in-line, mid-production and final pre-shipment to your agreed AQL. Nothing ships until it passes.",
   },
   {
     tag: "Buyers",
     q: "Can you ship and clear customs?",
-    a: "Yes. We handle freight coordination, customs clearance, export documentation and Importer/Exporter of Record setup — with GSP+ duty-free paperwork on qualifying goods.",
+    a: "Yes. We handle freight coordination, customs clearance, export documentation and Importer/Exporter of Record setup, with GSP+ duty-free paperwork on qualifying goods.",
   },
   {
     tag: "Exporters",
     q: "What do I get as a member?",
-    a: "A professional profile in front of global buyers, market intelligence, B2B matchmaking, a directory listing and — crucially — a place in the supplier pool we source from for live orders.",
+    a: "A professional profile in front of global buyers, market intelligence, B2B matchmaking, a directory listing and, crucially, a place in the supplier pool we source from for live orders.",
   },
   {
     tag: "Exporters",
-    q: "I've never exported before — can you help?",
+    q: "I've never exported before, can you help?",
     a: "Yes. We guide first-time exporters through compliance, labelling, packaging and customs, and can set you up to sell directly online via Amazon and your own store.",
   },
 ];
@@ -120,7 +120,7 @@ export default function ServicesClient() {
         shade="soft"
         minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
         title="What we do"
-        subtitle="Four services that cover both sourcing Pakistani textiles for buyers worldwide and helping Pakistani exporters reach global markets — marketing & sales, e-commerce & warehousing, a buying house and logistics, with one accountable partner for both."
+        subtitle="Four services that cover both sourcing Pakistani textiles for buyers worldwide and helping Pakistani exporters reach global markets: marketing & sales, e-commerce & warehousing, a buying house and logistics, with one accountable partner for both."
         image="/image/services.jpg"
       >
         <div className="flex flex-wrap items-center justify-center gap-4">
@@ -157,7 +157,7 @@ export default function ServicesClient() {
       </div>
 
       {/* ── THE FOUR SERVICES ────────────────────────────────────── */}
-      <section id="services" className="bg-white py-20 lg:py-28 scroll-mt-24">
+      <section id="services" className="bg-white py-8 lg:py-10 scroll-mt-24">
         <div className={PX}>
           <div className="grid gap-12 lg:grid-cols-[0.82fr_1.5fr] lg:gap-14 xl:gap-20">
             {/* Left — heading + world map */}
@@ -234,7 +234,7 @@ export default function ServicesClient() {
       </section>
 
       {/* ── WE SERVE BOTH ENDS OF THE TRADE ──────────────────────── */}
-      <section className="bg-[#F6F2EA] py-20 lg:py-28">
+      <section className="bg-[#F6F2EA] py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -300,12 +300,12 @@ export default function ServicesClient() {
       <GrowthBanner
         image="/image/growth/hand-arrange-white-letters-as-growth.jpg"
         label="Built for your growth"
-        title="Source or sell — the goal is the same: growth"
+        title="Source or sell, the goal is the same: growth"
         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right."
       />
 
       {/* ── WHY Pakistan Textile Partners ────────────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.55fr] lg:gap-16 xl:gap-20">
@@ -322,7 +322,7 @@ export default function ServicesClient() {
                 <SectionLabel label="Why Pakistan Textile Partners" title="One partner, accountable on both sides" color="#394F73" hideLine />
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
-                  We market the supply and source the demand — so buyers get dependable product and exporters get real
+                  We market the supply and source the demand, so buyers get dependable product and exporters get real
                   orders, with quality controlled on the ground in Pakistan.
                 </p>
 
@@ -367,7 +367,7 @@ export default function ServicesClient() {
       </section>
 
       {/* ── THE NUMBERS (dark band) ──────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -435,7 +435,7 @@ export default function ServicesClient() {
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-[#F6F2EA]"
+        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-[#F6F2EA]"
         aria-labelledby="services-faq-heading"
       >
         <div className={cn("relative", PX)}>
