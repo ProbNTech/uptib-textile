@@ -27,7 +27,7 @@ const HIGHLIGHTS = [
   { icon: TrendingUp, title: "Industry Insights", desc: "In-depth analysis & trends" },
   { icon: BarChart3, title: "Market Updates", desc: "Latest data & export stats" },
   { icon: Users, title: "Expert Opinions", desc: "Voices from industry leaders" },
-  { icon: CalendarDays, title: "Events & Activities", desc: "Stay updated with Pakistan Textile Partners" },
+  { icon: CalendarDays, title: "Events & Activities", desc: "Stay updated with Pak Textiles Global Partners" },
 ];
 
 export function NewsClient({ articles }: { articles: Article[] }) {

@@ -1,5 +1,5 @@
 /* ──────────────────────────────────────────────────────────────────
-   Pakistan Textile Partners — central content model.
+   Pak Textiles Global Partners — central content model.
    Single source of truth for products, services, stats and markets so
    copy is editable in one place (BUILD PROMPT §11). All copy is written
    GLOBAL-first: Pakistan → the world; UK is one example market.
@@ -125,7 +125,7 @@ export const markets: { name: string; note: string }[] = [
   { name: "Latin America", note: "Emerging market for cotton-based products" },
 ];
 
-/* ── Why Pakistan Textile Partners ── */
+/* ── Why Pak Textiles Global Partners ── */
 export const whyUptib: { title: string; desc: string; icon: LucideIcon }[] = [
   { title: "A vetted global supplier network", desc: "Profiled Pakistani manufacturers across every category, matched to buyers worldwide.", icon: Globe2 },
   { title: "Quality control on the ground", desc: "Independent, multi-stage inspection to your agreed AQL, not just the factory's word.", icon: ShieldCheck },
@@ -225,7 +225,7 @@ export const products: ProductCategory[] = [
             { src: "/image/bedroom-3.jpg", alt: "A made-up bed with crisp bedding" },
           ],
           heroImage: {
-            src: "/image/textile/home/bedroom-collection/bedroom-hero-2.jpg",
+            src: "/image/textile/home/bedroom-collection/bedding-hero-image.webp",
             alt: "A bright, airy bedroom dressed in soft white bed linen",
           },
           mosaic: [
@@ -505,8 +505,8 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-05.jpg", alt: "A long white-linen table dressed with glassware and greenery", name: "Dressed Long Table", type: "Banquet Linen", tile: "wide" },
             { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-06.jpg", alt: "Stacked white porcelain plates and polished silverware on white linen", name: "Place Setting Stack", type: "Table Linen", tile: "square" },
             { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-07.jpg", alt: "A bright dining room with white-draped chairs and crisp white table linen", name: "Draped-Chair Dining", type: "Banquet Linen", tile: "wide" },
-            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-08.jpg", alt: "Soft draped crisp white linen tablecloth fabric", name: "Draped White Linen", type: "Tablecloths", tile: "square" },
-            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-09.jpg", alt: "Close-up of white damask-edged linen showing crisp woven texture", name: "Damask-Edged Linen", type: "Table Linen", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-08.jpg", alt: "An elegant all-white place setting with a menu card and olive sprig", name: "White Place Setting", type: "Table Linen", tile: "square" },
+            { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-09.jpg", alt: "A round banquet table dressed in ivory linen with fan-folded napkins", name: "Round Banquet Table", type: "Banquet Linen", tile: "square" },
             { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-10.jpg", alt: "A crisp linen dinner napkin fan-folded on a white plate with silverware", name: "Fan-Folded Napkin", type: "Napkins", tile: "square" },
             { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-11.jpg", alt: "An ivory linen tablecloth draped over a table corner", name: "Ivory Tablecloth", type: "Tablecloths", tile: "square" },
             { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-12.jpg", alt: "A white-linen restaurant table set with a folded napkin and crystal glasses", name: "Restaurant Setting", type: "Table Linen", tile: "wide" },
@@ -599,12 +599,12 @@ export const products: ProductCategory[] = [
             { src: "/image/textile/home/cushions-throws-collection/mosaic/m-04.jpg", alt: "A soft ivory throw draped in plush folds", name: "Ivory Draped Throw", type: "Throws", tile: "square" },
             { src: "/image/textile/home/cushions-throws-collection/mosaic/m-05.jpg", alt: "Cream and grey woven cushions arranged on an ivory bouclé sofa", name: "Woven Cushion Set", type: "Cushions", tile: "wide" },
             { src: "/image/textile/home/cushions-throws-collection/mosaic/m-06.jpg", alt: "A cream tufted and fringed throw folded over neutral linen", name: "Tufted Fringe Throw", type: "Throws", tile: "square" },
-            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-07.jpg", alt: "A round cream bouclé cushion on a sleek ivory lounge sofa", name: "Bouclé Round Cushion", type: "Accent Cushions", tile: "wide" },
-            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-08.jpg", alt: "A soft cream throw texture detail", name: "Soft Throw Texture", type: "Throws", tile: "square" },
-            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-09.jpg", alt: "Cream linen cushions and bedding in a soft neutral palette", name: "Neutral Linen Cushions", type: "Cushions", tile: "square" },
-            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-10.jpg", alt: "A soft cream cushion against a bright white wall", name: "Cream Accent Cushion", type: "Scatter Cushions", tile: "square" },
-            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-11.jpg", alt: "A bright, airy white bed styled with soft cushions", name: "Styled Soft Cushions", type: "Cushions", tile: "square" },
-            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-12.jpg", alt: "Soft grey-blue cushions against a calm cream wall", name: "Soft Grey-Blue Cushions", type: "Accent Cushions", tile: "wide" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-07.jpg", alt: "Cream and soft-sage cushions gathered in a bright corner", name: "Gathered Cushions", type: "Scatter Cushions", tile: "wide" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-08.jpg", alt: "Soft grey textured scatter cushions on a linen sofa", name: "Soft Grey Cushions", type: "Scatter Cushions", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-09.jpg", alt: "A stack of folded cream pointelle-knit throws", name: "Folded Knit Throws", type: "Throws", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-10.jpg", alt: "A cream bouclé accent pouf in soft daylight", name: "Bouclé Pouf", type: "Accent Cushions", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-11.jpg", alt: "Plump white cushions on a bright resort daybed", name: "Plump White Cushions", type: "Cushions", tile: "square" },
+            { src: "/image/textile/home/cushions-throws-collection/mosaic/m-12.jpg", alt: "A soft cream throw draped over an ivory sofa", name: "Draped Throw", type: "Throws", tile: "wide" },
           ],
           gallery: homeGallery("cushions-throws", 22, [
             "A cream woven throw draped over a chair",
@@ -945,17 +945,17 @@ export const products: ProductCategory[] = [
           name: "Uniforms & Workwear",
           slug: "uniforms-workwear",
           mosaic: [
-            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-01.jpg", alt: "A rail of pressed uniform shirts in muted tones", name: "Shirt Rail", type: "Shirting", tile: "wide" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-01.jpg", alt: "A boutique wall of neatly stacked dress shirts", name: "Shirt Display", type: "Shirting", tile: "wide" },
             { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-02.jpg", alt: "A folded stack of charcoal, grey and white garments", name: "Folded Workwear", type: "Workwear", tile: "square" },
-            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-03.jpg", alt: "Crisp white cotton shirting fabric in close detail", name: "White Shirting", type: "Fabric", tile: "square" },
-            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-04.jpg", alt: "Folded olive linen fabric in close detail", name: "Linen Fabric", type: "Fabric", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-03b.jpg", alt: "A crisp white garment on a clean minimal studio rail", name: "Crisp Whites", type: "Shirting", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-04.jpg", alt: "A neat stack of freshly folded shirts in soft neutral tones", name: "Folded Stack", type: "Basics", tile: "square" },
             { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-05.jpg", alt: "Neatly folded shirts arranged on shelves", name: "Folded Shirts", type: "Shirting", tile: "wide" },
             { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-06.jpg", alt: "Man in a tailored white dress shirt", name: "Dress Shirt", type: "Corporate", tile: "square" },
-            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-07.jpg", alt: "Uniform shirts on hangers in navy, grey and sage", name: "Shirts on Hangers", type: "Shirting", tile: "wide" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-07.jpg", alt: "A row of crisp white shirts on wooden hangers", name: "Shirt Rail", type: "Shirting", tile: "wide" },
             { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-08.jpg", alt: "A folded set of garments in stone and cream", name: "Folded Garments", type: "Workwear", tile: "square" },
             { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-09.jpg", alt: "Healthcare worker in green V-neck scrubs", name: "Green Scrubs", type: "Medical Uniforms", tile: "square" },
-            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-10.jpg", alt: "Soft pale-blue shirting fabric in close detail", name: "Blue Shirting", type: "Fabric", tile: "square" },
-            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-11.jpg", alt: "Folded corduroy garments in neutral tones", name: "Folded Corduroy", type: "Workwear", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-10.jpg", alt: "A crisp white shirt and tailored jacket on a garment rail", name: "Shirt & Jacket", type: "Corporate", tile: "square" },
+            { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-11.jpg", alt: "Folded white and light blue shirts on clean wooden shelves", name: "Shelved Shirts", type: "Shirting", tile: "square" },
             { src: "/image/textile/apparel/uniforms-workwear/mosaic/m-12.jpg", alt: "A tall stack of folded work shirts", name: "Folded Work Shirts", type: "Workwear", tile: "wide" },
           ],
           lookbookLayout: "portrait",
@@ -2307,18 +2307,18 @@ export const categoryMosaics: Record<
   { src: string; alt: string; name: string; type: string; tile: "wide" | "square" }[]
 > = {
   "bedding-linen": [
-    { src: "/image/textile/home/bedroom-collection/mosaic/m-01.jpg", alt: "A bed dressed in crisp soft white bed linen", name: "Bed Linen", type: "Bedroom", tile: "wide" },
-    { src: "/image/textile/home/bedroom-collection/mosaic/m-02.jpg", alt: "Detail of silken white sateen sheeting", name: "Sateen Sheeting", type: "Bedroom", tile: "square" },
-    { src: "/image/textile/home/bathroom-collection/mosaic/m-03.jpg", alt: "A neatly folded stack of soft white spa towels", name: "Spa Towels", type: "Bathroom", tile: "square" },
-    { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-02.jpg", alt: "A light ivory linen-weave sheer curtain panel", name: "Sheer Panel", type: "Curtains", tile: "square" },
-    { src: "/image/textile/home/bathroom-collection/mosaic/m-05.jpg", alt: "White rolled towels on a tray in a bright bathroom", name: "Hotel Towelling", type: "Bathroom", tile: "wide" },
-    { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-02.jpg", alt: "A crisp white napkin folded on a white plate", name: "Table Napkins", type: "Dining", tile: "square" },
-    { src: "/image/textile/home/dining-kitchen-collection/mosaic/m-01.jpg", alt: "A crisp white banquet table laid with white linen", name: "Banquet Linen", type: "Dining", tile: "wide" },
-    { src: "/image/textile/home/cushions-throws-collection/mosaic/m-02.jpg", alt: "Cream and soft-grey textured cushions", name: "Cushions", type: "Cushions & Throws", tile: "square" },
-    { src: "/image/textile/home/bedroom-collection/mosaic/m-04.jpg", alt: "A neatly folded stack of crisp white bed linen", name: "Folded Linen", type: "Bedroom", tile: "square" },
-    { src: "/image/textile/home/cushions-throws-collection/mosaic/m-08.jpg", alt: "A soft cream throw texture detail", name: "Throws", type: "Cushions & Throws", tile: "square" },
-    { src: "/image/textile/home/bathroom-collection/mosaic/m-11.jpg", alt: "Crisp white bath towels with a subtle grey border", name: "Bath Towels", type: "Bathroom", tile: "square" },
-    { src: "/image/textile/home/curtains-drapery-collection/mosaic/m-12.jpg", alt: "Elegant white sheers tied back at a sunlit window", name: "Drapery", type: "Curtains", tile: "wide" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-01.jpg", alt: "A bed dressed in crisp soft white bed linen", name: "Bed Linen", type: "Bedroom", tile: "wide" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-02.jpg", alt: "A white sateen-bordered duvet dressed on a bed", name: "Sateen Sheeting", type: "Bedroom", tile: "square" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-03.jpg", alt: "A neatly folded stack of soft white spa towels", name: "Spa Towels", type: "Bathroom", tile: "square" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-04.jpg", alt: "A sunlit white sheer curtain panel", name: "Sheer Panel", type: "Curtains", tile: "square" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-05.jpg", alt: "Soft white towels stacked in a bright studio", name: "Hotel Towelling", type: "Bathroom", tile: "wide" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-06.jpg", alt: "Crisp white napkins laid on a white table", name: "Table Napkins", type: "Dining", tile: "square" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-07.jpg", alt: "A crisp white banquet table laid with white linen", name: "Banquet Linen", type: "Dining", tile: "wide" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-08.jpg", alt: "A soft cream textured cushion in an airy setting", name: "Cushions", type: "Cushions & Throws", tile: "square" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-09.jpg", alt: "A bed dressed in crisp white linen with a tan headboard", name: "Folded Linen", type: "Bedroom", tile: "square" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-10.jpg", alt: "A soft white throw and cushion", name: "Throws", type: "Cushions & Throws", tile: "square" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-11.jpg", alt: "Crisp white bath towels with a subtle tan tie", name: "Bath Towels", type: "Bathroom", tile: "square" },
+    { src: "/image/textile/products/bedding-linen-catalogue/m-12.jpg", alt: "Elegant white sheers at a sunlit window", name: "Drapery", type: "Curtains", tile: "wide" },
   ],
   "apparel-accessories": [
     { src: "/image/textile/apparel/knitwear-sweaters/mosaic/m-01.jpg", alt: "Folded camel and oatmeal ribbed knit sweaters", name: "Knitwear", type: "Sweaters", tile: "wide" },

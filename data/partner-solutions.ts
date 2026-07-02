@@ -14,7 +14,7 @@ export interface PartnerSolution {
   order: number;
 }
 
-// Real Pakistan Textile Partners member manufacturers & sourcing partners, drawn from the textile
+// Real Pak Textiles Global Partners member manufacturers & sourcing partners, drawn from the textile
 // company knowledge base (Textile_Company_Database.md, Part A). Capability and
 // product detail are recorded factually from each company's own site.
 export const partnerSolutions: PartnerSolution[] = [

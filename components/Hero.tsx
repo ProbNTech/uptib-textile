@@ -12,7 +12,7 @@ const BANNER_POSTER = "/videos/banner-poster.jpg";
 
 const slides = [
   {
-    label: "PAKISTAN TEXTILE PARTNERS",
+    label: "PAK TEXTILES GLOBAL PARTNERS",
     headline: "Made in Pakistan. Sold across the world.",
     cta: { text: "Browse products", href: "/products" },
     secondary: { text: "Our services", href: "/services" },

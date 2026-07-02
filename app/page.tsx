@@ -1,4 +1,4 @@
-// Pakistan Textile Partners - Home page
+// Pak Textiles Global Partners - Home page
 "use client";
 
 import dynamic from "next/dynamic";
@@ -94,14 +94,14 @@ export default function Home() {
                 <SectionLabel label="Who we are" title="Bridging Pakistan's textile industry to the Global market via a UK-based platform." color="#394F73" />
                 <div className="content-body">
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-5">
-<span className="font-semibold text-[#1A1A1A]">Pakistan Textile Partners</span> is the dedicated textile arm of the <span className="font-semibold text-[#1A1A1A]">UK-Pakistan Trade &amp; Investment Board</span> with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers and Exporters and the global marketplace.
+<span className="font-semibold text-[#1A1A1A]">Pak Textiles Global Partners</span> is the dedicated textile arm of the <span className="font-semibold text-[#1A1A1A]">UK-Pakistan Trade &amp; Investment Board</span> with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers and Exporters and the global marketplace.
                   </p>
                 </div>
                 <PillButton href="/global-textile-market" variant="blue">Pakistan's global position</PillButton>
               </div>
               <div className="relative">
                 <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(140, 154, 171,0.15)]">
-                  <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export, Pakistan Textile Partners" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                  <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export, Pak Textiles Global Partners" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/60">
                     <p className="font-heading font-extrabold text-[#394F73] text-lg leading-none">$17.9bn</p>
                     <p className="text-[#5A5F72] text-xs mt-0.5">Pakistan textile exports, FY2025</p>
@@ -155,7 +155,7 @@ export default function Home() {
       {/* For International buyers */}
       <section
         id="services"
-        className="relative z-[1] y-8 sm:py-10 lg:py-10 scroll-mt-24 overflow-hidden bg-[#394F73]"
+        className="relative z-[1] py-8 lg:py-10 scroll-mt-24 overflow-hidden bg-[#394F73]"
         aria-labelledby="services-heading"
       >
         <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -297,7 +297,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. MORE FROM Pakistan Textile Partners */}
+      {/* 5. MORE FROM Pak Textiles Global Partners */}
       <section
         className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
         aria-labelledby="more-heading"
@@ -306,7 +306,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#394F73" align="center" />
+            <SectionLabel label="Discover More" title="More from Pak Textiles Global Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#394F73" align="center" />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { href: "/products", icon: ProductsIcon, color: "#9DA9B8", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles: the four categories we trade." },
@@ -553,7 +553,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pakistan Textile Partners' work, sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#D8CDBA" align="center" light />
+            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pak Textiles Global Partners' work, sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#D8CDBA" align="center" light />
             <ImpactStats />
           </AnimatedSection>
         </div>
@@ -703,9 +703,9 @@ export default function Home() {
 
       {/* GLOBAL CTA */}
       <GlobalCTA
-        label="Work with Pakistan Textile Partners"
+        label="Work with Pak Textiles Global Partners"
         title="Ready to take your textiles to the world?"
-        subtitle="Grow your exports worldwide. Pakistan Textile Partners markets Pakistani textile manufacturers and Exporters to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
+        subtitle="Grow your exports worldwide. Pak Textiles Global Partners markets Pakistani textile manufacturers and Exporters to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
         primaryButtonText="About us"
         primaryButtonLink="/about"
         secondaryButtonText="Talk to our team"

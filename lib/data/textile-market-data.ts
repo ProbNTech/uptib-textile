@@ -1,5 +1,5 @@
 // ─── Pakistan Textile & Apparel — Global Export Market Data ──────────────────
-// Source: "Pakistan Export Market Report 2026–2030" (Pakistan Textile Partners source docs).
+// Source: "Pakistan Export Market Report 2026–2030" (Pak Textiles Global Partners source docs).
 // Figures are indicative third-party / industry estimates; refresh before launch.
 // Flags live at /image/flags/{iso2}.svg
 

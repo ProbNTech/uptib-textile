@@ -14,6 +14,49 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+/* Brand wordmark rendered as crisp, scalable text (replaces the old raster
+   wordmark.png so it always reflects the current name). Mirrors the original
+   two-line layout: name on top, "PARTNERS" flanked by brand diamonds. */
+function Wordmark({
+  size = "desktop",
+  className = "",
+}: {
+  size?: "desktop" | "mobile";
+  className?: string;
+}) {
+  const text =
+    size === "mobile" ? "text-[10px]" : "text-[12px] lg:text-[14px]";
+  const diamond =
+    size === "mobile" ? "w-[5px] h-[5px]" : "w-[6px] h-[6px]";
+  const grad =
+    "font-sans font-extrabold bg-gradient-to-b from-[#3b6fb5] to-[#152a52] bg-clip-text text-transparent";
+  const Diamond = ({ c }: { c: string }) => (
+    <span
+      className={`${diamond} inline-block rotate-45 rounded-[1px]`}
+      style={{ backgroundColor: c }}
+    />
+  );
+  return (
+    <span
+      aria-hidden="true"
+      className={`flex-col justify-center leading-[1.05] select-none ${className}`}
+    >
+      <span className={`${grad} ${text} tracking-[0.02em]`}>
+        PAK TEXTILES GLOBAL
+      </span>
+      <span className={`mt-[2px] flex items-center justify-center gap-[3px] ${text}`}>
+        <Diamond c="#1e40af" />
+        <Diamond c="#dc2626" />
+        <Diamond c="#15803d" />
+        <span className={`${grad} mx-[2px] tracking-[0.04em]`}>PARTNERS</span>
+        <Diamond c="#15803d" />
+        <Diamond c="#dc2626" />
+        <Diamond c="#1e40af" />
+      </span>
+    </span>
+  );
+}
+
 /* Sub-category links for a product category, derived from the central content
    model so the nav stays in sync with the showcase groups (the lookbook pages). */
 const subLinks = (catSlug: string): { label: string; href: string; icon?: LucideIcon }[] =>
@@ -230,23 +273,17 @@ export function Header() {
             <Link
               href="/"
               className="flex items-center gap-2 sm:gap-3 lg:gap-2.5 flex-shrink-0 group"
-              aria-label="Pakistan Textile Partners, Home"
+              aria-label="Pak Textiles Global Partners, Home"
             >
               <Image
                 src="/image/main-logo-v1.png"
-                alt="Pakistan Textile Partners logo"
+                alt="Pak Textiles Global Partners logo"
                 width={250}
                 height={258}
                 className="h-[44px] sm:h-[52px] lg:h-[60px] w-auto object-contain"
                 priority
               />
-              <Image
-                src="/image/wordmark.png"
-                alt="Pakistan Textile Partners"
-                width={1499}
-                height={328}
-                className="hidden sm:block xl:hidden 2xl:block h-[26px] lg:h-[32px] w-auto object-contain"
-              />
+              <Wordmark className="hidden sm:flex xl:hidden 2xl:flex" />
             </Link>
 
             {/* ── Centre: Navigation ───────────────────────────── */}
@@ -663,18 +700,12 @@ export function Header() {
                 >
                   <Image
                     src="/image/main-logo-v1.png"
-                    alt="Pakistan Textile Partners logo"
+                    alt="Pak Textiles Global Partners logo"
                     width={320}
                     height={226}
                     className="h-[40px] w-auto object-contain"
                   />
-                  <Image
-                    src="/image/wordmark.png"
-                    alt="Pakistan Textile Partners"
-                    width={1499}
-                    height={328}
-                    className="h-[22px] w-auto object-contain"
-                  />
+                  <Wordmark size="mobile" className="flex" />
                 </Link>
                 <button
                   onClick={() => setIsMobileOpen(false)}

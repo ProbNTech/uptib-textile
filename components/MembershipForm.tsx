@@ -376,7 +376,7 @@ export function MembershipForm() {
             Application Received
           </h3>
           <p className="text-[#5A5F72] text-base leading-relaxed max-w-md mx-auto">
-            Thank you for applying to Pakistan Textile Partners. Our membership team will review your
+            Thank you for applying to Pak Textiles Global Partners. Our membership team will review your
             details and be in touch within 2 to 3 business days.
           </p>
         </div>

@@ -151,7 +151,7 @@ function MarketHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            Pakistan Textile Partners is the textile arm of the UK-Pakistan Trades &amp; Investment Board, a London-based
+            Pak Textiles Global Partners is the textile arm of the UK-Pakistan Trades &amp; Investment Board, a London-based
             platform, with a Lahore office, that helps Pakistani textile
             manufacturers reach global markets.
           </motion.p>
@@ -997,7 +997,7 @@ export default function GlobalTextileMarketClient() {
       </section>
 
       <GlobalCTA
-        label="Work with Pakistan Textile Partners"
+        label="Work with Pak Textiles Global Partners"
         title="Source from Pakistan, or grow your exports"
         subtitle="Tap into one of the world's leading textile origins, for buyers seeking dependable supply, and for manufacturers seeking global demand."
         primaryButtonText="Source from Pakistan"

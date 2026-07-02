@@ -5,7 +5,7 @@ import { PolicyDoc, PolicySection, PolicySub } from "@/components/PolicyDoc";
 
 export const metadata: Metadata = {
   title: "Cookies Policy",
-  description: "How Pakistan Textile Partners uses cookies and similar technologies on this website.",
+  description: "How Pak Textiles Global Partners uses cookies and similar technologies on this website.",
   alternates: { canonical: "/cookies" },
 };
 
@@ -170,7 +170,7 @@ export default function CookiesPage() {
           <div className="space-y-7">
             <PolicySub title="Changes to this Policy">
               <p>
-                Pakistan Textile Partners reserves the right to modify or amend this policy at any time and
+                Pak Textiles Global Partners reserves the right to modify or amend this policy at any time and
                 for any reason, as permitted by applicable law. If there are material changes, we will post
                 those changes here.
               </p>

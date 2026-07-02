@@ -88,7 +88,7 @@ function StatScoreCard({ stat, index }: { stat: typeof stats[0]; index: number }
           <CardContent className="p-7 flex flex-col h-full justify-between bg-transparent shadow-none border-none">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-base font-semibold text-white/90 truncate">{stat.label}</h3>
+              <h3 className="text-base font-semibold text-white/90 truncate min-w-0">{stat.label}</h3>
               <span
                 className="shrink-0 inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold"
                 style={{ background: `${stat.color}20`, color: stat.color }}

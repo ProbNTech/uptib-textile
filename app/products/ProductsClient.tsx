@@ -31,7 +31,7 @@ import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 
-/* Why source through Pakistan Textile Partners */
+/* Why source through Pak Textiles Global Partners */
 const whyUptib = [
   { icon: Globe2, title: "A vetted global network", desc: "Pre-vetted Pakistani manufacturers across every category, matched to buyers worldwide." },
   { icon: ShieldCheck, title: "Quality at every step", desc: "Independent, multi-stage inspection on your agreed AQL, not just at the factory gate." },
@@ -252,7 +252,7 @@ export default function ProductsClient() {
         </div>
       </section>
 
-      {/* ── WHY SOURCE THROUGH Pakistan Textile Partners ─────────────────────────────── */}
+      {/* ── WHY SOURCE THROUGH Pak Textiles Global Partners ─────────────────────────────── */}
       <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
@@ -260,7 +260,7 @@ export default function ProductsClient() {
               {/* Left: copy + decorative image */}
               <div>
                 <SectionLabel
-                  label="Why Pakistan Textile Partners"
+                  label="Why Pak Textiles Global Partners"
                   title="Product is only half the story"
                   color="#394F73"
                   hideLine

@@ -68,16 +68,16 @@ export default function PakistanTopCompaniesShowcase() {
               ))}
             </Swiper>
 
-            <div className="flex items-center justify-between mt-6">
+            <div className="flex items-center justify-between gap-4 mt-6">
               <Link
                 href="/contact"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-[#394F73] hover:text-[#394F73] transition-colors"
               >
                 Explore Manufacturers and Exporters
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
 
-              <div className="flex gap-2.5">
+              <div className="flex gap-2.5 shrink-0">
                 <button
                   aria-label="Previous companies"
                   className="pak-companies-prev group w-10 h-10 flex items-center justify-center rounded-xl border border-[#E5E7EB] bg-white shadow-sm hover:shadow-md hover:border-[#78899B]/30 transition-all duration-300"

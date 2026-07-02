@@ -34,7 +34,7 @@ export function Footer() {
                   <span className="inline-flex items-center gap-0 rounded-xl bg-white px-4 py-3 shadow-sm group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/image/main-logo-v1.png"
-                      alt="Pakistan Textile Partners logo"
+                      alt="Pak Textiles Global Partners logo"
                       width={200}
                       height={100}
                       className="h-[72px] sm:h-[88px] lg:h-[120px] w-auto object-contain"
@@ -42,12 +42,12 @@ export function Footer() {
                   </span>
                 </Link>
                 <p className="text-white mb-7 leading-relaxed text-base drop-shadow-md">
-                  Pakistan Textile Partners connects Pakistan&rsquo;s textile manufacturing to global buyers worldwide.
+                  Pak Textiles Global Partners connects Pakistan&rsquo;s textile manufacturing to global buyers worldwide.
                 </p>
 
                 {/* Registration */}
                 <p className="text-white mb-7 leading-relaxed text-base drop-shadow-md">
-                  Registered in England as UK&ndash;Pakistan Trade and Investment Board Ltd. Registration No. 15417151 &middot; T/A Pakistan Textile Partners.
+                  Registered in England as UK&ndash;Pakistan Trade and Investment Board Ltd. Registration No. 15417151 &middot; T/A Pak Textiles Global Partners.
                 </p>
 
                 {/* Follow Us */}
@@ -214,7 +214,7 @@ export function Footer() {
             {/* Disclaimer */}
             <div className="border-t border-white/30 pt-7 mb-7">
               <p className="text-white/90 text-sm leading-relaxed drop-shadow-md">
-                <span className="font-semibold text-white">Disclaimer:</span> Information on this website is provided for general purposes only. Pakistan Textile Partners makes no warranties as to its accuracy or completeness, and trade and market figures are indicative. Any reliance is at your own risk, and Pakistan Textile Partners accepts no liability for loss arising from use of this site. All content is owned by or licensed to Pakistan Textile Partners unless otherwise stated.
+                <span className="font-semibold text-white">Disclaimer:</span> Information on this website is provided for general purposes only. Pak Textiles Global Partners makes no warranties as to its accuracy or completeness, and trade and market figures are indicative. Any reliance is at your own risk, and Pak Textiles Global Partners accepts no liability for loss arising from use of this site. All content is owned by or licensed to Pak Textiles Global Partners unless otherwise stated.
               </p>
             </div>
 

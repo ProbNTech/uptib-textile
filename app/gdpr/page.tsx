@@ -37,7 +37,7 @@ const yourRights = [
 const lawfulBases = [
   { title: "Performance of a Contract", desc: "Where we are entering into a contract with you or performing our obligations under it, for example when you became a ‘paying’ member of our network." },
   { title: "Legal Obligation", desc: "Where necessary, we can comply with a legal or regulatory obligation to which we are subject." },
-  { title: "Legitimate Interests", desc: "Where it is reasonably necessary to achieve our legitimate interests, i.e. those required for running Pakistan Textile Partners as a textile trade platform connecting Pakistani manufacturers and exporters with buyers worldwide." },
+  { title: "Legitimate Interests", desc: "Where it is reasonably necessary to achieve our legitimate interests, i.e. those required for running Pak Textiles Global Partners as a textile trade platform connecting Pakistani manufacturers and exporters with buyers worldwide." },
   { title: "Specific Consent", desc: "Where you have provided specific consent to us using your personal information in a certain way, such as to send you email, text and/or contact via telephone." },
 ];
 
@@ -142,7 +142,7 @@ export default function GDPRPage() {
         <PolicySection id="security" eyebrow="Data Security" title="Security Measures">
           <PolicySub title="Safeguarding Your Data">
             <p>
-              Pakistan Textile Partners uses reasonable measures to safeguard personal information. We have
+              Pak Textiles Global Partners uses reasonable measures to safeguard personal information. We have
               put in place appropriate security measures to prevent your personal data from being
               accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In
               addition, we limit access to your personal data to only those employees, contractors or

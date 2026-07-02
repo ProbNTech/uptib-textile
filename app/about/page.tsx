@@ -17,7 +17,7 @@ import { homeStats } from "@/data/textile";
 import { aboutFaqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
-  title: "About Pakistan Textile Partners",
+  title: "About Pak Textiles Global Partners",
   description:
     "The trusted bridge for UK-Pakistan textile trade, connecting Pakistan's manufacturers and exporters with buyers worldwide.",
   alternates: { canonical: "/about" },
@@ -73,7 +73,7 @@ const pillars = [
     dark: false,
     title: "The textile division of UPTIB",
     body:
-      "Pakistan Textile Partners is a London-based platform for UK-Pakistan textile trade and the textile division of the UK-Pakistan Trade and Investment Board (UPTIB). We act as a trusted bridge between Pakistani manufacturing and global demand, marketing the supply, sourcing the demand, and standing as one accountable partner to both.",
+      "Pak Textiles Global Partners is a London-based platform for UK-Pakistan textile trade and the textile division of the UK-Pakistan Trade and Investment Board (UPTIB). We act as a trusted bridge between Pakistani manufacturing and global demand, marketing the supply, sourcing the demand, and standing as one accountable partner to both.",
     points: [
       "Born from the UK-Pakistan Trade & Investment Board",
       "Offices in London and Lahore",
@@ -140,7 +140,7 @@ export default function AboutPage() {
                 Bridging Pakistan&rsquo;s textiles to the world
               </h1>
               <p className="mt-6 max-w-xl text-[16px] leading-[1.85] text-[#4B5563]">
-                Pakistan Textile Partners is the trusted bridge for UK-Pakistan textile
+                Pak Textiles Global Partners is the trusted bridge for UK-Pakistan textile
                 trade, connecting Pakistan&rsquo;s manufacturers and exporters with buyers
                 worldwide. We market the supply, source the demand, and stand as one accountable
                 partner to both.
@@ -174,7 +174,7 @@ export default function AboutPage() {
                     </defs>
                     <text fill="#78899B" fontSize="14.5" fontWeight="700" letterSpacing="3.5">
                       <textPath href="#sealPath" startOffset="0%">
-                        PAKISTAN TEXTILE PARTNERS · TRUSTED ·
+                        PAK TEXTILES GLOBAL PARTNERS · TRUSTED ·
                       </textPath>
                     </text>
                   </svg>
@@ -388,14 +388,14 @@ export default function AboutPage() {
       <ExporterFaq
         faqs={aboutFaqs}
         label="FAQs"
-        title="About Pakistan Textile Partners: your questions answered"
+        title="About Pak Textiles Global Partners: your questions answered"
         body="The questions buyers and manufacturers ask us most about who we are and how we work."
       />
 
       <GlobalCTA
         label="Join Us"
         title="Ready to Be Part of UK-Pakistan Textile Trade?"
-        subtitle="Join Pakistan Textile Partners and connect with the manufacturers, exporters and buyers driving textile trade between Pakistan and the world."
+        subtitle="Join Pak Textiles Global Partners and connect with the manufacturers, exporters and buyers driving textile trade between Pakistan and the world."
         primaryButtonText="Apply for Membership"
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Contact Us"

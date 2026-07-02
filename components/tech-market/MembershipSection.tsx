@@ -348,7 +348,7 @@ export function WhatDrivesUs() {
                 What Drives Us
               </h2>
               <p className="mt-4 text-base sm:text-lg leading-relaxed text-[#5A5F72]">
-                Three operating pillars sit beneath Pakistan Textile Partners&apos; work: quality assurance, global market access, and a vertically-integrated supplier network connecting Pakistan to the world.
+                Three operating pillars sit beneath Pak Textiles Global Partners&apos; work: quality assurance, global market access, and a vertically-integrated supplier network connecting Pakistan to the world.
               </p>
             </div>
 

@@ -136,12 +136,12 @@ const applyChips = [
 /* ── FAQs ────────────────────────────────────────────────────────── */
 const faqs = [
   {
-    q: "Who is eligible for Pakistan Textile Partners membership?",
+    q: "Who is eligible for Pak Textiles Global Partners membership?",
     a: "Membership is open to verified Pakistani textile manufacturers, mills, exporters, trading houses and allied suppliers who can supply international buyers. First-time and SME exporters are welcome.",
   },
   {
     q: "How is this different from a directory listing?",
-    a: "A directory listing is passive. It waits to be found. Membership is active: you join the pool we source from for live orders, get introduced to qualified buyers worldwide, receive market intelligence, and have Pakistan Textile Partners representing your products to real demand.",
+    a: "A directory listing is passive. It waits to be found. Membership is active: you join the pool we source from for live orders, get introduced to qualified buyers worldwide, receive market intelligence, and have Pak Textiles Global Partners representing your products to real demand.",
   },
   {
     q: "What do the membership tiers cost?",
@@ -237,7 +237,7 @@ export default function MembershipClient() {
                 />
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
-                  Standing out in global markets takes more than being found. It takes being trusted. Pakistan Textile Partners membership
+                  Standing out in global markets takes more than being found. It takes being trusted. Pak Textiles Global Partners membership
                   gives you the credibility, tools and connections to grow with confidence, because we run the
                   buyer-facing sourcing business too.
                 </p>
@@ -419,7 +419,7 @@ export default function MembershipClient() {
                 <SectionLabel
                   label="One membership. Global demand."
                   title="One membership, demand worldwide"
-                  body="Pakistan Textile Partners connects Pakistani manufacturers with retailers, importers, hotel groups and brands across the markets where Pakistani textiles are in demand."
+                  body="Pak Textiles Global Partners connects Pakistani manufacturers with retailers, importers, hotel groups and brands across the markets where Pakistani textiles are in demand."
                   color="#B3AA98"
                   light
                   hideLine
@@ -464,7 +464,7 @@ export default function MembershipClient() {
           <AnimatedSection>
             <div className="text-center mb-12">
               <SectionLabel
-                label="Your journey with Pakistan Textile Partners"
+                label="Your journey with Pak Textiles Global Partners"
                 title="From application to your first introductions"
                 color="#394F73"
                 align="center"
@@ -646,7 +646,7 @@ export default function MembershipClient() {
                 <SectionLabel
                   label="FAQs"
                   title="Membership questions, answered"
-                  body="What Pakistani textile exporters ask us most about joining Pakistan Textile Partners and reaching buyers worldwide."
+                  body="What Pakistani textile exporters ask us most about joining Pak Textiles Global Partners and reaching buyers worldwide."
                   color="#394F73"
                   as="h2"
                   hideLine

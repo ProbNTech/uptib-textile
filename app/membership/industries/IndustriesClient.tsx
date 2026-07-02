@@ -114,7 +114,7 @@ const faqs = [
     a: "Home and hospitality textiles, such as bed linen, terry towels and hotel & hospital linen, are Pakistan's flagship export category, built on a large cotton, yarn and fabric base. Apparel, sportswear (centred on the Sialkot hub) and healthcare textiles are fast-growing.",
   },
   {
-    q: "Are the companies listed here members of Pakistan Textile Partners?",
+    q: "Are the companies listed here members of Pak Textiles Global Partners?",
     a: "This directory is a snapshot of companies operating across Pakistan's textile sectors, shown to illustrate the breadth of the industry. It does not indicate any company's membership status. If you'd like to join the supplier pool buyers source from, see the membership page.",
   },
   {

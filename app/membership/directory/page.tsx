@@ -5,11 +5,11 @@ import { MemberDirectory } from "@/components/MemberDirectory";
 export const metadata: Metadata = {
   title: "Membership Directory",
   description:
-    "Browse the Pakistan Textile Partners membership directory: technology companies, investors, academic institutions, and professionals driving UK-Pakistan bilateral growth.",
+    "Browse the Pak Textiles Global Partners membership directory: technology companies, investors, academic institutions, and professionals driving UK-Pakistan bilateral growth.",
   openGraph: {
-    title: "Membership Directory | Pakistan Textile Partners",
+    title: "Membership Directory | Pak Textiles Global Partners",
     description:
-      "Browse the Pakistan Textile Partners membership directory: technology companies, investors, academic institutions, and professionals.",
+      "Browse the Pak Textiles Global Partners membership directory: technology companies, investors, academic institutions, and professionals.",
   },
 };
 

@@ -1,4 +1,4 @@
-// One-off: extract the "PAKISTAN TEXTILE PARTNERS" wordmark band from the logo.
+// One-off: extract the "PAK TEXTILES GLOBAL PARTNERS" wordmark band from the logo.
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");

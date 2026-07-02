@@ -1,14 +1,14 @@
 export const site = {
-  name: "Pakistan Textile Partners",
+  name: "Pak Textiles Global Partners",
   legalName: "UK Pakistan Trade & Investment Board",
-  shortName: "Pakistan Textile Partners",
+  shortName: "Pak Textiles Global Partners",
   parentName: "UK-Pakistan Trades & Investment Board",
   parentShortName: "UPTIB",
   tagline: "The trusted bridge for UK-Pakistan textile trade.",
   positioning:
     "Pakistan's finest textiles, sourced and sold for the UK. Marketing the supply. Sourcing the demand. Trusted by both.",
   description:
-    "Pakistan Textile Partners trades quality Pakistani textiles and runs the services that move them: marketing, e-commerce, sourcing and logistics. A London-based platform for UK-Pakistan textile trade.",
+    "Pak Textiles Global Partners trades quality Pakistani textiles and runs the services that move them: marketing, e-commerce, sourcing and logistics. A London-based platform for UK-Pakistan textile trade.",
   url: "https://textile.ukpaktrade.org.uk",
   parentUrl: "https://ukpaktrade.org.uk",
   offices: [
@@ -48,7 +48,7 @@ export const site = {
     { label: "Terms", href: "/terms" },
   ],
   disclaimer:
-    "Pakistan Textile Partners is the textile division of the UK Pakistan Trade & Investment Board (ukpaktrade.org.uk). Market and trade figures are indicative and refreshed periodically.",
+    "Pak Textiles Global Partners is the textile division of the UK Pakistan Trade & Investment Board (ukpaktrade.org.uk). Market and trade figures are indicative and refreshed periodically.",
 } as const;
 
 export type SiteConfig = typeof site;

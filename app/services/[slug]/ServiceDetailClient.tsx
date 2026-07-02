@@ -178,7 +178,7 @@ const detail: Record<string, ServiceDetail> = {
           ],
         },
         with: {
-          label: "With Pakistan Textile Partners",
+          label: "With Pak Textiles Global Partners",
           points: [
             "A professional profile presented the way buyers expect",
             "Pre-qualified introductions to decision-makers worldwide",

@@ -5,7 +5,7 @@ import { PolicyDoc, PolicySection } from "@/components/PolicyDoc";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "The terms of use under which you may use the Pakistan Textile Partners website.",
+  description: "The terms of use under which you may use the Pak Textiles Global Partners website.",
   alternates: { canonical: "/terms" },
 };
 
@@ -18,7 +18,7 @@ const termsSections = [
     content: [
       "1.1 In these Terms and Conditions, unless the context otherwise requires, the following expressions have the following meanings:",
       "1.2 “Content” means any and all text, images, audio, video, scripts, code, software, databases and any other form of information capable of being stored on a computer that appears on, or forms part of, Our Site; and",
-      "1.3 “We” or “Us” or “Our” means UK-Pakistan Trade and Investment Board Ltd (UPTIB), trading as Pakistan Textile Partners, a company registered in England & Wales under company number 15417151, whose registered address is 134 to 136 Westbourne Terrace, London W2 6QB, United Kingdom",
+      "1.3 “We” or “Us” or “Our” means UK-Pakistan Trade and Investment Board Ltd (UPTIB), trading as Pak Textiles Global Partners, a company registered in England & Wales under company number 15417151, whose registered address is 134 to 136 Westbourne Terrace, London W2 6QB, United Kingdom",
     ],
   },
   {
@@ -26,7 +26,7 @@ const termsSections = [
     number: "2",
     title: "Information About Us",
     content: [
-      "2.1 Our Site, www.ukpaktrade.org.uk, is owned and operated by UK-Pakistan Trade and Investment Board Ltd (UPTIB), trading as Pakistan Textile Partners, a company registered in England & Wales under company number 15417151, whose registered address is 134 to 136 Westbourne Terrace, London W2 6QB, United Kingdom",
+      "2.1 Our Site, www.ukpaktrade.org.uk, is owned and operated by UK-Pakistan Trade and Investment Board Ltd (UPTIB), trading as Pak Textiles Global Partners, a company registered in England & Wales under company number 15417151, whose registered address is 134 to 136 Westbourne Terrace, London W2 6QB, United Kingdom",
     ],
   },
   {

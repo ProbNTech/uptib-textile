@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Meet Khalil Choudhary, President of the UK-Pakistan Trades & Investment Board, and his vision for bilateral tech collaboration.",
   openGraph: {
-    title: "Leadership | Pakistan Textile Partners",
+    title: "Leadership | Pak Textiles Global Partners",
     description:
       "Meet Khalil Choudhary, President of the UK-Pakistan Trades & Investment Board, and his vision for bilateral tech collaboration.",
   },

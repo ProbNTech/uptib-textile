@@ -8,8 +8,8 @@ const faqCategories = [
   {
     category: "General",
     faqs: [
-      { question: "What is Pakistan Textile Partners?", answer: "Pakistan Textile Partners is a London-based platform for UK-Pakistan textile trade. We trade quality Pakistani textiles and run the services that move them, including buying, outsourced procurement, marketing and warehousing, connecting Pakistan’s manufacturers with buyers worldwide." },
-      { question: "Who is behind Pakistan Textile Partners?", answer: "We are the textile division of UK-Pakistan Trade and Investment Board Ltd (UPTIB), a company registered in England & Wales (no. 15417151), with offices in London and Lahore." },
+      { question: "What is Pak Textiles Global Partners?", answer: "Pak Textiles Global Partners is a London-based platform for UK-Pakistan textile trade. We trade quality Pakistani textiles and run the services that move them, including buying, outsourced procurement, marketing and warehousing, connecting Pakistan’s manufacturers with buyers worldwide." },
+      { question: "Who is behind Pak Textiles Global Partners?", answer: "We are the textile division of UK-Pakistan Trade and Investment Board Ltd (UPTIB), a company registered in England & Wales (no. 15417151), with offices in London and Lahore." },
       { question: "What products can I source from Pakistan?", answer: "Four main categories: Home Textile (bed linen, towels, hotel linen, curtains), Apparel & Accessories (private-label fashion, denim, knitwear, uniforms), Sportswear & Activewear (gymwear and teamwear from the Sialkot hub), and Healthcare Textile (scrubs, gowns and hospital linen)." },
       { question: "How can I get involved?", answer: "Buyers can request a quote or sourcing support; Pakistani manufacturers and exporters can apply for membership to reach global buyers. Visit our membership or contact page to start." },
     ],
@@ -75,7 +75,7 @@ export default function FAQsPage() {
         eyebrow="Help Centre"
         breadcrumb="FAQs"
         title="Frequently Asked Questions"
-        subtitle="Find answers to common questions about Pakistan Textile Partners, membership, sourcing, selling, quality and logistics."
+        subtitle="Find answers to common questions about Pak Textiles Global Partners, membership, sourcing, selling, quality and logistics."
         icon={HelpCircle}
       />
 

@@ -304,7 +304,7 @@ export default function ServicesClient() {
         body="Whether you're sourcing dependable supply or building a global brand, every service we run is designed to move your business up and to the right."
       />
 
-      {/* ── WHY Pakistan Textile Partners ────────────────────────────────────────────── */}
+      {/* ── WHY Pak Textiles Global Partners ────────────────────────────────────────────── */}
       <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
@@ -319,7 +319,7 @@ export default function ServicesClient() {
                     className="size-11 object-contain"
                   />
                 </span>
-                <SectionLabel label="Why Pakistan Textile Partners" title="One partner, accountable on both sides" color="#394F73" hideLine />
+                <SectionLabel label="Why Pak Textiles Global Partners" title="One partner, accountable on both sides" color="#394F73" hideLine />
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
                   We market the supply and source the demand, so buyers get dependable product and exporters get real
@@ -445,7 +445,7 @@ export default function ServicesClient() {
                 <SectionLabel
                   label="FAQs"
                   title="Questions from both sides"
-                  body="What buyers and exporters ask us most about working with Pakistan Textile Partners."
+                  body="What buyers and exporters ask us most about working with Pak Textiles Global Partners."
                   color="#394F73"
                   as="h2"
                   hideLine
@@ -536,7 +536,7 @@ export default function ServicesClient() {
 
       {/* ── BOTTOM CTA ───────────────────────────────────────────── */}
       <GlobalCTA
-        label="Work with Pakistan Textile Partners"
+        label="Work with Pak Textiles Global Partners"
         title="Source the supply, or grow your exports"
         subtitle="International buyers source dependable Pakistani product; Pakistani manufacturers reach buyers worldwide. We market the supply and source the demand."
         primaryButtonText="Get a quote"

@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!match) return {};
   const { category, group } = match;
   return {
-    title: `${group.name}: ${category.name} | Pakistan Textile Partners`,
+    title: `${group.name}: ${category.name} | Pak Textiles Global Partners`,
     description: group.pageIntro ?? group.desc,
     alternates: { canonical: `/products/${slug}/${sub}` },
   };
