@@ -43,7 +43,7 @@ const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
 /* ── Hero floating facts card ────────────────────────────────────── */
 const overviewFacts = [
   { icon: Users, value: "Open", label: "To all eligible exporters & manufacturers" },
-  { icon: BadgePercent, value: "On request", label: "Tiered pricing — start small, scale up" },
+  { icon: BadgePercent, value: "On request", label: "Tiered pricing: start small, scale up" },
   { icon: Globe2, value: "Global", label: "Reach buyers across key markets" },
   { icon: Layers, value: "3 Tiers", label: "Basic · Professional · Premium" },
 ];
@@ -55,7 +55,7 @@ const benefits = [
   { icon: Users, title: "Buyer introductions", desc: "Warm introductions to retailers, importers and brands actively sourcing." },
   { icon: Megaphone, title: "Live leads & enquiries", desc: "Buyer enquiries matched to your products, plus lead-generation support." },
   { icon: BarChart3, title: "Market intelligence", desc: "Trends, certification rules and demand forecasts for key markets." },
-  { icon: CalendarDays, title: "Trade events", desc: "Exhibitions, webinars and the UK–Pak Textile Export Forum." },
+  { icon: CalendarDays, title: "Trade events", desc: "Exhibitions, webinars and the UK-Pak Textile Export Forum." },
   { icon: Award, title: "International representation", desc: "We represent your products to buyers as an accountable partner." },
   { icon: BadgePercent, title: "The GSP+ advantage", desc: "Pakistan's preferential duty-free EU access, built into your price." },
 ];
@@ -105,7 +105,7 @@ const tiers = [
 const tierValues = [
   { title: "Tailored to your stage", desc: "Pick the tier that matches where your export business is today." },
   { title: "Scale up anytime", desc: "Start on Basic and upgrade to Professional or Premium as you see value." },
-  { title: "Pricing on request", desc: "Transparent, tier-based pricing — no hidden costs." },
+  { title: "Pricing on request", desc: "Transparent, tier-based pricing with no hidden costs." },
   { title: "Built for orders", desc: "Every tier is designed to connect you to paying demand." },
 ];
 
@@ -136,12 +136,12 @@ const applyChips = [
 /* ── FAQs ────────────────────────────────────────────────────────── */
 const faqs = [
   {
-    q: "Who is eligible for Pakistan Textile Partners membership?",
+    q: "Who is eligible for Pak Textiles Global Partners membership?",
     a: "Membership is open to verified Pakistani textile manufacturers, mills, exporters, trading houses and allied suppliers who can supply international buyers. First-time and SME exporters are welcome.",
   },
   {
     q: "How is this different from a directory listing?",
-    a: "A directory listing is passive — it waits to be found. Membership is active: you join the pool we source from for live orders, get introduced to qualified buyers worldwide, receive market intelligence, and have Pakistan Textile Partners representing your products to real demand.",
+    a: "A directory listing is passive. It waits to be found. Membership is active: you join the pool we source from for live orders, get introduced to qualified buyers worldwide, receive market intelligence, and have Pak Textiles Global Partners representing your products to real demand.",
   },
   {
     q: "What do the membership tiers cost?",
@@ -157,7 +157,7 @@ const faqs = [
   },
   {
     q: "Which markets can membership help me reach?",
-    a: "Members are matched to buyers across the European Union, the United States, the United Kingdom, the Middle East, Africa and Latin America — wherever there is qualified demand for your products.",
+    a: "Members are matched to buyers across the European Union, the United States, the United Kingdom, the Middle East, Africa and Latin America, wherever there is qualified demand for your products.",
   },
 ];
 
@@ -183,7 +183,7 @@ export default function MembershipClient() {
         align="center"
         shade="soft"
         minHeightClass="min-h-[560px] md:min-h-[620px] lg:min-h-[680px]"
-        title="More than a listing — a route to real buyers"
+        title="More than a listing: a route to real buyers"
         subtitle="Join the supplier pool global buyers source from. Build credibility, get matched to qualified demand, and grow your textile exports worldwide."
         image="/image/hero-bg/closeup-view-handshake-two-businessmen-suits-shaking-hands.jpg"
       >
@@ -224,7 +224,7 @@ export default function MembershipClient() {
       </div>
 
       {/* ── WHY MEMBERSHIP MATTERS ───────────────────────────────── */}
-      <section id="benefits" className="bg-white py-20 lg:py-28 scroll-mt-24">
+      <section id="benefits" className="bg-white py-8 lg:py-10 scroll-mt-24">
         <div className={PX}>
           <AnimatedSection animation="blur-in">
             <div className="grid gap-12 lg:grid-cols-[1fr_2.6fr] lg:gap-16 xl:gap-20">
@@ -237,7 +237,7 @@ export default function MembershipClient() {
                 />
                 <div className="h-1 w-14 rounded-full bg-gradient-to-r from-[#78899B] to-[#78899B] -mt-3 mb-5" />
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
-                  Standing out in global markets takes more than being found — it takes being trusted. Pakistan Textile Partners membership
+                  Standing out in global markets takes more than being found. It takes being trusted. Pak Textiles Global Partners membership
                   gives you the credibility, tools and connections to grow with confidence, because we run the
                   buyer-facing sourcing business too.
                 </p>
@@ -271,13 +271,13 @@ export default function MembershipClient() {
       </section>
 
       {/* ── MEMBERSHIP TIERS ─────────────────────────────────────── */}
-      <section id="tiers" className="bg-[#F6F2EA] py-20 lg:py-28 scroll-mt-24">
+      <section id="tiers" className="bg-[#F6F2EA] py-8 lg:py-10 scroll-mt-24">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
               label="Membership tiers"
               title="Choose the level of support you need"
-              body="Flexible plans. Real impact. Designed for exporters at every stage — pricing on request."
+              body="Flexible plans. Real impact. Designed for exporters at every stage, with pricing on request."
               color="#394F73"
               hideLine
             />
@@ -367,13 +367,13 @@ export default function MembershipClient() {
       </section>
 
       {/* ── WHO CAN JOIN ─────────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
               label="Criteria"
               title="Membership is built for textile suppliers"
-              body="From large mills to first-time exporters — if you supply textiles, there is a route in."
+              body="From large mills to first-time exporters, if you supply textiles, there is a route in."
               color="#394F73"
               hideLine
             />
@@ -403,7 +403,7 @@ export default function MembershipClient() {
       </section>
 
       {/* ── GLOBAL REACH (dark stats band) ───────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -419,7 +419,7 @@ export default function MembershipClient() {
                 <SectionLabel
                   label="One membership. Global demand."
                   title="One membership, demand worldwide"
-                  body="Pakistan Textile Partners connects Pakistani manufacturers with retailers, importers, hotel groups and brands across the markets where Pakistani textiles are in demand."
+                  body="Pak Textiles Global Partners connects Pakistani manufacturers with retailers, importers, hotel groups and brands across the markets where Pakistani textiles are in demand."
                   color="#B3AA98"
                   light
                   hideLine
@@ -459,12 +459,12 @@ export default function MembershipClient() {
       </section>
 
       {/* ── JOURNEY / HOW IT WORKS ───────────────────────────────── */}
-      <section className="bg-[#F6F2EA] py-20 lg:py-28">
+      <section className="bg-[#F6F2EA] py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="text-center mb-12">
               <SectionLabel
-                label="Your journey with Pakistan Textile Partners"
+                label="Your journey with Pak Textiles Global Partners"
                 title="From application to your first introductions"
                 color="#394F73"
                 align="center"
@@ -506,7 +506,7 @@ export default function MembershipClient() {
       {/* ── APPLY (membership form) ──────────────────────────────── */}
       <section
         id="apply"
-        className="relative overflow-hidden bg-[#394F73] py-20 lg:py-28 scroll-mt-24"
+        className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10 scroll-mt-24"
       >
         {/* Dot texture (matches the dark green stats band) */}
         <div
@@ -617,7 +617,7 @@ export default function MembershipClient() {
                 <div className="hidden lg:block">
                   <Image
                     src="/image/membership-form-2.jpg"
-                    alt="Global textile business — networking, export, trade and worldwide reach"
+                    alt="Global textile business: networking, export, trade and worldwide reach"
                     width={960}
                     height={680}
                     className="w-full h-auto rounded-2xl"
@@ -636,7 +636,7 @@ export default function MembershipClient() {
 
       {/* ── FAQs (home-page accordion design) ────────────────────── */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
+        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
         aria-labelledby="membership-faq-heading"
       >
         <div className={cn("relative", PX)}>
@@ -646,7 +646,7 @@ export default function MembershipClient() {
                 <SectionLabel
                   label="FAQs"
                   title="Membership questions, answered"
-                  body="What Pakistani textile exporters ask us most about joining Pakistan Textile Partners and reaching buyers worldwide."
+                  body="What Pakistani textile exporters ask us most about joining Pak Textiles Global Partners and reaching buyers worldwide."
                   color="#394F73"
                   as="h2"
                   hideLine
@@ -749,7 +749,7 @@ export default function MembershipClient() {
       <GlobalCTA
         label="Grow your exports"
         title="Not sure which tier is right for you?"
-        subtitle="Tell us about your business and our team will help you choose the best fit — and put your products in front of qualified demand worldwide."
+        subtitle="Tell us about your business and our team will help you choose the best fit, and put your products in front of qualified demand worldwide."
         primaryButtonText="Contact us"
         primaryButtonLink="/contact"
         secondaryButtonText="Request guidance"

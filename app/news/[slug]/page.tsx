@@ -106,9 +106,9 @@ export default async function ArticlePage({ params }: Props) {
       </Section>
 
       <GlobalCTA
-        label="Work with Pakistan Textile Partners"
+        label="Work with Pak Textiles Global Partners"
         title="Source from Pakistan with confidence"
-        subtitle="Tell us what you need and we'll handle sourcing, quality and delivery — or browse the categories where Pakistani manufacturing is strongest."
+        subtitle="Tell us what you need and we'll handle sourcing, quality and delivery, or browse the categories where Pakistani manufacturing is strongest."
         primaryButtonText="Request a quote"
         primaryButtonLink="/contact"
         secondaryButtonText="Browse products"

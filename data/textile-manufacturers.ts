@@ -1,6 +1,6 @@
 // Real Pakistani textile manufacturers & sourcing partners.
 //
-// Sourced from the Pakistan Textile Partners textile company knowledge base
+// Sourced from the Pak Textiles Global Partners textile company knowledge base
 // (assets/UPTIB_Textile_source-docs/Textile_Company_Database.md, Part A —
 // Pakistani exporters & sourcing companies). Product lists, specifications,
 // locations and websites are recorded factually from each company's own site.
@@ -22,7 +22,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Faisalabad, Pakistan",
     country: "Pakistan",
     description:
-      "Vertically integrated manufacturer, processor and stitcher of export-grade towels, bed linen, hotel & hospital linen and canvas — supplying the Middle East, North America, the Gulf and Europe, and local giants Gul Ahmed and Nishat.",
+      "Vertically integrated manufacturer, processor and stitcher of export-grade towels, bed linen, hotel & hospital linen and canvas, supplying the Middle East, North America, the Gulf and Europe, and local giants Gul Ahmed and Nishat.",
     logoUrl: "/image/textile/logos/pakistan-fibres.svg",
     websiteUrl: "https://pakistanfibres.com/",
     source: "Member",
@@ -52,7 +52,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Faisalabad, Pakistan",
     country: "Pakistan",
     description:
-      "Faisalabad buying house and quality-assurance partner with 22+ years' experience serving 30+ countries — fiber-to-garment vertical sourcing with factory-direct pricing, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners.",
+      "Faisalabad buying house and quality-assurance partner with 22+ years' experience serving 30+ countries, offering fiber-to-garment vertical sourcing with factory-direct pricing, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners.",
     logoUrl: "/image/textile/logos/utex-international.png",
     websiteUrl: "https://www.utexinternational.com/en",
     source: "Member",
@@ -67,7 +67,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Lahore, Pakistan",
     country: "Pakistan",
     description:
-      "Custom clothing (private-label / OEM) manufacturer with cutting, stitching, printing, embroidery and packaging under one roof — a 100-piece MOQ per design, 50+ premium fabrics and an AQL quality system, exporting to 30+ countries.",
+      "Custom clothing (private-label / OEM) manufacturer with cutting, stitching, printing, embroidery and packaging under one roof, offering a 100-piece MOQ per design, 50+ premium fabrics and an AQL quality system, exporting to 30+ countries.",
     logoUrl: "/image/textile/logos/lahore-textiles.png",
     websiteUrl: "https://lahoretextiles.com/",
     source: "Member",
@@ -82,7 +82,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Pakistan · Turkey · Algeria",
     country: "Pakistan",
     description:
-      "International sourcing and trading company acting as an outsourced buying office across textiles and many product groups — regional offices in Turkey, Pakistan and Algeria, a multilingual team and clients in 70+ countries.",
+      "International sourcing and trading company acting as an outsourced buying office across textiles and many product groups, with regional offices in Turkey, Pakistan and Algeria, a multilingual team and clients in 70+ countries.",
     logoUrl: "/image/textile/logos/adeon-global-trade.png",
     websiteUrl: "https://adeonglobal.com.pk/",
     source: "Member",
@@ -112,7 +112,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Lahore, Pakistan",
     country: "Pakistan",
     description:
-      "Eco-friendly textile marketing, servicing and sourcing company (15+ years) connecting global buyers with Pakistani manufacturers — fashion textiles, made-ups and technical textiles, with QC across sampling and bulk and full export-documentation support.",
+      "Eco-friendly textile marketing, servicing and sourcing company (15+ years) connecting global buyers with Pakistani manufacturers across fashion textiles, made-ups and technical textiles, with QC across sampling and bulk and full export-documentation support.",
     logoUrl: "/image/textile/logos/fablynx.png",
     websiteUrl: "http://www.fablynx.com/",
     source: "Member",
@@ -142,7 +142,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Lahore, Pakistan",
     country: "Pakistan",
     description:
-      "ISO 9001:2015-registered buying office and textile sourcing / export company (since 1992) — a one-stop shop for yarns, fabrics, home textiles and garments, with AQL inspection, lab testing and a growing focus on organic cotton and recycled fibres.",
+      "ISO 9001:2015-registered buying office and textile sourcing / export company (since 1992), a one-stop shop for yarns, fabrics, home textiles and garments, with AQL inspection, lab testing and a growing focus on organic cotton and recycled fibres.",
     logoUrl: "/image/textile/logos/vigour-impex.png",
     websiteUrl: "https://vigourimpex.com/",
     source: "Member",
@@ -157,7 +157,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Jhang, Pakistan",
     country: "Pakistan",
     description:
-      "Textile sourcing company and buying house (since 1997) acting as a buyer's exclusive sourcing agent in Pakistan — floating trade leads across a large manufacturer pool, with AQL in-line and shipment inspections, for clients across Europe and the Americas.",
+      "Textile sourcing company and buying house (since 1997) acting as a buyer's exclusive sourcing agent in Pakistan, floating trade leads across a large manufacturer pool, with AQL in-line and shipment inspections, for clients across Europe and the Americas.",
     logoUrl: "/image/textile/logos/shahzad-corporation.png",
     websiteUrl: "http://www.shahzadcorp.com/",
     source: "Member",
@@ -187,7 +187,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Pakistan",
     country: "Pakistan",
     description:
-      "Custom clothing and uniform manufacturer specialising in medical and corporate uniforms — scrubs, lab coats, patient gowns and workwear — with low MOQs for startups and bulk capacity, exporting to the USA, UK, Europe, Australia and the Middle East.",
+      "Custom clothing and uniform manufacturer specialising in medical and corporate uniforms such as scrubs, lab coats, patient gowns and workwear, with low MOQs for startups and bulk capacity, exporting to the USA, UK, Europe, Australia and the Middle East.",
     logoUrl: "/image/textile/logos/albeeza-apparel.jpg",
     websiteUrl: "https://albeezaapparel.com/",
     source: "Member",
@@ -207,7 +207,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Karachi, Pakistan",
     country: "Pakistan",
     description:
-      "One of Pakistan's largest vertically integrated textile mills — from cotton spinning to finished products — renowned for home textiles, bed linen and fashion fabrics sold to retailers worldwide and through its Ideas retail chain.",
+      "One of Pakistan's largest vertically integrated textile mills, spanning everything from cotton spinning to finished products, renowned for home textiles, bed linen and fashion fabrics sold to retailers worldwide and through its Ideas retail chain.",
     logoUrl: "/image/textile/logos/gul-ahmed.png",
     websiteUrl: "https://www.gulahmed.com/",
     source: "Member",
@@ -222,7 +222,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Karachi, Pakistan",
     country: "Pakistan",
     description:
-      "One of the world's largest terry towel manufacturers and exporters — a fully vertically integrated mill producing bath, beach and kitchen towels for leading international retailers.",
+      "One of the world's largest terry towel manufacturers and exporters, a fully vertically integrated mill producing bath, beach and kitchen towels for leading international retailers.",
     logoUrl: "/image/textile/logos/feroze1888-mills.png",
     websiteUrl: "https://www.feroze1888.com/",
     source: "Member",
@@ -237,7 +237,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Faisalabad, Pakistan",
     country: "Pakistan",
     description:
-      "One of Pakistan's largest vertically integrated composite textile units — spinning, weaving, dyeing, processing, home textiles and garments — and the flagship of the Nishat Group, exporting worldwide.",
+      "One of Pakistan's largest vertically integrated composite textile units, covering spinning, weaving, dyeing, processing, home textiles and garments, and the flagship of the Nishat Group, exporting worldwide.",
     logoUrl: "/image/textile/logos/nishat-mills.svg",
     websiteUrl: "https://nishatmillsltd.com/",
     source: "Member",
@@ -252,7 +252,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Lahore, Pakistan",
     country: "Pakistan",
     description:
-      "A leading vertically integrated textile group spanning spinning, weaving, knitting, dyeing and finishing — supplying yarn, fabric, home textiles and apparel to global retailers.",
+      "A leading vertically integrated textile group spanning spinning, weaving, knitting, dyeing and finishing, supplying yarn, fabric, home textiles and apparel to global retailers.",
     logoUrl: "/image/textile/logos/sapphire-textiles.svg",
     websiteUrl: "https://sapphiretextiles.com.pk/",
     source: "Member",
@@ -297,7 +297,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Karachi, Pakistan",
     country: "Pakistan",
     description:
-      "A vertically integrated denim manufacturer — spinning, dyeing, weaving and garment production — supplying sustainable, premium denim to global fashion brands.",
+      "A vertically integrated denim manufacturer covering spinning, dyeing, weaving and garment production, supplying sustainable, premium denim to global fashion brands.",
     logoUrl: "/image/textile/logos/artisitic.webp",
     websiteUrl: "https://www.artisticmilliners.com/",
     source: "Member",
@@ -312,7 +312,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Faisalabad, Pakistan",
     country: "Pakistan",
     description:
-      "A vertically integrated knit apparel manufacturer producing knitted garments end-to-end — from spinning through to finished apparel — for major international brands.",
+      "A vertically integrated knit apparel manufacturer producing knitted garments end-to-end, from spinning through to finished apparel, for major international brands.",
     logoUrl: "/image/textile/logos/masood-textile-mills.png",
     websiteUrl: "https://masoodtextile.com/",
     source: "Member",

@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Objectives & Values",
   description:
-    "Pakistan Textile Partners' core objectives, values, and key activities driving technology innovation and UK-Pakistan bilateral growth.",
+    "Pak Textiles Global Partners' core objectives, values, and key activities driving technology innovation and UK-Pakistan bilateral growth.",
   openGraph: {
-    title: "Objectives & Values | Pakistan Textile Partners",
+    title: "Objectives & Values | Pak Textiles Global Partners",
     description:
-      "Pakistan Textile Partners' core objectives, values, and key activities driving technology innovation and UK-Pakistan bilateral growth.",
+      "Pak Textiles Global Partners' core objectives, values, and key activities driving technology innovation and UK-Pakistan bilateral growth.",
   },
 };
 

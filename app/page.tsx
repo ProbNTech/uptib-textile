@@ -1,4 +1,4 @@
-// Pakistan Textile Partners - Home page
+// Pak Textiles Global Partners - Home page
 "use client";
 
 import dynamic from "next/dynamic";
@@ -24,7 +24,7 @@ import { GlobalCTA } from "@/components/GlobalCTA";
 // import BoardOfAdvisors from "@/components/BoardOfAdvisors"; // hidden for now
 import { TextileMarketsCarousel } from "@/components/home/TextileMarketsCarousel";
 import StatsCounter from "@/components/tech-market/StatsCounter";
-import MembershipSection, { WhatDrivesUs } from "@/components/tech-market/MembershipSection";
+import { WhatDrivesUs } from "@/components/tech-market/MembershipSection";
 import NewsCarousel from "@/components/NewsCarousel";
 const PakistanTopCompaniesShowcase = dynamic(() => import("@/components/PakistanTopCompaniesShowcase"), {
   loading: () => <div className="py-20 bg-white" aria-busy="true"><div className="px-6 sm:px-10 lg:px-16 xl:px-20"><div className="h-48 bg-[#f7f8fa] rounded-xl animate-pulse" /></div></div>,
@@ -52,15 +52,15 @@ const sponsorCarouselLogos = sponsorLogos.map((logo, i) => ({
 
 /* ─── Our Services — exporter-facing grid (Pakistani exporters → global markets) ─── */
 const pakistanServicesData = [
-  { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers — professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing-sales", color: "#394F73" },
-  { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers — account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/ecommerce-warehouse", color: "#394F73" },
-  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/contact", color: "#394F73" },
-  { id: 8, title: "Worldwide market access", content: "Reach the EU, USA, Middle East, UK and beyond — with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#394F73" },
+  { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers: professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing-sales", color: "#394F73" },
+  { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers: account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/ecommerce-warehouse", color: "#394F73" },
+  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from, with Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/contact", color: "#394F73" },
+  { id: 8, title: "Worldwide market access", content: "Reach the EU, USA, Middle East, UK and beyond, with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#394F73" },
 ];
 
 /* ─── From field to fabric — cotton-to-textile production value chain ─── */
 const processChain = [
-  { title: "Cotton Growing", desc: "It all begins in the field — Pakistan is among the world's leading cotton producers.", image: "/image/cotton-growing.jpg", icon: Sprout },
+  { title: "Cotton Growing", desc: "It all begins in the field, where Pakistan is among the world's leading cotton producers.", image: "/image/cotton-growing.jpg", icon: Sprout },
   { title: "Ginning", desc: "Raw cotton is cleaned and separated from its seed, ready to be spun.", image: "/image/ginning.png", icon: Cog },
   { title: "Spinning", desc: "Cleaned fibre is drawn and twisted into strong, consistent yarn.", image: "/image/spinning.png", icon: RotateCw },
   { title: "Weaving Mills", desc: "Yarn is woven at scale into greige fabric on industrial looms.", image: "/image/weaving-mills.png", icon: Factory },
@@ -69,9 +69,9 @@ const processChain = [
 
 /* ─── Our Services — buyer-facing grid (International buyers → Pakistan supply) ─── */
 const internationalBuyersData = [
-  { id: 9, title: "Buying House (Outsourcing)", content: "Source the right Pakistani manufacturers and Exporters for your order — vendor identification, sampling, price negotiation and production follow-up handled for you.", icon: Factory, topImage: "/image/buying-house.jpg", href: "/contact", color: "#394F73" },
-  { id: 10, title: "Quality Control", content: "Protect your brand with rigorous inspection — pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck, topImage: "/image/quality-control.jpg", href: "/contact", color: "#394F73" },
-  { id: 11, title: "Compliance & Logistics", content: "Ship with confidence — social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship, topImage: "/image/logistics-compliance.jpg", href: "/contact", color: "#394F73" },
+  { id: 9, title: "Buying House (Outsourcing)", content: "Source the right Pakistani manufacturers and Exporters for your order: vendor identification, sampling, price negotiation and production follow-up handled for you.", icon: Factory, topImage: "/image/outsourcing-new.jpg", href: "/contact", color: "#394F73" },
+  { id: 10, title: "Quality Control", content: "Protect your brand with rigorous inspection: pre-production, in-line and final checks against your specs before anything ships.", icon: ClipboardCheck, topImage: "/image/quality-control-new.jpg", href: "/contact", color: "#394F73" },
+  { id: 11, title: "Compliance & Logistics", content: "Ship with confidence: social and technical compliance, documentation, consolidation and end-to-end freight to your destination.", icon: Ship, topImage: "/image/logistics-new.jpg", href: "/contact", color: "#394F73" },
 ];
 
 export default function Home() {
@@ -83,7 +83,7 @@ export default function Home() {
 
       {/* 2. ABOUT */}
       <section
-        className="relative py-20 lg:py-28 overflow-hidden bg-white"
+        className="relative py-8 lg:py-10 overflow-hidden bg-white"
         aria-labelledby="about-heading"
       >
         <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
@@ -94,14 +94,14 @@ export default function Home() {
                 <SectionLabel label="Who we are" title="Bridging Pakistan's textile industry to the Global market via a UK-based platform." color="#394F73" />
                 <div className="content-body">
                   <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-5">
-<span className="font-semibold text-[#1A1A1A]">Pakistan Textile Partners</span> is the dedicated textile arm of the <span className="font-semibold text-[#1A1A1A]">UK–Pakistan Trade &amp; Investment Board</span> with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers and Exporters and the global marketplace.
+<span className="font-semibold text-[#1A1A1A]">Pak Textiles Global Partners</span> is the dedicated textile arm of the <span className="font-semibold text-[#1A1A1A]">UK-Pakistan Trade &amp; Investment Board</span> with headquarter in London with a strategic hub in Faisalabad, Lahore, Sialkot &amp; Karachi, we bridge the gap between Pakistan&apos;s premier manufacturers and Exporters and the global marketplace.
                   </p>
                 </div>
                 <PillButton href="/global-textile-market" variant="blue">Pakistan's global position</PillButton>
               </div>
               <div className="relative">
                 <div className="relative z-10 aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(140, 154, 171,0.15)]">
-                  <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export — Pakistan Textile Partners" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                  <Image src="/image/who-we-are.jpg" alt="Pakistani textile manufacturing and global export, Pak Textiles Global Partners" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                   <div className="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/60">
                     <p className="font-heading font-extrabold text-[#394F73] text-lg leading-none">$17.9bn</p>
                     <p className="text-[#5A5F72] text-xs mt-0.5">Pakistan textile exports, FY2025</p>
@@ -115,16 +115,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. MEMBERSHIP */}
-      <MembershipSection />
-
-      {/* 4. OUR PRODUCTS — the four textile categories */}
+      {/* 3. OUR PRODUCTS — the four textile categories */}
       <ProductsSection />
 
       {/* 5. OUR SERVICES — exporter-facing grid */}
       <section
         id="services"
-        className="relative z-[1] pt-10 lg:pt-12 pb-0 scroll-mt-24 overflow-hidden bg-[#F6F2EA]"
+        className="relative z-[1] pt-8 lg:pt-10 pb-8 lg:pb-10 scroll-mt-24 overflow-hidden bg-[#F6F2EA]"
         aria-labelledby="services-heading"
       >
         <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -132,7 +129,7 @@ export default function Home() {
             <SectionLabel
               label="Our Services"
               title="Grow your textile exports, worldwide"
-              body="Four services that help Pakistani textile manufacturers and Exporters reach buyers across the world — marketing, e-commerce and warehousing, membership, and global market access."
+              body="Four services that help Pakistani textile manufacturers and Exporters reach buyers across the world: marketing, e-commerce and warehousing, membership, and global market access."
               color="#394F73"
               align="center"
             />
@@ -143,7 +140,7 @@ export default function Home() {
                 items={pakistanServicesData}
                 eyebrow="Services"
                 audience="Pakistani exporters"
-                context="Reaching global markets — marketing, e-commerce & warehousing, membership, and worldwide market access."
+                context="Reaching global markets: marketing, e-commerce & warehousing, membership, and worldwide market access."
                 accentColor="#394F73"
                 centered
               />
@@ -151,11 +148,21 @@ export default function Home() {
                 As a top ten global exporter and a powerhouse in cotton and home textiles, Pakistan possesses immense manufacturing capability. We unlock this potential for you. By professionalising your supply chain, optimising your digital commerce, and managing end-to-end logistics including targeted international marketing and strategic global warehousing. We provide Pakistani exporters seamless, frictionless access to major buyers across the UK, EU, USA, and the Middle East.
               </p>
             </div>
-
-            {/* For International buyers */}
-            <div id="for-international-buyers" className="scroll-mt-24 mt-20 lg:mt-24 relative overflow-hidden -mx-6 sm:-mx-10 lg:-mx-16 xl:-mx-20">
+          </AnimatedSection>
+        </div>
+      </section>
+      
+      {/* For International buyers */}
+      <section
+        id="services"
+        className="relative z-[1] py-8 lg:py-10 scroll-mt-24 overflow-hidden bg-[#394F73]"
+        aria-labelledby="services-heading"
+      >
+        <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
+          <AnimatedSection animation="blur-in">
+            <div id="for-international-buyers" className="scroll-mt-24 relative overflow-hidden -mx-6 sm:-mx-10 lg:-mx-16 xl:-mx-20">
               {/* Background — solid blue (image removed for now) */}
-              <div aria-hidden="true" className="absolute inset-0 bg-[#394F73]">
+              <div aria-hidden="true" className="absolute inset-0">
                 {/* <Image
                   src="/image/world-map-bg.jpg"
                   alt=""
@@ -163,9 +170,9 @@ export default function Home() {
                   className="object-cover"
                   sizes="100vw"
                 /> */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#394F73] via-[#48608A] to-[#2E4061]" />
+                {/* <div className="absolute inset-0 bg-gradient-to-b from-[#394F73] via-[#48608A] to-[#2E4061]" /> */}
               </div>
-              <div className="relative z-10 px-6 sm:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 lg:py-24">
+              <div className="relative z-10 px-6 sm:px-10 lg:px-16 xl:px-20">
                 <div>
                   {/* TOP — hero copy + trust panel */}
                   <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-start">
@@ -202,7 +209,7 @@ export default function Home() {
                       <ul className="divide-y divide-white/10">
                         {[
                           { icon: ShieldCheck, title: "Verified & Reliable", desc: "We work only with pre-vetted manufacturers and Exporters." },
-                          { icon: Headphones, title: "End-to-End Support", desc: "From sampling to shipment — we handle it all." },
+                          { icon: Headphones, title: "End-to-End Support", desc: "From sampling to shipment, we handle it all." },
                           { icon: Award, title: "Quality Assured", desc: "Rigorous in-line & final inspections for every order." },
                           { icon: Leaf, title: "Compliant & Ethical", desc: "We follow global standards and ethical practices." },
                         ].map(({ icon: TrustIcon, title, desc }) => (
@@ -235,12 +242,12 @@ export default function Home() {
                             {String(i + 1).padStart(2, "0")}
                           </span>
                           {/* image */}
-                          <div className="relative h-[190px] overflow-hidden">
+                          <div className="relative h-[190px] overflow-hidden bg-white">
                             <Image
                               src={item.topImage!}
                               alt={item.title}
                               fill
-                              className="object-cover"
+                              className="object-contain"
                               sizes="(max-width: 768px) 100vw, 33vw"
                             />
                           </div>
@@ -290,21 +297,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. MORE FROM Pakistan Textile Partners */}
+      {/* 5. MORE FROM Pak Textiles Global Partners */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
+        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
         aria-labelledby="more-heading"
       >
         {/* <Image src="/image/textile/home/cushions-throws-collection/12.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" /> */}
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Discover More" title="More from Pakistan Textile Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#394F73" align="center" />
+            <SectionLabel label="Discover More" title="More from Pak Textiles Global Partners" body="The products we trade, the markets we reach, membership, and the latest insights." color="#394F73" align="center" />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { href: "/products", icon: ProductsIcon, color: "#9DA9B8", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles — the four categories we trade." },
-                { href: "/global-textile-market", icon: MentorshipIcon, color: "#9DA9B8", title: "Global Textile Market", desc: "The size of the global textile opportunity, and Pakistan's place in it — with the key figures." },
-                { href: "/contact", icon: MeetingSpaceIcon, color: "#9DA9B8", title: "Membership", desc: "Join the supplier pool global buyers source from — Basic, Professional and Premium tiers." },
+                { href: "/products", icon: ProductsIcon, color: "#9DA9B8", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles: the four categories we trade." },
+                { href: "/global-textile-market", icon: MentorshipIcon, color: "#9DA9B8", title: "Global Textile Market", desc: "The size of the global textile opportunity, and Pakistan's place in it, with the key figures." },
+                { href: "/contact", icon: MeetingSpaceIcon, color: "#9DA9B8", title: "Membership", desc: "Join the supplier pool global buyers source from, with Basic, Professional and Premium tiers." },
                 { href: "/news", icon: StructureIcon, color: "#9DA9B8", title: "News & Insights", desc: "Export guides and market insight for Pakistani textile exporters reaching global buyers." },
               ].map((card, index) => {
                 const CardIcon = card.icon;
@@ -378,7 +385,7 @@ export default function Home() {
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
         }}
-        aria-label="Raw material — cotton"
+        aria-label="Raw material, cotton"
       >
         {/* Brand overlay for legibility — green-led, deep at the left where copy sits */}
         <div
@@ -400,7 +407,7 @@ export default function Home() {
                 light
               />
               <p className="text-white/85 text-base sm:text-lg leading-relaxed">
-                Pakistan is one of the world&apos;s leading cotton producers — the raw material behind
+                Pakistan is one of the world&apos;s leading cotton producers, the raw material behind
                 its bedding, linen and apparel. That homegrown cotton, and the spinning and weaving
                 built around it, is why Pakistan ranks among the world&apos;s top-ten textile exporters.
               </p>
@@ -425,7 +432,7 @@ export default function Home() {
 
       {/* 6c. FROM FIELD TO FABRIC — production value chain */}
       <section
-        className="relative z-[1] pt-24 lg:pt-32 pb-12 lg:pb-16 overflow-hidden bg-[var(--cream)]"
+        className="relative z-[1] pt-8 lg:pt-10 pb-8 lg:pb-10 overflow-hidden bg-[var(--cream)]"
         aria-labelledby="process-heading"
       >
         {/* decorative cotton illustration — top left */}
@@ -445,7 +452,7 @@ export default function Home() {
             <SectionLabel
               label="From field to fabric"
               title="How Pakistani cotton becomes finished textiles"
-              body="Every order we handle runs through this chain — from the cotton field to the loom. We stay across each stage, so quality is built in, not inspected in at the end."
+              body="Every order we handle runs through this chain, from the cotton field to the loom. We stay across each stage, so quality is built in, not inspected in at the end."
               color="#B08D4C"
               align="center"
             />
@@ -536,7 +543,7 @@ export default function Home() {
 
       {/* 9. IMPACT STATS — Corridor Signals */}
       <section
-        className="relative z-[1] py-20 lg:py-24 overflow-hidden"
+        className="relative z-[1] py-8 lg:py-10 overflow-hidden"
         style={{
           background:
             "radial-gradient(1000px circle at 100% 0%, rgba(138, 133, 124,0.20), transparent 50%), radial-gradient(900px circle at 0% 100%, rgba(138, 133, 124,0.13), transparent 50%), #394F73",
@@ -546,7 +553,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, white 0, transparent 2px), radial-gradient(circle at 70% 60%, white 0, transparent 2px)", backgroundSize: "48px 48px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pakistan Textile Partners' work — sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#D8CDBA" align="center" light />
+            <SectionLabel label="Export Signals" title="Pakistan's textile export, in numbers" body="Trade and market figures that frame Pak Textiles Global Partners' work, sourced from the Pakistan Bureau of Statistics, the Pakistan Textile Council, and industry reporting." color="#D8CDBA" align="center" light />
             <ImpactStats />
           </AnimatedSection>
         </div>
@@ -554,20 +561,20 @@ export default function Home() {
 
       {/* 10. TECH MARKET OVERVIEW — Market Intelligence */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden bg-white"
+        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
         aria-labelledby="market-heading"
       >
         {/* TRIAL: decorative globe — revert if not kept */}
         <Image src="/image/globe.png" alt="" aria-hidden width={520} height={520} className="pointer-events-none select-none absolute -right-16 -top-10 w-[300px] lg:w-[440px] h-auto opacity-25 z-0" />
         <div className="relative z-[1] px-6 sm:px-10 lg:px-16 xl:px-20">
           <AnimatedSection animation="blur-in">
-            <SectionLabel label="Market Intelligence" title="The global textile market — and Pakistan's place in it" color="#394F73" />
+            <SectionLabel label="Market Intelligence" title="The global textile market and Pakistan's place in it" color="#394F73" />
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-2">
                 <div className="grid grid-cols-2 gap-6">
                   {[
-                    { value: 359, label: "US apparel market — the world's largest (2024)", color: "#394F73", prefix: "$", suffix: "B" },
+                    { value: 359, label: "US apparel market, the world's largest (2024)", color: "#394F73", prefix: "$", suffix: "B" },
                     { value: 4.3, decimals: 1, label: "Pakistan's textile exports to the US (2025)", color: "#394F73", prefix: "$", suffix: "B+" },
                     { value: 63.6, decimals: 1, label: "UK textile & apparel market (2025)", color: "#394F73", prefix: "$", suffix: "B" },
                     { value: 62.7, decimals: 1, label: "European sportswear market (2025)", color: "#394F73", prefix: "$", suffix: "B" },
@@ -591,10 +598,10 @@ export default function Home() {
               </div>
               <div className="lg:col-span-3">
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-4">
-                  The global textile market is commonly valued at around US$1.2–1.3 trillion, with forecasts toward US$1.6–2 trillion over the next decade. Asia-Pacific accounts for roughly half of it, and cotton is the single largest material at about 39% of the market.
+                  The global textile market is commonly valued at around US$1.2 to 1.3 trillion, with forecasts toward US$1.6 to 2 trillion over the next decade. Asia-Pacific accounts for roughly half of it, and cotton is the single largest material at about 39% of the market.
                 </p>
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
-                  Pakistan is a global leader in cotton-based products and home textiles, exporting to the EU (its largest bloc), the USA (its largest single market), the Middle East, the UK and beyond — with GSP+ duty-free access into the EU a genuine competitive edge.
+                  Pakistan is a global leader in cotton-based products and home textiles, exporting to the EU (its largest bloc), the USA (its largest single market), the Middle East, the UK and beyond, with GSP+ duty-free access into the EU a genuine competitive edge.
                 </p>
                 <p className="mt-4 text-[#9CA3AF] text-xs leading-relaxed">
                   Sources: Pakistan Bureau of Statistics (FY2025); Pakistan Business Council &amp; Pakistan Textile Council (EU/GSP+); Grand View Research and Precedence Research (global market &amp; cotton share).
@@ -613,7 +620,7 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                     <div className="flex-1 max-w-2xl">
                       <h3 className="font-heading font-bold text-white text-xl sm:text-2xl leading-snug mb-2">Explore the global textile market in full</h3>
-                      <p className="text-white/80 text-sm sm:text-base leading-relaxed">Market sizing, Pakistan's global position, key export markets, and category strengths — with cited figures.</p>
+                      <p className="text-white/80 text-sm sm:text-base leading-relaxed">Market sizing, Pakistan's global position, key export markets, and category strengths, with cited figures.</p>
                     </div>
                     <Link href="/global-textile-market" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-white text-[#394F73] text-sm font-bold hover:bg-[#78899B] hover:text-white transition-colors duration-300 shadow-lg whitespace-nowrap">
                       Explore the market <ArrowUpRight className="w-4 h-4" />
@@ -627,7 +634,7 @@ export default function Home() {
       </section>
 
       {/* PAKISTAN'S TEXTILE & TRADE INSTITUTIONS — horizontal auto-scrolling marquee */}
-      <section className="relative z-[1] py-14 lg:py-20 overflow-hidden bg-[#F6F2EA]" aria-labelledby="network-heading">
+      <section className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-[#F6F2EA]" aria-labelledby="network-heading">
         <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "28px 28px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#394F73" align="center" />
@@ -660,7 +667,7 @@ export default function Home() {
 
       {/* 12. NEWS & INSIGHTS */}
       <section
-        className="relative z-[1] py-20 lg:py-28 overflow-hidden"
+        className="relative z-[1] py-8 lg:py-10 overflow-hidden"
         style={{
           background:
             "radial-gradient(1000px circle at 0% 0%, rgba(216, 205, 186,0.13), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(140, 154, 171,0.18), transparent 50%), #394F73",
@@ -696,9 +703,9 @@ export default function Home() {
 
       {/* GLOBAL CTA */}
       <GlobalCTA
-        label="Work with Pakistan Textile Partners"
+        label="Work with Pak Textiles Global Partners"
         title="Ready to take your textiles to the world?"
-        subtitle="Grow your exports worldwide — Pakistan Textile Partners markets Pakistani textile manufacturers and Exporters to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
+        subtitle="Grow your exports worldwide. Pak Textiles Global Partners markets Pakistani textile manufacturers and Exporters to global buyers and runs the services that get your products to market, from first enquiry to fulfilment."
         primaryButtonText="About us"
         primaryButtonLink="/about"
         secondaryButtonText="Talk to our team"

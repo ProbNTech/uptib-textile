@@ -18,14 +18,14 @@ export type CompanyCategory =
   | "Cloud"
   | "Cybersecurity"
   | "Data"
-  // Categories used by real Pakistan Textile Partners members on /pakistan-top-companies — chosen
+  // Categories used by real Pak Textiles Global Partners members on /pakistan-top-companies — chosen
   // to reflect what each company actually does (AI/automation, custom software,
   // SaaS, project consulting), not the generic CompanyService bucket.
   | "AI & Automation"
   | "Software Development"
   | "SaaS Products"
   | "Consulting"
-  // Textile categories — used by the Pakistan Textile Partners textile manufacturer showcase
+  // Textile categories — used by the Pak Textiles Global Partners textile manufacturer showcase
   | "Home & Hospitality Textiles"
   | "Apparel & Knitwear"
   | "Sportswear & Activewear"
@@ -145,7 +145,7 @@ export const companies: DirectoryCompany[] = [
     location: "Edinburgh, United Kingdom",
     country: "United Kingdom",
     description:
-      "Modern data stack specialists — Snowflake, dbt, and reverse-ETL pipelines paired with executive-ready analytics.",
+      "Modern data stack specialists in Snowflake, dbt, and reverse-ETL pipelines paired with executive-ready analytics.",
     source: "Mock",
     verified: true,
   },
@@ -190,7 +190,7 @@ export const companies: DirectoryCompany[] = [
     location: "Birmingham, United Kingdom",
     country: "United Kingdom",
     description:
-      "Offensive and defensive security firm — pen tests, managed SOC, and ISO 27001/SOC 2 readiness for scale-ups.",
+      "Offensive and defensive security firm offering pen tests, managed SOC, and ISO 27001/SOC 2 readiness for scale-ups.",
     source: "Mock",
     verified: true,
   },
@@ -205,7 +205,7 @@ export const companies: DirectoryCompany[] = [
     location: "Bristol, United Kingdom",
     country: "United Kingdom",
     description:
-      "Managed IT and Microsoft 365 partner for UK SMBs — 24/7 service desk, device management, and modern workplace rollouts.",
+      "Managed IT and Microsoft 365 partner for UK SMBs, offering a 24/7 service desk, device management, and modern workplace rollouts.",
     source: "Mock",
     verified: false,
   },
@@ -220,7 +220,7 @@ export const companies: DirectoryCompany[] = [
     location: "Karachi, Pakistan",
     country: "Pakistan",
     description:
-      "Full-stack product team building React and Node.js platforms for UK and EU clients — design, build, and ongoing iteration.",
+      "Full-stack product team building React and Node.js platforms for UK and EU clients, covering design, build, and ongoing iteration.",
     source: "Mock",
     verified: false,
   },
@@ -250,7 +250,7 @@ export const companies: DirectoryCompany[] = [
     location: "Amsterdam, Netherlands",
     country: "Netherlands",
     description:
-      "Boutique AI strategy and engineering firm — model selection, fine-tuning, and MLOps for enterprise rollouts.",
+      "Boutique AI strategy and engineering firm offering model selection, fine-tuning, and MLOps for enterprise rollouts.",
     source: "Mock",
     verified: true,
   },

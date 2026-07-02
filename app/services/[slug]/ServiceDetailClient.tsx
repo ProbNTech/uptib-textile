@@ -107,7 +107,7 @@ const detail: Record<string, ServiceDetail> = {
     feature: "/image/e-commerce.jpg",
     featureTag: "For Pakistani exporters",
     intro:
-      "Mainly for Pakistani exporters. We make manufacturers visible, credible and reachable to buyers worldwide — and we generate and qualify the global demand that turns into orders. Because we run the buying side too, membership isn't just a profile; it's a place in the supplier pool we actively source from.",
+      "Mainly for Pakistani exporters. We make manufacturers visible, credible and reachable to buyers worldwide, and we generate and qualify the global demand that turns into orders. Because we run the buying side too, membership isn't just a profile; it's a place in the supplier pool we actively source from.",
     whoForLabel: "Who this is for",
     whoFor: [
       "Textile mills",
@@ -131,15 +131,15 @@ const detail: Record<string, ServiceDetail> = {
       {
         type: "list",
         title: "What we do",
-        intro: "Everything needed to present your factory to an international audience — and put it in front of buyers.",
+        intro: "Everything needed to present your factory to an international audience, and to put it in front of buyers.",
         items: [
-          "Professional profile & branding — your products, capabilities and certifications, packaged for an international audience.",
-          "Market intelligence — global trends, certification requirements, import rules and demand forecasts.",
-          "B2B matchmaking — pre-qualified meetings with buyers, distributors and procurement teams worldwide.",
-          "Digital campaigns — LinkedIn, email and social outreach to decision-makers in your target markets.",
-          "Events — webinars and textile export forums connecting you to global buyers.",
-          "Directory listing — your company in the supplier pool we source from for live orders.",
-          "Market-entry support — compliance, labelling, packaging and customs guidance for each destination.",
+          "Professional profile & branding: your products, capabilities and certifications, packaged for an international audience.",
+          "Market intelligence: global trends, certification requirements, import rules and demand forecasts.",
+          "B2B matchmaking: pre-qualified meetings with buyers, distributors and procurement teams worldwide.",
+          "Digital campaigns: LinkedIn, email and social outreach to decision-makers in your target markets.",
+          "Events: webinars and textile export forums connecting you to global buyers.",
+          "Directory listing: your company in the supplier pool we source from for live orders.",
+          "Market-entry support: compliance, labelling, packaging and customs guidance for each destination.",
         ],
       },
       {
@@ -149,7 +149,7 @@ const detail: Record<string, ServiceDetail> = {
         items: [
           { step: "Awareness", text: "LinkedIn outreach to CEOs and export managers, social campaigns across Pakistan's textile hubs, and industry email to chambers and trade-fair lists." },
           { step: "Lead generation", text: "Monthly exporter webinars and quarterly textile export forums, with product showcases and live matchmaking." },
-          { step: "Conversion", text: "Qualified interest becomes membership — increasingly pulled by real buyer demand from our sourcing side." },
+          { step: "Conversion", text: "Qualified interest becomes membership, increasingly pulled by real buyer demand from our sourcing side." },
         ],
       },
       {
@@ -159,7 +159,7 @@ const detail: Record<string, ServiceDetail> = {
         intro: "The concrete results of being marketed by a partner who also runs the buying side.",
         items: [
           { icon: Globe2, metric: "Worldwide", label: "Buyer visibility", desc: "Your factory profile in front of retailers, importers and sourcing houses across global markets." },
-          { icon: Users, metric: "B2B", label: "Qualified meetings", desc: "Pre-screened buyer matchmaking — real conversations, not cold lead lists." },
+          { icon: Users, metric: "B2B", label: "Qualified meetings", desc: "Pre-screened buyer matchmaking: real conversations, not cold lead lists." },
           { icon: Sparkles, metric: "Live", label: "Order demand", desc: "A place in the supplier pool we actively source from for paying orders." },
           { icon: Rocket, metric: "Faster", label: "Market entry", desc: "Compliance, labelling and customs guidance for every destination you target." },
         ],
@@ -173,12 +173,12 @@ const detail: Record<string, ServiceDetail> = {
           points: [
             "Cold outreach that rarely reaches the right buyer",
             "No independent credibility with procurement teams",
-            "Leads — if any — that go nowhere near an order",
+            "Leads, if any, that go nowhere near an order",
             "You guess at each market's compliance and labelling rules",
           ],
         },
         with: {
-          label: "With Pakistan Textile Partners",
+          label: "With Pak Textiles Global Partners",
           points: [
             "A professional profile presented the way buyers expect",
             "Pre-qualified introductions to decision-makers worldwide",
@@ -191,7 +191,7 @@ const detail: Record<string, ServiceDetail> = {
         type: "callout",
         variant: "qa",
         title: "More than a directory listing",
-        text: "Membership puts you in the pool we actually source from on behalf of real buyers — not just a profile, but a route to paying demand.",
+        text: "Membership puts you in the pool we actually source from on behalf of real buyers: not just a profile, but a route to paying demand.",
       },
     ],
     facts: {
@@ -203,20 +203,20 @@ const detail: Record<string, ServiceDetail> = {
       },
       chips: ["Retailers", "Sourcing houses", "Importers", "E-commerce brands"],
       rows: [
-        { label: "The market", value: "The UK alone imports ~US$2.27bn from Pakistan a year — over three-quarters of it textiles — within a UK textile & apparel market worth ~US$63.6bn, one of many destinations." },
+        { label: "The market", value: "The UK alone imports ~US$2.27bn from Pakistan a year, over three-quarters of it textiles, within a UK textile & apparel market worth ~US$63.6bn, one of many destinations." },
         { label: "Where demand is", value: "Sustainable & ethical sourcing, private-label manufacturing, premium home living and e-commerce-led buying are the trends pulling buyers toward Pakistan." },
         { label: "Who's buying", value: "Major retailers, fashion buyers and sourcing houses, home-textile importers, hospitality procurement and Amazon / e-commerce brands." },
-        { label: "Your edge", value: "Certified, competitively-priced production plus GSP+ duty-free access — presented to buyers who are ready to order." },
+        { label: "Your edge", value: "Certified, competitively-priced production plus GSP+ duty-free access, presented to buyers who are ready to order." },
       ],
     },
     why: {
       eyebrow: "The advantage",
       title: "Why membership beats a listing",
-      body: "We don't just publish your profile — we run the buying side, so your membership sits where the orders are.",
+      body: "We don't just publish your profile; we run the buying side, so your membership sits where the orders are.",
       items: [
         { icon: Globe2, title: "Visibility worldwide", desc: "A professional profile in front of buyers, distributors and procurement teams across global markets." },
         { icon: Award, title: "Credibility", desc: "Your capabilities and certifications packaged and presented the way international buyers expect." },
-        { icon: Sparkles, title: "Real, paying demand", desc: "A place in the supplier pool we source from for live orders — not just a directory entry." },
+        { icon: Sparkles, title: "Real, paying demand", desc: "A place in the supplier pool we source from for live orders, not just a directory entry." },
         { icon: Handshake, title: "Market-entry support", desc: "Compliance, labelling, packaging and customs guidance for each destination you target." },
       ],
     },
@@ -234,7 +234,7 @@ const detail: Record<string, ServiceDetail> = {
     cta: "/image/warehouse-3.jpg",
     featureTag: "Sold direct, worldwide",
     intro:
-      "Warehousing, e-commerce and Amazon market access for Pakistani exporters. We turn suppliers into brand owners selling directly to consumers in global marketplaces — starting with the UK and Europe and expanding outward. Instead of selling a container once, you build a brand, recurring revenue and far higher margins.",
+      "Warehousing, e-commerce and Amazon market access for Pakistani exporters. We turn suppliers into brand owners selling directly to consumers in global marketplaces, starting with the UK and Europe and expanding outward. Instead of selling a container once, you build a brand, recurring revenue and far higher margins.",
     whoForLabel: "Who this is for",
     whoFor: [
       "Manufacturers going direct-to-consumer",
@@ -245,14 +245,14 @@ const detail: Record<string, ServiceDetail> = {
     ],
     stats: [
       { icon: PackageCheck, value: "Amazon FBA", label: "Prime-eligible fulfilment" },
-      { icon: TrendingUp, value: "30–100%", label: "Typical DTC margin uplift" },
+      { icon: TrendingUp, value: "30 to 100%", label: "Typical DTC margin uplift" },
       { icon: Store, value: "Pick & pack", label: "Storage close to customers" },
       { icon: Globe2, value: "UK → EU", label: "Marketplace expansion path" },
     ],
     contentLabel: {
       eyebrow: "The service",
       title: "From a factory in Pakistan to a consumer's door",
-      body: "Everything you need to sell online — account setup, listings, warehousing and fulfilment — managed end-to-end.",
+      body: "Everything you need to sell online: account setup, listings, warehousing and fulfilment, managed end-to-end.",
     },
     blocks: [
       {
@@ -271,7 +271,7 @@ const detail: Record<string, ServiceDetail> = {
       {
         type: "list",
         title: "Sell across every major marketplace",
-        intro: "We don't stop at Amazon. We set you up and manage your presence across the channels UK and global shoppers actually buy from — so your products are wherever your customers are.",
+        intro: "We don't stop at Amazon. We set you up and manage your presence across the channels UK and global shoppers actually buy from, so your products are wherever your customers are.",
         logos: [
           "/image/platforms/amazon.svg",
           "/image/platforms/ebay.svg",
@@ -281,12 +281,12 @@ const detail: Record<string, ServiceDetail> = {
           "/image/platforms/google.svg",
         ],
         items: [
-          "Amazon UK & FBA — Sell to millions of Prime shoppers with fulfilment handled for you.",
-          "eBay UK — List and sell on one of Britain's largest online marketplaces.",
-          "TikTok Shop — Reach younger buyers and sell directly through social video.",
-          "Etsy — Showcase handmade, artisan and premium textile products to global buyers.",
-          "Shopify — Your own branded online store with UK payment-gateway integration.",
-          "Google Shopping — Put your products in front of shoppers searching on Google.",
+          "Amazon UK & FBA: Sell to millions of Prime shoppers with fulfilment handled for you.",
+          "eBay UK: List and sell on one of Britain's largest online marketplaces.",
+          "TikTok Shop: Reach younger buyers and sell directly through social video.",
+          "Etsy: Showcase handmade, artisan and premium textile products to global buyers.",
+          "Shopify: Your own branded online store with UK payment-gateway integration.",
+          "Google Shopping: Put your products in front of shoppers searching on Google.",
         ],
       },
       {
@@ -306,7 +306,7 @@ const detail: Record<string, ServiceDetail> = {
         items: [
           { step: "Market entry", text: "Business-setup guidance, Amazon seller registration, VAT and compliance support, and trademark / brand registration." },
           { step: "Warehousing", text: "Container receiving, inventory storage and stock management, inspection, labelling and pick-and-pack close to your customers." },
-          { step: "Amazon programme", text: "Seller-account setup, Brand Store creation, listing optimisation, photography, SEO, PPC and review management — with FBA fulfilment." },
+          { step: "Amazon programme", text: "Seller-account setup, Brand Store creation, listing optimisation, photography, SEO, PPC and review management, with FBA fulfilment." },
           { step: "Direct e-commerce", text: "A dedicated Shopify store plus eBay UK, TikTok Shop and Etsy listings, payment-gateway integration, Google Shopping and social advertising to build your own brand." },
           { step: "Europe expansion", text: "Scale into Amazon Germany, France, Italy and Spain, plus B2B wholesale distribution." },
         ],
@@ -314,7 +314,7 @@ const detail: Record<string, ServiceDetail> = {
       {
         type: "flow",
         title: "Where the margin goes",
-        intro: "Every link in the traditional export chain takes a cut. Selling direct collapses the chain — and the margin you lose along it stays with you.",
+        intro: "Every link in the traditional export chain takes a cut. Selling direct collapses the chain, and the margin you lose along it stays with you.",
         lanes: [
           {
             label: "Traditional export chain",
@@ -336,7 +336,7 @@ const detail: Record<string, ServiceDetail> = {
         eyebrow: "What you gain",
         intro: "The payoff of owning the customer relationship instead of selling a container once.",
         items: [
-          { icon: TrendingUp, metric: "30–100%", label: "Higher margins", desc: "Capture far more of the retail price by cutting out the middle layers." },
+          { icon: TrendingUp, metric: "30 to 100%", label: "Higher margins", desc: "Capture far more of the retail price by cutting out the middle layers." },
           { icon: Repeat, metric: "Recurring", label: "Revenue, not one-offs", desc: "Turn a single container sale into an ongoing direct-to-consumer business." },
           { icon: PackageCheck, metric: "Prime", label: "Fast fulfilment", desc: "FBA-ready warehousing close to customers for the next-day delivery shoppers expect." },
           { icon: Store, metric: "Your name", label: "A brand you own", desc: "Sell under your own brand instead of disappearing into someone else's supply chain." },
@@ -346,7 +346,7 @@ const detail: Record<string, ServiceDetail> = {
         type: "callout",
         variant: "gsp",
         title: "Why direct-to-consumer changes the maths",
-        text: "Moving from Manufacturer → Importer → Wholesaler → Retailer to Manufacturer → warehouse → marketplace → consumer can lift margins by 30–100%, depending on category and brand positioning.",
+        text: "Moving from Manufacturer → Importer → Wholesaler → Retailer to Manufacturer → warehouse → marketplace → consumer can lift margins by 30 to 100%, depending on category and brand positioning.",
       },
     ],
     facts: {
@@ -354,20 +354,20 @@ const detail: Record<string, ServiceDetail> = {
       factsLabel: {
         eyebrow: "Your advantage",
         title: "Why selling direct is worth it",
-        body: "Take control of your brand and customer experience — and grow profitably.",
+        body: "Take control of your brand and customer experience, and grow profitably.",
       },
       chips: ["More control", "More data", "More trust", "More loyalty", "Better margins"],
       rows: [
-        { label: "Control", value: "You set prices, offers and customer experience — you own it all." },
+        { label: "Control", value: "You set prices, offers and customer experience, and you own it all." },
         { label: "Margins", value: "Keep more of what you earn by removing marketplace fees." },
         { label: "Growth", value: "Build repeat customers and increase lifetime value." },
-        { label: "Trust", value: "Your brand, your promises — build stronger relationships." },
+        { label: "Trust", value: "Your brand, your promises: build stronger relationships." },
       ],
     },
     why: {
       eyebrow: "For every stage",
       title: "From supplier to brand owner",
-      body: "Solutions for every business size — from startup to scale.",
+      body: "Solutions for every business size, from startup to scale.",
       items: [
         { icon: Rocket, title: "Built for Startups", desc: "Low minimums, quick onboarding and expert guidance." },
         { icon: TrendingUp, title: "Higher Margins", desc: "The direct-to-consumer model helps you keep more profit." },
@@ -392,7 +392,7 @@ const detail: Record<string, ServiceDetail> = {
     cta: "/image/outsourcing-3.jpg",
     featureTag: "Vetted in Pakistan",
     intro:
-      "Your outsourced Pakistan procurement department. Tell us what you need; we find the right factory, control the quality, handle the paperwork and deliver. You deal with one accountable partner — and source from a new origin without taking on the risk yourself.",
+      "Your outsourced Pakistan procurement department. Tell us what you need; we find the right factory, control the quality, handle the paperwork and deliver. You deal with one accountable partner, and source from a new origin without taking on the risk yourself.",
     whoForLabel: "Who sources this way",
     whoFor: [
       "Retailers & department stores",
@@ -410,27 +410,27 @@ const detail: Record<string, ServiceDetail> = {
     contentLabel: {
       eyebrow: "The service",
       title: "From your brief to your door",
-      body: "A clear, controlled path from requirement to delivered goods — with quality checked at every stage.",
+      body: "A clear, controlled path from requirement to delivered goods, with quality checked at every stage.",
     },
     blocks: [
       {
         type: "steps",
         title: "How it works",
-        intro: "Seven controlled stages, one point of contact — with quality designed in rather than inspected at the end.",
+        intro: "Seven controlled stages, one point of contact, with quality designed in rather than inspected at the end.",
         items: [
-          { step: "Brief & quote", text: "We capture your requirement in full — product, fabric, thread count/GSM, sizes, quantities, certifications, target price, packaging and delivery date." },
+          { step: "Brief & quote", text: "We capture your requirement in full: product, fabric, thread count/GSM, sizes, quantities, certifications, target price, packaging and delivery date." },
           { step: "Supplier match", text: "We match your brief to the right manufacturer(s) from our vetted network." },
           { step: "Sampling & approval", text: "We arrange samples, manage revisions, and secure your written approval before any bulk commitment." },
           { step: "Price & order", text: "We negotiate competitive pricing without compromising quality, and place the order." },
-          { step: "Production monitoring", text: "We inspect at roughly 40–50% completion — catching issues while there's still time to fix them." },
+          { step: "Production monitoring", text: "We inspect at roughly 40 to 50% completion, catching issues while there's still time to fix them." },
           { step: "Final quality audit", text: "We carry out pre-shipment inspection to your agreed AQL standard. Nothing ships until it passes." },
-          { step: "Documentation & delivery", text: "We handle the paperwork and coordinate freight through to delivery — see our Logistics service." },
+          { step: "Documentation & delivery", text: "We handle the paperwork and coordinate freight through to delivery. See our Logistics service." },
         ],
       },
       {
         type: "callout",
         variant: "qa",
-        title: "Quality control isn't a step — it is the product",
+        title: "Quality control isn't a step; it is the product",
         text: "The most valuable thing we sell is the confidence that what arrives matches what you ordered: checked against your approved sample at every stage, by independent inspectors on the ground in Pakistan.",
       },
       {
@@ -460,7 +460,7 @@ const detail: Record<string, ServiceDetail> = {
         type: "outcomes",
         title: "What you actually get",
         eyebrow: "What you gain",
-        intro: "The substance behind the service — so you can buy from a new origin with confidence.",
+        intro: "The substance behind the service, so you can buy from a new origin with confidence.",
         items: [
           { icon: Handshake, metric: "One", label: "Accountable partner", desc: "A single point of contact from your brief to delivered goods." },
           { icon: ShieldCheck, metric: "AQL", label: "Guaranteed quality", desc: "Independent, multi-stage inspection against your approved sample." },
@@ -473,10 +473,10 @@ const detail: Record<string, ServiceDetail> = {
         title: "Ways to work with us",
         icons: [FlaskConical, RefreshCw, ShieldCheck, Shuffle],
         items: [
-          "Trial / single order — test Pakistan, and test us, on one defined project.",
-          "Repeat / programme sourcing — we become your ongoing Pakistan procurement function.",
-          "Quality assurance only — you have a factory; we provide independent inspection.",
-          "Hybrid — we co-manage sourcing while you keep final control.",
+          "Trial / single order: test Pakistan, and test us, on one defined project.",
+          "Repeat / programme sourcing: we become your ongoing Pakistan procurement function.",
+          "Quality assurance only: you have a factory; we provide independent inspection.",
+          "Hybrid: we co-manage sourcing while you keep final control.",
         ],
       },
     ],
@@ -485,14 +485,14 @@ const detail: Record<string, ServiceDetail> = {
       factsLabel: {
         eyebrow: "The facts",
         title: "What you actually get",
-        body: "The substance behind the service — so you can buy from a new origin with confidence.",
+        body: "The substance behind the service, so you can buy from a new origin with confidence.",
       },
       chips: ["No middle layer", "AQL pre-ship", "GSP+ coverage", "Healthcare textiles"],
       rows: [
-        { label: "Accountability", value: "A single point of contact — sourcing, sampling, QA, documentation and delivery, handled end-to-end. You're not just another number." },
+        { label: "Accountability", value: "A single point of contact for sourcing, sampling, QA, documentation and delivery, handled end-to-end. You're not just another number." },
         { label: "Quality control", value: "Independent, multi-stage inspection on the ground in Pakistan, checked against your approved sample to your agreed AQL." },
         { label: "Pricing", value: "Competitive factory pricing negotiated on your behalf, with GSP+ duty-free savings built into your landed cost where goods qualify." },
-        { label: "Range", value: "Home textiles, apparel, sportswear and healthcare textiles — from low-MOQ runs to full container volumes." },
+        { label: "Range", value: "Home textiles, apparel, sportswear and healthcare textiles, from low-MOQ runs to full container volumes." },
       ],
     },
     why: {
@@ -501,7 +501,7 @@ const detail: Record<string, ServiceDetail> = {
       body: "Give us the full assignment and we vouch for the factory, guarantee the quality and get the goods to your door.",
       items: [
         { icon: Globe2, title: "A vetted global network", desc: "Pre-screened Pakistani manufacturers across every category, matched to your spec and volume." },
-        { icon: ShieldCheck, title: "Quality on the ground", desc: "Independent, multi-stage inspection to your agreed AQL — not just the factory's word." },
+        { icon: ShieldCheck, title: "Quality on the ground", desc: "Independent, multi-stage inspection to your agreed AQL, not just the factory's word." },
         { icon: Handshake, title: "One accountable partner", desc: "A single point of accountability from first enquiry to final delivery, anywhere in the world." },
         { icon: BadgePercent, title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles, built into your price." },
       ],
@@ -520,7 +520,7 @@ const detail: Record<string, ServiceDetail> = {
     cta: "/image/logostics-3.jpg",
     featureTag: "Factory to your door",
     intro:
-      "For buyers and exporters alike — the movement and paperwork that gets product from a Pakistani factory to your door. We coordinate freight, clear customs, prepare the export documentation and set up Importer/Exporter of Record where it's needed, so a low-cost origin becomes a low-hassle one.",
+      "For buyers and exporters alike: the movement and paperwork that gets product from a Pakistani factory to your door. We coordinate freight, clear customs, prepare the export documentation and set up Importer/Exporter of Record where it's needed, so a low-cost origin becomes a low-hassle one.",
     whoForLabel: "Who this is for",
     whoFor: [
       "International buyers & importers",
@@ -544,12 +544,12 @@ const detail: Record<string, ServiceDetail> = {
       {
         type: "list",
         title: "What we handle",
-        intro: "Everything between the factory gate and your door — coordinated by one accountable partner.",
+        intro: "Everything between the factory gate and your door, coordinated by one accountable partner.",
         icons: [Truck, ShieldCheck, FileText, ClipboardCheck, Globe2],
         items: [
-          "Freight coordination — typically FOB Karachi or Port Qasim, with shipment visibility through to your market.",
-          "Customs clearance — into the EU, UK and other destination markets.",
-          "Export documentation — commercial invoices, packing lists, certificates of origin and GSP+ duty-free paperwork.",
+          "Freight coordination: typically FOB Karachi or Port Qasim, with shipment visibility through to your market.",
+          "Customs clearance: into the EU, UK and other destination markets.",
+          "Export documentation: commercial invoices, packing lists, certificates of origin and GSP+ duty-free paperwork.",
           "Importer & Exporter of Record (IOR/EOR) set-up where required.",
           "Route-to-market, representation and distribution support.",
         ],
@@ -557,7 +557,7 @@ const detail: Record<string, ServiceDetail> = {
       {
         type: "flow",
         title: "Factory to your door",
-        intro: "Coordinating freight, customs and paperwork yourself means handoffs between parties — and gaps where shipments stall. We hold every link under one roof.",
+        intro: "Coordinating freight, customs and paperwork yourself means handoffs between parties, and gaps where shipments stall. We hold every link under one roof.",
         lanes: [
           {
             label: "Coordinating it yourself",
@@ -577,19 +577,19 @@ const detail: Record<string, ServiceDetail> = {
         type: "outcomes",
         title: "What lands on your end",
         eyebrow: "What you gain",
-        intro: "A low-cost origin only pays off if it arrives cleanly — here's what you actually receive.",
+        intro: "A low-cost origin only pays off if it arrives cleanly. Here's what you actually receive.",
         items: [
           { icon: PackageCheck, metric: "Landed", label: "Not just FOB", desc: "Goods delivered to your market, not left at the port for you to manage." },
-          { icon: BadgePercent, metric: "GSP+", label: "Duty-free entry", desc: "Qualifying Pakistani textiles enter the EU duty-free — the saving built into your price." },
+          { icon: BadgePercent, metric: "GSP+", label: "Duty-free entry", desc: "Qualifying Pakistani textiles enter the EU duty-free, with the saving built into your price." },
           { icon: Clock, metric: "No delays", label: "Cleared at the border", desc: "Customs handled in advance so your shipment doesn't sit waiting." },
-          { icon: Handshake, metric: "One roof", label: "Freight + customs + docs", desc: "No juggling forwarders and brokers — one accountable partner throughout." },
+          { icon: Handshake, metric: "One roof", label: "Freight + customs + docs", desc: "No juggling forwarders and brokers, just one accountable partner throughout." },
         ],
       },
       {
         type: "callout",
         variant: "gsp",
         title: "The GSP+ advantage",
-        text: "Pakistan's preferential trade status gives qualifying Pakistani textiles duty-free entry into the EU — a direct, recurring cost saving we build into your landed price.",
+        text: "Pakistan's preferential trade status gives qualifying Pakistani textiles duty-free entry into the EU, a direct, recurring cost saving we build into your landed price.",
       },
     ],
     facts: {
@@ -614,8 +614,8 @@ const detail: Record<string, ServiceDetail> = {
       items: [
         { icon: Truck, title: "Freight, coordinated", desc: "Shipments arranged from Karachi or Port Qasim with visibility through to your destination." },
         { icon: FileText, title: "Paperwork, handled", desc: "Invoices, packing lists, certificates of origin and customs documentation prepared correctly the first time." },
-        { icon: BadgePercent, title: "GSP+ duty-free", desc: "Qualifying Pakistani textiles enter the EU duty-free — a saving we build into your landed price." },
-        { icon: Handshake, title: "One accountable partner", desc: "Freight, customs and documentation under one roof — no juggling forwarders and brokers yourself." },
+        { icon: BadgePercent, title: "GSP+ duty-free", desc: "Qualifying Pakistani textiles enter the EU duty-free, a saving we build into your landed price." },
+        { icon: Handshake, title: "One accountable partner", desc: "Freight, customs and documentation under one roof, with no juggling forwarders and brokers yourself." },
       ],
     },
     primaryCtaOverride: { label: "Talk to us about logistics", href: "/contact" },
@@ -683,7 +683,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </div>
 
       {/* ── OVERVIEW + WHO IT'S FOR ──────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -724,7 +724,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── MAIN CONTENT BLOCKS ──────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -751,9 +751,9 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                         {block.items.map((item, i) => {
                           const Icon = listIcons[i % listIcons.length];
                           const logo = block.logos?.[i];
-                          const sep = item.indexOf(" — ");
+                          const sep = item.indexOf(": ");
                           const head = sep >= 0 ? item.slice(0, sep) : null;
-                          const desc = sep >= 0 ? item.slice(sep + 3) : item;
+                          const desc = sep >= 0 ? item.slice(sep + 2) : item;
                           return (
                             <div key={item} className="flex flex-col gap-2.5">
                               {logo ? (
@@ -830,7 +830,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                   return (
                     <div
                       key={bi}
-                      className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden bg-gradient-to-br from-[#394F73] to-[#394F73] py-16 sm:py-20 lg:py-24"
+                      className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden bg-gradient-to-br from-[#394F73] to-[#394F73] py-8 lg:py-10"
                     >
                       {/* decorative dot grid */}
                       <div
@@ -1064,12 +1064,12 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
         <GrowthBanner
           image={d.growth.banner}
           title={`Where ${s.name.toLowerCase()} takes you`}
-          body="This service exists to grow your business — more reach, more orders and a stronger position in the market, quarter after quarter."
+          body="This service exists to grow your business: more reach, more orders and a stronger position in the market, quarter after quarter."
         />
       )}
 
       {/* ── THE FACTS / OPPORTUNITY ──────────────────────────────── */}
-      <section className="bg-white pt-20 lg:pt-28 pb-8 lg:pb-10">
+      <section className="bg-white pt-8 lg:pt-10 pb-8 lg:pb-10">
         <div className={PX}>
           <AnimatedSection>
             <div
@@ -1159,7 +1159,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── WHY IT WORKS ─────────────────────────────────────────── */}
-      <section className="bg-white pt-8 lg:pt-10 pb-20 lg:pb-28">
+      <section className="bg-white pt-8 lg:pt-10 pb-8 lg:pb-10">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[0.8fr_2fr] lg:gap-16">
@@ -1230,7 +1230,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── OTHER SERVICES ───────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white py-8 lg:py-10">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel label="Keep exploring" title="Our other services" color="#394F73" hideLine />

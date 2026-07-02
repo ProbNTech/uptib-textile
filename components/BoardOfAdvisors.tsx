@@ -58,7 +58,7 @@ export default function BoardOfAdvisors({ dark = false }: { dark?: boolean }) {
 
   return (
     <section
-      className="relative py-20 lg:py-28 overflow-hidden"
+      className="relative py-8 lg:py-10 overflow-hidden"
       style={{
         background: dark
           ? "#394F73"

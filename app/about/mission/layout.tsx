@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Mission",
   description:
-    "Pakistan Textile Partners' mission to transform Pakistan into a thriving tech hub through global connections, professional excellence, and cross-border collaboration.",
+    "Pak Textiles Global Partners' mission to transform Pakistan into a thriving tech hub through global connections, professional excellence, and cross-border collaboration.",
   openGraph: {
-    title: "Our Mission | Pakistan Textile Partners",
+    title: "Our Mission | Pak Textiles Global Partners",
     description:
-      "Pakistan Textile Partners' mission to transform Pakistan into a thriving tech hub through global connections, professional excellence, and cross-border collaboration.",
+      "Pak Textiles Global Partners' mission to transform Pakistan into a thriving tech hub through global connections, professional excellence, and cross-border collaboration.",
   },
 };
 

@@ -14,7 +14,7 @@ export function PolicyDoc({
 }) {
   return (
     <div className="bg-white">
-      <div className="px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24">
+      <div className="px-6 sm:px-10 lg:px-16 xl:px-24 py-8 lg:py-10">
         <div
           className={
             toc

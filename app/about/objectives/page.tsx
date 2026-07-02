@@ -19,7 +19,7 @@ const broaderImpact = [
 ];
 
 const additionalObjectives = [
-  "Host annual International and local conferences to advance Pakistan Textile Partners Mission",
+  "Host annual International and local conferences to advance Pak Textiles Global Partners Mission",
   "Provide networking opportunities for Tech professionals and businesses",
   "Participate in humanitarian projects, Promote UK-Pakistan relationship",
   "Recognize outstanding engineers, students and entrepreneurs",
@@ -38,7 +38,7 @@ export default function ObjectivesPage() {
 
       >
         <div className="flex flex-wrap items-center gap-4">
-          <ShinyButton href="/membership#apply">Join Pakistan Textile Partners</ShinyButton>
+          <ShinyButton href="/membership#apply">Join Pak Textiles Global Partners</ShinyButton>
           <Button href="/about/founder" variant="glass">Meet Our Founder</Button>
         </div>
       </PageHero>
@@ -51,11 +51,11 @@ export default function ObjectivesPage() {
             {/* Values */}
             <div className="bg-white border border-[#D8D5CF] rounded-lg p-8 border-t-4 border-t-[#78899B]">
               <h3 className="font-heading font-bold text-lg text-[#1A1A1A] mb-5">Our Values</h3>
-              <p className="text-[#3D4152] text-base leading-relaxed mb-5">Pakistan Textile Partners members share and practice a set of unique values:</p>
+              <p className="text-[#3D4152] text-base leading-relaxed mb-5">Pak Textiles Global Partners members share and practice a set of unique values:</p>
               <ul className="space-y-3">
                 {[
                   "Pursuit of excellence in the IT profession",
-                  "Commitment to traditional Pakistan values — ownership of responsibility and duty to the profession, fellow professionals, family and humanity",
+                  "Commitment to traditional Pakistan values: ownership of responsibility and duty to the profession, fellow professionals, family and humanity",
                   "Commitment to serve the community",
                   "Mutual respect and responsibility",
                   "Practice of highest ethics",
@@ -80,11 +80,11 @@ export default function ObjectivesPage() {
                   "Quarterly Cultural Events",
                   "Annual Gala Dinner & Award Program",
                   "Interacting with Policy Makers on issues pertaining to Pakistan IT Professionals",
-                  "Professional Development & Skill Growth — Enable network members to participate in Tech development, management, maintenance, and support. Create income opportunities through revenue sharing, royalties, and the Innovative Collective Startup Model.",
-                  "Collective Startups & AI Platform Development — Develop AI-driven Tech platforms, systems, and tools for organizations, sector-specific collectives, and governments. Ensure access to AI Tech and support services across all economic sectors.",
-                  "IT/AI Pakistani Services Companies — Establish Pakistani professional-owned IT/AI services companies in every country. Provide stable jobs and income opportunities for IT professionals and Tech service providers.",
-                  "Local Community IT Support & Co-working Spaces — Develop Tech Centers with co-working spaces. Facilitate IT support services to local communities through Pakistan Textile Partners.",
-                  "STEM Careers Promotion — Promote careers in Science, Technology, Engineering and Mathematics to inspire the next generation of tech leaders.",
+                  "Professional Development & Skill Growth: Enable network members to participate in Tech development, management, maintenance, and support. Create income opportunities through revenue sharing, royalties, and the Innovative Collective Startup Model.",
+                  "Collective Startups & AI Platform Development: Develop AI-driven Tech platforms, systems, and tools for organizations, sector-specific collectives, and governments. Ensure access to AI Tech and support services across all economic sectors.",
+                  "IT/AI Pakistani Services Companies: Establish Pakistani professional-owned IT/AI services companies in every country. Provide stable jobs and income opportunities for IT professionals and Tech service providers.",
+                  "Local Community IT Support & Co-working Spaces: Develop Tech Centers with co-working spaces. Facilitate IT support services to local communities through Pak Textiles Global Partners.",
+                  "STEM Careers Promotion: Promote careers in Science, Technology, Engineering and Mathematics to inspire the next generation of tech leaders.",
                   "Mentorship Programs & Knowledge Sharing",
                   "Conferences & Seminars on latest tech trends",
                 ].map((act) => (
@@ -102,7 +102,7 @@ export default function ObjectivesPage() {
       {/* Strategic Objectives Detail */}
       <Section variant="dark">
         <AnimatedSection>
-          <SectionHeader label="Strategic Objectives" title="Key Focus Areas" color="green" subtitle="Detailed objectives driving Pakistan Textile Partners' mission to empower Pakistani IT professionals and foster innovation worldwide." />
+          <SectionHeader label="Strategic Objectives" title="Key Focus Areas" color="green" subtitle="Detailed objectives driving Pak Textiles Global Partners' mission to empower Pakistani IT professionals and foster innovation worldwide." />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#78899B15", border: "1px solid #78899B30" }}>
@@ -130,7 +130,7 @@ export default function ObjectivesPage() {
                 <Monitor className="w-5 h-5 text-[#394F73]" strokeWidth={1.5} />
               </div>
               <h3 className="font-heading font-bold text-white text-base mb-2">Local Community Support</h3>
-              <p className="text-white/70 text-base leading-relaxed">Develop Tech Centers with co-working spaces. Facilitate IT support services to local communities through Pakistan Textile Partners.</p>
+              <p className="text-white/70 text-base leading-relaxed">Develop Tech Centers with co-working spaces. Facilitate IT support services to local communities through Pak Textiles Global Partners.</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ background: "#78899B15", border: "1px solid #78899B30" }}>
@@ -175,7 +175,7 @@ export default function ObjectivesPage() {
       <GlobalCTA
         label="Be Part of the Impact"
         title="Join the Movement"
-        subtitle="Become part of Pakistan Textile Partners and contribute to the objectives that are shaping the future of UK-Pakistan technology collaboration."
+        subtitle="Become part of Pak Textiles Global Partners and contribute to the objectives that are shaping the future of UK-Pakistan technology collaboration."
         primaryButtonText="Apply for Membership"
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Meet Our Founder"

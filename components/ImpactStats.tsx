@@ -20,7 +20,7 @@ const stats = [
     value: 60,
     suffix: "%",
     percent: 60,
-    description: "Textiles make up an estimated 55–60% of Pakistan's total exports — the backbone of its export economy (industry reporting, 2025).",
+    description: "Textiles make up an estimated 55 to 60% of Pakistan's total exports, the backbone of its export economy (industry reporting, 2025).",
     color: "#D8CDBA",
   },
   {
@@ -28,7 +28,7 @@ const stats = [
     value: 50,
     suffix: "%",
     percent: 50,
-    description: "Asia-Pacific accounts for roughly half of the ~US$1.2–1.3 trillion global textile market (Precedence Research, 2025).",
+    description: "Asia-Pacific accounts for roughly half of the ~US$1.2 to 1.3 trillion global textile market (Precedence Research, 2025).",
     color: "#D8CDBA",
   },
   {
@@ -36,7 +36,7 @@ const stats = [
     value: 39,
     suffix: "%",
     percent: 39,
-    description: "Cotton makes up about 39% of global textile raw-material demand — a fibre where Pakistan is a world-leading producer (industry estimates, 2025).",
+    description: "Cotton makes up about 39% of global textile raw-material demand, a fibre where Pakistan is a world-leading producer (industry estimates, 2025).",
     color: "#D8CDBA",
   },
 ];
@@ -88,7 +88,7 @@ function StatScoreCard({ stat, index }: { stat: typeof stats[0]; index: number }
           <CardContent className="p-7 flex flex-col h-full justify-between bg-transparent shadow-none border-none">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-base font-semibold text-white/90 truncate">{stat.label}</h3>
+              <h3 className="text-base font-semibold text-white/90 truncate min-w-0">{stat.label}</h3>
               <span
                 className="shrink-0 inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold"
                 style={{ background: `${stat.color}20`, color: stat.color }}

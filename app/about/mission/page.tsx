@@ -15,7 +15,7 @@ const missionPillars = [
   { icon: Users, title: "Inclusive Community", desc: "To be a place for anyone in the profession, representing all ages, career stages, demographics, and needs.", color: "#394F73" },
   { icon: Globe2, title: "Global Collaboration", desc: "To collaborate with Networks and organizations representing professionals in countries around the world to unify and advance the profession globally.", color: "#394F73" },
   { icon: Radio, title: "Timely Information", desc: "To provide relevant, consistent, and timely information to stakeholders.", color: "#394F73" },
-  { icon: Rocket, title: "Fuel Growth", desc: "Fuel business creation and expansion — address funding gaps for early-stage companies and increase opportunities for high-growth enterprises.", color: "#394F73" },
+  { icon: Rocket, title: "Fuel Growth", desc: "Fuel business creation and expansion, addressing funding gaps for early-stage companies and increasing opportunities for high-growth enterprises.", color: "#394F73" },
   { icon: Database, title: "Information Management", desc: "Complete management of client information with easy access and updates for professionals, employers, trainers and businesses so they can benefit from the most accurate and timely information available.", color: "#394F73" },
 ];
 
@@ -36,7 +36,7 @@ export default function MissionPage() {
         image="/image/banners/banner116.jpg"
       >
         <div className="flex flex-wrap items-center gap-4">
-          <ShinyButton href="/membership#apply">Join Pakistan Textile Partners</ShinyButton>
+          <ShinyButton href="/membership#apply">Join Pak Textiles Global Partners</ShinyButton>
           <Button href="/about/objectives" variant="glass">Our Objectives</Button>
         </div>
       </PageHero>
@@ -88,7 +88,7 @@ export default function MissionPage() {
       {/* Broader Mission Commitments */}
       <Section variant="light">
         <AnimatedSection>
-          <SectionHeader label="Broader Commitments" title="Investing in the Future" color="green" subtitle="Beyond our core pillars, Pakistan Textile Partners is committed to nurturing talent and inspiring the next generation of technology leaders." />
+          <SectionHeader label="Broader Commitments" title="Investing in the Future" color="green" subtitle="Beyond our core pillars, Pak Textiles Global Partners is committed to nurturing talent and inspiring the next generation of technology leaders." />
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex items-start gap-4 bg-white border border-[#D8D5CF] rounded-lg p-6 hover:shadow-md transition-all duration-300">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ background: "#78899B10", border: "1px solid #78899B25" }}>
@@ -115,7 +115,7 @@ export default function MissionPage() {
       <GlobalCTA
         label="Join Our Mission"
         title="Help Shape the Future of Tech"
-        subtitle="Join Pakistan Textile Partners and become part of the mission to transform the UK-Pakistan technology corridor into a global innovation powerhouse."
+        subtitle="Join Pak Textiles Global Partners and become part of the mission to transform the UK-Pakistan technology corridor into a global innovation powerhouse."
         primaryButtonText="Apply for Membership"
         primaryButtonLink="/membership#apply"
         secondaryButtonText="Our Objectives"

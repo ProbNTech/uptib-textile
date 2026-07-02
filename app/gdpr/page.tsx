@@ -20,9 +20,9 @@ const toc = [
 
 const dataSubjectRights = [
   { title: "Right to Access", desc: "Data subjects reserve the right to request and obtain confirmation that data is or is not being collected on them and if so, exactly what data is being collected, how, where, and for what purposes. This data can be manually requested via info@ukpaktrade.org.uk and provided in an electronic format free of charge." },
-  { title: "Right to Be Forgotten", desc: "Should data subjects at any time wish to withdraw their consent and no longer allow UK–Pakistan Trade and Investment Board Ltd (UPTIB) to store their personal data, this request can be manually made via info@ukpaktrade.org.uk. Please be sure to include the full name (including any prefixes) and email address of whom the data is in reference too, so that all data relating to the data subject in question can be accurately removed." },
-  { title: "Data Portability", desc: "Similar to the Right to Access, Data Portability requires that data subjects are able to request, obtain, and/or transfer possession of collected data at any time. As mentioned above, this data can be manually requested via info@ukpaktrade.org.uk and provided in an electronic format free of charge. Should the data subject wish to transfer the possession of the data stored by UK–Pakistan Trade and Investment Board Ltd (UPTIB), please be sure to also include the full name (including any prefixes) and the relevant contact information relating to the individual or organization whom you wish the data to be transferred to." },
-  { title: "Breach Notification", desc: "Should UK–Pakistan Trade and Investment Board Ltd (UPTIB) encounter a breach/unauthorized access of personal data that is likely to “result in a risk for the rights and freedoms of individuals”, UK–Pakistan Trade and Investment Board Ltd (UPTIB) will ensure that a notification is made within 72 hours of becoming aware of the breach." },
+  { title: "Right to Be Forgotten", desc: "Should data subjects at any time wish to withdraw their consent and no longer allow UK-Pakistan Trade and Investment Board Ltd (UPTIB) to store their personal data, this request can be manually made via info@ukpaktrade.org.uk. Please be sure to include the full name (including any prefixes) and email address of whom the data is in reference too, so that all data relating to the data subject in question can be accurately removed." },
+  { title: "Data Portability", desc: "Similar to the Right to Access, Data Portability requires that data subjects are able to request, obtain, and/or transfer possession of collected data at any time. As mentioned above, this data can be manually requested via info@ukpaktrade.org.uk and provided in an electronic format free of charge. Should the data subject wish to transfer the possession of the data stored by UK-Pakistan Trade and Investment Board Ltd (UPTIB), please be sure to also include the full name (including any prefixes) and the relevant contact information relating to the individual or organization whom you wish the data to be transferred to." },
+  { title: "Breach Notification", desc: "Should UK-Pakistan Trade and Investment Board Ltd (UPTIB) encounter a breach/unauthorized access of personal data that is likely to “result in a risk for the rights and freedoms of individuals”, UK-Pakistan Trade and Investment Board Ltd (UPTIB) will ensure that a notification is made within 72 hours of becoming aware of the breach." },
 ];
 
 const yourRights = [
@@ -37,7 +37,7 @@ const yourRights = [
 const lawfulBases = [
   { title: "Performance of a Contract", desc: "Where we are entering into a contract with you or performing our obligations under it, for example when you became a ‘paying’ member of our network." },
   { title: "Legal Obligation", desc: "Where necessary, we can comply with a legal or regulatory obligation to which we are subject." },
-  { title: "Legitimate Interests", desc: "Where it is reasonably necessary to achieve our legitimate interests, i.e. those required for running Pakistan Textile Partners as a textile trade platform connecting Pakistani manufacturers and exporters with buyers worldwide." },
+  { title: "Legitimate Interests", desc: "Where it is reasonably necessary to achieve our legitimate interests, i.e. those required for running Pak Textiles Global Partners as a textile trade platform connecting Pakistani manufacturers and exporters with buyers worldwide." },
   { title: "Specific Consent", desc: "Where you have provided specific consent to us using your personal information in a certain way, such as to send you email, text and/or contact via telephone." },
 ];
 
@@ -142,7 +142,7 @@ export default function GDPRPage() {
         <PolicySection id="security" eyebrow="Data Security" title="Security Measures">
           <PolicySub title="Safeguarding Your Data">
             <p>
-              Pakistan Textile Partners uses reasonable measures to safeguard personal information. We have
+              Pak Textiles Global Partners uses reasonable measures to safeguard personal information. We have
               put in place appropriate security measures to prevent your personal data from being
               accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In
               addition, we limit access to your personal data to only those employees, contractors or

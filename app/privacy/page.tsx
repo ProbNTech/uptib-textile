@@ -5,7 +5,7 @@ import { PolicyDoc, PolicySection, PolicySub, PolicyList } from "@/components/Po
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Pakistan Textile Partners collects, uses and protects your personal information.",
+  description: "How Pak Textiles Global Partners collects, uses and protects your personal information.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
       <PolicyDoc toc={toc}>
         <PolicySection id="introduction" eyebrow="Privacy Notice" title="Introduction">
           <p>
-            Pakistan Textile Partners is the textile division of the UK–Pakistan Trade and Investment
+            Pak Textiles Global Partners is the textile division of the UK-Pakistan Trade and Investment
             Board Ltd (UPTIB), connecting Pakistan’s textile manufacturers and exporters with buyers
             worldwide. We are committed to protecting the privacy of your Personal Information. This
             policy sets out how we collect, use and transfer your Personal Information, the security
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
             <PolicySub title="Information You Give Us Directly">
               <p>
                 For example, we may obtain information about you when you decide to become a member,
-                partner or key stakeholder of Pakistan Textile Partners or take part in one of our
+                partner or key stakeholder of Pak Textiles Global Partners or take part in one of our
                 events, or when you register to receive one of our newsletters. Pakistan Textile
                 Partners collects information directly from individuals or from the parent companies of
                 the individuals. The information could be collected through emails, phone calls, online
@@ -216,14 +216,14 @@ export default function PrivacyPage() {
             <PolicySub title="Legitimate Interests">
               <p>
                 Where it is reasonably necessary to achieve our legitimate interests, i.e. those required
-                for running Pakistan Textile Partners as a textile trade platform connecting Pakistani
+                for running Pak Textiles Global Partners as a textile trade platform connecting Pakistani
                 manufacturers and exporters with buyers worldwide. For example, to:
               </p>
               <PolicyList
                 items={[
                   "broker connections between manufacturers and buyers where there is mutual benefit in doing so",
                   "send postal communications which we think will be of interest to you;",
-                  "conduct research to better understand the priorities of our membership and to represent accurately the UK–Pakistan textile trade community.",
+                  "conduct research to better understand the priorities of our membership and to represent accurately the UK-Pakistan textile trade community.",
                   "contact you to seek your views or comments on emerging trade and market developments.",
                   "enhance, modify, personalize, or otherwise improve our services / communications for the benefit of our members, partners and stakeholders; and understand better how people interact with our website.",
                   "invite you to event(s), trade delegations or exhibitions that we may think are relevant to you in your professional capacity.",
@@ -249,7 +249,7 @@ export default function PrivacyPage() {
         <PolicySection id="marketing" eyebrow="Communications" title="Marketing Communications">
           <p>
             We may use your contact details to provide you with information about the work we do for the
-            UK–Pakistan textile trade community and additional opportunities to work together, if we
+            UK-Pakistan textile trade community and additional opportunities to work together, if we
             think it may be of interest to you.
           </p>
           <div className="space-y-8 pt-2">
@@ -270,7 +270,7 @@ export default function PrivacyPage() {
               <p>
                 We may analyze your personal information to create a profile of your interests and
                 preferences so that we can tailor and target our communications in a way that is timely
-                and relevant to you – an example of this would be where interest in a particular product
+                and relevant to you, an example of this would be where interest in a particular product
                 category or export market has been expressed by you. This allows us to be more focused,
                 efficient, and cost effective with our resources and reduces the risk of someone receiving
                 information they may find inappropriate or irrelevant.
@@ -337,7 +337,7 @@ export default function PrivacyPage() {
             </PolicySub>
             <PolicySub title="Security">
               <p>
-                Pakistan Textile Partners uses reasonable measures to safeguard personal information. We
+                Pak Textiles Global Partners uses reasonable measures to safeguard personal information. We
                 have put in place appropriate security measures to prevent your personal data from being
                 accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In
                 addition, we limit access to your personal data to only those employees, contractors or

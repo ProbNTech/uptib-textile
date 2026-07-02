@@ -44,8 +44,8 @@ const coreTerms = [
     icon: Users,
     color: "#394F73",
     items: [
-      "Membership is available to individuals or entities who meet Pakistan Textile Partners' membership criteria",
-      "Pakistan Textile Partners offers different membership tiers, each with associated benefits",
+      "Membership is available to individuals or entities who meet Pak Textiles Global Partners' membership criteria",
+      "Pak Textiles Global Partners offers different membership tiers, each with associated benefits",
       "Details of membership tiers are provided at the time of application",
       "Membership commences on the date the application is accepted",
       "Membership continues for the period specified in the membership plan unless terminated earlier",
@@ -58,15 +58,15 @@ const coreTerms = [
     color: "#394F73",
     items: [
       "Provide accurate and complete information during the application process",
-      "Comply with Pakistan Textile Partners' policies, codes of conduct, and applicable UK law",
-      "Use Pakistan Textile Partners services responsibly and not engage in conduct that harms Pakistan Textile Partners or other members",
+      "Comply with Pak Textiles Global Partners' policies, codes of conduct, and applicable UK law",
+      "Use Pak Textiles Global Partners services responsibly and not engage in conduct that harms Pak Textiles Global Partners or other members",
       "Maintain the confidentiality of any proprietary or sensitive information received during membership",
       "Responsible for maintaining the confidentiality of account credentials",
     ],
   },
   {
     number: "03",
-    title: "Pakistan Textile Partners Responsibilities",
+    title: "Pak Textiles Global Partners Responsibilities",
     icon: Shield,
     color: "#394F73",
     items: [
@@ -81,8 +81,8 @@ const coreTerms = [
     icon: XCircle,
     color: "#394F73",
     items: [
-      "Pakistan Textile Partners may terminate membership if the Member breaches these Terms, misuses services, or violates applicable law",
-      "Members may terminate their membership by giving written notice to Pakistan Textile Partners",
+      "Pak Textiles Global Partners may terminate membership if the Member breaches these Terms, misuses services, or violates applicable law",
+      "Members may terminate their membership by giving written notice to Pak Textiles Global Partners",
       "Upon termination, access to services will cease",
     ],
   },
@@ -123,13 +123,13 @@ const legalProtections = [
   },
   {
     title: "Limitation of Liability",
-    description: "Pakistan Textile Partners shall not be liable for any indirect, incidental, or consequential losses arising from membership, to the maximum extent permitted by law.",
+    description: "Pak Textiles Global Partners shall not be liable for any indirect, incidental, or consequential losses arising from membership, to the maximum extent permitted by law.",
     icon: Shield,
     color: "#394F73",
   },
   {
     title: "Intellectual Property",
-    description: "All intellectual property related to the Pakistan Textile Partners website, branding, content, and services are owned by Pakistan Textile Partners or its licensors.",
+    description: "All intellectual property related to the Pak Textiles Global Partners website, branding, content, and services are owned by Pak Textiles Global Partners or its licensors.",
     icon: Lock,
     color: "#394F73",
   },
@@ -141,7 +141,7 @@ const legalProtections = [
   },
   {
     title: "Dispute Resolution",
-    description: "Disputes shall be resolved through the Pakistan Textile Partners Arbitration Framework or in the courts located within England and Wales.",
+    description: "Disputes shall be resolved through the Pak Textiles Global Partners Arbitration Framework or in the courts located within England and Wales.",
     icon: Globe2,
     color: "#394F73",
   },
@@ -156,12 +156,12 @@ const legalProtections = [
 /* ââ FAQs ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 const faqs = [
   {
-    q: "Who is eligible for Pakistan Textile Partners membership?",
-    a: "Membership is available to individuals aged 24 years or older, or entities who meet Pakistan Textile Partners' membership criteria. By becoming a member, you confirm that you meet the age requirement.",
+    q: "Who is eligible for Pak Textiles Global Partners membership?",
+    a: "Membership is available to individuals aged 24 years or older, or entities who meet Pak Textiles Global Partners' membership criteria. By becoming a member, you confirm that you meet the age requirement.",
   },
   {
     q: "What membership tiers are available?",
-    a: "Pakistan Textile Partners offers different membership tiers, each with associated benefits. Details of membership tiers and their specific benefits are provided at the time of application.",
+    a: "Pak Textiles Global Partners offers different membership tiers, each with associated benefits. Details of membership tiers and their specific benefits are provided at the time of application.",
   },
   {
     q: "How do I apply for membership?",
@@ -177,11 +177,11 @@ const faqs = [
   },
   {
     q: "How can I terminate my membership?",
-    a: "You may terminate your membership at any time by giving written notice to Pakistan Textile Partners. Upon termination, access to services will cease.",
+    a: "You may terminate your membership at any time by giving written notice to Pak Textiles Global Partners. Upon termination, access to services will cease.",
   },
   {
     q: "Is the non-solicitation clause enforceable?",
-    a: "Yes. During membership and for 36 months after termination, you agree not to solicit or hire any Pakistan Textile Partners employees, contractors, or personnel.",
+    a: "Yes. During membership and for 36 months after termination, you agree not to solicit or hire any Pak Textiles Global Partners employees, contractors, or personnel.",
   },
   {
     q: "How is my personal data protected?",
@@ -202,7 +202,7 @@ export default function MembershipTermsClient() {
             &amp; Conditions
           </>
         }
-        subtitle="By applying for or maintaining membership with Pakistan Textile Partners, you agree to be bound by these Terms and Conditions."
+        subtitle="By applying for or maintaining membership with Pak Textiles Global Partners, you agree to be bound by these Terms and Conditions."
         particleNetwork
       >
         <div className="flex flex-wrap items-center gap-4">
@@ -237,13 +237,13 @@ export default function MembershipTermsClient() {
             <div className="lg:col-span-3">
               <SectionHeader label="Introduction" title="Scope & Purpose" color="blue" />
               <p className="text-[#3D4152] text-lg leading-relaxed mb-5">
-                These Terms and Conditions govern your membership with the UK–Pakistan Trades & Investment Board (UPTIB). By using this website and/or applying to register as a member, you agree to abide by these Conditions.
+                These Terms and Conditions govern your membership with the UK-Pakistan Trades & Investment Board (UPTIB). By using this website and/or applying to register as a member, you agree to abide by these Conditions.
               </p>
               <p className="text-[#5A5F72] text-lg leading-relaxed mb-5">
-                These Conditions apply to all membership tiers, services, and benefits provided by Pakistan Textile Partners. If you do not agree to these Conditions, you must not use the website or apply for membership.
+                These Conditions apply to all membership tiers, services, and benefits provided by Pak Textiles Global Partners. If you do not agree to these Conditions, you must not use the website or apply for membership.
               </p>
               <p className="text-[#5A5F72] text-lg leading-relaxed">
-                All members are required to give an undertaking that they would abide by the Pakistan Textile Partners Code of Conduct. Adherence to the Code is mandatory for all members, ensuring consistency, integrity, and professionalism in our collective endeavours.
+                All members are required to give an undertaking that they would abide by the Pak Textiles Global Partners Code of Conduct. Adherence to the Code is mandatory for all members, ensuring consistency, integrity, and professionalism in our collective endeavours.
               </p>
             </div>
 
@@ -316,7 +316,7 @@ export default function MembershipTermsClient() {
       {/* ââ Code of Conduct ââââââââââââââââââââââââââââââââââââââââ */}
       <Section variant="light">
         <AnimatedSection>
-          <SectionHeader label="Code of Conduct" title="Member Code of Conduct" subtitle="All members are required to uphold these principles. The Code of Conduct is issued under the authority of the Pakistan Textile Partners Constitution and is binding on all members." color="blue" />
+          <SectionHeader label="Code of Conduct" title="Member Code of Conduct" subtitle="All members are required to uphold these principles. The Code of Conduct is issued under the authority of the Pak Textiles Global Partners Constitution and is binding on all members." color="blue" />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {conductPrinciples.map((p, i) => {
@@ -442,9 +442,9 @@ export default function MembershipTermsClient() {
               <ul className="space-y-3">
                 {[
                   { label: "Non-Exclusive", desc: "Membership is non-exclusive; you may participate in other programmes or services at your discretion." },
-                  { label: "No Partnership", desc: "Nothing in these Terms creates a partnership, joint venture, or agency relationship between you and Pakistan Textile Partners." },
-                  { label: "Non-Solicitation", desc: "During membership and for 36 months after termination, you agree not to solicit or hire Pakistan Textile Partners employees, contractors, or personnel." },
-                  { label: "Assignment", desc: "Pakistan Textile Partners may assign or transfer its rights and obligations. You may not assign or transfer without prior written consent." },
+                  { label: "No Partnership", desc: "Nothing in these Terms creates a partnership, joint venture, or agency relationship between you and Pak Textiles Global Partners." },
+                  { label: "Non-Solicitation", desc: "During membership and for 36 months after termination, you agree not to solicit or hire Pak Textiles Global Partners employees, contractors, or personnel." },
+                  { label: "Assignment", desc: "Pak Textiles Global Partners may assign or transfer its rights and obligations. You may not assign or transfer without prior written consent." },
                   { label: "Survival", desc: "Provisions related to confidentiality, intellectual property, and indemnity survive termination of membership." },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-2.5">
@@ -465,9 +465,9 @@ export default function MembershipTermsClient() {
                 {[
                   { label: "Restrictions on Use", desc: "You agree not to misuse our services, including unauthorised use of intellectual property, unlawful activities, or spamming." },
                   { label: "Cookies", desc: "Our website uses cookies to improve your experience and analyse traffic. Continued use constitutes consent." },
-                  { label: "Third-Party Links", desc: "Our website may contain links to third-party websites. Pakistan Textile Partners is not responsible for third-party content." },
+                  { label: "Third-Party Links", desc: "Our website may contain links to third-party websites. Pak Textiles Global Partners is not responsible for third-party content." },
                   { label: "Marketing Consent", desc: "By joining, you consent to receiving marketing communications. You can opt-out at any time via the unsubscribe link." },
-                  { label: "Amendments", desc: "Pakistan Textile Partners may update these Terms from time to time. Members will be notified of material changes; continued use constitutes acceptance." },
+                  { label: "Amendments", desc: "Pak Textiles Global Partners may update these Terms from time to time. Members will be notified of material changes; continued use constitutes acceptance." },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-2.5">
                     <BadgeCheck className="w-4 h-4 text-[#394F73] mt-0.5 flex-shrink-0" strokeWidth={2} />
@@ -512,7 +512,7 @@ export default function MembershipTermsClient() {
               <Link href="/privacy" className="text-[#394F73] hover:underline">Privacy Policy</Link>{" "}
               and{" "}
               <Link href="/terms" className="text-[#394F73] hover:underline">Terms &amp; Conditions</Link>,
-              constitute the entire agreement between you and Pakistan Textile Partners regarding your membership.
+              constitute the entire agreement between you and Pak Textiles Global Partners regarding your membership.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <ShinyButton href="/membership#apply">Apply for Membership</ShinyButton>
@@ -529,7 +529,7 @@ export default function MembershipTermsClient() {
         <AnimatedSection>
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-[#5A5F72] text-sm leading-relaxed">
-              <span className="font-semibold text-[#1A1A1A]">UK–Pakistan Trades & Investment Board (UPTIB)</span>
+              <span className="font-semibold text-[#1A1A1A]">UK-Pakistan Trades & Investment Board (UPTIB)</span>
               <br />
               134-136 Westbourne Terrace, London, W2 6QB, United Kingdom
               <br />
@@ -542,7 +542,7 @@ export default function MembershipTermsClient() {
 
       {/* ââ CTA ââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
       <GlobalCTA
-        label="Join Pakistan Textile Partners"
+        label="Join Pak Textiles Global Partners"
         title="Ready to Become a Member?"
         subtitle="Apply for membership and join the UK-Pakistan technology corridor. Our team will review your application within 5 business days."
         primaryButtonText="Apply Now"

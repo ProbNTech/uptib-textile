@@ -83,7 +83,7 @@ export default function PartnerSolutionsSection() {
 
   return (
     <section
-      className="relative z-[1] py-20 lg:py-28 bg-white overflow-hidden"
+      className="relative z-[1] py-8 lg:py-10 bg-white overflow-hidden"
       aria-labelledby="industries-heading"
     >
       <div
@@ -100,7 +100,7 @@ export default function PartnerSolutionsSection() {
           <SectionHeader
             label="Made in Pakistan"
             title="Pakistani industries & their best products"
-            subtitle="A snapshot of what Pakistan's textile industries do best — from export-grade towelling and private-label apparel to performance sportswear, medical uniforms and full-service sourcing."
+            subtitle="A snapshot of what Pakistan's textile industries do best, from export-grade towelling and private-label apparel to performance sportswear, medical uniforms and full-service sourcing."
             color="green"
           />
 

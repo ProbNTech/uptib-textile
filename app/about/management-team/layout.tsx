@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Management Team",
   description:
-    "Pakistan Textile Partners' leadership structure, board of directors, advisory forum, and executive team driving strategic direction.",
+    "Pak Textiles Global Partners' leadership structure, board of directors, advisory forum, and executive team driving strategic direction.",
   openGraph: {
-    title: "Management Team | Pakistan Textile Partners",
+    title: "Management Team | Pak Textiles Global Partners",
     description:
-      "Pakistan Textile Partners' leadership structure, board of directors, advisory forum, and executive team driving strategic direction.",
+      "Pak Textiles Global Partners' leadership structure, board of directors, advisory forum, and executive team driving strategic direction.",
   },
 };
 
