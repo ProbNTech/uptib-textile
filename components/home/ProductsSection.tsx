@@ -67,7 +67,7 @@ const productCards: ProductCard[] = [
   {
     name: "Private-Label Apparel",
     tagline: "OEM hoodies, shirts & uniforms",
-    image: "/image/textile/apparel/skirts-1.jpg",
+    image: "/image/textile/apparel/private-label-apparel-home-product-section.jpg",
     icon: Shirt,
     accent: "#DC2626",
     href: "/products/apparel-accessories/fashion-basics-loungewear",
@@ -75,7 +75,7 @@ const productCards: ProductCard[] = [
   {
     name: "Medical Scrubs & Uniforms",
     tagline: "Scrubs, lab coats & patient gowns",
-    image: "/image/textile/healthcare/medical-uniform.jpg",
+    image: "/image/textile/healthcare/medical-uniform-home-product-section.jpg",
     icon: Stethoscope,
     accent: "#DC2626",
     href: "/products/healthcare-textile/scrubs-medical-uniforms",

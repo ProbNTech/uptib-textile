@@ -54,7 +54,7 @@ const access = [
 const rights = [
   {
     title: "Right of Access",
-    desc: "You have a right to request access to the personal data that we hold about you. You also have the right to request a copy of the information we hold about you, and we will provide you with this unless legal exceptions apply. If you want to access your information, please send a description of the information you want to see and proof of your identity by email: info@ukpaktrade.org.uk",
+    desc: "You have a right to request access to the personal data that we hold about you. You also have the right to request a copy of the information we hold about you, and we will provide you with this unless legal exceptions apply. If you want to access your information, please send a description of the information you want to see and proof of your identity by email: info@pak-textiles.com",
   },
   {
     title: "Right to Correction",
@@ -296,8 +296,8 @@ export default function PrivacyPage() {
           </div>
           <p className="pt-2">
             If you want to exercise any of the above rights, please email us at{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">
-              info@ukpaktrade.org.uk
+            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">
+              info@pak-textiles.com
             </a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
             further information and/or evidence of identity. We will endeavor to respond fully to all
@@ -365,8 +365,8 @@ export default function PrivacyPage() {
           <p>
             For any questions about this Privacy Policy or our treatment of your Personal Information,
             please contact{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">
-              info@ukpaktrade.org.uk
+            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">
+              info@pak-textiles.com
             </a>
             .
           </p>

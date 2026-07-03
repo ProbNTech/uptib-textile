@@ -115,7 +115,7 @@ const jsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "general enquiry",
-    email: "info@ukpaktrade.org.uk",
+    email: "info@pak-textiles.com",
     telephone: "+44 7920 55 0000",
   },
 };

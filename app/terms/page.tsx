@@ -96,7 +96,7 @@ const termsSections = [
       "8.3 Rights and obligations under the Terms which by their nature should survive will remain in full effect after termination or expiration of the Terms.",
       "8.4 The Website may contain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Such forward-looking statements may include statements regarding market expectations and opportunities, expectations about financials, research and development and strategies, statements concerning UK-Pakistan Trade and Investment Board Ltd (UPTIB) roadmaps, market share growth, and product and service development and introduction, and our continuous evaluation of the competitiveness of our product and service offerings. These forward-looking statements are just predictions and involve risks and uncertainties. Actual results may differ materially from results discussed in the forward-looking statements. Factors that may cause such a difference include risks related to adverse changes in general economic conditions, failure to reduce costs, lack of success in technical advancements, the timely development, production and acceptance of new products and services, and UK-Pakistan Trade and Investment Board Ltd (UPTIB) ability to compete in a highly competitive and rapidly changing marketplace.",
       "8.5 Any express waiver or failure to exercise promptly any right under the Terms will not create a continuing waiver or any expectation of non-enforcement. If any provision of the Terms is held invalid by any law or regulation of any government, or by any court or arbitrator, the parties agree that such provision will be replaced with a new provision that accomplishes the original business purpose, and the other provisions of the Terms will remain in full force and effect.",
-      "8.6 Framing or embedding of Our Site on other websites is not permitted without Our express written permission. Please contact Us at info@ukpaktrade.org.uk for further information.",
+      "8.6 Framing or embedding of Our Site on other websites is not permitted without Our express written permission. Please contact Us at info@pak-textiles.com for further information.",
       "8.7 You may not link to Our Site from any other site the main content of which contains material that:",
     ],
     listItems: [
@@ -187,7 +187,7 @@ const termsSections = [
     number: "14",
     title: "Contacting Us",
     content: [
-      "14.7 To contact Us, please email Us at info@ukpaktrade.org.uk or using any of the methods provided on Our contact page.",
+      "14.7 To contact Us, please email Us at info@pak-textiles.com or using any of the methods provided on Our contact page.",
     ],
   },
   {
@@ -197,7 +197,7 @@ const termsSections = [
     content: [
       "15.7 If We have your contact details, we may from time to time send you important notices by email. Such notices may relate to matters including, but not limited to, service changes and changes to these Terms and Conditions.",
       "15.8 We will never send you marketing emails of any kind without your express consent. If you do give such consent, you may opt out at any time. All marketing emails sent by Us include an unsubscribe link. If you opt out of receiving emails from Us at any time, it may take up to 10 business days for Us to comply with your request. During that time, you may continue to receive emails from Us.",
-      "15.9 For questions or complaints about communications from Us (including, but not limited to marketing emails), please contact Us at info@ukpaktrade.org.uk",
+      "15.9 For questions or complaints about communications from Us (including, but not limited to marketing emails), please contact Us at info@pak-textiles.com",
     ],
   },
   {

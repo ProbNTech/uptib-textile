@@ -19,14 +19,14 @@ const toc = [
 ];
 
 const dataSubjectRights = [
-  { title: "Right to Access", desc: "Data subjects reserve the right to request and obtain confirmation that data is or is not being collected on them and if so, exactly what data is being collected, how, where, and for what purposes. This data can be manually requested via info@ukpaktrade.org.uk and provided in an electronic format free of charge." },
-  { title: "Right to Be Forgotten", desc: "Should data subjects at any time wish to withdraw their consent and no longer allow UK-Pakistan Trade and Investment Board Ltd (UPTIB) to store their personal data, this request can be manually made via info@ukpaktrade.org.uk. Please be sure to include the full name (including any prefixes) and email address of whom the data is in reference too, so that all data relating to the data subject in question can be accurately removed." },
-  { title: "Data Portability", desc: "Similar to the Right to Access, Data Portability requires that data subjects are able to request, obtain, and/or transfer possession of collected data at any time. As mentioned above, this data can be manually requested via info@ukpaktrade.org.uk and provided in an electronic format free of charge. Should the data subject wish to transfer the possession of the data stored by UK-Pakistan Trade and Investment Board Ltd (UPTIB), please be sure to also include the full name (including any prefixes) and the relevant contact information relating to the individual or organization whom you wish the data to be transferred to." },
+  { title: "Right to Access", desc: "Data subjects reserve the right to request and obtain confirmation that data is or is not being collected on them and if so, exactly what data is being collected, how, where, and for what purposes. This data can be manually requested via info@pak-textiles.com and provided in an electronic format free of charge." },
+  { title: "Right to Be Forgotten", desc: "Should data subjects at any time wish to withdraw their consent and no longer allow UK-Pakistan Trade and Investment Board Ltd (UPTIB) to store their personal data, this request can be manually made via info@pak-textiles.com. Please be sure to include the full name (including any prefixes) and email address of whom the data is in reference too, so that all data relating to the data subject in question can be accurately removed." },
+  { title: "Data Portability", desc: "Similar to the Right to Access, Data Portability requires that data subjects are able to request, obtain, and/or transfer possession of collected data at any time. As mentioned above, this data can be manually requested via info@pak-textiles.com and provided in an electronic format free of charge. Should the data subject wish to transfer the possession of the data stored by UK-Pakistan Trade and Investment Board Ltd (UPTIB), please be sure to also include the full name (including any prefixes) and the relevant contact information relating to the individual or organization whom you wish the data to be transferred to." },
   { title: "Breach Notification", desc: "Should UK-Pakistan Trade and Investment Board Ltd (UPTIB) encounter a breach/unauthorized access of personal data that is likely to “result in a risk for the rights and freedoms of individuals”, UK-Pakistan Trade and Investment Board Ltd (UPTIB) will ensure that a notification is made within 72 hours of becoming aware of the breach." },
 ];
 
 const yourRights = [
-  { title: "Right of Access", desc: "You have a right to request access to the personal data that we hold about you. You also have the right to request a copy of the information we hold about you, and we will provide you with this unless legal exceptions apply. If you want to access your information, please send a description of the information you want to see and proof of your identity by email: info@ukpaktrade.org.uk" },
+  { title: "Right of Access", desc: "You have a right to request access to the personal data that we hold about you. You also have the right to request a copy of the information we hold about you, and we will provide you with this unless legal exceptions apply. If you want to access your information, please send a description of the information you want to see and proof of your identity by email: info@pak-textiles.com" },
   { title: "Right to Correction", desc: "We shall update, archive or securely delete information if it goes out of date. You have the right to have inaccurate or incomplete information we hold about you corrected." },
   { title: "Right to Restrict Use", desc: "You have a right to ask us to restrict the processing of some or all your personal information if there is a disagreement about its accuracy or we’re not lawfully allowed to use it." },
   { title: "Right of Erasure", desc: "You may ask us to delete some or all your personal information and in certain cases, and subject to certain exceptions; we will do so as far as we are required to. In many cases, we will anonymize that information, rather than delete it." },
@@ -94,7 +94,7 @@ export default function GDPRPage() {
           </div>
           <p className="pt-2">
             If you want to exercise any of the above rights, please email us at{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">info@ukpaktrade.org.uk</a>{" "}
+            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">info@pak-textiles.com</a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
             further information and/or evidence of identity. We will endeavor to respond fully to all
             requests within 10 working days of your request, however if we are unable to do so we will
@@ -155,7 +155,7 @@ export default function GDPRPage() {
           <p>
             For any questions about this policy or our treatment of your Personal Information, please
             contact{" "}
-            <a href="mailto:info@ukpaktrade.org.uk" className="font-medium text-[#394F73] underline underline-offset-2">info@ukpaktrade.org.uk</a>.
+            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">info@pak-textiles.com</a>.
           </p>
         </PolicySection>
       </PolicyDoc>
