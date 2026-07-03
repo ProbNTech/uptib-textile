@@ -9,7 +9,7 @@ export const siteConfig = {
   portalUrl: process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.ukpaktrade.org.uk",
   description:
     "Pak Textiles Global Partners connects Pakistan's textile manufacturing to global buyers and markets: home textile, apparel, sportswear and healthcare textiles, with sourcing, outsourcing, marketing and warehousing services.",
-  email: "info@ukpaktrade.org.uk",
+  email: "info@pak-textiles.com",
   phone: "0044 7920 55 0000",
   social: {
     facebook: "https://facebook.com/ukpaktrade",

@@ -20,7 +20,7 @@ const faqCategories = [
       { question: "Who can become a member?", answer: "Membership is open to Pakistani textile manufacturers and exporters who want to reach international buyers, as well as buyers sourcing dependable Pakistani product. Both individuals and companies can apply." },
       { question: "What benefits do members receive?", answer: "A profile in the membership directory, B2B matchmaking with global buyers, market intelligence, priority handling and preferential rates on our services, and invitations to relevant trade delegations and exhibitions." },
       { question: "How do I apply for membership?", answer: "Apply through our website. Complete the application form, and our team will review your application and get back to you, typically within 5 to 10 business days." },
-      { question: "Can I cancel my membership?", answer: "Yes, you can cancel your membership at any time by contacting our membership team at info@ukpaktrade.org.uk." },
+      { question: "Can I cancel my membership?", answer: "Yes, you can cancel your membership at any time by contacting our membership team at info@pak-textiles.com." },
     ],
   },
   {
