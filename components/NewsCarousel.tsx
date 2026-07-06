@@ -40,7 +40,7 @@ export default function NewsCarousel({ articles, light = false, cta }: NewsCarou
         }}
       >
         {articles.map((article, i) => (
-          <SwiperSlide key={article.slug}>
+          <SwiperSlide key={article.slug} className="!h-auto">
             <NewsCard {...article} index={i} light={light} />
           </SwiperSlide>
         ))}

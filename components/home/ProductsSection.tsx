@@ -67,7 +67,7 @@ const productCards: ProductCard[] = [
   {
     name: "Private-Label Apparel",
     tagline: "OEM hoodies, shirts & uniforms",
-    image: "/image/textile/apparel/private-label-apparel-home-product-section.jpg",
+    image: "/image/textile/apparel/private-label-apparel-home-product-section.avif",
     icon: Shirt,
     accent: "#DC2626",
     href: "/products/apparel-accessories/fashion-basics-loungewear",

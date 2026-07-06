@@ -188,19 +188,19 @@ function MarketHero() {
             {heroStats.map((stat, i) => (
               <motion.div
                 key={stat.eyebrow}
-                className="flex items-center gap-4 px-6 py-6 lg:px-7 lg:py-8"
+                className="flex items-center gap-3 px-4 py-5 sm:gap-4 sm:px-6 sm:py-6 lg:px-7 lg:py-8"
                 initial={shouldReduceMotion ? {} : { opacity: 0, y: 14 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               >
-                <stat.icon className="w-9 h-9 shrink-0 text-[#B3AA98]" strokeWidth={1.5} aria-hidden />
-                <div className="leading-tight">
+                <stat.icon className="w-8 h-8 shrink-0 text-[#B3AA98] sm:w-9 sm:h-9" strokeWidth={1.5} aria-hidden />
+                <div className="min-w-0 leading-tight">
                   <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-white/55">
                     {stat.eyebrow}
                   </p>
-                  <p className="text-xl sm:text-2xl font-extrabold text-white">{stat.value}</p>
-                  <p className="text-xs text-white/60">{stat.sub}</p>
+                  <p className="text-xl sm:text-2xl font-extrabold text-white break-words">{stat.value}</p>
+                  <p className="text-xs text-white/60 break-words">{stat.sub}</p>
                 </div>
               </motion.div>
             ))}

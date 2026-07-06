@@ -72,6 +72,44 @@ export function NewsClient({ articles }: { articles: Article[] }) {
     setSlide((s) => (s + dir + featured.length) % featured.length);
 
   const [subscribed, setSubscribed] = useState(false);
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterError, setNewsletterError] = useState("");
+  const [subscribing, setSubscribing] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setNewsletterError("");
+
+    const email = newsletterEmail.trim();
+    if (!email) {
+      setNewsletterError("Email address is required.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setNewsletterError("Please enter a valid email address.");
+      return;
+    }
+
+    setSubscribing(true);
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, source: "News page newsletter" }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Subscription failed. Please try again.");
+      }
+      setSubscribed(true);
+    } catch (err) {
+      setNewsletterError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setSubscribing(false);
+    }
+  };
 
   const scrollToLatest = () => {
     document.getElementById("latest")?.scrollIntoView({ behavior: "smooth" });
@@ -427,25 +465,39 @@ export function NewsClient({ articles }: { articles: Article[] }) {
                 </div>
               ) : (
                 <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSubscribed(true);
-                  }}
-                  className="flex flex-col sm:flex-row items-stretch gap-3 w-full lg:w-auto"
+                  onSubmit={handleSubscribe}
+                  noValidate
+                  className="w-full lg:w-auto"
                 >
-                  <input
-                    type="email"
-                    required
-                    placeholder="Your email address"
-                    aria-label="Your email address"
-                    className="flex-1 lg:w-72 rounded-full px-5 py-3 bg-white text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#78899B] text-sm"
-                  />
-                  <button
-                    type="submit"
-                    className="rounded-full bg-[#78899B] hover:bg-[#B3AA98] text-white font-semibold px-7 py-3 transition-colors whitespace-nowrap"
-                  >
-                    Subscribe
-                  </button>
+                  <div className="flex flex-col sm:flex-row items-stretch gap-3">
+                    <input
+                      type="email"
+                      value={newsletterEmail}
+                      onChange={(e) => {
+                        setNewsletterEmail(e.target.value);
+                        if (newsletterError) setNewsletterError("");
+                      }}
+                      placeholder="Your email address"
+                      aria-label="Your email address"
+                      aria-invalid={!!newsletterError}
+                      disabled={subscribing}
+                      className={`flex-1 lg:w-72 rounded-full px-5 py-3 bg-white text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:outline-none focus:ring-2 text-sm disabled:opacity-60 ${
+                        newsletterError ? "ring-2 ring-[#DC2626]" : "focus:ring-[#78899B]"
+                      }`}
+                    />
+                    <button
+                      type="submit"
+                      disabled={subscribing}
+                      className="rounded-full bg-[#78899B] hover:bg-[#B3AA98] text-white font-semibold px-7 py-3 transition-colors whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                      {subscribing ? "Subscribing..." : "Subscribe"}
+                    </button>
+                  </div>
+                  {newsletterError && (
+                    <p className="mt-2 text-sm font-medium text-[#F3C6C6] px-2">
+                      {newsletterError}
+                    </p>
+                  )}
                 </form>
               )}
             </div>

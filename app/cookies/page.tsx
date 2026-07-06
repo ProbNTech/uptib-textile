@@ -193,7 +193,7 @@ export default function CookiesPage() {
           <p>
             For any questions about this Cookies Policy or our treatment of your Personal Information,
             please contact{" "}
-            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">info@pak-textiles.com</a>.
+            <a href="mailto:info@pak-textiles.com" className="whitespace-nowrap font-medium text-[#394F73] underline underline-offset-2">info@pak-textiles.com</a>.
           </p>
         </PolicySection>
       </PolicyDoc>

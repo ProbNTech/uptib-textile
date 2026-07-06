@@ -94,7 +94,7 @@ export default function GDPRPage() {
           </div>
           <p className="pt-2">
             If you want to exercise any of the above rights, please email us at{" "}
-            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">info@pak-textiles.com</a>{" "}
+            <a href="mailto:info@pak-textiles.com" className="whitespace-nowrap font-medium text-[#394F73] underline underline-offset-2">info@pak-textiles.com</a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
             further information and/or evidence of identity. We will endeavor to respond fully to all
             requests within 10 working days of your request, however if we are unable to do so we will
@@ -155,7 +155,7 @@ export default function GDPRPage() {
           <p>
             For any questions about this policy or our treatment of your Personal Information, please
             contact{" "}
-            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">info@pak-textiles.com</a>.
+            <a href="mailto:info@pak-textiles.com" className="whitespace-nowrap font-medium text-[#394F73] underline underline-offset-2">info@pak-textiles.com</a>.
           </p>
         </PolicySection>
       </PolicyDoc>

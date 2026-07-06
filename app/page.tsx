@@ -457,7 +457,7 @@ export default function Home() {
               align="center"
             />
 
-            <div className="relative mt-16">
+            <div className="relative mt-8 sm:mt-16">
               {/* connecting rail + chevrons (desktop) */}
               <div className="hidden lg:block absolute left-[10%] right-[10%] top-[46px] h-px bg-[#D8C8A8]/70" aria-hidden="true" />
               {[20, 40, 60, 80].map((pos) => (
@@ -471,7 +471,7 @@ export default function Home() {
                 </div>
               ))}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-14 gap-x-6 lg:gap-x-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-6 sm:gap-y-14 gap-x-6 lg:gap-x-5">
                 {processChain.map((step, i) => {
                   const Icon = step.icon;
                   return (

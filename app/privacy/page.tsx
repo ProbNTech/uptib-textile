@@ -296,7 +296,7 @@ export default function PrivacyPage() {
           </div>
           <p className="pt-2">
             If you want to exercise any of the above rights, please email us at{" "}
-            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">
+            <a href="mailto:info@pak-textiles.com" className="whitespace-nowrap font-medium text-[#394F73] underline underline-offset-2">
               info@pak-textiles.com
             </a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
@@ -365,7 +365,7 @@ export default function PrivacyPage() {
           <p>
             For any questions about this Privacy Policy or our treatment of your Personal Information,
             please contact{" "}
-            <a href="mailto:info@pak-textiles.com" className="font-medium text-[#394F73] underline underline-offset-2">
+            <a href="mailto:info@pak-textiles.com" className="whitespace-nowrap font-medium text-[#394F73] underline underline-offset-2">
               info@pak-textiles.com
             </a>
             .
