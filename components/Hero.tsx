@@ -1,14 +1,18 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { LazyVideo } from "@/components/LazyVideo";
 
-const BANNER_VIDEO = "/videos/hero-video.mp4";
-const BANNER_POSTER = "/videos/banner-poster.jpg";
+// YouTube-hosted background loop (controls hidden, muted, auto-looping).
+const YT_VIDEO_ID = "ItE42gsHueY";
+const YT_EMBED_SRC =
+  `https://www.youtube-nocookie.com/embed/${YT_VIDEO_ID}` +
+  `?autoplay=1&mute=1&controls=0&loop=1&playlist=${YT_VIDEO_ID}` +
+  `&playsinline=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3` +
+  `&disablekb=1&fs=0`;
 
 const slides = [
   {
@@ -42,7 +46,6 @@ const SLIDE_DURATION_MS = 7000;
 export function Hero() {
   const prefersReducedMotion = useReducedMotion();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const id = window.setInterval(() => {
@@ -55,16 +58,25 @@ export function Hero() {
 
   return (
     <section className="relative z-[2] w-full min-h-[420px] sm:min-h-[500px] lg:h-screen overflow-hidden bg-[#0B0F1A]">
-      {/* Single looping background video — lazy-mounted */}
-      <LazyVideo
-        ref={videoRef}
-        src={BANNER_VIDEO}
-        poster={BANNER_POSTER}
-        rootMargin="0px"
-        aria-hidden="true"
-        className="absolute inset-0 z-0 w-full h-full"
-        style={{ position: "absolute", inset: 0 }}
-      />
+      {/* Looping YouTube background — controls hidden, cropped to fill */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+      >
+        <iframe
+          title="Background video"
+          src={YT_EMBED_SRC}
+          allow="autoplay; encrypted-media; picture-in-picture"
+          referrerPolicy="strict-origin-when-cross-origin"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-0"
+          style={{
+            width: "100vw",
+            height: "56.25vw", // 16:9 → keep width, derive height
+            minWidth: "177.78vh", // 16:9 → keep height, derive width
+            minHeight: "100vh",
+          }}
+        />
+      </div>
 
       {/* Content wrapper */}
       <div className="relative z-20 flex items-center justify-center text-center lg:h-screen px-6 sm:px-10 lg:px-16 xl:px-20 pt-14 sm:pt-16 lg:pt-0 pb-14 lg:pb-0">
