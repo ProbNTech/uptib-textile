@@ -72,10 +72,10 @@ export function NewsCard({ slug, title, category, date, image, excerpt, index = 
               {date}
             </p>
           </div>
-          <h2 className={`line-clamp-2 text-lg leading-5 font-semibold tracking-tight ${light ? "text-white" : "text-[#1A1A1A]"}`}>
+          <h2 className={`line-clamp-2 min-h-10 text-lg leading-5 font-semibold tracking-tight ${light ? "text-white" : "text-[#1A1A1A]"}`}>
             {title}
           </h2>
-          <p className={`line-clamp-3 text-sm ${light ? "text-white/85" : "text-[#3D4152]/70"}`}>
+          <p className={`line-clamp-3 min-h-[3.75rem] text-sm leading-5 ${light ? "text-white/85" : "text-[#3D4152]/70"}`}>
             {excerpt}
           </p>
         </div>
