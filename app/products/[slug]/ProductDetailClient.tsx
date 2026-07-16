@@ -209,7 +209,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
             <SectionLabel
               label="Market outlook"
               title="What's driving demand"
-              body={`The trends pulling global buyers toward ${p.name.toLowerCase()}, and where the opportunity is growing.`}
+              body={`The trends pulling global buyers towards ${p.name.toLowerCase()}, and where the opportunity is growing.`}
               color="#394F73"
               hideLine
             />

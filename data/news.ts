@@ -234,7 +234,7 @@ export const articles: Article[] = [
     slug: "global-textile-export-trends-2026",
     title: "Global Textile Export Trends 2026",
     excerpt:
-      "The global textile market is heading toward US$2 trillion. Where the growth is, and how Pakistan is positioned across the EU, USA and emerging markets.",
+      "The global textile market is heading towards US$2 trillion. Where the growth is, and how Pakistan is positioned across the EU, USA and emerging markets.",
     date: "2026-02-01",
     displayDate: "1 February 2026",
     author: "Pak Textiles Global Partners",
@@ -246,7 +246,7 @@ export const articles: Article[] = [
       {
         heading: "The global picture",
         paragraphs: [
-          "The global textile and apparel market is on a steady path toward the US$2 trillion mark, driven by a growing world population, the continued shift of fashion and home retail online, and rising demand for technical and performance textiles. After several volatile years, buyers in 2026 are prioritising supply-chain resilience and predictable lead times alongside price, and that is reshaping where the world's textiles are made.",
+          "The global textile and apparel market is on a steady path towards the US$2 trillion mark, driven by a growing world population, the continued shift of fashion and home retail online, and rising demand for technical and performance textiles. After several volatile years, buyers in 2026 are prioritising supply-chain resilience and predictable lead times alongside price, and that is reshaping where the world's textiles are made.",
           "Three structural trends define the year: a continued diversification away from single-country sourcing, tighter expectations on sustainability and traceability, and the steady growth of low-MOQ private-label demand from online-first brands. Each of these plays to the strengths of established, vertically integrated origins like Pakistan.",
         ],
       },
@@ -272,7 +272,7 @@ export const articles: Article[] = [
       {
         heading: "Outlook for buyers",
         paragraphs: [
-          "For buyers across the EU, USA, Middle East and UK, 2026 is a year to lock in resilient, accountable sourcing relationships rather than chase the lowest quoted price. Pakistan's combination of scale, cotton quality, vertical integration and (for EU-landed product) GSP+ duty-free access makes it a structurally competitive origin as global demand climbs toward US$2 trillion.",
+          "For buyers across the EU, USA, Middle East and UK, 2026 is a year to lock in resilient, accountable sourcing relationships rather than chase the lowest quoted price. Pakistan's combination of scale, cotton quality, vertical integration and (for EU-landed product) GSP+ duty-free access makes it a structurally competitive origin as global demand climbs towards US$2 trillion.",
           "The practical route in is unchanged: send a clear brief, approve samples in writing, and let an accountable partner manage quality and delivery to your market.",
         ],
       },

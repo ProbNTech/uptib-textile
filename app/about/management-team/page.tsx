@@ -92,7 +92,7 @@ const orgChart = [
     level: "Senior Management",
     responsibilities: [
       "Assist the Chairman in providing strategic direction and vision",
-      "Guide Forum activities toward fulfilling its mission and goals",
+      "Guide Forum activities towards fulfilling its mission and goals",
       "Manage specific functional areas and departmental operations",
       "Drive innovation and process improvement within departments",
       "Report on departmental performance and milestones",
@@ -432,12 +432,12 @@ export default function ManagementTeamPage() {
         id="advisory-forum" variant="alt" title="Advisory Forum"
         desc="Expert guidance and strategic counsel from distinguished leaders across technology, business, and policy."
         image="/image/Leadership%20Governance/Advisory_Council.webp" imageAlt="Pak Textiles Global Partners Advisory Forum" imageLeft={false}
-        responsibilities={["Provide expert guidance on technology trends", "Offer strategic counsel on program development", "Facilitate connections with key stakeholders", "Review and provide feedback on initiatives", "Serve as ambassadors for Pak Textiles Global Partners' mission", "Contribute to thought leadership"]}
+        responsibilities={["Provide expert guidance on technology trends", "Offer strategic counsel on programme development", "Facilitate connections with key stakeholders", "Review and provide feedback on initiatives", "Serve as ambassadors for Pak Textiles Global Partners' mission", "Contribute to thought leadership"]}
         colorIdx={2}
       />
       <GovernanceSection
         id="executive-leadership" variant="light" title="Executive Leadership"
-        desc="Day-to-day operations and strategic execution of Pak Textiles Global Partners' programs, initiatives, and member services."
+        desc="Day-to-day operations and strategic execution of Pak Textiles Global Partners' programmes, initiatives, and member services."
         image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=90&auto=format&fit=crop" imageAlt="Pak Textiles Global Partners Executive Leadership team collaborating" imageLeft={true}
         responsibilities={["Execute strategic plans and initiatives", "Manage day-to-day operations and delivery", "Build and maintain stakeholder partnerships", "Oversee financial management and resources", "Provide regular reporting to the Board", "Ensure compliance with policies and procedures"]}
         colorIdx={0}

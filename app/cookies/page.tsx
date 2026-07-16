@@ -22,7 +22,7 @@ const toc = [
 
 const cookieTypes = [
   { title: "Necessary", desc: "These cookies are necessary in order to allow the Site to work correctly. They enable you to access the Site, move around, and access different services, features, and tools. Examples include remembering previous actions (e.g. entered text) when navigating back to a page in the same session. These cookies cannot be disabled." },
-  { title: "Functionality", desc: "These cookies remember your settings and preferences and the choices you make (such as language or regional preferences) in order to help us personalize your experience and offer you enhanced functionality and content." },
+  { title: "Functionality", desc: "These cookies remember your settings and preferences and the choices you make (such as language or regional preferences) in order to help us personalise your experience and offer you enhanced functionality and content." },
   { title: "Security", desc: "These cookies can help us identify and prevent security risks. They may be used to store your session information to prevent others from changing your password without your login information." },
   { title: "Performance", desc: "These cookies can help us collect information to help us understand how you use our Site, for example whether you have viewed messages or specific pages and how long you spent on each page. This helps us improve the performance of our Site." },
   { title: "Analytics", desc: "These cookies collect information regarding your activity on our Site to help us learn more about which features are popular with our users and how our Site can be improved." },
@@ -30,7 +30,7 @@ const cookieTypes = [
 ];
 
 const additionalDetails = [
-  { title: "User Preference", desc: "We set these to customize your website preferences, for example dismissing a popup not to show again in your browser or setting your live chat preferences." },
+  { title: "User Preference", desc: "We set these to customise your website preferences, for example dismissing a popup not to show again in your browser or setting your live chat preferences." },
   { title: "Analytics", desc: "We use these to understand how the website is being used in order to improve the user experience. Your user data is all anonymous. You can find out more about Google’s position on privacy as regards its analytics service at http://www.google.co.uk/intl/en/analytics/privacyoverview.html" },
   { title: "AdWords", desc: "Using Google AdWords code, we are able to see which pages helped lead to contact form submissions. This allows us to make better use of our paid search budget. We also log when users view specific pages, allowing us to provide targeted advertising in the future." },
   { title: "LinkedIn", desc: "We use LinkedIn advertising conversion tracking and re-targeting pixels, which allows us to collect or receive information from your website and elsewhere on the internet and use that information to provide measurement services and target future advertising." },
@@ -41,8 +41,8 @@ const additionalDetails = [
 const rights = [
   { title: "Right to Access", desc: "Data subjects reserve the right to request and obtain confirmation that data is or is not being collected on them and if so, exactly what data is being collected, how, where, and for what purposes. This data can be manually requested via info@pak-textiles.com and provided in an electronic format free of charge." },
   { title: "Right to Be Forgotten", desc: "Should data subjects at any time wish to withdraw their consent and no longer allow UK-Pakistan Trade and Investment Board Ltd (UPTIB) to store their personal data, this request can be manually made via info@pak-textiles.com. Please be sure to include the full name (including any prefixes) and email address of whom the data is in reference too, so that all data relating to the data subject in question can be accurately removed." },
-  { title: "Data Portability", desc: "Similar to the Right to Access, Data Portability requires that data subjects are able to request, obtain, and/or transfer possession of collected data at any time. As mentioned above, this data can be manually requested via info@pak-textiles.com and provided in an electronic format free of charge. Should the data subject wish to transfer the possession of the data stored by UK-Pakistan Trade and Investment Board Ltd (UPTIB), please be sure to also include the full name (including any prefixes) and the relevant contact information relating to the individual or organization whom you wish the data to be transferred to." },
-  { title: "Breach Notification", desc: "Should UK-Pakistan Trade and Investment Board Ltd (UPTIB) encounter a breach/unauthorized access of personal data that is likely to “result in a risk for the rights and freedoms of individuals”, UK-Pakistan Trade and Investment Board Ltd (UPTIB) will ensure that a notification is made within 72 hours of becoming aware of the breach." },
+  { title: "Data Portability", desc: "Similar to the Right to Access, Data Portability requires that data subjects are able to request, obtain, and/or transfer possession of collected data at any time. As mentioned above, this data can be manually requested via info@pak-textiles.com and provided in an electronic format free of charge. Should the data subject wish to transfer the possession of the data stored by UK-Pakistan Trade and Investment Board Ltd (UPTIB), please be sure to also include the full name (including any prefixes) and the relevant contact information relating to the individual or organisation whom you wish the data to be transferred to." },
+  { title: "Breach Notification", desc: "Should UK-Pakistan Trade and Investment Board Ltd (UPTIB) encounter a breach/unauthorised access of personal data that is likely to “result in a risk for the rights and freedoms of individuals”, UK-Pakistan Trade and Investment Board Ltd (UPTIB) will ensure that a notification is made within 72 hours of becoming aware of the breach." },
 ];
 
 export default function CookiesPage() {
@@ -64,7 +64,7 @@ export default function CookiesPage() {
             information that you submit to UK-Pakistan Trade and Investment Board Ltd (UPTIB).
           </p>
           <p>
-            Some of our web pages utilize “cookies” and other tracking technologies. Cookies are small
+            Some of our web pages utilise “cookies” and other tracking technologies. Cookies are small
             pieces of data, stored in text files, that are stored on your computer or other devices when
             websites are loaded in a browser. They are widely used to ‘remember’ you and your
             preferences, either for a single visit (through a ‘session cookie’) or for multiple repeat
@@ -77,12 +77,12 @@ export default function CookiesPage() {
             Tracking technologies may record information such as Internet domain and host names; Internet
             protocol (IP) addresses; browser software and operating system types; clickstream patterns;
             and dates and times that our site is accessed. Our use of cookies and other tracking
-            technologies allows us to improve our web site and your web experience. We may also analyze
+            technologies allows us to improve our web site and your web experience. We may also analyse
             information that does not contain personal information for trends and statistics.
           </p>
           <p>
             Cookies are text files placed on your computer to collect standard internet log information
-            and visitor behavior information. This information is used to track visitor use of the website
+            and visitor behaviour information. This information is used to track visitor use of the website
             and to compile statistical reports on website activity. For further information visit{" "}
             <a href="https://www.aboutcookies.org" target="_blank" rel="noopener noreferrer" className="font-medium text-[#394F73] underline underline-offset-2">www.aboutcookies.org</a>{" "}
             or{" "}
@@ -97,7 +97,7 @@ export default function CookiesPage() {
 
         <PolicySection id="links" eyebrow="External Links" title="Links to Other Websites">
           <p>
-            Our website may contain links to other websites run by other organizations. This policy
+            Our website may contain links to other websites run by other organisations. This policy
             applies only to our website, so we encourage you to read the privacy statements on the other
             websites you visit. We cannot be responsible for the privacy policies and practices of other
             websites even if you access them using links from our website.

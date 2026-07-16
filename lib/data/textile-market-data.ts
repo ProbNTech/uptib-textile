@@ -334,7 +334,7 @@ export const europeFootprints: CountryFootprint[] = [
   },
   {
     country: "Romania", flag: "ro", value: "$40 to 50M / yr", textileShare: "Trade scaling to $500M",
-    note: "Expanding rapidly within a broader bilateral partnership scaling toward $500M in total trade.",
+    note: "Expanding rapidly within a broader bilateral partnership scaling towards $500M in total trade.",
     segments: [
       { label: "House linens (bed, bath & kitchen)", value: "$17.3M" },
       { label: "Mattresses & technical bedding", value: "$7.68M" },

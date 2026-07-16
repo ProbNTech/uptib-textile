@@ -204,7 +204,7 @@ const detail: Record<string, ServiceDetail> = {
       chips: ["Retailers", "Sourcing houses", "Importers", "E-commerce brands"],
       rows: [
         { label: "The market", value: "The UK alone imports ~US$2.27bn from Pakistan a year, over three-quarters of it textiles, within a UK textile & apparel market worth ~US$63.6bn, one of many destinations." },
-        { label: "Where demand is", value: "Sustainable & ethical sourcing, private-label manufacturing, premium home living and e-commerce-led buying are the trends pulling buyers toward Pakistan." },
+        { label: "Where demand is", value: "Sustainable & ethical sourcing, private-label manufacturing, premium home living and e-commerce-led buying are the trends pulling buyers towards Pakistan." },
         { label: "Who's buying", value: "Major retailers, fashion buyers and sourcing houses, home-textile importers, hospitality procurement and Amazon / e-commerce brands." },
         { label: "Your edge", value: "Certified, competitively-priced production plus GSP+ duty-free access, presented to buyers who are ready to order." },
       ],

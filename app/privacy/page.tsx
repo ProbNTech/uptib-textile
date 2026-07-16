@@ -66,7 +66,7 @@ const rights = [
   },
   {
     title: "Right of Erasure",
-    desc: "You may ask us to delete some or all your personal information and in certain cases, and subject to certain exceptions; we will do so as far as we are required to. In many cases, we will anonymize that information, rather than delete it.",
+    desc: "You may ask us to delete some or all your personal information and in certain cases, and subject to certain exceptions; we will do so as far as we are required to. In many cases, we will anonymise that information, rather than delete it.",
   },
   {
     title: "Right to Data Portability",
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
           <p>The personal information we collect, store and use might include:</p>
           <p>
             Your name and contact details (including postal address, email address and telephone
-            number). The name of the organization you work for and the events you attend. We do not
+            number). The name of the organisation you work for and the events you attend. We do not
             collect sensitive data about you, other than dietary / any special access requirements for
             the purposes of event planning.
           </p>
@@ -225,7 +225,7 @@ export default function PrivacyPage() {
                   "send postal communications which we think will be of interest to you;",
                   "conduct research to better understand the priorities of our membership and to represent accurately the UK-Pakistan textile trade community.",
                   "contact you to seek your views or comments on emerging trade and market developments.",
-                  "enhance, modify, personalize, or otherwise improve our services / communications for the benefit of our members, partners and stakeholders; and understand better how people interact with our website.",
+                  "enhance, modify, personalise, or otherwise improve our services / communications for the benefit of our members, partners and stakeholders; and understand better how people interact with our website.",
                   "invite you to event(s), trade delegations or exhibitions that we may think are relevant to you in your professional capacity.",
                 ]}
               />
@@ -268,7 +268,7 @@ export default function PrivacyPage() {
             </PolicySub>
             <PolicySub title="Building Profiles">
               <p>
-                We may analyze your personal information to create a profile of your interests and
+                We may analyse your personal information to create a profile of your interests and
                 preferences so that we can tailor and target our communications in a way that is timely
                 and relevant to you, an example of this would be where interest in a particular product
                 category or export market has been expressed by you. This allows us to be more focused,
@@ -300,7 +300,7 @@ export default function PrivacyPage() {
               info@pak-textiles.com
             </a>{" "}
             and clearly state in the email subject line: RIGHTS REQUEST. We may be required to ask for
-            further information and/or evidence of identity. We will endeavor to respond fully to all
+            further information and/or evidence of identity. We will endeavour to respond fully to all
             requests within 10 working days of your request, however if we are unable to do so we will
             contact you with reasons for the delay.
           </p>
@@ -325,21 +325,21 @@ export default function PrivacyPage() {
             <PolicySub title="Technical & Organisational Controls">
               <p>
                 When you give us personal information, we take steps to ensure that appropriate technical
-                and organizational controls are in place to protect it.
+                and organisational controls are in place to protect it.
               </p>
               <p>
                 Any sensitive information such as credit or debit card details is encrypted and protected
                 with the following software 128 Bit encryption on SSL. When you are on a secure page, a
                 lock icon will appear on the bottom of web browsers such as Microsoft Internet Explorer.
                 This information will be stored by a third party. We have carried out due diligence with
-                the organization.
+                the organisation.
               </p>
             </PolicySub>
             <PolicySub title="Security">
               <p>
                 Pak Textiles Global Partners uses reasonable measures to safeguard personal information. We
                 have put in place appropriate security measures to prevent your personal data from being
-                accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In
+                accidentally lost, used or accessed in an unauthorised way, altered or disclosed. In
                 addition, we limit access to your personal data to only those employees, contractors or
                 agents who have a legitimate business need to have access to that data. The employees,
                 contractors or agents will process your personal data in accordance with our instructions.

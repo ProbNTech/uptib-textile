@@ -103,7 +103,7 @@ export async function POST(req: NextRequest) {
       const rows: Array<[string, unknown]> = HEADERS.map((h, i) => [h, values[i]]);
 
       await sendAlert({
-        subject: `New membership application — ${body.orgName?.trim() || "(unknown org)"}`,
+        subject: `New membership application - ${body.orgName?.trim() || "(unknown org)"}`,
         text: renderRowsText(rows),
         html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New membership application submitted via the Pak Textiles Global Partners website.</p>${renderRowsHtml(
           rows

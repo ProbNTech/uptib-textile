@@ -52,7 +52,7 @@ export const textileManufacturers: DirectoryCompany[] = [
     location: "Faisalabad, Pakistan",
     country: "Pakistan",
     description:
-      "Faisalabad buying house and quality-assurance partner with 22+ years' experience serving 30+ countries, offering fiber-to-garment vertical sourcing with factory-direct pricing, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners.",
+      "Faisalabad buying house and quality-assurance partner with 22+ years' experience serving 30+ countries, offering fibre-to-garment vertical sourcing with factory-direct pricing, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners.",
     logoUrl: "/image/textile/logos/utex-international.png",
     websiteUrl: "https://www.utexinternational.com/en",
     source: "Member",
