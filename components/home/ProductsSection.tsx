@@ -102,7 +102,7 @@ export default function ProductsSection() {
                 The textiles<br className="hidden lg:block" /> we present
               </h2>
               <p className="mt-4 text-base leading-relaxed text-white/85">
-                From yarn to fashion, we supply quality you can trust — bedding, apparel, sportswear and healthcare textiles.
+                From yarn to fashion, we supply quality you can trust: bedding, apparel, sportswear and healthcare textiles.
               </p>
               <Link
                 href="/products"

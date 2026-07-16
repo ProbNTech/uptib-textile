@@ -531,7 +531,7 @@ export default function MembershipClient() {
                     Apply for membership
                   </h2>
                   <p className="mt-4 text-base leading-relaxed text-white/80">
-                    Take the next step toward global growth. Complete the application and join the supplier pool
+                    Take the next step towards global growth. Complete the application and join the supplier pool
                     buyers source from.
                   </p>
                 </div>

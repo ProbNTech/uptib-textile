@@ -255,7 +255,7 @@ export default function MembershipSection() {
                   layout: "lg:col-start-2 lg:row-start-2",
                 },
                 {
-                  title: "Fiber-to-garment sourcing",
+                  title: "Fibre-to-garment sourcing",
                   tagline: "Factory-direct sourcing & QC",
                   image: "/image/textile/apparel/skirts-dresses/01.jpg",
                   icon: Scissors,

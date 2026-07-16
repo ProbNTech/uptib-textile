@@ -60,7 +60,7 @@ function escapeHtml(value: unknown): string {
     .replace(/'/g, "&#39;");
 }
 
-const EMPTY_PLACEHOLDER = "—";
+const EMPTY_PLACEHOLDER = "-";
 
 function displayValue(v: unknown): string {
   if (v === undefined || v === null) return EMPTY_PLACEHOLDER;

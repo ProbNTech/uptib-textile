@@ -598,7 +598,7 @@ export default function Home() {
               </div>
               <div className="lg:col-span-3">
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed mb-4">
-                  The global textile market is commonly valued at around US$1.2 to 1.3 trillion, with forecasts toward US$1.6 to 2 trillion over the next decade. Asia-Pacific accounts for roughly half of it, and cotton is the single largest material at about 39% of the market.
+                  The global textile market is commonly valued at around US$1.2 to 1.3 trillion, with forecasts towards US$1.6 to 2 trillion over the next decade. Asia-Pacific accounts for roughly half of it, and cotton is the single largest material at about 39% of the market.
                 </p>
                 <p className="text-[#5A5F72] text-base sm:text-lg leading-relaxed">
                   Pakistan is a global leader in cotton-based products and home textiles, exporting to the EU (its largest bloc), the USA (its largest single market), the Middle East, the UK and beyond, with GSP+ duty-free access into the EU a genuine competitive edge.

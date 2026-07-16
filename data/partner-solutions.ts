@@ -85,7 +85,7 @@ export const partnerSolutions: PartnerSolution[] = [
   {
     id: 5,
     slug: "utex-fiber-to-garment-sourcing",
-    name: "Fiber-to-garment sourcing",
+    name: "Fibre-to-garment sourcing",
     tagline: "Factory-direct sourcing & QA, 30+ countries.",
     description:
       "Faisalabad buying house with 22+ years' experience, offering factory-direct pricing, on-ground QC, the GSP+ advantage and WRAP / OEKO-TEX / GOTS / SEDEX-certified partners across home, hospitality, medical and apparel textiles.",

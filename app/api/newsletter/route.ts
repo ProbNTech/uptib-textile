@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
       ];
 
       await sendAlert({
-        subject: `New newsletter subscriber — ${cleanEmail}`,
+        subject: `New newsletter subscriber - ${cleanEmail}`,
         text: renderRowsText(rows),
         html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New newsletter subscription via the Pak Textiles Global Partners website.</p>${renderRowsHtml(
           rows

@@ -10,10 +10,10 @@ import { Button } from "@/components/Button";
 import { Target, Award, Users, Globe2, Radio, Rocket, TrendingUp, Zap, Handshake, Briefcase, Database, GraduationCap, FlaskConical } from "lucide-react";
 
 const missionPillars = [
-  { icon: Target, title: "Apex Organization", desc: "To be the Apex organization for IT professionals in business, government, and people.", color: "#394F73" },
+  { icon: Target, title: "Apex Organisation", desc: "To be the Apex organisation for IT professionals in business, government, and people.", color: "#394F73" },
   { icon: Award, title: "Represent Professionals", desc: "To represent IT professionals in all aspects of their profession and increase the value of the profession.", color: "#394F73" },
   { icon: Users, title: "Inclusive Community", desc: "To be a place for anyone in the profession, representing all ages, career stages, demographics, and needs.", color: "#394F73" },
-  { icon: Globe2, title: "Global Collaboration", desc: "To collaborate with Networks and organizations representing professionals in countries around the world to unify and advance the profession globally.", color: "#394F73" },
+  { icon: Globe2, title: "Global Collaboration", desc: "To collaborate with Networks and organisations representing professionals in countries around the world to unify and advance the profession globally.", color: "#394F73" },
   { icon: Radio, title: "Timely Information", desc: "To provide relevant, consistent, and timely information to stakeholders.", color: "#394F73" },
   { icon: Rocket, title: "Fuel Growth", desc: "Fuel business creation and expansion, addressing funding gaps for early-stage companies and increasing opportunities for high-growth enterprises.", color: "#394F73" },
   { icon: Database, title: "Information Management", desc: "Complete management of client information with easy access and updates for professionals, employers, trainers and businesses so they can benefit from the most accurate and timely information available.", color: "#394F73" },
