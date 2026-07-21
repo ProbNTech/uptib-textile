@@ -106,7 +106,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </div>
 
       {/* ── OVERVIEW + WHO SOURCES IT ────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-pt sec-pb-tight">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -148,7 +148,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
 
       {/* ── THE CATALOGUE — product mosaic (mirrors the sub-category pages) ── */}
       {categoryMosaics[p.slug] && (
-        <section className="bg-white pb-8 lg:pb-10">
+        <section className="bg-white sec-pb">
           <div className={PX}>
             <AnimatedSection>
               <SectionLabel
@@ -158,7 +158,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
                 color="#394F73"
                 hideLine
               />
-              <div className="mt-10">
+              <div className="mt-6">
                 <MosaicGallery items={categoryMosaics[p.slug]} />
               </div>
             </AnimatedSection>
@@ -172,7 +172,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       {p.showcase ? (
         <ProductShowcase showcase={p.showcase} categorySlug={p.slug} />
       ) : (
-        <section className="bg-white py-8 lg:py-10">
+        <section className="bg-white sec-y">
           <div className={PX}>
             <AnimatedSection>
               <SectionLabel
@@ -203,7 +203,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       )}
 
       {/* ── WHAT'S DRIVING DEMAND ────────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-y">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -237,7 +237,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── THE FACTS ────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
+      <section className="relative overflow-hidden bg-[#394F73] sec-y">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -284,7 +284,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── WHY PAKISTAN LEADS HERE ──────────────────────────────── */}
-      <section className="bg-white pt-8 lg:pt-10 pb-8 lg:pb-10">
+      <section className="bg-white sec-pt sec-pb-tight">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
@@ -324,7 +324,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── OTHER CATEGORIES ─────────────────────────────────────── */}
-      <section className="bg-white pt-8 lg:pt-10 pb-8 lg:pb-10">
+      <section className="bg-white sec-pt-tight sec-pb-tight">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel

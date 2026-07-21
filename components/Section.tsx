@@ -30,7 +30,7 @@ export function Section({ children, variant = "light", className = "", id, patte
           }}
         />
       )}
-      <Container className="relative py-10 lg:py-14">{children}</Container>
+      <Container className="relative sec-y-tight">{children}</Container>
     </section>
   );
 }

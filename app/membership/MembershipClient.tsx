@@ -224,7 +224,7 @@ export default function MembershipClient() {
       </div>
 
       {/* ── WHY MEMBERSHIP MATTERS ───────────────────────────────── */}
-      <section id="benefits" className="bg-white py-8 lg:py-10 scroll-mt-24">
+      <section id="benefits" className="bg-white sec-y scroll-mt-24">
         <div className={PX}>
           <AnimatedSection animation="blur-in">
             <div className="grid gap-12 lg:grid-cols-[1fr_2.6fr] lg:gap-16 xl:gap-20">
@@ -271,7 +271,7 @@ export default function MembershipClient() {
       </section>
 
       {/* ── MEMBERSHIP TIERS ─────────────────────────────────────── */}
-      <section id="tiers" className="bg-[#F6F2EA] py-8 lg:py-10 scroll-mt-24">
+      <section id="tiers" className="bg-[#F6F2EA] sec-y scroll-mt-24">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -367,7 +367,7 @@ export default function MembershipClient() {
       </section>
 
       {/* ── WHO CAN JOIN ─────────────────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-y">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -403,7 +403,7 @@ export default function MembershipClient() {
       </section>
 
       {/* ── GLOBAL REACH (dark stats band) ───────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
+      <section className="relative overflow-hidden bg-[#394F73] sec-y">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -459,10 +459,10 @@ export default function MembershipClient() {
       </section>
 
       {/* ── JOURNEY / HOW IT WORKS ───────────────────────────────── */}
-      <section className="bg-[#F6F2EA] py-8 lg:py-10">
+      <section className="bg-[#F6F2EA] sec-y">
         <div className={PX}>
           <AnimatedSection>
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <SectionLabel
                 label="Your journey with Pak Textiles Global Partners"
                 title="From application to your first introductions"
@@ -506,7 +506,7 @@ export default function MembershipClient() {
       {/* ── APPLY (membership form) ──────────────────────────────── */}
       <section
         id="apply"
-        className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10 scroll-mt-24"
+        className="relative overflow-hidden bg-[#394F73] sec-y scroll-mt-24"
       >
         {/* Dot texture (matches the dark green stats band) */}
         <div
@@ -636,7 +636,7 @@ export default function MembershipClient() {
 
       {/* ── FAQs (home-page accordion design) ────────────────────── */}
       <section
-        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
+        className="relative z-[1] sec-y overflow-hidden bg-white"
         aria-labelledby="membership-faq-heading"
       >
         <div className={cn("relative", PX)}>

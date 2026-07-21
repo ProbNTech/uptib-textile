@@ -83,7 +83,7 @@ export default function PartnerSolutionsSection() {
 
   return (
     <section
-      className="relative z-[1] py-8 lg:py-10 bg-white overflow-hidden"
+      className="relative z-[1] sec-y bg-white overflow-hidden"
       aria-labelledby="industries-heading"
     >
       <div

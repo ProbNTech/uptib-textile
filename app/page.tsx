@@ -83,7 +83,7 @@ export default function Home() {
 
       {/* 2. ABOUT */}
       <section
-        className="relative py-8 lg:py-10 overflow-hidden bg-white"
+        className="relative sec-y overflow-hidden bg-white"
         aria-labelledby="about-heading"
       >
         <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
@@ -121,7 +121,7 @@ export default function Home() {
       {/* 5. OUR SERVICES — exporter-facing grid */}
       <section
         id="services"
-        className="relative z-[1] pt-8 lg:pt-10 pb-8 lg:pb-10 scroll-mt-24 overflow-hidden bg-[#F6F2EA]"
+        className="relative z-[1] sec-pt sec-pb scroll-mt-24 overflow-hidden bg-[#F6F2EA]"
         aria-labelledby="services-heading"
       >
         <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -144,7 +144,7 @@ export default function Home() {
                 accentColor="#394F73"
                 centered
               />
-              <p className="mt-10 text-[#5A5F72] text-base sm:text-lg leading-relaxed max-w-7xl mx-auto text-center">
+              <p className="mt-6 text-[#5A5F72] text-base sm:text-lg leading-relaxed max-w-7xl mx-auto text-center">
                 As a top ten global exporter and a powerhouse in cotton and home textiles, Pakistan possesses immense manufacturing capability. We unlock this potential for you. By professionalising your supply chain, optimising your digital commerce, and managing end-to-end logistics including targeted international marketing and strategic global warehousing. We provide Pakistani exporters seamless, frictionless access to major buyers across the UK, EU, USA, and the Middle East.
               </p>
             </div>
@@ -155,7 +155,7 @@ export default function Home() {
       {/* For International buyers */}
       <section
         id="services"
-        className="relative z-[1] py-8 lg:py-10 scroll-mt-24 overflow-hidden bg-[#394F73]"
+        className="relative z-[1] sec-y scroll-mt-24 overflow-hidden bg-[#394F73]"
         aria-labelledby="services-heading"
       >
         <div className="px-6 sm:px-10 lg:px-16 xl:px-20">
@@ -228,7 +228,7 @@ export default function Home() {
                   </div>
 
                   {/* MIDDLE — numbered cards */}
-                  <div className="mt-10 lg:mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="mt-6 lg:mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                     {internationalBuyersData.map((item, i) => {
                       const Icon = item.icon!;
                       return (
@@ -299,7 +299,7 @@ export default function Home() {
 
       {/* 5. MORE FROM Pak Textiles Global Partners */}
       <section
-        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
+        className="relative z-[1] sec-y overflow-hidden bg-white"
         aria-labelledby="more-heading"
       >
         {/* <Image src="/image/textile/home/cushions-throws-collection/12.jpg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 object-cover" /> */}
@@ -378,7 +378,7 @@ export default function Home() {
 
       {/* 6b. RAW MATERIAL — cotton field, fixed "shutter" parallax band */}
       <section
-        className="relative isolate flex min-h-[70vh] items-center overflow-hidden py-24 lg:py-32"
+        className="relative isolate flex min-h-[70vh] items-center overflow-hidden py-16 lg:py-20"
         style={{
           backgroundImage: "url('/image/cotton.jpg')",
           backgroundSize: "cover",
@@ -432,7 +432,7 @@ export default function Home() {
 
       {/* 6c. FROM FIELD TO FABRIC — production value chain */}
       <section
-        className="relative z-[1] pt-8 lg:pt-10 pb-8 lg:pb-10 overflow-hidden bg-[var(--cream)]"
+        className="relative z-[1] sec-pt sec-pb-tight overflow-hidden bg-[var(--cream)]"
         aria-labelledby="process-heading"
       >
         {/* decorative cotton illustration — top left */}
@@ -457,7 +457,7 @@ export default function Home() {
               align="center"
             />
 
-            <div className="relative mt-8 sm:mt-16">
+            <div className="relative mt-6 sm:mt-8">
               {/* connecting rail + chevrons (desktop) */}
               <div className="hidden lg:block absolute left-[10%] right-[10%] top-[46px] h-px bg-[#D8C8A8]/70" aria-hidden="true" />
               {[20, 40, 60, 80].map((pos) => (
@@ -517,7 +517,7 @@ export default function Home() {
             </div>
 
             {/* feature bar */}
-            <div className="mt-16 mx-auto max-w-5xl rounded-2xl border border-[#E7DCC6] bg-white/60 backdrop-blur-sm shadow-[0_10px_30px_-18px_rgba(45,64,97,0.25)]">
+            <div className="mt-8 mx-auto max-w-5xl rounded-2xl border border-[#E7DCC6] bg-white/60 backdrop-blur-sm shadow-[0_10px_30px_-18px_rgba(45,64,97,0.25)]">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#E7DCC6]">
                 {[
                   { icon: Leaf, l1: "Sustainable", l2: "at every step" },
@@ -543,7 +543,7 @@ export default function Home() {
 
       {/* 9. IMPACT STATS — Corridor Signals */}
       <section
-        className="relative z-[1] py-8 lg:py-10 overflow-hidden"
+        className="relative z-[1] sec-y overflow-hidden"
         style={{
           background:
             "radial-gradient(1000px circle at 100% 0%, rgba(138, 133, 124,0.20), transparent 50%), radial-gradient(900px circle at 0% 100%, rgba(138, 133, 124,0.13), transparent 50%), #394F73",
@@ -561,7 +561,7 @@ export default function Home() {
 
       {/* 10. TECH MARKET OVERVIEW — Market Intelligence */}
       <section
-        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
+        className="relative z-[1] sec-y overflow-hidden bg-white"
         aria-labelledby="market-heading"
       >
         {/* TRIAL: decorative globe — revert if not kept */}
@@ -614,7 +614,7 @@ export default function Home() {
             </div>
 
             <AnimatedSection animation="fade-up">
-              <div className="mt-10 relative overflow-hidden rounded-xl bg-gradient-to-r from-[#394F73] to-[#78899B]">
+              <div className="mt-6 relative overflow-hidden rounded-xl bg-gradient-to-r from-[#394F73] to-[#78899B]">
                 <div className="absolute inset-0 opacity-[0.05]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 0%, transparent 50%), radial-gradient(circle at 80% 50%, white 0%, transparent 50%)" }} />
                 <div className="relative px-8 sm:px-10 py-8">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
@@ -634,12 +634,12 @@ export default function Home() {
       </section>
 
       {/* PAKISTAN'S TEXTILE & TRADE INSTITUTIONS — horizontal auto-scrolling marquee */}
-      <section className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-[#F6F2EA]" aria-labelledby="network-heading">
+      <section className="relative z-[1] sec-y overflow-hidden bg-[#F6F2EA]" aria-labelledby="network-heading">
         <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "28px 28px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
           <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#394F73" align="center" />
           <div
-            className="group relative mt-10 overflow-hidden"
+            className="group relative mt-6 overflow-hidden"
             style={{
               WebkitMaskImage: "linear-gradient(to right, transparent, black 7%, black 93%, transparent)",
               maskImage: "linear-gradient(to right, transparent, black 7%, black 93%, transparent)",
@@ -667,7 +667,7 @@ export default function Home() {
 
       {/* 12. NEWS & INSIGHTS */}
       <section
-        className="relative z-[1] py-8 lg:py-10 overflow-hidden"
+        className="relative z-[1] sec-y overflow-hidden"
         style={{
           background:
             "radial-gradient(1000px circle at 0% 0%, rgba(216, 205, 186,0.13), transparent 50%), radial-gradient(900px circle at 100% 100%, rgba(140, 154, 171,0.18), transparent 50%), #394F73",

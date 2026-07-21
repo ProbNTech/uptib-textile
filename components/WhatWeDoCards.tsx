@@ -213,7 +213,7 @@ export default function WhatWeDoCards({
   return (
     <div>
       {hasHeader && (
-        <div className={`mb-8 lg:mb-10 ${centered ? "text-center" : ""}`}>
+        <div className={`mb-4 lg:mb-5 ${centered ? "text-center" : ""}`}>
           {(eyebrow || audience) && (
             <h3 className={`font-heading font-extrabold text-2xl sm:text-3xl lg:text-[2rem] leading-[1.15] tracking-tight ${light ? "text-white" : "text-[#1A1A1A]"}`}>
               {eyebrow && `${eyebrow} `}For{" "}

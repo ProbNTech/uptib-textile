@@ -683,7 +683,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </div>
 
       {/* ── OVERVIEW + WHO IT'S FOR ──────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-pt sec-pb-tight">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -724,7 +724,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── MAIN CONTENT BLOCKS ──────────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-pt-tight sec-pb">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -734,7 +734,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
               color="#394F73"
               hideLine
             />
-            <div className="space-y-12">
+            <div className="space-y-5">
               {d.blocks.map((block, bi) => {
                 if (block.type === "list") {
                   const listIcons = block.icons ?? LIST_ICONS;
@@ -830,7 +830,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                   return (
                     <div
                       key={bi}
-                      className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden bg-gradient-to-br from-[#394F73] to-[#394F73] py-8 lg:py-10"
+                      className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden bg-gradient-to-br from-[#394F73] to-[#394F73] sec-y"
                     >
                       {/* decorative dot grid */}
                       <div
@@ -850,7 +850,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
                         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                       />
                       <div className={cn("relative", PX)}>
-                        <div className="mb-9 sm:mb-11">
+                        <div className="mb-6 sm:mb-7">
                           <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#B3AA98] mb-3">
                             <Sparkles className="size-4" aria-hidden /> {block.eyebrow ?? "What you gain"}
                           </p>
@@ -1069,7 +1069,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       )}
 
       {/* ── THE FACTS / OPPORTUNITY ──────────────────────────────── */}
-      <section className="bg-white pt-8 lg:pt-10 pb-8 lg:pb-10">
+      <section className="bg-white sec-pt sec-pb-tight">
         <div className={PX}>
           <AnimatedSection>
             <div
@@ -1159,7 +1159,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── WHY IT WORKS ─────────────────────────────────────────── */}
-      <section className="bg-white pt-8 lg:pt-10 pb-8 lg:pb-10">
+      <section className="bg-white sec-pt-tight sec-pb-tight">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[0.8fr_2fr] lg:gap-16">
@@ -1230,7 +1230,7 @@ export default function ServiceDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* ── OTHER SERVICES ───────────────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-pt-tight sec-pb">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel label="Keep exploring" title="Our other services" color="#394F73" hideLine />

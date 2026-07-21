@@ -17,7 +17,7 @@ interface SectionLabelProps {
 export function SectionLabel({ label, title, body, color = "#394F73", align = "left", light = false, as: Tag = "h2", hideLine = false, bodyClassName = "" }: SectionLabelProps) {
   const alignClass = align === "center" ? "text-center" : "";
   return (
-    <div className={`mb-8 lg:mb-10 ${alignClass}`}>
+    <div className={`sec-head ${alignClass}`}>
       <div className="flex items-center gap-3 mb-4" style={align === "center" ? { justifyContent: "center" } : {}}>
         <p className="text-sm font-bold uppercase tracking-[0.22em]" style={{ color }}>{label}</p>
       </div>

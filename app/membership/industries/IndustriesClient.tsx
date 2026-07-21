@@ -322,7 +322,7 @@ export default function IndustriesClient() {
       </PageHero>
 
       {/* ── VALUE-CHAIN RIBBON ───────────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-pt sec-pb-tight">
         <div className={PX}>
           <AnimatedSection>
             <div className="mx-auto max-w-2xl text-center">
@@ -334,7 +334,7 @@ export default function IndustriesClient() {
               </h2>
             </div>
 
-            <div className="relative mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-5">
+            <div className="relative mx-auto mt-6 grid max-w-5xl grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-5">
               <div
                 className="absolute left-[10%] right-[10%] top-7 hidden h-px bg-gradient-to-r from-transparent via-[#78899B]/30 to-transparent md:block"
                 aria-hidden
@@ -360,7 +360,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* ── SECTOR MOSAIC ────────────────────────────────────────── */}
-      <section id="sectors" className="scroll-mt-24 bg-white pb-8 lg:pb-10">
+      <section id="sectors" className="scroll-mt-24 bg-white sec-pb">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -434,7 +434,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* ── STATS BAND ───────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
+      <section className="relative overflow-hidden bg-[#394F73] sec-y">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
@@ -473,7 +473,7 @@ export default function IndustriesClient() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-10 flex flex-wrap gap-2.5">
+                <div className="mt-6 flex flex-wrap gap-2.5">
                   {markets.map((m) => (
                     <span
                       key={m.name}
@@ -504,7 +504,7 @@ export default function IndustriesClient() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/55 to-transparent" />
           </div>
-          <div className={cn("relative", PX, "py-8 lg:py-10")}>
+          <div className={cn("relative", PX, "sec-pt sec-pb-tight")}>
             <div className="max-w-xl">
               <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#394F73]">
                 Industry Directory
@@ -524,7 +524,7 @@ export default function IndustriesClient() {
         {/* Featured spotlight */}
         {featuredCompanies.length > 0 && (
           <div className="bg-white">
-            <div className={cn(PX, "pt-12 lg:pt-16")}>
+            <div className={cn(PX, "pt-4 lg:pt-6")}>
               <FeaturedSpotlight companies={featuredCompanies} />
             </div>
           </div>
@@ -574,7 +574,7 @@ export default function IndustriesClient() {
 
         {/* Closing band */}
         <div className="bg-white">
-          <div className={cn(PX, "pt-2 pb-12 lg:pb-16")}>
+          <div className={cn(PX, "pt-2 sec-pb-tight")}>
             <div className="relative overflow-hidden rounded-2xl bg-[#394F73] px-7 py-8 sm:px-10">
               <div
                 className="pointer-events-none absolute -right-6 top-1/2 hidden -translate-y-1/2 opacity-[0.18] sm:block"
@@ -618,7 +618,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
-      <section className="relative z-[1] overflow-hidden bg-white py-8 lg:py-10">
+      <section className="relative z-[1] overflow-hidden bg-white sec-pt-tight sec-pb">
         <div className={cn("relative", PX)}>
           <AnimatedSection animation="blur-in">
             <div className="grid gap-12 lg:grid-cols-[0.85fr_1.6fr] lg:gap-16">

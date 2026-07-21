@@ -29,7 +29,7 @@ export function Section({
     >
       <Container
         className={cn(
-          spacing === "tight" ? "py-12 sm:py-16" : "py-8 lg:py-10",
+          spacing === "tight" ? "py-12 sm:py-16" : "sec-y",
           containerClassName,
         )}
       >

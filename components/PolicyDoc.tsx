@@ -14,7 +14,7 @@ export function PolicyDoc({
 }) {
   return (
     <div className="bg-white">
-      <div className="px-6 sm:px-10 lg:px-16 xl:px-24 py-8 lg:py-10">
+      <div className="px-6 sm:px-10 lg:px-16 xl:px-24 sec-y">
         <div
           className={
             toc
@@ -44,7 +44,7 @@ export function PolicyDoc({
             </aside>
           )}
 
-          <div className="min-w-0 [&>section+section]:mt-16 [&>section+section]:border-t [&>section+section]:border-[#ECECE6] [&>section+section]:pt-16">
+          <div className="min-w-0 [&>section+section]:mt-10 [&>section+section]:border-t [&>section+section]:border-[#ECECE6] [&>section+section]:pt-10">
             {children}
           </div>
         </div>
