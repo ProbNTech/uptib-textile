@@ -330,7 +330,7 @@ export function PageHero({
             {/* Label */}
             {label && (
               <motion.p
-                className={`text-lg sm:text-xl font-extrabold uppercase tracking-[0.18em] mb-4 sm:mb-5 ${labelClassName || "text-[#394F73]"}`}
+                className={`text-lg sm:text-xl font-extrabold uppercase tracking-[0.18em] mb-4 sm:mb-5 ${labelClassName || "text-white"}`}
                 style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}
                 initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}

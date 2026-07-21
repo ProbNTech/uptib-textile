@@ -58,7 +58,7 @@ export default function BoardOfAdvisors({ dark = false }: { dark?: boolean }) {
 
   return (
     <section
-      className="relative py-8 lg:py-10 overflow-hidden"
+      className="relative sec-y overflow-hidden"
       style={{
         background: dark
           ? "#394F73"
@@ -84,7 +84,7 @@ export default function BoardOfAdvisors({ dark = false }: { dark?: boolean }) {
           whileInView="visible"
           viewport={{ once: true, margin: "-40px" }}
           variants={headingVariants}
-          className="text-center mb-14 lg:mb-16"
+          className="text-center mb-8 lg:mb-10"
         >
           <div className="flex items-center gap-3 mb-4 justify-center">
             <p className={`text-sm font-bold uppercase tracking-[0.22em] ${dark ? "text-[#B3AA98]" : "text-[#394F73]"}`}>

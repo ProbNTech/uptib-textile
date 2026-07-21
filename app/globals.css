@@ -152,6 +152,28 @@
   }
 }
 
+@layer components {
+  /* ──────────────────────────────────────────────────────────────────────
+     SECTION VERTICAL RHYTHM — single source of truth. Tune the numbers here
+     to adjust spacing across the whole site.
+       .sec-y        normal section padding (use when the section sits next
+                     to a DIFFERENT background)                 → 25px / 35px
+       .sec-y-tight  tighter padding for a section that touches the SAME
+                     background as its neighbour (stops the doubled padding
+                     from reading as a blank band)              → 20px / 30px
+     Split pt-/pb- variants let a single edge be tightened at a seam while the
+     opposite edge keeps normal spacing.
+       .sec-head     gap between a section's heading block and its body.
+     ────────────────────────────────────────────────────────────────────── */
+  .sec-y        { @apply py-[18px] lg:py-[28px]; }
+  .sec-pt       { @apply pt-[18px] lg:pt-[28px]; }
+  .sec-pb       { @apply pb-[18px] lg:pb-[28px]; }
+  .sec-y-tight  { @apply py-3 lg:py-5; }
+  .sec-pt-tight { @apply pt-3 lg:pt-5; }
+  .sec-pb-tight { @apply pb-3 lg:pb-5; }
+  .sec-head     { @apply mb-3.5 lg:mb-[18px]; }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

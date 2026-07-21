@@ -201,7 +201,7 @@ export default function MembershipSection() {
         {/* Content */}
         <div className="relative z-20 flex flex-col justify-center items-start h-full px-6 sm:px-10 lg:px-16 xl:px-20">
           <motion.div
-            className="w-full py-8 lg:py-10"
+            className="w-full sec-y"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
@@ -334,7 +334,7 @@ export default function MembershipSection() {
 /* ───────────── WHAT DRIVES US — Separate exported component ───────────── */
 export function WhatDrivesUs() {
   return (
-    <section className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-[#F6F2EA]">
+    <section className="relative z-[1] sec-pt-tight sec-pb overflow-hidden bg-[#F6F2EA]">
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />
       <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
         <AnimatedSection animation="blur-in">

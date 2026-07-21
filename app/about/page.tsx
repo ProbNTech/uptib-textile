@@ -128,7 +128,7 @@ export default function AboutPage() {
     <div>
       {/* ── 1. HERO — split, light, with rotating brand seal ───────── */}
       <section className="relative overflow-hidden bg-white">
-        <Container className="relative py-8 lg:py-10">
+        <Container className="relative sec-y">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Left — copy */}
             <AnimatedSection animation="slide-left">
@@ -190,7 +190,7 @@ export default function AboutPage() {
 
       {/* ── 2. CENTERED STATEMENT ──────────────────────────────────── */}
       <section className="bg-[#F6F2EA]">
-        <Container className="py-8 lg:py-10">
+        <Container className="sec-y">
           <AnimatedSection className="mx-auto max-w-4xl text-center">
             <Eyebrow>Who we are</Eyebrow>
             <p className="font-heading text-[1.6rem] font-bold leading-[1.45] text-[#1A1A1A] sm:text-[2rem] sm:leading-[1.4]">
@@ -215,7 +215,7 @@ export default function AboutPage() {
           }}
           aria-hidden
         />
-        <Container className="relative py-8 lg:py-10">
+        <Container className="relative sec-y">
           <div className="grid grid-cols-2 gap-y-12 lg:grid-cols-4">
             {homeStats.map((stat, i) => (
               <AnimatedSection
@@ -256,7 +256,7 @@ export default function AboutPage() {
                 aria-hidden
               />
             )}
-            <Container className="relative py-8 lg:py-10">
+            <Container className="relative sec-y">
               <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                 {/* Image collage */}
                 <AnimatedSection
@@ -306,8 +306,8 @@ export default function AboutPage() {
 
       {/* ── 7. HOW WE WORK ─────────────────────────────────────────── */}
       <section className="bg-white">
-        <Container className="py-8 lg:py-10">
-          <AnimatedSection className="mx-auto mb-12 max-w-2xl text-center">
+        <Container className="sec-pt-tight sec-pb">
+          <AnimatedSection className="mx-auto mb-6 max-w-2xl text-center">
             <Eyebrow>How we work</Eyebrow>
             <h2 className="font-heading text-[1.9rem] font-bold leading-[1.2] text-[#1A1A1A] sm:text-[2.4rem]">
               One accountable partner, from mill to door
@@ -349,7 +349,7 @@ export default function AboutPage() {
       {/* ── 8. BOARD OF ADVISORS (shared with home) + offices ──────── */}
       <BoardOfAdvisors dark />
 
-      <section className="bg-[#F6F2EA] pt-8 pb-8 lg:pt-10 lg:pb-10">
+      <section className="bg-[#F6F2EA] sec-y">
         <Container>
           <AnimatedSection className="mx-auto mb-10 max-w-2xl text-center">
             <Eyebrow>Where we are</Eyebrow>

@@ -86,7 +86,7 @@ export default function ProductsSection() {
   return (
     <section
       id="products"
-      className="relative z-[1] pt-8 lg:pt-10 pb-8 lg:pb-10 scroll-mt-24 overflow-hidden bg-[#394F73]"
+      className="relative z-[1] sec-pt sec-pb scroll-mt-24 overflow-hidden bg-[#394F73]"
       aria-labelledby="products-heading"
     >
       <div className="absolute inset-0 opacity-[0.05]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #FFFFFF 0.5px, transparent 0.5px)", backgroundSize: "24px 24px" }} />

@@ -154,7 +154,7 @@ export function MemberDirectory() {
   };
 
   return (
-    <section className="py-8 lg:py-12" style={{ backgroundColor: "#EEECEA" }}>
+    <section className="sec-y" style={{ backgroundColor: "#EEECEA" }}>
       <div className="px-8 sm:px-12 lg:px-16 xl:px-20">
         {/* ── Section banner ─────────────────────────────── */}
         <div className="relative overflow-hidden rounded mb-6 -mx-2 sm:-mx-4" style={{ background: "linear-gradient(135deg, #394F73 0%, #394F73 100%)" }}>

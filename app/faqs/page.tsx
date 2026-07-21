@@ -80,10 +80,10 @@ export default function FAQsPage() {
       />
 
       <div className="bg-white">
-        <div className="px-6 sm:px-10 lg:px-16 xl:px-24 py-8 lg:py-10">
+        <div className="px-6 sm:px-10 lg:px-16 xl:px-24 sec-y">
           <div className="mx-auto max-w-3xl">
             {/* Search */}
-            <div className="relative mb-12">
+            <div className="relative mb-8">
               <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#9AA0AC]" />
               <input
                 type="text"
@@ -112,7 +112,7 @@ export default function FAQsPage() {
               </p>
             ) : (
               filtered.map((cat) => (
-                <section key={cat.category} className="mb-14 last:mb-0">
+                <section key={cat.category} className="mb-8 last:mb-0">
                   <h2 className="font-heading text-[1.4rem] font-bold leading-tight text-[#1A1A1A]">
                     {cat.category}
                   </h2>

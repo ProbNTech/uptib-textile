@@ -157,7 +157,7 @@ export default function ServicesClient() {
       </div>
 
       {/* ── THE FOUR SERVICES ────────────────────────────────────── */}
-      <section id="services" className="bg-white py-8 lg:py-10 scroll-mt-24">
+      <section id="services" className="bg-white sec-y scroll-mt-24">
         <div className={PX}>
           <div className="grid gap-12 lg:grid-cols-[0.82fr_1.5fr] lg:gap-14 xl:gap-20">
             {/* Left — heading + world map */}
@@ -234,7 +234,7 @@ export default function ServicesClient() {
       </section>
 
       {/* ── WE SERVE BOTH ENDS OF THE TRADE ──────────────────────── */}
-      <section className="bg-[#F6F2EA] py-8 lg:py-10">
+      <section className="bg-[#F6F2EA] sec-y">
         <div className={PX}>
           <AnimatedSection>
             <SectionLabel
@@ -305,7 +305,7 @@ export default function ServicesClient() {
       />
 
       {/* ── WHY Pak Textiles Global Partners ────────────────────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-y">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.55fr] lg:gap-16 xl:gap-20">
@@ -367,7 +367,7 @@ export default function ServicesClient() {
       </section>
 
       {/* ── THE NUMBERS (dark band) ──────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
+      <section className="relative overflow-hidden bg-[#394F73] sec-y">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -416,7 +416,7 @@ export default function ServicesClient() {
                   ))}
                 </div>
 
-                <div className="mt-10 flex flex-wrap gap-2.5 border-t border-white/10 pt-8">
+                <div className="mt-6 flex flex-wrap gap-2.5 border-t border-white/10 pt-8">
                   {markets.map((m) => (
                     <span
                       key={m.name}
@@ -435,7 +435,7 @@ export default function ServicesClient() {
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
       <section
-        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-[#F6F2EA]"
+        className="relative z-[1] sec-pt sec-pb-tight overflow-hidden bg-[#F6F2EA]"
         aria-labelledby="services-faq-heading"
       >
         <div className={cn("relative", PX)}>

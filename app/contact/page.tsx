@@ -90,7 +90,7 @@ export default function ContactPage() {
             }}
           />
           <div className="relative max-w-2xl">
-            <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-[#394F73] mb-4">
+            <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-white mb-4">
               Contact
             </p>
             <h1 className="font-heading font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-5">

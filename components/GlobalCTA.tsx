@@ -33,7 +33,7 @@ export function GlobalCTA({
     <section className="relative overflow-hidden bg-[#F6F2EA]">
       <div className="grid lg:grid-cols-2">
         {/* Left — copy */}
-        <div className="relative flex flex-col justify-center py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
+        <div className="relative flex flex-col justify-center py-10 lg:py-12 px-6 sm:px-10 lg:px-16 xl:px-20">
           {/* Subtle dot pattern */}
           <div
             className="absolute inset-0 opacity-[0.05] pointer-events-none"

@@ -84,7 +84,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
       </section>
 
       {/* ── INTRO + WHAT'S IN THE LINE ──────────────────────────────── */}
-      <section className={cn("py-8 lg:py-10", PX)}>
+      <section className={cn("sec-pt sec-pb-tight", PX)}>
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
           <AnimatedSection animation="blur-in">
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#394F73]">
@@ -129,7 +129,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
 
       {/* ── THE CATALOGUE — bento mosaic (echoes the home-page showcase) ── */}
       {group.mosaic && group.mosaic.length > 0 && (
-        <section className="bg-white py-8 lg:py-10">
+        <section className="bg-white sec-y">
           <div className={PX}>
             <div className="mx-auto max-w-7xl">
               <AnimatedSection animation="blur-in">
@@ -154,7 +154,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
       )}
 
       {/* ── THE LOOKBOOK (centrepiece) ──────────────────────────────── */}
-      <section className={cn("pb-8 pt-4 lg:pb-10", PX)}>
+      <section className={cn("pt-4 sec-pb-tight", PX)}>
         <div className="mx-auto max-w-7xl">
           <AnimatedSection animation="blur-in">
             <div className="mb-8 flex items-end justify-between gap-6">
@@ -188,7 +188,7 @@ export default function SubCategoryClient({ slug, sub }: { slug: string; sub: st
 
       {/* ── MORE IN THIS CATEGORY ───────────────────────────────────── */}
       {siblings.length > 0 && (
-        <section className="bg-white py-8 lg:py-10">
+        <section className="bg-white sec-y">
           <div className={PX}>
             <div className="mx-auto max-w-7xl">
               <AnimatedSection animation="blur-in">

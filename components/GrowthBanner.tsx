@@ -18,7 +18,7 @@ interface GrowthBannerProps {
 export function GrowthBanner({ image, label = "Built for your growth", title, body, chips }: GrowthBannerProps) {
   return (
     <section
-      className="relative isolate flex min-h-[60vh] items-center overflow-hidden py-24 lg:min-h-[70vh] lg:py-32"
+      className="relative isolate flex min-h-[60vh] items-center overflow-hidden py-16 lg:min-h-[70vh] lg:py-20"
       style={{
         backgroundImage: `url('${image}')`,
         backgroundSize: "cover",

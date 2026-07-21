@@ -138,7 +138,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-sm font-bold uppercase tracking-[0.2em] text-[#B3AA98] mb-5"
+              className="text-sm font-bold uppercase tracking-[0.2em] text-white mb-5"
             >
               News & Insights
             </motion.p>
@@ -231,7 +231,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
       {/* ============ FEATURED STORY ============ */}
       {activeFeatured && (
         <section className="relative bg-white">
-          <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
+          <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 sec-y">
             <AnimatedSection>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#394F73] mb-6">
                 Featured Story
@@ -345,7 +345,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
             backgroundSize: "20px 20px",
           }}
         />
-        <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 lg:py-10">
+        <div className="relative px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 sec-y">
           <AnimatedSection>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#394F73] mb-6">
               Latest News & Insights
@@ -353,7 +353,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
           </AnimatedSection>
 
           {/* Filter tabs */}
-          <div className="flex flex-wrap gap-2.5 mb-10">
+          <div className="flex flex-wrap gap-2.5 mb-6">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -433,7 +433,7 @@ export function NewsClient({ articles }: { articles: Article[] }) {
       </section>
 
       {/* ============ NEWSLETTER ============ */}
-      <section className="bg-white pb-8 lg:pb-10">
+      <section className="bg-white sec-pb">
         <div className="px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="relative overflow-hidden rounded-card bg-[#394F73] px-6 sm:px-10 lg:px-14 py-10">
             <div

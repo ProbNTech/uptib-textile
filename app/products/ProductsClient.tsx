@@ -177,11 +177,11 @@ export default function ProductsClient() {
       </div>
 
       {/* ── CATEGORIES ───────────────────────────────────────────── */}
-      <section id="categories" className="bg-white py-8 lg:py-10 scroll-mt-24">
+      <section id="categories" className="bg-white sec-pt sec-pb-tight scroll-mt-24">
         <div className={PX}>
           {/* Header */}
           <AnimatedSection animation="blur-in">
-            <div className="mb-10 max-w-2xl lg:mb-12">
+            <div className="mb-6 max-w-2xl lg:mb-7">
               <div className="mb-4 flex items-center gap-3">
                 <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#394F73]">The four categories</p>
                 <span className="h-px w-10 bg-[#78899B]/40" aria-hidden />
@@ -253,7 +253,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── WHY SOURCE THROUGH Pak Textiles Global Partners ─────────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-y-tight">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid gap-12 lg:grid-cols-[1fr_1.55fr] lg:gap-16 xl:gap-20">
@@ -313,7 +313,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── SUSTAINABILITY & COMPLIANCE ──────────────────────────── */}
-      <section className="bg-white py-8 lg:py-10">
+      <section className="bg-white sec-pt-tight sec-pb">
         <div className={PX}>
           <AnimatedSection>
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -368,7 +368,7 @@ export default function ProductsClient() {
       </section>
 
       {/* ── MARKETS (dark band) ──────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#394F73] py-8 lg:py-10">
+      <section className="relative overflow-hidden bg-[#394F73] sec-y">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -436,7 +436,7 @@ export default function ProductsClient() {
 
       {/* ── FAQs ─────────────────────────────────────────────────── */}
       <section
-        className="relative z-[1] py-8 lg:py-10 overflow-hidden bg-white"
+        className="relative z-[1] sec-y overflow-hidden bg-white"
         aria-labelledby="products-faq-heading"
       >
         <div className={cn("relative", PX)}>

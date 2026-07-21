@@ -208,15 +208,15 @@ export function ProductShowcase({ showcase, categorySlug }: { showcase: Showcase
       {/* ── Intro ── */}
       <div className={cn("relative", PX)}>
         <AnimatedSection animation="blur-in">
-          <p className="mx-auto max-w-3xl py-16 text-center text-lg leading-relaxed text-[#544B3C] sm:py-20 sm:text-xl">
+          <p className="mx-auto max-w-3xl py-5 text-center text-lg leading-relaxed text-[#544B3C] sm:py-7 sm:text-xl">
             {showcase.intro}
           </p>
         </AnimatedSection>
       </div>
 
       {/* ── Editorial rows ── */}
-      <div className={cn("relative pb-8 lg:pb-10", PX)}>
-        <div className="mx-auto flex max-w-7xl flex-col gap-20 sm:gap-28">
+      <div className={cn("relative sec-pb", PX)}>
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 sm:gap-8">
           {showcase.groups.map((group, i) => (
             <ShowcaseRow key={group.name} group={group} index={i} categorySlug={categorySlug} />
           ))}
