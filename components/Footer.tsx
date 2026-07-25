@@ -92,6 +92,7 @@ export function Footer() {
                     { label: "Global Textile Market", href: "/global-textile-market" },
                     { label: "Membership", href: "/membership" },
                     { label: "News", href: "/news" },
+                    { label: "Register", href: "/register" },
                     { label: "Contact", href: "/contact" },
                   ].map((link) => (
                     <li key={link.href}>

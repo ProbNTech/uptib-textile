@@ -166,8 +166,8 @@ const navItems: NavItem[] = [
   },
   /* 5 — News */
   { kind: "link", label: "News", href: "/news" },
-  /* 6 — Contact */
-  { kind: "link", label: "Contact", href: "/contact" },
+  /* 6 — Register (the header CTA covers Contact) */
+  { kind: "link", label: "Register", href: "/register" },
 ];
 
 const navGroups = navItems.filter((item): item is NavGroup => item.kind === "group");
@@ -365,7 +365,7 @@ export function Header() {
                 onMouseEnter={handleLeave}
                 className="px-3.5 2xl:px-5 py-2 font-sansHeading font-bold text-[12.5px] 2xl:text-sm uppercase tracking-[0.08em] bg-[#78899B] text-white hover:bg-[#5E7088] transition-colors duration-200 whitespace-nowrap rounded"
               >
-                Get a Quote
+                Contact
               </Link>
             </div>
 
@@ -859,7 +859,7 @@ export function Header() {
                   onClick={() => setIsMobileOpen(false)}
                   className="block text-center py-3 px-4 bg-[#78899B] text-white font-sansHeading font-bold text-mobile-cta uppercase hover:bg-[#5E7088] transition-colors duration-200 rounded"
                 >
-                  Get a Quote
+                  Contact
                 </Link>
               </div>
             </motion.div>

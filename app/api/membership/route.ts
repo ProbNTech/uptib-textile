@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { appendRow } from "@/lib/google-sheets";
 import { renderRowsHtml, renderRowsText, sendAlert } from "@/lib/mailer";
+import { TABS, sheetIdFor } from "@/lib/leads";
 
-const SHEET_ID = process.env.SUBMISSIONS_SHEET_ID!;
-const TAB_NAME = "Memberships";
 
 const COUNTRY_LABELS: Record<string, string> = {
   uk: "United Kingdom",
@@ -97,7 +96,7 @@ export async function POST(req: NextRequest) {
       body.arbitrationAccepted ? "Yes" : "No",
     ];
 
-    await appendRow(SHEET_ID, TAB_NAME, HEADERS, values);
+    await appendRow(sheetIdFor("membership"), TABS.membership, HEADERS, values);
 
     try {
       const rows: Array<[string, unknown]> = HEADERS.map((h, i) => [h, values[i]]);
