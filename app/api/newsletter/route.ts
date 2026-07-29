@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { appendRow } from "@/lib/google-sheets";
 import { renderRowsHtml, renderRowsText, sendAlert } from "@/lib/mailer";
+import { TABS, sheetIdFor } from "@/lib/leads";
 
-const SHEET_ID = process.env.SUBMISSIONS_SHEET_ID!;
-const TAB_NAME = "Newsletter";
 
 const HEADERS = ["Timestamp", "Email", "Source"];
 
@@ -33,7 +32,7 @@ export async function POST(req: NextRequest) {
 
     const values = [timestamp, cleanEmail, cleanSource];
 
-    await appendRow(SHEET_ID, TAB_NAME, HEADERS, values);
+    await appendRow(sheetIdFor("newsletter"), TABS.newsletter, HEADERS, values);
 
     try {
       const rows: Array<[string, unknown]> = [

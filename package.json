@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start -p ${PORT:-3000}",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "extract:poster": "node scripts/extract-banner-poster.js"
+    "extract:poster": "node scripts/extract-banner-poster.js",
+    "sheets:check": "tsx scripts/check-sheet-access.ts",
+    "sheets:setup": "tsx scripts/setup-lead-sheets.ts"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.1.8",

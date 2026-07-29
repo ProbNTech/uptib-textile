@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/news', changeFrequency: 'weekly', priority: 0.7 },
     { path: '/faqs', changeFrequency: 'monthly', priority: 0.5 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.6 },
+    { path: '/register', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/cookies', changeFrequency: 'yearly', priority: 0.3 },

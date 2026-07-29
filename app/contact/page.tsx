@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Mail, MapPin, Phone, Clock, Headset, Globe,
   Package, Handshake, UserPlus, MessageCircle,
@@ -129,11 +130,21 @@ export default function ContactPage() {
 
       <Section variant="light" pattern>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Form */}
-          <div className="lg:col-span-7">
-            <h2 className="font-heading font-extrabold text-[#1A1A1A] text-2xl mb-1">Send us a message</h2>
-            <p className="text-[#6B7280] text-sm mb-6">Fill out the form and our team will get back to you.</p>
+          {/* Form — heading block matches the one opposite so the form card
+              and the first office card start on the same line. */}
+          <div className="lg:col-span-7 space-y-6">
+            <div>
+              <h2 className="font-heading font-extrabold text-[#1A1A1A] text-2xl mb-1">Send us a message</h2>
+              <p className="text-[#6B7280] text-sm">Fill out the form and our team will get back to you.</p>
+            </div>
             <ContactForm />
+            <p className="text-[#6B7280] text-sm rounded-card border border-[#E5E7EB] bg-[#FBFBFA] px-5 py-4">
+              Ready to work with us?{" "}
+              <Link href="/register" className="font-semibold text-[#394F73] underline underline-offset-2">
+                Register your company
+              </Link>{" "}
+              instead, and we&apos;ll match you to the right service and team.
+            </p>
           </div>
 
           {/* Offices + contact */}
