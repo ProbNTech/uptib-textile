@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { products, services } from '@/data/textile';
 
-const BASE_URL = 'https://www.ukpaktrade.org.uk';
+const BASE_URL = 'https://paktextileglobal.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

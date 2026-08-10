@@ -201,10 +201,10 @@ export function Footer() {
                       <div className="min-w-0 flex-1">
                         <p className="text-white/75 text-[10.5px] uppercase tracking-[0.18em] font-bold leading-tight">Email</p>
                         <a
-                          href="mailto:info@pak-textiles.com"
+                          href="mailto:info@paktextileglobal.com"
                           className="text-[#B3AA98] text-[14px] font-semibold hover:text-white transition-colors duration-200 break-all drop-shadow-sm"
                         >
-                          info@pak-textiles.com
+                          info@paktextileglobal.com
                         </a>
                       </div>
                     </div>

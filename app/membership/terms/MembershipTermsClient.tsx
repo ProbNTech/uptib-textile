@@ -534,7 +534,7 @@ export default function MembershipTermsClient() {
               134-136 Westbourne Terrace, London, W2 6QB, United Kingdom
               <br />
               For any questions about these Terms, please contact{" "}
-              <a href="mailto:info@pak-textiles.com" className="text-[#394F73] hover:underline">info@pak-textiles.com</a>
+              <a href="mailto:info@paktextileglobal.com" className="text-[#394F73] hover:underline">info@paktextileglobal.com</a>
             </p>
           </div>
         </AnimatedSection>

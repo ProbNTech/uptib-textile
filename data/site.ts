@@ -9,7 +9,7 @@ export const site = {
     "Pakistan's finest textiles, sourced and sold for the UK. Marketing the supply. Sourcing the demand. Trusted by both.",
   description:
     "Pak Textiles Global Partners trades quality Pakistani textiles and runs the services that move them: marketing, e-commerce, sourcing and logistics. A London-based platform for UK-Pakistan textile trade.",
-  url: "https://textile.ukpaktrade.org.uk",
+  url: "https://paktextileglobal.com",
   parentUrl: "https://ukpaktrade.org.uk",
   offices: [
     {
