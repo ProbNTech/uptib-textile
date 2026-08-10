@@ -1,0 +1,23 @@
+
+> uptech-website@1.0.0 dev
+> next dev -p 3001
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.18.52:3001
+- Environments: .env
+
+✓ Starting...
+✓ Ready in 4.3s
+○ Compiling / ...
+✓ Finished filesystem cache database compaction in 10.1s
+ GET / 200 in 23.3s (compile: 15.4s, render: 7.9s)
+ GET / 200 in 5.0s (compile: 45ms, render: 5.0s)
+ GET / 200 in 1104ms (compile: 17ms, render: 1087ms)
+ GET / 200 in 1362ms (compile: 14ms, render: 1347ms)
+ GET / 200 in 67s (compile: 824ms, render: 66s)
+ GET / 200 in 5.9s (compile: 359ms, render: 5.5s)
+ GET / 200 in 33.4s (compile: 105ms, render: 33.3s)
+ GET / 200 in 3.4s (compile: 28ms, render: 3.4s)
+ GET / 200 in 1247ms (compile: 22ms, render: 1224ms)
+[?25h
