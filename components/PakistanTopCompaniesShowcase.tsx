@@ -36,9 +36,14 @@ export default function PakistanTopCompaniesShowcase() {
           <SectionHeader
             label="Showcase"
             title="Pakistan's top Textile Products Manufacturers & Exporter"
-            subtitle="Real manufacturers, mills and sourcing partners in our network, across home & hospitality textiles, apparel, sportswear, healthcare textiles and yarn & fabric."
+            subtitle="Manufacturers, mills and sourcing companies across Pakistan's textile sector, spanning home & hospitality textiles, apparel, sportswear, healthcare textiles and yarn & fabric."
             color="green"
           />
+
+          <p className="-mt-2 mb-4 max-w-3xl text-sm leading-relaxed text-[#5A5F72]">
+            <span className="font-semibold text-[#394F73]">What &ldquo;verified profile&rdquo; means:</span>{" "}
+            the company exists and operates in the category shown, and the details on its card have been checked against the company&apos;s own published information. It does not indicate membership of, partnership with, or endorsement of Pak Textiles Global Partners.
+          </p>
 
           <div className="relative mt-2">
             <Swiper

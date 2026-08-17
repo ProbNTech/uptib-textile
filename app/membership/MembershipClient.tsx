@@ -27,6 +27,8 @@ import {
   Plus,
   HelpCircle,
   Layers,
+  Receipt,
+  type LucideIcon,
 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -36,6 +38,7 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlobalCTA } from "@/components/GlobalCTA";
 import { MembershipForm } from "@/components/MembershipForm";
 import { homeStats, markets } from "@/data/textile";
+import { membershipTiers } from "@/data/membership-tiers";
 import { cn } from "@/lib/utils";
 
 const PX = "px-6 sm:px-10 lg:px-16 xl:px-20";
@@ -60,47 +63,19 @@ const benefits = [
   { icon: BadgePercent, title: "The GSP+ advantage", desc: "Pakistan's preferential duty-free EU access, built into your price." },
 ];
 
-/* ── Membership tiers ────────────────────────────────────────────── */
-const tiers = [
-  {
-    name: "Basic",
-    icon: Factory,
-    tagline: "Perfect for getting started.",
-    featured: false,
-    features: [
-      "Company profile listing",
-      "Buyer-directory access",
-      "Monthly market reports",
-      "Inclusion in the sourcing pool",
-    ],
-  },
-  {
-    name: "Professional",
-    icon: Building2,
-    tagline: "For growing exporters ready to scale.",
-    featured: true,
-    features: [
-      "Everything in Basic",
-      "B2B matchmaking",
-      "Buyer introductions",
-      "Trade-event participation",
-      "Lead-generation support",
-    ],
-  },
-  {
-    name: "Premium",
-    icon: Award,
-    tagline: "For established exporters expanding globally.",
-    featured: false,
-    features: [
-      "Everything in Professional",
-      "Dedicated market advisor",
-      "Buyer-sourcing campaigns",
-      "International representation",
-      "Featured promotion",
-    ],
-  },
-];
+/* ── Membership tiers ─────────────────────────────────────────────
+   Content lives in data/membership-tiers.ts so the homepage strip and this
+   page always describe the same tiers. Icons are mapped by name here. */
+const tierIcons: Record<string, LucideIcon> = {
+  Basic: Factory,
+  Professional: Building2,
+  Premium: Award,
+};
+
+const tiers = membershipTiers.map((tier) => ({
+  ...tier,
+  icon: tierIcons[tier.name] ?? Factory,
+}));
 
 const tierValues = [
   { title: "Tailored to your stage", desc: "Pick the tier that matches where your export business is today." },
@@ -363,6 +338,62 @@ export default function MembershipClient() {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* ── HOW WE ARE PAID (commercial model, disclosed) ─────────── */}
+      <section className="bg-[#F6F2EA] sec-y" aria-labelledby="commercial-model-heading">
+        <div className={PX}>
+          <AnimatedSection animation="blur-in">
+            <SectionLabel
+              label="Commercial model"
+              title="How Pak Textiles Global Partners is paid"
+              body="Anyone weighing up a sourcing partner should know how that partner earns. We are paid in two ways, and both are agreed up front."
+              color="#394F73"
+              align="center"
+            />
+
+            <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-2">
+              {[
+                {
+                  icon: Receipt,
+                  title: "Membership fees, from suppliers",
+                  desc: "Pakistani manufacturers and exporters pay a membership fee, tiered as Basic, Professional or Premium. It covers a place in the supplier pool we source from for live orders, plus the services attached to that tier.",
+                  note: "Pricing is provided on request, so you can match the tier to your stage before committing.",
+                },
+                {
+                  icon: Handshake,
+                  title: "Commission, on orders we source",
+                  desc: "On orders we source or broker for international buyers, we earn an agreed commission. It is included in the price a buyer is quoted, so there is no separate fee added on top of the landed cost.",
+                  note: "Any commission is agreed in writing before an order is placed.",
+                },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.title}
+                    className="flex flex-col rounded-2xl border border-[#E7DCC6] bg-white p-6 shadow-[0_14px_36px_-24px_rgba(45,64,97,0.35)] sm:p-7"
+                  >
+                    <span className="inline-flex size-11 items-center justify-center rounded-xl bg-[#78899B]/12">
+                      <Icon className="size-5 text-[#394F73]" strokeWidth={1.8} aria-hidden />
+                    </span>
+                    <h3 className="mt-4 font-heading text-lg font-bold leading-snug text-[#1A1A1A]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-[15px] leading-relaxed text-[#5A5F72]">{item.desc}</p>
+                    <p className="mt-auto pt-4 text-[13px] leading-relaxed text-[#6B7280]">
+                      <span className="font-semibold text-[#394F73]">Note: </span>
+                      {item.note}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-[#5A5F72]">
+              We do not charge buyers a fee to send us an enquiry, and we do not take a fee from both sides of the same order without saying so.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -725,14 +756,23 @@ export default function MembershipClient() {
                         </button>
                       </h3>
 
+                      {/*
+                        Collapsed with a CSS grid transition rather than the `hidden`
+                        attribute, so every answer stays in the DOM and in the
+                        accessibility tree for crawlers and screen readers.
+                      */}
                       <div
                         id={panelId}
                         role="region"
                         aria-labelledby={buttonId}
-                        hidden={!isOpen}
-                        className="px-4 pb-5 pl-[4.25rem] pr-12 text-[#5A5F72] leading-relaxed sm:px-5 sm:pl-[4.75rem]"
+                        className={cn(
+                          "grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none",
+                          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                        )}
                       >
-                        {item.a}
+                        <div className="overflow-hidden">
+                          <div className="px-4 pb-5 pl-[4.25rem] pr-12 text-[#5A5F72] leading-relaxed sm:px-5 sm:pl-[4.75rem]">{item.a}</div>
+                        </div>
                       </div>
                     </div>
                   );

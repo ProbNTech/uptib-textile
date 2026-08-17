@@ -39,14 +39,55 @@ const whyUptib = [
   { icon: Award, title: "The GSP+ advantage", desc: "Preferential duty-free entry into the EU on qualifying Pakistani textiles. Built into your price." },
 ];
 
-/* Sustainability & compliance certifications */
-const certifications: { code: string; note: string; icon: LucideIcon }[] = [
-  { code: "GOTS", note: "Certifies organic textiles", icon: Leaf },
-  { code: "OEKO-TEX", note: "Tests for harmful substances", icon: Hash },
-  { code: "BCI", note: "Better Cotton Initiative", icon: Flower2 },
-  { code: "Sedex", note: "Ethical trade verified", icon: Users },
-  { code: "WRAP", note: "Responsible production", icon: Globe },
-  { code: "ISO", note: "Quality management systems", icon: ShieldCheck },
+/* Sustainability & compliance certifications.
+   `detail` explains what each standard actually certifies and what a buyer
+   should ask a supplier to produce as evidence. Less experienced international
+   buyers cannot evaluate a supplier from an acronym alone, and the distinction
+   between a product claim, a factory claim and a farm-level programme claim is
+   where most sourcing misunderstandings start. */
+const certifications: { code: string; name: string; note: string; detail: string; icon: LucideIcon }[] = [
+  {
+    code: "GOTS",
+    name: "Global Organic Textile Standard",
+    note: "Certifies organic textiles",
+    detail: "Covers organic fibre content plus the processing, chemical and social criteria along the chain. Ask for a valid scope certificate and a transaction certificate for your shipment.",
+    icon: Leaf,
+  },
+  {
+    code: "OEKO-TEX",
+    name: "OEKO-TEX STANDARD 100",
+    note: "Tests for harmful substances",
+    detail: "Tests the finished article against limit values for harmful substances. It is a product claim, not a factory or environmental one. Ask for the certificate number and its expiry date.",
+    icon: Hash,
+  },
+  {
+    code: "BCI",
+    name: "Better Cotton Initiative",
+    note: "Better Cotton Initiative",
+    detail: "A sustainability programme at farm level. Better Cotton is sourced through mass balance, so it is a chain-of-custody claim about sourcing volumes, not a guarantee of physical content in your specific goods.",
+    icon: Flower2,
+  },
+  {
+    code: "Sedex",
+    name: "Sedex and SMETA audits",
+    note: "Ethical trade verified",
+    detail: "A membership platform for ethical-trade data, audited via SMETA across labour standards, health and safety, environment and business ethics. Ask for a recent SMETA report and evidence that corrective actions were closed.",
+    icon: Users,
+  },
+  {
+    code: "WRAP",
+    name: "Worldwide Responsible Accredited Production",
+    note: "Responsible production",
+    detail: "Factory-level certification for lawful, humane and ethical manufacturing, graded Silver, Gold or Platinum. Ask which facility holds it, at what grade, and whether it is the site making your order.",
+    icon: Globe,
+  },
+  {
+    code: "ISO",
+    name: "ISO 9001 and related standards",
+    note: "Quality management systems",
+    detail: "Certifies how a factory documents and controls its processes, not the quality of any single product. Treat it as evidence of consistency, and inspect the goods separately.",
+    icon: ShieldCheck,
+  },
 ];
 
 /* Products-specific FAQs */
@@ -349,15 +390,19 @@ export default function ProductsClient() {
                   return (
                     <div
                       key={c.code}
-                      className="flex flex-col items-center rounded-2xl border border-[#E5E7EB] bg-white px-4 py-7 text-center shadow-sm"
+                      title={`${c.name}: ${c.detail}`}
+                      className="flex flex-col items-center rounded-2xl border border-[#E5E7EB] bg-white px-4 py-6 text-center shadow-sm"
                     >
                       <span className="inline-flex size-14 items-center justify-center rounded-full bg-[#78899B]/10 text-[#394F73]">
                         <Icon className="size-6" strokeWidth={1.75} aria-hidden />
                       </span>
-                      <p className="mt-5 font-heading font-extrabold text-[#1A1A1A] text-lg leading-none">
+                      <p className="mt-4 font-heading font-extrabold text-[#1A1A1A] text-lg leading-none">
                         {c.code}
                       </p>
-                      <p className="mt-2 text-[12px] leading-snug text-[#5A5F72]">{c.note}</p>
+                      <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-wide leading-snug text-[#78899B]">
+                        {c.name}
+                      </p>
+                      <p className="mt-2.5 text-[12px] leading-relaxed text-[#5A5F72]">{c.detail}</p>
                     </div>
                   );
                 })}
@@ -515,14 +560,23 @@ export default function ProductsClient() {
                           </span>
                         </button>
                       </h3>
+                      {/*
+                        Collapsed with a CSS grid transition rather than the `hidden`
+                        attribute, so every answer stays in the DOM and in the
+                        accessibility tree for crawlers and screen readers.
+                      */}
                       <div
                         id={panelId}
                         role="region"
                         aria-labelledby={buttonId}
-                        hidden={!isOpen}
-                        className="px-4 pb-5 pl-[4.25rem] pr-12 text-[#5A5F72] leading-relaxed sm:px-5 sm:pl-[4.75rem]"
+                        className={cn(
+                          "grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none",
+                          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                        )}
                       >
-                        {item.a}
+                        <div className="overflow-hidden">
+                          <div className="px-4 pb-5 pl-[4.25rem] pr-12 text-[#5A5F72] leading-relaxed sm:px-5 sm:pl-[4.75rem]">{item.a}</div>
+                        </div>
                       </div>
                     </div>
                   );

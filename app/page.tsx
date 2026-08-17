@@ -31,6 +31,9 @@ const PakistanTopCompaniesShowcase = dynamic(() => import("@/components/Pakistan
 });
 import ExporterFaq from "@/components/home/ExporterFaq";
 import ProductsSection from "@/components/home/ProductsSection";
+import HowAnOrderRuns from "@/components/home/HowAnOrderRuns";
+import SourcingCaseStudy from "@/components/home/SourcingCaseStudy";
+import ForManufacturers from "@/components/home/ForManufacturers";
 import { ScrollProgressBar } from "@/components/ui/ScrollProgressBar";
 
 const homepageArticles = articles
@@ -54,7 +57,7 @@ const sponsorCarouselLogos = sponsorLogos.map((logo, i) => ({
 const pakistanServicesData = [
   { id: 5, title: "Marketing & Sales", content: "Get your products in front of global buyers: professional profiles, market intelligence, B2B matchmaking and digital campaigns.", image: "/image/icons/seo.png", href: "/services/marketing-sales", color: "#394F73" },
   { id: 6, title: "E-commerce & Warehousing", content: "Sell on Amazon and store close to customers: account setup, listings, FBA prep, warehousing, pick & pack and fulfilment.", image: "/image/icons/sale.png", href: "/services/ecommerce-warehouse", color: "#394F73" },
-  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from, with Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/contact", color: "#394F73" },
+  { id: 7, title: "Membership", content: "Join the supplier pool global buyers source from, with Basic, Professional and Premium tiers, built for first-time and seasoned exporters.", image: "/image/icons/hired.png", href: "/membership", color: "#394F73" },
   { id: 8, title: "Worldwide market access", content: "Reach the EU, USA, Middle East, UK and beyond, with Pakistan's GSP+ duty-free access into the EU built into your offer.", image: "/image/icons/startup.png", href: "/global-textile-market", color: "#394F73" },
 ];
 
@@ -297,6 +300,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 5a. HOW AN ORDER RUNS — the process behind the buyer-facing claims */}
+      <HowAnOrderRuns />
+
+      {/* 5b. SOURCING CASE STUDY — volume, timeline, outcome */}
+      <SourcingCaseStudy />
+
+      {/* 5c. FOR PAKISTANI MANUFACTURERS — supply-side case + commercial model */}
+      <ForManufacturers />
+
       {/* 5. MORE FROM Pak Textiles Global Partners */}
       <section
         className="relative z-[1] sec-y overflow-hidden bg-white"
@@ -311,7 +323,7 @@ export default function Home() {
               {[
                 { href: "/products", icon: ProductsIcon, color: "#9DA9B8", title: "Our Products", desc: "Bedding & linen, apparel, sportswear and healthcare textiles: the four categories we trade." },
                 { href: "/global-textile-market", icon: MentorshipIcon, color: "#9DA9B8", title: "Global Textile Market", desc: "The size of the global textile opportunity, and Pakistan's place in it, with the key figures." },
-                { href: "/contact", icon: MeetingSpaceIcon, color: "#9DA9B8", title: "Membership", desc: "Join the supplier pool global buyers source from, with Basic, Professional and Premium tiers." },
+                { href: "/membership", icon: MeetingSpaceIcon, color: "#9DA9B8", title: "Membership", desc: "Join the supplier pool global buyers source from, with Basic, Professional and Premium tiers." },
                 { href: "/news", icon: StructureIcon, color: "#9DA9B8", title: "News & Insights", desc: "Export guides and market insight for Pakistani textile exporters reaching global buyers." },
               ].map((card, index) => {
                 const CardIcon = card.icon;
@@ -637,7 +649,7 @@ export default function Home() {
       <section className="relative z-[1] sec-y overflow-hidden bg-[#F6F2EA]" aria-labelledby="network-heading">
         <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true" style={{ backgroundImage: "radial-gradient(circle, #1A1A1A 0.5px, transparent 0.5px)", backgroundSize: "28px 28px" }} />
         <div className="relative px-6 sm:px-10 lg:px-16 xl:px-20">
-          <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="Public and industry bodies that shape Pakistan's textile, export, and regulatory environment." color="#394F73" align="center" />
+          <SectionLabel label="Pakistan ecosystem" title="Pakistan's textile & trade institutions" body="The public and industry bodies that shape Pakistan's textile, export and regulatory environment, and whose standards and schemes our members work within." color="#394F73" align="center" />
           <div
             className="group relative mt-6 overflow-hidden"
             style={{
@@ -645,20 +657,23 @@ export default function Home() {
               maskImage: "linear-gradient(to right, transparent, black 7%, black 93%, transparent)",
             }}
           >
-            <div className="flex w-max items-center gap-10 sm:gap-14 animate-scroll group-hover:[animation-play-state:paused]">
+            <div className="flex w-max items-center gap-12 sm:gap-16 animate-scroll group-hover:[animation-play-state:paused]">
               {[...sponsorCarouselLogos, ...sponsorCarouselLogos].map((logo, i) => (
-                <div key={`${logo.id}-${i}`} className="flex h-16 w-[150px] flex-shrink-0 items-center justify-center">
+                <div key={`${logo.id}-${i}`} className="flex h-28 w-[220px] flex-shrink-0 items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={logo.src}
                     alt={logo.name}
                     loading="lazy"
-                    className="max-h-12 w-auto object-contain"
+                    className="max-h-20 max-w-full w-auto object-contain"
                   />
                 </div>
               ))}
             </div>
           </div>
+          <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-[#9CA3AF]">
+            These are the institutions that govern and represent Pakistan&apos;s textile and export sector, and the bodies we engage with on behalf of members. Their names and logos are shown for identification only and do not indicate partnership, sponsorship or endorsement.
+          </p>
         </div>
       </section>
 

@@ -196,8 +196,22 @@ export const textileManufacturers: DirectoryCompany[] = [
 
   // ── Leading Pakistani textile companies ──────────────────────────────
   // Flagship, internationally recognised manufacturers added to showcase the
-  // scale of Pakistan's textile industry. Logos are omitted (cards render an
-  // initials monogram); websites and facts are recorded from public record.
+  // scale of Pakistan's textile industry.
+  //
+  // VERIFICATION STATUS (August 2026 audit follow-up)
+  // The cards render a "Verified profile" badge whose stated meaning is that
+  // the company's details were checked against its own published information.
+  // Unlike the entries above, these nine are NOT covered by the source
+  // database crawl, so that check was made directly against each company's
+  // website:
+  //   Confirmed  — Interloop (Faisalabad), Feroze1888 (Karachi),
+  //                Masood (Faisalabad), Sapphire (Lahore), Nishat (Lahore)
+  //   Corrected  — Nishat was listed as Faisalabad; its own site gives Lahore
+  //                for both head and registered office. Fixed below.
+  //   Unconfirmed — Gul Ahmed, Artistic Milliners, Crescent, Forward Sports.
+  //                These sites are JavaScript-rendered and could not be read
+  //                automatically. They need a manual check against each
+  //                company's own site before the badge claim is fully sound.
   {
     id: "textile-014",
     slug: "gul-ahmed",
@@ -234,7 +248,10 @@ export const textileManufacturers: DirectoryCompany[] = [
     name: "Nishat Mills Limited",
     category: "Yarn & Fabric",
     services: ["Spinning & yarn", "Weaving & fabric", "Dyeing & processing", "Home textiles & apparel"],
-    location: "Faisalabad, Pakistan",
+    // Lahore per the company's own site: head office 7 Main Gulberg, Lahore;
+    // registered office Nishat House, 53-A Lawrence Road, Lahore. Its production
+    // units sit in Faisalabad and elsewhere, which is what this previously said.
+    location: "Lahore, Pakistan",
     country: "Pakistan",
     description:
       "One of Pakistan's largest vertically integrated composite textile units, covering spinning, weaving, dyeing, processing, home textiles and garments, and the flagship of the Nishat Group, exporting worldwide.",

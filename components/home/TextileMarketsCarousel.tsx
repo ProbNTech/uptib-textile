@@ -16,7 +16,26 @@ type TextileMarket = {
   note: string;
   categories: string[];
   accent: string;
+  /** Region tab to open on /global-textile-market. */
+  region: string;
+  /** Country footprint panel to open, where one exists for this market. */
+  country?: string;
 };
+
+/* Each card deep-links into its own market on the Global Textile Market page:
+   the matching region tab, and the country detail panel where that country has
+   its own footprint entry. Previously every card pointed at the same page with
+   no country context. */
+function marketHref(market: TextileMarket) {
+  const params = new URLSearchParams({ region: market.region });
+  if (!market.country) {
+    // No country panel for this market: land on its region tab.
+    return `/global-textile-market?${params.toString()}#regions`;
+  }
+  // Land directly on the country's own detail panel.
+  params.set("country", market.country);
+  return `/global-textile-market?${params.toString()}#country-footprint`;
+}
 
 const markets: TextileMarket[] = [
   {
@@ -28,6 +47,7 @@ const markets: TextileMarket[] = [
     note: "Pakistan ranks among the top-10 US textile suppliers, anchored in home textiles, knitwear and apparel.",
     categories: ["Home textiles", "Knitwear", "Apparel"],
     accent: "#8C9AAB",
+    region: "north-america",
   },
   {
     name: "United Kingdom",
@@ -38,6 +58,7 @@ const markets: TextileMarket[] = [
     note: "One of Pakistan's most important destinations, strong in apparel, bedwear, towels and activewear.",
     categories: ["Apparel", "Bedwear", "Activewear"],
     accent: "#A3AEBC",
+    region: "united-kingdom",
   },
   {
     name: "Spain",
@@ -48,6 +69,8 @@ const markets: TextileMarket[] = [
     note: "Pakistan's third-largest EU partner, textiles are 85%+ of exports, led by house linens and menswear.",
     categories: ["House linens", "Menswear", "Knitwear"],
     accent: "#78899B",
+    region: "europe",
+    country: "Spain",
   },
   {
     name: "Italy",
@@ -58,6 +81,8 @@ const markets: TextileMarket[] = [
     note: "Bed linens and trousers anchor the trade, with $311M of untapped potential still to capture.",
     categories: ["Bed linens", "Trousers", "Hosiery"],
     accent: "#A3AEBC",
+    region: "europe",
+    country: "Italy",
   },
   {
     name: "Poland",
@@ -68,6 +93,8 @@ const markets: TextileMarket[] = [
     note: "One of Europe's fastest-growing corridors, textiles make up ~90% of all Pakistani exports to Poland.",
     categories: ["Linens", "Denim", "Jersey"],
     accent: "#A3AEBC",
+    region: "europe",
+    country: "Poland",
   },
   {
     name: "Germany",
@@ -78,6 +105,7 @@ const markets: TextileMarket[] = [
     note: "Europe's largest textile market (~20% share) and top destination for certified, sustainable goods.",
     categories: ["Knitwear", "Denim", "Technical"],
     accent: "#647689",
+    region: "europe",
   },
   {
     name: "Saudi Arabia",
@@ -88,6 +116,7 @@ const markets: TextileMarket[] = [
     note: "The biggest single GCC opportunity, population growth and healthcare investment drive textile demand.",
     categories: ["Apparel", "Hospitality", "Medical"],
     accent: "#8C9AAB",
+    region: "middle-east",
   },
   {
     name: "United Arab Emirates",
@@ -98,12 +127,13 @@ const markets: TextileMarket[] = [
     note: "A consumer market and regional re-export hub with rising home, hospitality and sportswear demand.",
     categories: ["Hotel linen", "Sportswear", "Re-export"],
     accent: "#8C9AAB",
+    region: "middle-east",
   },
 ];
 
 function MarketCard({ market }: { market: TextileMarket }) {
   return (
-    <Link href="/global-textile-market" className="group block h-full w-[340px] flex-shrink-0">
+    <Link href={marketHref(market)} className="group block h-full w-[340px] flex-shrink-0">
       <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
         {/* Header */}
         <div className="relative z-0 min-h-[112px] overflow-hidden px-5 pt-5 pb-8" style={{ background: `linear-gradient(135deg, ${market.accent} 0%, #394F73 100%)` }}>
