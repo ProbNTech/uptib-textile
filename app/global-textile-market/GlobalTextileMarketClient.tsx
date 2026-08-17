@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { motion, useInView, useReducedMotion, AnimatePresence } from "framer-motion";
 import CountUp from "react-countup";
@@ -45,6 +45,7 @@ const playbookIcons = [ClipboardCheck, Leaf, TrendingUp, Megaphone, Globe, Hands
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionHeader } from "@/components/SectionHeader";
 import { GlobalCTA } from "@/components/GlobalCTA";
+import { RelatedReading } from "@/components/RelatedReading";
 import {
   segments,
   regions,
@@ -283,12 +284,42 @@ function ExportPotential() {
   );
 }
 
+// ─── Deep-link support ───────────────────────────────────────────────────────
+// The homepage market cards link here with ?region= and ?country= so each card
+// opens on its own market. The query string is an external value, so it is read
+// through useSyncExternalStore with a null server snapshot: the static HTML
+// renders the default selection and the client swaps to the requested one on
+// hydration, with no mismatch and no setState inside an effect.
+const subscribeToNothing = () => () => {};
+
+function useQueryParam(name: string): string | null {
+  return useSyncExternalStore(
+    subscribeToNothing,
+    () => new URLSearchParams(window.location.search).get(name),
+    () => null,
+  );
+}
+
 // ─── Export footprint, country by country (carousel) ─────────────────────────
 const FOOTPRINTS_PER_PAGE = 8;
 
 function ExportFootprint() {
-  const [page, setPage] = useState(0);
-  const [active, setActive] = useState(0);
+  // Selection made by the visitor, which takes precedence once they interact.
+  const [chosen, setChosen] = useState<{ page: number; active: number } | null>(null);
+
+  const requestedCountry = useQueryParam("country");
+  const requestedIndex = requestedCountry
+    ? europeFootprints.findIndex(
+        (c) => c.country.toLowerCase() === requestedCountry.toLowerCase(),
+      )
+    : -1;
+
+  const deepLinked =
+    requestedIndex >= 0
+      ? { page: Math.floor(requestedIndex / FOOTPRINTS_PER_PAGE), active: requestedIndex }
+      : { page: 0, active: 0 };
+
+  const { page, active } = chosen ?? deepLinked;
 
   // Chunk the detailed country data into carousel pages of 8 (4×2 on desktop).
   const pages: (typeof europeFootprints)[] = [];
@@ -297,15 +328,17 @@ function ExportFootprint() {
   }
   const pageCount = pages.length;
   const stripVal = (v: string) => v.replace(/\s*\/\s*yr/i, "");
+
+  const setActive = (idx: number) => setChosen({ page, active: idx });
   const goToPage = (p: number) => {
     const next = Math.min(Math.max(p, 0), pageCount - 1);
-    setPage(next);
-    setActive(next * FOOTPRINTS_PER_PAGE); // focus the first card on the new page
+    // Focus the first card on the new page.
+    setChosen({ page: next, active: next * FOOTPRINTS_PER_PAGE });
   };
   const activeCountry = europeFootprints[active];
 
   return (
-    <section className="relative overflow-hidden bg-[#F6F2EA]">
+    <section id="country-footprint" className="relative overflow-hidden bg-[#F6F2EA] scroll-mt-24">
       {/* Decorative antique globe — "100+ countries across 6 continents" */}
       <Image
         src="/image/explained-globe.png"
@@ -602,7 +635,17 @@ function DestinationBanner() {
 
 // ─── Region explorer (tabbed, editorial) ────────────────────────────────────
 function RegionExplorer() {
-  const [active, setActive] = useState(regions[0].id);
+  // Tab chosen by the visitor, which takes precedence over the ?region= value
+  // once they interact with the tabs.
+  const [chosen, setChosen] = useState<string | null>(null);
+
+  const requestedRegion = useQueryParam("region");
+  const deepLinked = regions.some((r) => r.id === requestedRegion)
+    ? (requestedRegion as string)
+    : regions[0].id;
+
+  const active = chosen ?? deepLinked;
+  const setActive = setChosen;
   const region = regions.find((r) => r.id === active) ?? regions[0];
 
   return (
@@ -995,6 +1038,14 @@ export default function GlobalTextileMarketClient() {
           </div>
         </div>
       </section>
+
+      {/* ── Related reading (cross-link into News & Insights) ──────────── */}
+      <RelatedReading
+        topic="global-textile-market"
+        title="The market, explained in more depth"
+        body="Longer-form analysis behind the figures on this page: export performance, duty access, origin comparison and where demand is heading."
+        className="bg-white"
+      />
 
       <GlobalCTA
         label="Work with Pak Textiles Global Partners"

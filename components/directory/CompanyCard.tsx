@@ -59,9 +59,9 @@ export function CompanyCard({ company }: CompanyCardProps) {
             {company.verified && company.source !== "Member" && (
               <span
                 className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#ECE5D8] px-2 py-0.5 text-[11px] font-semibold text-[#394F73]"
-                title="Verified by source"
+                title="Company details checked against the company's own published information"
               >
-                <BadgeCheck className="w-3 h-3" /> Verified
+                <BadgeCheck className="w-3 h-3" /> Verified profile
               </span>
             )}
           </div>
@@ -72,13 +72,16 @@ export function CompanyCard({ company }: CompanyCardProps) {
             <span className="truncate">{company.location}</span>
           </div>
 
-          {/* Rating / verified member */}
+          {/* Rating, or the verified-profile marker when no review data exists */}
           <div className="mt-2">
             {typeof company.rating === "number" ? (
               <RatingStars rating={company.rating} reviewCount={company.reviewCount} />
             ) : (
-              <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#394F73]">
-                <BadgeCheck className="w-3 h-3" /> Verified member
+              <span
+                className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#394F73]"
+                title="Company details checked against the company's own published information"
+              >
+                <BadgeCheck className="w-3 h-3" /> Verified profile
               </span>
             )}
           </div>

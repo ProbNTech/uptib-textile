@@ -235,9 +235,12 @@ function CompanyCard({ company }: { company: DirectoryCompany }) {
               </span>
             )}
             {company.verified && (
-              <span className="inline-flex items-center gap-1 text-[11px] font-medium text-[#6B7280]">
+              <span
+                className="inline-flex items-center gap-1 text-[11px] font-medium text-[#6B7280]"
+                title="Company details checked against the company's own published information"
+              >
                 <BadgeCheck className="size-3.5 text-[#394F73]" aria-hidden />
-                Verified member
+                Verified profile
               </span>
             )}
           </div>
@@ -280,8 +283,11 @@ function CompanyCard({ company }: { company: DirectoryCompany }) {
         ) : (
           <span />
         )}
-        <span className="text-[10px] font-semibold uppercase tracking-wide text-[#B3AA98]">
-          Verified Member
+        <span
+          className="text-[10px] font-semibold uppercase tracking-wide text-[#B3AA98]"
+          title="Company details checked against the company's own published information"
+        >
+          Verified profile
         </span>
       </div>
     </div>
@@ -708,14 +714,23 @@ export default function IndustriesClient() {
                         </button>
                       </h3>
 
+                      {/*
+                        Collapsed with a CSS grid transition rather than the `hidden`
+                        attribute, so every answer stays in the DOM and in the
+                        accessibility tree for crawlers and screen readers.
+                      */}
                       <div
                         id={panelId}
                         role="region"
                         aria-labelledby={buttonId}
-                        hidden={!isOpen}
-                        className="px-4 pb-5 pl-[4.25rem] pr-12 leading-relaxed text-[#5A5F72] sm:px-5 sm:pl-[4.75rem]"
+                        className={cn(
+                          "grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none",
+                          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                        )}
                       >
-                        {item.a}
+                        <div className="overflow-hidden">
+                          <div className="px-4 pb-5 pl-[4.25rem] pr-12 leading-relaxed text-[#5A5F72] sm:px-5 sm:pl-[4.75rem]">{item.a}</div>
+                        </div>
                       </div>
                     </div>
                   );
@@ -936,9 +951,12 @@ function FeaturedSpotlight({ companies }: { companies: DirectoryCompany[] }) {
                   </Link>
                 </div>
                 {company.verified && (
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#B3AA98]">
+                  <span
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#B3AA98]"
+                    title="Company details checked against the company's own published information"
+                  >
                     <BadgeCheck className="size-4" aria-hidden />
-                    Verified Member
+                    Verified profile
                   </span>
                 )}
               </div>

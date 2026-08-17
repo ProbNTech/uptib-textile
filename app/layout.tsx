@@ -32,7 +32,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const BASE_URL = "https://www.ukpaktrade.org.uk";
+const BASE_URL = "https://paktextileglobal.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -115,7 +115,7 @@ const jsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "general enquiry",
-    email: "info@pak-textiles.com",
+    email: "info@paktextileglobal.com",
     telephone: "+44 7920 55 0000",
   },
 };
@@ -128,9 +128,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${lato.variable} ${playfair.variable}`}>
       <head>
-        <link rel="dns-prefetch" href="https://www.youtube.com" />
-        <link rel="dns-prefetch" href="https://i.ytimg.com" />
-        <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://stream.mux.com" />
+        <link rel="preconnect" href="https://stream.mux.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://image.mux.com" />
+        <link rel="preconnect" href="https://image.mux.com" crossOrigin="anonymous" />
       </head>
       <body className="bg-white">
         <a

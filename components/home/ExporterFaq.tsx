@@ -123,14 +123,27 @@ export default function ExporterFaq({
                       </button>
                     </h3>
 
+                    {/*
+                      Collapsed with a CSS grid transition rather than the
+                      `hidden` attribute. The answer text stays in the DOM and
+                      in the accessibility tree at all times, so crawlers,
+                      screen readers and text-based readers resolve every
+                      answer — not just the one that happens to be open.
+                    */}
                     <div
                       id={panelId}
                       role="region"
                       aria-labelledby={buttonId}
-                      hidden={!isOpen}
-                      className="px-4 pb-5 pl-[4.25rem] pr-12 text-[#5A5F72] leading-relaxed sm:px-5 sm:pl-[4.75rem]"
+                      className={cn(
+                        "grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none",
+                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                      )}
                     >
-                      {item.a}
+                      <div className="overflow-hidden">
+                        <div className="px-4 pb-5 pl-[4.25rem] pr-12 text-[#5A5F72] leading-relaxed sm:px-5 sm:pl-[4.75rem]">
+                          {item.a}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 );

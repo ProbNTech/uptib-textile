@@ -5,14 +5,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { MuxBackgroundVideo } from "@mux/mux-background-video/react";
 
-// YouTube-hosted background loop (controls hidden, muted, auto-looping).
-const YT_VIDEO_ID = "ItE42gsHueY";
-const YT_EMBED_SRC =
-  `https://www.youtube-nocookie.com/embed/${YT_VIDEO_ID}` +
-  `?autoplay=1&mute=1&controls=0&loop=1&playlist=${YT_VIDEO_ID}` +
-  `&playsinline=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3` +
-  `&disablekb=1&fs=0`;
+// Mux-hosted hero background video (HLS, streamed & auto-scaled by Mux).
+const MUX_PLAYBACK_ID = "7U4uppDYfzFGTeAjwTvezQVlTOgOfp4wPt2Fy01rxr7M";
+const MUX_SRC = `https://stream.mux.com/${MUX_PLAYBACK_ID}.m3u8`;
+const MUX_POSTER = `https://image.mux.com/${MUX_PLAYBACK_ID}/thumbnail.webp?time=0`;
 
 const slides = [
   {
@@ -58,24 +56,15 @@ export function Hero() {
 
   return (
     <section className="relative z-[2] w-full min-h-[420px] sm:min-h-[500px] lg:h-screen overflow-hidden bg-[#0B0F1A]">
-      {/* Looping YouTube background — controls hidden, cropped to fill */}
+      {/* Looping Mux background — autoplay, muted, cropped to fill (object-fit: cover) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
       >
-        <iframe
-          title="Background video"
-          src={YT_EMBED_SRC}
-          allow="autoplay; encrypted-media; picture-in-picture"
-          referrerPolicy="strict-origin-when-cross-origin"
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-0"
-          style={{
-            width: "100vw",
-            height: "56.25vw", // 16:9 → keep width, derive height
-            minWidth: "177.78vh", // 16:9 → keep height, derive width
-            minHeight: "100vh",
-          }}
-        />
+        <MuxBackgroundVideo src={MUX_SRC} preload="auto" className="h-full w-full">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={MUX_POSTER} alt="" />
+        </MuxBackgroundVideo>
       </div>
 
       {/* Content wrapper */}
@@ -92,7 +81,7 @@ export function Hero() {
             >
               <p
                 className="text-lg sm:text-xl md:text-2xl font-extrabold uppercase tracking-[0.18em] text-white mb-4 sm:mb-5"
-                style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}
+                style={{ textShadow: "0 2px 10px rgba(0,0,0,0.65), 0 1px 4px rgba(0,0,0,0.55)" }}
               >
                 {slide.label}
               </p>
@@ -101,7 +90,7 @@ export function Hero() {
                 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-[3rem] text-white mb-5 sm:mb-7"
                 style={{
                   lineHeight: 1.25,
-                  textShadow: "0 2px 8px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.4)",
+                  textShadow: "0 4px 16px rgba(0,0,0,0.7), 0 2px 6px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.5)",
                 }}
               >
                 {slide.headline.split(" ").map((word, i) => (

@@ -23,6 +23,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { GlobalCTA } from "@/components/GlobalCTA";
+import { RelatedReading } from "@/components/RelatedReading";
 import { ProductShowcase } from "@/components/products/ProductShowcase";
 import { MosaicGallery } from "@/components/products/MosaicGallery";
 import { products, getProduct, categoryMosaics } from "@/data/textile";
@@ -369,6 +370,12 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* ── RELATED READING (cross-link into News & Insights) ─────── */}
+      <RelatedReading
+        topic={p.slug}
+        title={`Sourcing ${p.name.toLowerCase()}: the background reading`}
+      />
 
       {/* ── SECTION DIVIDER (decorative flower band, full-width) ──── */}
       <div className="bg-white" aria-hidden>

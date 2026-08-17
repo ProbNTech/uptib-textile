@@ -188,13 +188,13 @@ export default function ContactPage() {
 
             {/* Email */}
             <div className="rounded-card border border-[#E5E7EB] p-6">
-              <a href="mailto:info@pak-textiles.com" className="flex items-center gap-4 group">
+              <a href="mailto:info@paktextileglobal.com" className="flex items-center gap-4 group">
                 <div className="w-11 h-11 rounded-full bg-[#F6F2EA] border border-[#ECE5D8] flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 text-[#394F73]" />
                 </div>
                 <div>
                   <p className="text-[#6B7280] text-xs uppercase tracking-wide font-bold">Email</p>
-                  <p className="text-[#1A1A1A] font-medium group-hover:text-[#394F73] transition-colors break-all">info@pak-textiles.com</p>
+                  <p className="text-[#1A1A1A] font-medium group-hover:text-[#394F73] transition-colors break-all">info@paktextileglobal.com</p>
                 </div>
               </a>
             </div>
