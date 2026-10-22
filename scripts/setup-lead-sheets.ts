@@ -14,6 +14,7 @@ config({ path: ".env.local", override: true });
 
 import { ensureHeaderRow } from "../lib/google-sheets";
 import {
+  BROCHURE_HEADERS,
   CONTACT_HEADERS,
   FOOTER_HEADERS,
   NEWSLETTER_HEADERS,
@@ -28,6 +29,7 @@ async function main() {
     { label: "Footer enquiries", sheetId: sheetIdFor("contact"), tab: TABS.footer, headers: FOOTER_HEADERS },
     { label: "Registrations", sheetId: sheetIdFor("registration"), tab: TABS.registration, headers: REGISTRATION_HEADERS },
     { label: "Newsletter", sheetId: sheetIdFor("newsletter"), tab: TABS.newsletter, headers: NEWSLETTER_HEADERS },
+    { label: "Brochure downloads", sheetId: sheetIdFor("brochure"), tab: TABS.brochure, headers: BROCHURE_HEADERS },
   ];
 
   for (const job of jobs) {

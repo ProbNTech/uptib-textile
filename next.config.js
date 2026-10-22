@@ -47,6 +47,15 @@ const nextConfig = {
       ],
     },
     {
+      // Catalogue PDFs are handed out by /api/brochures after the download
+      // form; keep them out of search results so the form can't be skipped.
+      source: '/brochures/:path*',
+      headers: [
+        { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        { key: 'Cache-Control', value: 'public, max-age=86400' },
+      ],
+    },
+    {
       source: '/:path*.mp4',
       headers: [
         { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },

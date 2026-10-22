@@ -34,6 +34,7 @@ import ProductsSection from "@/components/home/ProductsSection";
 import HowAnOrderRuns from "@/components/home/HowAnOrderRuns";
 import SourcingCaseStudy from "@/components/home/SourcingCaseStudy";
 import ForManufacturers from "@/components/home/ForManufacturers";
+import BrochureLibrary from "@/components/brochures/BrochureLibrary";
 import { ScrollProgressBar } from "@/components/ui/ScrollProgressBar";
 
 const homepageArticles = articles
@@ -676,6 +677,9 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* 10b. PRODUCT CATALOGUES — gated PDF downloads */}
+      <BrochureLibrary />
 
       {/* 11. BOARD OF ADVISORS — hidden for now */}
       {/* <BoardOfAdvisors dark /> */}
