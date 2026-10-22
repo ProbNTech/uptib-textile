@@ -15,13 +15,14 @@ const firstSet = (...names: string[]): string => {
   return "";
 };
 
-export type LeadKind = "contact" | "registration" | "membership" | "newsletter";
+export type LeadKind = "contact" | "registration" | "membership" | "newsletter" | "brochure";
 
 const SHEET_ENV: Record<LeadKind, string[]> = {
   contact: ["GOOGLE_CONTACT_SHEET_ID", "SUBMISSIONS_SHEET_ID"],
   registration: ["GOOGLE_REGISTRATION_SHEET_ID", "GOOGLE_CONTACT_SHEET_ID", "SUBMISSIONS_SHEET_ID"],
   membership: ["GOOGLE_MEMBERSHIP_SHEET_ID", "SUBMISSIONS_SHEET_ID", "GOOGLE_CONTACT_SHEET_ID"],
   newsletter: ["GOOGLE_NEWSLETTER_SHEET_ID", "SUBMISSIONS_SHEET_ID", "GOOGLE_CONTACT_SHEET_ID"],
+  brochure: ["GOOGLE_BROCHURE_SHEET_ID", "GOOGLE_CONTACT_SHEET_ID", "SUBMISSIONS_SHEET_ID"],
 };
 
 export function sheetIdFor(kind: LeadKind): string {
@@ -41,6 +42,7 @@ export const TABS = {
   registration: "Registrations",
   membership: "Memberships",
   newsletter: "Newsletter",
+  brochure: "Brochure Downloads",
 } as const;
 
 /* ── Column headers ────────────────────────────────────────────────
@@ -96,3 +98,17 @@ export const REGISTRATION_HEADERS = [
 ];
 
 export const NEWSLETTER_HEADERS = ["Timestamp", "Email", "Source"];
+
+/* One row per download, so a lead who takes three catalogues shows up three
+   times; "Download Type" separates the first (form) download from the rest. */
+export const BROCHURE_HEADERS = [
+  "Timestamp",
+  "Full Name",
+  "Email",
+  "Company",
+  "Brochure",
+  "Download Type",
+  "Country (from IP)",
+  "Page",
+  "Privacy Accepted",
+];
