@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { appendRow } from "@/lib/google-sheets";
-import { renderRowsHtml, renderRowsText, sendAlert } from "@/lib/mailer";
-import { REGISTRATION_HEADERS, TABS, sheetIdFor } from "@/lib/leads";
+import { sendAlert } from "@/lib/mailer";
+import { renderLeadEmail } from "@/lib/lead-email";
+import { REGISTRATION_HEADERS, TABS, sheetIdFor, sheetUrlFor } from "@/lib/leads";
 
 /* Labels for the values the form submits as codes. */
 const ACCOUNT_TYPE_LABELS: Record<string, string> = {
@@ -108,18 +109,21 @@ export async function POST(req: NextRequest) {
     await appendRow(sheetIdFor("registration"), TABS.registration, REGISTRATION_HEADERS, values);
 
     try {
-      const rows: Array<[string, unknown]> = REGISTRATION_HEADERS.map((h, i) => [h, values[i]]);
-
-      await sendAlert({
-        subject: `New registration: ${text(body.orgName)} (${
-          ACCOUNT_TYPE_LABELS[text(body.accountType)] || text(body.accountType)
-        })`,
-        text: renderRowsText(rows),
-        html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New registration submitted via the Pak Textiles Global Partners website.</p>${renderRowsHtml(
-          rows
-        )}`,
-        replyTo: text(body.personEmail) || undefined,
-      });
+      await sendAlert(
+        renderLeadEmail({
+          label: "registration",
+          tag: TABS.registration,
+          subject: `New registration: ${text(body.orgName)} (${
+            ACCOUNT_TYPE_LABELS[text(body.accountType)] || text(body.accountType)
+          })`,
+          // Every column but the timestamp, which shows under the heading.
+          rows: REGISTRATION_HEADERS.map((h, i): [string, unknown] => [h, values[i]]).slice(1),
+          name: text(body.personName),
+          email: text(body.personEmail),
+          receivedAt: new Date(timestamp),
+          sheetUrl: sheetUrlFor("registration"),
+        })
+      );
     } catch (mailErr) {
       // The lead is already safe in the sheet; never fail the request on email.
       console.error("Registration alert email failed:", mailErr);

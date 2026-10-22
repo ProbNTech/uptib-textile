@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { appendRow } from "@/lib/google-sheets";
-import { renderRowsHtml, renderRowsText, sendAlert } from "@/lib/mailer";
-import { CONTACT_HEADERS, FOOTER_HEADERS, TABS, sheetIdFor } from "@/lib/leads";
+import { sendAlert } from "@/lib/mailer";
+import { renderLeadEmail } from "@/lib/lead-email";
+import { CONTACT_HEADERS, FOOTER_HEADERS, TABS, sheetIdFor, sheetUrlFor } from "@/lib/leads";
 
 export async function POST(req: NextRequest) {
   try {
@@ -39,16 +40,21 @@ export async function POST(req: NextRequest) {
     await appendRow(sheetIdFor("contact"), tabName, headers, values);
 
     try {
-      const rows: Array<[string, unknown]> = headers.map((h, i) => [h, values[i]]);
+      const label = isFooter ? "footer enquiry" : "contact enquiry";
 
-      await sendAlert({
-        subject: `New ${isFooter ? "footer enquiry" : "contact enquiry"}: ${enquiryType.trim()} - ${name.trim()}`,
-        text: renderRowsText(rows),
-        html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New enquiry submitted via the Pak Textiles Global Partners ${
-          isFooter ? "footer form" : "contact form"
-        }.</p>${renderRowsHtml(rows)}`,
-        replyTo: email.trim(),
-      });
+      await sendAlert(
+        renderLeadEmail({
+          label,
+          tag: tabName,
+          subject: `New ${label}: ${enquiryType.trim()} - ${name.trim()}`,
+          // Every column but the timestamp, which shows under the heading.
+          rows: headers.map((h, i): [string, unknown] => [h, values[i]]).slice(1),
+          name: name.trim(),
+          email: email.trim(),
+          receivedAt: new Date(timestamp),
+          sheetUrl: sheetUrlFor("contact"),
+        })
+      );
     } catch (mailErr) {
       // The lead is already safe in the sheet; never fail the request on email.
       console.error("Contact form alert email failed:", mailErr);
