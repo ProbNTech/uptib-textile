@@ -9,7 +9,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "extract:poster": "node scripts/extract-banner-poster.js",
     "sheets:check": "tsx scripts/check-sheet-access.ts",
-    "sheets:setup": "tsx scripts/setup-lead-sheets.ts"
+    "sheets:setup": "tsx scripts/setup-lead-sheets.ts",
+    "email:test": "tsx scripts/test-email.ts"
   },
   "dependencies": {
     "@mux/mux-background-video": "^0.2.3",

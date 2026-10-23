@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { appendRow } from "@/lib/google-sheets";
-import { renderRowsHtml, renderRowsText, sendAlert } from "@/lib/mailer";
-import { TABS, sheetIdFor } from "@/lib/leads";
+import { sendAlert } from "@/lib/mailer";
+import { renderLeadEmail } from "@/lib/lead-email";
+import { TABS, sheetIdFor, sheetUrlFor } from "@/lib/leads";
 
 
 const HEADERS = ["Timestamp", "Email", "Source"];
@@ -35,20 +36,20 @@ export async function POST(req: NextRequest) {
     await appendRow(sheetIdFor("newsletter"), TABS.newsletter, HEADERS, values);
 
     try {
-      const rows: Array<[string, unknown]> = [
-        ["Submitted", timestamp],
-        ["Email", cleanEmail],
-        ["Source", cleanSource],
-      ];
-
-      await sendAlert({
-        subject: `New newsletter subscriber - ${cleanEmail}`,
-        text: renderRowsText(rows),
-        html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New newsletter subscription via the Pak Textiles Global Partners website.</p>${renderRowsHtml(
-          rows
-        )}`,
-        replyTo: cleanEmail,
-      });
+      await sendAlert(
+        renderLeadEmail({
+          label: "newsletter subscription",
+          tag: TABS.newsletter,
+          subject: `New newsletter subscriber - ${cleanEmail}`,
+          rows: [
+            ["Email", cleanEmail],
+            ["Source", cleanSource],
+          ],
+          email: cleanEmail,
+          receivedAt: new Date(timestamp),
+          sheetUrl: sheetUrlFor("newsletter"),
+        })
+      );
     } catch (mailErr) {
       console.error("Newsletter alert email failed:", mailErr);
     }

@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { appendRow } from "@/lib/google-sheets";
-import { renderRowsHtml, renderRowsText, sendAlert } from "@/lib/mailer";
-import { TABS, sheetIdFor } from "@/lib/leads";
+import { sendAlert } from "@/lib/mailer";
+import { renderLeadEmail } from "@/lib/lead-email";
+import { TABS, sheetIdFor, sheetUrlFor } from "@/lib/leads";
 
 
 const COUNTRY_LABELS: Record<string, string> = {
@@ -99,16 +100,19 @@ export async function POST(req: NextRequest) {
     await appendRow(sheetIdFor("membership"), TABS.membership, HEADERS, values);
 
     try {
-      const rows: Array<[string, unknown]> = HEADERS.map((h, i) => [h, values[i]]);
-
-      await sendAlert({
-        subject: `New membership application - ${body.orgName?.trim() || "(unknown org)"}`,
-        text: renderRowsText(rows),
-        html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">New membership application submitted via the Pak Textiles Global Partners website.</p>${renderRowsHtml(
-          rows
-        )}`,
-        replyTo: body.personEmail?.trim() || undefined,
-      });
+      await sendAlert(
+        renderLeadEmail({
+          label: "membership application",
+          tag: TABS.membership,
+          subject: `New membership application - ${body.orgName?.trim() || "(unknown org)"}`,
+          // Every column but the timestamp, which shows under the heading.
+          rows: HEADERS.map((h, i): [string, unknown] => [h, values[i]]).slice(1),
+          name: body.personName?.trim(),
+          email: body.personEmail?.trim(),
+          receivedAt: new Date(timestamp),
+          sheetUrl: sheetUrlFor("membership"),
+        })
+      );
     } catch (mailErr) {
       console.error("Membership form alert email failed:", mailErr);
     }

@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse, after } from "next/server";
 import { appendRow } from "@/lib/google-sheets";
-import { renderRowsHtml, renderRowsText, sendAlert } from "@/lib/mailer";
-import { BROCHURE_HEADERS, TABS, sheetIdFor } from "@/lib/leads";
+import { sendAlert } from "@/lib/mailer";
+import { renderLeadEmail } from "@/lib/lead-email";
+import { BROCHURE_HEADERS, TABS, sheetIdFor, sheetUrlFor } from "@/lib/leads";
 import { brochureBySlug, type BrochureSlug } from "@/data/brochures";
 
 /* Where each catalogue lives in /public. The random suffix keeps the URL
@@ -97,16 +98,19 @@ export async function POST(req: NextRequest) {
       // One alert per new lead; additional downloads are in the sheet only.
       if (returning) return;
       try {
-        const rows: Array<[string, unknown]> = BROCHURE_HEADERS.map((h, i) => [h, values[i]]);
-
-        await sendAlert({
-          subject: `New brochure download: ${brochure.title} - ${name} (${company})`,
-          text: renderRowsText(rows),
-          html: `<p style="font-family:system-ui,sans-serif;font-size:14px;">A new lead downloaded a catalogue from the Pak Textiles Global Partners website.</p>${renderRowsHtml(
-            rows
-          )}`,
-          replyTo: email,
-        });
+        await sendAlert(
+          renderLeadEmail({
+            label: "brochure download",
+            tag: TABS.brochure,
+            subject: `New brochure download: ${brochure.title} - ${name} (${company})`,
+            // Every column but the timestamp, which shows under the heading.
+            rows: BROCHURE_HEADERS.map((h, i): [string, unknown] => [h, values[i]]).slice(1),
+            name,
+            email,
+            receivedAt: new Date(values[0]),
+            sheetUrl: sheetUrlFor("brochure"),
+          })
+        );
       } catch (mailErr) {
         console.error("Brochure download alert email failed:", mailErr);
       }

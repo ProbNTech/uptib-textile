@@ -35,6 +35,9 @@ export function sheetIdFor(kind: LeadKind): string {
   return id;
 }
 
+/** The spreadsheet's address, for the notification email's "Open the sheet" button. */
+export const sheetUrlFor = (kind: LeadKind) => `https://docs.google.com/spreadsheets/d/${sheetIdFor(kind)}/edit`;
+
 /* ── Tab names ─────────────────────────────────────────────────── */
 export const TABS = {
   contact: "Contact",
